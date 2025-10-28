@@ -3,6 +3,7 @@
 Modern, kullanıcı dostu bir soru-cevap platformu. Öğrenciler için alıştırma modu, öğretmenler için sınav oluşturma sistemi.
 
 > 🚀 **Otomatik Deployment**: Bu proje GitHub Actions ile otomatik FTP deployment kullanmaktadır.
+> 📅 Test deployment: 2025-01-07
 
 ## 🚀 Özellikler
 
