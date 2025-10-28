@@ -6,6 +6,7 @@ Modern, kullanıcı dostu bir soru-cevap platformu. Öğrenciler için alıştı
 > 📅 Test deployment: 2025-01-07
 > ✅ Passive mode enabled - Veri iletimi düzeltildi
 > 🔧 Using lftp for reliable FTP transfers
+> 📱 **PWA Support**: Mobil cihazlara webapp olarak yüklenebilir
 
 ## 🚀 Özellikler
 
