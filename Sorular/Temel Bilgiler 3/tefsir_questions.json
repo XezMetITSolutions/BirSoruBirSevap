@@ -1,0 +1,667 @@
+{
+  "category": "TEFSİR",
+  "title": "İGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 60,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Tefsir kelimesinin sözlük anlamı aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Açıklama, kapalılığı giderme",
+        "B": "Allah'ın kitabı",
+        "C": "İnsanları bilgilendirme",
+        "D": "Peygamberin sözleri"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "question": "Kur'ân-ı Kerîm'in indiriliş amacı nedir?",
+      "options": {
+        "A": "İnsanları bilgi sahibi yapmak",
+        "B": "İnsanları güzel ahlaka yönlendirmek",
+        "C": "İnsanlara ibadet etmeyi öğretmek",
+        "D": "İnsanları doğru yola iletmek"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 3,
+      "question": "Kur'an'ın tevatür yoluyla nakledilmesi ne anlama gelir?",
+      "options": {
+        "A": "Peygamberimiz'in hadislerine dayanarak yorumlanması",
+        "B": "Güvenilir bir topluluğun nesilden nesile aktarması",
+        "C": "Tek bir kişinin aktarmasıyla korunması",
+        "D": "Sadece yazılı metinlerle korunması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "question": "Tefsir ilmi için aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kur'an'ı açıklama ilmidir",
+        "B": "Herkesin tefsir yapabileceği bir ilimdir",
+        "C": "Arapça dil bilgisine sahip olmayı gerektirir",
+        "D": "Hadis ilmiyle de ilgilidir"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "question": "Kur'an'ı Kerîm'in bir diğer adı aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Zebur",
+        "B": "İncil",
+        "C": "Furkan",
+        "D": "Hadis"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "question": "Kur'an-ı Kerîm hangi peygambere vahiy yoluyla indirilmiştir?",
+      "options": {
+        "A": "Hz. Musa",
+        "B": "Hz. Davud",
+        "C": "Hz. Muhammed",
+        "D": "Hz. İsa"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "question": "Kur'an-ı Kerîm'in ilk indirilen suresi hangisidir?",
+      "options": {
+        "A": "Fatiha",
+        "B": "Alak",
+        "C": "Yasin",
+        "D": "Nas"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "question": "Kur'an-ı Kerîm'in kitap hâline getirilmesini ilk olarak kim önermiştir?",
+      "options": {
+        "A": "Hz. Ali",
+        "B": "Hz. Osman",
+        "C": "Hz. Ömer",
+        "D": "Hz. Ebû Bekir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "question": "Kur'an-ı Kerîm hangi halife zamanında çoğaltılmıştır?",
+      "options": {
+        "A": "Hz. Ebû Bekir",
+        "B": "Hz. Osman",
+        "C": "Hz. Ömer",
+        "D": "Hz. Ali"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "question": "Kur'an'da en uzun sure aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Al-i İmran",
+        "B": "Bakara",
+        "C": "Nisa",
+        "D": "Maide"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "question": "Kur'an-ı Kerîm kaç yılda tamamlanmıştır?",
+      "options": {
+        "A": "10",
+        "B": "23",
+        "C": "30",
+        "D": "50"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "question": "Kur'an-ı Kerîm'in ilk yazıldığı malzemelerden biri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Kağıt",
+        "B": "Hurma kabuğu",
+        "C": "Plastik",
+        "D": "Kumaş"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "question": "Kur'an-ı Kerîm'de kaç sure bulunmaktadır?",
+      "options": {
+        "A": "100",
+        "B": "112",
+        "C": "114",
+        "D": "120"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "question": "Kur'an'da kaç ayet vardır?",
+      "options": {
+        "A": "604",
+        "B": "5000",
+        "C": "6666",
+        "D": "6236"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 15,
+      "question": "Surelerin iniş yerlerine göre ayrıldığı iki grup aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Mekkî ve Medenî",
+        "B": "İslami ve tarihi",
+        "C": "Ahiret ve dünya",
+        "D": "Peygamberler ve ümmet"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 16,
+      "question": "Peygamberimiz'in Kur'an'ı açıklama görevi hangi ayetle sabittir?",
+      "options": {
+        "A": "Al-i İmran 97",
+        "B": "Nisa 103",
+        "C": "Ahzab 40",
+        "D": "Nahl 44"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 17,
+      "question": "Kur'an-ı Kerîm'in en kısa suresi aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Kevser",
+        "B": "Yasin",
+        "C": "Rahman",
+        "D": "İhlas"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "question": "Kur'an-ı Kerîm hangi dilde indirilmiştir?",
+      "options": {
+        "A": "İbranice",
+        "B": "Arapça",
+        "C": "Latince",
+        "D": "Farsça"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "question": "Kur'an'ın en uzun ayeti aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Ayet-el Kürsi",
+        "B": "Nur Suresi 35. Ayet",
+        "C": "Bakara Suresi 282. Ayet",
+        "D": "Tevbe Suresi 128. Ayet"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "question": "Peygamberimiz'in hadislerinde geçen 'Sizin en hayırlınız Kur'an'ı öğrenen ve öğreteninizdir.' hadisi hangi kaynakta geçmektedir?",
+      "options": {
+        "A": "Müslim",
+        "B": "Tirmizî",
+        "C": "Buhârî",
+        "D": "Nesâî"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "question": "Ayetlerin sıralanışını belirleyen aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Halifeler",
+        "B": "Vahiy katipleri",
+        "C": "Cebrâil (a.s.)",
+        "D": "Ashab"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "question": "Kur'an-ı Kerîm'in bir özelliği aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "İçeriği zamanla değişmiştir",
+        "B": "Kıyamete kadar geçerli değildir",
+        "C": "Mucize bir kitaptır",
+        "D": "Yalnızca Araplar içindir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "question": "Kur'an'daki emir ve yasaklar kaç kısımda incelenir?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "9"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "Kur'an-ı Kerîm'de en çok adı geçen peygamber kimdir?",
+      "options": {
+        "A": "Hz. Muhammed",
+        "B": "Hz. Musa",
+        "C": "Hz. İbrahim",
+        "D": "Hz. İsa"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "question": "İlk kez Arapça harfli mushaf ne zaman basılmıştır?",
+      "options": {
+        "A": "1492",
+        "B": "1530",
+        "C": "1649",
+        "D": "1820"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "question": "Kur'an'ın içerdiği konular arasında yer almayan aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Tarihi olaylar",
+        "B": "Fiziksel bilimler",
+        "C": "Mitoloji",
+        "D": "Hukuk"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "question": "Kur'an'da en çok tekrarlanan kelime aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Allah",
+        "B": "İnsan",
+        "C": "Namaz",
+        "D": "İman"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "question": "Kur'an'ın ilk kez Latin harfleriyle basımı hangi yıl gerçekleşmiştir?",
+      "options": {
+        "A": "1900",
+        "B": "1928",
+        "C": "1933",
+        "D": "1950"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 29,
+      "question": "Kur'ân-ı Kerîm'in mushaf hâline getirilmesinde görev alan sahabi kimdir?",
+      "options": {
+        "A": "Hz. Osman",
+        "B": "Hz. Ömer",
+        "C": "Zeyd bin Sâbit",
+        "D": "Abdullah bin Mesud"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "question": "Kur'an'ı ezberleyip tamamen bilen kişiye ne denir?",
+      "options": {
+        "A": "Müfessir",
+        "B": "Hafız",
+        "C": "Fakih",
+        "D": "Muhaddis"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "question": "Fîl Suresi'nin bahsettiği Fil Olayı hangi yıl gerçekleşmiştir?",
+      "options": {
+        "A": "Hicretin 1. yılı",
+        "B": "Peygamberimizin doğduğu yıl",
+        "C": "Mekke'nin fethi yılı",
+        "D": "Veda haccı yılı"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "question": "Ebrehe'nin Kâbe'yi yıkmak için kullandığı en güçlü filin adı nedir?",
+      "options": {
+        "A": "Kasım",
+        "B": "Mahmud",
+        "C": "Asım",
+        "D": "Zeyd"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 33,
+      "question": "Kâfirûn Suresi'nde kaç ayet bulunmaktadır?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "question": "Kâfirûn Suresi hangi önemli mesajı vermektedir?",
+      "options": {
+        "A": "Allah'ın birliği",
+        "B": "Kıyametin yaklaştığı",
+        "C": "Din özgürlüğü",
+        "D": "Hz. Muhammed'in son peygamber olduğu"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "question": "Nasr Suresi'nin anlamı aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Fetih",
+        "B": "Zafer",
+        "C": "Yardım",
+        "D": "İbadet"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "question": "Kur'ân-ı Kerîm'de ismi 'insan' anlamına gelen sure hangisidir?",
+      "options": {
+        "A": "Fîl",
+        "B": "Nâs",
+        "C": "Kâfirûn",
+        "D": "Nasr"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "question": "Peygamber Efendimiz'e ilk inen vahiy hangi ayetlerden oluşmaktadır?",
+      "options": {
+        "A": "Fâtiha Suresi",
+        "B": "Nasr Suresi",
+        "C": "Alak Suresi 1-5. ayetler",
+        "D": "Mâide Suresi 3. ayet"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "question": "Kur'ân-ı Kerîm vahyi kaç yıl sürmüştür?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "23",
+        "D": "25"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "question": "Kur'ân-ı Kerîm'in Peygamberimize vahyedilme şekillerinden biri değildir?",
+      "options": {
+        "A": "Cebrâil'in asıl suretiyle görünmesi",
+        "B": "Melek aracılığıyla vahiy",
+        "C": "Kalbe ilham edilmesi",
+        "D": "Peygamberimizin kendi içtihadıyla yazması"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 40,
+      "question": "Kur'an'ın vahyedildiği gece olarak bilinen Kadir Gecesi hangi ayda yer alır?",
+      "options": {
+        "A": "Şaban",
+        "B": "Recep",
+        "C": "Muharrem",
+        "D": "Ramazan"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 41,
+      "question": "Kur'ân-ı Kerîm'de 'Hak ile batılı ayıran' anlamına gelen isim nedir?",
+      "options": {
+        "A": "El-Furkân",
+        "B": "El-Kitâb",
+        "C": "El-Hüda",
+        "D": "Ez-Zikr"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 42,
+      "question": "Kur'ân-ı Kerîm'de toplam kaç sure bulunmaktadır?",
+      "options": {
+        "A": "110",
+        "B": "113",
+        "C": "114",
+        "D": "120"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "question": "Kur'ân-ı Kerîm'in ilk kitap hâline getirilmesi hangi halife zamanında olmuştur?",
+      "options": {
+        "A": "Hz. Osman",
+        "B": "Hz. Ali",
+        "C": "Hz. Ömer",
+        "D": "Hz. Ebû Bekir"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 44,
+      "question": "Kur'an'ın çoğaltılması ve farklı bölgelere gönderilmesi hangi halife zamanında yapılmıştır?",
+      "options": {
+        "A": "Hz. Ebû Bekir",
+        "B": "Hz. Osman",
+        "C": "Hz. Ali",
+        "D": "Hz. Ömer"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "question": "Mekke'de inen surelere ne ad verilir?",
+      "options": {
+        "A": "Medenî",
+        "B": "Mekkî",
+        "C": "Tevhidî",
+        "D": "Tefsirî"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "question": "Sure başlarında besmele bulunmayan sure hangisidir?",
+      "options": {
+        "A": "Yâsîn",
+        "B": "Fâtiha",
+        "C": "Tevbe",
+        "D": "Mülk"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "question": "Ayetlerin Kur'an içinde nasıl sıralanacağını kim belirlemiştir?",
+      "options": {
+        "A": "Hz. Osman",
+        "B": "Cebrâil",
+        "C": "Hz. Ebû Bekir",
+        "D": "Hz. Ömer"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "question": "Kur'ân-ı Kerîm'in en uzun suresi hangisidir?",
+      "options": {
+        "A": "Fâtiha",
+        "B": "Mâide",
+        "C": "Bakara",
+        "D": "Âl-i İmrân"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 49,
+      "question": "Kur'an'ın nesih (hükmü değiştirilen) konularından biri hangisidir?",
+      "options": {
+        "A": "Namazın farz oluşu",
+        "B": "Oruç tutmanın fazileti",
+        "C": "İçkinin aşamalı olarak yasaklanması",
+        "D": "Tevhidin önemi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 50,
+      "question": "Kur'an meallerinin orijinal Kur'an metni yerine geçmemesinin sebebi nedir?",
+      "options": {
+        "A": "Meal Kur'an değildir",
+        "B": "Meal, Allah kelamı değildir",
+        "C": "Tefsir bilgisi gerektirir",
+        "D": "Hepsi"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 51,
+      "question": "Kur'an'ın ilk Türkçe çevirisini yapan kimdir?",
+      "options": {
+        "A": "Elmalılı Muhammed Hamdi Yazır",
+        "B": "Şirazlı Hacı Devlet Şah Oğlu Mehmet",
+        "C": "Ömer Nasuhi Bilmen",
+        "D": "Konyalı Mehmet Vehbi Efendi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 52,
+      "question": "Kur'ân-ı Kerîm'de Peygamberimizin en çok ismi geçen peygamber kimdir?",
+      "options": {
+        "A": "Hz. Muhammed",
+        "B": "Hz. İsa",
+        "C": "Hz. Musa",
+        "D": "Hz. Yusuf"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 53,
+      "question": "Fâtiha Suresi'nde 'Yevmiddîn' hangi anlamdadır?",
+      "options": {
+        "A": "Cennet",
+        "B": "Kıyamet",
+        "C": "Hesap günü",
+        "D": "Ahiret"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 54,
+      "question": "Kur'an'ın son inen ayeti hangisidir?",
+      "options": {
+        "A": "Alak Suresi 1-5",
+        "B": "Bakara Suresi 286",
+        "C": "Mâide Suresi 3",
+        "D": "Tevbe Suresi 128-129"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 55,
+      "question": "Kur'ân-ı Kerîm'de geçen ve en uzun ayet olan ayet hangisidir?",
+      "options": {
+        "A": "Bakara 282",
+        "B": "Âl-i İmrân 19",
+        "C": "Mâide 3",
+        "D": "Tevbe 5"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 56,
+      "question": "Kur'an'ın konusu değildir?",
+      "options": {
+        "A": "Ahiret hayatı",
+        "B": "Sosyal ilişkiler",
+        "C": "Matematik formülleri",
+        "D": "İman esasları"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 57,
+      "question": "Kur'ân-ı Kerîm'de kıssalar hangi amaçla anlatılmıştır?",
+      "options": {
+        "A": "Sadece tarihi bilgi vermek için",
+        "B": "Peygamberleri yüceltmek için",
+        "C": "İnsanlara ders ve ibret vermek için",
+        "D": "Sadece Arap toplumunu uyarmak için"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 58,
+      "question": "Kur'an'da 'Hamd, âlemlerin Rabbi Allah'a mahsustur.' ifadesi hangi surede yer alır?",
+      "options": {
+        "A": "İhlâs",
+        "B": "Fâtiha",
+        "C": "Bakara",
+        "D": "Kevser"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 59,
+      "question": "Kur'an'ın Arapça dışında başka bir dile çevrilmesine ne ad verilir?",
+      "options": {
+        "A": "Tefsir",
+        "B": "Meal",
+        "C": "Hadis",
+        "D": "Nesih"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 60,
+      "question": "Kur'ân-ı Kerîm'in ilahi bir mucize olduğunun en önemli delili nedir?",
+      "options": {
+        "A": "Sadece Arap toplumuna hitap etmesi",
+        "B": "İnsanların ona benzer bir kitap yazamaması",
+        "C": "Peygamber Efendimiz'in onu ezbere bilmesi",
+        "D": "Yazılı olması"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}

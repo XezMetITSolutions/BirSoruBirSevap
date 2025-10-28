@@ -1,0 +1,338 @@
+{
+  "category": "MUSİKİ",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 30,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Aşağıdakilerden hangisi \"müsiki\"nin tanımına en uygun ifadedir?",
+      "options": {
+        "A": "Sadece dini müziklerin bestelenmesi",
+        "B": "Sesleri belirli bir düzenle notalar halinde okumak",
+        "C": "Ezberden ilahi okumak",
+        "D": "Seslerin rastgele bir araya getirilmesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "question": "Peygamber Efendimiz (s.a.v.) hangi sebeple Hz. Bilâl-i Habeşî'yi ezan okumakla görevlendirmiştir?",
+      "options": {
+        "A": "Onun sesi gür ve etkileyici olduğu için",
+        "B": "Mekke'de doğmuş olduğu için",
+        "C": "Kur'an-ı Kerim'i ezberlediği için",
+        "D": "Peygamberimizin en yakın arkadaşlarından biri olduğu için"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "question": "Peygamber Efendimiz (s.a.v.), aşağıdakilerden hangisine özellikle önem verirdi?",
+      "options": {
+        "A": "Kur'an-ı Kerim'in güzel sesle okunmasına",
+        "B": "Kur'an-ı Kerim'in sadece hafızlar tarafından okunmasına",
+        "C": "Kur'an-ı Kerim'in sessiz okunmasına",
+        "D": "Kur'an-ı Kerim'in sadece sabah namazlarında okunmasına"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 4,
+      "question": "\"Tekbir\" kavramının anlamı nedir?",
+      "options": {
+        "A": "Allah'ın büyüklüğünü ilan etmek",
+        "B": "Kur'an-ı Kerim'i ezbere okumak",
+        "C": "Salavat getirmek",
+        "D": "Ezan okumak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 5,
+      "question": "\"Salât-ı Ümmiye\" hangi durumlarda okunmaz?",
+      "options": {
+        "A": "Mevlid törenlerinde",
+        "B": "Teravih namazı aralarında",
+        "C": "Farz namazların başında",
+        "D": "Sakal-ı Şerif ziyaretlerinde"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "question": "Peygamber Efendimiz (s.a.v.)'in tavsiyesine göre Kur'an hangi şekilde okunmalıdır?",
+      "options": {
+        "A": "Sadece Arap âlimleri tarafından",
+        "B": "Güzel bir sesle ve ahenkli şekilde",
+        "C": "Hızlı ve sessiz bir şekilde",
+        "D": "Sadece sabah namazından sonra"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "question": "\"Müâzzin\" kimdir?",
+      "options": {
+        "A": "Ezan okuyan kişi",
+        "B": "Namaz kıldıran kişi",
+        "C": "Camide hutbe veren kişi",
+        "D": "Hafız olan kişi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "question": "Farz namazların başlangıcında okunan ezana ne ad verilir?",
+      "options": {
+        "A": "Salavat",
+        "B": "Kâmet",
+        "C": "Tekbir",
+        "D": "Salât-ı Ümmiye"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "question": "\"Müsiki\" ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Güzel seslerin nota ile söylenmesi anlamına gelir.",
+        "B": "Sadece dini eserleri kapsar.",
+        "C": "Kur'an-ı Kerim'in güzel okunmasında etkili olabilir.",
+        "D": "Müsiki güzel sesle söylemeyi içerir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "question": "\"Salât-ı Ümmiye\" nerelerde okunabilir?",
+      "options": {
+        "A": "Sakal-ı Şerif ziyaretlerinde",
+        "B": "Namazdan sonra",
+        "C": "Mevlid törenlerinde",
+        "D": "A ve C şıkkı doğrudur."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 11,
+      "question": "Ezan hangi anlama gelir?",
+      "options": {
+        "A": "Namaza çağrı",
+        "B": "Salavat getirmek",
+        "C": "Allah'ın büyüklüğünü ilan etmek",
+        "D": "Kur'an okumak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 12,
+      "question": "Tekbir neden getirilir?",
+      "options": {
+        "A": "Allah'ın birliğini vurgulamak için",
+        "B": "Namazın farz olduğunu hatırlatmak için",
+        "C": "Kâmet getirmek için",
+        "D": "Ezanın bittiğini göstermek için"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "question": "Peygamber Efendimiz (s.a.v.) hangi özellikte Kur'an okuyanları severdi?",
+      "options": {
+        "A": "Sadece hızlı okuyanları",
+        "B": "Ağır ve düzgün okuyanları",
+        "C": "Anlamadan ezbere okuyanları",
+        "D": "Sessizce okuyanları"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "question": "Müezzin, ezanı nasıl okumalıdır?",
+      "options": {
+        "A": "Yavaş ve tane tane",
+        "B": "Hızlı ve kısık sesle",
+        "C": "Rastgele bir melodiyle",
+        "D": "Anlamını bilmeden"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "question": "Ezanın İslam'daki yeri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Namaza çağrıdır",
+        "B": "Sadece camide okunur",
+        "C": "Günde bir kez okunur",
+        "D": "Sadece müezzinler okuyabilir"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 16,
+      "question": "Kâmet ile ezan arasındaki fark nedir?",
+      "options": {
+        "A": "Kâmet, namaza başlamadan hemen önce okunur",
+        "B": "Ezan sadece farz namazlardan sonra okunur",
+        "C": "Kâmet yalnızca Ramazan ayında okunur",
+        "D": "Kâmet ve ezan tamamen aynı şeydir"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "question": "Hz. Bilâl-i Habeşî'nin ezanı okuması hangi olaydan sonra gerçekleşmiştir?",
+      "options": {
+        "A": "Mirac olayından sonra",
+        "B": "Bedir Savaşı'ndan sonra",
+        "C": "Medine'ye hicretin ardından",
+        "D": "Hudeybiye Anlaşması'ndan sonra"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "question": "Müezzinlik görevi, İslam'da hangi sorumluluğu taşır?",
+      "options": {
+        "A": "Cemaatin namaza hazırlanmasını sağlamak",
+        "B": "Sadece hutbe okumak",
+        "C": "Namazın kılınmasını engellemek",
+        "D": "Sadece imamlar tarafından yapılması gereken bir görev olmak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "question": "Peygamber Efendimiz (s.a.v.) hangi sahabenin sesini beğenip ona ezan okutmuştur?",
+      "options": {
+        "A": "Hz. Osman",
+        "B": "Hz. Bilâl-i Habeşî",
+        "C": "Hz. Ali",
+        "D": "Hz. Ömer"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "question": "Kâmet okumanın temel amacı nedir?",
+      "options": {
+        "A": "Cemaatin namaza başlamasını bildirmek",
+        "B": "Kur'an-ı Kerim'i hatırlatmak",
+        "C": "Namazın bitişini ilan etmek",
+        "D": "Sadece müezzinler için geçerli bir uygulama yapmak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "question": "Namaz vakitlerinin ilan edilmesi için hangi ibadet yapılır?",
+      "options": {
+        "A": "Ezan",
+        "B": "Kâmet",
+        "C": "Hutbe",
+        "D": "Salât-ı Ümmiye"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "question": "Kur'an'ın güzel okunmasını ifade eden kavram nedir?",
+      "options": {
+        "A": "Tecvid",
+        "B": "Tilavet",
+        "C": "Talim",
+        "D": "Müsiki"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "question": "Müezzinin görevlerinden biri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Cemaatin namaza hazırlanmasını sağlamak",
+        "B": "Hutbe okumak",
+        "C": "Sadece sabah namazında ezan okumak",
+        "D": "Kendi istediği şekilde ezan okumak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "question": "Peygamber Efendimiz (s.a.v.), sahabelerine ezanı hangi duyguyla okumalarını öğütlemiştir?",
+      "options": {
+        "A": "Samimiyet ve huşu",
+        "B": "Hızlı ve aceleci",
+        "C": "Sessiz ve düşük tonda",
+        "D": "Rastgele ve düzensiz"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "question": "İslam'da ezanın anlamı nedir?",
+      "options": {
+        "A": "Namaza davet",
+        "B": "Dua etmek",
+        "C": "Kıyamet alameti",
+        "D": "Bayram namazı çağrısı"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "question": "Namazda ezandan sonra hangi ibadet yapılır?",
+      "options": {
+        "A": "Hutbe",
+        "B": "Kâmet",
+        "C": "Salavat",
+        "D": "Teşrik tekbiri"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "question": "Mevlid törenlerinde hangi dua okunur?",
+      "options": {
+        "A": "Salât-ı Ümmiye",
+        "B": "Kâmet",
+        "C": "Hutbe",
+        "D": "İkindi duası"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "question": "Sakal-ı Şerif ziyareti hangi ibadet sırasında yapılır?",
+      "options": {
+        "A": "Mevlid törenlerinde",
+        "B": "Bayram namazında",
+        "C": "Cuma hutbesinde",
+        "D": "Teravih namazında"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "question": "Tekbir getirmek hangi anlamı taşır?",
+      "options": {
+        "A": "Allah'ın birliğini ilan etmek",
+        "B": "Namazın başlangıcını bildirmek",
+        "C": "Salavat getirmek",
+        "D": "Kur'an okumak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "question": "Salât-ı Ümmiye'nin en yaygın okunduğu yer neresidir?",
+      "options": {
+        "A": "Mevlid törenleri",
+        "B": "Bayram namazları",
+        "C": "Sabah namazları",
+        "D": "Cenaze namazları"
+      },
+      "correct_answer": "A"
+    }
+  ],
+  "answer_key": "1-B, 2-A, 3-A, 4-A, 5-C, 6-B, 7-A, 8-B, 9-B, 10-D, 11-A, 12-A, 13-B, 14-A, 15-A, 16-A, 17-C, 18-A, 19-B, 20-A, 21-A, 22-A, 23-A, 24-A, 25-A, 26-B, 27-A, 28-A, 29-A, 30-A"
+}

@@ -1,0 +1,337 @@
+{
+  "category": "MUSİKİ",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 30,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Mûsikî kavramı ne anlama gelir?",
+      "options": {
+        "A": "Sadece enstrüman çalmak",
+        "B": "Güzel ve düzenli seslerin nota ile söylenmesi",
+        "C": "Kur'an'ın ezbere okunması",
+        "D": "Sadece dini müzik yapmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "question": "Kur'an-ı Kerîm, ezan, mevlid ve ilahi gibi dini metinlerin nasıl okunması gerekir?",
+      "options": {
+        "A": "Gelişigüzel ve hızlı",
+        "B": "Sadece sessiz bir şekilde",
+        "C": "Güzel bir sesle ve belli kurallara uygun olarak",
+        "D": "Hiçbir kurala uyulmadan"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "question": "Peygamberimiz (s.a.v.), Kur'an-ı Kerîm okuduğunda insanlar nasıl etkilenirdi?",
+      "options": {
+        "A": "Sadece anlamaya çalışırlardı",
+        "B": "Mest olurlardı ve gönülleri huzur bulurdu",
+        "C": "Hiçbir etkisi olmazdı",
+        "D": "Sadece ezberlemeye çalışırlardı"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "question": "Kur'an-ı Kerîm'i güzel sesle okuyan sahabelerden biri kimdir?",
+      "options": {
+        "A": "Hz. Ömer",
+        "B": "Ebû Mûsâ el-Eş'arî",
+        "C": "Hz. Osman",
+        "D": "Hz. Ebû Bekir"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "question": "Peygamber Efendimiz (s.a.v.), ezanı kime okutmuştur?",
+      "options": {
+        "A": "Hz. Ebû Bekir",
+        "B": "Hz. Bilâl-i Habeşî",
+        "C": "Hz. Osman",
+        "D": "Ebû Mûsâ el-Eş'arî"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "question": "Peygamber Efendimiz (s.a.v.), ezanın hangi özellikte okunmasını istemiştir?",
+      "options": {
+        "A": "Yavaş ve monoton bir şekilde",
+        "B": "Çok hızlı ve duygusuz bir şekilde",
+        "C": "Güzel sesle ve anlamına uygun bir şekilde",
+        "D": "Sessizce ve sadece cami içinde"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "question": "Kur'an-ı Kerîm'in güzel sesle okunmasının en büyük etkisi nedir?",
+      "options": {
+        "A": "İnsanların dikkatini çekmek",
+        "B": "Gönüllerde Allah sevgisi ve aşkı oluşturmak",
+        "C": "Sadece güzel bir gelenek oluşturmak",
+        "D": "Müslümanları zorlamak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "question": "Kur'an-ı Kerîm'in güzel sesle okunması bizzat kim tarafından teşvik edilmiştir?",
+      "options": {
+        "A": "Hz. Ömer",
+        "B": "Peygamber Efendimiz (s.a.v.)",
+        "C": "Hz. Ebû Bekir",
+        "D": "Hz. Osman"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "question": "Mevlid, ilahi ve kasidelerin en önemli özelliklerinden biri nedir?",
+      "options": {
+        "A": "Müslümanları bir araya getirerek ulvi duygular etrafında birleştirmesi",
+        "B": "Sadece özel günlerde okunması",
+        "C": "Sadece hafızlar tarafından okunması",
+        "D": "Zorunlu bir ibadet olması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "question": "Tekbirin kelime anlamı nedir?",
+      "options": {
+        "A": "Allah'ı anmak",
+        "B": "Rabbimizi birlemek",
+        "C": "Zikretmek",
+        "D": "Sadece bayramlarda okumak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "question": "Tekbir hangi durumlarda okunur?",
+      "options": {
+        "A": "Sadece bayram namazlarında",
+        "B": "Kurban kesilirken, bayram namazlarında ve dini merasimlerde",
+        "C": "Sadece cenazelerde",
+        "D": "Sadece Ramazan ayında"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "question": "Salât-ı ümmiye hangi durumlarda cemaat halinde okunur?",
+      "options": {
+        "A": "Mevlid, dini merasimler ve teravih namazı aralarında",
+        "B": "Sadece bayram günlerinde",
+        "C": "Sadece sabah namazından sonra",
+        "D": "Sadece cuma namazlarında"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "question": "Sakal-ı Şerif ziyareti sırasında hangi ibadet yapılır?",
+      "options": {
+        "A": "Namaz kılınır",
+        "B": "Salât-ü selâm getirilir",
+        "C": "Oruç tutulur",
+        "D": "Zekât verilir"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "question": "Mevlid hangi durumlarda daha sık okunur?",
+      "options": {
+        "A": "Bayram günlerinde",
+        "B": "Mübârek gün ve gecelerde",
+        "C": "Sadece Ramazan ayında",
+        "D": "Sadece Kadir Gecesi'nde"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "question": "Hz. Bilâl-i Habeşî ezanı nasıl okurdu?",
+      "options": {
+        "A": "Güzel ve etkileyici bir sesle",
+        "B": "Sessizce ve hızlı bir şekilde",
+        "C": "Sadece sabah namazlarında",
+        "D": "Her zaman aynı tonda"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 16,
+      "question": "Kur'an-ı Kerîm'in güzel sesle okunmasının en büyük faydalarından biri nedir?",
+      "options": {
+        "A": "Müminleri tevbe ve istiğfara yönlendirmesi",
+        "B": "Sadece ezberlemeyi kolaylaştırması",
+        "C": "Sadece imamların daha iyi anlamasını sağlaması",
+        "D": "Sadece cami içinde etkili olması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "question": "İlahi ve kasideler Müslümanları nasıl etkiler?",
+      "options": {
+        "A": "Onları dinî duygularla birleştirir",
+        "B": "Sadece eğlence amaçlıdır",
+        "C": "İslam'ın temel şartlarından biridir",
+        "D": "Müslümanları bir araya getirmez"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "question": "Ezanın temel amacı nedir?",
+      "options": {
+        "A": "Müslümanları ibadete çağırmak",
+        "B": "Sadece bir gelenek olarak devam etmek",
+        "C": "Dini bir tören düzenlemek",
+        "D": "İnsanları bilgilendirmek"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "question": "Peygamber Efendimiz (s.a.v.), hangi sahabenin güzel sesle okuduğu Kur'an'ı dinleyip onu övmüştür?",
+      "options": {
+        "A": "Hz. Ali",
+        "B": "Ebû Mûsâ el-Eş'arî",
+        "C": "Hz. Ömer",
+        "D": "Hz. Osman"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "question": "Kur'an-ı Kerîm'in güzel sesle okunmasının etkilerinden biri değildir:",
+      "options": {
+        "A": "Gönüllerde Allah sevgisi oluşturması",
+        "B": "Günahlardan arınmaya teşvik etmesi",
+        "C": "Müminlerin bir araya gelmesini sağlaması",
+        "D": "Sadece hafızlara özel bir uygulama olması"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 21,
+      "question": "Kur'an-ı Kerîm'in güzel sesle okunmasının dinleyici üzerindeki etkisi aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Sadece Kur'an'ı ezberlemeyi kolaylaştırır",
+        "B": "Dinleyenin gönlünde Allah sevgisi ve aşkı oluşturur",
+        "C": "Sadece okuyan kişiye sevap kazandırır",
+        "D": "Anlamını bilmeden okumayı teşvik eder"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "question": "Kur'an-ı Kerîm'in en güzel sesle okunduğu sahabelerden biri kimdir?",
+      "options": {
+        "A": "Hz. Ali",
+        "B": "Ebû Mûsâ el-Eş'arî",
+        "C": "Hz. Osman",
+        "D": "Hz. Ebû Bekir"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "question": "Hz. Bilâl-i Habeşî'nin ezan okuması Peygamber Efendimiz (s.a.v.) için ne anlam taşırdı?",
+      "options": {
+        "A": "Müslümanları bir araya toplamak için sadece bir uygulamaydı",
+        "B": "Güzel sesle okunmasını istediği için büyük bir haz duyardı",
+        "C": "Ezanın hızlı okunması için bir yöntemdi",
+        "D": "Sadece savaş sırasında kullanılan bir uygulamaydı"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "Peygamber Efendimiz (s.a.v.), Ebû Mûsâ el-Eş'arî'nin Kur'an okuyuşu hakkında ne demiştir?",
+      "options": {
+        "A": "\"Keşke herkes senin gibi okusaydı\"",
+        "B": "\"Ona Davud'un sesi verilmiştir\"",
+        "C": "\"Bundan sonra hep sen oku\"",
+        "D": "\"Sesini yükseltmen gerekirdi\""
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "question": "Mevlid, ilahi ve kasideler Müslümanlar için neden önemlidir?",
+      "options": {
+        "A": "Müminleri manevi duygular etrafında birleştirir",
+        "B": "Sadece ibadet etmek için kullanılır",
+        "C": "Zorunlu bir ibadet şeklidir",
+        "D": "Sadece tasavvufi bir gelenektir"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "question": "Kur'an-ı Kerîm'i güzel sesle okumanın en önemli amacı nedir?",
+      "options": {
+        "A": "Dinleyenleri etkilemek ve manevi bir atmosfer oluşturmak",
+        "B": "Sadece camilerde güzel sesle okunmasını sağlamak",
+        "C": "Hafızlık yapmayı teşvik etmek",
+        "D": "İmamların daha etkili vaaz vermesi için"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "question": "Tekbir hangi anlarda okunmaz?",
+      "options": {
+        "A": "Bayram namazlarından sonra",
+        "B": "Cenaze namazı sırasında",
+        "C": "Günlük namazlarda",
+        "D": "Kurban keserken"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "question": "Peygamber Efendimiz (s.a.v.), Kur'an-ı Kerîm'in nasıl okunmasını tavsiye etmiştir?",
+      "options": {
+        "A": "Ağır ağır ve anlamına uygun şekilde",
+        "B": "Hızlı ve melodisiz bir şekilde",
+        "C": "Sadece hafızlar tarafından",
+        "D": "Sadece camilerde"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "question": "Salât-ı Ümmiye hangi durumlarda okunur?",
+      "options": {
+        "A": "Mevlid törenlerinde ve bazı dini günlerde",
+        "B": "Sadece bayram namazlarında",
+        "C": "Sadece Ramazan ayında",
+        "D": "Yalnızca cenazelerde"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "question": "Güzel sesle okunan Kur'an-ı Kerîm ve ezanın topluma sağladığı en büyük fayda nedir?",
+      "options": {
+        "A": "Müslümanları manevi bir atmosferde birleştirir",
+        "B": "Sadece hafızların eğitimine katkı sağlar",
+        "C": "Dini bilgileri artırır",
+        "D": "Müslümanları sadece ibadete yönlendirir"
+      },
+      "correct_answer": "A"
+    }
+  ]
+}

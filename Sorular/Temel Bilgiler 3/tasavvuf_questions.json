@@ -1,0 +1,337 @@
+{
+  "category": "TASAVVUF",
+  "title": "İGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 30,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Aşağıdakilerden hangisi tarikatın temel unsurlarından biri değildir?",
+      "options": {
+        "A": "Mürşide bağlılık",
+        "B": "Çile ve seyrü sülûk",
+        "C": "Dinin zahirî yönünü reddetmek",
+        "D": "Allah'ı zikretmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 2,
+      "question": "Mutasavvıflara göre Allah'a ulaşan yollar nasıl tarif edilir?",
+      "options": {
+        "A": "Sadece tek bir yoldur ve tarikatlar gereksizdir",
+        "B": "Sayısızdır, ancak esas olan Allah'a yönelmektir",
+        "C": "Sadece peygamberler tarafından gösterilmiştir",
+        "D": "Farklı milletler için farklı yollar olabilir, ancak her biri eşittir"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "question": "Hangi yüzyıldan itibaren tarikatlar kurumsal bir yapı kazanarak gelişmeye başlamıştır?",
+      "options": {
+        "A": "5. yüzyıl",
+        "B": "6. yüzyıl",
+        "C": "12. yüzyıl",
+        "D": "15. yüzyıl"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "question": "Aşağıdakilerden hangisi bir tarikat şeyhinin taşıması gereken özelliklerden biri değildir?",
+      "options": {
+        "A": "İslami ilimlere vakıf olmak",
+        "B": "Peygamber soyundan gelmek",
+        "C": "İrşat yeteneğine sahip olmak",
+        "D": "Şeriat bilgisine sahip olmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "question": "Tarikata girmek hangi hükme girer?",
+      "options": {
+        "A": "Farz",
+        "B": "Vacip",
+        "C": "Müstehap",
+        "D": "Hiçbiri"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 6,
+      "question": "Aşağıdaki tarikat prensiplerinden hangisi doğrudur?",
+      "options": {
+        "A": "Tarikatlar şeriatın dışında kalabilir",
+        "B": "Her tarikatın kuralları aynıdır",
+        "C": "Tarikata girmek her Müslüman için zorunludur",
+        "D": "Tarikatlar farklı usuller benimseyebilir ancak şeriata bağlı kalmalıdır"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 7,
+      "question": "Şeriat kavramı sözlükte ne anlama gelir?",
+      "options": {
+        "A": "Doğruluk",
+        "B": "İlahi emirler bütünü",
+        "C": "İnsanları su kaynağına ulaştıran yol",
+        "D": "Dini bilgilerin tamamı"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "question": "Şeriatın dört temel kaynağından biri olmayan aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Kur'an",
+        "B": "Sünnet",
+        "C": "Kader",
+        "D": "İcma"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "question": "Şeriatı ortaya koyan, hükümler belirleyen en büyük otorite kimdir?",
+      "options": {
+        "A": "Peygamber",
+        "B": "İmamlar",
+        "C": "Allah",
+        "D": "Halifeler"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "question": "Şeriatta icma ne anlama gelir?",
+      "options": {
+        "A": "Müçtehitlerin bir konuda ortak görüş bildirmesi",
+        "B": "Peygamberin hadisleri",
+        "C": "Kitapların toplanması",
+        "D": "Zikir ibadetleri"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 11,
+      "question": "Hz. Peygamber'in (s.a.v.) şeriatla ilgili hükümleri tamamlaması nasıl gerçekleşmiştir?",
+      "options": {
+        "A": "Otoritesini kullanarak",
+        "B": "Kur'an'la gelen emirlerin açıklaması ve uygulaması ile",
+        "C": "Kendi görüşlerine dayanarak",
+        "D": "Sahabelerin isteğiyle"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "question": "Aşağıdaki hangi kavram şeriatın tamamlanmış olduğunu ifade eder?",
+      "options": {
+        "A": "Hadis",
+        "B": "Kıyas",
+        "C": "Maide Suresi 3. Ayet",
+        "D": "İcma"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "question": "Şeriatta yer alan hükümlerin uygulandığı alanlar aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "İbadetler, muamelât, ukûbât",
+        "B": "Tasavvuf, felsefe, hadis",
+        "C": "Ahlak, hukuk, edebiyat",
+        "D": "Namaz, oruç, cihat"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 14,
+      "question": "Şeriat hangi iki dönemde tamamlanmıştır?",
+      "options": {
+        "A": "Mekke ve Medine",
+        "B": "Hicaz ve Şam",
+        "C": "Endülüs ve Bağdat",
+        "D": "Anadolu ve İran"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "question": "Şeriatta muamelât neyle ilgilidir?",
+      "options": {
+        "A": "İbadetler",
+        "B": "Sosyal ilişkiler ve hukuk",
+        "C": "Sadece miras hukuku",
+        "D": "Savaş hukuku"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "question": "Aşağıdakilerden hangisi bidat olarak kabul edilir?",
+      "options": {
+        "A": "Namaz kılmak",
+        "B": "Mevlit okutmak",
+        "C": "Kuran okumak",
+        "D": "Sadaka vermek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "question": "Hurafeler hangi yolla dinî gerçeklik kazanmış gibi gösterilir?",
+      "options": {
+        "A": "Mantık ve delillerle",
+        "B": "Uydurma hikayelerle",
+        "C": "Sahih hadislerle",
+        "D": "İlmi araştırmalarla"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "question": "İslam'da hangi kavram dine sonradan eklenmiş inançları ve yanlış inanışları ifade eder?",
+      "options": {
+        "A": "Bidat",
+        "B": "Hadis",
+        "C": "Sünnet",
+        "D": "İcma"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "question": "Cemaat kavramı en küçük boyutta hangi yapıyı ifade eder?",
+      "options": {
+        "A": "Halifelik",
+        "B": "Aile",
+        "C": "Ümmet",
+        "D": "Tarikat"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "question": "Aşağıdakilerden hangisi cemaat liderine verilen isimlerden biri değildir?",
+      "options": {
+        "A": "Halife",
+        "B": "Emir",
+        "C": "Peygamber",
+        "D": "İmam"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "question": "Biat, hangi İslami ilkeye dayanır?",
+      "options": {
+        "A": "Emir sahiplerine itaat",
+        "B": "Peygamber sevgisi",
+        "C": "Müslümanların sadaka vermesi",
+        "D": "Kendi başına hareket etmek"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "question": "Hz. Peygamber (s.a.v.) hangi olayda Müslümanlardan biat almıştır?",
+      "options": {
+        "A": "Hudeybiye Antlaşması",
+        "B": "Bedir Savaşı",
+        "C": "Tebük Seferi",
+        "D": "Hayber Savaşı"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "question": "Biatın İslam'daki en önemli amacı nedir?",
+      "options": {
+        "A": "Liderin şahsi çıkarlarını korumak",
+        "B": "Liderin meşruiyetini sağlamak",
+        "C": "Devletin otoritesini güçlendirmek",
+        "D": "Müslümanların birliğini sağlamak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 24,
+      "question": "Müslümanların, devlet başkanına itaat etmesi hangi ayette emredilmiştir?",
+      "options": {
+        "A": "Nisâ Suresi 59",
+        "B": "Fatiha Suresi 1",
+        "C": "Mâide Suresi 3",
+        "D": "Bakara Suresi 2"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "question": "Aşağıdakilerden hangisi cemaatin temel özelliklerinden biri değildir?",
+      "options": {
+        "A": "Teşkilatlı olmak",
+        "B": "Liderinin mutlak hatasız olması",
+        "C": "Hiyerarşik bir yapıya sahip olmak",
+        "D": "Ortak amaçlara sahip olmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "question": "Hangi İslam hukuku kaynağı yeniden yorum yaparak yeni hüküm çıkarılmasını sağlar?",
+      "options": {
+        "A": "Sünnet",
+        "B": "İcma",
+        "C": "Kıyas",
+        "D": "Kitap"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "question": "Şeriatın temel amacı aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Sadece ibadetlerin düzenlenmesi",
+        "B": "Toplumsal hayatın hukuki olarak düzenlenmesi",
+        "C": "Sadece tasavvufun öğretilmesi",
+        "D": "Ekonomik kazançların artırılması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "question": "Şeriatın tali (ikincil) kaynaklarından biri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "İstihsan",
+        "B": "Sünnet",
+        "C": "Kur'an",
+        "D": "İcma"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "question": "Biat etmek, İslam'da hangi temel kavramın bir gereğidir?",
+      "options": {
+        "A": "Cemaat bilinci ve birlik",
+        "B": "Kendi başına hareket etmek",
+        "C": "Peygamber soyundan gelmek",
+        "D": "Kişisel özgürlüklerin artırılması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "question": "Aşağıdakilerden hangisi tasavvufta kullanılan terimlerden biri değildir?",
+      "options": {
+        "A": "Seyrü sülûk",
+        "B": "Murakabe",
+        "C": "Nübüvvet",
+        "D": "Çile"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}

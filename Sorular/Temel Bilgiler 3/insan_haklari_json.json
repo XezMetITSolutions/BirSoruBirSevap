@@ -1,0 +1,337 @@
+{
+  "category": "İNSAN HAKLARI",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 30,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Aşağıdakilerden hangisi insan haklarının temel amaçlarından biri değildir?",
+      "options": {
+        "A": "İnsanların inanç, din, kültür ve mezhep ayrımı yapılmaksızın eşit haklara sahip olması",
+        "B": "Güçlülerin zayıfları baskı altına almasını desteklemek",
+        "C": "İnsanların temel hak ve özgürlüklerini korumak",
+        "D": "İnsanların haklarını özgürce kullanabilmesini sağlamak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "question": "Hz. Âdem'in oğlu Kâbil'in kardeşi Hâbil'i haksız yere öldürmesi neyin başlangıcı olarak kabul edilir?",
+      "options": {
+        "A": "İlk siyasi mücadele",
+        "B": "İlk hukuk davası",
+        "C": "İlk insan hakları ihlali",
+        "D": "İlk toplumsal düzenin kurulması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "question": "Aşağıdakilerden hangisi beş temel insan hakkı arasında yer almaz?",
+      "options": {
+        "A": "Mal emniyeti",
+        "B": "Nesil emniyeti",
+        "C": "Eğitim hakkı",
+        "D": "Din emniyeti"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "question": "İnsan haklarının temel kavramları arasında yer alan adalet kavramı aşağıdakilerden hangisini ifade eder?",
+      "options": {
+        "A": "İnsanların doğal haklarına, yeteneklerine ve çabalarına göre karşılık alabilmesi",
+        "B": "Sadece güçlülere avantaj sağlayan bir sistem kurulması",
+        "C": "Toplum içinde belli kesimlere daha fazla ayrıcalık tanınması",
+        "D": "Kanunların bireyler arasında ayrım yaparak uygulanması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 5,
+      "question": "İslam'daki insan hakları anlayışının temel dayanağı aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "İnsanların toplum içinde özgürce hareket etmesi",
+        "B": "İnsanların doğuştan getirdiği haklarının korunması ve adaletin sağlanması",
+        "C": "Devletin vatandaşları üzerinde tam kontrol sağlaması",
+        "D": "Güçlü olanın toplumda üstün tutulması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "question": "Aşağıdakilerden hangisi pozitif özgürlüğün tanımıdır?",
+      "options": {
+        "A": "İnsanların hiçbir sorumluluk üstlenmeden özgürlüklerini kullanabilmesi",
+        "B": "İnsanların başkalarına zarar vermeden özgürlüklerini sorumluluk bilinciyle kullanması",
+        "C": "Özgürlüğün tamamen bireysel olması ve toplumsal kurallara bağlı kalmaması",
+        "D": "Özgürlüğün sadece devlet tarafından belirlenen sınırlar içinde kullanılması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "question": "Aşağıdakilerden hangisi insan hakları ihlalleri arasında sayılabilir?",
+      "options": {
+        "A": "İnsanların din ve inançlarını özgürce yaşayabilmesi",
+        "B": "İnsanların devlet yönetimine katılabilmesi",
+        "C": "Devletin belli bir gruba karşı ayrımcılık yapması",
+        "D": "Özgürce seyahat etme hakkının tanınması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "question": "Hilfü'l-Fudûl'ün kurulmasının en önemli nedeni aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Mekke'deki sosyal adaletsizlikleri ve haksızlıkları ortadan kaldırmak",
+        "B": "Mekke'deki ticaret yollarını korumak",
+        "C": "Kureyş kabileleri arasında ekonomik denge sağlamak",
+        "D": "Zenginlerin fakirleri koruma altına almasını sağlamak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "question": "Aşağıdakilerden hangisi Hilfü'l-Fudûl'ün amaçları arasında yer almaz?",
+      "options": {
+        "A": "Mazlumları zalimlere karşı korumak",
+        "B": "Haksızlığa uğrayanların hakkını savunmak",
+        "C": "Mekke'de adaleti sağlamak",
+        "D": "Sadece Kureyş kabilesinin haklarını korumak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 10,
+      "question": "Aşağıdakilerden hangisi Hilfü'l-Fudûl'ün çalışma prensiplerinden biridir?",
+      "options": {
+        "A": "Güçlü olanın haklı sayılması",
+        "B": "Mazlumun kimliğine bakılmaksızın haklarının korunması",
+        "C": "Sadece Arap olanların haklarının savunulması",
+        "D": "Zalimlerin yanında yer almak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "question": "İslam'da insan haklarının temel dayanaklarından biri olan eşitlik kavramı aşağıdakilerden hangisini ifade eder?",
+      "options": {
+        "A": "Bütün insanların ortak haklara ve yükümlülüklere sahip olması",
+        "B": "Güçlü olanların daha fazla hakka sahip olması",
+        "C": "Sadece belirli bir zümrenin haklarının korunması",
+        "D": "Farklı inanç ve mezheplerin yok sayılması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 12,
+      "question": "Hilfü'l-Fudûl, hangi olay üzerine kurulmuştur?",
+      "options": {
+        "A": "Yemenli bir tüccarın Mekke'de haksızlığa uğraması",
+        "B": "Müslümanların Mekke'den Medine'ye hicreti",
+        "C": "Hz. Peygamber'in ilk vahyi alması",
+        "D": "Mekke'de iç savaş çıkması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "question": "Hilfü'l-Fudûl'ün en önemli özelliklerinden biri nedir?",
+      "options": {
+        "A": "Zengin tüccarları destekleyen bir yapı olması",
+        "B": "Herkesin hak ve hukukunun korunmasını sağlaması",
+        "C": "Sadece Kureyş kabilesinin haklarını koruması",
+        "D": "Yabancıları Mekke'den uzaklaştırması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "question": "Hz. Peygamber (s.a.v.), Hilfü'l-Fudûl teşkilatına hangi dönemde katılmıştır?",
+      "options": {
+        "A": "Hicretten sonra Medine'de",
+        "B": "Çocukluk yıllarında",
+        "C": "Gençlik yıllarında, risaletinden önce",
+        "D": "Veda Hutbesi sırasında"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "question": "İnsan hakları ihlallerinin en büyük sebeplerinden biri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Adaletin sağlanması",
+        "B": "İnsanların eşit haklara sahip olması",
+        "C": "Güçlülerin zayıflara baskı uygulaması",
+        "D": "Hukukun üstünlüğünün kabul edilmesi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "question": "Aşağıdakilerden hangisi İslam'daki insan hakları mücadelesinin temel ilkelerinden biridir?",
+      "options": {
+        "A": "İnsanların kökenine ve ırkına göre değerlendirilmesi",
+        "B": "Adaletin ve hakkaniyetin her koşulda korunması",
+        "C": "Sadece Müslümanlara hak tanınması",
+        "D": "İnsanların farklı inançlara sahip olmasının yasaklanması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "question": "Aşağıdakilerden hangisi insan hakları mücadelesinde en büyük sorunlardan biridir?",
+      "options": {
+        "A": "Çifte standart uygulamaları",
+        "B": "İnsan haklarının korunması",
+        "C": "Özgürlüklerin artırılması",
+        "D": "Adaletin sağlanması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "question": "Hilfü'l-Fudûl toplantısına katılanlar aşağıdaki hangi sonuca varmışlardır?",
+      "options": {
+        "A": "Sadece Kureyşlilerin haklarını korumaya karar vermişlerdir.",
+        "B": "Zalim kim olursa olsun ona karşı duracaklarını ilan etmişlerdir.",
+        "C": "Mekke'de ticari anlaşmazlıkları çözmek için bir mahkeme kurmuşlardır.",
+        "D": "Yabancıları Mekke'den kovma kararı almışlardır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "question": "İslam'da „hak",
+      "options": {
+        "A": "Kişisel çıkarları koruma",
+        "B": "Sadece güçlülerin haklarını savunma",
+        "C": "Adaleti sağlama ve insan onurunu koruma",
+        "D": "İnsanların haklarını kısıtlama"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "question": "İnsan hakları kapsamında özgürlük ne anlama gelir?",
+      "options": {
+        "A": "İnsanların sorumluluk almadan hareket etmesi",
+        "B": "İnsanların hak ve yükümlülüklerini bilerek özgür iradelerini kullanması",
+        "C": "Devletin tüm kararları tek başına alması",
+        "D": "Sadece belirli kesimlerin özgür olması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "question": "Hilfü'l-Fudûl, günümüzde hangi kuruma benzetilebilir?",
+      "options": {
+        "A": "Ticaret odaları",
+        "B": "Savaş birlikleri",
+        "C": "İnsan hakları örgütleri",
+        "D": "Vergi daireleri"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "question": "Hilfü'l-Fudûl'ün varlığı hangi temel ilkeye dayanmaktadır?",
+      "options": {
+        "A": "Güçlü olanın haklı olduğu fikri",
+        "B": "Adalet ve eşitlik prensipleri",
+        "C": "Kabile üstünlüğü",
+        "D": "Köleliği destekleme"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "question": "Hilfü'l-Fudûl'ün en önemli etki alanı aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Sadece Kureyş kabilesine hizmet etmesi",
+        "B": "Ticari konuları düzenlemesi",
+        "C": "Sosyal adaletsizliklere karşı mücadele etmesi",
+        "D": "Devlet yönetimini ele alması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "question": "Hz. Muhammed (s.a.v.), Hilfü'l-Fudûl teşkilatı hakkında ne söylemiştir?",
+      "options": {
+        "A": "„Eğer İslam döneminde de böyle bir teşkilata çağrılsaydım, yine katılırdım.",
+        "B": "„Bu teşkilat yalnızca Mekke'de geçerlidir.",
+        "C": "„Hilfü'l-Fudûl yalnızca tüccarların işlerini düzenlemek için kurulmuştur.",
+        "D": "„Zayıflar güçlülerden daha fazla hakka sahip olmalıdır."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "question": "Aşağıdakilerden hangisi insan hakları ihlali sayılmaz?",
+      "options": {
+        "A": "İnsanların kendi inançlarını yaşamasına izin verilmemesi",
+        "B": "İnsanların baskı ve zulüm altında tutulması",
+        "C": "İnsanların fikirlerini özgürce açıklayabilmesi",
+        "D": "Bir grubun diğerlerine üstün tutulması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "question": "İnsan haklarının temel dayanağı olan „hak",
+      "options": {
+        "A": "Güçlülerin ayrıcalıklı olması",
+        "B": "İnsanların doğuştan sahip olduğu devredilemez haklar",
+        "C": "Herkesin aynı düşünceye sahip olması",
+        "D": "Devletin tüm yetkileri elinde toplaması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "question": "İnsan haklarının korunması için aşağıdakilerden hangisi gereklidir?",
+      "options": {
+        "A": "Bütün gücün tek bir kişinin elinde olması",
+        "B": "Hukukun üstünlüğünün sağlanması",
+        "C": "Bireylerin haklarını devlete devretmesi",
+        "D": "Adaletin yalnızca belirli bir grup için işlemesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "question": "İslam tarihinde insan haklarının en önemli savunucularından biri olan teşkilat aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Kureyş Meclisi",
+        "B": "Hilfü'l-Fudûl",
+        "C": "Daru'n-Nedve",
+        "D": "Kabileler Birliği"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "question": "Hilfü'l-Fudûl'ün en büyük düşmanı kimdir?",
+      "options": {
+        "A": "Mekke'deki zalim ve adaletsiz kişiler",
+        "B": "Müslüman olmayanlar",
+        "C": "Sadece yabancı tüccarlar",
+        "D": "Mekke'nin idarecileri"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "question": "İnsan haklarının temel ilkelerinden biri hangi durumu içermez?",
+      "options": {
+        "A": "Adaletin sağlanması",
+        "B": "İnsanların haklarının korunması",
+        "C": "Güçlü olanın üstün sayılması",
+        "D": "Özgürlüğün sorumluluk bilinciyle kullanılması"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}

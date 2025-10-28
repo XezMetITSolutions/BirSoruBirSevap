@@ -1,0 +1,338 @@
+{
+  "category": "TEŞKİLAT DERSLERİ",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 30,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Almanya'da mescitler bir araya gelerek hangi çatı kuruluşunu oluşturmuşlardır?",
+      "options": {
+        "A": "Avrupa İslam Birliği",
+        "B": "Almanya Türk Birliği",
+        "C": "IGMG",
+        "D": "UKBA"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 2,
+      "question": "Avrupa Türk Birliği ve Avrupa İslam Birliği'nin başına kim getirilmiştir?",
+      "options": {
+        "A": "Osman Yumakoğulları",
+        "B": "Rüştü Banaz",
+        "C": "Dr. Yusuf Zeynelabidin",
+        "D": "Mehmet Akif Ersoy"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "question": "Avrupa Millî Görüş Teşkilatları (AMGT) hangi tarihte kurulmuştur?",
+      "options": {
+        "A": "1995",
+        "B": "1985",
+        "C": "1970",
+        "D": "2000"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "question": "AMGT hangi şehirde kurulmuştur?",
+      "options": {
+        "A": "Paris",
+        "B": "Köln",
+        "C": "Amsterdam",
+        "D": "Viyana"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "question": "AMGT'nin kurucu genel başkanı kimdir?",
+      "options": {
+        "A": "Osman Yumakoğulları",
+        "B": "Dr. Yusuf Zeynelabidin",
+        "C": "Rüştü Banaz",
+        "D": "Mehmet Emin Akıncı"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 6,
+      "question": "AMGT'nin ismi 1995 yılında hangi isimle değiştirilmiştir?",
+      "options": {
+        "A": "UKBA",
+        "B": "HASENE",
+        "C": "IGMG",
+        "D": "Avrupa İslam Birliği"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "question": "IGMG'nin açılımı nedir?",
+      "options": {
+        "A": "İslam Toplumu Millî Görüş",
+        "B": "Avrupa İslam Birliği",
+        "C": "İslam Cemiyeti Büyük Teşkilatı",
+        "D": "Avrupa Müslüman Birliği"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "question": "IGMG hangi ülke merkezli olarak kurulmuştur?",
+      "options": {
+        "A": "Almanya",
+        "B": "Fransa",
+        "C": "Türkiye",
+        "D": "Hollanda"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "question": "IGMG tarafından kurulan cenaze yardımlaşma derneğinin adı nedir?",
+      "options": {
+        "A": "HASENE",
+        "B": "UKBA",
+        "C": "AMGT",
+        "D": "İslami Cenaze Derneği"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "question": "UKBA'nın temel hizmeti nedir?",
+      "options": {
+        "A": "Kur'an eğitimi vermek",
+        "B": "Cenazeleri memleketlerine götürmek",
+        "C": "Camileri onarmak",
+        "D": "Yardım kuruluşlarına destek olmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "question": "IGMG'nin desteklediği insani yardım derneğinin adı nedir?",
+      "options": {
+        "A": "UKBA",
+        "B": "HASENE",
+        "C": "Gökkuşağı",
+        "D": "Avrupa İslam Federasyonu"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "question": "IGMG Çocuk Kulübü hangi tür etkinlikler düzenlemektedir?",
+      "options": {
+        "A": "Yalnızca Ramazan ayı etkinlikleri",
+        "B": "Yaz kampları ve çocuk şenlikleri",
+        "C": "Sadece okul dersleri",
+        "D": "Sadece Arapça dersleri"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "question": "Avrupa'daki tek Türkçe dinî içerikli çocuk dergisinin adı nedir?",
+      "options": {
+        "A": "Çocuk Dünyası",
+        "B": "Gökkuşağı",
+        "C": "Minik Müslüman",
+        "D": "Çocuk Rehberi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "question": "IGMG'nin temel amacı nedir?",
+      "options": {
+        "A": "Müslümanların Avrupa'da kimliklerini korumasını sağlamak",
+        "B": "Sadece cami inşa etmek",
+        "C": "Avrupa'da İslami eğitim vermemek",
+        "D": "Sadece cenaze işleriyle ilgilenmek"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "question": "IGMG'nin faaliyet gösterdiği ülkeler arasında aşağıdakilerden hangisi yer almaz?",
+      "options": {
+        "A": "Fransa",
+        "B": "Hollanda",
+        "C": "Çin",
+        "D": "Avusturya"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "question": "Kur'an eğitiminin teşvik edildiği camiler hangi kuruluş bünyesinde yer almaktadır?",
+      "options": {
+        "A": "UKBA",
+        "B": "IGMG",
+        "C": "HASENE",
+        "D": "Avrupa Türk Federasyonu"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "question": "IGMG Çocuk Kulübü hangi organizasyonları düzenlemektedir?",
+      "options": {
+        "A": "Çocuk iftarları",
+        "B": "Ramazan şenlikleri",
+        "C": "Yaz kampları",
+        "D": "Hepsi"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 18,
+      "question": "Kur'an öğrenmenin ve öğretmenin önemi hangi cümle ile vurgulanmaktadır?",
+      "options": {
+        "A": "\"İlim Müslüman'ın kayıp malıdır.\"",
+        "B": "\"Sadece büyükler Kur'an öğrenmelidir.\"",
+        "C": "\"Kur'an sadece Ramazan ayında okunmalıdır.\"",
+        "D": "\"Kur'an öğrenmek zorunlu değildir.\""
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "question": "İslam Toplumu Millî Görüş camileri hangi hizmetleri sunmaktadır?",
+      "options": {
+        "A": "Sadece namaz kılma yeri olarak kullanılır.",
+        "B": "Sadece yaşlılara yönelik hizmet verir.",
+        "C": "Kur'an eğitimi, çocuk faaliyetleri, cenaze hizmetleri gibi çeşitli hizmetler sunar.",
+        "D": "Sadece Arapça dersleri verir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "question": "IGMG çocuk dergisi hangi amaçla çıkarılmaktadır?",
+      "options": {
+        "A": "Çocukların eğlenmesini sağlamak",
+        "B": "Türkçenin öğrenilmesini teşvik etmek",
+        "C": "Avrupa'daki çocuklara dini eğitim vermek",
+        "D": "B ve C şıkları doğrudur."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 21,
+      "question": "IGMG'nin Avrupa'daki Müslüman topluma sağladığı en önemli katkı nedir?",
+      "options": {
+        "A": "Sadece eğitim desteği vermek",
+        "B": "Müslümanların kimliklerini korumalarına yardımcı olmak",
+        "C": "Sadece yardım kuruluşlarını desteklemek",
+        "D": "Hiçbir katkı sağlamamak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "question": "IGMG'nin çocuklara sunduğu en önemli hizmetlerden biri nedir?",
+      "options": {
+        "A": "Okulda başarı sağlamak",
+        "B": "Türkçe eğitimi teşvik etmek",
+        "C": "Namaz eğitimleri düzenlemek",
+        "D": "B ve C şıkları doğrudur."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 23,
+      "question": "IGMG'nin gelecek nesillere en büyük mesajı nedir?",
+      "options": {
+        "A": "Kur'an öğrenmek ve öğretmek",
+        "B": "Camileri yönetmek",
+        "C": "Sadece dil eğitimi almak",
+        "D": "Avrupa'da asimile olmak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "question": "IGMG'nin cenaze hizmetleri neden önemlidir?",
+      "options": {
+        "A": "Cenazelerin Avrupa'da kalmasını sağlamak için",
+        "B": "Cenazelerin memleketlerine götürülmesini sağlamak için",
+        "C": "Sadece Almanya'daki Müslümanlara hizmet vermek için",
+        "D": "Avrupa'da mezarlık kurmak için"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "question": "IGMG'nin kurduğu HASENE derneği hangi alanda hizmet vermektedir?",
+      "options": {
+        "A": "Spor faaliyetleri düzenlemek",
+        "B": "İslami eğitim programları yapmak",
+        "C": "Fakirlere ve ihtiyaç sahiplerine yardım etmek",
+        "D": "Sadece çocuklara yönelik etkinlikler düzenlemek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "question": "IGMG'nin çocuklara yönelik en önemli eğitim amacı nedir?",
+      "options": {
+        "A": "Sadece Arapça öğretmek",
+        "B": "Kur'an eğitimi vermek ve ahlakı güzelleştirmek",
+        "C": "Sadece oyun etkinlikleri düzenlemek",
+        "D": "İslam tarihi öğretmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "question": "IGMG camileri hangi özellikleriyle öne çıkmaktadır?",
+      "options": {
+        "A": "Sadece namaz kılınan bir yer olarak kalması",
+        "B": "Kur'an eğitimi, sosyal yardım ve kültürel etkinlikler sunması",
+        "C": "Sadece yetişkinlere hizmet etmesi",
+        "D": "Hiçbir özelliği yoktur"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "question": "IGMG hangi kıtada faaliyet göstermemektedir?",
+      "options": {
+        "A": "Amerika",
+        "B": "Asya",
+        "C": "Avrupa",
+        "D": "Antarktika"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 29,
+      "question": "IGMG tarafından sunulan çocuk faaliyetleri arasında aşağıdakilerden hangisi yer almaz?",
+      "options": {
+        "A": "Çocuk iftarları",
+        "B": "Yaz kampları",
+        "C": "Televizyon programları",
+        "D": "Hayırda koşuyoruz etkinliği"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "question": "IGMG'nin gelecekteki vizyonu nedir?",
+      "options": {
+        "A": "Müslüman gençleri bilinçli bir şekilde yetiştirmek",
+        "B": "Sadece Almanya'daki Müslümanlara destek olmak",
+        "C": "Sadece sosyal yardımlarla ilgilenmek",
+        "D": "Müslümanları Avrupa'dan göndermek"
+      },
+      "correct_answer": "A"
+    }
+  ],
+  "answer_key": "1-C, 2-C, 3-B, 4-B, 5-A, 6-C, 7-A, 8-A, 9-B, 10-B, 11-B, 12-B, 13-B, 14-A, 15-C, 16-B, 17-D, 18-A, 19-C, 20-D, 21-B, 22-D, 23-A, 24-B, 25-C, 26-B, 27-B, 28-D, 29-C, 30-A"
+}

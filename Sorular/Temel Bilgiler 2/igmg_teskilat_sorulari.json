@@ -1,0 +1,337 @@
+{
+ "category": "TEŞKİLAT",
+ "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+ "question_count": 30,
+ "questions": [
+   {
+     "id": 1,
+     "question": "İlk başlarda neden kadınlar teşkilatı kurulamamıştır?",
+     "options": {
+       "A": "O dönemde kadınların teşkilat kurmasına izin verilmemesi",
+       "B": "Çoğu işçinin ve öğrencinin bekâr olması ve ailelerinin yanında olmaması",
+       "C": "Kadınların cemiyet işlerine ilgi göstermemesi",
+       "D": "Kadınların o dönemde işçi olarak çalışamaması"
+     },
+     "correct_answer": "B"
+   },
+   {
+     "id": 2,
+     "question": "Avrupa Türk Birliği başkanlığına kim getirilmiştir?",
+     "options": {
+       "A": "Osman Yumakoğulları",
+       "B": "Dr. Yusuf Zeynelabidin",
+       "C": "Necmettin Erbakan",
+       "D": "Rüştü Banaz"
+     },
+     "correct_answer": "B"
+   },
+   {
+     "id": 3,
+     "question": "AMGT'nin Avrupa Millî Görüş Teşkilatları adını almasını sağlayan başkan kimdir?",
+     "options": {
+       "A": "Osman Yumakoğulları",
+       "B": "Rüştü Banaz",
+       "C": "Dr. Yusuf Zeynelabidin",
+       "D": "Enes"
+     },
+     "correct_answer": "A"
+   },
+   {
+     "id": 4,
+     "question": "Avrupa Millî Görüş Teşkilatları hangi yıl kurulmuştur?",
+     "options": {
+       "A": "1980",
+       "B": "1990",
+       "C": "1985",
+       "D": "2000"
+     },
+     "correct_answer": "C"
+   },
+   {
+     "id": 5,
+     "question": "İslam Toplumu Millî Görüş'ün (IGMG) merkezi nerededir?",
+     "options": {
+       "A": "Berlin",
+       "B": "Köln",
+       "C": "İstanbul",
+       "D": "Brüksel"
+     },
+     "correct_answer": "B"
+   },
+   {
+     "id": 6,
+     "question": "IGMG'nin cenaze hizmetleri hangi kuruluş tarafından organize edilmektedir?",
+     "options": {
+       "A": "UKBA",
+       "B": "HASENE",
+       "C": "Kızılay",
+       "D": "Avrupa Türk Birliği"
+     },
+     "correct_answer": "A"
+   },
+   {
+     "id": 7,
+     "question": "IGMG hangi kıtada teşkilatlanmamıştır?",
+     "options": {
+       "A": "Avrupa",
+       "B": "Asya",
+       "C": "Amerika",
+       "D": "Antarktika"
+     },
+     "correct_answer": "D"
+   },
+   {
+     "id": 8,
+     "question": "IGMG'nin kuruluş aşamasında yapılan en önemli çalışmalardan biri aşağıdakilerden hangisidir?",
+     "options": {
+       "A": "Cemiyet binalarının satın alınması",
+       "B": "Kadın teşkilatının kurulması",
+       "C": "Avrupa dışındaki ülkelerde teşkilatlanma yapılması",
+       "D": "Sadece ibadet odaklı çalışmalar yapılması"
+     },
+     "correct_answer": "A"
+   },
+   {
+     "id": 9,
+     "question": "Hangi kuruluş cenaze yardımlaşma hizmetlerini üstlenmiştir?",
+     "options": {
+       "A": "AMGT",
+       "B": "UKBA",
+       "C": "IGMG Eğitim Birimi",
+       "D": "HASENE"
+     },
+     "correct_answer": "B"
+   },
+   {
+     "id": 10,
+     "question": "IGMG çocuklara yönelik hangi dergiyi çıkarmaktadır?",
+     "options": {
+       "A": "Gökkuşağı",
+       "B": "Yıldızlar",
+       "C": "Minik Kalpler",
+       "D": "Renkli Hayat"
+     },
+     "correct_answer": "A"
+   },
+   {
+     "id": 11,
+     "question": "IGMG'nin Avrupa'daki camilerde eğitim verdiği en önemli alanlardan biri nedir?",
+     "options": {
+       "A": "Matematik dersleri",
+       "B": "Yalnızca tarih dersleri",
+       "C": "Kur'an-ı Kerim ve İslami ilimler",
+       "D": "Sadece dil eğitimi"
+     },
+     "correct_answer": "C"
+   },
+   {
+     "id": 12,
+     "question": "IGMG'nin şu anda toplam kaç bölgesi bulunmaktadır?",
+     "options": {
+       "A": "10",
+       "B": "15",
+       "C": "25",
+       "D": "44"
+     },
+     "correct_answer": "D"
+   },
+   {
+     "id": 13,
+     "question": "Aşağıdakilerden hangisi IGMG'nin yürüttüğü sosyal yardım projelerinden biridir?",
+     "options": {
+       "A": "Sadece cami inşaatlarıyla ilgilenmek",
+       "B": "Sadece kadınlara yönelik kurslar açmak",
+       "C": "İhtiyaç sahiplerine kumanya dağıtmak",
+       "D": "Avrupa'da sadece Türk vatandaşlarına yönelik çalışmalar yapmak"
+     },
+     "correct_answer": "C"
+   },
+   {
+     "id": 14,
+     "question": "IGMG tarafından yapılan sağlık projeleri arasında aşağıdakilerden hangisi yer alır?",
+     "options": {
+       "A": "Ücretsiz diş sağlığı hizmeti",
+       "B": "Katarakt ameliyatlarının yaptırılması",
+       "C": "Yalnızca Müslümanlara yönelik hastaneler açılması",
+       "D": "Sağlık sigortası desteği sağlamak"
+     },
+     "correct_answer": "B"
+   },
+   {
+     "id": 15,
+     "question": "IGMG tarafından desteklenen hac ve umre organizasyonları hangi sloganla anılmaktadır?",
+     "options": {
+       "A": "'Hac ve Umre ancak devletle yapılır.'",
+       "B": "'Hac ve Umre sadece bireysel yapılır.'",
+       "C": "'Hac ve Umre İslam Toplumu Millî Görüş ile yapılır.'",
+       "D": "'Hac ve Umre herkes için zordur.'"
+     },
+     "correct_answer": "C"
+   },
+   {
+     "id": 16,
+     "question": "IGMG hangi alanlarda eğitim hizmetleri sunmaktadır?",
+     "options": {
+       "A": "Yalnızca Arapça eğitimi",
+       "B": "Yalnızca matematik ve fen dersleri",
+       "C": "Kur'an eğitimi ve İslami ilimler",
+       "D": "Sadece yüksek lisans düzeyinde eğitim"
+     },
+     "correct_answer": "C"
+   },
+   {
+     "id": 17,
+     "question": "IGMG'nin dünya çapında yaptığı en önemli faaliyetlerden biri nedir?",
+     "options": {
+       "A": "Yalnızca Avrupa'da faaliyet göstermesi",
+       "B": "Sadece cami açılışları yapması",
+       "C": "Su kuyuları açma projeleri",
+       "D": "Sadece Almanya'daki Müslümanlara hizmet vermesi"
+     },
+     "correct_answer": "C"
+   },
+   {
+     "id": 18,
+     "question": "IGMG tarafından öğrencilere sağlanan burs desteği hangi amaçla verilmektedir?",
+     "options": {
+       "A": "Sadece zengin öğrencilere verilir.",
+       "B": "Eğitimde fırsat eşitliği sağlamak için",
+       "C": "Sadece cami hizmetlerinde çalışmaları için",
+       "D": "Burs alan öğrencilerin İmam olması zorunludur."
+     },
+     "correct_answer": "B"
+   },
+   {
+     "id": 19,
+     "question": "IGMG teşkilatının en önemli özelliklerinden biri nedir?",
+     "options": {
+       "A": "Sadece Türk vatandaşlarına yönelik olması",
+       "B": "Uluslararası alanda faaliyet göstermesi",
+       "C": "Yalnızca dinî eğitim vermesi",
+       "D": "Sadece sosyal yardımlarla ilgilenmesi"
+     },
+     "correct_answer": "B"
+   },
+   {
+     "id": 20,
+     "question": "IGMG'nin Avrupa'daki en önemli amaçlarından biri nedir?",
+     "options": {
+       "A": "Göçmen Müslümanlara destek olmak",
+       "B": "Yalnızca cami sayısını artırmak",
+       "C": "Sadece imam yetiştirmek",
+       "D": "Kadınları çalışma hayatından uzaklaştırmak"
+     },
+     "correct_answer": "A"
+   },
+   {
+     "id": 21,
+     "question": "IGMG'nin çocuklar için yayınladığı aylık derginin adı nedir?",
+     "options": {
+       "A": "Gökkuşağı",
+       "B": "Minik Eller",
+       "C": "Çocuk Dünyası",
+       "D": "Bilgi Işığı"
+     },
+     "correct_answer": "A"
+   },
+   {
+     "id": 22,
+     "question": "IGMG'nin en büyük sosyal yardım projelerinden biri nedir?",
+     "options": {
+       "A": "Afrika'da temiz su kuyuları açılması",
+       "B": "Sadece Avrupa'daki Müslümanlara destek verilmesi",
+       "C": "Yalnızca Kur'an kursları düzenlemek",
+       "D": "İnsanları zorla İslam'a davet etmek"
+     },
+     "correct_answer": "A"
+   },
+   {
+     "id": 23,
+     "question": "Aşağıdakilerden hangisi IGMG'nin faaliyet gösterdiği ülkeler arasında yer almaz?",
+     "options": {
+       "A": "Kanada",
+       "B": "Amerika Birleşik Devletleri",
+       "C": "Güney Kore",
+       "D": "Avusturya"
+     },
+     "correct_answer": "C"
+   },
+   {
+     "id": 24,
+     "question": "IGMG'nin faaliyet gösterdiği ülkeler arasında bulunmayan ülke hangisidir?",
+     "options": {
+       "A": "Almanya",
+       "B": "Avusturalya",
+       "C": "Finlandiya",
+       "D": "Danimarka"
+     },
+     "correct_answer": "C"
+   },
+   {
+     "id": 25,
+     "question": "IGMG'nin çocuklara yönelik çalışmaları arasında aşağıdakilerden hangisi bulunur?",
+     "options": {
+       "A": "Sadece yetişkinlere yönelik kurslar açmak",
+       "B": "Çocuklar için eğitim ve sosyal etkinlikler düzenlemek",
+       "C": "Çocukların teşkilat çalışmalarına katılmasını engellemek",
+       "D": "Çocukların sadece dini eğitim almasını sağlamak"
+     },
+     "correct_answer": "B"
+   },
+   {
+     "id": 26,
+     "question": "IGMG'nin hac ve umre organizasyonlarının sloganı nedir?",
+     "options": {
+       "A": "„Hac ve umre herkesin hakkıdır.",
+       "B": "„Hac ve umre herkes için zordur.",
+       "C": "„Hac ve umre sadece Araplar içindir.",
+       "D": "„Hac ve umre İslam Toplumu Millî Görüş ile yapılır."
+     },
+     "correct_answer": "D"
+   },
+   {
+     "id": 27,
+     "question": "IGMG'nin desteklediği insani yardım kuruluşu aşağıdakilerden hangisidir?",
+     "options": {
+       "A": "UKBA",
+       "B": "HASENE",
+       "C": "FUDUL",
+       "D": "EMUG"
+     },
+     "correct_answer": "B"
+   },
+   {
+     "id": 28,
+     "question": "IGMG'nin en önemli hedeflerinden biri nedir?",
+     "options": {
+       "A": "Gençleri teşkilatın dışında tutmak",
+       "B": "Sadece Almanya'da faaliyet göstermek",
+       "C": "Avrupa'da Müslüman toplulukları desteklemek",
+       "D": "Sadece cami yapımına odaklanmak"
+     },
+     "correct_answer": "C"
+   },
+   {
+     "id": 29,
+     "question": "IGMG'nin Ramazan ayında yürüttüğü yardım projeleri hangi alanlara yöneliktir?",
+     "options": {
+       "A": "Fakirlere kumanya dağıtımı, iftar organizasyonları, su kuyusu açma",
+       "B": "Sadece Almanya'daki Müslümanlara yönelik çalışmalar",
+       "C": "Yalnızca cami inşaatlarını destekleme",
+       "D": "İslam tarihine yönelik konferanslar düzenleme"
+     },
+     "correct_answer": "A"
+   },
+   {
+     "id": 30,
+     "question": "IGMG'nin öncelikli olarak yaptığı çalışmalar hangi alanda yoğunlaşmaktadır?",
+     "options": {
+       "A": "Sadece siyasi faaliyetler",
+       "B": "Eğitim, sosyal yardımlaşma ve dini hizmetler",
+       "C": "Yalnızca cami açılışları",
+       "D": "Sadece erkeklere yönelik projeler"
+     },
+     "correct_answer": "B"
+   }
+ ]
+}

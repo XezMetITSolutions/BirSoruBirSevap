@@ -1,0 +1,2009 @@
+{
+  "category": "İBADET",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 183,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Fıkıh ilmi, aşağıdakilerden hangisini kapsamaz?",
+      "options": {
+        "A": "İnsanların ibadetlerini düzenleyen kuralları",
+        "B": "Suç ve cezalarla ilgili hükümleri",
+        "C": "İnsanların tıbbi tedavi yöntemlerini",
+        "D": "Toplumsal düzenlemeleri kapsayan muâmelât hükümlerini"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 2,
+      "question": "Fıkıh ilminin bölümlerinden biri olan „ukûbat“ ne ile ilgilidir?",
+      "options": {
+        "A": "İnsanların ibadetlerini düzenlemekle",
+        "B": "Suç ve ceza hükümleriyle",
+        "C": "Müslümanların ekonomik faaliyetleriyle",
+        "D": "Peygamberlerin hayatlarını anlatmakla"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "question": "Fıkhın tanımıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Fıkıh, yalnızca ibadetlerle ilgilidir",
+        "B": "Fıkıh, İslam hukukunun yalnızca sosyal ilişkilerle ilgilenen bölümüdür",
+        "C": "Fıkıh, Müslümanların hem dünya hem de ahiret işlerini düzenleyen ilimdir",
+        "D": "Fıkıh, sadece ahiretle ilgili hükümlerin öğrenildiği bir ilim dalıdır"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "question": "Fıkıh ilmini öğrenmenin önemiyle ilgili aşağıdaki hadislerden hangisi doğru bir açıklama yapmaktadır?",
+      "options": {
+        "A": "„Fıkıh öğrenmek, sadece alimlerin görevidir.“",
+        "B": "„Allah bir kimseye iyilik dilerse onu dinde fakih (anlayışlı) kılar.“",
+        "C": "„Fıkıh ilmi sadece namaz ve oruç gibi ibadetleri kapsar.“",
+        "D": "„Fıkıh ilmi, sadece büyük âlimlerin bilebileceği bir ilimdir.“"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "question": "Aşağıdakilerden hangisi ibadetin İslam’daki tanımına uygundur?",
+      "options": {
+        "A": "Yalnızca namaz, oruç, zekât ve hac gibi ibadetleri yerine getirmek",
+        "B": "Allah’a samimiyetle yapılan her fiil ve davranış",
+        "C": "Yalnızca dil ile yapılan dua ve zikir",
+        "D": "Bedenî ibadetlerin belirli vakitlerde yapılması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "question": "İbadet etmenin psikolojik faydalarından biri değildir:",
+      "options": {
+        "A": "Kalbe huzur ve kuvvet vermesi",
+        "B": "Toplumsal düzeni bozması",
+        "C": "Ahlakı güzelleştirmesi",
+        "D": "İnsanlara sorumluluk bilinci kazandırması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "question": "İslam›da temizliğe verilen önemin vurgulandığı ayetlerden biri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "„Şüphesiz Allah çok tövbe edenleri ve temizlenenleri sever.“ (Bakara, 222)",
+        "B": "„Allah’ın huzuruna elbiselerinizi kirleterek çıkın.“",
+        "C": "„Temizlik yalnızca zahiri bir ibadettir, kalp temizliği yeterlidir.“",
+        "D": "„İbadetler, temiz olmadan da yerine getirilebilir.“"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "question": "Hz. Peygamber (s.a.v.) temizliği hangi şekilde tanımlamıştır?",
+      "options": {
+        "A": "„Temizlik imanın yarısıdır.“",
+        "B": "„Temizlik sadece zenginler içindir.“",
+        "C": "„Temiz olmak sadece bedeni ilgilendirir.“",
+        "D": "„Temizliğe dikkat etmek gereksizdir.“"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "question": "Aşağıdakilerden hangisi beden temizliğinin bir parçasıdır?",
+      "options": {
+        "A": "Gözlerin kötüye bakmaktan korunması",
+        "B": "Misvak veya diş fırçası kullanarak diş temizliği yapmak",
+        "C": "İçsel niyetlerin güzelleştirilmesi",
+        "D": "Kalbin kötü niyetlerden arındırılması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "question": "Hz. Peygamber’in (s.a.v.) her namaz vakti öncesinde yapılmasını tavsiye ettiği temizlik uygulaması nedir?",
+      "options": {
+        "A": "Gusül almak",
+        "B": "Misvak kullanmak",
+        "C": "Elbise temizlemek",
+        "D": "Abdest almadan namaza başlamak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "question": "Aşağıdakilerden hangisi ruh temizliğinin bir gereğidir?",
+      "options": {
+        "A": "Kibir, haset ve riya gibi kötü duygulardan arınmak",
+        "B": "Sürekli dış görünüşüyle ilgilenmek",
+        "C": "Başkalarını eleştirmek",
+        "D": "Sadece su ile bedeni temizlemek"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 12,
+      "question": "Kalp temizliği hakkında Kur’an-ı Kerîm’de hangi ifade geçmektedir?",
+      "options": {
+        "A": "“Allah sadece ibadet edenleri sever.”",
+        "B": "“Allah’a halis ve pak bir kalp ile varan kurtuluşa ermiştir.”",
+        "C": "“Temizlik sadece dış görünüşle ilgilidir.”",
+        "D": "“İbadet ederken temiz olmaya gerek yoktur.”"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "question": "Cuma günü yıkanmanın her mümin için güzel bir davranış olduğu hadisi hangi temizliği teşvik etmektedir?",
+      "options": {
+        "A": "Ruh temizliği",
+        "B": "Çevre temizliği",
+        "C": "Beden temizliği",
+        "D": "Sadece diş temizliği"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "question": "İbadetin bireysel ve toplumsal faydalarından biri değildir:",
+      "options": {
+        "A": "Toplumun birlik ve beraberliğini pekiştirmesi",
+        "B": "İnsanlara sorumluluk bilinci kazandırması",
+        "C": "Bireylerin Allah’a daha yakın olmasını sağlaması",
+        "D": "İnsanları bencil ve kibirli yapması"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 15,
+      "question": "Aşağıdakilerden hangisi çevre temizliği ile ilgili bir sorumluluk değildir?",
+      "options": {
+        "A": "Çöpleri zamanında ve uygun yerlere atmak",
+        "B": "Sokakları ve mahalleleri temiz tutmak",
+        "C": "Camileri ve ibadet yerlerini temiz bırakmak",
+        "D": "Evde çöp biriktirip çevreye zarar vermek"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 16,
+      "question": "İslam›da temizliğin ibadetlerle ilişkisi hangi seçenekle açıklanabilir?",
+      "options": {
+        "A": "Temizlik, ibadetlerin kabul edilmesi için gereklidir",
+        "B": "Temizlik yalnızca sosyal bir sorumluluktur",
+        "C": "İbadet ve temizlik arasında doğrudan bir bağ yoktur",
+        "D": "Temiz olmadan da ibadet edilebilir"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "question": "İslam›da kıyafet temizliği hakkında aşağıdakilerden hangisi söylenemez?",
+      "options": {
+        "A": "Namaz kılarken kıyafetin temiz olması gerekir",
+        "B": "Kirli kıyafetle camiye gitmek doğru değildir",
+        "C": "Kıyafet temizliği sadece bayram günlerinde yapılır",
+        "D": "İslam dini temiz ve düzgün kıyafetleri teşvik eder"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "question": "Hz. Peygamber‘in (s.a.v.) temizlik ile ilgili sözlerinden biri değildir:",
+      "options": {
+        "A": "„Allah temizdir, temiz olanları sever.“",
+        "B": "„Temizlik imanın yarısıdır.“",
+        "C": "„Kirli olsanız da ibadetleriniz kabul olur.“",
+        "D": "„Cuma günü yıkanmak her mümin için güzel bir davranıştır.“"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "question": "İslam’da çevre temizliğinin önemi hakkında hangi atasözü uygun olabilir?",
+      "options": {
+        "A": "“Arslan yattığı yerden belli olur.”",
+        "B": "“İyilik eden iyilik bulur.”",
+        "C": "“Ne ekersen, onu biçersin.”",
+        "D": "“Azıcık aşım kaygısız başım.”"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "question": "İslam›da abdest ve gusül hangi temizlik türüne girer?",
+      "options": {
+        "A": "Ruh temizliği",
+        "B": "Beden temizliği",
+        "C": "Çevre temizliği",
+        "D": "Sosyal temizlik"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "question": "Namazın farz kılınışıyla ilgili aşağıdaki bilgilerden hangisi doğrudur?",
+      "options": {
+        "A": "Hicretten 5 yıl önce Ramazan ayında farz kılınmıştır.",
+        "B": "Miraç Gecesi‘nde, hicretten 1,5 yıl önce farz kılınmıştır.",
+        "C": "Medine‘de, Peygamberimiz‘in vefatından 2 yıl önce farz kılınmıştır.",
+        "D": "Hz. Ömer zamanında Müslümanlara farz kılınmıştır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "question": "Kur‘an-ı Kerim’de namazın farz olduğuna dair aşağıdaki ayetlerden hangisi yer almaktadır?",
+      "options": {
+        "A": "„Namazınızı kılınız ve zekâtınızı veriniz.“",
+        "B": "„Oruç size farz kılındı.“",
+        "C": "„Allah size haccı emretmiştir.“",
+        "D": "„Allah yolunda cihad edin.“"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "question": "Aşağıdakilerden hangisi namazın günlük hayatımızdaki etkilerinden biri değildir?",
+      "options": {
+        "A": "Manevi bir temizlik sağlaması",
+        "B": "Bedeni zayıflatması",
+        "C": "Ruhsal dinginlik kazandırması",
+        "D": "İnsanları ahlaki yönden geliştirmesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "Namazın bireysel ve toplumsal faydaları düşünüldüğünde aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Namaz, insanı kötülüklerden uzaklaştırır.",
+        "B": "Namaz, insanın bedenen zayıf düşmesine neden olur.",
+        "C": "Namaz, bireyin Allah’a olan bağlılığını güçlendirir.",
+        "D": "Namaz, toplumsal birlikteliği sağlar."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "question": "Kur‘an-ı Kerim’de namazın kötülüklerden uzaklaştırıcı özelliği hangi ayette belirtilmiştir?",
+      "options": {
+        "A": "„Şüphesiz namaz, müminleri günahlardan alıkoyar.“",
+        "B": "„Allah orucu farz kıldı ki nefisler terbiye olsun.“",
+        "C": "„Allah kullarını zekât vermeye teşvik etmiştir.“",
+        "D": "„Hac ibadeti ruhu temizler.“"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "question": "Aşağıdakilerden hangisi cemaatle namaz kılmanın faziletlerinden biri değildir?",
+      "options": {
+        "A": "Müminler arasındaki birlik ve beraberliği pekiştirir.",
+        "B": "İbadetlerin daha düzenli yapılmasını sağlar.",
+        "C": "Bireyin yalnız ibadet etmesini teşvik eder.",
+        "D": "İman ve ibadet şuurunu artırır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "question": "Peygamberimiz (s.a.v.) cemaatle namaz kılmanın faziletiyle ilgili hangi hadisi buyurmuştur?",
+      "options": {
+        "A": "„Cemaatle kılınan namaz, tek başına kılınan namazdan 27 derece daha faziletlidir.“",
+        "B": "„Namaz kılan herkes cennete girecektir.“",
+        "C": "„Sabah namazını kılan, o gün hiç günah işlemez.“",
+        "D": "„Oruç tutanlar için namaz gereksizdir.“"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "question": "Namazın insan psikolojisi üzerindeki etkilerinden biri değildir:",
+      "options": {
+        "A": "Stresi azaltır ve insanı huzura kavuşturur.",
+        "B": "Dünyaya aşırı bağlılığı artırır.",
+        "C": "Musibetler karşısında dayanma gücü kazandırır.",
+        "D": "Kötülüklerden sakınmaya yardımcı olur."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "question": "Aşağıdakilerden hangisi namaz vakitlerinden biri değildir?",
+      "options": {
+        "A": "Sabah",
+        "B": "Yatsı",
+        "C": "Teravih",
+        "D": "Akşam"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "question": "Aşağıdakilerden hangisi namaz kılmanın mekruh olduğu vakitlerden biri değildir?",
+      "options": {
+        "A": "Güneş doğarken",
+        "B": "Güneş tepe noktasında iken",
+        "C": "Güneş batarken",
+        "D": "Sabah namazının vakti"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 31,
+      "question": "Namazın bedeni bir ibadet olması aşağıdaki durumlardan hangisini ifade eder?",
+      "options": {
+        "A": "Ruhsal gelişimi sağlar.",
+        "B": "Kişinin sadece zihinsel gelişimini etkiler.",
+        "C": "Kasları kuvvetlendirir ve disiplin kazandırır.",
+        "D": "İbadet esnasında hareket etmeye gerek yoktur."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "question": "Namazın ahlaki eğitime olan katkılarından biri değildir:",
+      "options": {
+        "A": "İnsanları kötülüklerden uzaklaştırması",
+        "B": "Sabır ve sebat duygusunu artırması",
+        "C": "Bencilliği ve cimriliği teşvik etmesi",
+        "D": "İnsanları doğru ve dürüst olmaya yöneltmesi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 33,
+      "question": "Aşağıdakilerden hangisi namazın bireysel etkilerinden biridir?",
+      "options": {
+        "A": "İnsanları grup halinde ibadete yönlendirir.",
+        "B": "Müminleri tembelliğe teşvik eder.",
+        "C": "Ruh ve beden sağlığını korur.",
+        "D": "Sadece belli bir yaş grubuna hitap eder."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "question": "Namazın farz olmasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Akıl sahibi olan her Müslüman için farzdır.",
+        "B": "Belirli vakitlerde eda edilmesi gerekir.",
+        "C": "Namaz sadece özel günlerde kılınmalıdır.",
+        "D": "Namazın farziyeti Kur‘an ve sünnetle sabittir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "question": "Aşağıdakilerden hangisi namazda bulunması gereken şartlardan biridir?",
+      "options": {
+        "A": "Beden, elbise ve namaz kılınan yerin temiz olması",
+        "B": "Günlük en az 5 saat uyumuş olmak",
+        "C": "Yemek yedikten sonra hemen namaza durmak",
+        "D": "Namazı camide kılma zorunluluğu olması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "question": "Sabah namazı hangi vakit aralığında kılınır?",
+      "options": {
+        "A": "Güneş doğduktan sonra",
+        "B": "İkinci fecrin başlamasından güneşin doğuşuna kadar",
+        "C": "Gece yarısından hemen sonra",
+        "D": "Öğle vaktinden önce"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "question": "Yatsı namazının vakti ne zaman sona erer?",
+      "options": {
+        "A": "Sabah namazının başlamasıyla",
+        "B": "Öğle ezanı okununca",
+        "C": "Güneş batınca",
+        "D": "Akşam namazından hemen sonra"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 38,
+      "question": "Aşağıdaki vakitlerden hangisinde namaz kılınması mekruhtur?",
+      "options": {
+        "A": "Güneş doğarken",
+        "B": "Güneş battıktan sonra",
+        "C": "Akşam ezanı okunduğunda",
+        "D": "Sabah ezanından sonra"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 39,
+      "question": "Cemaatle namaz kılmanın bir hikmeti değildir:",
+      "options": {
+        "A": "Birlik ve beraberliği artırması",
+        "B": "Toplum içinde yardımlaşma ruhunu güçlendirmesi",
+        "C": "Müminlerin arasındaki sevgiyi azaltması",
+        "D": "İnsanlara düzenli ibadet etmeyi öğretmesi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "question": "Namazın bir ruh temizliği olduğu hangi yönüyle anlaşılır?",
+      "options": {
+        "A": "Günlük hayatın stresinden uzaklaştırması",
+        "B": "İnsanın maddi zenginlik kazanmasını sağlaması",
+        "C": "Kişinin yalnızca ibadet ettiği zaman temiz olması",
+        "D": "Dünyaya olan ilgisini artırması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 41,
+      "question": "İslam’da namazın geçerli olması için belirli şartlar bulunmaktadır. Bu şartlardan biri olan „Hadesten Taharet“, abdestsizlik veya cünüplük gibi durumların ortadan kaldırılmasını ifade eder. Yani namaz kılabilmek için abdest almak veya gusül gereklidir. Bu durum Kur’an-ı Kerim’de Mâide Suresi’nin 6. ayetinde açıkça belirtilmiştir. Peki, aşağıdakilerden hangisi „Hadesten Taharet“ kavramına girmez?",
+      "options": {
+        "A": "Gusül abdesti almak",
+        "B": "Abdest almak",
+        "C": "Namaz kılınan yerin temizlenmesi",
+        "D": "Teyemmüm almak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "question": "Namaz kılarken Setr-i Avret şartına riayet edilmesi gerekir. Erkekler için göbek altından diz kapaklarına kadar olan kısım, kadınlar için ise yüz, el ve ayaklar hariç tüm vücudun örtülmesi gereklidir. Bu şart, namazın geçerli olması için temel farzlardan biridir. Buna göre, aşağıdakilerden hangisi namaz esnasında Setr-i Avret şartını ihlâl etmiş sayılır?",
+      "options": {
+        "A": "Erkeklerin diz kapaklarını örtmesi",
+        "B": "Kadınların başlarını örtmeleri",
+        "C": "Kadınların kollarını açıkta bırakmaları",
+        "D": "Erkeklerin omuzlarını açık bırakmaları"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "question": "Namazın kabul olması için „İstikbâl-i Kıble“ şartı yerine getirilmelidir. Müslümanlar namazlarını Kâbe‘ye yönelerek kılmak zorundadırlar. Ancak bazı durumlarda kıbleye yönelmek mümkün olmayabilir. Aşağıdakilerden hangisi kıbleye yönelmenin farz olmadığı bir durumdur?",
+      "options": {
+        "A": "Sağlık durumu nedeniyle hareket edemeyen bir hasta",
+        "B": "Cuma namazına geç kalan bir Müslüman",
+        "C": "Yolculuk esnasında bir taşıtta namaz kılan kişi",
+        "D": "Namaz sırasında yanlış yöne döndüğünü fark eden kişi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 44,
+      "question": "Namazın içindeki farzlarından biri olan „Kıyam“, ayakta durmayı ifade eder. Farz namazlarda, vitir ve vacip namazlarda kişinin ayakta durması gerekir. Ancak bazı özel durumlarda kıyam farz olmaktan çıkabilir. Aşağıdakilerden hangisi kıyamın farz olmadığı bir durumdur?",
+      "options": {
+        "A": "Sağlıklı bir insanın zorlanmadan oturarak namaz kılması",
+        "B": "Fiziksel engeli olan birinin oturarak namaz kılması",
+        "C": "İleri yaşlı birinin kıyamda durmak istememesi",
+        "D": "Yolculukta olan kişinin oturarak namaz kılması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "question": "Namaz esnasında Kıraat (Kur’an-ı Kerim okumak) farzdır. Namaz kılarken kıraatin belirli bir düzen içerisinde yapılması gerekir. Farz namazların ilk iki rekatında Fatiha Suresi’nden sonra bir miktar Kur’an okunması vaciptir. Buna göre, aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Namazda Fatiha Suresi okumak vaciptir.",
+        "B": "Üç ve dördüncü rekatlarda kıraat farz değildir.",
+        "C": "Namazda kıraatin sadece imam tarafından yapılması gerekir.",
+        "D": "Farz namazların ilk iki rekatında Fatiha Suresi ve bir sure okunmalıdır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 46,
+      "question": "Namaz esnasında „Ka’de-i Ahire“ yani son oturuş farzdır. Bu oturuşta en az Tahiyyat duası okunacak kadar durulmalıdır. Peki, aşağıdakilerden hangisi Ka’de-i Ahire’nin geçersiz olmasına sebep olur?",
+      "options": {
+        "A": "Son oturuşta Tahiyyat duasını okumamak",
+        "B": "Secdeyi kısa tutmak",
+        "C": "Son oturuşu yapmadan selam vermek",
+        "D": "Namazı erken bitirmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "question": "Namaz kılarken farkında olmadan bazı hatalar yapılabilir. Ancak bu hataların bazıları namazı bozar, bazıları ise sadece sehiv secdesi gerektirir. Aşağıdaki durumlardan hangisi namazı bozar?",
+      "options": {
+        "A": "Namazda „ah“ ve „oh“ gibi sesler çıkarmak",
+        "B": "Namazda bir ayeti unutmak",
+        "C": "Namazda rükûyu unutarak secdeye gitmek",
+        "D": "Yanlışlıkla bir sureyi eksik okumak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 48,
+      "question": "Namaz esnasında yapılan bazı eylemler mekruh kabul edilir. Aşağıdakilerden hangisi namazda mekruh olan bir davranıştır?",
+      "options": {
+        "A": "Abdest alırken besmele çekmek",
+        "B": "Namazda sağa sola bakmak",
+        "C": "Namazda Kâbe’ye yönelmek",
+        "D": "Rükû ve secdeyi hakkıyla yerine getirmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 49,
+      "question": "Namazda kerâhet vakitleri önemlidir. Kerâhet vakitlerinde farz namaz kılmak haram, nafile namaz kılmak ise mekruh kabul edilir. Aşağıdaki vakitlerden hangisinde namaz kılmak mekruhtur?",
+      "options": {
+        "A": "Güneşin doğduğu zaman",
+        "B": "İkindi namazının son vakti",
+        "C": "Sabah namazının sünnetinden sonra",
+        "D": "Akşam ezanı okunduğu anda"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 50,
+      "question": "Namaz kılan bir kişinin, namazı geçerli sayılmayacak şekilde üç adım atması namazı bozar. Ancak, namaz esnasında istem dışı meydana gelen bir olay nedeniyle hareket etmek mekruh kabul edilir. Buna göre aşağıdakilerden hangisi namazı bozar?",
+      "options": {
+        "A": "Namaz sırasında elbiseyle oynamak",
+        "B": "Namazda üç adım yürümek",
+        "C": "Namazda başı öne eğmek",
+        "D": "Namazda dua etmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 51,
+      "question": "Namaz kılarken belirli kurallara uyulması gereklidir. Namazın rükünlerinden biri olan rükû, kişinin belini ve başını düz bir şekilde eğerek Allah’a boyun eğmesini ifade eder. Rükûya gitmek ve ardından secdeye kapanmak, namazın temel unsurlarındandır. Peki, aşağıdakilerden hangisi rükû hakkında yanlıştır?",
+      "options": {
+        "A": "Rükûda eller dizlere konulmalı ve sırt düz tutulmalıdır.",
+        "B": "Rükû, namazın içindeki farzlardan biridir.",
+        "C": "Rükûdan sonra doğrudan secdeye geçmek farzdır.",
+        "D": "Rükû sırasında “Sübhâne Rabbiye’l-Azîm” denmesi sünnettir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 52,
+      "question": "Namaz esnasında secde, müminin Allah’a en yakın olduğu andır. Secdeye giderken ve secdeden kalkarken belirli kurallara uyulmalıdır. Secdenin doğru şekilde yapılması için aşağıdakilerden hangisi gereklidir?",
+      "options": {
+        "A": "Yalnızca alnın yere değmesi",
+        "B": "Eller, dizler ve alının yere değmesi",
+        "C": "Sadece ellerin yere değmesi",
+        "D": "Gözleri kapatarak secdeye gitmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 53,
+      "question": "İslam’da namaz kılarken setr-i avret (örtünme) şartı bulunmaktadır. Setr-i avret, mahrem yerlerin örtülmesini ifade eder. Ancak bazı durumlarda avret yerlerinin açılması namazı bozar. Buna göre aşağıdakilerden hangisi namazı geçersiz kılar?",
+      "options": {
+        "A": "Erkeklerin namazda başlarını örtmemesi",
+        "B": "Kadınların başörtüsünün düşmesi ve saçlarının görünmesi",
+        "C": "Namaz esnasında dizlerin açılması",
+        "D": "Yüzün açık olması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 54,
+      "question": "Namaz esnasında bazı kelimelerin yanlış söylenmesi veya unutulması durumunda sehiv secdesi yapılmalıdır. Sehiv secdesi, namazın sonunda iki defa secdeye kapanarak yapılan bir telafi secdesidir. Aşağıdakilerden hangisi sehiv secdesini gerektirir?",
+      "options": {
+        "A": "Namaz esnasında 1. ve 2. rekâtlarda Fatiha okumayı unutmak",
+        "B": "Namaz esnasında rükûyu unutup doğrudan secdeye gitmek",
+        "C": "Namaz esnasında selam vermeyi unutmak",
+        "D": "Namaz sırasında gülmek"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 55,
+      "question": "Bir Müslümanın farz namazlarını kasıtlı olarak kazaya bırakması büyük bir günahtır. Peygamberimiz (s.a.v.) namazı kazaya bırakmanın büyük bir sorumluluk olduğunu belirtmiştir. Namaz kaza edilmekle birlikte günahı silinmez ve tövbe edilmesi gerekir. Buna göre, aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Farz namazların kazası farzdır.",
+        "B": "Kasıtlı olarak kazaya bırakılan namazlar için tövbe edilmelidir.",
+        "C": "Vaktinde kılınmayan sünnet namazların kazası yapılmaz.",
+        "D": "Tüm sünnet namazlar kaza edilebilir."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 56,
+      "question": "Namaz kılarken kişinin bilerek veya bilmeyerek yaptığı bazı hatalar namazı bozar veya mekruh kılar. Aşağıdakilerden hangisi namazı bozan bir durum değildir?",
+      "options": {
+        "A": "Namazda üç adım yürümek",
+        "B": "Ağız dolusu kusmak",
+        "C": "Abdestin bozulması",
+        "D": "Namazda başını kaşımak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 57,
+      "question": "Kerâhet vakitleri, namaz kılmanın mekruh olduğu belirli zaman dilimleridir. Bu vakitlerde nafile namaz kılmak mekruh, farz namaz kılmak ise haram kabul edilmiştir. Aşağıdakilerden hangisi kerâhet vakitlerinden biri değildir?",
+      "options": {
+        "A": "Güneşin doğmasından sonra 45 dakika süren vakit",
+        "B": "Güneşin tam tepe noktasında olduğu vakit",
+        "C": "Akşam ezanı okunduğu vakit",
+        "D": "Güneşin batmasına yakın vakit"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 58,
+      "question": "Namazın kabul olabilmesi için belirli şartlara uyulması gereklidir. Aşağıdakilerden hangisi namazın kabul olabilmesi için gerekli şartlardan biri değildir?",
+      "options": {
+        "A": "Abdestin tam olarak alınmış olması",
+        "B": "Setr-i avretin yerine getirilmiş olması",
+        "C": "Namazın cemaatle kılınması",
+        "D": "Namazın kıbleye dönülerek kılınması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 59,
+      "question": "Namazın rükünlerinden biri olan “Kıyam”, ayakta durmayı ifade eder. Ancak bazı özel durumlarda kıyam yapmak zorunlu değildir. Aşağıdaki durumlardan hangisinde kıyam farz olmaktan çıkar?",
+      "options": {
+        "A": "Yolculuk esnasında namaz kılan kişi",
+        "B": "Fiziksel engeli olan biri",
+        "C": "Yoğun iş temposunda olan kişi",
+        "D": "Yorgunluk sebebiyle ayakta duramayan kişi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 60,
+      "question": "Namazın sahih olması için belirli kurallara uyulması gerekir. Namaz kılarken bilerek veya bilmeyerek bazı hatalar yapılabilir. Aşağıdakilerden hangisi namazın geçersiz olmasına neden olur?",
+      "options": {
+        "A": "Namazda ayakta dururken elbiseyle oynamak",
+        "B": "Namaz esnasında secdeye gitmeden doğrudan selam vermek",
+        "C": "Namazda dua okumak",
+        "D": "Namazda gözleri kapatmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 61,
+      "question": "Cuma namazı, Müslümanlar için haftalık bir bayram olup farz-ı ayndır. Bu namazın eda edilebilmesi için belirli şartlar vardır. Aşağıdakilerden hangisi Cuma namazının edasının (sahih olmasının) şartlarından biri değildir?",
+      "options": {
+        "A": "Namazın öğle vakti kılınması",
+        "B": "Namazın imam tarafından kıldırılması",
+        "C": "En az 10 kişinin bulunması",
+        "D": "Hutbenin okunması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 62,
+      "question": "Cuma namazının farz olması için bazı şartlar gereklidir. Aşağıdakilerden hangisi Cuma namazının farz olmasının şartlarından biridir?",
+      "options": {
+        "A": "Yolcu olmak",
+        "B": "Kadın olmak",
+        "C": "Hür olmak",
+        "D": "Misafir olmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 63,
+      "question": "Peygamberimiz (s.a.v.) Cuma namazı için “Özürsüz olarak kim ki, peş peşe üç cumayı terk ederse Allah onun kalbini mühürler.” buyurmuştur. Bu hadis aşağıdaki durumlardan hangisinin önemini vurgulamaktadır?",
+      "options": {
+        "A": "Cuma namazının cemaatle kılınmasının gerekliliği",
+        "B": "Cuma günü oruç tutmanın fazileti",
+        "C": "Cuma namazına gitmenin farz oluşu",
+        "D": "Cuma namazında hutbenin okunmasının gerekliliği"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 64,
+      "question": "Cuma namazı farz olan kişiler için kılınmadığında yerine öğle namazı kılınmalıdır. Aşağıdaki durumlardan hangisi bir kişinin Cuma namazı kılmamasını mazur gösterir?",
+      "options": {
+        "A": "Yolda olan bir kimsenin namaza yetişememesi",
+        "B": "Tembellik nedeniyle gitmemesi",
+        "C": "Arkadaşlarıyla sohbet etmek istemesi",
+        "D": "Camiye uzak olduğu için gitmek istememesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 65,
+      "question": "Nafile namazlar farz namazlara tabi olan ve olmayan namazlar olarak ikiye ayrılır. Aşağıdakilerden hangisi farz namazlara tabi olmayan nafile namazlardandır?",
+      "options": {
+        "A": "Sabah namazının sünneti",
+        "B": "Yatsı namazının son sünneti",
+        "C": "Teheccüd namazı",
+        "D": "Öğle namazının ilk sünneti"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 66,
+      "question": "Nafile namazlardan biri olan Teheccüd namazı ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Yatsı namazından sonra kılınır.",
+        "B": "Gece bir miktar uyuyup kalkarak kılınması sünnettir.",
+        "C": "Teravih namazıyla aynı hükme sahiptir.",
+        "D": "Peygamberimiz (s.a.v.), farzlardan sonra en faziletli namaz olarak bahsetmiştir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 67,
+      "question": "Bir kişi güneş veya ay tutulduğunda hangi namazı kılmalıdır?",
+      "options": {
+        "A": "Teheccüd namazı",
+        "B": "Kuşluk namazı",
+        "C": "Kusuf veya Husuf namazı",
+        "D": "Tespih namazı"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 68,
+      "question": "İstihâre namazı ne amaçla kılınır?",
+      "options": {
+        "A": "Bir işin hayırlı olup olmadığını anlamak için",
+        "B": "Cuma gününün bereketinden faydalanmak için",
+        "C": "Yolculuğa çıkmadan önce Allah’a dua etmek için",
+        "D": "Güne güzel başlamak için"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 69,
+      "question": "Tespih namazı kaç rekâttır?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 70,
+      "question": "Cenaze namazı ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Cenaze namazı rükû ve secdeden oluşur.",
+        "B": "Cenaze namazı farz-ı ayndır.",
+        "C": "Cenaze namazı mutlak namaz değildir, dua mahiyetindedir.",
+        "D": "Cenaze namazı için belirli vakitler vardır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 71,
+      "question": "Cenaze namazının farz olabilmesi için aşağıdaki şartlardan hangisi gereklidir?",
+      "options": {
+        "A": "Ölünün Müslüman olması",
+        "B": "Cuma günü kılınması",
+        "C": "10 kişiyle kılınması",
+        "D": "Namazın öğle vaktinde olması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 72,
+      "question": "Cenaze namazında kaç tekbir alınır?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 73,
+      "question": "Cenaze namazı kılarken aşağıdaki ifadelerden hangisi niyet ederken söylenmelidir?",
+      "options": {
+        "A": "“Er kişi niyetine”",
+        "B": "“Allahu ekber”",
+        "C": "“Sübhaneke”",
+        "D": "“Elhamdülillah”"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 74,
+      "question": "Cenaze namazında aşağıdakilerden hangisi okunmaz?",
+      "options": {
+        "A": "Fatiha Suresi",
+        "B": "Salli ve Barik duaları",
+        "C": "Subhaneke duası",
+        "D": "Ayetel Kürsi"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 75,
+      "question": "Cenaze namazı hangi durumlarda kılınmaz?",
+      "options": {
+        "A": "Ölünün yıkanmamış olması",
+        "B": "Ölünün kefenlenmiş olması",
+        "C": "Ölünün kadın olması",
+        "D": "Cenazenin camide olması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 76,
+      "question": "Cenaze namazının kılınabilmesi için cemaatin en az kaç kişi olması gerekir?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 77,
+      "question": "Cenaze namazında rükû ve secde olmadığı için namazın hangi rüknü yerine getirilir?",
+      "options": {
+        "A": "Kıyam ve tekbirler",
+        "B": "Rükû",
+        "C": "Secde",
+        "D": "Ka’de-i Ahire"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 78,
+      "question": "Cenaze namazı en çok nerede kılınır?",
+      "options": {
+        "A": "Cami içinde",
+        "B": "Evde",
+        "C": "Musalla taşında",
+        "D": "Mezarlıkta"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 79,
+      "question": "Bir kişi cenaze namazını kılamazsa ne yapmalıdır?",
+      "options": {
+        "A": "Öğle namazı kılmalıdır.",
+        "B": "Gıyabi cenaze namazı kılabilir.",
+        "C": "Cenazenin yanına gitmelidir.",
+        "D": "Hiçbir şey yapmasına gerek yoktur."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 80,
+      "question": "Birden fazla cenaze olduğunda aşağıdakilerden hangisi yapılır?",
+      "options": {
+        "A": "Ayrı ayrı kılınır.",
+        "B": "Hepsi için tek bir namaz kılınabilir.",
+        "C": "Sadece en yaşlısına kılınır.",
+        "D": "Kadınlar için kılınmaz."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 81,
+      "question": "Bayram namazı, sabah güneşin doğuşundan yaklaşık 45-50 dakika sonra başlayıp, öğle vaktine kadar kılınabilir. Aşağıdakilerden hangisi bayram namazının doğru kılınma şekillerinden biridir?",
+      "options": {
+        "A": "Bayram namazı 3 rekâttır ve hutbe namazdan önce okunur.",
+        "B": "Ezan ve kamet getirilerek kılınır.",
+        "C": "Bayram namazı 2 rekâttır ve hutbe namazdan sonra okunur.",
+        "D": "Bayram namazı sadece imam tarafından tek başına kılınabilir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 82,
+      "question": "Bayram namazları ile ilgili aşağıdaki bilgilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Bayram namazları cemaatle kılınır.",
+        "B": "Kurban Bayramı namazı, üçüncü gün öğleye kadar kılınabilir.",
+        "C": "Bayram namazı yalnız başına kılınabilir ve kazası vardır.",
+        "D": "Bayram namazlarında ezan ve kamet getirilmez."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 83,
+      "question": "Teşrik tekbirleri, Arefe günü sabah namazından başlayarak Kurban Bayramı’nın dördüncü günü ikindi namazına kadar farzlardan sonra getirilir. Bu tekbirler kaç vakit namazda okunur?",
+      "options": {
+        "A": "15 vakit",
+        "B": "23 vakit",
+        "C": "10 vakit",
+        "D": "30 vakit"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 84,
+      "question": "Mest üzerine mesh, İslam’ın ibadetlerde kolaylık sağladığı bir uygulamadır. Aşağıdakilerden hangisi mest üzerine mesh süresiyle ilgili doğrudur?",
+      "options": {
+        "A": "Seferi olmayanlar için 48 saat geçerlidir.",
+        "B": "Seferi olmayanlar için 24 saat, seferi olanlar için 72 saattir.",
+        "C": "Seferi olmayanlar için 36 saat geçerlidir.",
+        "D": "Mestlerin süresi bulunmaz, sürekli kullanılabilir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 85,
+      "question": "Aşağıdaki durumlardan hangisi mest üzerindeki meshi bozar?",
+      "options": {
+        "A": "Mestlerin üzerine su sıçraması",
+        "B": "Mestlerin giyildikten sonra bir süre çıkarılması",
+        "C": "Gusül abdesti almayı gerektiren bir durumun meydana gelmesi",
+        "D": "Mestlerin altına çorap giyilmesi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 86,
+      "question": "Bir kişinin ayağında yara veya kırık olması durumunda, aşağıdaki uygulamalardan hangisi doğrudur?",
+      "options": {
+        "A": "Sargı açılır, yıkanır ve tekrar sarılır.",
+        "B": "Sargının üzerine mesh edilir.",
+        "C": "Sargı tamamen çıkarılır ve suya tutulur.",
+        "D": "Yara tamamen iyileşene kadar namaz kılınmaz."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 87,
+      "question": "Hasta bir kişi namaz kılarken hangi duruma göre hareket etmelidir?",
+      "options": {
+        "A": "Hasta bile olsa namazını mutlaka ayakta kılmalıdır.",
+        "B": "Eğer ayakta kılamıyorsa oturarak kılmalıdır.",
+        "C": "Eğer oturarak kılamıyorsa ima ile kılmasına gerek yoktur.",
+        "D": "Hasta kişiler, namazlarını daha sonra kaza etmelidir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 88,
+      "question": "İma ile namaz kılma yöntemi nasıl uygulanır?",
+      "options": {
+        "A": "Kişi ellerini kaldırarak namazı işaret eder.",
+        "B": "Kişi sadece gözleriyle hareket eder.",
+        "C": "Kişi rükû için başını hafifçe eğer, secde için daha fazla eğer.",
+        "D": "Kişi kalbinden niyet ederek ima yapar."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 89,
+      "question": "Seferi olan bir kişi, kaç kilometre yolculuk yaparsa seferilik hükümleri geçerli olur?",
+      "options": {
+        "A": "60 km",
+        "B": "70 km",
+        "C": "90 km",
+        "D": "100 km"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 90,
+      "question": "Seferi olan bir kişi farz namazları nasıl kılmalıdır?",
+      "options": {
+        "A": "Tüm farz namazları tam olarak kılmalıdır.",
+        "B": "Dört rekâtlı farz namazları iki rekât olarak kılmalıdır.",
+        "C": "Sadece sabah namazını iki rekât olarak kılmalıdır.",
+        "D": "Nafile namazları da seferi olduğu sürece terk etmelidir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 91,
+      "question": "Aşağıdakilerden hangisi seferiliğin sona erdiği durumlardan biridir?",
+      "options": {
+        "A": "Yolculuğa devam etmek",
+        "B": "Bir yerde 10 gün ikamet etmek",
+        "C": "Bir yerde 15 gün veya daha fazla kalmaya niyet etmek",
+        "D": "Uçak yolculuğu yapmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 92,
+      "question": "Bir kişi yolculuk sırasında hangi namazları kısaltarak kılar?",
+      "options": {
+        "A": "Sabah namazı",
+        "B": "Yatsı namazı",
+        "C": "Dört rekâtlı farz namazları",
+        "D": "Tüm namazlar"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 93,
+      "question": "Bir kişi seferi olmasına rağmen namazlarını tam olarak kılarsa ne olur?",
+      "options": {
+        "A": "Namazı geçersiz olur.",
+        "B": "Namazı kabul edilmez.",
+        "C": "Namazı kabul edilir ancak ruhsatı kullanmamış olur.",
+        "D": "Seferi olmadığı için namazı tekrarlamalıdır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 94,
+      "question": "Bir yolcu hangi durumlarda dört rekâtlı namazları tam kılabilir?",
+      "options": {
+        "A": "Eğer bir camide cemaatle namaz kılıyorsa",
+        "B": "Uçakta yolculuk yapıyorsa",
+        "C": "Trenle yolculuk yapıyorsa",
+        "D": "Seferiliği sona erdiyse"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 95,
+      "question": "Aşağıdaki durumlardan hangisi seferiliği bozmaz?",
+      "options": {
+        "A": "10 gün bir şehirde kalmaya niyet etmek",
+        "B": "15 gün bir şehirde kalmaya niyet etmek",
+        "C": "Başka bir şehre 90 km’den fazla yolculuk yapmak",
+        "D": "Yolculuğun süresini hiç belirlememek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 96,
+      "question": "Bayram namazı kılındıktan sonra hangi hutbe okunur?",
+      "options": {
+        "A": "Namazdan önce hutbe okunur.",
+        "B": "Bayram namazından sonra hutbe okunur.",
+        "C": "Hutbe okunmaz, sadece dua edilir.",
+        "D": "Hutbe namazdan önce okunur ve namazdan sonra tekrar edilir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 97,
+      "question": "Hasta olan bir kişi, namazını tamamen kılmakta zorlanıyorsa hangi şekilde kılmalıdır?",
+      "options": {
+        "A": "Yatarak ima ile kılmalıdır.",
+        "B": "Oturarak tam olarak kılmalıdır.",
+        "C": "Namazını kaza etmelidir.",
+        "D": "İma etmeden kılmamalıdır."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 98,
+      "question": "Aşağıdakilerden hangisi seferi olan bir kişinin yolculuk sırasında yapabileceği bir uygulama değildir?",
+      "options": {
+        "A": "Farz namazları iki rekât olarak kılmak",
+        "B": "Nafile namazları terk etmek",
+        "C": "Vitir namazını tamamen bırakmak",
+        "D": "Yolculuk sırasında öğle ve ikindi namazlarını cem etmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 99,
+      "question": "Hasta bir kişi namaz kılarken hangi durumlarda ima ile kılabilir?",
+      "options": {
+        "A": "Hiç hareket edemeyecek kadar güçsüzse",
+        "B": "Ayakta durabiliyorsa",
+        "C": "Secde yapabiliyorsa",
+        "D": "Hastalığı hafif olduğu sürece"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 100,
+      "question": "Bayram namazında ziyade (fazladan) tekbirler kaç defa alınır?",
+      "options": {
+        "A": "4",
+        "B": "3",
+        "C": "2",
+        "D": "5"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 101,
+      "question": "Oruç, insan sağlığı üzerinde olumlu etkiler bırakan önemli bir ibadettir. İnsan midesine sürekli her istediğini doldurduğunda birçok hastalık ortaya çıkabilir. Peygamber Efendimiz (s.a.v.) bu konuda, „Oruç tutunuz, sıhhat bulursunuz.“ buyurarak orucun sağlık üzerindeki olumlu etkilerini vurgulamıştır. Buna göre, aşağıdakilerden hangisi orucun fiziksel faydalarından biri değildir?",
+      "options": {
+        "A": "Sindirim sistemine dinlenme fırsatı vermesi",
+        "B": "Vücut toksinlerinin atılmasına yardımcı olması",
+        "C": "İnsanı sabra ve irade eğitimine alıştırması",
+        "D": "Metabolizmayı düzenlemesi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 102,
+      "question": "Oruç, insanın iradesini güçlendiren ve sabır eğitimine katkı sağlayan önemli bir ibadettir. Oruç tutan kişi, kötü alışkanlıklarını terk etme konusunda daha güçlü bir iradeye sahip olabilir. Aynı zamanda oruç, Müslümanları Allah yolunda mücadele etmeye ve dayanıklılığı artırmaya teşvik eden bir ibadettir. Bu açıklamaya göre, orucun hangi yönü vurgulanmaktadır?",
+      "options": {
+        "A": "Ruhsal faydaları",
+        "B": "Sosyal etkileri",
+        "C": "Bedensel etkileri",
+        "D": "Ekonomik faydaları"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 103,
+      "question": "Bir insan yemeğin kıymetini anlamak için açlık çekmelidir. Nimetin değeri, ancak yokluğu hissedildiğinde daha iyi anlaşılır. Oruç tutan bir insan, aç kalmanın ne demek olduğunu bizzat yaşadığı için yemeğin ve suyun değerini daha iyi kavrar. Bu durum orucun hangi özelliğini açıklar?",
+      "options": {
+        "A": "Sabır kazandırmasını",
+        "B": "Nimete şükretmeyi öğretmesini",
+        "C": "Ruhsal arınmayı sağlamasını",
+        "D": "Bedeni güçlendirmesini"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 104,
+      "question": "Oruç, açlık ve susuzluğun ne kadar zor olduğunu anlamaya yardımcı olur. Bu sayede Müslümanlar, yoksulların yaşadığı zorlukları daha iyi hisseder ve onlara yardım etme bilincini kazanır. Buna göre, oruç ibadetinin hangi faydasından bahsedilmektedir?",
+      "options": {
+        "A": "Sağlık üzerindeki etkisi",
+        "B": "Manevi gelişimi artırması",
+        "C": "Toplumsal dayanışmayı güçlendirmesi",
+        "D": "Bireysel iradeyi güçlendirmesi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 105,
+      "question": "Aşağıdakilerden hangisi farz olan oruçlar arasında yer alır?",
+      "options": {
+        "A": "Gün aşırı tutulan oruç",
+        "B": "Ramazan orucu",
+        "C": "Muharrem ayında tutulan oruç",
+        "D": "Pazartesi ve perşembe günleri tutulan oruç"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 106,
+      "question": "Ramazan ayında tutulması gereken oruç, İslam’ın beş şartından biridir. Ancak kişi, Ramazan ayında hasta veya yolcu olduğunda orucunu tutamayabilir. Bu durumda, Ramazan orucunu ne şekilde yerine getirmelidir?",
+      "options": {
+        "A": "Fidye vererek",
+        "B": "Kazasını başka bir zamanda tutarak",
+        "C": "Nafile oruçlarla telafi ederek",
+        "D": "Oruç tutamayacak kadar yaşlıysa tamamen bırakıp sadaka vererek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 107,
+      "question": "Aşağıdaki durumlardan hangisi keffâret gerektirir?",
+      "options": {
+        "A": "Unutarak yemek yemek",
+        "B": "Zorla orucun bozdurulması",
+        "C": "Kasıtlı olarak orucu bozmak",
+        "D": "Kusmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 108,
+      "question": "Aşağıdakilerden hangisi orucu bozup sadece kazayı gerektirir?",
+      "options": {
+        "A": "Bilerek su içmek",
+        "B": "Kan aldırmak",
+        "C": "Kusmak",
+        "D": "Unutarak yemek yemek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 109,
+      "question": "Aşağıdakilerden hangisi orucu bozmayan durumlar arasındadır?",
+      "options": {
+        "A": "Kasıtlı olarak su içmek",
+        "B": "Unutarak yemek yemek",
+        "C": "Bilerek sigara içmek",
+        "D": "Ağzına su alıp yutmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 110,
+      "question": "İslam’da hangi günlerde oruç tutmak mekruhtur?",
+      "options": {
+        "A": "Ramazan’ın son 10 günü",
+        "B": "Şevval ayında",
+        "C": "Arefe günü",
+        "D": "Kurban Bayramı günlerinde"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 111,
+      "question": "Aşağıdakilerden hangisi hem farz hem de vacip olan oruçlar arasında yer almaz?",
+      "options": {
+        "A": "Ramazan orucu",
+        "B": "Kazaya kalan Ramazan orucu",
+        "C": "Kefaret orucu",
+        "D": "Muharrem orucu"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 112,
+      "question": "Oruç tutmamayı mübah kılan durumlardan biri değildir?",
+      "options": {
+        "A": "Hastalık",
+        "B": "Yolculuk",
+        "C": "Tembellik",
+        "D": "Gebelik"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 113,
+      "question": "Ramazan ayında tutulan oruç aşağıdaki hangi sebeple bozulursa hem kaza hem keffâret gerekir?",
+      "options": {
+        "A": "Unutarak yemek yemek",
+        "B": "Bilerek su içmek",
+        "C": "Ağzına su alıp yanlışlıkla yutmak",
+        "D": "Kan aldırmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 114,
+      "question": "Oruç ibadetinin bireysel faydalarından biri değildir?",
+      "options": {
+        "A": "İnsanın sabrını artırması",
+        "B": "Bireyi açlığa alıştırması",
+        "C": "Kötü alışkanlıkları bırakmaya yardımcı olması",
+        "D": "Metabolizmayı düzenlemesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 115,
+      "question": "Aşağıdakilerden hangisi nafile oruçlar arasında yer almaz?",
+      "options": {
+        "A": "Gün aşırı tutulan oruç",
+        "B": "Arefe günü tutulan oruç",
+        "C": "Şevval ayında tutulan altı günlük oruç",
+        "D": "Kefaret orucu"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 116,
+      "question": "Oruç tutan kişinin, orucunun kabul olması için aşağıdakilerden hangisini yapması gerekmez?",
+      "options": {
+        "A": "Oruç ibadetine niyet etmek",
+        "B": "Sahur yapmak",
+        "C": "Oruç yasaklarına dikkat etmek",
+        "D": "İmsak vaktine riayet etmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 117,
+      "question": "İslam’da fidye vermek hangi durumda gereklidir?",
+      "options": {
+        "A": "Yaşlılık ve iyileşmesi mümkün olmayan hastalık durumunda",
+        "B": "Yolculuk sırasında oruç tutulmadığında",
+        "C": "Ramazan orucu yanlışlıkla bozulduğunda",
+        "D": "Unutarak yemek yenildiğinde"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 118,
+      "question": "Aşağıdaki durumlardan hangisi orucu bozmaz?",
+      "options": {
+        "A": "Bilerek yemek yemek",
+        "B": "Ağza su alıp yanlışlıkla yutmak",
+        "C": "Kasten kusmak",
+        "D": "Cinsel ilişkide bulunmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 119,
+      "question": "Aşağıdakilerden hangisi orucun mekruh olduğu durumlardan biridir?",
+      "options": {
+        "A": "Hasta olan bir kişinin oruç tutması",
+        "B": "Cuma günü tek başına oruç tutmak",
+        "C": "Unutarak su içmek",
+        "D": "İmsak vaktinden önce niyet etmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 120,
+      "question": "Ramazan orucunun kazası ne zaman tutulmalıdır?",
+      "options": {
+        "A": "Aynı yıl içinde tutulması gerekir",
+        "B": "Herhangi bir zamanda tutulabilir",
+        "C": "Bir sonraki Ramazan ayına bırakılmalıdır",
+        "D": "Ramazan ayının dışında herhangi bir oruç günü tutulmalıdır"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 121,
+      "question": "Aşağıdakilerden hangisi orucu bozan fakat kefaret gerektirmeyen bir durumdur?",
+      "options": {
+        "A": "Bilerek yemek yemek",
+        "B": "Kan aldırmak",
+        "C": "Cinsel ilişkide bulunmak",
+        "D": "Bilerek kusmak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 122,
+      "question": "Aşağıdakilerden hangisi oruç tutmaya gücü yetmeyen kişilerin yerine getirmesi gereken bir görevdir?",
+      "options": {
+        "A": "Fidye vermek",
+        "B": "Sadaka vermek",
+        "C": "Kazasını tutmak",
+        "D": "Kefaret orucu tutmak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 123,
+      "question": "Aşağıdakilerden hangisi oruç fidyesi olarak verilebilir?",
+      "options": {
+        "A": "Para",
+        "B": "Bir fakiri doyurmak",
+        "C": "Elbise veya kıyafet",
+        "D": "Ev eşyası"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 124,
+      "question": "Aşağıdakilerden hangisi oruç tutmayı gerektiren şartlardan biri değildir?",
+      "options": {
+        "A": "Akıllı olmak",
+        "B": "Ergenlik çağına girmek",
+        "C": "Müslüman olmak",
+        "D": "Zengin olmak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 125,
+      "question": "Hangi durumda oruç bozulur ve kazası gerekir?",
+      "options": {
+        "A": "Unutarak yemek yemek",
+        "B": "Kan aldırmak",
+        "C": "Kasıtlı olarak yemek yemek",
+        "D": "Göz damlası kullanmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 126,
+      "question": "Ramazan ayında oruç tutmayan bir kişi, hangi durumlarda kefaret orucu tutmak zorundadır?",
+      "options": {
+        "A": "Yolculuk sebebiyle oruç tutamayan kişi",
+        "B": "Bilerek ve kasten orucu bozan kişi",
+        "C": "Unutarak yemek yiyen kişi",
+        "D": "Hasta olduğu için oruç tutamayan kişi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 127,
+      "question": "Ramazan ayında tutulan oruçla ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Akıllı ve ergenlik çağına giren her Müslüman için farzdır",
+        "B": "Sahura kalkmak orucun şartlarından biridir",
+        "C": "Oruç, imsaktan iftara kadar geçen sürede tutulur",
+        "D": "Kasten bozulan Ramazan orucu için kefaret gerekir"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 128,
+      "question": "Aşağıdakilerden hangisi tahrimen mekruh olan oruçlardandır?",
+      "options": {
+        "A": "Şevval ayında oruç tutmak",
+        "B": "Cuma günü tek başına oruç tutmak",
+        "C": "Arefe günü oruç tutmak",
+        "D": "Ramazan Bayramı’nın birinci günü oruç tutmak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 129,
+      "question": "Peygamber Efendimiz (s.a.v.), „En faziletli oruç, Davud‘un orucudur“ buyurmuştur. Buna göre, Davud orucu nasıl bir oruçtur?",
+      "options": {
+        "A": "Şevval ayında tutulan oruç",
+        "B": "Gün aşırı tutulan oruç",
+        "C": "Sadece pazartesi günleri tutulan oruç",
+        "D": "Haram aylarda tutulan oruç"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 130,
+      "question": "İslam’a göre, hangi durumlarda tutulamayan oruçların kazası gerekir, ancak kefaret gerekmez?",
+      "options": {
+        "A": "Zorla orucu bozdurulan kişi",
+        "B": "Bilerek ve isteyerek yemek yiyen kişi",
+        "C": "Unutarak oruç bozan kişi",
+        "D": "Yolculuk sebebiyle orucunu bozan kişi"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 131,
+      "question": "İslam’da zekâtın tanımı aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Malın belirli bir bölümünü, belirli zamanda, belirlenen kişilere vermek",
+        "B": "Malın tümünü yoksullara dağıtmak",
+        "C": "Sadece fakirlere verilen sadaka türü",
+        "D": "Zenginlerin fakirlere verdiği gönüllü yardım"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 132,
+      "question": "Zekâtın farz olmasının şartlarından biri değildir?",
+      "options": {
+        "A": "Müslüman olmak",
+        "B": "Akıllı ve ergen olmak",
+        "C": "Zekât verilecek kişinin Müslüman olması",
+        "D": "Malın üzerinden bir yıl geçmesi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 133,
+      "question": "Zekât hangi yılda farz kılınmıştır?",
+      "options": {
+        "A": "Hicretin 1. yılı",
+        "B": "Hicretin 2. yılı",
+        "C": "Hicretin 3. yılı",
+        "D": "Hicretin 5. yılı"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 134,
+      "question": "Aşağıdakilerden hangisi zekât verilecek kişiler arasında yer almaz?",
+      "options": {
+        "A": "Fakirler",
+        "B": "Miskinler",
+        "C": "Anne ve baba",
+        "D": "Borçlular"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 135,
+      "question": "Aşağıdakilerden hangisi nisap miktarı olarak belirlenen mal ve ölçülerden biri değildir?",
+      "options": {
+        "A": "80 gram altın",
+        "B": "560 gram gümüş",
+        "C": "100 adet koyun",
+        "D": "30 adet sığır"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 136,
+      "question": "Aşağıdakilerden hangisi zekâtın bireysel faydalarından biri değildir?",
+      "options": {
+        "A": "Malı temizler ve bereketlendirir",
+        "B": "Fakirlerin ihtiyaçlarını karşılar",
+        "C": "Kişiyi cömertliğe teşvik eder",
+        "D": "Toplumda sosyal adaleti bozar"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 137,
+      "question": "İslam’da zekât vermek neyle kıyaslanmıştır?",
+      "options": {
+        "A": "Sadaka ile",
+        "B": "Namazla",
+        "C": "İslam’ın köprüsüyle",
+        "D": "Allah’a şükretmekle"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 138,
+      "question": "Zekâtın toplumsal faydalarından biri değildir?",
+      "options": {
+        "A": "Fakirleri tembelliğe alıştırır",
+        "B": "Sosyal dengeyi sağlar",
+        "C": "Paranın dolaşımını artırır",
+        "D": "Toplumda huzur ve güveni artırır"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 139,
+      "question": "Aşağıdakilerden hangisi zekât verilen yerlerden biridir?",
+      "options": {
+        "A": "Zengin akrabalar",
+        "B": "Camii inşaatları",
+        "C": "Yolda kalmışlar",
+        "D": "Devlet yöneticileri"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 140,
+      "question": "Zekât kimlere verilmez?",
+      "options": {
+        "A": "Fakirlere",
+        "B": "Yetimlere",
+        "C": "Anne ve babaya",
+        "D": "Borçlulara"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 141,
+      "question": "Aşağıdakilerden hangisi zekât verilmesi gereken kişilerden biridir?",
+      "options": {
+        "A": "Çalışmayan zenginler",
+        "B": "Borç yükü altında olanlar",
+        "C": "Eş ve çocuklar",
+        "D": "Zekât memurları"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 142,
+      "question": "Aşağıdakilerden hangisi zekâtın bireysel faydalarından biridir?",
+      "options": {
+        "A": "Kişiyi zenginleştirir",
+        "B": "Fakirlere yardım etme alışkanlığı kazandırır",
+        "C": "Zenginlerin mallarını azaltır",
+        "D": "Müslümanları borçlandırır"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 143,
+      "question": "Zekât hangi mallardan verilmez?",
+      "options": {
+        "A": "Altın ve gümüş",
+        "B": "Tarım ürünleri",
+        "C": "Ev eşyaları",
+        "D": "Ticari mallar"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 144,
+      "question": "Fıtır sadakasının verilme zamanı en uygunu ne zamandır?",
+      "options": {
+        "A": "Ramazan Bayramı’ndan önce",
+        "B": "Ramazan Bayramı’nın ikinci günü",
+        "C": "Ramazan Bayramı’nın dördüncü günü",
+        "D": "Kurban Bayramı’ndan önce"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 145,
+      "question": "Aşağıdakilerden hangisi fitre sadakası ile ilgili yanlış bir bilgidir?",
+      "options": {
+        "A": "Fitre, Ramazan Bayramı’nda verilir",
+        "B": "Zengin her Müslüman fitre vermekle yükümlüdür",
+        "C": "Fitre miktarı kişinin gelirine göre belirlenir",
+        "D": "Fitre fakirlere verilir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 146,
+      "question": "Fıtır sadakası aşağıdaki hangi amaca hizmet eder?",
+      "options": {
+        "A": "Fakirleri borçtan kurtarmak",
+        "B": "Ramazan’ın eksiklerini gidermek",
+        "C": "İnsanları oruç tutmaya teşvik etmek",
+        "D": "Devlet gelirini artırmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 147,
+      "question": "Fıtır sadakası kimlere verilmez?",
+      "options": {
+        "A": "Fakirlere",
+        "B": "Anne ve babaya",
+        "C": "Yetimlere",
+        "D": "Yolda kalmışlara"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 148,
+      "question": "Aşağıdaki hangi mal türü zekâta tabi değildir?",
+      "options": {
+        "A": "Tarım ürünleri",
+        "B": "Ev eşyaları",
+        "C": "Altın ve gümüş",
+        "D": "Küçükbaş hayvanlar"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 149,
+      "question": "Zekâtın bireysel faydalarından biri değildir?",
+      "options": {
+        "A": "Malı bereketlendirir",
+        "B": "Kişiyi cimrilikten kurtarır",
+        "C": "Toplumda kin ve nefreti artırır",
+        "D": "Kişiyi paylaşmaya alıştırır"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 150,
+      "question": "Zekât kimlere verilmez?",
+      "options": {
+        "A": "Müslüman fakirlere",
+        "B": "Müslüman yetimlere",
+        "C": "Müslüman olmayan fakirlere",
+        "D": "Borçlu Müslümanlara"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 151,
+      "question": "Aşağıdakilerden hangisi zekâtın bireysel faydalarından biridir?",
+      "options": {
+        "A": "Malın bereketini artırır",
+        "B": "Fakirleri tembelliğe alıştırır",
+        "C": "Zenginlerin malını azaltır",
+        "D": "Müslümanları borçlandırır"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 152,
+      "question": "Aşağıdakilerden hangisi zekâtın toplumsal faydalarından biridir?",
+      "options": {
+        "A": "Fakirleri daha da yoksullaştırır",
+        "B": "Toplumda adaletsizliği artırır",
+        "C": "Sosyal dayanışmayı sağlar",
+        "D": "Malın değerini düşürür"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 153,
+      "question": "Aşağıdakilerden hangisi zekât verilecek kişiler arasında yer almaz?",
+      "options": {
+        "A": "Yolda kalmışlar",
+        "B": "Cihat edenler",
+        "C": "Zengin akrabalar",
+        "D": "Borçlular"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 154,
+      "question": "Zekât hangi mallardan verilir?",
+      "options": {
+        "A": "Ev eşyaları",
+        "B": "Altın, gümüş ve ticari mallar",
+        "C": "Kullanılmış kıyafetler",
+        "D": "Zekât verilmesi gerekmeyen şeyler"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 155,
+      "question": "Aşağıdaki durumlardan hangisi fıtır sadakası verilmesi için gerekli değildir?",
+      "options": {
+        "A": "Müslüman olmak",
+        "B": "Bayram sabahına ulaşmak",
+        "C": "Oruç tutmuş olmak",
+        "D": "Nisap miktarı mala sahip olmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 156,
+      "question": "Aşağıdaki durumlardan hangisi zekâtın farz olma şartlarından biridir?",
+      "options": {
+        "A": "Malın bir yıl boyunca kullanılmaması",
+        "B": "Malın zekât nisabına ulaşması",
+        "C": "Malın tamamen harcanması",
+        "D": "Borçların çok fazla olması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 157,
+      "question": "Aşağıdaki mallardan hangisine zekât verilmez?",
+      "options": {
+        "A": "Nakit para",
+        "B": "Tarım ürünleri",
+        "C": "Özel olarak kullanılan ev",
+        "D": "Küçükbaş hayvanlar"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 158,
+      "question": "Bir kişi zekât verirken aşağıdakilerden hangisini yapamaz?",
+      "options": {
+        "A": "Zekâtını ihtiyacı olan fakirlere verebilir",
+        "B": "Zekâtını anne ve babasına verebilir",
+        "C": "Zekâtını borçlulara verebilir",
+        "D": "Zekâtını yolda kalmış birine verebilir"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 159,
+      "question": "Fıtır sadakası ne amaçla verilir?",
+      "options": {
+        "A": "Sadece zekâtın yerine geçmesi için",
+        "B": "Oruç ibadetindeki eksikleri tamamlamak için",
+        "C": "Zenginlerin sadaka verebilmesi için",
+        "D": "Ramazan ayında sevap kazanmak için"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 160,
+      "question": "Zekâtın verileceği yerler Kur’ân-ı Kerîm’de kaç gruba ayrılmıştır?",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "8",
+        "D": "10"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 161,
+      "question": "Hac ibadeti ile ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Hac, İslam’ın beş şartından biridir.",
+        "B": "Hac, hicretin dokuzuncu yılında farz kılınmıştır.",
+        "C": "Hac, yalnızca farz olan bir ibadettir, nafile olarak yapılamaz.",
+        "D": "Hac ibadeti için Kâbe‘yi tavaf etmek farzdır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 162,
+      "question": "Hac ibadetinin farz olabilmesi için aşağıdaki şartlardan hangisinin gerçekleşmesi gerekmez?",
+      "options": {
+        "A": "Müslüman olmak",
+        "B": "Hacca gidip gelecek maddi güce sahip olmak",
+        "C": "Bedensel engeli olmamak",
+        "D": "Hac yollarının güvenli olması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 163,
+      "question": "Hac ibadetinin farzlarından biri olmayan aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Arafat’ta vakfe yapmak",
+        "B": "Ziyaret tavafını gerçekleştirmek",
+        "C": "Safa ile Merve arasında say etmek",
+        "D": "İhrama girerek niyet etmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 164,
+      "question": "Hac ibadetinin vaciplerinden biri olmayan aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Müzdelife’de vakfe yapmak",
+        "B": "Şeytan taşlama (cemre atma)",
+        "C": "İhrama girerek niyet etmek",
+        "D": "Saçları tıraş etmek veya kısaltmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 165,
+      "question": "Hac esnasında yapılan tavaf ibadetinde şart olmayan aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Hacerülesved’den başlamak",
+        "B": "Yedi şavt yapmak",
+        "C": "Kâbe’yi sağ tarafa alarak dönmek",
+        "D": "Tavaf namazını Mekke‘den ayrıldıktan sonra kılmak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 166,
+      "question": "İhramlı bir kimsenin yapması haram olan fiiller arasında aşağıdakilerden hangisi yer almaz?",
+      "options": {
+        "A": "Kavga etmek",
+        "B": "Saç ve sakal kesmek",
+        "C": "Şemsiye kullanmak",
+        "D": "Cinsel ilişkiye girmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 167,
+      "question": "Hac ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Hac, yılın her mevsiminde eda edilebilir.",
+        "B": "Hac ibadetinin farz olabilmesi için belirli maddi imkâna sahip olmak gerekir.",
+        "C": "Hac ibadetinde Kâbe‘yi tavaf etmek farzdır.",
+        "D": "Hac, İslam’ın beş şartından biridir."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 168,
+      "question": "Hac esnasında hacılar nerede vakfe yaparlar?",
+      "options": {
+        "A": "Müzdelife",
+        "B": "Arafat",
+        "C": "Mina",
+        "D": "Safa ve Merve"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 169,
+      "question": "Müslümanların Kâbe’yi ziyaret ederken yaptıkları tavaf kaç şavttan oluşur?",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 170,
+      "question": "İhrama giren bir Müslümanın yapması mekruh olan bir fiil aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Cinsel ilişkiye girmek",
+        "B": "Güzel kokular sürünmek",
+        "C": "Avlanmak",
+        "D": "Tırnak kesmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 171,
+      "question": "Ziyaret tavafı hangi günden itibaren yapılabilir?",
+      "options": {
+        "A": "Arefe günü sabahından itibaren",
+        "B": "Kurban Bayramı’nın birinci günü fecr-i sadık doğduktan sonra",
+        "C": "Kurban Bayramı’nın üçüncü günü sabahından itibaren",
+        "D": "Hacdan sonra herhangi bir zamanda"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 172,
+      "question": "Kurban Bayramı günlerinde hacca giden kişinin kurban kesmesi hangi haccın gereğidir?",
+      "options": {
+        "A": "İfrad haccı",
+        "B": "Kıran haccı",
+        "C": "Nafile hac",
+        "D": "Kudüm haccı"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 173,
+      "question": "Aşağıdakilerden hangisi haccın sünnetlerinden biri değildir?",
+      "options": {
+        "A": "İhrama girmeden önce gusletmek",
+        "B": "Şeytan taşlama sırasında sıraya dikkat etmek",
+        "C": "Tavafı sol tarafa dönerek yapmak",
+        "D": "İhrama girdikten sonra güzel kokular sürünmek"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 174,
+      "question": "Hac sırasında şeytan taşlama hangi bölgede yapılır?",
+      "options": {
+        "A": "Müzdelife",
+        "B": "Mina",
+        "C": "Arafat",
+        "D": "Safa ve Merve"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 175,
+      "question": "Aşağıdakilerden hangisi hac ile umrenin ortak farzlarından biridir?",
+      "options": {
+        "A": "Arafat vakfesi",
+        "B": "Müzdelife vakfesi",
+        "C": "İhrama girme",
+        "D": "Şeytan taşlama"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 176,
+      "question": "Mekke’den ayrılmadan önce yapılan tavaf hangisidir?",
+      "options": {
+        "A": "Ziyaret tavafı",
+        "B": "Kudüm tavafı",
+        "C": "Veda tavafı",
+        "D": "Tatavvu tavafı"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 177,
+      "question": "Hacda en önemli gün Arefe Günü olarak bilinir. Hacılar o gün nerede bulunurlar?",
+      "options": {
+        "A": "Mina",
+        "B": "Müzdelife",
+        "C": "Arafat",
+        "D": "Kâbe"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 178,
+      "question": "Aşağıdakilerden hangisi haccın vaciplerinden biridir?",
+      "options": {
+        "A": "Arafat’ta vakfe yapmak",
+        "B": "Safa ile Merve arasında say etmek",
+        "C": "İhrama girmek",
+        "D": "Ziyaret tavafı yapmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 179,
+      "question": "Hacda ilk tavaf hangi isimle anılır?",
+      "options": {
+        "A": "Ziyaret tavafı",
+        "B": "Kudüm tavafı",
+        "C": "Tatavvu tavafı",
+        "D": "Veda tavafı"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 180,
+      "question": "Hac ve umre ibadetinde ihram giymeden önce yapılması sünnet olan bir uygulama aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Tavaf yapmak",
+        "B": "Güzel koku sürmek",
+        "C": "Şeytan taşlamak",
+        "D": "Safa ve Merve arasında say etmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 181,
+      "question": "Hac ibadetiyle ilgili aşağıdakilerden hangisi doğrudur?",
+      "options": {
+        "A": "Hac için belirli bir vakit yoktur, yılın her günü yapılabilir.",
+        "B": "Hac farz olmasına rağmen ertelenebilir ve geciktirilebilir.",
+        "C": "Hacca gidenlerin Mekke‘ye vardıklarında ilk yapmaları gereken şey, Arafat vakfesidir.",
+        "D": "Hac, belirli zamanlarda yapılan bir ibadettir ve sadece farz olanı değil, nafile olanı da vardır."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 182,
+      "question": "Hac esnasında şeytan taşlama ibadeti kaç gün boyunca yapılır?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}

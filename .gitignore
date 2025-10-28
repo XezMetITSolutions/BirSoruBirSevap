@@ -1,0 +1,55 @@
+# Vendor directory
+/vendor/
+/TCPDF-main/
+
+# Data files (user generated content)
+/data/exam_results.json
+/data/practice_results.json
+/data/exam_prints.json
+
+# Logs
+*.log
+logs/
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Cache files
+cache/
+tmp/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Composer
+composer.phar
+composer.lock.backup
+
+# Teacher prints
+/teacher/prints/*.html
+/teacher/prints/*.pdf
+
+# Backup files
+*.php.bak
+*.json.bak
+
+# User uploads
+uploads/
+files/
+

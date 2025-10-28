@@ -1,0 +1,14 @@
+# Data klasörü güvenlik ayarları
+Order Allow,Deny
+Deny from all
+
+# Sadece PHP dosyalarından erişime izin ver
+<Files "*.json">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "*.log">
+    Order Allow,Deny
+    Deny from all
+</Files>

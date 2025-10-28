@@ -1,0 +1,998 @@
+{
+  "category": "İBADET",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 90,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Allah'ın razı olduğu her söz ve davranış ibâdet olarak adlandırılır. İbâdetler, Allah'a karşı olan bağlılığımızı gösterirken aynı zamanda ________, ________ ve ________ gibi birçok fayda sağlar. İbâdetin nasıl yapılacağını bize ________ öğretmiştir.",
+      "options": {
+        "A": "Sağlığımızı korur – Günahları artırır – Allah'ın sevgisini kazandırır – Bilginler",
+        "B": "Allah'a yakınlaştırır – İmanımızı güçlendirir – Allah'ın sevgisini kazandırır – Peygamber",
+        "C": "İmanımızı zayıflatır – Kötü alışkanlıkları artırır – Günahları artırır – Öğretmenler",
+        "D": "Temizliği zorlaştırır – İmanı zayıflatır – Peygamberlerin yerine geçer – Melekler"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "question": "Abdest, namaz kılmak, Kur'an-ı Kerîm'i elimize almak ve ________ gibi ibâdetler için gereklidir.",
+      "options": {
+        "A": "Kâbe'yi tavaf etmek",
+        "B": "Oruç tutmak",
+        "C": "Sadaka vermek",
+        "D": "Kelime-i şehâdet getirmek"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "question": "İbâdetler üç çeşide ayrılır. Bunlar ________, ________ ve ________ ile yapılan ibâdetlerdir.",
+      "options": {
+        "A": "Beden – Zihin – Ruh",
+        "B": "Mal – Kalp – Beden",
+        "C": "Beden – Mal – Hem beden hem mal",
+        "D": "Dua – Oruç – Temizlik"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "question": "Kelime-i şehâdetin İslâm'ın şartları arasında bulunmasının sebebi ________.",
+      "options": {
+        "A": "İmanın ilk basamağı olmasıdır.",
+        "B": "Zor bir ibâdet olmasıdır.",
+        "C": "Namazdan daha önemli olmasıdır.",
+        "D": "Oruç tutmadan önce yapılması gerekmesidir."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 5,
+      "question": "Maddî temizlik ________, mânevî temizlik ise ________ ile sağlanır.",
+      "options": {
+        "A": "Su – Dua",
+        "B": "Su – Oruç",
+        "C": "Gusül – Zekât",
+        "D": "Namaz – Kelime-i Tevhid"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 6,
+      "question": "Teyemmüm, ________ su bulunmadığında abdest yerine geçen bir temizliktir.",
+      "options": {
+        "A": "Temiz",
+        "B": "Az miktarda",
+        "C": "Deniz",
+        "D": "Sıcak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "question": "Gusül abdesti alırken farz olan unsurlar ________, ________ ve ________.",
+      "options": {
+        "A": "Niyet – El yıkamak – Burun temizliği",
+        "B": "Ağza su almak – Buruna su çekmek – Tüm vücudu yıkamak",
+        "C": "Tırnak kesmek – Saç yıkamak – Dizleri yıkamak",
+        "D": "Elleri yıkamak – Baş meshetmek – Kulakları temizlemek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "question": "İslâm dini temizliğe büyük önem vermiştir ve ________ hadisiyle bu konu vurgulanmıştır.",
+      "options": {
+        "A": "\"Namaz dinin direğidir.\"",
+        "B": "\"Temizlik imanın yarısıdır.\"",
+        "C": "\"Oruç tutan cennete girer.\"",
+        "D": "\"Güzel ahlak, güzel insan yapar.\""
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "question": "Abdesti bozan durumlar arasında ________ bulunmaz.",
+      "options": {
+        "A": "Yellenmek",
+        "B": "Küçük bir kan çıkması",
+        "C": "Uyku",
+        "D": "Oruç tutmak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 10,
+      "question": "Allah'ın gönderdiği ibâdetleri yerine getirmenin en büyük faydalarından biri ________.",
+      "options": {
+        "A": "İnsanları kötülükten uzak tutmasıdır.",
+        "B": "Onları daha güçlü yapmasıdır.",
+        "C": "Zenginlik kazandırmasıdır.",
+        "D": "Hastalıkları yok etmesidir."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 11,
+      "question": "Abdestin farzlarından biri değildir:",
+      "options": {
+        "A": "Yüzü yıkamak",
+        "B": "Elleri yıkamak",
+        "C": "Saçları tamamen yıkamak",
+        "D": "Ayakları yıkamak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "question": "Gusül abdesti alırken farz olmayan şey nedir?",
+      "options": {
+        "A": "Bütün vücudu yıkamak",
+        "B": "Elleri yıkamak",
+        "C": "Ağza su almak",
+        "D": "Buruna su vermek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "question": "İslâm'ın beş temel şartından biri değildir:",
+      "options": {
+        "A": "Namaz kılmak",
+        "B": "Oruç tutmak",
+        "C": "Sadaka vermek",
+        "D": "Hacca gitmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "question": "Su bulunmadığında yapılan temizlik şekli nedir?",
+      "options": {
+        "A": "Abdest",
+        "B": "Gusül",
+        "C": "Teyemmüm",
+        "D": "Yüz yıkamak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "question": "\"Kelime-i Tevhid\" hangi seçenekte doğru yazılmıştır?",
+      "options": {
+        "A": "Lâ ilâhe illallah Muhammedün rasûlullah",
+        "B": "Allah birdir, Muhammed peygamberdir",
+        "C": "Allahu ekber, Allahu ekber",
+        "D": "Lâ ilâhe illallah, Muhammed abduhu"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 16,
+      "question": "Peygamberimiz (s.a.v.) tarafından yapılan temizlik önerileri arasında ________ yer almaz.",
+      "options": {
+        "A": "Saç ve tırnak temizliği",
+        "B": "Ağız ve diş temizliği",
+        "C": "Kirli giysiler giymek",
+        "D": "Burun temizliği"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "question": "İbadetin amacı nedir?",
+      "options": {
+        "A": "İnsanların birbirine üstünlük sağlaması",
+        "B": "Allah'ın sevgisini kazanmak",
+        "C": "Daha çok para kazanmak",
+        "D": "İnsanların cezalandırılması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "question": "Aşağıdakilerden hangisi hem mal hem bedenle yapılan bir ibadettir?",
+      "options": {
+        "A": "Namaz",
+        "B": "Oruç",
+        "C": "Zekât",
+        "D": "Hac"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 19,
+      "question": "Allah'ın emir ve yasaklarını yerine getirmekle yükümlü olan varlık kimdir?",
+      "options": {
+        "A": "Melekler",
+        "B": "Cinler",
+        "C": "İnsanlar",
+        "D": "Hayvanlar"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "question": "İslam'ın temel ilkelerinden biri olan temizlik, hangi başlık altında değerlendirilir?",
+      "options": {
+        "A": "Maddî ve mânevî",
+        "B": "Zorunlu ve isteğe bağlı",
+        "C": "Günlük ve haftalık",
+        "D": "Abdest ve gusül"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "question": "İslam'a göre en büyük günah aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Yalan söylemek",
+        "B": "Anne babaya kötü davranmak",
+        "C": "Şirk koşmak",
+        "D": "İftira atmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "question": "Aşağıdakilerden hangisi İslam'daki ibadetlerden biri değildir?",
+      "options": {
+        "A": "Namaz",
+        "B": "Oruç",
+        "C": "Tevhit",
+        "D": "Hac"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "question": "Aşağıdaki ibadetlerden hangisi bireysel ibadetler arasında yer alır?",
+      "options": {
+        "A": "Cuma namazı",
+        "B": "Oruç",
+        "C": "Cemaatle namaz kılmak",
+        "D": "Hac"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "\"Allah katında en değerli insan, O'na en çok saygı gösteren ve en çok korkan kişidir.\" Bu ayet hangi kavramı ifade eder?",
+      "options": {
+        "A": "Tevazu",
+        "B": "Takva",
+        "C": "Sabır",
+        "D": "Şükür"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "question": "Allah'a karşı gelmekten sakınma ve O'nun emirlerine uyma bilinci hangi kavramla ifade edilir?",
+      "options": {
+        "A": "İhlas",
+        "B": "Takva",
+        "C": "Sadaka",
+        "D": "Riya"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "question": "Aşağıdakilerden hangisi İslam inancında büyük günahlardan biri olarak kabul edilir?",
+      "options": {
+        "A": "Misafir ağırlamamak",
+        "B": "Zekât vermemek",
+        "C": "Günlük namazları kazaya bırakmak",
+        "D": "Anne babaya isyan etmek"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 27,
+      "question": "Zekât hangi mal türlerinden verilmez?",
+      "options": {
+        "A": "Altın ve gümüş",
+        "B": "Ticaret malları",
+        "C": "Kişisel kullanılan ev ve araba",
+        "D": "Tarım ürünleri"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "question": "Aşağıdakilerden hangisi bir farz ibadettir?",
+      "options": {
+        "A": "Sadaka vermek",
+        "B": "Kurban kesmek",
+        "C": "Nafile namaz kılmak",
+        "D": "Zekât vermek"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 29,
+      "question": "Hangi ibadet için hem maddi hem de bedeni ibadet tanımı yapılabilir?",
+      "options": {
+        "A": "Oruç",
+        "B": "Namaz",
+        "C": "Hac",
+        "D": "Zekât"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "question": "Kur'an-ı Kerim'de adı geçen ve büyük tufanı ile bilinen peygamber kimdir?",
+      "options": {
+        "A": "Hz. İbrahim",
+        "B": "Hz. Musa",
+        "C": "Hz. Nuh",
+        "D": "Hz. İdris"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "question": "Abdestin farzları ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Abdestin farzları altı tanedir.",
+        "B": "Başın tamamını meshetmek farzdır.",
+        "C": "Elleri sadece bileklere kadar yıkamak yeterlidir.",
+        "D": "Abdestin farzlarından biri yüzü yıkamaktır."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 32,
+      "question": "Aşağıdakilerden hangisi abdestin sünnetlerinden biridir?",
+      "options": {
+        "A": "Ayakları bileklere kadar yıkamak",
+        "B": "Başın tamamını meshetmek",
+        "C": "Vücudun her yerine su dökmek",
+        "D": "Abdest uzuvlarını yıkamaya sağdan başlamak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 33,
+      "question": "Aşağıdaki durumlardan hangisi abdesti bozmaz?",
+      "options": {
+        "A": "Namazda sesli gülmek",
+        "B": "Vücuttan kan çıkması",
+        "C": "Ağız dolusu kusmak",
+        "D": "Tırnak kesmek"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 34,
+      "question": "Gusül abdestinin farzları arasında bulunmayan seçenek aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Ağza su almak",
+        "B": "Buruna su çekmek",
+        "C": "Bütün vücudu yıkamak",
+        "D": "Namaz kılmadan önce gusletmek"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 35,
+      "question": "Aşağıdaki durumlardan hangisi gusül abdesti gerektirir?",
+      "options": {
+        "A": "Saçları taramak",
+        "B": "Tırnak kesmek",
+        "C": "Cünüp olmak",
+        "D": "Abdest almak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "question": "Gusül abdesti alınırken suyun ulaşması gerekli olmayan yer aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Ağız içi",
+        "B": "Burun içi",
+        "C": "Tırnak araları",
+        "D": "Elbiseler"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 37,
+      "question": "Teyemmüm yapmak için aşağıdakilerden hangisi şart değildir?",
+      "options": {
+        "A": "Temiz toprak veya toprak cinsinden bir şey bulmak",
+        "B": "Niyet etmek",
+        "C": "Elleri su ile yıkamak",
+        "D": "Yüzü ve kolları meshetmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "question": "Teyemmüm hangi durumlarda yapılır?",
+      "options": {
+        "A": "Su bulunduğu halde abdesti bozulunca",
+        "B": "Su bulunmadığında veya suyu kullanma imkanı olmadığında",
+        "C": "Temizlik malzemesi olmadığı zaman",
+        "D": "İnsan çok üşüdüğünde"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "question": "Aşağıdakilerden hangisi teyemmümün farzlarındandır?",
+      "options": {
+        "A": "Yüzü ve kolları meshetmek",
+        "B": "Ayakları yıkamak",
+        "C": "Elleri bileklere kadar yıkamak",
+        "D": "Su ile başın tamamını ıslatmak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "question": "Aşağıdakilerden hangisi abdestsiz yapılabilir?",
+      "options": {
+        "A": "Namaz kılmak",
+        "B": "Kur'an-ı Kerim'e dokunmak",
+        "C": "Kâbe'yi tavaf etmek",
+        "D": "Camiye girmek"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 41,
+      "question": "Aşağıdakilerden hangisi gusül abdesti olmadan yapılamaz?",
+      "options": {
+        "A": "Kur'an-ı Kerim okumak",
+        "B": "Camiye girmek",
+        "C": "Namaz kılmak",
+        "D": "Oruç tutmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "question": "Teyemmüm aşağıdakilerden hangisini yerine geçer?",
+      "options": {
+        "A": "Gusül ve abdest",
+        "B": "Namaz",
+        "C": "Oruç",
+        "D": "Sadaka"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 43,
+      "question": "Aşağıdakilerden hangisi abdesti bozmaz?",
+      "options": {
+        "A": "Küçük abdest bozmak",
+        "B": "Namazda kahkaha ile gülmek",
+        "C": "Tırnak kesmek",
+        "D": "Uyumak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "question": "Aşağıdakilerden hangisi teyemmümü bozan durumlardan biridir?",
+      "options": {
+        "A": "Elbisenin kirlenmesi",
+        "B": "Namazdan sonra su bulunması",
+        "C": "Ellerle yüzün meshedilmesi",
+        "D": "Oruç tutmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "question": "Aşağıdakilerden hangisi abdestsiz iken yapılabilir?",
+      "options": {
+        "A": "Namaz kılmak",
+        "B": "Kur'an-ı Kerim'e dokunmak",
+        "C": "Gusül abdesti almak",
+        "D": "Kâbe'yi tavaf etmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 46,
+      "question": "Abdestin farzları Kur'an-ı Kerim'de hangi surede açıkça bildirilmiştir?",
+      "options": {
+        "A": "Yasin Suresi",
+        "B": "Maide Suresi",
+        "C": "Bakara Suresi",
+        "D": "Fatiha Suresi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "question": "Teyemmüm yapılırken hangi hareket yapılmaz?",
+      "options": {
+        "A": "Yüzün meshedilmesi",
+        "B": "Kolların meshedilmesi",
+        "C": "Su ile ayakların yıkanması",
+        "D": "Ellerin toprağa sürülmesi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "question": "Aşağıdakilerden hangisi gusül abdestinin sünnetlerindendir?",
+      "options": {
+        "A": "Ağza su almak",
+        "B": "Sağ taraftan başlamak",
+        "C": "Buruna su çekmek",
+        "D": "Bütün vücudu yıkamak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 49,
+      "question": "Namazın sahih olması için hangi temizlik türü zorunludur?",
+      "options": {
+        "A": "Tırnak temizliği",
+        "B": "Elbise temizliği",
+        "C": "Abdest veya teyemmüm",
+        "D": "Çevre temizliği"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 50,
+      "question": "Aşağıdakilerden hangisi gusül abdestinin farzlarındandır?",
+      "options": {
+        "A": "Saçları taramak",
+        "B": "Elleri bileklere kadar yıkamak",
+        "C": "Buruna su çekmek",
+        "D": "Yüzü meshetmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 51,
+      "question": "Aşağıdaki durumlardan hangisi gusül abdesti almayı gerektirir?",
+      "options": {
+        "A": "Abdest almak",
+        "B": "Yemek yemek",
+        "C": "Cünüp olmak",
+        "D": "Tırnak kesmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 52,
+      "question": "Gusül abdesti alırken dikkat edilmesi gereken en önemli nokta aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Yıkanırken suyun sıcak olması",
+        "B": "Vücudun her yerine suyun ulaşması",
+        "C": "Sadece ellerin yıkanması",
+        "D": "Suyu avuçla almak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 53,
+      "question": "Aşağıdakilerden hangisi teyemmüm almanın geçerli bir sebebi değildir?",
+      "options": {
+        "A": "Su bulunmaması",
+        "B": "Su kullanmanın hastalığı artırması",
+        "C": "Su çok sıcak olduğu için kullanamamak",
+        "D": "Su varken üşenmek"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 54,
+      "question": "Aşağıdaki ibadetlerden hangisi abdestsiz de yapılabilir?",
+      "options": {
+        "A": "Namaz kılmak",
+        "B": "Kur'an-ı Kerim'e dokunmak",
+        "C": "Oruç tutmak",
+        "D": "Kâbe'yi tavaf etmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 55,
+      "question": "Teyemmüm yapmak için aşağıdaki malzemelerden hangisi kullanılmaz?",
+      "options": {
+        "A": "Temiz toprak",
+        "B": "Kuru taş",
+        "C": "Kum",
+        "D": "Su"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 56,
+      "question": "Aşağıdaki hangi durum abdesti bozmaz?",
+      "options": {
+        "A": "Kanama olması",
+        "B": "Kusmak",
+        "C": "Uyumak",
+        "D": "Saçları taramak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 57,
+      "question": "Gusül abdesti olmaksızın yapılamayacak ibadet aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Oruç tutmak",
+        "B": "Namaz kılmak",
+        "C": "Sadaka vermek",
+        "D": "Dua etmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 58,
+      "question": "Aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Teyemmüm, su varken de yapılabilir.",
+        "B": "Gusülde sadece başın yıkanması yeterlidir.",
+        "C": "Abdest su bulunmadığında teyemmüm ile alınabilir.",
+        "D": "Gusül abdesti olmadan Kur'an-ı Kerim'e dokunulabilir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 59,
+      "question": "Cünüp bir kimsenin yapabileceği ibadetler arasında aşağıdakilerden hangisi bulunmaz?",
+      "options": {
+        "A": "Oruç tutmak",
+        "B": "Dua etmek",
+        "C": "Namaz kılmak",
+        "D": "Zikir çekmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 60,
+      "question": "Aşağıdakilerden hangisi gusül abdestinin farzlarından biri değildir?",
+      "options": {
+        "A": "Ağıza su almak",
+        "B": "Buruna su çekmek",
+        "C": "El ve ayakları yıkamak",
+        "D": "Bütün vücudu yıkamak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 61,
+      "question": "Aşağıdakilerden hangisi namazın içindeki farzlardan biri değildir?",
+      "options": {
+        "A": "Kıyam",
+        "B": "Kıraat",
+        "C": "Setr-i Avret",
+        "D": "Rükû"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 62,
+      "question": "Namazda Kur'an okumaya ne ad verilir?",
+      "options": {
+        "A": "Kıraat",
+        "B": "Kıyam",
+        "C": "Sücûd",
+        "D": "Ka'de-i Ahire"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 63,
+      "question": "Aşağıdaki durumlardan hangisi namazı bozar?",
+      "options": {
+        "A": "Namazda kıbleye dönmek",
+        "B": "Bir şey yemek ve içmek",
+        "C": "Sessizce Kur'an okumak",
+        "D": "İftitah tekbiri almak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 64,
+      "question": "\"Namaz dinin direğidir\" hadisi bize neyi öğretmektedir?",
+      "options": {
+        "A": "Namazın Müslümanlıkta önemli bir ibadet olduğunu",
+        "B": "Namazın farz olmadığını",
+        "C": "Namazın yalnızca Ramazan ayında kılınması gerektiğini",
+        "D": "Namazın sadece sabah ve akşam kılınmasının yeterli olduğunu"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 65,
+      "question": "Aşağıdakilerden hangisi günün herhangi bir vaktinde kılınamaz?",
+      "options": {
+        "A": "Öğle namazı",
+        "B": "İkindi namazı",
+        "C": "Yatsı namazı",
+        "D": "Güneş doğarken kılınan namaz"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 66,
+      "question": "Namazın farzları kaç tanedir?",
+      "options": {
+        "A": "6",
+        "B": "10",
+        "C": "12",
+        "D": "14"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 67,
+      "question": "\"Namaza başlama tekbirine\" ne ad verilir?",
+      "options": {
+        "A": "Kıyam",
+        "B": "Rükû",
+        "C": "Sücûd",
+        "D": "İftitah Tekbiri"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 68,
+      "question": "Günde toplam kaç rekât namaz vardır?",
+      "options": {
+        "A": "30",
+        "B": "40",
+        "C": "50",
+        "D": "60"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 69,
+      "question": "Aşağıdaki namazlardan hangisi vaciptir?",
+      "options": {
+        "A": "Teravih",
+        "B": "Bayram namazı",
+        "C": "Teheccüd",
+        "D": "Cuma namazı"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 70,
+      "question": "Orucu açma vaktine ne ad verilir?",
+      "options": {
+        "A": "Sahur",
+        "B": "İmsak",
+        "C": "İftar",
+        "D": "Teheccüd"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 71,
+      "question": "Oruca başlama vaktine ne ad verilir?",
+      "options": {
+        "A": "Sahur",
+        "B": "İmsak",
+        "C": "İftar",
+        "D": "Teravih"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 72,
+      "question": "Aşağıdakilerden hangisi farz oruçtur?",
+      "options": {
+        "A": "Ramazan orucu",
+        "B": "Pazartesi orucu",
+        "C": "Aşure orucu",
+        "D": "Şevval orucu"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 73,
+      "question": "Hac ibadeti hangi tür bir ibadettir?",
+      "options": {
+        "A": "Sadece bedensel ibadet",
+        "B": "Sadece mal ile yapılan ibadet",
+        "C": "Hem mal hem bedenle yapılan ibadet",
+        "D": "Sadece dua ile yapılan ibadet"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 74,
+      "question": "Hac ibadetinin farzlarından biri değildir?",
+      "options": {
+        "A": "İhram giymek",
+        "B": "Kâbe'yi tavaf etmek",
+        "C": "Oruç tutmak",
+        "D": "Arafat'ta vakfe yapmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 75,
+      "question": "Namaz kılarken örtülmesi gereken yerlere ne ad verilir?",
+      "options": {
+        "A": "Setr-i Avret",
+        "B": "İftitah Tekbiri",
+        "C": "Taharet",
+        "D": "İstikbâl-i Kıble"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 76,
+      "question": "Bir Müslümanın namaz kılarken öncelikle kıbleye yönelmesi gerekliliği hangi farza girer?",
+      "options": {
+        "A": "Hadesten tahâret",
+        "B": "Necasetten tahâret",
+        "C": "Setr-i avret",
+        "D": "İstikbâl-i kıble"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 77,
+      "question": "Zekât kimlere verilmelidir?",
+      "options": {
+        "A": "Fakir ve muhtaç olanlara",
+        "B": "Zenginlere",
+        "C": "Çalışan memurlara",
+        "D": "Zekât vermek istemeyenlere"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 78,
+      "question": "İslâm'ın şartlarından biri olmayan ibadet aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Namaz",
+        "B": "Oruç",
+        "C": "Umre",
+        "D": "Hac"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 79,
+      "question": "Aşağıdakilerden hangisi cihadın bir tanımı değildir?",
+      "options": {
+        "A": "Allah yolunda yapılan çalışmalar",
+        "B": "İyiliği çoğaltmak",
+        "C": "Sadece savaşmak",
+        "D": "Kötülüğü engellemek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 80,
+      "question": "Zekât hangi ibadet türüne girer?",
+      "options": {
+        "A": "Bedenle yapılan ibadet",
+        "B": "Mal ile yapılan ibadet",
+        "C": "Sadece sözlü ibadet",
+        "D": "Sadece niyetle yapılan ibadet"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 81,
+      "question": "Güneş doğarken kılınması yasak olan namazlardan biri hangisidir?",
+      "options": {
+        "A": "Sabah namazı",
+        "B": "Akşam namazı",
+        "C": "Öğle namazı",
+        "D": "Yatsı namazı"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 82,
+      "question": "Namazın sonunda oturmaya ne ad verilir?",
+      "options": {
+        "A": "Kıyam",
+        "B": "Ka'de-i Âhire",
+        "C": "Rükû",
+        "D": "Kıraat"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 83,
+      "question": "Aşağıdaki namazlardan hangisi farz değildir?",
+      "options": {
+        "A": "Sabah namazı",
+        "B": "Öğle namazı",
+        "C": "Teheccüd namazı",
+        "D": "İkindi namazı"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 84,
+      "question": "Orucun farz olması için aşağıdakilerden hangisi gereklidir?",
+      "options": {
+        "A": "Niyet edilmesi",
+        "B": "Yatsı namazının kılınması",
+        "C": "Sahur yemeğinin yenmesi",
+        "D": "Zekât verilmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 85,
+      "question": "Hac ibadetinin farzı değildir?",
+      "options": {
+        "A": "Şeytan taşlamak",
+        "B": "Arafat'ta vakfe yapmak",
+        "C": "İhrama girmek",
+        "D": "Kâbe'yi tavaf etmek"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 86,
+      "question": "Cuma namazı kimlere farzdır?",
+      "options": {
+        "A": "Kadınlara",
+        "B": "Çocuklara",
+        "C": "Ergenlik çağına ulaşmış erkeklere",
+        "D": "Yolculukta olanlara"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 87,
+      "question": "Zekât vermeyen kişi ne yapmalıdır?",
+      "options": {
+        "A": "Orucunu bozmalıdır",
+        "B": "Kazaya bırakmalıdır",
+        "C": "Zekâtı en kısa sürede vermelidir",
+        "D": "Sadece dua etmelidir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 88,
+      "question": "Oruç tutan bir kişinin orucunu bozması durumunda ne yapması gerekir?",
+      "options": {
+        "A": "Hiçbir şey yapmasına gerek yoktur",
+        "B": "Sadece tövbe etmelidir",
+        "C": "Kazasını tutmalı ve kefaret orucu tutmalıdır",
+        "D": "Oruç yerine zekât vermelidir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 89,
+      "question": "Teyemmüm, hangi durumda abdest yerine geçer?",
+      "options": {
+        "A": "Su varken abdest almamak için",
+        "B": "Su bulunmadığında veya kullanılması zararlı olduğunda",
+        "C": "Sadece sıcak havalarda",
+        "D": "Sadece yolculuk sırasında"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 90,
+      "question": "Aşağıdakilerden hangisi gusül abdesti alırken yapılması farz olan bir durum değildir?",
+      "options": {
+        "A": "Ağza su almak",
+        "B": "Buruna su çekmek",
+        "C": "Tüm vücudu yıkamak",
+        "D": "Elleri ve ayakları üç kere yıkamak"
+      },
+      "correct_answer": "D"
+    }
+  ],
+  "answer_key": "60-C, 61-C, 62-A, 63-B, 64-A, 65-D, 66-C, 67-D, 68-B, 69-B, 70-C, 71-B, 72-A, 73-C, 74-C, 75-A, 76-D, 77-A, 78-C, 79-C, 80-B, 81-A, 82-B, 83-C, 84-A, 85-A, 86-C, 87-C, 88-C, 89-B, 90-D"
+}

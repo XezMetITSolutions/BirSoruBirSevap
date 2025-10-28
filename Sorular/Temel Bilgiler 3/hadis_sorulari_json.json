@@ -1,0 +1,337 @@
+{
+  "category": "HADİS",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 30,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Hz. Peygamber (s.a.v.)'in davranışları ve sözleri sünnet olarak adlandırılmıştır. Ancak sünnetin farklı türleri bulunmaktadır. Aşağıdakilerden hangisi takrirî sünnete örnek olarak verilebilir?",
+      "options": {
+        "A": "Hz. Peygamber'in (s.a.v.) Cuma namazını kılması",
+        "B": "Bilâl-i Habeşî'nin sabah ezanında \"Namaz uykudan hayırlıdır.\" sözünü eklemesi ve Peygamber'in bunu onaylaması",
+        "C": "Hz. Peygamber'in (s.a.v.) sağ elle yemek yemesi",
+        "D": "Peygamberimiz'in (s.a.v.) insanlara sabır ve güzel ahlak tavsiyesinde bulunması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "question": "Sünnetin Kur'ân-ı Kerîm'in hükümleriyle ilişkisi aşağıdaki ifadelerden hangisiyle en iyi şekilde tanımlanır?",
+      "options": {
+        "A": "Kur'ân-ı Kerîm'in bazı hükümlerini iptal eder",
+        "B": "Kur'ân-ı Kerîm'in açıklamadığı bazı konuları detaylandırır ve açıklar",
+        "C": "Kur'ân-ı Kerîm'den bağımsız yeni hükümler ortaya koyar",
+        "D": "Kur'ân-ı Kerîm'in tüm emir ve yasaklarını tekrar eder, ancak onları uygulamaya koymaz"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "question": "Aşağıdaki örneklerden hangisi fiilî sünnet kapsamına girer?",
+      "options": {
+        "A": "Hz. Peygamber'in (s.a.v.) insanların birbirine güzel sözler söylemesini tavsiye etmesi",
+        "B": "Hz. Peygamber'in (s.a.v.) namaz kılarken nasıl hareket ettiğini göstermesi",
+        "C": "Bir sahabenin yaptığı bir davranışı Peygamberimiz'in (s.a.v.) sessizce onaylaması",
+        "D": "Hz. Peygamber'in (s.a.v.) yolda yürürken selam verilmesini istemesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "question": "Bir hadisin sahih olarak kabul edilmesi için aşağıdakilerden hangisi gereklidir?",
+      "options": {
+        "A": "Hadisin sadece en az üç kişi tarafından rivayet edilmesi",
+        "B": "Hadisin senedinin eksiksiz olması ve râvilerinin güvenilir olması",
+        "C": "Hadisin, Kur'an ile tamamen aynı hükümleri içermesi",
+        "D": "Hadisin, yalnızca sahabeler tarafından rivayet edilmesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "question": "Hadislerin senet kısmı aşağıdakilerden hangisini içerir?",
+      "options": {
+        "A": "Hz. Peygamber (s.a.v.)'in söylediği sözlerin tamamını",
+        "B": "Hadisin aktarıldığı kişilerin zincirini",
+        "C": "Hadisin metnini ve anlamını",
+        "D": "Hadisle ilgili sahabenin yaptığı yorumu"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "question": "Aşağıdakilerden hangisi kutsî hadis için doğru bir tanımdır?",
+      "options": {
+        "A": "Hem sözleri hem de manası Allah'a ait olan hadislerdir",
+        "B": "Manası Allah'a, sözü Hz. Peygamber (s.a.v.)'e ait olan hadislerdir",
+        "C": "Hz. Peygamber'in (s.a.v.) sahabelerine yaptığı tavsiyelerdir",
+        "D": "Bir sahabenin rüyasında duyduğu sözlerin rivayet edilmesidir"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "question": "Bir hadisin zayıf olarak kabul edilmesine sebep olan en önemli faktör aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Hadisin Kur'ân-ı Kerîm ile benzerlik göstermemesi",
+        "B": "Hadisin senedinin eksik olması veya râvilerinin güvenilir olmaması",
+        "C": "Hadisin yalnızca bir sahabi tarafından rivayet edilmesi",
+        "D": "Hadisin fıkıh konularıyla ilgili olması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "question": "Aşağıdakilerden hangisi mevzu hadislerin en belirgin özelliklerinden biridir?",
+      "options": {
+        "A": "Senet ve metin açısından tamamen güvenilir olmaları",
+        "B": "Hz. Peygamber (s.a.v.)'e aitmiş gibi gösterilen ancak uydurulmuş olmaları",
+        "C": "Sadece sahabeler tarafından rivayet edilmesi",
+        "D": "İslam'ın temel hükümleriyle doğrudan çelişmemesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "question": "Hadis ilminde \"Adalet\" kavramı ne anlama gelir?",
+      "options": {
+        "A": "Hadis râvisinin güvenilir, dürüst ve İslam ahlakına uygun bir yaşam sürmesi",
+        "B": "Hadisin Kur'ân-ı Kerîm ile aynı hükümleri içermesi",
+        "C": "Hadislerin metin açısından doğru olup olmadığının araştırılması",
+        "D": "Hadislerin sadece sahabeler tarafından rivayet edilmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "question": "Sahabe neslinden sonra gelen ve sahabeleri tanıyıp onlardan hadis öğrenen nesle ne ad verilir?",
+      "options": {
+        "A": "Tebe'ut-Tâbiîn",
+        "B": "Hulefâ-i Râşidîn",
+        "C": "Tâbiîn",
+        "D": "Muhadramûn"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "question": "Bir hadisin sahih hadis olarak kabul edilebilmesi için râvinin hangi özelliğe sahip olması gerekmez?",
+      "options": {
+        "A": "İyi bir hafızaya sahip olması",
+        "B": "Adaletli ve güvenilir olması",
+        "C": "Hadisi eksiksiz olarak ezberlemiş olması",
+        "D": "Aynı hadisi en az 50 kişiyle paylaşmış olması"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 12,
+      "question": "Aşağıdaki hadis kaynaklarından hangisi Kütüb-i Sitte içinde yer almaz?",
+      "options": {
+        "A": "Sahih-i Buhârî",
+        "B": "Sahih-i Müslim",
+        "C": "Sünen-i Nesâî",
+        "D": "Muvatta"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 13,
+      "question": "Sahih hadis kitaplarından olan Sünen-i Ebû Dâvûd'un yazarı kimdir?",
+      "options": {
+        "A": "İmam Tirmizî",
+        "B": "İmam Ebû Dâvûd",
+        "C": "İmam Nesâî",
+        "D": "İmam İbn Mâce"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "question": "Kütüb-i Sitte'nin iki en güvenilir hadis kitabına ne ad verilir?",
+      "options": {
+        "A": "Mevzu Hadisler",
+        "B": "Sahihayn",
+        "C": "Müttefekun Aleyh",
+        "D": "Sünen"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "question": "Aşağıdakilerden hangisi hadislerin senet kısmı ile ilgili yanlış bir ifadedir?",
+      "options": {
+        "A": "Senet, hadisin kimlerden rivayet edildiğini gösterir.",
+        "B": "Senet, hadis metninin anlamını içerir.",
+        "C": "Senette râvilerin adları ve güvenilir olup olmadıkları yer alır.",
+        "D": "Senet, hadisin Hz. Peygamber (s.a.v.)'e dayandığını gösteren isimler zinciridir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "question": "Aşağıdakilerden hangisi Aşere-i Mübeşşere (Cennetle müjdelenen on sahabi) arasında yer almaz?",
+      "options": {
+        "A": "Hz. Ebû Bekir (r.a.)",
+        "B": "Hz. Ali (r.a.)",
+        "C": "Hz. Hasan (r.a.)",
+        "D": "Hz. Talha (r.a.)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "question": "Peygamberimiz'in (s.a.v.) senet ve metin açısından eksikliği olmayan hadislerine ne ad verilir?",
+      "options": {
+        "A": "Sahih Hadis",
+        "B": "Mevzu Hadis",
+        "C": "Zayıf Hadis",
+        "D": "Hasen Hadis"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "question": "Sahabelerin ve tâbiînin hadis rivayet ederken dikkate aldığı en önemli kriter aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Hadisi birçok insana anlatmaları",
+        "B": "Hadisin senedinin kesintisiz olması ve güvenilir râvilerden aktarılması",
+        "C": "Hadislerin sadece yazılı kaynaklarda bulunması",
+        "D": "Hadisleri sadece belirli zamanlarda paylaşmaları"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "question": "Bir hadisin mevzu (uydurma) olduğuna nasıl karar verilir?",
+      "options": {
+        "A": "Hadisin senet zincirinde güvenilir râviler bulunmaması",
+        "B": "Hadisin Kur'ân'a ve sahih hadislere aykırı olması",
+        "C": "Hadisin tarihî olaylara ters düşmesi",
+        "D": "Yukarıdakilerin hepsi"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 20,
+      "question": "İmam Buhârî'nin hadis kitabı hangi ismi taşır?",
+      "options": {
+        "A": "Sahih-i Müslim",
+        "B": "Sünen-i Nesâî",
+        "C": "Sahih-i Buhârî",
+        "D": "Sünen-i İbn Mâce"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "question": "Peygamberimiz (s.a.v.), \"Kim benim adıma yalan söylerse cehennemdeki yerine hazırlansın.\" hadisiyle hangi konuda uyarıda bulunmuştur?",
+      "options": {
+        "A": "Mevzu (uydurma) hadisler konusunda",
+        "B": "Tefsir ilmi hakkında",
+        "C": "Zayıf hadislerin kullanımına izin verilmesi hakkında",
+        "D": "Fıkıh kurallarına uyulması hakkında"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "question": "Kur'ân-ı Kerîm'in açıklamalarını içeren, dini uygulamaları açıklayan ve Hz. Peygamber'in (s.a.v.) hayatından aktarılan rivayetler ne olarak adlandırılır?",
+      "options": {
+        "A": "Hadis",
+        "B": "İcma",
+        "C": "Kıyâs",
+        "D": "Sahabe sözleri"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "question": "İmam Müslim'in hadis kitabına ne ad verilir?",
+      "options": {
+        "A": "Sünen-i Ebû Dâvûd",
+        "B": "Sahih-i Müslim",
+        "C": "Sünen-i Nesâî",
+        "D": "Sahih-i Buhârî"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "Hadis ilminin güvenilirliği açısından en zayıf kabul edilen hadis türü aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Sahih Hadis",
+        "B": "Hasen Hadis",
+        "C": "Zayıf Hadis",
+        "D": "Mevzu Hadis"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 25,
+      "question": "Hadis ilmiyle ilgilenen kişiye ne ad verilir?",
+      "options": {
+        "A": "Müfessir",
+        "B": "Muhaddis",
+        "C": "Fakih",
+        "D": "Müçtehid"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "question": "Kütüb-i Sitte içerisinde yer alan Sünen-i Tirmizî adlı hadis kitabının yazarı kimdir?",
+      "options": {
+        "A": "İmam Buhârî",
+        "B": "İmam Tirmizî",
+        "C": "İmam Nesâî",
+        "D": "İmam İbn Mâce"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "question": "Hz. Peygamber'in (s.a.v.) hadislerini ilk yazılı hale getiren sahabi kimdir?",
+      "options": {
+        "A": "Abdullah b. Abbas",
+        "B": "Ebû Hüreyre",
+        "C": "Abdullah b. Amr b. As",
+        "D": "Enes b. Mâlik"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "question": "Hadis ilmi açısından, râvilerin hafızalarının güçlü olması aşağıdakilerden hangisinin sağlanmasına katkı sağlar?",
+      "options": {
+        "A": "Hadislerin mevzu (uydurma) olup olmadığının belirlenmesine",
+        "B": "Hadislerin Kur'ân'la aynı içerikte olup olmadığının tespitine",
+        "C": "Hadislerin sahih olup olmadığının belirlenmesine",
+        "D": "Hadislerin sadece sahabeler tarafından rivayet edilmesine"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 29,
+      "question": "Aşağıdaki sahabilerden hangisi en çok hadis rivayet eden sahabi olarak bilinmektedir?",
+      "options": {
+        "A": "Hz. Ömer (r.a.)",
+        "B": "Ebû Hüreyre (r.a.)",
+        "C": "Hz. Osman (r.a.)",
+        "D": "Hz. Hasan (r.a.)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "question": "Sahabenin neslinden sonra gelen ve sahabeleri tanımış olan nesle Tâbiîn denir. Tâbiîn neslinden olup aynı zamanda büyük bir İslam âlimi olan kişi aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Hasan-ı Basrî",
+        "B": "İmam Buhârî",
+        "C": "İmam Şâfiî",
+        "D": "İmam Mâlik"
+      },
+      "correct_answer": "A"
+    }
+  ]
+}

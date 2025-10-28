@@ -1,0 +1,557 @@
+{
+  "category": "TÜRKÇE",
+  "title": "İGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 50,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Aşağıdaki cümlelerden hangisinde isim kullanılmıştır?",
+      "options": {
+        "A": "Kitap okumak en güzel alışkanlıklardan biridir.",
+        "B": "Koşarak geldiğini gördüm.",
+        "C": "Onunla konuşurken dikkatli olmalısın.",
+        "D": "Akşamları dışarı çıkmamayı tercih eder."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "question": "Aşağıdaki cümlelerin hangisinde niteleme sıfatı kullanılmıştır?",
+      "options": {
+        "A": "Güzel çiçekler bahçede açmıştı.",
+        "B": "On iki kitap okudum.",
+        "C": "Şu kalemi bana verir misin?",
+        "D": "Birkaç öğrenci daha gelmedi."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "question": "Aşağıdakilerden hangisi zamir içeren bir cümledir?",
+      "options": {
+        "A": "Kalemi masaya bıraktı.",
+        "B": "O, sınavdan yüksek puan aldı.",
+        "C": "Çalışkan öğrenciler başarıya ulaşır.",
+        "D": "Geniş bahçeye taşınmayı düşünüyor."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "question": "Aşağıdaki cümlelerin hangisinde zarf yoktur?",
+      "options": {
+        "A": "Hızlıca içeri girdi.",
+        "B": "Sabah erken kalkmalısın.",
+        "C": "Kitabı masaya bıraktı.",
+        "D": "Dikkatlice baktı."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "question": "Aşağıdaki edatlardan hangisi anlamca ilgi kurmak için kullanılmıştır?",
+      "options": {
+        "A": "Seninle konuşmak istiyorum.",
+        "B": "Kalemi masanın üzerine koydum.",
+        "C": "Bahçede birkaç çiçek vardı.",
+        "D": "Hemen eve döndü."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 6,
+      "question": "Aşağıdaki cümlelerden hangisi ünlem içermektedir?",
+      "options": {
+        "A": "Aman, dikkatli ol!",
+        "B": "Sabah erkenden kalktı.",
+        "C": "Bahçedeki çiçekler açtı.",
+        "D": "Kitabı masanın üzerine koydu."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "question": "Aşağıdakilerden hangisi ikileme içeren bir cümledir?",
+      "options": {
+        "A": "Hızlı hızlı yürüyordu.",
+        "B": "Kalemi eline aldı.",
+        "C": "Sabah erken kalktı.",
+        "D": "Kitabı çantasına koydu."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "question": "Aşağıdaki cümlelerden hangisinde yansıma sözcük kullanılmıştır?",
+      "options": {
+        "A": "Çocuk birden ağlamaya başladı.",
+        "B": "Şırıl şırıl akan suyu dinledik.",
+        "C": "Sabah erkenden yola çıktı.",
+        "D": "Çok yavaş hareket etti."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "question": "Aşağıdakilerden hangisi şimdiki zamanlı fiil içeren bir cümledir?",
+      "options": {
+        "A": "Dün sinemaya gittik.",
+        "B": "Şu anda ders çalışıyor.",
+        "C": "Yarın sınava girecek.",
+        "D": "Kitap okumayı çok sever."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "question": "Aşağıdaki cümlelerden hangisi di'li geçmiş zaman kipindedir?",
+      "options": {
+        "A": "Kitap okuyor.",
+        "B": "Dün çok çalıştım.",
+        "C": "Yarın geleceğim.",
+        "D": "Sabah erken kalkarım."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "question": "Aşağıdaki cümlelerden hangisi dilek-istek kipi içermektedir?",
+      "options": {
+        "A": "Tatilde bol bol kitap okumalıyım.",
+        "B": "Gelecek hafta sınav olacak.",
+        "C": "Kitap okumak çok güzeldir.",
+        "D": "Ders çalışıyor."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 12,
+      "question": "Aşağıdakilerden hangisi basit fiil içeren bir cümledir?",
+      "options": {
+        "A": "Sabah erken kalktım.",
+        "B": "Kitabı masanın üzerine bıraktım.",
+        "C": "Bahçede çiçekleri suladım.",
+        "D": "Birden içeriye girdi."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "question": "Aşağıdaki bileşik fiillerden hangisi özel bileşik fiil örneğidir?",
+      "options": {
+        "A": "Yardım etmek",
+        "B": "Hissetmek",
+        "C": "Yazıvermek",
+        "D": "Hak etmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "question": "Aşağıdakilerden hangisi anlamca kaynaşmış bileşik fiildir?",
+      "options": {
+        "A": "Hissetmek",
+        "B": "Koşuvermek",
+        "C": "Düşeyazmak",
+        "D": "Bekleyedurmak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "question": "Aşağıdaki fiillerden hangisi geçişsiz fiildir?",
+      "options": {
+        "A": "Öğretmen tahtaya yazı yazdı.",
+        "B": "Çocuk sokakta oynadı.",
+        "C": "Kalemi eline aldı.",
+        "D": "Kitabı masaya bıraktı."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "question": "Aşağıdaki fiillerden hangisi işteş fiildir?",
+      "options": {
+        "A": "Kitap okudular.",
+        "B": "Sabah kahvaltı yaptılar.",
+        "C": "Bahçede oynadılar.",
+        "D": "Telefonla konuştular."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 17,
+      "question": "Aşağıdakilerden hangisi ek fiilin hikâye biçimine örnektir?",
+      "options": {
+        "A": "Kitabı okuyor-muş.",
+        "B": "Sabah erken kalkar-mış.",
+        "C": "Okuldan geç gelmiş-ti.",
+        "D": "Ders çalışıyor-ise."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "question": "Aşağıdaki fiilimsilerden hangisi isim-fiildir?",
+      "options": {
+        "A": "Okuyan öğrenci çok başarılıydı.",
+        "B": "Koşarak yanımıza geldi.",
+        "C": "Kitap okumayı çok severim.",
+        "D": "Düşünmeden karar vermek yanlış olur."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "question": "Aşağıdaki cümlelerin hangisinde sıfat-fiil kullanılmıştır?",
+      "options": {
+        "A": "Akşam erken yattı.",
+        "B": "Okuyan öğrenciler başarılı olur.",
+        "C": "Koşarak geldi.",
+        "D": "Konuşmadan dinledi."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "question": "Aşağıdaki cümlelerden hangisinde zarf-fiil kullanılmıştır?",
+      "options": {
+        "A": "Hızlı konuşuyordu.",
+        "B": "Okula yürüyerek gitti.",
+        "C": "Yeni aldığı kitabı beğendi.",
+        "D": "Oyun oynuyordu."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "question": "Aşağıdaki cümlelerden hangisinde geçişli fiil vardır?",
+      "options": {
+        "A": "Çocuklar parkta oynadı.",
+        "B": "Kitap okudum.",
+        "C": "Sabah erkenden uyandı.",
+        "D": "Otobüs hızla ilerliyordu."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "question": "Aşağıdakilerden hangisi edat içeren bir cümledir?",
+      "options": {
+        "A": "Oyun oynarken çok eğlendi.",
+        "B": "Kitabı masanın üzerine koydu.",
+        "C": "Sabahları erken kalkar.",
+        "D": "Çalışkan öğrenciler başarılı olur."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "question": "Aşağıdaki cümlelerin hangisinde zarf-fiil vardır?",
+      "options": {
+        "A": "Öğretmen sabah erkenden geldi.",
+        "B": "Ders çalışarak sınava hazırlandı.",
+        "C": "Güneşli havalarda dışarı çıkmayı severim.",
+        "D": "Kitap okumak çok güzeldir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "Aşağıdaki fiillerden hangisi dönüşlü fiildir?",
+      "options": {
+        "A": "Çocuk düştü.",
+        "B": "Aynada kendine baktı.",
+        "C": "Çamaşırları balkona astı.",
+        "D": "Telefonu masaya koydu."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "question": "Aşağıdaki cümlelerden hangisi istek kipi ile çekimlenmiştir?",
+      "options": {
+        "A": "Eve erken gitmeliyim.",
+        "B": "Bahçede oynamayı sever.",
+        "C": "Sana bir şey anlatayım.",
+        "D": "Sabah erkenden kalktı."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "question": "Aşağıdaki fiillerden hangisi edinçli (etken) fiildir?",
+      "options": {
+        "A": "Kapı açıldı.",
+        "B": "Çocuk düştü.",
+        "C": "Annesi çocuğu çağırdı.",
+        "D": "Kedi camdan atladı."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "question": "Aşağıdakilerden hangisi işteş fiildir?",
+      "options": {
+        "A": "Çocuklar kavga ettiler.",
+        "B": "Telefonla konuştu.",
+        "C": "Kalemi aldı.",
+        "D": "Yazıyı kontrol etti."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "question": "Aşağıdaki cümlelerden hangisi rivayet kipi ile çekimlenmiştir?",
+      "options": {
+        "A": "Dün buraya gelmiş.",
+        "B": "Sabah kahvaltı yapacağız.",
+        "C": "Kitabı okuyor.",
+        "D": "Evde oturuyorum."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "question": "Aşağıdaki cümlelerden hangisi bağlaç içermektedir?",
+      "options": {
+        "A": "Ders çalıştı ve sınavı geçti.",
+        "B": "Sabah çok erken kalktı.",
+        "C": "Hızlıca yürüdü.",
+        "D": "Kitabı eline aldı."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "question": "Aşağıdaki cümlelerden hangisinde olumsuzluk eki kullanılmıştır?",
+      "options": {
+        "A": "Dersi anlamadı.",
+        "B": "Kitabı masaya koydu.",
+        "C": "Sabah erkenden uyandı.",
+        "D": "Konuşmadan dinledi."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "question": "Aşağıdaki cümlelerden hangisi isim cümlesidir?",
+      "options": {
+        "A": "Kitap okumak insanı geliştirir.",
+        "B": "Çalışkan insanlar her zaman başarılı olur.",
+        "C": "Bugün çok güzel bir gündü.",
+        "D": "Ders çalışmayı bırakıp dışarı çıktı."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "question": "Aşağıdakilerden hangisi fiil cümlesidir?",
+      "options": {
+        "A": "Masadaki kitap Ahmet'indi.",
+        "B": "Sabahları yürüyüş yapmayı severim.",
+        "C": "Bugün hava oldukça soğuktu.",
+        "D": "Onun en sevdiği renk maviydi."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 33,
+      "question": "Aşağıdaki cümlelerden hangisinde özne bulunmamaktadır?",
+      "options": {
+        "A": "Öğrenciler sabah erkenden okula geldi.",
+        "B": "Yağmur tüm gün boyunca devam etti.",
+        "C": "Annem yemek yaptı.",
+        "D": "Babam ve amcam birlikte alışverişe çıktı."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "question": "Aşağıdaki cümlelerden hangisinde belirtili nesne vardır?",
+      "options": {
+        "A": "Kitapları masaya koydu.",
+        "B": "Sabah erkenden yürüyüş yaptı.",
+        "C": "Yolda yürürken çok düşündü.",
+        "D": "Geçen hafta sinemaya gitmiştik."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "question": "Aşağıdaki cümlelerin hangisinde tümleç kullanılmıştır?",
+      "options": {
+        "A": "Sabah erkenden kalktı.",
+        "B": "Ders çalışmaya başladı.",
+        "C": "Yeni bir kitap aldı.",
+        "D": "Bugün çok mutluydu."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "question": "Aşağıdakilerden hangisi atasözü değildir?",
+      "options": {
+        "A": "Azıcık aşım kaygısız başım.",
+        "B": "Sakla samanı gelir zamanı.",
+        "C": "Kapıyı açan anahtardır.",
+        "D": "Kendi düşen ağlamaz."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "question": "Aşağıdaki cümlelerden hangisi deyim içermektedir?",
+      "options": {
+        "A": "Sabah erkenden uyandı.",
+        "B": "Kalemini masanın üstüne koydu.",
+        "C": "İşin ucunu bırakmadı ve başardı.",
+        "D": "Hava bugün çok soğuktu."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "question": "Aşağıdaki cümlelerden hangisinde fiilimsiler yoktur?",
+      "options": {
+        "A": "Koşarak geldi.",
+        "B": "Düşünmeden hareket etti.",
+        "C": "Çok mutlu bir insandı.",
+        "D": "Söylediği sözler çok etkileyiciydi."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "question": "Aşağıdaki sözcüklerden hangisi türemiş bir kelimedir?",
+      "options": {
+        "A": "Bilgisayar",
+        "B": "Kalem",
+        "C": "Gözlük",
+        "D": "Defter"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "question": "Aşağıdaki sözcüklerden hangisi gövde değildir?",
+      "options": {
+        "A": "Başarı",
+        "B": "Okuyucu",
+        "C": "İnsan",
+        "D": "Sevgili"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "question": "Aşağıdaki fiillerden hangisi basit fiildir?",
+      "options": {
+        "A": "Çalıştırmak",
+        "B": "Sevmek",
+        "C": "Söylemek",
+        "D": "Anlatmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "question": "Aşağıdakilerden hangisi bileşik fiildir?",
+      "options": {
+        "A": "Uyandı",
+        "B": "Yazdı",
+        "C": "Yardım etti",
+        "D": "Çalıştı"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "question": "Aşağıdaki kelimelerden hangisi ek almamıştır?",
+      "options": {
+        "A": "Öğrenci",
+        "B": "Gözlükçü",
+        "C": "Çanta",
+        "D": "Kalemlik"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "question": "Aşağıdaki cümlelerden hangisi isim tamlaması içermektedir?",
+      "options": {
+        "A": "Kitabı çok beğendi.",
+        "B": "Ahmet, derse geç kaldı.",
+        "C": "Çalışkan öğrenciler başarılı olur.",
+        "D": "Bahçedeki ağaçlar çok güzeldi."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 45,
+      "question": "Aşağıdaki cümlelerin hangisinde tamlayan ekinin düşmesi anlatım bozukluğuna neden olur?",
+      "options": {
+        "A": "Ahmet'in defteri masada duruyordu.",
+        "B": "Çocuğun oyuncakları kaybolmuştu.",
+        "C": "Öğretmenin kitaplarını getirdim.",
+        "D": "Ağabeyin arabayı tamir etti."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 46,
+      "question": "Aşağıdaki kelimelerden hangisi çekim ekine sahiptir?",
+      "options": {
+        "A": "Kırmızı",
+        "B": "Masalar",
+        "C": "Sevimli",
+        "D": "Kitaplık"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "question": "Aşağıdaki cümlelerden hangisi yüklemsizdir?",
+      "options": {
+        "A": "Sabah erkenden okula gitti.",
+        "B": "O gün çok mutlu bir gündü.",
+        "C": "Masanın üzerinde birkaç kitap vardı.",
+        "D": "Yorgun ve halsizdi."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 48,
+      "question": "Aşağıdaki kelimelerden hangisi isim köküne sahiptir?",
+      "options": {
+        "A": "Anlamak",
+        "B": "Yazmak",
+        "C": "Gözlük",
+        "D": "Çalışmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 49,
+      "question": "Aşağıdaki cümlelerden hangisi bağlaç içermektedir?",
+      "options": {
+        "A": "Yağmur yağdı ve biz ıslandık.",
+        "B": "Okula yürüyerek gitti.",
+        "C": "Masanın üzerinde kitap vardı.",
+        "D": "Dışarı çıkmayı seviyor."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 50,
+      "question": "Aşağıdaki cümlelerden hangisinde ünlem vardır?",
+      "options": {
+        "A": "Ahmet çok çalışkan bir çocuk.",
+        "B": "Bugün hava çok güzel!",
+        "C": "Kütüphanede ders çalışıyor.",
+        "D": "Kalemini masaya koydu."
+      },
+      "correct_answer": "B"
+    }
+  ]
+}

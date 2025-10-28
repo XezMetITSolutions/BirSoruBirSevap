@@ -1,0 +1,1107 @@
+{
+  "category": "İTİKAD",
+  "title": "İGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 100,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Akaid ilmi neyi öğretir?",
+      "options": {
+        "A": "İslam'ın ibadet esaslarını",
+        "B": "Müslümanın inanması gereken iman ve inanç esaslarını",
+        "C": "Sadece İslam tarihini",
+        "D": "Peygamberlerin biyografilerini"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "question": "İmanın sözlük anlamı aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Allah'ın emirlerini yerine getirmek",
+        "B": "Herhangi bir şeye inanmak",
+        "C": "Dini hükümleri yerine getirmek",
+        "D": "İbadet etmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "question": "Dinî terim olarak iman nasıl tanımlanır?",
+      "options": {
+        "A": "Sadece Allah'ın varlığına inanmak",
+        "B": "Allah'ın emir ve yasaklarını öğrenmek",
+        "C": "Allah tarafından Peygamberimiz'e vahiyle gönderilen dinî esasların doğruluğuna kalp ile inanmak ve bu inancı dil ile ifade etmek",
+        "D": "Sadece ibadetleri yerine getirmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "question": "İmanın şartları hangi duada özetlenmiştir?",
+      "options": {
+        "A": "Fatiha",
+        "B": "Âmentü",
+        "C": "Kelime-i Şehâdet",
+        "D": "Subhaneke"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "question": "İmanın şartlarından biri değildir:",
+      "options": {
+        "A": "Allah'a inanmak",
+        "B": "Meleklere inanmak",
+        "C": "Evliyalara inanmak",
+        "D": "Kader ve kazaya inanmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "question": "İmanın altı şartından biri olan \"Allah'a iman\" ne anlama gelir?",
+      "options": {
+        "A": "Allah'ın varlığına ve birliğine inanmak, tüm üstünlük sıfatlarını kabul etmek",
+        "B": "Sadece Allah'ın var olduğunu bilmek",
+        "C": "Allah'a inanıp ibadetleri yapmamak",
+        "D": "Meleklerin varlığına inanmak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "question": "Allah'a iman etmenin en önemli faydalarından biri nedir?",
+      "options": {
+        "A": "Kişiye huzur ve güven vermesi",
+        "B": "Kişinin daha zengin olmasını sağlaması",
+        "C": "Sadece ibadetlerini artırması",
+        "D": "İnsanların ona daha fazla saygı göstermesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "question": "Allah'a iman eden bir insanın hangi özelliği gelişir?",
+      "options": {
+        "A": "Sorumluluk duygusu",
+        "B": "Maddi kazanç",
+        "C": "İnsanların övgüsünü kazanma isteği",
+        "D": "Daha fazla yemek yeme isteği"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "question": "Kimler Allah'a inanmakla yükümlüdür?",
+      "options": {
+        "A": "Sadece Müslüman âlimler",
+        "B": "Ergenlik çağına ulaşmış ve akıl sahibi herkes",
+        "C": "Sadece ibadet edenler",
+        "D": "Sadece peygamberler"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "question": "İmam Mâtürîdî'ye göre, hiçbir dinden haberi olmayan insanlar Allah'ın varlığını nasıl bulmakla yükümlüdür?",
+      "options": {
+        "A": "Peygamberlerden öğrenerek",
+        "B": "Akıllarıyla düşünerek",
+        "C": "Rüyalarında görerek",
+        "D": "Sadece kitaplardan okuyarak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "question": "Allah'a inanmanın insana sağladığı en büyük faydalardan biri nedir?",
+      "options": {
+        "A": "Ruhunu yüceltmesi ve doğru yola yöneltmesi",
+        "B": "İnsanların ona hayranlık duyması",
+        "C": "Her zaman kazanç elde etmesi",
+        "D": "Toplumda üstün bir yer edinmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 12,
+      "question": "Allah'a iman eden kişi nasıl bir bilinç içinde olur?",
+      "options": {
+        "A": "Sadece kendisine ibadet etmeyi hedefler",
+        "B": "Allah'ın her şeyi bildiğini, gördüğünü ve yaptıklarının hesabını vereceğini bilir",
+        "C": "Sadece namaz kılmayı yeterli görür",
+        "D": "Sadece ailesine karşı sorumlu olduğunu düşünür"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "question": "Allah'a iman eden bir kimse aşağıdakilerden hangisinden kaçınır?",
+      "options": {
+        "A": "Mal, mevki ve şöhrete tapmaktan",
+        "B": "Daha fazla ibadet etmekten",
+        "C": "İnsanlarla iyi ilişkiler kurmaktan",
+        "D": "Kendi hayatını sorgulamaktan"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 14,
+      "question": "Allah'a iman eden bir insan hangi özelliği kazanmaz?",
+      "options": {
+        "A": "Adalet ve barış kavramını kapsamlı bir şekilde anlamak",
+        "B": "Yaratılış gayesini kavramak",
+        "C": "Maddi zenginlik kazanmak",
+        "D": "Huzurlu ve güvenli bir hayat sürmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "question": "İslam inancına göre, Allah'a inanmanın en önemli sonucu nedir?",
+      "options": {
+        "A": "Kişiyi hayata bağlaması ve görev bilincini artırması",
+        "B": "İnsanların ona hayran olması",
+        "C": "Toplumda yüksek statü kazanması",
+        "D": "Sadece camilerde ibadet etmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 16,
+      "question": "Allah'a iman eden bir kimse hangi davranışı sergilemez?",
+      "options": {
+        "A": "Kötülüklerden uzak durmak",
+        "B": "Adaletli olmak",
+        "C": "İnsanları kandırmak",
+        "D": "Yaratılış gayesini anlamak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "question": "Allah'ın varlığı hakkında şüphe etmek hangi ayetle reddedilmiştir?",
+      "options": {
+        "A": "\"Gökleri ve yeri yaratan Allah hakkında şüphe mi vardır?\" (İbrahim Suresi, 10. Ayet)",
+        "B": "\"Namazı kılın ve zekâtı verin.\"",
+        "C": "\"Allah sabredenleri sever.\"",
+        "D": "\"Oruç, müminler üzerine farz kılınmıştır.\""
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "question": "Allah'a iman eden kişi hangi yanlışa düşmez?",
+      "options": {
+        "A": "Allah ile insan arasına bir aracı koymak",
+        "B": "Kendi iradesiyle hareket etmek",
+        "C": "Adaletli davranmak",
+        "D": "Kendi ibadetlerini bilinçli yapmak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "question": "Allah'a iman eden bir insan, hangi davranışı benimsemelidir?",
+      "options": {
+        "A": "Allah'ın emir ve yasaklarına uyma bilinciyle hareket etmek",
+        "B": "Sadece kendisi için ibadet etmek",
+        "C": "Sadece zor zamanlarda Allah'a yönelmek",
+        "D": "Sadece ibadet ederek topluma karşı sorumluluğunu bırakmak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "question": "Allah'a iman eden bir insanın en belirgin özelliği nedir?",
+      "options": {
+        "A": "Güven duygusuna sahip olması, huzurlu ve sorumlu bir birey olması",
+        "B": "Maddi kazanç peşinde koşması",
+        "C": "Sadece zorluk zamanlarında Allah'a yönelmesi",
+        "D": "Sadece ibadetleriyle ilgilenip insanlarla ilgilenmemesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "question": "Gerçek bir müminin en temel özelliği nedir?",
+      "options": {
+        "A": "Allah'ın güzelliğine ve büyüklüğüne inanmak, O'nun sevgisini kazanmayı hedeflemek",
+        "B": "Sadece ibadetlerini yerine getirmek",
+        "C": "Dini bilgileri öğrenmek ama uygulamamak",
+        "D": "İnsanlarla iyi ilişkiler kurmak ama ibadet etmemek"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "question": "Peygamberimiz'e göre imanın zevkine ulaşmak için aşağıdakilerden hangisi gereklidir?",
+      "options": {
+        "A": "Kendi menfaatini her şeyden üstün görmek",
+        "B": "Allah ve Resulü'nü her şeyden çok sevmek",
+        "C": "Sadece farz ibadetleri yerine getirmek",
+        "D": "Dünya nimetlerinden tamamen uzak durmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "question": "Allah sevgisinin insana sağladığı en büyük faydalardan biri nedir?",
+      "options": {
+        "A": "İnsanları kötüye yönlendirmekten koruması",
+        "B": "Kişinin hayatına yön vererek iyiliğe teşvik etmesi",
+        "C": "İnsanların ona hayran olmasını sağlaması",
+        "D": "Dünyada hiçbir sıkıntı çekmeyeceğini garanti etmesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "Allah sevgisi insanlara hangi duyguları kazandırmaz?",
+      "options": {
+        "A": "Yardımlaşma ve fedakârlık",
+        "B": "Sabır ve hoşgörü",
+        "C": "Bencillik ve kibir",
+        "D": "Barış ve huzur içinde yaşama isteği"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "question": "Esmâ-i Hüsnâ ne anlama gelir?",
+      "options": {
+        "A": "Peygamberlerin isimleri",
+        "B": "Allah'ın en güzel isimleri",
+        "C": "Müminlerin lakapları",
+        "D": "Kur'an'daki surelerin isimleri"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "question": "Peygamberimiz'in (s.a.v.) hadisinde Allah'ın kaç ismi olduğu belirtilmiştir?",
+      "options": {
+        "A": "66",
+        "B": "77",
+        "C": "88",
+        "D": "99"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 27,
+      "question": "Esmâ-i Hüsnâ ile ilgili aşağıdaki ayetlerden hangisi doğrudur?",
+      "options": {
+        "A": "\"En güzel isimler ancak Allah'a mahsustur, O'na onlarla dua ediniz.\" (A'râf suresi, 180. ayet)",
+        "B": "\"Allah'ın bir ismi vardır, ona dua edin.\"",
+        "C": "\"Allah'ın isimleri insanlar tarafından belirlenmiştir.\"",
+        "D": "\"Allah'ın isimleri sadece peygamberlere bildirilmiştir.\""
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "question": "Allah'ın en büyük isimleri anlamına gelen kavram aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Esmâ-i Hüsnâ",
+        "B": "İsm-i A'zam",
+        "C": "Subûtî sıfatlar",
+        "D": "Vahdaniyet"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "question": "Allah'ın Zâtî (Özel) sıfatlarından biri değildir:",
+      "options": {
+        "A": "Vücud",
+        "B": "Kıdem",
+        "C": "Hayat",
+        "D": "Beka"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "question": "Allah'ın sıfatlarından \"Muhâlefetün li'l-havâdis\" ne anlama gelir?",
+      "options": {
+        "A": "Allah'ın sonradan yaratılmışlara benzememesi",
+        "B": "Allah'ın her şeyi bilmesi",
+        "C": "Allah'ın her şeyi görmesi",
+        "D": "Allah'ın sonsuz güç sahibi olması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "question": "Allah'ın Vahdaniyet sıfatı ne anlama gelir?",
+      "options": {
+        "A": "Allah'ın her şeyi görebilmesi",
+        "B": "Allah'ın zatında, sıfatlarında ve fiillerinde tek ve eşsiz olması",
+        "C": "Allah'ın zaman ve mekândan bağımsız olması",
+        "D": "Allah'ın konuşabilmesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "question": "Allah'ın Subûtî sıfatlarından biri değildir:",
+      "options": {
+        "A": "İlim",
+        "B": "Kudret",
+        "C": "Hayat",
+        "D": "Kıdem"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 33,
+      "question": "Allah'ın her şeyi görmesi ve hiçbir şeyin O'ndan gizli olmaması hangi sıfatı ile açıklanır?",
+      "options": {
+        "A": "Semî'",
+        "B": "Basar",
+        "C": "Kudret",
+        "D": "Tekvin"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "question": "Allah'ın Kudret sıfatı ne anlama gelir?",
+      "options": {
+        "A": "Allah'ın her şeyi işitmesi",
+        "B": "Allah'ın her şeye gücünün yetmesi",
+        "C": "Allah'ın her şeyi yaratması",
+        "D": "Allah'ın varlığının ebedî olması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "question": "Allah'ın Tekvin sıfatı hangi anlamı taşır?",
+      "options": {
+        "A": "Allah'ın her şeyi yaratması",
+        "B": "Allah'ın her şeyi bilmesi",
+        "C": "Allah'ın konuşması",
+        "D": "Allah'ın sonsuz güç sahibi olması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "question": "Allah'ın konuşma sıfatı hangisidir?",
+      "options": {
+        "A": "Hayat",
+        "B": "Basar",
+        "C": "Kelam",
+        "D": "İrade"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "question": "Allah'ın irade sıfatının anlamı nedir?",
+      "options": {
+        "A": "Allah'ın her şeyi belirlemesi ve dilemesi",
+        "B": "Allah'ın her şeyi işitmesi",
+        "C": "Allah'ın her şeyi yaratması",
+        "D": "Allah'ın her şeyi görebilmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 38,
+      "question": "Ehl-i Sünnet inancına göre müminler Allah'ı ne zaman görecektir?",
+      "options": {
+        "A": "Dünyada",
+        "B": "Rüyalarında",
+        "C": "Cennete girdikten sonra",
+        "D": "Sadece peygamberler görebilir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "question": "Allah'ı ahirette müminlerin göreceğini belirten ayet hangi surededir?",
+      "options": {
+        "A": "A'râf",
+        "B": "En'âm",
+        "C": "Kıyâme",
+        "D": "Bakara"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "question": "Allah'ın görülebileceğini belirten hadislerden biri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "\"Siz şu ayı görüşünüz gibi, Rabbinizi de göreceksiniz.\" (Buhârî, Mevakit, 16)",
+        "B": "\"Allah'ı dünyada görenler cennete girer.\"",
+        "C": "\"Allah'ı görmek mümkün değildir.\"",
+        "D": "\"Sadece peygamberler Allah'ı görebilir.\""
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 41,
+      "question": "İmanın şartlarından biri olan meleklere iman ne anlama gelir?",
+      "options": {
+        "A": "Meleklerin varlığına, görevlerine ve Allah'a kulluk ettiklerine inanmak",
+        "B": "Meleklerin insanlara benzediğini kabul etmek",
+        "C": "Sadece dört büyük meleğin varlığına inanmak",
+        "D": "Meleklerin de insanlar gibi günah işleyebileceğini düşünmek"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 42,
+      "question": "Melekler hangi maddeden yaratılmıştır?",
+      "options": {
+        "A": "Toprak",
+        "B": "Nur",
+        "C": "Ateş",
+        "D": "Su"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "question": "Meleklerin en önemli özelliklerinden biri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Günah işleyebilmeleri",
+        "B": "Allah'ın emirlerine kesinlikle itaat etmeleri",
+        "C": "İnsanlar gibi yemek yiyip içmeleri",
+        "D": "Ölümlü olmaları"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "question": "Melekler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Melekler gözle görülmezler",
+        "B": "Melekler nurdan yaratılmışlardır",
+        "C": "Melekler erkek veya dişi olabilirler",
+        "D": "Melekler Allah'a isyan etmezler"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 45,
+      "question": "Allah'ın vahiy getirmekle görevlendirdiği melek aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Azrâil",
+        "B": "Cebrâil",
+        "C": "Mikâil",
+        "D": "İsrâfil"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "question": "Azrâil (a.s.)'ın görevi nedir?",
+      "options": {
+        "A": "Ruhları almak",
+        "B": "Tabiat olaylarını yönetmek",
+        "C": "Sûra üflemek",
+        "D": "Amelleri yazmak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 47,
+      "question": "Mikâil (a.s.) hangi görevle sorumludur?",
+      "options": {
+        "A": "İnsanların amel defterlerini yazmak",
+        "B": "Ölülerin ruhlarını almak",
+        "C": "Tabiat olaylarını düzenlemek",
+        "D": "Sûra üflemek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "question": "Sûra üfleyerek kıyametin kopmasını sağlayacak olan melek kimdir?",
+      "options": {
+        "A": "Cebrâil",
+        "B": "Azrâil",
+        "C": "İsrâfil",
+        "D": "Mikâil"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 49,
+      "question": "Kirâmen Kâtibîn meleklerinin görevi nedir?",
+      "options": {
+        "A": "İnsanların amellerini kaydetmek",
+        "B": "İnsanlara vahiy getirmek",
+        "C": "İnsanların ruhlarını almak",
+        "D": "Kıyametin kopmasını sağlamak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 50,
+      "question": "Münker ve Nekir melekleri hangi görevi yerine getirir?",
+      "options": {
+        "A": "İnsanların günahlarını yazmak",
+        "B": "İnsanlara vahiy getirmek",
+        "C": "Kabirde sorgulamak",
+        "D": "Kıyameti başlatmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 51,
+      "question": "Hamele-i Arş meleklerinin görevi nedir?",
+      "options": {
+        "A": "Allah'ın arşını taşımak",
+        "B": "Cennette görev yapmak",
+        "C": "Cehennemde azap etmek",
+        "D": "Ruhları almak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 52,
+      "question": "Hazene-i Cennet ve Cehennem melekleri ne ile görevlidir?",
+      "options": {
+        "A": "İnsanların ruhlarını almak",
+        "B": "Cennet ve cehennemde görev yapmak",
+        "C": "İnsanların amel defterlerini yazmak",
+        "D": "Kıyameti başlatmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 53,
+      "question": "Kitaplara iman ne anlama gelir?",
+      "options": {
+        "A": "Bütün kutsal kitapların değişmeden günümüze geldiğine inanmak",
+        "B": "Allah'ın peygamberlerine vahiy yoluyla gönderdiği ilahî kitaplara inanmak",
+        "C": "Sadece Kur'an'a inanmak",
+        "D": "Sadece Tevrat ve İncil'in asıllarının günümüze kadar korunduğuna inanmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 54,
+      "question": "Kur'an-ı Kerîm dışındaki kutsal kitapların en büyük özelliği nedir?",
+      "options": {
+        "A": "Hiçbir değişikliğe uğramamaları",
+        "B": "Hepsinin günümüze kadar korunmuş olması",
+        "C": "Çoğunun zamanla tahrif edilmiş olması",
+        "D": "Hepsinin aynı dili kullanıyor olması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 55,
+      "question": "Kur'an'ın kıyamete kadar korunacağını garanti eden ayet aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "\"Kur'an'ı, kesinlikle biz indirdik, elbette O'nu yine biz koruyacağız.\" (Hicr suresi, 9. ayet)",
+        "B": "\"Sana bu kitabı hak ile indirdik.\"",
+        "C": "\"Bu kitap, insanlara öğüt vermek içindir.\"",
+        "D": "\"Allah'ın ayetlerini sakın değiştirmeyin.\""
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 56,
+      "question": "Suhuf nedir?",
+      "options": {
+        "A": "Sayfalardan oluşan ilahî emirler",
+        "B": "Büyük kitapların bir bölümü",
+        "C": "Kur'an'ın bir suresi",
+        "D": "Meleklerin isimleri"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 57,
+      "question": "Hangi peygambere suhuf gönderilmemiştir?",
+      "options": {
+        "A": "Hz. Âdem",
+        "B": "Hz. Mûsâ",
+        "C": "Hz. İdrîs",
+        "D": "Hz. Şît"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 58,
+      "question": "Büyük ilahî kitaplardan biri değildir:",
+      "options": {
+        "A": "Tevrat",
+        "B": "Zebûr",
+        "C": "İncil",
+        "D": "Barnaba"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 59,
+      "question": "Tevrat hangi peygambere indirilmiştir?",
+      "options": {
+        "A": "Hz. Dâvûd",
+        "B": "Hz. Mûsâ",
+        "C": "Hz. İbrâhim",
+        "D": "Hz. Nuh"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 60,
+      "question": "Günümüzde dört İncil seçilerek kabul edilmiştir. Bunlardan biri değildir:",
+      "options": {
+        "A": "Matta",
+        "B": "Yuhanna",
+        "C": "Luka",
+        "D": "Barnaba"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 61,
+      "question": "Peygamberlere iman ne anlama gelir?",
+      "options": {
+        "A": "Sadece Kur'an'da adı geçen peygamberlere inanmak",
+        "B": "Allah'ın gönderdiği tüm peygamberlere inanmak",
+        "C": "Sadece Hz. Muhammed'e inanmak",
+        "D": "Peygamberlerin mucizelerine inanmak ama getirdikleri dine inanmamak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 62,
+      "question": "Allah tarafından kitap verilen peygamberlere ne denir?",
+      "options": {
+        "A": "Nebi",
+        "B": "Resul",
+        "C": "Evliya",
+        "D": "Şeyh"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 63,
+      "question": "Peygamberlerin görevlerinden biri değildir:",
+      "options": {
+        "A": "İnsanlara Allah'ı tanıtmak",
+        "B": "İnsanlara ibadet şekillerini öğretmek",
+        "C": "İnsanları kendi yanlarına çağırmak",
+        "D": "Güzel ahlakı anlatmak ve örnek olmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 64,
+      "question": "Peygamberlerin Allah'ın izniyle gösterdiği olağanüstü olaylara ne ad verilir?",
+      "options": {
+        "A": "Keramet",
+        "B": "Mucize",
+        "C": "İllüzyon",
+        "D": "Kehanet"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 65,
+      "question": "Peygamberlerin en önemli sıfatlarından biri olan \"İsmet\" ne anlama gelir?",
+      "options": {
+        "A": "Peygamberlerin çok ibadet etmeleri",
+        "B": "Peygamberlerin günahsız olmaları",
+        "C": "Peygamberlerin çok zeki olmaları",
+        "D": "Peygamberlerin insanların hatalarını affetmeleri"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 66,
+      "question": "Peygamberlerin asla yalan söylememesi hangi sıfatlarıyla ilgilidir?",
+      "options": {
+        "A": "İsmet",
+        "B": "Sıdk",
+        "C": "Emanet",
+        "D": "Fetânet"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 67,
+      "question": "Peygamberlerin güvenilir olması hangi sıfatlarıyla ilgilidir?",
+      "options": {
+        "A": "Emanet",
+        "B": "İsmet",
+        "C": "Sıdk",
+        "D": "Tebliğ"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 68,
+      "question": "Peygamberlerin akıllı ve zeki olması hangi sıfatlarıyla ilgilidir?",
+      "options": {
+        "A": "Sıdk",
+        "B": "Emanet",
+        "C": "Fetânet",
+        "D": "İsmet"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 69,
+      "question": "Peygamberlerin Allah'tan aldıkları emirleri eksiksiz olarak iletmesi hangi sıfatlarıyla ilgilidir?",
+      "options": {
+        "A": "Tebliğ",
+        "B": "İsmet",
+        "C": "Fetânet",
+        "D": "Sıdk"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 70,
+      "question": "Kur'an-ı Kerîm'de adı geçen peygamberlerden biri değildir:",
+      "options": {
+        "A": "Hz. Yûsuf",
+        "B": "Hz. Zülkarneyn",
+        "C": "Hz. Şuayb",
+        "D": "Hz. Yahyâ"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 71,
+      "question": "Kur'an-ı Kerîm'de peygamber olup olmadığı tartışmalı olan isimlerden biri değildir:",
+      "options": {
+        "A": "Lokmân",
+        "B": "Zülkarneyn",
+        "C": "Üzeyir",
+        "D": "Hz. Mûsâ"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 72,
+      "question": "Peygamberlerin tebliğ ettiği dinlerin ortak esaslarından biri değildir:",
+      "options": {
+        "A": "İman esasları",
+        "B": "İbadetler",
+        "C": "Ekonomi kuralları",
+        "D": "Ahlak kuralları"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 73,
+      "question": "Aşağıdakilerden hangisi mucize değildir?",
+      "options": {
+        "A": "Hz. Mûsâ'nın asasıyla denizi ikiye ayırması",
+        "B": "Hz. Süleyman'ın hayvanlarla konuşması",
+        "C": "Peygamberimiz'in parmaklarından su akıtması",
+        "D": "Evliyaullahın su üzerinde yürümesi"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 74,
+      "question": "Hz. İbrâhim'in mucizesi aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Ateşe atıldığında yanmaması",
+        "B": "Asasıyla su çıkarması",
+        "C": "Ölüleri diriltmesi",
+        "D": "Dağları hareket ettirmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 75,
+      "question": "Hz. Süleyman'ın mucizesi nedir?",
+      "options": {
+        "A": "Hayvanlarla ve cinlerle konuşması",
+        "B": "Su üzerinde yürümesi",
+        "C": "İnsanları iyileştirmesi",
+        "D": "Ayı ikiye ayırması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 76,
+      "question": "Peygamberimiz'in en büyük mucizesi nedir?",
+      "options": {
+        "A": "Miraç olayı",
+        "B": "Ayı ikiye ayırması",
+        "C": "Kur'ân-ı Kerîm",
+        "D": "Parmaklarından su akıtması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 77,
+      "question": "Peygamberimiz'in son peygamber olduğunu belirten ayet hangi surededir?",
+      "options": {
+        "A": "Enbiyâ Suresi",
+        "B": "Ahzâb Suresi",
+        "C": "Nisâ Suresi",
+        "D": "Yûnus Suresi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 78,
+      "question": "Peygamber Efendimiz'in özelliklerinden biri değildir:",
+      "options": {
+        "A": "Yaratılmışların en üstünü olması",
+        "B": "Son peygamber olması",
+        "C": "Sadece Araplara peygamber olarak gönderilmesi",
+        "D": "Tüm insanlığa ve cinlere gönderilmesi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 79,
+      "question": "Kur'an'da peygamberlerin özellikleriyle ilgili aşağıdakilerden hangisi doğrudur?",
+      "options": {
+        "A": "Peygamberler Allah'ın birer ortağıdır",
+        "B": "Peygamberler insanüstü varlıklardır",
+        "C": "Peygamberler vahiy alır ama insan olarak yaşarlar",
+        "D": "Peygamberler günah işleyebilirler"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 80,
+      "question": "Peygamberimizin sadece insanlara değil, cinlere de peygamber olduğunu belirten ayet hangi surededir?",
+      "options": {
+        "A": "Enbiyâ Suresi",
+        "B": "Sebe' Suresi",
+        "C": "Ahzâb Suresi",
+        "D": "Nisâ Suresi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 81,
+      "question": "Ahiret inancı hangi olay ile başlar?",
+      "options": {
+        "A": "Hz. İsa'nın tekrar yeryüzüne inmesiyle",
+        "B": "İsrâfil (a.s.)'ın sûra üflemesiyle",
+        "C": "Kıyametin belirlenmiş bir zamanda kopmasıyla",
+        "D": "Kabir azabının sona ermesiyle"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 82,
+      "question": "Ahiret inancının insan üzerindeki etkilerinden biri değildir:",
+      "options": {
+        "A": "İnsanları sorumluluk sahibi yapması",
+        "B": "İnsanların hayatlarına çeki düzen vermesi",
+        "C": "İnsanların dünya nimetlerinden tamamen uzaklaşmasını sağlaması",
+        "D": "İnsanların adalet ve doğruluk içinde yaşamalarına katkı sağlaması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 83,
+      "question": "Kabir hayatı hangi iki hayat arasında bir geçiş sürecidir?",
+      "options": {
+        "A": "Dünya ve Cennet",
+        "B": "Dünya ve Ahiret",
+        "C": "Mahşer ve Cennet",
+        "D": "Sırat ve Cennet"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 84,
+      "question": "Mizan ne anlama gelir?",
+      "options": {
+        "A": "Ahirette insanların amellerinin tartıldığı ilahi adalet terazisi",
+        "B": "Cehennemde günahkârların azap çektiği yer",
+        "C": "Mahşerde insanlar için hazırlanan cennet bahçesi",
+        "D": "Peygamberlerin şefaat edebileceği özel bir mekân"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 85,
+      "question": "Sırat Köprüsü ile ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Müminler buradan geçerken amellerine göre farklı hızlarda ilerleyeceklerdir",
+        "B": "Kâfirler ve günahkârlar buradan geçemeyip cehenneme düşeceklerdir",
+        "C": "Sırat köprüsünden ilk geçen kişi Hz. Muhammed (s.a.v.) olacaktır",
+        "D": "Cennetlik olan herkes buradan hiç geçmeden direkt cennete gider"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 86,
+      "question": "Şefaat kavramı ne anlama gelir?",
+      "options": {
+        "A": "Peygamberler ve salih kişilerin Allah'ın izniyle günahkâr müminlerin bağışlanmasını istemesi",
+        "B": "Günahkâr müminlerin cennete doğrudan kabul edilmesi",
+        "C": "Peygamberlerin kâfirleri affetmesi",
+        "D": "İnsanların amellerine göre cennet ve cehenneme dağıtılması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 87,
+      "question": "A'râf'ta bekletilecek kişiler kimlerdir?",
+      "options": {
+        "A": "Küçük yaşta ölen müşrik çocukları",
+        "B": "Mizan'da sevap ve günahları eşit çıkanlar",
+        "C": "Peygamberlerin ümmetlerinden olan seçkin kişiler",
+        "D": "Cennete ilk girecek olan müminler"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 88,
+      "question": "Cennet ile ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Cennette farklı dereceler vardır",
+        "B": "Cennette sadece peygamberler kalacaktır",
+        "C": "Cennette gözlerin görmediği, kulakların işitmediği nimetler vardır",
+        "D": "Cennet sonsuz bir nimet yurdudur"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 89,
+      "question": "Cehennem ile ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Cehennemin yedi tabakası olduğu söylenmiştir",
+        "B": "Kâfirler cehennemde ebedî olarak kalacaktır",
+        "C": "Günahkâr müminler, cehennemde ebedî kalacaktır",
+        "D": "Cehennem azabı hem ruhen hem bedenen hissedilecektir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 90,
+      "question": "Kader ne anlama gelir?",
+      "options": {
+        "A": "İnsanların iradeleri dışında gerçekleşen olaylar",
+        "B": "Allah'ın olmuş ve olacak her şeyi bilip takdir etmesi",
+        "C": "İnsanların önceden belirlenen bir plana göre hareket etmesi",
+        "D": "Kişinin yapacağı her şeyin değiştirilemez bir şekilde belirlenmesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 91,
+      "question": "Kaza ne anlama gelir?",
+      "options": {
+        "A": "Allah'ın takdir ettiği şeylerin zamanı geldiğinde gerçekleşmesi",
+        "B": "İnsanların başlarına gelen felaketler",
+        "C": "Sadece kötü olayların gerçekleşmesi",
+        "D": "Kıyamet anında yaşanacak büyük olaylar"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 92,
+      "question": "Kader ve kazaya iman etmek ne anlama gelir?",
+      "options": {
+        "A": "İnsanların başlarına gelen her şeyin kendi seçimleriyle olduğunu düşünmek",
+        "B": "Her şeyin Allah'ın ilmi, iradesi ve kudretiyle olduğunu kabul etmek",
+        "C": "İnsanların kaderini tamamen kendi çabalarıyla değiştirebileceğine inanmak",
+        "D": "İnsanın hiçbir sorumluluğu olmadığını düşünmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 93,
+      "question": "İslam'a göre kader inancı aşağıdakilerden hangisini gerektirir?",
+      "options": {
+        "A": "Çalışmayı bırakıp her şeyi Allah'a bırakmak",
+        "B": "Sebeplere sarılıp, sonucunu Allah'a bırakmak",
+        "C": "İnsanların kendi başlarına her şeyi yapabileceğine inanmak",
+        "D": "Kötü şeylerin yalnızca insanın hatalarından kaynaklandığını düşünmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 94,
+      "question": "Tevekkül ne anlama gelir?",
+      "options": {
+        "A": "Hiçbir şey yapmadan Allah'tan yardım beklemek",
+        "B": "Elinden geleni yapıp sonucu Allah'a bırakmak",
+        "C": "Tembellik edip hiçbir çaba göstermemek",
+        "D": "İnsanların her şeyi kendisinin kontrol edebileceğine inanması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 95,
+      "question": "Hayır ve şer konusunda İslam inancı neyi öğretir?",
+      "options": {
+        "A": "İnsanlar tamamen özgürdür, Allah'ın bir müdahalesi yoktur",
+        "B": "İnsanlar hiçbir seçim hakkına sahip değildir",
+        "C": "Hayrı da şerri de insanın kendi iradesiyle seçtiği ve kazandığı",
+        "D": "Şer, tamamen kaderle belirlenmiş olup insanlar sorumlu değildir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 96,
+      "question": "Aşağıdakilerden hangisi hayır kapsamına girmez?",
+      "options": {
+        "A": "İnsanlara iyilik yapmak",
+        "B": "Allah'ın emirlerine uymak",
+        "C": "Adaletli davranmak",
+        "D": "Birine haksızlık etmek"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 97,
+      "question": "Şer kavramı neyi ifade eder?",
+      "options": {
+        "A": "İnsanların kötü davranışları ve günahları",
+        "B": "İnsanların sadece yaptıkları ibadetleri",
+        "C": "Peygamberlerin sünneti",
+        "D": "Allah'ın hoşnut olduğu işler"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 98,
+      "question": "Kader inancına sahip bir kişi nasıl davranmalıdır?",
+      "options": {
+        "A": "Çalışmadan başarı beklemelidir",
+        "B": "Başına gelen olumsuzlukları Allah'a isyan ederek karşılamalıdır",
+        "C": "Her şeyi Allah'ın bilgisi dahilinde bilip çaba göstermelidir",
+        "D": "Şerri de hayır gibi kabul edip ona yönelmelidir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 99,
+      "question": "İnsanların hesap gününde sorgulanacağı konulardan biri değildir:",
+      "options": {
+        "A": "Ömrünü nerede harcadığı",
+        "B": "Hangi ırktan olduğu",
+        "C": "Malını nasıl kazandığı",
+        "D": "Gençliğini nasıl geçirdiği"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 100,
+      "question": "Kur'an-ı Kerîm'de cennet ile ilgili kullanılan isimlerden biri değildir:",
+      "options": {
+        "A": "Cennetü'l-Me'va",
+        "B": "Cennetü'n-Naîm",
+        "C": "Dâru's-Selâm",
+        "D": "Hutame"
+      },
+      "correct_answer": "D"
+    }
+  ]
+}

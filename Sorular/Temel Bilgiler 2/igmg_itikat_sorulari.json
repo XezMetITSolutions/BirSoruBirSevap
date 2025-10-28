@@ -1,0 +1,1327 @@
+{
+  "category": "İTİKAT",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 120,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Hak dinler ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "İnsanlar tarafından oluşturulmuştur.",
+        "B": "Aslı bozulmuş dinler arasındadır.",
+        "C": "Allah tarafından gönderilmiş ve değişmemiş olan tek dindir.",
+        "D": "Zamanla yok olmuş dinleri kapsar."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 2,
+      "question": "Hak dinler ne ile adlandırılır?",
+      "options": {
+        "A": "Mitolojik dinler",
+        "B": "İlahi veya Semavi dinler",
+        "C": "Sonradan oluşturulmuş öğretiler",
+        "D": "Mezhepler"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "question": "İslam'ın temel amacı nedir?",
+      "options": {
+        "A": "Sadece belirli bir bölgeye hitap etmek",
+        "B": "Sadece geçmiş milletler için geçerli olmak",
+        "C": "Tüm insanlığa hitap eden son ilahi din olmak",
+        "D": "Belirli dönemlerde geçerliliğini yitirmek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "question": "Bâtıl dinler hangi özelliklere sahiptir?",
+      "options": {
+        "A": "Tek Allah inancına dayanır.",
+        "B": "Peygamberler tarafından öğretilmiştir.",
+        "C": "İnsanlar tarafından uydurulmuş inanç sistemleridir.",
+        "D": "İlahi kitaplarla değiştirilmiştir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "question": "Aslı bozulmuş dinlere örnek olarak hangileri gösterilebilir?",
+      "options": {
+        "A": "Yahudilik ve Hristiyanlık",
+        "B": "Budizm ve Hinduizm",
+        "C": "İslam ve Yahudilik",
+        "D": "Hristiyanlık ve İslam"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 6,
+      "question": "İslam dininin en belirgin özelliği nedir?",
+      "options": {
+        "A": "Sadece Araplara hitap etmesi",
+        "B": "Kendi kendine yok olması",
+        "C": "Tüm insanlığa hitap etmesi ve bozulmadan korunması",
+        "D": "Sadece belirli zamanlarda geçerli olması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "question": "İslam'a göre üstünlük hangi kritere bağlıdır?",
+      "options": {
+        "A": "Irk ve soy bağına",
+        "B": "Kişinin maddi durumuna",
+        "C": "Takvaya yani Allah'a yakınlığa",
+        "D": "Toplum içindeki statüsüne"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "question": "İslam'da kimse Müslüman olmaya zorlanamaz. Bunun sebebi nedir?",
+      "options": {
+        "A": "İnsanların özgür iradeye sahip olması",
+        "B": "Zorla inanmanın geçersiz olması",
+        "C": "İslam'ın barış dini olması",
+        "D": "Hepsi"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 9,
+      "question": "İman kelimesi ne anlama gelir?",
+      "options": {
+        "A": "Güven içinde olmak ve tasdik etmek",
+        "B": "Sadece Allah'a inanmak",
+        "C": "Sadece peygamberlere inanmak",
+        "D": "Şüpheyle yaklaşmak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "question": "Allah'ın zâtî sıfatları aşağıdakilerden hangisini içermez?",
+      "options": {
+        "A": "Vahdaniyet",
+        "B": "Beka",
+        "C": "Muhalefetün li'l-havadis",
+        "D": "Kudret"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 11,
+      "question": "Allah'ın subûtî sıfatlarından \"İlim\" ne anlama gelir?",
+      "options": {
+        "A": "Allah'ın her şeyi bilmesi",
+        "B": "Allah'ın dilediğini yaratması",
+        "C": "Allah'ın sonsuz olması",
+        "D": "Allah'ın kimseye muhtaç olmaması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 12,
+      "question": "Allah'ın vahdaniyet sıfatı neyi ifade eder?",
+      "options": {
+        "A": "Allah'ın tek ve eşsiz olduğunu",
+        "B": "Allah'ın sonsuz olduğunu",
+        "C": "Allah'ın ezeli ve ebedi olduğunu",
+        "D": "Allah'ın her şeyi yaratabileceğini"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "question": "Allah'ın kudret sıfatı neyi ifade eder?",
+      "options": {
+        "A": "Allah'ın her şeyi işitmesini",
+        "B": "Allah'ın her şeyi görebilmesini",
+        "C": "Allah'ın her şeye gücünün yetmesini",
+        "D": "Allah'ın konuşmasını"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "question": "Allah'ın \"Tekvin\" sıfatı ne anlama gelir?",
+      "options": {
+        "A": "Allah'ın varlıkları yaratması",
+        "B": "Allah'ın ölümsüz olması",
+        "C": "Allah'ın her şeyi bilmesi",
+        "D": "Allah'ın eşi ve benzeri olmaması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "question": "İslam'da akıl ve ilmin önemi nedir?",
+      "options": {
+        "A": "Bilimle uğraşmak gereksizdir",
+        "B": "İnsanların akıllarını kullanarak İslam'ı seçmeleri beklenir",
+        "C": "İslam körü körüne inanmayı gerektirir",
+        "D": "İslam'ın bilimle ilgisi yoktur"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "question": "Allah'ın kelâm sıfatı neyi ifade eder?",
+      "options": {
+        "A": "Allah'ın her şeyi yaratması",
+        "B": "Allah'ın insanlarla konuşması",
+        "C": "Allah'ın tüm duaları işitmesi",
+        "D": "Allah'ın her şeyi görebilmesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "question": "Allah'ın beka sıfatı neyi ifade eder?",
+      "options": {
+        "A": "Allah'ın ölümsüz olması",
+        "B": "Allah'ın her şeyi yaratması",
+        "C": "Allah'ın her şeyi bilmesi",
+        "D": "Allah'ın her şeyi işitmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "question": "İslam'ın en büyük özelliği nedir?",
+      "options": {
+        "A": "İnsanlara özgürlük tanıması",
+        "B": "İnsanları zorla Müslüman yapması",
+        "C": "Sadece belirli bir millet için olması",
+        "D": "Diğer dinlerden üstün olması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "question": "Subûtî sıfatlardan \"İrade\" ne anlama gelir?",
+      "options": {
+        "A": "Allah'ın her şeyi kendi isteğine göre belirlemesi",
+        "B": "Allah'ın işitmesi",
+        "C": "Allah'ın yaratıcı olması",
+        "D": "Allah'ın adaletli olması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "question": "Allah'ın semi' sıfatı neyi ifade eder?",
+      "options": {
+        "A": "Allah'ın her şeyi işitmesini",
+        "B": "Allah'ın her şeyi bilmesini",
+        "C": "Allah'ın her şeyi görmesini",
+        "D": "Allah'ın yaratmasını"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "question": "Allah'ın \"Basar\" sıfatı neyi ifade eder?",
+      "options": {
+        "A": "Allah'ın her şeyi bilmesi",
+        "B": "Allah'ın her şeyi işitmesi",
+        "C": "Allah'ın her şeyi görmesi",
+        "D": "Allah'ın insanlarla konuşması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "question": "İslam'ın üstünlüğü hangi faktöre dayanır?",
+      "options": {
+        "A": "Tüm insanlığa hitap etmesine ve son hak din olmasına",
+        "B": "Sadece Araplara hitap etmesine",
+        "C": "Diğer dinlerden daha eski olmasına",
+        "D": "Birçok mezhebe sahip olmasına"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "question": "Allah'ın kıyam binefsihi sıfatı neyi ifade eder?",
+      "options": {
+        "A": "Allah'ın kimseye muhtaç olmadan var olması",
+        "B": "Allah'ın insanları yaratması",
+        "C": "Allah'ın sonsuz güç sahibi olması",
+        "D": "Allah'ın her şeyi bilmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "question": "İslam'a göre üstünlük hangi ölçüyle belirlenir?",
+      "options": {
+        "A": "İnsanların servetiyle",
+        "B": "Irk ve soyuyla",
+        "C": "Takva ile",
+        "D": "Zeka seviyesiyle"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "question": "Allah'ın muhâlefetün li'l-havadis sıfatı ne anlama gelir?",
+      "options": {
+        "A": "Allah'ın yarattıklarına benzememesi",
+        "B": "Allah'ın her şeyi yaratması",
+        "C": "Allah'ın sonsuz güç sahibi olması",
+        "D": "Allah'ın tek olması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "question": "Allah'ın \"Hayat\" sıfatı neyi ifade eder?",
+      "options": {
+        "A": "Allah'ın sonsuz ve ölümsüz olması",
+        "B": "Allah'ın yaratıcı olması",
+        "C": "Allah'ın her şeyi işitmesi",
+        "D": "Allah'ın her şeyi görmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "question": "Subûtî sıfatlar ile ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Allah'ın ilim sıfatı her şeyi bilmesi anlamına gelir.",
+        "B": "Allah'ın kudret sıfatı, her şeye gücünün yetmesi anlamına gelir.",
+        "C": "Allah'ın beka sıfatı, Allah'ın ölümsüz olması anlamına gelir.",
+        "D": "Allah'ın vahdaniyet sıfatı, Allah'ın dilediğini yaratması anlamına gelir."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 28,
+      "question": "Hak dinlerin en büyük özelliği nedir?",
+      "options": {
+        "A": "İnsanlar tarafından oluşturulmaları",
+        "B": "Peygamberler aracılığıyla gelmeleri ve değişmeden korunmaları",
+        "C": "Sadece belli bir kavme hitap etmeleri",
+        "D": "Zamanla değiştirilmeleri"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "question": "Allah'ın irade sıfatı neyi ifade eder?",
+      "options": {
+        "A": "Allah'ın her şeyi dilediği gibi belirlemesi",
+        "B": "Allah'ın işitmesi",
+        "C": "Allah'ın yaratıcı olması",
+        "D": "Allah'ın insanlarla konuşması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "question": "Allah'ın tekvin sıfatı hangi anlama gelir?",
+      "options": {
+        "A": "Allah'ın yaratma gücüne sahip olması",
+        "B": "Allah'ın insanları yönetmesi",
+        "C": "Allah'ın bilginin kaynağı olması",
+        "D": "Allah'ın duaları kabul etmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "question": "Melekler, Allah'ın emirlerini yerine getiren varlıklardır. Onlar yemez, içmez, evlenmez ve çoğalmazlar. Allah'a kesinlikle isyan etmezler. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Melekler Allah'a itaat eden varlıklardır.",
+        "B": "Melekler çoğalabilir ve evlenebilir.",
+        "C": "Melekler yemez ve içmezler.",
+        "D": "Melekler Allah'ın emirlerini eksiksiz yerine getirirler."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "question": "Meleklerin farklı görevleri vardır. Kirâmen Kâtibîn melekleri, insanların sevap ve günahlarını kaydederken, Münker ve Nekir melekleri kabirde sorgu yapmakla görevlidir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kirâmen Kâtibîn melekleri, insanların yaptıklarını yazar.",
+        "B": "Münker ve Nekir melekleri, kabirde sorgu yapar.",
+        "C": "Mikâil (a.s.), insanları korumakla görevlidir.",
+        "D": "Hafaza melekleri, insanları korur."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 33,
+      "question": "Melekler tamamen Allah'a ibadet eden varlıklardır. Onlar iyiliğe yönlendirirken, şeytan insanları kötülüğe çağırır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Melekler, insanları iyiliğe teşvik eder.",
+        "B": "Şeytan, insanları kötülüğe yönlendirir.",
+        "C": "Melekler, insanların özgür iradesini yok eder.",
+        "D": "Melekler, Allah'ın emirlerini yerine getirir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "question": "İlahi Kitaplara „Semavî Kitaplar\" veya „Kutsal Kitaplar\" da denir. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?", 
+      "options": {
+        "A": "İlahi Kitaplara sadece Semavî Kitaplar denir.",
+        "B": "Kutsal Kitaplar sadece İslam'a aittir.",
+        "C": "İlahi Kitaplara Semavî veya Kutsal Kitaplar denir.",
+        "D": "Kur'an dışındaki tüm kitaplar ilahi özelliğini korumaktadır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "question": "İlahi kitaplar üç kısma ayrılır: Aslı tamamen kaybolmuş kitaplar, aslı bozulmuş kitaplar ve aslını korumuş kitap. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Sahifeler, tamamen kaybolmuştur.",
+        "B": "Tevrat, Zebûr ve İncil bozulmuştur.",
+        "C": "Kur'ân-ı Kerîm değişime uğramıştır.",
+        "D": "İlahi kitaplar insanlara yol göstermek için gönderilmiştir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "question": "İslam'a göre, Tevrat, Zebûr ve İncil'in indirildikleri şekline inanılır, ancak bugün mevcut olan halleri değişmiştir. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Müslümanlar, Tevrat ve İncil'in şu anki hallerine inanır.",
+        "B": "Kur'an dışındaki tüm kitaplar korunmuştur.",
+        "C": "Tevrat ve İncil'in orijinal hali değişmiştir.",
+        "D": "İlahi kitaplar sadece Yahudilere indirilmiştir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "question": "Kur'ân-ı Kerîm, vahyedildiği şekliyle korunmuş ve kıyamete kadar da korunacaktır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kur'ân-ı Kerîm, hiçbir değişikliğe uğramamıştır.",
+        "B": "Kur'ân-ı Kerîm, kıyamete kadar korunacaktır.",
+        "C": "Kur'ân-ı Kerîm, zamanla değiştirilecektir.",
+        "D": "Kur'an, insanlara doğru yolu göstermek için indirilmiştir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "question": "Peygamberimiz (s.a.v.), „Sizin en hayırlınız, Kur'an'ı öğrenen ve öğreteninizdir.\" buyurmuştur. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kur'an'ı öğrenmek ve öğretmek büyük bir fazilettir.",
+        "B": "Kur'an'ı öğrenenler en hayırlı kişilerdir.",
+        "C": "Kur'an öğrenmek sadece alimlere farzdır.",
+        "D": "Peygamberimiz, Kur'an'ı öğrenmeyi teşvik etmiştir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "question": "Mikâil (a.s.), doğa olaylarını yönetmekle görevli bir melektir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Mikâil (a.s.), yağmur ve rüzgar gibi olayları düzenler.",
+        "B": "Mikâil (a.s.), ruhları almakla görevlidir.",
+        "C": "Mikâil (a.s.), dört büyük melekten biridir.",
+        "D": "Mikâil (a.s.), tabiat olaylarını idare eder."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "question": "İsrafil (a.s.), kıyamet günü Sur'a üflemekle görevlidir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "İsrafil (a.s.), kıyametin başlamasına sebep olacaktır.",
+        "B": "İsrafil (a.s.), insanları korumakla görevlidir.",
+        "C": "İsrafil (a.s.), Sur'a üflemekle görevlidir.",
+        "D": "İsrafil (a.s.), dört büyük melekten biridir."
+      },
+      "correct_answer": "B"
+    },
+      {
+      "id": 41,
+      "question": "Azrâil (a.s.), canlıların ruhlarını almakla görevli olan melektir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Azrâil (a.s.), ölüm meleğidir.",
+        "B": "Azrâil (a.s.), ruhları almakla görevlidir.",
+        "C": "Azrâil (a.s.), insanları koruyan bir melektir.",
+        "D": "Azrâil (a.s.), dört büyük melekten biridir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "question": "Hafaza melekleri, insanları korumakla görevlidir. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Hafaza melekleri, insanların sevaplarını yazar.",
+        "B": "Hafaza melekleri, insanları korur.",
+        "C": "Hafaza melekleri, kıyameti başlatmakla görevlidir.",
+        "D": "Hafaza melekleri, kabirde sorgu yapar."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "question": "Kur'an-ı Kerîm, Allah tarafından korunmuş tek ilahi kitaptır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kur'an-ı Kerîm, bozulmamış tek ilahi kitaptır.",
+        "B": "Kur'an-ı Kerîm, kıyamete kadar korunacaktır.",
+        "C": "Kur'an-ı Kerîm, insanların yazdığı bir kitaptır.",
+        "D": "Kur'an-ı Kerîm, tüm insanlığa gönderilmiştir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "question": "Münker ve Nekir melekleri, kabirde insanlara sorgu yapan meleklerdir. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Münker ve Nekir, insanları cennete götürür.",
+        "B": "Münker ve Nekir, kıyameti başlatmakla görevlidir.",
+        "C": "Münker ve Nekir, kabirde sorgu yapar.",
+        "D": "Münker ve Nekir, insanları koruyan meleklerdir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 45,
+      "question": "İslam'a göre, Kur'an dışında kalan ilahi kitapların asılları zamanla bozulmuştur. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Tevrat, zaman içinde değiştirilmiştir.",
+        "B": "Zebûr, aslı değişmiş bir kitaptır.",
+        "C": "İncil, günümüzde orijinal haliyle mevcuttur.",
+        "D": "Kur'an-ı Kerîm, asla değişmemiştir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 46,
+      "question": "Allah'ın emirlerini insanlara ulaştıran vahiy meleği kimdir?",
+      "options": {
+        "A": "Mikâil (a.s.)",
+        "B": "Cebrâil (a.s.)",
+        "C": "İsrafil (a.s.)",
+        "D": "Azrâil (a.s.)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "question": "Peygamber Efendimiz (s.a.v.), „Sizin en hayırlınız Kur'an'ı öğrenen ve öğreteninizdir.\" buyurmuştur. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kur'an öğrenmek faziletli bir iştir.",
+        "B": "Kur'an okumak Müslümanlar için önemlidir.",
+        "C": "Kur'an öğretmek Peygamberimizin tavsiyesidir.",
+        "D": "Kur'an öğrenmek sadece alimlere mahsustur."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 48,
+      "question": "Kur'an, en son ilahi kitap olup, kıyamete kadar geçerli olacaktır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kur'an, en son ilahi kitaptır.",
+        "B": "Kur'an sadece Araplara gönderilmiştir.",
+        "C": "Kur'an kıyamete kadar korunacaktır.",
+        "D": "Kur'an tüm insanlara hitap eder."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 49,
+      "question": "İslam'a göre, Tevrat, Zebûr ve İncil orijinal hallerinde değillerdir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Tevrat ve İncil zamanla değiştirilmiştir.",
+        "B": "Zebûr, Hz. Dâvûd'a indirilmiştir.",
+        "C": "Kur'an dışındaki kitaplar değişikliğe uğramamıştır.",
+        "D": "Kur'an, tüm insanlığa gönderilmiştir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 50,
+      "question": "İslam'a göre, Allah'ın gönderdiği bütün peygamberlere inanmak iman esaslarındandır. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Müslümanlar sadece Hz. Muhammed'e inanır.",
+        "B": "İslam, tüm peygamberlere inanmayı emreder.",
+        "C": "Hz. Musa ve Hz. İsa peygamber değildir.",
+        "D": "İslam sadece Kur'an'a inanmaya zorlar."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 51,
+      "question": "Melekler, Allah'ın emirlerine kesinlikle itaat ederler ve asla günah işlemezler. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Melekler Allah'a itaat ederler.",
+        "B": "Melekler günah işleyebilirler ama tövbe edebilirler.",
+        "C": "Melekler Allah'ın emirlerini yerine getirirler.",
+        "D": "Melekler iradeleri dışında hareket edemezler."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 52,
+      "question": "Kur'an'a göre melekler nurdan yaratılmış varlıklardır. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Melekler insanlara benzer bir bedene sahiptir.",
+        "B": "Melekler nurdan yaratılmıştır.",
+        "C": "Melekler ölümsüz değildir.",
+        "D": "Melekler insanlar gibi evlenir ve çoğalırlar."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 53,
+      "question": "İslam'a göre her insana Kirâmen Kâtibîn melekleri eşlik eder ve kişinin sevaplarını ve günahlarını kaydeder. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kirâmen Kâtibîn melekleri insanın amellerini yazar.",
+        "B": "Kirâmen Kâtibîn melekleri sadece günahları yazar.",
+        "C": "Kirâmen Kâtibîn melekleri gece gündüz insanla beraberdir.",
+        "D": "Kirâmen Kâtibîn melekleri kıyamet günü kayıtlarını ortaya çıkaracaktır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 54,
+      "question": "Allah'ın insanlara rehber olarak gönderdiği kitaplardan biri de Tevrat'tır ve bu kitap Hz. Musa'ya indirilmiştir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Tevrat, Hz. Musa'ya indirilmiştir.",
+        "B": "Tevrat, kıyamete kadar değişmeden kalacaktır.",
+        "C": "Tevrat, ilahi bir kitaptır.",
+        "D": "Tevrat, Yahudi toplumuna gönderilmiştir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 55,
+      "question": "Zebûr, Hz. Dâvûd'a indirilen bir kutsal kitaptır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Zebûr, Hz. Dâvûd'a indirilmiştir.",
+        "B": "Zebûr'un içeriği zamanla değiştirilmiştir.",
+        "C": "Zebûr, Müslümanların kutsal kitabıdır.",
+        "D": "Zebûr, Allah tarafından vahyedilmiş bir kitaptır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 56,
+      "question": "Kur'an-ı Kerîm, Hz. Muhammed'e vahyedilen son ilahi kitaptır. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Kur'an-ı Kerîm yalnızca Araplara hitap eder.",
+        "B": "Kur'an-ı Kerîm, kıyamete kadar geçerli olan son kitaptır.",
+        "C": "Kur'an-ı Kerîm, yalnızca belirli bir dönemde yaşayan insanlara gönderilmiştir.",
+        "D": "Kur'an-ı Kerîm, zamanla değiştirilecektir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 57,
+      "question": "Hz. İsa'ya indirilen kutsal kitap İncil'dir. Ancak zamanla insanlar tarafından değiştirilmiştir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "İncil, Hz. İsa'ya indirilmiştir.",
+        "B": "İncil günümüze kadar hiç değişmemiştir.",
+        "C": "İncil, ilahi bir kitaptır.",
+        "D": "İncil'in orijinal hali değişime uğramıştır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 58,
+      "question": "Kur'an, diğer kutsal kitaplardan farklı olarak Allah tarafından korunmuştur ve değişime uğramamıştır. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Kur'an, insanlar tarafından değiştirilmiştir.",
+        "B": "Kur'an, yalnızca belli bir topluma gönderilmiştir.",
+        "C": "Kur'an, kıyamete kadar değişmeden kalacaktır.",
+        "D": "Kur'an, sadece Arapça bilenlerin okuyabileceği bir kitaptır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 59,
+      "question": "Peygamberimiz (s.a.v.), Kur'an'ı öğrenmenin ve öğretmenin en hayırlı işler arasında olduğunu belirtmiştir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kur'an'ı öğrenmek, Müslümanlar için önemlidir.",
+        "B": "Kur'an öğretmek sevap kazandırır.",
+        "C": "Kur'an'ı öğrenmek ve öğretmek en hayırlı işlerdendir.",
+        "D": "Kur'an öğrenmek sadece din alimlerine özgüdür."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 60,
+      "question": "İslam'a göre, Allah'ın gönderdiği bütün peygamberlere ve kitaplara inanmak imanın şartlarındandır. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Müslümanlar sadece Kur'an'a inanır.",
+        "B": "Müslümanlar yalnızca Hz. Muhammed'e iman eder.",
+        "C": "Tüm peygamberlere inanmak iman esaslarındandır.",
+        "D": "Hz. İbrahim peygamber değildir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 61,
+      "question": "Peygamberler, Allah'ın emir ve yasaklarını insanlara bildirmekle görevlidirler. Onlar, Allah'ın vahyini insanlara ulaştırarak doğru yolu gösterirler. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Peygamberler, insanlara Allah'ın emirlerini bildirir.",
+        "B": "Peygamberler, insanlara yalnızca ibadetleri öğretmekle görevlidir.",
+        "C": "Peygamberler, Allah'ın elçileridir.",
+        "D": "Peygamberler, insanları ahlaki olarak eğitirler."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 62,
+      "question": "Kur'an'da adı geçen peygamber sayısı 25'tir. Ancak Üzeyir, Lokman ve Zülkarneyn'in peygamber olup olmadığı kesin değildir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kur'an'da 25 peygamberin adı geçmektedir.",
+        "B": "Zülkarneyn'in peygamber olup olmadığı bilinmemektedir.",
+        "C": "Peygamberlerin tamamının isimleri Kur'an'da yazmaktadır.",
+        "D": "Üzeyir'in peygamber olup olmadığı kesin değildir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 63,
+      "question": "Yeni bir şeriat ve kitap verilen peygamberlere „Resul\", önceki bir peygamberin şeriatıyla amel edenlere ise „Nebî\" denir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Her Resul aynı zamanda bir Nebî'dir.",
+        "B": "Nebî, yeni bir şeriat getiren peygamberdir.",
+        "C": "Resul, yeni bir kitap ile gönderilen peygamberdir.",
+        "D": "Nebî, önceki bir peygamberin şeriatı ile amel eden peygamberdir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 64,
+      "question": "Peygamberler, insanlara tebliğde bulunurken olağanüstü olaylar göstererek insanları ikna etmeye çalışmışlardır. Bu olaylara „mucize\" denir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Peygamberlerin mucizeleri Allah'ın izniyle gerçekleşir.",
+        "B": "Mucize, peygamberlerin kendi güçleriyle yaptıkları olaylardır.",
+        "C": "Mucizeler, peygamberlerin doğruluğunu ispat etmek için gösterilmiştir.",
+        "D": "Peygamberlerin mucizeleri, Allah'ın izniyle olur."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 65,
+      "question": "Peygamberlerin Sıdk (Doğruluk), İsmet (Günahsızlık), Emanet (Güvenilirlik), Fetânet (Üstün Zekâ) ve Tebliğ (Allah'ın mesajlarını bildirme) gibi sıfatları vardır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Peygamberler, emanete ihanet edebilir.",
+        "B": "Peygamberler, Allah'tan aldığı emirleri insanlara eksiksiz bildirir.",
+        "C": "Peygamberler, son derece akıllı ve zeki kişilerdir.",
+        "D": "Peygamberler, asla yalan söylemezler."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 66,
+      "question": "Peygamber Efendimiz'in (s.a.v.) en büyük mucizesi Kur'an-ı Kerîm'dir. Bunun dışında Mirac, Ayın ikiye ayrılması gibi mucizeleri de vardır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Peygamberimizin en büyük mucizesi Kur'an'dır.",
+        "B": "Peygamberimiz (s.a.v.), Mirac olayını yaşamıştır.",
+        "C": "Peygamberimizin mucizeleri yoktur.",
+        "D": "Ayın ikiye ayrılması Peygamberimizin mucizelerindendir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 67,
+      "question": "Dünyanın sona ermesiyle başlayan sonsuz hayata „Ahiret Hayatı\" denir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Ahiret hayatı, kıyametten sonra başlayacaktır.",
+        "B": "Ahiret hayatı sonsuzdur.",
+        "C": "Ahiret hayatı sadece bazı insanlar için geçerlidir.",
+        "D": "Ahiret hayatında cennet ve cehennem vardır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 68,
+      "question": "Bu dünya bir imtihan yeridir. Her insan, yaptıklarının hesabını ahirette verecektir. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "İnsanlar sadece dünyada yaptıklarının karşılığını alır.",
+        "B": "Ahiret hayatı, bu dünyada yapılanların karşılığının verildiği yerdir.",
+        "C": "Ahiret hayatı geçici bir süreçtir.",
+        "D": "Ahirette insanlar hiçbir şekilde hesaba çekilmez."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 69,
+      "question": "Ahirette insanların amel defterleri dağıtılacaktır. Sevapları ağır basanlar cennete, günahları ağır basanlar cehenneme gidecektir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Amel defterleri sağdan ve soldan verilecektir.",
+        "B": "Günahları ağır basanlar cehenneme gidecektir.",
+        "C": "İnsanlar ahirette hesaba çekilecektir.",
+        "D": "Amel defteri almak herkes için aynı sonucu doğuracaktır."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 70,
+      "question": "Ahiret hayatında insanların sevap ve günahları „Mizan\" adı verilen teraziyle tartılacaktır. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Mizan, insanların günahlarını artırmak için kullanılan bir sistemdir.",
+        "B": "Mizan, sevap ve günahların tartıldığı terazidir.",
+        "C": "Mizan, sadece peygamberler için vardır.",
+        "D": "Mizan, insanların kıyamet günü saklanacağı bir mekandır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 71,
+      "question": "İslam inancına göre kabir hayatı, ölümle başlayıp yeniden dirilmeye kadar devam eden bir süreçtir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kabir hayatı, ölümle başlar.",
+        "B": "Kabir hayatı, kıyamete kadar devam eder.",
+        "C": "Kabir hayatı, insanların hesaba çekildiği son aşamadır.",
+        "D": "Kabir hayatında Münker ve Nekir melekleri sorgu yapar."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 72,
+      "question": "Haşr-Mahşer, insanların yeniden diriltildikten sonra toplanacağı yerdir. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Haşr, insanların dünyaya tekrar gönderilmesidir.",
+        "B": "Mahşer, insanların hesaba çekileceği yerdir.",
+        "C": "Mahşer, yalnızca peygamberlerin toplanacağı yerdir.",
+        "D": "Haşr-Mahşer sadece günahkârlar için geçerlidir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 73,
+      "question": "Sırat Köprüsü, cehennemin üzerine kurulmuş olan ve herkesin üzerinden geçeceği bir köprüdür. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Sırat Köprüsü, cehennemin üzerinden geçmektedir.",
+        "B": "Sırat Köprüsü'nden herkes geçecektir.",
+        "C": "Günahkârlar Sırat Köprüsü'nden hızla geçer.",
+        "D": "Sırat Köprüsü, ahiret hayatındaki aşamalardan biridir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 74,
+      "question": "Şefaat, peygamberlerin günahkâr müminler için Allah'tan af dilemesidir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Şefaat, yalnızca peygamberlere aittir.",
+        "B": "Şefaat, Allah'ın izniyle gerçekleşir.",
+        "C": "Peygamberimiz (s.a.v.), ümmeti için şefaat edecektir.",
+        "D": "Şefaat, günahkâr müminler için bir rahmettir."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 75,
+      "question": "Cennet, ebedi mükâfat yeri; cehennem ise ebedi azap yeridir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Cennet, iman edenlerin gireceği mükâfat yeridir.",
+        "B": "Cehennem, inkârcılar için hazırlanmıştır.",
+        "C": "Cennet ve cehennem geçici mekânlardır.",
+        "D": "Cennet ve cehennem ahiret hayatının aşamalarıdır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 76,
+      "question": "Havz-ı Kevser, Peygamber Efendimiz'in (s.a.v.) ahiretteki havuzudur. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Havz-ı Kevser, ahirette peygamberimize ait bir havuzdur.",
+        "B": "Havz-ı Kevser'den sadece peygamberler içecektir.",
+        "C": "Müminler Havz-ı Kevser'den içecektir.",
+        "D": "Havz-ı Kevser, ahiret hayatının aşamalarından biridir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 77,
+      "question": "Müslümanlar, peygamberlerin mucizelerine inanırlar. Peygamberlerin mucizeleri, Allah'ın izniyle gerçekleşmiştir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Peygamberler, mucizeleri Allah'ın izniyle gösterir.",
+        "B": "Peygamberler kendi güçleriyle mucize yapar.",
+        "C": "Mucizeler, peygamberlerin doğruluğunu kanıtlamak için verilmiştir.",
+        "D": "Peygamberlerin mucizeleri gerçek olaylardır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 78,
+      "question": "İnsanların yaptıkları ameller, amel defterlerine kaydedilir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Amel defteri, insanın yaptığı tüm işleri içerir.",
+        "B": "Amel defterleri kıyamet günü dağıtılacaktır.",
+        "C": "Amel defterleri sadece kötü amelleri içerir.",
+        "D": "İnsanlar amel defterlerine göre hesaba çekilecektir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 79,
+      "question": "Ahiret hayatında sevap ve günahlar „Mizan\" adı verilen terazide tartılacaktır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Mizan, sevap ve günahları tartan bir sistemdir.",
+        "B": "Mizan, sadece bazı insanlar için geçerlidir.",
+        "C": "Mizan, ahiret hayatının aşamalarından biridir.",
+        "D": "Mizan, her insan için uygulanacaktır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 80,
+      "question": "Kur'an-ı Kerîm, ahiret hayatı hakkında pek çok bilgi vermektedir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kur'an, ahiret hayatından bahseder.",
+        "B": "Kur'an, kıyamet gününü anlatır.",
+        "C": "Kur'an, sadece dünya hayatı ile ilgilidir.",
+        "D": "Kur'an, cennet ve cehennem hakkında bilgi verir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 81,
+      "question": "Yeniden Dirilme, kıyametten sonra tüm insanların tekrar dirilmesidir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Yeniden dirilme kıyametten sonra olacaktır.",
+        "B": "Yeniden dirilen herkes amel defterine göre hesaba çekilecektir.",
+        "C": "Yeniden dirilme sadece Müslümanlar için geçerlidir.",
+        "D": "Ahiret hayatı, yeniden dirilmeyle başlar."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 82,
+      "question": "Mahşer meydanı, insanların hesaba çekileceği büyük toplanma yeridir. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Mahşer meydanı, sadece peygamberler için hazırlanmıştır.",
+        "B": "Mahşerde herkes amel defterine göre hesaba çekilecektir.",
+        "C": "Mahşer meydanında insanlar hiçbir hesaba çekilmeyeceklerdir.",
+        "D": "Mahşer meydanına sadece cennete girecek olanlar gidecektir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 83,
+      "question": "Amel defterleri, kıyamet günü insanlara dağıtılacaktır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Amel defterleri sağdan, soldan ve arkadan verilecektir.",
+        "B": "Amel defteri sağdan verilenler kurtuluşa erecektir.",
+        "C": "Amel defteri arkadan verilenler doğrudan cennete girecektir.",
+        "D": "Amel defteri soldan verilenler büyük azapla karşılaşacaktır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 84,
+      "question": "Sevapları ağır gelenler cennete, günahları ağır gelenler cehenneme gidecektir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Sevapları ağır basanlar cennete gidecektir.",
+        "B": "Günahları fazla olanlar cehenneme girecektir.",
+        "C": "Herkes cennete girecektir.",
+        "D": "Günahı az olup, Allah'ın affına uğrayanlar kurtulabilir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 85,
+      "question": "Sırat Köprüsü, cennete giden yolun bir aşamasıdır ve cehennemin üzerinden geçmektedir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Sırat Köprüsü, cehennemin üzerinden geçmektedir.",
+        "B": "Sırat Köprüsü'nden herkes geçecektir.",
+        "C": "Günahkârlar Sırat Köprüsü'nden geçemez.",
+        "D": "Sırat Köprüsü'nden geçiş, kişinin amellerine bağlıdır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 86,
+      "question": "Şefaat, peygamberlerin Allah'tan müminler için af dilemesidir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Peygamberler, günahkâr müminler için şefaat edebilir.",
+        "B": "Şefaat, Allah'ın izniyle gerçekleşir.",
+        "C": "Şefaat, yalnızca cennetlik olanlar içindir.",
+        "D": "Peygamber Efendimiz (s.a.v.), ümmeti için şefaat edecektir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 87,
+      "question": "Cennet ve cehennem, kıyametten sonra sonsuza kadar var olacak mekânlardır. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Cennet ve cehennem sadece belirli bir süre var olacaktır.",
+        "B": "Cennet, sadece peygamberler için ayrılmıştır.",
+        "C": "Cennet, müminler için bir mükâfat yeridir.",
+        "D": "Cehennem, sadece Müslümanlar için hazırlanmıştır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 88,
+      "question": "Cehennem, inkârcılar ve günahkârlar için hazırlanmış bir azap yeridir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Cehennem, inkârcılar için hazırlanmıştır.",
+        "B": "Cehennem, günahkâr müminler için de bir arınma yeridir.",
+        "C": "Cehennem, yalnızca kısa süreli bir azap yeridir.",
+        "D": "Cehenneme giren bazı müminler, şefaat ile kurtulabilir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 89,
+      "question": "Havz-ı Kevser, Peygamber Efendimiz'in (s.a.v.) kıyamet günü müminlere sunacağı sudur. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Havz-ı Kevser, dünyada bulunan bir sudur.",
+        "B": "Havz-ı Kevser'den sadece peygamberler içecektir.",
+        "C": "Havz-ı Kevser, kıyamet günü müminler için hazırlanmıştır.",
+        "D": "Havz-ı Kevser sadece günahkârların içeceği bir sudur."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 90,
+      "question": "Ahiret hayatı, Kur'an'da açıkça anlatılmıştır ve iman esaslarındandır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Ahiret hayatına inanmak imanın şartlarındandır.",
+        "B": "Kur'an'da ahiret hayatına dair pek çok bilgi vardır.",
+        "C": "Ahiret hayatı, sadece bazı insanlar için geçerlidir.",
+        "D": "Cennet ve cehennem ahiret hayatının bir parçasıdır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 91,
+      "question": "Kader ve kazaya iman, imanın esaslarından biridir. Allah, olmuş ve olacak her şeyi önceden bilmektedir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kader ve kazaya inanmak, imanın bir şartıdır.",
+        "B": "Allah, her şeyi önceden bilir ve takdir eder.",
+        "C": "İnsanlar, kaderlerini tamamen kendi çabalarıyla değiştirirler.",
+        "D": "Allah'ın takdir ettiği her şey mutlaka gerçekleşir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 92,
+      "question": "Allah'ın olmuş ve olacak şeylerin zamanını bilmesi ve takdir etmesine „Kader\" denir. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Kader, insanın kendi yaptığı planlara göre şekillenir.",
+        "B": "Kader, Allah'ın olmuş ve olacak her şeyi bilmesidir.",
+        "C": "Kader, sadece insanların tercihleriyle oluşan bir sistemdir.",
+        "D": "Kader, değiştirilebilir bir yazgıdır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 93,
+      "question": "Allah'ın takdir ettiği şeylerin meydana gelmesine „Kaza\" denir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kaza, kaderde belirlenen şeylerin gerçekleşmesidir.",
+        "B": "Kaza, insanın tamamen kendi iradesiyle belirlediği olaylardır.",
+        "C": "Kader, Allah'ın her şeyi önceden bilmesidir.",
+        "D": "Kaza, gerçekleşmiş olayları ifade eder."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 94,
+      "question": "Her şeyi takdir eden ve yaratan Allah'tır. O, hiçbir şeye muhtaç olmadan yaratır ve düzenler. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Allah, her şeyi takdir eden ve yaratandır.",
+        "B": "Allah, hiçbir şeye muhtaç değildir.",
+        "C": "İnsanlar da kendi kaderlerini yaratabilirler.",
+        "D": "Allah, olmuş ve olacak her şeyi bilendir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 95,
+      "question": "Kul, kendi irade ve isteğiyle iyi veya kötüyü seçer. Allah da onun seçimine uygun bir şekilde yaratır. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "İnsan, tamamen kaderine mahkûmdur ve seçim yapamaz.",
+        "B": "İnsan, kendi iradesiyle tercih yapar.",
+        "C": "Allah, insanın iradesine müdahale etmez.",
+        "D": "İyi ve kötüyü belirleyen yalnızca insandır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 96,
+      "question": "Günahı da sevabı da kazanan insandır. Allah, insana irade vermiş ve ona seçme hakkı tanımıştır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "İnsan, sevap kazanma veya günah işleme konusunda özgürdür.",
+        "B": "Allah, insanlara seçim yapma hakkı vermiştir.",
+        "C": "İnsan, hiçbir şekilde günah işleyemez.",
+        "D": "İnsan, yaptığı işlerden sorumludur."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 97,
+      "question": "„Ben ne yaparsam yapayım, kaderim değişmez.\" diyerek tembellik yapmak doğru değildir. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "İnsan, kaderine teslim olmalı ve hiçbir şey yapmamalıdır.",
+        "B": "Kader, insanın çabasını etkileyen bir faktördür.",
+        "C": "İnsan, ne yaparsa yapsın kaderi değişmez.",
+        "D": "Çalışmak veya tembellik yapmak kaderi değiştirmez."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 98,
+      "question": "İslam inancına göre, insanın sorumluluğu, kendi yaptığı seçimlere dayanmaktadır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "İnsan, yaptığı seçimlerden sorumludur.",
+        "B": "İnsan, hiçbir şekilde kendi eylemlerinden sorumlu değildir.",
+        "C": "İnsan, iyiliği de kötülüğü de kendi iradesiyle seçer.",
+        "D": "İyilik yapan ödüllendirilecek, kötülük yapan cezalandırılacaktır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 99,
+      "question": "Allah, insanlara özgür irade vermiştir ve insanın seçimine uygun bir şekilde yaratır. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "İnsan, yaptığı tüm seçimlerden sorumludur.",
+        "B": "İnsan, Allah'ın belirlediği her şeyi değiştirebilir.",
+        "C": "İnsan, hiçbir konuda özgür değildir.",
+        "D": "İrade, sadece peygamberlere verilmiştir."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 100,
+      "question": "Kader, Allah'ın sonsuz bilgisi ile olmuş ve olacak şeyleri bilmesidir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kader, Allah'ın bilgisindedir.",
+        "B": "Kader, insanın iradesiyle değiştirilebilir.",
+        "C": "Kader, her şeyi önceden bilmek demektir.",
+        "D": "Kader ve kaza, İslam inancının temel esaslarındandır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 101,
+      "question": "İslam inancına göre, insanın yaptığı her şey Allah'ın bilgisi dâhilindedir ve hiçbir şey O'ndan gizli kalmaz. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Allah, insanın tüm fiillerini bilir.",
+        "B": "İnsan, yaptığı her şeyden sorumludur.",
+        "C": "Allah, insanın yapacağı şeyleri bilmez.",
+        "D": "İnsan, kendi özgür iradesiyle seçim yapar."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 102,
+      "question": "Allah'ın insana verdiği irade sayesinde insan, kendi seçimlerini yapar ve bu seçimlerden sorumlu olur. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "İnsan, yaptığı seçimlerden sorumludur.",
+        "B": "İnsan, kendi kaderini belirleyemez.",
+        "C": "İnsan, yaptığı işlerden sorumlu değildir.",
+        "D": "İnsanın iradesi, tamamen Allah tarafından yönetilir."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 103,
+      "question": "Kader, Allah'ın ilmiyle her şeyi bilmesi; kaza ise Allah'ın takdir ettiği şeylerin gerçekleşmesidir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kader, Allah'ın bilgisindedir.",
+        "B": "Kaza, kaderde belirlenen olayların gerçekleşmesidir.",
+        "C": "İnsan, hiçbir şekilde kaderini etkileyemez.",
+        "D": "İnsan, yaptığı seçimlerden dolayı hesaba çekilir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 104,
+      "question": "Allah, her şeyi önceden bilir fakat insana irade vermiştir. Bu yüzden insan yaptığı seçimlerden dolayı hesaba çekilecektir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "İnsan yaptığı seçimlerden dolayı sorumludur.",
+        "B": "Allah'ın ilmi her şeyi kapsar.",
+        "C": "İnsan, Allah'ın iradesi olmadan hiçbir şey yapamaz.",
+        "D": "Allah, insanların ne yapacağını önceden bilir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 105,
+      "question": "İnsanın, «Benim kaderim değişmez» diyerek tembellik yapması doğru değildir. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Kader, insanın çalışmasını engellemez.",
+        "B": "İnsan hiçbir çaba göstermeden başarılı olabilir.",
+        "C": "Kader, insanın yaptığı tüm işleri belirler.",
+        "D": "İnsan, hiçbir çaba göstermeden yaşayabilir."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 106,
+      "question": "İnsan, yaptığı iyi ve kötü işlerden sorumludur. Günah işleyen bir kimse bunun sonucuna katlanacaktır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "İnsan yaptığı her işten sorumludur.",
+        "B": "Günah işleyen kimse bunun sonucuna katlanacaktır.",
+        "C": "İnsan yaptığı günahlardan sorumlu değildir.",
+        "D": "Sevap kazanan bir kişi, mükâfatını alacaktır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 107,
+      "question": "Allah'ın kaderi belirlemesi, insanın seçim yapmasına engel değildir. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "İnsan, kendi seçimlerini yapabilir.",
+        "B": "İnsan, kaderi nedeniyle özgür değildir.",
+        "C": "İnsan, yaptığı her şeyden sorumlu değildir.",
+        "D": "İnsan, sadece Allah'ın belirlediği şeyleri yapar."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 108,
+      "question": "İslam'a göre, insan kendi kaderini belirlemez fakat yaptığı seçimlerden sorumludur. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "İnsan, yaptığı seçimlerden sorumludur.",
+        "B": "İnsan, kaderini tamamen kendisi belirler.",
+        "C": "İnsan, yaptığı iyiliklerin mükâfatını alır.",
+        "D": "İnsan, yaptığı kötülüklerin cezasını çeker."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 109,
+      "question": "İnsan, özgür iradesiyle iyi ya da kötü işler yapar ve bunun sonucuna katlanır. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "İnsan, yaptığı her şeyden dolayı Allah'ı suçlamalıdır.",
+        "B": "İnsan, iyi ve kötü seçimler yapabilir.",
+        "C": "İnsan, kendi kaderini tamamen değiştirebilir.",
+        "D": "İnsan, yaptığı hiçbir şeyden sorumlu değildir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 110,
+      "question": "Kader, Allah'ın ilmiyle belirlenmiş bir sistemdir. Ancak insanın iradesi ve yaptığı seçimler, onun ahiretteki durumunu belirler. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Allah, her şeyi önceden bilir.",
+        "B": "İnsan, yaptığı seçimlerden sorumludur.",
+        "C": "Kader, insanın iradesini tamamen ortadan kaldırır.",
+        "D": "İnsan, iyi ya da kötü amellerinden dolayı hesaba çekilir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 111,
+      "question": "Allah, insanın özgür iradesiyle yapacağı şeyleri bilir fakat insanın iradesine müdahale etmez. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Allah, insanların yapacağı işleri önceden bilir.",
+        "B": "İnsan, özgür iradesiyle iyi veya kötü iş yapabilir.",
+        "C": "Allah, insanların iradesine doğrudan müdahale eder.",
+        "D": "İnsan yaptığı işlerden dolayı hesaba çekilecektir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 112,
+      "question": "Allah'ın ilmi her şeyi kapsar ve hiçbir şey O'ndan gizli değildir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Allah, olmuş ve olacak her şeyi bilir.",
+        "B": "Allah'ın bilgisi sınırlıdır.",
+        "C": "Allah'ın ilmi sonsuzdur.",
+        "D": "İnsanların fiilleri Allah'ın bilgisi dahilindedir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 113,
+      "question": "İnsanın iyi veya kötü bir fiili yapması kendi özgür iradesine bağlıdır. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "İnsan, yaptığı işlerden sorumludur.",
+        "B": "İnsan, kaderi nedeniyle yaptığı işlerden sorumlu değildir.",
+        "C": "İnsan, hiçbir zaman özgür değildir.",
+        "D": "İnsan, tamamen Allah tarafından yönetilmektedir."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 114,
+      "question": "Allah, insanlara irade vermiştir ve insanlar bu iradeyle iyi veya kötü olanı seçebilir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "İnsan, yaptığı seçimlerden sorumludur.",
+        "B": "İnsan, Allah'ın belirlediği şeyleri yapmaya mecburdur.",
+        "C": "İnsan, iyiliği de kötülüğü de seçebilir.",
+        "D": "İnsan, özgür iradesiyle hareket eder."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 115,
+      "question": "Allah, her şeyi takdir etmiş ve yazmıştır ancak insan yaptığı seçimlerden dolayı sorumludur. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Allah, her şeyi takdir etmiştir.",
+        "B": "İnsan yaptığı seçimlerden dolayı sorumludur.",
+        "C": "İnsan, hiçbir şekilde kaderini değiştiremez.",
+        "D": "İnsan, yaptığı işlerin sonucunu görür."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 116,
+      "question": "Kader inancı, insanın çalışmasına engel değildir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "İnsan, çaba göstererek başarı elde edebilir.",
+        "B": "Kader, insanın çalışmasını engellemez.",
+        "C": "İnsan, çaba göstermeden her şeye ulaşabilir.",
+        "D": "Kader, insanın sorumluluğunu ortadan kaldırmaz."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 117,
+      "question": "İslam'a göre, insanın yaptığı her şey kaderin bir parçasıdır ama insan kendi seçimlerinden sorumludur. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "İnsan yaptığı seçimlerden sorumludur.",
+        "B": "İnsan, hiçbir zaman özgür irade kullanamaz.",
+        "C": "İnsan, yaptığı işlerden sorumlu değildir.",
+        "D": "Kader, insanın iradesini ortadan kaldırır."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 118,
+      "question": "İnsan, yaptığı işlerin sonuçlarına katlanacaktır. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "İnsan, yaptığı her işin sonucunu görecektir.",
+        "B": "İnsan, özgür iradesiyle yaptığı işlerden sorumlu değildir.",
+        "C": "İnsan, iyi işler yaparsa mükâfat alacaktır.",
+        "D": "Kötü işler yapanlar ceza görecektir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 119,
+      "question": "Kader, Allah'ın ilmi ile her şeyi bilmesi ve takdir etmesidir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kader, Allah'ın sonsuz bilgisiyle belirlenmiştir.",
+        "B": "Kader, insanın iradesini tamamen yok sayar.",
+        "C": "Allah, her şeyi önceden bilir.",
+        "D": "İnsan, yaptığı seçimlerden sorumludur."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 120,
+      "question": "Kaza, Allah'ın takdir ettiği olayların gerçekleşmesidir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kaza, gerçekleşmiş olayları ifade eder.",
+        "B": "Kaza, insanın yaptığı tüm işleri kapsar.",
+        "C": "Kader, Allah'ın önceden takdir etmesidir.",
+        "D": "Kaza, kaderde belirlenmiş olayların ortaya çıkışıdır."
+      },
+      "correct_answer": "B"
+    }
+  ]
+}

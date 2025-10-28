@@ -1,0 +1,339 @@
+{
+  "category": "İTİKAT",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_range": "1-30",
+  "question_count": 30,
+  "questions": [
+    {
+      "id": 1,
+      "question": "İnsanların dünya ve ahiret mutluluğuna ulaşmasını sağlamak amacıyla Allah tarafından gönderilen kurallar bütünü ________ olarak adlandırılır. Bu kurallar, peygamberlere ________ aracılığıyla bildirilmiştir. İnsanlar bu kurallara uyarak doğru yolu bulur ve saadete erişirler.",
+      "options": {
+        "A": "Din – Mikâil",
+        "B": "Şeriat – Cebrâil",
+        "C": "Din – Cebrâil",
+        "D": "İman – İsrafil"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 2,
+      "question": "Melekler, Allah'ın emirlerine mutlak itaat eden nurdan yaratılmış varlıklardır. Onların insanlardan farklı birçok özelliği vardır. Aşağıdakilerden hangisi meleklerin en temel özelliklerinden biri değildir?",
+      "options": {
+        "A": "Hiçbir zaman günah işlemezler.",
+        "B": "Allah'ın emri olmadan hareket edebilirler.",
+        "C": "Erkeklik ve dişilikleri yoktur.",
+        "D": "Yemezler ve içmezler."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "question": "Allah'ın gönderdiği kutsal kitaplar iki gruba ayrılır. ________ adı verilen küçük vahiy parçaları, belirli peygamberlere verilmiş olan ilahi mesajları içerirken, ________ ise geniş kapsamlı ilahi rehberlerdir. Hz. Mûsâ'ya ________, Hz. Dâvûd'a ________, Hz. Îsâ'ya ________ ve Hz. Muhammed'e (s.a.v.) ________ gönderilmiştir.",
+      "options": {
+        "A": "Suhuf – Büyük Kitaplar – İncil – Zebûr – Tevrat – Kur'ân-ı Kerîm",
+        "B": "Suhuf – Büyük Kitaplar – Tevrat – Zebûr – İncil – Kur'ân-ı Kerîm",
+        "C": "Büyük Kitaplar – Suhuf – Tevrat – Zebûr – İncil – Kur'ân-ı Kerîm",
+        "D": "Suhuf – Tevrat – Zebûr – İncil – Kur'ân-ı Kerîm – Suhuf"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "question": "İslam inancında, ahirete iman, iman esaslarından biri olup büyük bir öneme sahiptir. ________ günü, dünyada yapılan her şeyin hesabının verileceği ve insanların cennet ya da cehennem ile karşılık bulacağı gündür. Kıyametin kopmasıyla birlikte ________, sûra üfleyerek bu büyük olayı başlatacaktır.",
+      "options": {
+        "A": "Ahiret – İsrafil",
+        "B": "Kıyamet – Azrail",
+        "C": "Mahşer – Cebrâil",
+        "D": "Kabir – Mikâil"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 5,
+      "question": "İman esaslarının başında Allah'a iman gelir. Allah, ________ yaratılmıştır. O, doğmamış ve doğurulmamıştır. Varlığı ezelî ve ebedî olup hiçbir şeye ihtiyacı yoktur. Canlı ve cansız tüm varlıkları yaratan ve onların her halinden haberdar olan tek güç O'dur.",
+      "options": {
+        "A": "İnsanlara göre",
+        "B": "Kendiliğinden",
+        "C": "Melekler gibi",
+        "D": "Hiçbir şey tarafından"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 6,
+      "question": "Allah'ın yarattığı her şeyin bir ölçü ve düzen içinde olduğunu belirten kavram aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Tevhit",
+        "B": "Kader",
+        "C": "Ahiret",
+        "D": "Nübüvvet"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "question": "Allah'ın yarattığı her şeyin bir ölçü ve düzen içinde olduğunu belirten kavram aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Tevhit",
+        "B": "Kader",
+        "C": "Ahiret",
+        "D": "Nübüvvet"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "question": "Aşağıdakilerden hangisi İslam'a göre farz ibadetlerden biridir?",
+      "options": {
+        "A": "Namaz",
+        "B": "Sadaka",
+        "C": "Tevbe",
+        "D": "Salavat"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "question": "Peygamberlerin gönderiliş amaçlarından biri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "İnsanları eğlendirmek",
+        "B": "Allah'ın emir ve yasaklarını bildirmek",
+        "C": "İnsanlara dünya hayatında sınırsız özgürlük vermek",
+        "D": "Sadece kendi kavimlerine liderlik yapmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "question": "İslam'da Allah'ın birliği ve tek olduğu inancına ne ad verilir?",
+      "options": {
+        "A": "Ahiret",
+        "B": "Kader",
+        "C": "Tevhit",
+        "D": "Nübüvvet"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "question": "İslam'a göre Allah'ın emirlerini insanlara bildiren ve vahiy getiren melek kimdir?",
+      "options": {
+        "A": "Azrail",
+        "B": "İsrafil",
+        "C": "Cebrâil",
+        "D": "Mikâil"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "question": "Allah'ın doğmamış ve doğurulmamış olduğunu belirten ayet, hangi surede geçmektedir?",
+      "options": {
+        "A": "İhlas Suresi",
+        "B": "Fatiha Suresi",
+        "C": "Yasin Suresi",
+        "D": "Bakara Suresi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "question": "Aşağıdakilerden hangisi iman esaslarından biri değildir?",
+      "options": {
+        "A": "Peygamberlere iman",
+        "B": "Meleklere iman",
+        "C": "Dünyaya iman",
+        "D": "Ahiret gününe iman"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "question": "Kur'an-ı Kerim'in hiçbir değişime uğramayacağını ve korunacağını bildiren inanç, hangi kavram ile açıklanır?",
+      "options": {
+        "A": "Ahiret inancı",
+        "B": "Muhafaza inancı",
+        "C": "Tahrif inancı",
+        "D": "Tevhit inancı"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 15,
+      "question": "Aşağıdakilerden hangisi İslam'ın kutsal kitabıdır?",
+      "options": {
+        "A": "Tevrat",
+        "B": "İncil",
+        "C": "Zebur",
+        "D": "Kur'an-ı Kerim"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 16,
+      "question": "Aşağıdaki meleklerden hangisi insanların ruhlarını almakla görevlidir?",
+      "options": {
+        "A": "Mikâil",
+        "B": "Cebrâil",
+        "C": "Azrail",
+        "D": "İsrafil"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "question": "Kelime-i Tevhid'in doğru yazımı aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Eşhedü ellâ ilâhe illallah ve eşhedü enne Muhammeden abduhu ve rasûluh",
+        "B": "Lâ ilâhe illallah Muhammedün rasûlullah",
+        "C": "Allahu ekber, Allahu ekber, lâ ilâhe illallah",
+        "D": "Lâ ilâhe illallah, Muhammeden abduhu"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "question": "Suhuf (sayfalar) aşağıdaki peygamberlerden hangisine verilmemiştir?",
+      "options": {
+        "A": "Hz. Âdem",
+        "B": "Hz. Şît",
+        "C": "Hz. Musa",
+        "D": "Hz. İbrâhim"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "question": "Aşağıdakilerden hangisi Allah'ın sıfatlarından biri değildir?",
+      "options": {
+        "A": "Basar (Görme)",
+        "B": "Hayat (Dirilik)",
+        "C": "Gaflet (Dalgınlık)",
+        "D": "İrade (Dileme)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "question": "Kabirde insanlara soru sormakla görevli melekler kimlerdir?",
+      "options": {
+        "A": "Cebrâil ve Mikâil",
+        "B": "Münker ve Nekir",
+        "C": "Kirâmen Kâtibîn",
+        "D": "İsrafil ve Azrail"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "question": "Peygamberler, Allah tarafından gönderilmiş elçilerdir. Onlar, insanlara doğru yolu göstermek ve Allah'ın emirlerini iletmekle görevlidirler. Peygamberlerin en önemli özelliklerinden biri ________ olmalarıdır. Bu sayede insanlar onlara güvenmiş ve Allah'ın mesajlarını kabul etmiştir. Hz. ________, ilk peygamber olarak insanlığın atası kabul edilirken, son peygamber ise Hz. ________'dir.",
+      "options": {
+        "A": "Günah işlemez – Musa – İsa",
+        "B": "Doğru sözlü – İbrahim – Muhammed",
+        "C": "Güvenilir – Âdem – Muhammed",
+        "D": "Zeki ve akıllı – Nuh – İsa"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "question": "Aşağıdakilerden hangisi peygamberlerin özelliklerinden biri değildir?",
+      "options": {
+        "A": "Doğru sözlü olmaları",
+        "B": "Günah işlemekten uzak olmaları",
+        "C": "Ölümsüz olmaları",
+        "D": "Güvenilir elçiler olmaları"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "question": "İnsanlar inanç yönünden farklı gruplara ayrılırlar. Aşağıdakilerden hangisi bu gruplardan biri değildir?",
+      "options": {
+        "A": "Mü'min",
+        "B": "Kâfir",
+        "C": "Salih",
+        "D": "Münafık"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "question": "İlk peygamber ________, son peygamber ise ________'dir.",
+      "options": {
+        "A": "Hz. İbrahim – Hz. Musa",
+        "B": "Hz. Âdem – Hz. Muhammed",
+        "C": "Hz. Nuh – Hz. İsa",
+        "D": "Hz. Davud – Hz. Muhammed"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "question": "Allah'ın olmuş ve olacak her şeyi bilmesine ________, Allah'ın takdir ettiği şeylerin meydana gelmesine ise ________ denir.",
+      "options": {
+        "A": "Kaza – Kader",
+        "B": "Kader – Kaza",
+        "C": "Tevhid – Ahiret",
+        "D": "Nübüvvet – Risalet"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "question": "________, Allah'ın emir ve yasaklarını insanlara bildiren peygamberler arasında en büyüklerinden biridir ve Kur'ân'da ismi geçen 25 peygamberden biridir.",
+      "options": {
+        "A": "Hz. Muhammed",
+        "B": "Hz. Yusuf",
+        "C": "Hz. Süleyman",
+        "D": "Hz. Zülkarneyn"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "question": "İnsanlar, dünyada yaptıkları her şeyden hesaba çekileceklerdir. İman edenler ________ ile mükâfatlandırılacak, iman etmeyenler ise ________ ile cezalandırılacaktır.",
+      "options": {
+        "A": "Peygamberlik – Ahiret",
+        "B": "Sevap – Günah",
+        "C": "Cennet – Cehennem",
+        "D": "Melekler – Peygamberler"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "question": "İnanç yönünden insanlar farklı gruplara ayrılır. Allah'a ve peygamberlerine inanan kimselere ________, Allah'ı ve peygamberleri inkâr edenlere ________ denir.",
+      "options": {
+        "A": "Müşrik – Mü'min",
+        "B": "Münafık – Müşrik",
+        "C": "Mü'min – Kâfir",
+        "D": "Kâfir – Münafık"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 29,
+      "question": "Aşağıdakilerden hangisi İslam'da iman esaslarından biri değildir?",
+      "options": {
+        "A": "Allah'a iman",
+        "B": "Meleklere iman",
+        "C": "Kabir azabına iman",
+        "D": "Kadere ve kazaya iman"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "question": "Allah, evreni ve içindeki her şeyi yaratandır. O'nun varlığı ezeli ve ebedidir. Allah hakkında aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Allah doğmamış, doğurulmamıştır.",
+        "B": "Allah'ın eşi ve benzeri yoktur.",
+        "C": "Allah'ın gücü her şeye yeter.",
+        "D": "Allah'ın ilmi sınırlıdır, bazı şeyleri bilmez."
+      },
+      "correct_answer": "D"
+    }
+  ],
+  "answer_key": "1-C, 2-B, 3-B, 4-A, 5-D, 6-B, 7-B, 8-A, 9-B, 10-C, 11-C, 12-A, 13-C, 14-D, 15-D, 16-C, 17-B, 18-C, 19-C, 20-B, 21-C, 22-C, 23-C, 24-B, 25-B, 26-A, 27-C, 28-C, 29-C, 30-D"
+}

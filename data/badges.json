@@ -1,0 +1,111 @@
+[
+  {
+    "key": "hilal_first_practice",
+    "name": "Hilal",
+    "de_name": "Halbmond",
+    "icon": "fa-moon",
+    "metric": "total_sessions",
+    "levels": [1, 0, 0],
+    "description": "İlk alıştırmanızı tamamlayınca kazanırsınız.",
+    "de_description": "Erhalten Sie es, wenn Sie Ihre erste Übung abschließen.",
+    "criteria": "En az 1 alıştırma tamamlayın.",
+    "de_criteria": "Mindestens 1 Übung abschließen."
+  },
+  {
+    "key": "kabe_questions_total",
+    "name": "Kabe",
+    "de_name": "Kaaba",
+    "icon": "fa-kaaba",
+    "metric": "total_questions",
+    "levels": [100, 300, 1000],
+    "description": "Toplamda çok sayıda soru çözenler için.",
+    "de_description": "Für diejenigen, die insgesamt viele Fragen lösen.",
+    "criteria": "Toplam çözülen soru: 100 / 300 / 1000",
+    "de_criteria": "Insgesamt gelöste Fragen: 100 / 300 / 1000"
+  },
+  {
+    "key": "ilim_high_scores",
+    "name": "İlim",
+    "de_name": "Wissen",
+    "icon": "fa-book-quran",
+    "metric": "high_score_sessions",
+    "levels": [3, 10, 30],
+    "description": "Yüksek puanlı alıştırmaların ödülü.",
+    "de_description": "Belohnung für Übungen mit hoher Punktzahl.",
+    "criteria": "%90+ puanla: 3 / 10 / 30 alıştırma",
+    "de_criteria": "%90+ Punkte: 3 / 10 / 30 Übungen"
+  },
+  {
+    "key": "tesbih_streak",
+    "name": "Tesbih",
+    "de_name": "Gebetskette",
+    "icon": "fa-mosque",
+    "metric": "best_streak",
+    "levels": [7, 14, 30],
+    "description": "Düzenli çalışma alışkanlığı için.",
+    "de_description": "Für eine regelmäßige Arbeitsgewohnheit.",
+    "criteria": "Ardışık gün sayısı: 7 / 14 / 30",
+    "de_criteria": "Aufeinanderfolgende Tage: 7 / 14 / 30"
+  },
+  {
+    "key": "sabir_long_sessions",
+    "name": "Sabır",
+    "de_name": "Geduld",
+    "icon": "fa-hourglass-half",
+    "metric": "long_sessions",
+    "levels": [1, 5, 20],
+    "description": "Uzun ve verimli oturumlar için.",
+    "de_description": "Für lange und produktive Sitzungen.",
+    "criteria": "30+ dk süren oturum: 1 / 5 / 20",
+    "de_criteria": "Sitzung länger als 30 Min.: 1 / 5 / 20"
+  },
+  {
+    "key": "kalem_distinct_categories",
+    "name": "Kalem",
+    "de_name": "Stift",
+    "icon": "fa-pen",
+    "metric": "distinct_categories",
+    "levels": [5, 10, 20],
+    "description": "Konu yelpazesini genişletenlere.",
+    "de_description": "Für diejenigen, die ihr Themenspektrum erweitern.",
+    "criteria": "Farklı konu sayısı: 5 / 10 / 20",
+    "de_criteria": "Anzahl unterschiedlicher Themen: 5 / 10 / 20"
+  },
+  {
+    "key": "kitap_distinct_banks",
+    "name": "Kitap",
+    "de_name": "Buch",
+    "icon": "fa-book",
+    "metric": "distinct_banks",
+    "levels": [3, 5, 8],
+    "description": "Farklı bankalardan çalışanlara.",
+    "de_description": "Für diejenigen, die mit verschiedenen Banken arbeiten.",
+    "criteria": "Farklı soru bankası: 3 / 5 / 8",
+    "de_criteria": "Unterschiedliche Fragenbanken: 3 / 5 / 8"
+  },
+  {
+    "key": "azim_session_best",
+    "name": "Azim",
+    "de_name": "Entschlossenheit",
+    "icon": "fa-fire",
+    "metric": "session_best_questions",
+    "levels": [20, 50, 100],
+    "description": "Tek oturumda yüksek soru sayılarına ulaşanlara.",
+    "de_description": "Für hohe Fragemengen in einer Sitzung.",
+    "criteria": "Bir oturumda en çok soru: 20 / 50 / 100",
+    "de_criteria": "Meiste Fragen in einer Sitzung: 20 / 50 / 100"
+  },
+  {
+    "key": "ihsan_progress_improve",
+    "name": "İhsan",
+    "de_name": "Exzellenz",
+    "icon": "fa-star",
+    "metric": "progressive_improvement",
+    "levels": [3, 10, 30],
+    "description": "Sürekli gelişim gösterenlere.",
+    "de_description": "Für kontinuierliche Verbesserung.",
+    "criteria": "Aynı konuda üst üste daha iyi puan: 3 / 10 / 30",
+    "de_criteria": "Im selben Thema aufeinanderfolgend bessere Punktzahl: 3 / 10 / 30"
+  }
+]
+

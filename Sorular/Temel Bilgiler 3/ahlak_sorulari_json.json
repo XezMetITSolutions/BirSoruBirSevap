@@ -1,0 +1,337 @@
+{
+  "category": "AHLAK",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 30,
+  "questions": [
+    {
+      "id": 1,
+      "question": "İslam ahlakının temel kaynağı aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Felsefi düşünceler",
+        "B": "Kur'an ve Sünnet",
+        "C": "Geleneksel kültürel öğeler",
+        "D": "Toplumun ortak kararları"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "question": "İslam'a göre insanın öncelikli olarak sahip olması gereken duygu aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Özgüven",
+        "B": "İnanç sevgisi",
+        "C": "Maddi kazanç hırsı",
+        "D": "Rekabet duygusu"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "question": "Aşağıdakilerden hangisi insanın manevi varlığını zenginleştiren unsurlardan biri değildir?",
+      "options": {
+        "A": "Ağırbaşlılık",
+        "B": "İstekleri aklın ve inancın kontrolüne almak",
+        "C": "Küçük düşürücü davranışlarda bulunmak",
+        "D": "Doğru ve dürüst olmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "question": "İslam ahlakında insanın bedensel varlığını korumasıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Kendi hayatını koruması gerekir",
+        "B": "İntihar kesinlikle yasaklanmıştır",
+        "C": "Sağlığa zarar veren içki ve kumar gibi alışkanlıklar teşvik edilmiştir",
+        "D": "İnsan bedeninin sağlıklı olması, dini görevlerin yerine getirilmesi için önemlidir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "question": "Kur'an'da \"Kadınlarla iyi geçinin!\" buyuran ayet hangi surededir?",
+      "options": {
+        "A": "Bakara",
+        "B": "Nisa",
+        "C": "Al-i İmran",
+        "D": "Maide"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "question": "Hz. Peygamber (s.a.v.), bir kadının cennete girmesi için kocasının hangi durumda olması gerektiğini belirtmiştir?",
+      "options": {
+        "A": "Maddi durumu iyi olmalı",
+        "B": "Kendisinden razı olmalı",
+        "C": "Çocuk sahibi olmalı",
+        "D": "Anne ve babası hayatta olmalı"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "question": "Peygamberimiz'in (s.a.v.) çocuklara olan sevgisini yansıtan en önemli örneklerden biri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Çocuklarla şakalaşması ve onların hatalarını bağışlaması",
+        "B": "Çocuklara karşı katı bir disiplin uygulaması",
+        "C": "Çocukları sadece erkek olmaları durumunda sevmesi",
+        "D": "Çocukları eğitmek için sert yöntemler kullanması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "question": "İslam'a göre ana-babaya itaatin hemen ardından gelen en önemli ibadet aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Hac",
+        "B": "Zekât",
+        "C": "Namaz",
+        "D": "Oruç"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "question": "Akrabalık bağlarını koparmanın cennete girememeye sebep olacağına dair hadislerde geçen en önemli kavram aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Sıla-i rahim",
+        "B": "Tevekkül",
+        "C": "Tefekkür",
+        "D": "İsraf"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "question": "Kur'an'da Allah için sevmek anlayışının en iyi şekilde anlatıldığı hadiste Müminler nasıl bir vücuda benzetilmiştir?",
+      "options": {
+        "A": "Kas yapısı",
+        "B": "Bir organı hastalanınca diğerleri de acı çeken vücut",
+        "C": "Çelikten bir yapı",
+        "D": "Farklı diller konuşan bir toplum"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "question": "Peygamberimiz (s.a.v.) en iyi insanın kim olduğunu eşleri ile ilgili olarak nasıl açıklamıştır?",
+      "options": {
+        "A": "Eşine en fazla servet sunan",
+        "B": "Eşleriyle en iyi geçinen",
+        "C": "Eşinden uzak duran",
+        "D": "Eşini en az eleştiren"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "question": "Kur'an'da geçen \"Kendi elinizle kendinizi tehlikeye atmayın\" ayeti hangi konuyla ilgilidir?",
+      "options": {
+        "A": "Ticaret",
+        "B": "Sağlık ve bedenin korunması",
+        "C": "Aile ilişkileri",
+        "D": "Namaz"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "question": "İslam'ın ideal insan modeli olarak gösterdiği en büyük örnek kimdir?",
+      "options": {
+        "A": "Hz. Ömer",
+        "B": "Hz. Muhammed (s.a.v.)",
+        "C": "Hz. İsa",
+        "D": "Hz. Musa"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "question": "Peygamberimiz'in (s.a.v.) \"Temizlik imandandır\" sözü, aşağıdaki hangi davranışı teşvik eder?",
+      "options": {
+        "A": "Zenginliği artırmayı",
+        "B": "Vücut ve çevre temizliğini korumayı",
+        "C": "Yalnızca içsel temizliği",
+        "D": "Sürekli sadaka vermeyi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "question": "Hz. Peygamber (s.a.v.), insanların en çok hangi özelliğe sahip olanlarını kendisine en yakın olarak tanımlamıştır?",
+      "options": {
+        "A": "Zengin olanlar",
+        "B": "Ahlakı en güzel olanlar",
+        "C": "Bilgi sahibi olanlar",
+        "D": "Ailesi kalabalık olanlar"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "question": "Hz. Peygamber (s.a.v.)'in hayatında uyguladığı sofra adabına dair aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Yemekten önce ve sonra ellerini yıkardı",
+        "B": "Yemeğe besmele ile başlardı",
+        "C": "Tıka basa doyuncaya kadar yemeye özen gösterirdi",
+        "D": "Yemek yerken sağ elini kullanırdı"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "question": "Hz. Peygamber (s.a.v.), hangi kavramı ahlakın tamamlayıcısı olarak tanımlamıştır?",
+      "options": {
+        "A": "Bilgi",
+        "B": "Adalet",
+        "C": "Güzel ahlak",
+        "D": "Fedakârlık"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "question": "Hadislerin senet bölümünde bulunan raviler için aranan iki temel özellik aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Güzel konuşma ve yazı yazma",
+        "B": "Adalet ve zabt",
+        "C": "Güçlü hafıza ve felsefi düşünce",
+        "D": "Yaşlılık ve deneyim"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "question": "İslam ahlakında misafirlik kurallarıyla ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Eve girmeden önce ev sahibine haber vermek",
+        "B": "Ev sahibinin ikram ettiği şeyleri nazikçe reddetmek",
+        "C": "Ziyaret süresini çok uzun tutmamak",
+        "D": "Misafirlikten ayrılırken ev sahibine teşekkür etmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "question": "Peygamberimiz (s.a.v.)'in en belirgin özelliği olan hoşgörü ile ilgili aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "İnsanları affetmeyi severdi",
+        "B": "Düşmanlarını bile bağışlayabilirdi",
+        "C": "Kendisini eleştirenleri affetmezdi",
+        "D": "Kimseyi incitmezdi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "question": "Aşağıdakilerden hangisi mevzu hadislerin (uydurma hadislerin) tanınması için bir yöntem değildir?",
+      "options": {
+        "A": "Lafızlarında bozukluk olması",
+        "B": "Güvenilir kaynaklarda bulunmaması",
+        "C": "Kur'an ve sünnete aykırı olması",
+        "D": "Senedinde yer alan bütün ravilerin güvenilir olması"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 22,
+      "question": "Hz. Peygamber (s.a.v.), hangi davranışı insanları memnun etmenin en etkili yolu olarak belirtmiştir?",
+      "options": {
+        "A": "Maddi yardımda bulunmak",
+        "B": "Güler yüzlü ve güzel ahlaklı olmak",
+        "C": "Güçlü olmak ve liderlik etmek",
+        "D": "Çalışkan ve üretken olmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "question": "Hz. Peygamber (s.a.v.), hangi hadiste ahlakın günahtan arındırıcı özelliğini vurgulamaktadır?",
+      "options": {
+        "A": "\"Ben ancak üstün ahlakı tamamlamak için gönderildim.\"",
+        "B": "\"Güneşin donmuş buzu eritmesi gibi, güzel ahlak da günahları eritir.\"",
+        "C": "\"Hiçbir baba çocuğuna güzel terbiyeden daha değerli bir miras bırakamaz.\"",
+        "D": "\"Müminler birbirlerini sevmekte bir vücut gibidirler.\""
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "Hz. Peygamber (s.a.v.), hangi ahlaki değeri Müslümanlar için en büyük ölçütlerden biri olarak görmüştür?",
+      "options": {
+        "A": "Cesaret",
+        "B": "Adalet",
+        "C": "Cömertlik",
+        "D": "Doğruluk"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 25,
+      "question": "İslam ahlakına göre, ticaret yaparken kaçınılması gereken davranışlardan biri değildir?",
+      "options": {
+        "A": "Rüşvet almak",
+        "B": "Faizcilik yapmak",
+        "C": "Haksız kazanç elde etmek",
+        "D": "Ticari kazancı zekâta çevirmek"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 26,
+      "question": "Hz. Peygamber'in (s.a.v.) İslam'da en önemli değer olarak öne çıkardığı şey aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Zenginlik",
+        "B": "Takva (Allah'a karşı duyulan derin saygı ve bilinç)",
+        "C": "Cesaret",
+        "D": "Zeka"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "question": "Hadis ilmiyle ilgilenenlerin güvenilir kabul ettiği altı temel kaynak aşağıdakilerden hangisiyle adlandırılır?",
+      "options": {
+        "A": "Kütüb-i Tis'a",
+        "B": "Kütüb-i Sitte",
+        "C": "İmam Maturidi'nin kitapları",
+        "D": "Fıkıh eserleri"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "question": "Kur'an'da Müminlerin özellikleri arasında aşağıdakilerden hangisi geçmez?",
+      "options": {
+        "A": "İbadet etmek",
+        "B": "Kibirli olmak",
+        "C": "Ahlaklı olmak",
+        "D": "Sabırlı olmak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "question": "Peygamber Efendimiz'in (s.a.v.) hadisleri Kur'an'dan sonra İslam'ın en önemli kaynağıdır. Bu ifadenin doğruluğunu en iyi hangi hadis destekler?",
+      "options": {
+        "A": "\"Ben ancak üstün ahlakı tamamlamak için gönderildim.\"",
+        "B": "\"Size iki şey bıraktım: Kur'an ve Sünnetim. Bunlara uyarsanız asla sapmazsınız.\"",
+        "C": "\"İlim öğrenmek her Müslümana farzdır.\"",
+        "D": "\"İslam, güzel ahlaktır.\""
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "question": "Peygamberimiz'in (s.a.v.) günlük hayatında en çok dikkat ettiği konulardan biri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Çevre temizliği",
+        "B": "Lüks içinde yaşamak",
+        "C": "Hızlı yemek yemek",
+        "D": "İnsanları eleştirmek"
+      },
+      "correct_answer": "A"
+    }
+  ]
+}

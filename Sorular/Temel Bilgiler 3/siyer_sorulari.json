@@ -1,0 +1,997 @@
+{
+  "category": "SİYER",
+  "title": "İGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 90,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Hz. Muhammed (s.a.v.)'in doğum yılı, İslam tarihindeki önemli olaylardan biri olan \"Fil Vakası\" ile aynı döneme denk gelmiştir. Bu yıl hangi miladi yıla karşılık gelmektedir?",
+      "options": {
+        "A": "550",
+        "B": "560",
+        "C": "571",
+        "D": "580"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 2,
+      "question": "Hz. Muhammed (s.a.v.)'in sütannesi kimdir?",
+      "options": {
+        "A": "Hz. Âmine",
+        "B": "Hz. Fatıma",
+        "C": "Halîme",
+        "D": "Hz. Hatice"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "question": "Hz. Muhammed (s.a.v.)'in babası Abdullah, hangi şehirde vefat etmiştir?",
+      "options": {
+        "A": "Şam",
+        "B": "Medine",
+        "C": "Mekke",
+        "D": "Taif"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "question": "Peygamberimiz (s.a.v.)'in yetim kalması kaç yaşında gerçekleşmiştir?",
+      "options": {
+        "A": "Doğmadan önce",
+        "B": "2 yaşında",
+        "C": "6 yaşında",
+        "D": "8 yaşında"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 5,
+      "question": "Hz. Muhammed (s.a.v.), dedesi Abdulmuttalib'in vefatından sonra kimin yanında büyümüştür?",
+      "options": {
+        "A": "Ebû Cehil",
+        "B": "Ebû Süfyan",
+        "C": "Ebû Tâlib",
+        "D": "Hz. Ebû Bekir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "question": "Peygamberimiz (s.a.v.)'in gençlik yıllarında Kureyşliler arasında hangi lakapla tanındığı bilinmektedir?",
+      "options": {
+        "A": "Sâdık",
+        "B": "El-Emîn",
+        "C": "Muhsin",
+        "D": "El-Fâtih"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "question": "Peygamberimiz (s.a.v.), ticaret hayatına kimlerle birlikte başlamıştır?",
+      "options": {
+        "A": "Hz. Ebû Bekir ile",
+        "B": "Hz. Ömer ile",
+        "C": "Amcası Ebû Tâlib ile",
+        "D": "Hz. Osman ile"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "question": "Hz. Hatice (r.anha), Hz. Muhammed (s.a.v.)'e ticaret ortaklığı teklifi sunarak onu ticari bir kafileyle hangi bölgeye göndermiştir?",
+      "options": {
+        "A": "Mısır",
+        "B": "Şam",
+        "C": "Medine",
+        "D": "Yemen"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "question": "Hz. Hatice ile Hz. Muhammed (s.a.v.) evlendiklerinde kaç yaşlarındaydılar?",
+      "options": {
+        "A": "Hz. Muhammed 25, Hz. Hatice 40",
+        "B": "Hz. Muhammed 30, Hz. Hatice 35",
+        "C": "Hz. Muhammed 20, Hz. Hatice 25",
+        "D": "Hz. Muhammed 35, Hz. Hatice 50"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "question": "Peygamber Efendimiz'in (s.a.v.) Hz. Hatice (r.anha)'dan doğan ilk çocuğu kimdir?",
+      "options": {
+        "A": "Hz. Zeynep",
+        "B": "Hz. Rukiye",
+        "C": "Kasım",
+        "D": "Abdullah"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "question": "Hz. Muhammed (s.a.v.), Kâbe'nin tamiri sırasında hangi hakemlik görevini üstlenmiştir?",
+      "options": {
+        "A": "Kâbe'nin kapısını belirlemek",
+        "B": "Hacerü'l-Esved taşını yerine koymak",
+        "C": "Tavaf sırasını belirlemek",
+        "D": "Kâbe'nin üstünü örtmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "question": "Hz. Muhammed (s.a.v.) ilk vahiy aldığı zaman kaç yaşındaydı?",
+      "options": {
+        "A": "30",
+        "B": "35",
+        "C": "40",
+        "D": "45"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "question": "İlk vahiy hangi mağarada inmiştir?",
+      "options": {
+        "A": "Sevr",
+        "B": "Hira",
+        "C": "Uhud",
+        "D": "Nur"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "question": "Hz. Muhammed (s.a.v.), ilk vahiy geldiğinde olayın etkisiyle kime danışmıştır?",
+      "options": {
+        "A": "Hz. Ebû Bekir",
+        "B": "Hz. Ali",
+        "C": "Hz. Hatice",
+        "D": "Hz. Ömer"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "question": "Peygamber Efendimiz'e (s.a.v.) ilk inen sure aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Alak",
+        "B": "Bakara",
+        "C": "Yâsîn",
+        "D": "Nasr"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 16,
+      "question": "İslam'ı ilk kabul eden kadın kimdir?",
+      "options": {
+        "A": "Hz. Aişe",
+        "B": "Hz. Hatice",
+        "C": "Hz. Fatıma",
+        "D": "Hz. Ümmü Gülsüm"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "question": "Hz. Muhammed (s.a.v.), peygamberliğin ilk üç yılında insanları nasıl İslam'a davet etmiştir?",
+      "options": {
+        "A": "Savaşarak",
+        "B": "Açıkça duyurarak",
+        "C": "Gizli bir şekilde",
+        "D": "Ticaret yaparak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "question": "Peygamberliğin kaçıncı yılında İslam daveti açıktan yapılmaya başlanmıştır?",
+      "options": {
+        "A": "2. yıl",
+        "B": "3. yıl",
+        "C": "4. yıl",
+        "D": "5. yıl"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "question": "Müslümanlara uygulanan boykot kaç yıl sürmüştür?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "7"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "question": "Peygamber Efendimiz'in (s.a.v.) en zor yılı olarak kabul edilen \"Hüzün Yılı\"nda kimler vefat etmiştir?",
+      "options": {
+        "A": "Hz. Hatice ve Ebû Tâlib",
+        "B": "Hz. Hamza ve Ebû Bekir",
+        "C": "Hz. Ömer ve Hz. Osman",
+        "D": "Hz. Ali ve Hz. Fatıma"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "question": "Hz. Muhammed (s.a.v.), Taif'e İslam'ı yaymak için gittiğinde nasıl bir tepkiyle karşılaşmıştır?",
+      "options": {
+        "A": "Büyük bir ilgiyle karşılandı",
+        "B": "Halk tarafından hemen kabul edildi",
+        "C": "Taşlanarak dışlandı",
+        "D": "Hükümdar tarafından destek gördü"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "question": "Hz. Muhammed (s.a.v.)'in yaptığı gece yolculuğuna ne ad verilir?",
+      "options": {
+        "A": "Mirâc",
+        "B": "Hicret",
+        "C": "Bedir",
+        "D": "Hudeybiye"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "question": "Hz. Muhammed (s.a.v.), Miraç Gecesi'nde Allah Teâlâ ile hangi mekânda görüşmüştür?",
+      "options": {
+        "A": "Mescid-i Aksâ",
+        "B": "Sidretü'l-Müntehâ",
+        "C": "Kâbe",
+        "D": "Cebel-i Nûr"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "Hz. Muhammed (s.a.v.)'in Miraç esnasında ümmetine hediye edilen en önemli ibadet aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Zekât",
+        "B": "Oruç",
+        "C": "Beş vakit namaz",
+        "D": "Hac"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "question": "Hz. Muhammed (s.a.v.)'in peygamberliğinden sonra müşrikler tarafından kendisine yapılan en ağır baskılardan biri olan boykot hangi olaydan sonra sona ermiştir?",
+      "options": {
+        "A": "Hz. Hamza'nın Müslüman olması",
+        "B": "Hz. Hatice ve Ebû Tâlib'in vefatı",
+        "C": "Müşriklerin anlaşmayı bozan metni haşerelerin yemesi",
+        "D": "Mekke'nin fethi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "question": "Peygamber Efendimiz'in (s.a.v.) hicret ettiği sırada Medine'de bulunan ve ona bağlılık sözü veren Müslümanlar hangi topluluktandır?",
+      "options": {
+        "A": "Kureyş",
+        "B": "Ensar",
+        "C": "Muhacirler",
+        "D": "Evs ve Hazrec"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 27,
+      "question": "Peygamber Efendimiz (s.a.v.), hicret esnasında mağarada kiminle birlikte saklanmıştır?",
+      "options": {
+        "A": "Hz. Ömer",
+        "B": "Hz. Osman",
+        "C": "Hz. Ebû Bekir",
+        "D": "Hz. Hamza"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "question": "Hicretten önce Medineli Müslümanlar, Hz. Muhammed (s.a.v.) ile Akabe Biatları yaparak hangi konularda söz vermişlerdir?",
+      "options": {
+        "A": "Ona itaat etmek ve koruyacaklarına söz vermek",
+        "B": "Bedir Savaşı'na katılmak",
+        "C": "Ticarette Hz. Muhammed'i desteklemek",
+        "D": "Kureyş müşrikleriyle savaşmamak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "question": "Peygamberimiz (s.a.v.)'in İslam'ı yaymak için Mekke'den Taif'e gitmesindeki temel amaç neydi?",
+      "options": {
+        "A": "Ticaret yapmak",
+        "B": "Ailesiyle birlikte oraya taşınmak",
+        "C": "Taif halkını İslam'a davet etmek ve destek aramak",
+        "D": "Bir savaş başlatmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "question": "Hz. Muhammed (s.a.v.), İslam'ı yaymaya başladığında ilk Müslümanlar arasında ilk erkek Müslüman olarak bilinen kişi kimdir?",
+      "options": {
+        "A": "Hz. Hamza",
+        "B": "Hz. Ömer",
+        "C": "Hz. Ebû Bekir",
+        "D": "Hz. Ali"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 31,
+      "question": "Birinci Akabe Biatı'nda Medine'den gelen Müslümanlar, Hz. Peygamber'e (s.a.v.) aşağıdaki konulardan hangisinde söz VERMEMİŞTİR?",
+      "options": {
+        "A": "Hırsızlık yapmamak",
+        "B": "Zina etmemek",
+        "C": "Müşriklerle savaşmak",
+        "D": "Kız çocuklarını öldürmemek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "question": "Aşağıdakilerden hangisi İkinci Akabe Biatı'nın özelliklerinden biridir?",
+      "options": {
+        "A": "Hac mevsiminde gerçekleşmiştir",
+        "B": "6 kişi katılmıştır",
+        "C": "Hz. Peygamber (s.a.v.)'in hicreti bu görüşmede kararlaştırılmıştır",
+        "D": "Medine'nin Yahudi kabileleri de biata katılmıştır"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 33,
+      "question": "Hz. Peygamber (s.a.v.) hicret ederken, müşrikleri kandırmak için kimin yerine kendi yatağına yatmasını istemiştir?",
+      "options": {
+        "A": "Hz. Ömer",
+        "B": "Hz. Osman",
+        "C": "Hz. Ali",
+        "D": "Hz. Ebû Bekir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "question": "Hz. Peygamber (s.a.v.), hicret yolculuğunda müşriklerden saklanmak için kaç gün Sevr Mağarası'nda kalmıştır?",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "7",
+        "D": "10"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "question": "Peygamber Efendimiz'in (s.a.v.) hicret ettiği esnada ilk olarak konakladığı ve burada bir mescit inşa ettiği yer aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Uhud",
+        "B": "Medine",
+        "C": "Mekke",
+        "D": "Kubâ"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 36,
+      "question": "Hz. Peygamber (s.a.v.), hicretten sonra Medine'ye geldiğinde ilk Cuma namazını nerede kılmıştır?",
+      "options": {
+        "A": "Mescid-i Nebevî",
+        "B": "Ranûna Vadisi",
+        "C": "Uhud Dağı",
+        "D": "Kuba Mescidi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "question": "Hz. Peygamber (s.a.v.), Medine'de ilk yaptığı işlerden biri olan Mescid-i Nebevî'nin yapılmasını neden istemiştir?",
+      "options": {
+        "A": "Müslümanların savaş hazırlıklarını yapabilmeleri için",
+        "B": "Müslümanların ibadet edebileceği bir merkez olması için",
+        "C": "Ticaret merkezi olarak kullanılması için",
+        "D": "Yahudilerle görüşmeler yapmak için"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "question": "Medine'ye hicretten sonra Muhacir ve Ensar arasında kurulan kardeşlik bağına ne ad verilmiştir?",
+      "options": {
+        "A": "Hicret",
+        "B": "Kardeşlik Antlaşması",
+        "C": "Muâhât",
+        "D": "Akabe Biatı"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "question": "Medine'de Müslümanlarla Yahudiler arasında imzalanan \"Vatandaşlık Anlaşması\" ile aşağıdakilerden hangisi sağlanmıştır?",
+      "options": {
+        "A": "Müslümanların Yahudilere savaş açması",
+        "B": "Medine'yi dış saldırılara karşı koruma",
+        "C": "Müslümanların Mekke'ye göç etmesi",
+        "D": "Yahudilerin İslam'a girmesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "question": "İslam'ın ilk üniversitesi niteliğinde olup, Medine'de ilim öğrenmek isteyenlerin barındığı mekân aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Suffe",
+        "B": "Darü'n-Nedve",
+        "C": "Kabe",
+        "D": "Mescid-i Aksa"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 41,
+      "question": "Medine'de namaz vakitlerini bildirmek amacıyla aşağıdaki yöntemlerden hangisi sahabeler tarafından önerilmemiştir?",
+      "options": {
+        "A": "Çan çalmak",
+        "B": "Borazan çalmak",
+        "C": "Bayrak asmak",
+        "D": "Davul çalmak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 42,
+      "question": "Hz. Peygamber (s.a.v.)'in ezan rüyasını gördüğünü söyleyen sahabe kimdir?",
+      "options": {
+        "A": "Abdullah b. Mes'ud",
+        "B": "Bilâl-i Habeşî",
+        "C": "Abdullah b. Zeyd",
+        "D": "Ebû Hureyre"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "question": "Medine'de yapılan ilk nüfus sayımında Müslümanların sayısı yaklaşık kaç olarak tespit edilmiştir?",
+      "options": {
+        "A": "1000",
+        "B": "1200",
+        "C": "1500",
+        "D": "2000"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "question": "Hz. Peygamber (s.a.v.) kıblenin değiştirilmesiyle ilgili ayeti hangi namaz sırasında almıştır?",
+      "options": {
+        "A": "Sabah namazı",
+        "B": "Öğle namazı",
+        "C": "Akşam namazı",
+        "D": "Yatsı namazı"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "question": "Bedir Savaşı'nda Müslümanlar kaç kişilik bir ordu ile savaşmıştır?",
+      "options": {
+        "A": "313",
+        "B": "500",
+        "C": "700",
+        "D": "950"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 46,
+      "question": "Bedir Savaşı'nda müşriklerin lideri kimdir?",
+      "options": {
+        "A": "Ebû Cehil",
+        "B": "Ebû Süfyân",
+        "C": "Hâlid b. Velîd",
+        "D": "Utbe b. Rebîa"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 47,
+      "question": "Uhud Savaşı'nda Müslümanlar hangi hataları yaparak savaşı kaybetmişlerdir?",
+      "options": {
+        "A": "Okçuların tepeyi terk etmesi",
+        "B": "Hz. Peygamber'in komutasını dinlememeleri",
+        "C": "Ganimet toplamaya yönelmeleri",
+        "D": "Hepsi"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 48,
+      "question": "Uhud Savaşı'nda Hz. Hamza (r.a.)'ı şehit eden kişi kimdir?",
+      "options": {
+        "A": "Ebû Cehil",
+        "B": "Hâlid b. Velîd",
+        "C": "Vahşî",
+        "D": "Ebû Süfyân"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 49,
+      "question": "Uhud Savaşı'nda Müslümanların yaşadığı 3 temel aşama aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Zafer – Bozguna Uğrama – Savunma",
+        "B": "Geri Çekilme – Direniş – Kaçış",
+        "C": "Plan – Bozguna Uğrama – Antlaşma",
+        "D": "Hepsi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 50,
+      "question": "Uhud Savaşı'nda müşriklerin ordusuna komuta eden kişi kimdir?",
+      "options": {
+        "A": "Ebû Cehil",
+        "B": "Hâlid b. Velîd",
+        "C": "Ebû Süfyân",
+        "D": "İkrime b. Ebû Cehil"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 51,
+      "question": "Hicretten sonra Müslümanlarla Yahudiler arasında yapılan Vatandaşlık Anlaşması'nın amacı nedir?",
+      "options": {
+        "A": "Medine'nin ekonomik kontrolünü Müslümanların eline geçirmek",
+        "B": "Yahudilerin Medine'den çıkarılmasını sağlamak",
+        "C": "Medine'yi dış saldırılara karşı koruyarak barışı sağlamak",
+        "D": "Mekkelilere karşı Yahudilerin desteğini almak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 52,
+      "question": "Aşağıdakilerden hangisi Medine'de yapılan ilk nüfus sayımının temel sebebidir?",
+      "options": {
+        "A": "Müslümanların askeri gücünü belirlemek",
+        "B": "Vergi sistemini oluşturmak",
+        "C": "Kabileler arasındaki nüfus oranlarını dengelemek",
+        "D": "Ticaret yollarını kontrol etmek"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 53,
+      "question": "Aşağıdaki olaylardan hangisi Hz. Peygamber'in (s.a.v.) savaş stratejisinde önemli bir yer tutmuştur?",
+      "options": {
+        "A": "Medine'de Mescid-i Nebevî'nin yapılması",
+        "B": "Hendek Savaşı'nda hendek kazılması",
+        "C": "Hudeybiye Antlaşması'nın imzalanması",
+        "D": "Bedir Savaşı'nda düşmanı takip etmemesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 54,
+      "question": "Bedir Savaşı'nın Müslümanlar açısından en büyük kazanımı ne olmuştur?",
+      "options": {
+        "A": "Mekke'nin fethi",
+        "B": "Müşriklerin tamamen yok edilmesi",
+        "C": "Müslümanların İslam davasına olan güvenlerinin artması",
+        "D": "Mescid-i Nebevî'nin yapılması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 55,
+      "question": "Uhud Savaşı'nda Hz. Peygamber (s.a.v.)'in askerlerini stratejik olarak yerleştirdiği yer neresidir?",
+      "options": {
+        "A": "Ayneyn Tepesi",
+        "B": "Sevr Mağarası",
+        "C": "Ranûna Vadisi",
+        "D": "Kuba Mescidi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 56,
+      "question": "Uhud Savaşı'nın Müslümanlar için en önemli dersi aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Savaşlarda sadece sayıca üstün olan taraf kazanır",
+        "B": "Liderin emirlerine tam bağlılık önemlidir",
+        "C": "Düşmana asla güvenilmemelidir",
+        "D": "Maddi hazırlıklar olmadan savaş kazanılmaz"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 57,
+      "question": "Hz. Peygamber (s.a.v.), hicretten sonra Medine'de sosyal ve ekonomik hayatı düzenlemek için hangi adımı atmıştır?",
+      "options": {
+        "A": "Mescid-i Nebevî'yi inşa ettirmiştir",
+        "B": "Yahudilerle Vatandaşlık Antlaşması yapmıştır",
+        "C": "Muhacirlerle Ensarı kardeş ilan etmiştir",
+        "D": "Hepsi"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 58,
+      "question": "Recî ve Bi'rimaûne olayları ne ile ilgilidir?",
+      "options": {
+        "A": "Müslüman öğretmenlerin tuzağa düşürülerek şehit edilmesi",
+        "B": "Yahudilerle Müslümanlar arasında yapılan ilk savaş",
+        "C": "Müslümanların Medine'de ilk kez ibadet etmesi",
+        "D": "Müslümanların Mekke'ye geri dönmeleri"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 59,
+      "question": "Müşriklerin, Resûlullah (s.a.v.)'i öldürmek için toplandıkları yer neresidir?",
+      "options": {
+        "A": "Darü'n-Nedve",
+        "B": "Mescid-i Nebevî",
+        "C": "Bedir",
+        "D": "Uhud"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 60,
+      "question": "Hicretin 2. yılında gerçekleşen önemli olaylardan biri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Kıblenin Kudüs'ten Kâbe'ye çevrilmesi",
+        "B": "Bedir Savaşı'nın kaybedilmesi",
+        "C": "Mekke'nin fethi",
+        "D": "Recî Olayı'nın yaşanması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 61,
+      "question": "İslam dininde içki ve kumarın yasaklanmasının temel sebebi aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Ekonomik zarara yol açmaları",
+        "B": "Toplumun ahlaki yapısını bozması",
+        "C": "Aklı ve insan ilişkilerini olumsuz etkilemesi",
+        "D": "Bedensel sağlığa zarar vermesi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 62,
+      "question": "Kur'an-ı Kerim'de içkinin yasaklanması kaç aşamada gerçekleşmiştir?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 63,
+      "question": "Hendek Savaşı'nda Müslümanlar hangi strateji ile Medine'yi savunmuştur?",
+      "options": {
+        "A": "Hendeğin etrafına tuzaklar kurarak",
+        "B": "Yahudilerle anlaşma yaparak",
+        "C": "Düşmanı şehre çekerek",
+        "D": "Medine'nin kuzeyine hendek kazarak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 64,
+      "question": "Hendek Savaşı'nda müşriklerin planını bozan ve onların geri çekilmesine sebep olan olay aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Nuaym bin Mes'ûd'un müşrikleri ve Yahudileri birbirine düşürmesi",
+        "B": "Müslümanların ani saldırıya geçmesi",
+        "C": "Peygamberimizin elçi göndermesi",
+        "D": "Yahudilerin Kureyş ile antlaşma yapması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 65,
+      "question": "Hudeybiye Antlaşması'ndan sonra Müslümanların en büyük kazancı ne olmuştur?",
+      "options": {
+        "A": "Mekke'ye giriş izni almış olmaları",
+        "B": "İslam'ın yayılması için barış ortamının sağlanması",
+        "C": "Kureyş'in Müslümanları tamamen kabul etmesi",
+        "D": "Müslümanların daha fazla savaş tecrübesi kazanması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 66,
+      "question": "Hudeybiye Antlaşması'nın maddelerinden biri olan \"Müslüman olup Medine'ye sığınan Mekkeli Kureyşlilerin iade edilmesi\" şartı neden Müslümanlara ağır gelmiştir?",
+      "options": {
+        "A": "Müslüman olanların güvenliğini tehlikeye attığı için",
+        "B": "Mekkeli Müslümanları zor duruma soktuğu için",
+        "C": "Medine'de yaşayan Müslümanların gücünü zayıflattığı için",
+        "D": "İslam'ın yayılmasını yavaşlattığı için"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 67,
+      "question": "Hz. Peygamber (s.a.v.), hükümdarlara gönderdiği mektuplardan birini aşağıdaki hangi hükümdara göndermemiştir?",
+      "options": {
+        "A": "İran Kisrası",
+        "B": "Habeş Kralı Necâşi",
+        "C": "Çin İmparatoru",
+        "D": "Bizans İmparatoru"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 68,
+      "question": "Mûte Savaşı'nın temel sebebi aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Peygamberimizin elçisinin öldürülmesi",
+        "B": "Mekkelilerin Müslümanlara saldırması",
+        "C": "Yahudilerin Müslümanları kandırması",
+        "D": "Bizanslıların Müslümanlarla ticareti yasaklaması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 69,
+      "question": "Mûte Savaşı'nda İslam ordusunun komutanları hangi sırayla şehit düşmüştür?",
+      "options": {
+        "A": "Câfer bin Ebû Talib → Zeyd bin Hârise → Abdullah bin Revaha",
+        "B": "Abdullah bin Revaha → Câfer bin Ebû Talib → Zeyd bin Hârise",
+        "C": "Zeyd bin Hârise → Câfer bin Ebû Talib → Abdullah bin Revaha",
+        "D": "Abdullah bin Revaha → Zeyd bin Hârise → Câfer bin Ebû Talib"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 70,
+      "question": "Mûte Savaşı'nda ordunun başına geçen ve savaşın seyrini değiştiren komutan kimdir?",
+      "options": {
+        "A": "Hz. Ömer",
+        "B": "Hz. Ali",
+        "C": "Hâlid bin Velid",
+        "D": "Hz. Osman"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 71,
+      "question": "Mekke'nin fethinin nedeni aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Mekkelilerin Müslüman olması",
+        "B": "Hudeybiye Antlaşması'nın Kureyş tarafından bozulması",
+        "C": "Hz. Peygamber'in (s.a.v.) savaş istemesi",
+        "D": "Kâbe'yi putlardan temizlemek için"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 72,
+      "question": "Mekke'nin fethi sırasında Hz. Peygamber (s.a.v.), Ebû Süfyân'a ne vaat etmiştir?",
+      "options": {
+        "A": "Kendi yerine halife olması",
+        "B": "Mekke'nin yönetimini alması",
+        "C": "Evine sığınanların güvende olacağı",
+        "D": "Müslüman olduktan sonra büyük bir servet kazanacağı"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 73,
+      "question": "Hz. Peygamber (s.a.v.), Tebük Seferi'ni neden düzenlemiştir?",
+      "options": {
+        "A": "Bizans'ın saldırı hazırlığı yaptığı haberi gelince",
+        "B": "Müslümanların ticaret yollarını güvence altına almak için",
+        "C": "Medine'deki münafıklarla mücadele etmek için",
+        "D": "Arap kabilelerini cezalandırmak için"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 74,
+      "question": "Tebük Seferi'ne katılan orduya hangi isim verilmiştir?",
+      "options": {
+        "A": "Ceyşü'l-Fetih",
+        "B": "Ceyşü'l-Usre",
+        "C": "Ceyşü's-Selam",
+        "D": "Ceyşü'l-Hilal"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 75,
+      "question": "Veda Hutbesi'nde Hz. Peygamber (s.a.v.) özellikle hangi konuları vurgulamıştır?",
+      "options": {
+        "A": "Savaşın gerekliliği",
+        "B": "Kadın hakları ve eşitlik",
+        "C": "Köleliğin devam etmesi",
+        "D": "Ticaret kuralları"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 76,
+      "question": "Veda Hutbesi'nde Müslümanlara hitaben \"Bugün, dininizi ikmal ettim, size nimetimi tamamladım.\" ayeti hangi surede geçmektedir?",
+      "options": {
+        "A": "Al-i İmran",
+        "B": "Mâide",
+        "C": "Enfal",
+        "D": "Yusuf"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 77,
+      "question": "Hz. Peygamber (s.a.v.)'in son gazası aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Mekke'nin Fethi",
+        "B": "Tebük Seferi",
+        "C": "Huneyn Savaşı",
+        "D": "Hendek Savaşı"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 78,
+      "question": "Hudeybiye Antlaşması'nın uzun vadede Müslümanlara sağladığı en büyük avantaj ne olmuştur?",
+      "options": {
+        "A": "Mekke'nin fethine zemin hazırlaması",
+        "B": "Müslümanların askeri güç kazanması",
+        "C": "Kâbe'de serbestçe ibadet edebilme hakkı",
+        "D": "Müslümanların Mekke'ye yerleşmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 79,
+      "question": "Hendek Savaşı'nda Yahudiler hangi tarafı destekleyerek Müslümanlara ihanet etmişlerdir?",
+      "options": {
+        "A": "Mekkeli müşrikler",
+        "B": "Bizanslılar",
+        "C": "İran Kisrası",
+        "D": "Habeşistanlılar"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 80,
+      "question": "Peygamber Efendimiz'in (s.a.v.) ilk ezan okunmasını emretmesine vesile olan olay nedir?",
+      "options": {
+        "A": "Namaz vakitlerini duyurma ihtiyacı",
+        "B": "Yahudilerin ezan istemesi",
+        "C": "Müslümanların cami yerine toplanamaması",
+        "D": "Namaz vakitlerinin unutulması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 81,
+      "question": "Hz. Peygamber (s.a.v.), hükümdarlara İslam'a davet mektuplarını hangi mühürle mühürlemiştir?",
+      "options": {
+        "A": "\"Allah Resulü Muhammed\"",
+        "B": "\"Lebbeyk Allahümme Lebbeyk\"",
+        "C": "\"Bismillahirrahmanirrahim\"",
+        "D": "\"Muhammed bin Abdullah\""
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 82,
+      "question": "Müslümanlar ilk nüfus sayımını hangi amaçla yapmıştır?",
+      "options": {
+        "A": "İslam ordusunun gücünü belirlemek için",
+        "B": "Zekât sistemini oluşturmak için",
+        "C": "Medine'deki Müslümanları tespit etmek için",
+        "D": "Namaz vakitlerini belirlemek için"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 83,
+      "question": "Bedir Savaşı'ndan sonra Müslümanların esirler için aldığı karar neydi?",
+      "options": {
+        "A": "Fidye karşılığı serbest bırakmak",
+        "B": "Hemen öldürmek",
+        "C": "Savaş tazminatı almak",
+        "D": "Medine'de zorunlu çalıştırmak"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 84,
+      "question": "Uhud Savaşı'nda Müslümanların mağlubiyetine sebep olan en büyük hata nedir?",
+      "options": {
+        "A": "Okçuların emri dinlemeyip yerlerini terk etmeleri",
+        "B": "Müşriklerin üstün teknoloji kullanması",
+        "C": "Müslümanların savaş planı yapmaması",
+        "D": "Medine'nin savunmasız bırakılması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 85,
+      "question": "Ashab-ı Suffe, hangi alanda eğitim görmüştür?",
+      "options": {
+        "A": "Ticaret",
+        "B": "Astronomi",
+        "C": "İslam ilimleri ve Kur'an eğitimi",
+        "D": "Savaş stratejileri"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 86,
+      "question": "Veda Hutbesi'nde Hz. Peygamber (s.a.v.), hangi konunun tamamen kaldırıldığını açıklamıştır?",
+      "options": {
+        "A": "Kölelik",
+        "B": "Kan davaları ve faiz",
+        "C": "Tüccar vergileri",
+        "D": "Kadınların miras hakkı"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 87,
+      "question": "Tebük Seferi sırasında Müslümanların yaşadığı en büyük zorluk neydi?",
+      "options": {
+        "A": "Şiddetli yaz sıcakları ve susuzluk",
+        "B": "Bizans'ın büyük ordusuyla karşılaşmaları",
+        "C": "Münafıkların isyanı",
+        "D": "Mekkelilerin ihanet etmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 88,
+      "question": "Peygamberimiz (s.a.v.), hangi olay sonrası İslam'ın en büyük yayılma dönemine girdiğini açıklamıştır?",
+      "options": {
+        "A": "Hudeybiye Antlaşması",
+        "B": "Hendek Savaşı",
+        "C": "Bedir Savaşı",
+        "D": "Mekke'nin Fethi"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 89,
+      "question": "Hz. Peygamber'in (s.a.v.) \"Allah'ın kılıcı\" unvanını verdiği sahabe kimdir?",
+      "options": {
+        "A": "Hz. Ömer",
+        "B": "Hâlid bin Velid",
+        "C": "Hz. Ali",
+        "D": "Zübeyr bin Avvam"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 90,
+      "question": "Hicret'in ardından Medine'de Müslümanlar ile Yahudiler arasında imzalanan vatandaşlık anlaşmasına ne ad verilir?",
+      "options": {
+        "A": "Hudeybiye Antlaşması",
+        "B": "Medine Vesikası",
+        "C": "Yahudi Antlaşması",
+        "D": "Hicret Antlaşması"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
