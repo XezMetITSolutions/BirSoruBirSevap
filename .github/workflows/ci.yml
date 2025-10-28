@@ -60,3 +60,41 @@ jobs:
         echo "Linting process completed"
         # Add PHPStan or PHPCS here if needed
 
+  deploy:
+    name: FTP Deployment
+    runs-on: ubuntu-latest
+    needs: tests
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Install Composer dependencies
+      run: composer install --no-dev --prefer-dist --no-progress --no-interaction
+    
+    - name: Deploy to FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./
+        server-dir: /
+        dangerous-clean-slate: false
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/.github/**
+          **/node_modules/**
+          **/vendor/composer/**
+          **/vendor/tcpdf/**
+          **/TCPDF-main/**
+          .gitignore
+          .github
+          composer.json
+          composer.lock
+          package.json
+          README.md
+          **/*.md
+
