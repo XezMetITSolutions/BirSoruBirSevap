@@ -5,6 +5,7 @@ Modern, kullanıcı dostu bir soru-cevap platformu. Öğrenciler için alıştı
 > 🚀 **Otomatik Deployment**: Bu proje GitHub Actions ile otomatik FTP deployment kullanmaktadır.
 > 📅 Test deployment: 2025-01-07
 > ✅ Passive mode enabled - Veri iletimi düzeltildi
+> 🔧 Using lftp for reliable FTP transfers
 
 ## 🚀 Özellikler
 
