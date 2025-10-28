@@ -1,0 +1,61 @@
+{
+  "name": "Bir Soru Bir Sevap - Eğitim Platformu",
+  "short_name": "Bir Soru Bir Sevap",
+  "description": "Modern, kullanıcı dostu bir soru-cevap platformu. Öğrenciler için alıştırma modu, öğretmenler için sınav oluşturma sistemi.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#068567",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "shortcuts": [
+    {
+      "name": "Alıştırma Başlat",
+      "short_name": "Alıştırma",
+      "description": "Hemen alıştırma başlat",
+      "url": "/practice.php",
+      "icons": [
+        {
+          "src": "logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Sınav Oluştur",
+      "short_name": "Sınav",
+      "description": "Yeni sınav oluştur",
+      "url": "/exam.php",
+      "icons": [
+        {
+          "src": "logo.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
+

@@ -25,6 +25,20 @@ $totalCategories = array_sum(array_map('count', $categories));
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bir Soru Bir Sevap - Modern Eğitim Platformu</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#068567">
+    <meta name="description" content="Modern, kullanıcı dostu bir soru-cevap platformu. Öğrenciler için alıştırma modu, öğretmenler için sınav oluşturma sistemi.">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="logo.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Bir Soru Bir Sevap">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" href="logo.png">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -1462,6 +1476,47 @@ $totalCategories = array_sum(array_map('count', $categories));
                 openOverlay(href);
             }, true);
         });
+    </script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+            
+            // PWA Install Prompt
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                
+                // Install butonu gösterebilirsiniz
+                const installButton = document.getElementById('install-pwa-button');
+                if (installButton) {
+                    installButton.style.display = 'block';
+                    installButton.addEventListener('click', async () => {
+                        deferredPrompt.prompt();
+                        const { outcome } = await deferredPrompt.userChoice;
+                        console.log(`User response: ${outcome}`);
+                        deferredPrompt = null;
+                        installButton.style.display = 'none';
+                    });
+                }
+            });
+            
+            window.addEventListener('appinstalled', () => {
+                console.log('PWA was installed');
+                deferredPrompt = null;
+            });
+        }
     </script>
 </body>
 </html>
