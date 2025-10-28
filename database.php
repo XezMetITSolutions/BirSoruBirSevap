@@ -7,12 +7,23 @@ class Database {
     private static $instance = null;
     private $connection;
     
-    private $host = 'localhost';
-    private $dbname = 'd0449c07';
-    private $username = 'd0449c07';
-    private $password = '1528797Mb';
+    private $host;
+    private $dbname;
+    private $username;
+    private $password;
     
     private function __construct() {
+        // Environment variables veya config kullan
+        $this->host = getenv('DB_HOST') ?: (defined('DB_HOST') ? DB_HOST : 'localhost');
+        $this->dbname = getenv('DB_NAME') ?: (defined('DB_NAME') ? DB_NAME : '');
+        $this->username = getenv('DB_USER') ?: (defined('DB_USER') ? DB_USER : '');
+        $this->password = getenv('DB_PASS') ?: (defined('DB_PASS') ? DB_PASS : '');
+        
+        // Güvenlik: Boş bilgileri kontrol et
+        if (empty($this->dbname) || empty($this->username)) {
+            die("Veritabanı yapılandırması eksik! Lütfen .env dosyasını kontrol edin.");
+        }
+        
         try {
             $this->connection = new PDO(
                 "mysql:host={$this->host};dbname={$this->dbname};charset=utf8mb4",
@@ -21,7 +32,9 @@ class Database {
                 [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                    PDO::ATTR_EMULATE_PREPARES => false
+                    PDO::ATTR_EMULATE_PREPARES => false,
+                    PDO::ATTR_PERSISTENT => false, // Connection pooling için false
+                    PDO::ATTR_TIMEOUT => 10 // 10 saniye timeout
                 ]
             );
         } catch (PDOException $e) {
