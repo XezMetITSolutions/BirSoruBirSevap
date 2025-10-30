@@ -292,7 +292,17 @@
 
             <div class="contact-form">
                 <h3><i class="fas fa-paper-plane"></i> Mesaj Gönder</h3>
-                <form>
+                <?php if (isset($_GET['success']) && $_GET['success'] === '1'): ?>
+                <div style="background:#d1fae5;color:#065f46;border:1px solid #34d399;padding:12px 14px;border-radius:8px;margin-bottom:16px;">
+                    Mesajınız alındı. En kısa sürede sizinle iletişime geçeceğiz.
+                </div>
+                <?php endif; ?>
+                <?php if (isset($_GET['error']) && $_GET['error'] === '1'): ?>
+                <div style="background:#fee2e2;color:#991b1b;border:1px solid #f87171;padding:12px 14px;border-radius:8px;margin-bottom:16px;">
+                    Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.
+                </div>
+                <?php endif; ?>
+                <form method="post" action="contact_submit.php" novalidate>
                     <div class="form-group">
                         <label for="name">Ad Soyad</label>
                         <input type="text" id="name" name="name" required>
@@ -398,11 +408,7 @@
     </footer>
 
     <script>
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Mesajınız alındı! En kısa sürede size dönüş yapacağız.');
-        });
+        // Basit HTML5 doğrulama için placeholder
     </script>
 </body>
 </html>

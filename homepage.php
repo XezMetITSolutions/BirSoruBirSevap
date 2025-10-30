@@ -894,7 +894,7 @@ $totalCategories = array_sum(array_map('count', $categories));
                 <li><a href="#features" id="navFeatures">Özellikler</a></li>
                 <li><a href="#stats" id="navStats">İstatistikler</a></li>
                 <li><a href="#about" id="navAbout">Hakkımızda</a></li>
-                <li><a href="#contact" id="navContact">İletişim</a></li>
+                <li><a href="contact.php" id="navContact">İletişim</a></li>
             </ul>
             <div class="nav-cta">
                 <button id="langToggle" class="btn btn-secondary" style="padding:0.5rem 0.9rem;">DE</button>
