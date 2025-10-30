@@ -565,6 +565,14 @@ $selectedBank = $_GET['bank'] ?? '';
         .form-group select:focus { border-color:var(--primary); box-shadow:0 0 0 3px rgba(10,160,124,.12); }
         .start-button { background:linear-gradient(135deg,var(--primary),var(--primary-dark)); border-radius:14px; padding:16px; font-weight:800; letter-spacing:.2px; box-shadow:0 20px 40px rgba(6,122,95,.35); }
         .start-button:hover:not(:disabled) { transform: translateY(-2px); }
+        /* Yapışkan özet ve başlat butonu çubuğu */
+        .footer-bar { display:flex; align-items:center; gap:10px; padding:10px 12px; border-top:1px solid var(--border); margin-top: 14px; }
+        .footer-bar .badge { background:#f8fafc; border:1px solid var(--border); border-radius:999px; padding:8px 12px; font-size:.9rem; color:var(--ink); }
+        .footer-bar .spacer { flex:1; }
+        @media (max-width: 1024px){
+            .footer-bar { position: sticky; bottom: 10px; background: rgba(255,255,255,.95); backdrop-filter: blur(10px); border:1px solid var(--border); border-radius: 14px; box-shadow: 0 10px 28px rgba(2,6,23,.10); padding: 10px; }
+            .start-button { width:100%; padding:14px; border-radius:12px; }
+        }
         /* Büyük ekranlarda kartın maksimum genişliği hoş görünüm için */
         @media (min-width: 1280px){ .container { max-width: 1200px; margin-left:auto; margin-right:auto; } }
         /* Search input on top of category list */
@@ -600,6 +608,9 @@ $selectedBank = $_GET['bank'] ?? '';
             .container { margin-top: 12px; padding: 0; }
             .page-header { margin-bottom: 20px; }
             .page-title { font-size: 1.8em; }
+            /* Mobil basit arayüz iyileştirmeleri */
+            #mobileSimple select { padding: 14px; border-radius: 12px; font-size: 1.05rem; }
+            #mobileSimple .start-button, #mStart { width:100%; padding: 16px; border-radius: 12px; }
         }
     </style>
 </head>

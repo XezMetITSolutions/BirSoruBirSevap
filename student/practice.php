@@ -426,14 +426,29 @@ $_SESSION['practice_current_question'] = 0;
             justify-content: space-between;
             align-items: center;
             margin-top: 30px;
+            gap: 12px;
+        }
+
+        /* Alt yapışkan gezinme çubuğu (tablet/telefon) */
+        @media (max-width: 1024px) {
+            .navigation {
+                position: sticky;
+                bottom: 10px;
+                background: rgba(255,255,255,0.92);
+                backdrop-filter: blur(10px);
+                border: 1px solid #e1e8ed;
+                border-radius: 14px;
+                padding: 10px;
+                box-shadow: 0 10px 28px rgba(0,0,0,.08);
+            }
         }
 
         .btn {
             background: #3498db;
             color: white;
             border: none;
-            padding: 15px 30px;
-            border-radius: 25px;
+            padding: 14px 22px;
+            border-radius: 14px;
             cursor: pointer;
             font-size: 1em;
             font-weight: 600;
@@ -528,8 +543,8 @@ $_SESSION['practice_current_question'] = 0;
             .options { gap: 10px; }
             .option { padding: 12px; }
             .option-letter { width: 28px; height: 28px; }
-            .navigation { flex-direction: column; gap: 12px; }
-            .btn { padding: 12px 18px; border-radius: 14px; }
+            .navigation { flex-direction: column; gap: 10px; }
+            .btn { padding: 14px; border-radius: 12px; width: 100%; }
             .top-bar { position: sticky; top: 6px; gap: 10px; padding: 8px 10px; }
             /* Gereksiz öğeleri gizle */
             .back-btn { display: none; }
@@ -603,7 +618,12 @@ $_SESSION['practice_current_question'] = 0;
             .user-info > div { max-width: 60vw; }
         }
         /* Kopya önleme: metin seçimi ve çağrı menülerini engelle */
-        html, body { -webkit-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; }
+        html, body { -webkit-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+
+        /* Hareket azaltma tercihi olanlar için animasyonları hafiflet */
+        @media (prefers-reduced-motion: reduce) {
+            * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+        }
     </style>
 </head>
 <body>
