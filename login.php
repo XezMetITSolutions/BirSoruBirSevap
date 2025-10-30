@@ -13,11 +13,12 @@ if ($auth->isLoggedIn()) {
 }
 
 $error = '';
+$rememberedUsername = isset($_COOKIE['remember_username']) ? $_COOKIE['remember_username'] : '';
 
 if ($_POST) {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
-    
+    $remember = isset($_POST['remember']) && $_POST['remember'] === 'on';
     // Veritabanından kullanıcıyı kontrol et
     try {
         $users = $auth->getAllUsers();
@@ -28,6 +29,14 @@ if ($_POST) {
         }
         
         if ($userRole && $auth->login($username, $password, $userRole)) {
+            // Beni hatırla
+            if ($remember) {
+                setcookie('remember_username', $username, time() + (60 * 60 * 24 * 30), '/'); // 30 gün
+            } else {
+                if (isset($_COOKIE['remember_username'])) {
+                    setcookie('remember_username', '', time() - 3600, '/');
+                }
+            }
             // Şifre değiştirme kontrolü
             $user = $auth->getUser();
             if ($user && ($user['must_change_password'] ?? false)) {
@@ -208,7 +217,7 @@ if ($_POST) {
             <div class="form-group">
                 <label for="username" id="labelUser">Kullanıcı Adı:</label>
                 <input type="text" id="username" name="username" required 
-                       placeholder="Kullanıcı adınızı girin" id="phUser">
+                       placeholder="Kullanıcı adınızı girin" id="phUser" value="<?php echo htmlspecialchars($rememberedUsername); ?>">
             </div>
 
             <div class="form-group">
@@ -217,7 +226,10 @@ if ($_POST) {
                        placeholder="Şifrenizi girin" id="phPass">
             </div>
 
-            
+            <div class="form-group" style="display:flex;align-items:center;gap:8px;">
+                <input type="checkbox" id="remember" name="remember" <?php echo $rememberedUsername ? 'checked' : ''; ?>>
+                <label for="remember" id="labelRemember" style="margin:0;cursor:pointer;">Beni hatırla</label>
+            </div>
 
             <button type="submit" class="btn" id="btnLogin">Giriş Yap</button>
         </form>
@@ -257,6 +269,8 @@ if ($_POST) {
         (function(){
             const tr = { sub:'Modern Eğitim Platformu', user:'Kullanıcı Adı:', pass:'Şifre:', phUser:'Kullanıcı adınızı girin', phPass:'Şifrenizi girin', login:'Giriş Yap', info:'💡 Bilgi', createLabel:'Hesap Oluşturma:', createText:'Yeni hesap oluşturmak için eğitmeninizle iletişime geçin.' };
             const de = { sub:'Moderne Lernplattform', user:'Benutzername:', pass:'Passwort:', phUser:'Benutzernamen eingeben', phPass:'Passwort eingeben', login:'Anmelden', info:'💡 Hinweis', createLabel:'Kontoerstellung:', createText:'Für ein neues Konto wenden Sie sich an Ihre Lehrkraft.' };
+            const trRemember = 'Beni hatırla';
+            const deRemember = 'Angemeldet bleiben';
             function setText(sel, text){ const el=document.querySelector(sel); if(!el) return; if(el.tagName==='INPUT'){ el.setAttribute('placeholder', text); } else { el.textContent = text; } }
             document.addEventListener('DOMContentLoaded', function(){
                 const lang = localStorage.getItem('lang')||'tr'; const d = lang==='de'?de:tr;
@@ -269,6 +283,7 @@ if ($_POST) {
                 setText('#infoTitle', d.info);
                 setText('#createLabel', d.createLabel);
                 setText('#createText', d.createText);
+                const rem = document.getElementById('labelRemember'); if (rem) rem.textContent = (lang==='de'?deRemember:trRemember);
             });
         })();
     </script>
