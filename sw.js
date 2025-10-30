@@ -50,6 +50,14 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
+    const reqUrl = new URL(event.request.url);
+    // chrome-extension://, file:// vb. şemaları ve üçüncü taraf istekleri cache'leme
+    const isHttp = reqUrl.protocol === 'http:' || reqUrl.protocol === 'https:';
+    const isSameOrigin = reqUrl.origin === self.location.origin;
+    if (!isHttp) {
+        return;
+    }
+
     event.respondWith(
         caches.match(event.request)
             .then((response) => {
@@ -68,9 +76,12 @@ self.addEventListener('fetch', (event) => {
                     // Response'u klonla (stream sadece bir kez okunabilir)
                     const responseToCache = response.clone();
 
-                    caches.open(CACHE_NAME).then((cache) => {
-                        cache.put(event.request, responseToCache);
-                    });
+                    // Sadece aynı origin istekleri cache'e yaz
+                    if (isSameOrigin) {
+                        caches.open(CACHE_NAME).then((cache) => {
+                            cache.put(event.request, responseToCache);
+                        });
+                    }
 
                     return response;
                 }).catch(() => {

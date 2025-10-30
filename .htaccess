@@ -1,7 +1,13 @@
 # Basit güvenlik kuralları
 Options -Indexes
 
-# Hassas dosyaları gizle
+# PWA manifest istisnası (manifest.json erişimine izin ver)
+<Files "manifest.json">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Hassas JSON dosyalarını gizle (manifest hariç)
 <Files "*.json">
     Order Allow,Deny
     Deny from all
