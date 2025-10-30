@@ -32,9 +32,15 @@ if ($_POST) {
             // Beni hatırla
             if ($remember) {
                 setcookie('remember_username', $username, time() + (60 * 60 * 24 * 30), '/'); // 30 gün
+                // Otomatik giriş için hafif kalıcı cookie (demo amaçlı)
+                $payload = base64_encode(json_encode(['u'=>$username, 'r'=>$userRole]));
+                setcookie('remember_login', $payload, time() + (60 * 60 * 24 * 30), '/');
             } else {
                 if (isset($_COOKIE['remember_username'])) {
                     setcookie('remember_username', '', time() - 3600, '/');
+                }
+                if (isset($_COOKIE['remember_login'])) {
+                    setcookie('remember_login', '', time() - 3600, '/');
                 }
             }
             // Şifre değiştirme kontrolü

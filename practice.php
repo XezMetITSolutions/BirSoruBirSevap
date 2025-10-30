@@ -199,9 +199,9 @@ $progress = $totalQuestions > 0 ? round((($currentQuestionIndex + 1) / $totalQue
         }
 
         .container {
-            max-width: 800px;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 16px;
         }
 
         .header {
@@ -366,16 +366,17 @@ $progress = $totalQuestions > 0 ? round((($currentQuestionIndex + 1) / $totalQue
             justify-content: space-between;
             align-items: center;
             margin-top: 30px;
+            gap: 12px;
         }
 
         .btn {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
+            padding: 14px 22px;
+            border-radius: 14px;
             cursor: pointer;
-            font-size: 1em;
+            font-size: 1rem;
             font-weight: 600;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -426,9 +427,17 @@ $progress = $totalQuestions > 0 ? round((($currentQuestionIndex + 1) / $totalQue
             opacity: 0.9;
         }
 
+        /* Tablet ve telefonlar için gelişmiş responsive */
+        @media (max-width: 1024px) {
+            .container { padding: 16px 12px; }
+            .question-card { padding: 20px; }
+            .question-text { font-size: 1.1em; }
+            .option { padding: 14px; }
+        }
+
         @media (max-width: 768px) {
             .container {
-                padding: 10px;
+                padding: 12px 10px;
             }
             
             .question-header {
@@ -438,13 +447,27 @@ $progress = $totalQuestions > 0 ? round((($currentQuestionIndex + 1) / $totalQue
             
             .controls {
                 flex-direction: column;
-                gap: 15px;
+                gap: 10px;
             }
             
             .stats {
                 flex-direction: column;
                 gap: 10px;
             }
+            .btn { width: 100%; text-align: center; padding: 14px; border-radius: 12px; }
+            .short-answer-input { padding: 14px; font-size: 1rem; }
+            .option input[type="radio"], .option input[type="checkbox"] { transform: scale(1.1); }
+            /* Altta yapışkan kontrol çubuğu */
+            .controls.sticky-mobile { position: sticky; bottom: 8px; background: rgba(255,255,255,0.9); backdrop-filter: blur(8px); padding: 8px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+        }
+
+        /* Çok küçük ekranlar için kompaktlaştırma */
+        @media (max-width: 400px) {
+            .question-card { padding: 14px; border-radius: 12px; }
+            .question-text { font-size: 1rem; line-height: 1.5; }
+            .option { padding: 12px; gap: 10px; }
+            .option-label { min-width: 24px; }
+            .btn { padding: 12px; font-size: .95rem; }
         }
     </style>
 </head>
@@ -507,7 +530,7 @@ $progress = $totalQuestions > 0 ? round((($currentQuestionIndex + 1) / $totalQue
                         <?php endif; ?>
                     </div>
 
-                    <div class="controls">
+                    <div class="controls sticky-mobile">
                         <button type="button" class="btn btn-secondary" id="prev-btn" 
                                 <?php echo $currentQuestionIndex === 0 ? 'disabled' : ''; ?>>
                             ← Önceki

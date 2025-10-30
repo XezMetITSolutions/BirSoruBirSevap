@@ -66,8 +66,20 @@ define('LOG_ERRORS', true); // Hataları logla
 // Saat dilimi ayarı (Avusturya)
 date_default_timezone_set('Europe/Vienna');
 
-// Oturum başlat
+// Oturum başlat (uzatılmış cookie ömrü ile)
 if (session_status() === PHP_SESSION_NONE) {
+    $lifetime = 60 * 60 * 24 * 7; // 7 gün
+    if (PHP_VERSION_ID >= 70300) {
+        session_set_cookie_params([
+            'lifetime' => $lifetime,
+            'path' => '/',
+            'secure' => isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on',
+            'httponly' => true,
+            'samesite' => 'Lax',
+        ]);
+    } else {
+        session_set_cookie_params($lifetime, '/');
+    }
     session_start();
 }
 
