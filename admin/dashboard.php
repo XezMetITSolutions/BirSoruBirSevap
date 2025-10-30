@@ -575,6 +575,9 @@ $errorCount = count($errors);
                     <a href="reports.php" class="btn btn-success" id="btnReports">
                         📈 Raporlar
                     </a>
+                    <a href="student_progress.php" class="btn" id="btnStudentProgress">
+                        🎓 Öğrenci Gelişimi
+                    </a>
                     <a href="load_questions.php" class="btn btn-warning" id="btnLoadQuestions">
                         📚 Soru Yükleme
                     </a>
@@ -688,6 +691,7 @@ $errorCount = count($errors);
                 mainTitle:'🎛️ Sistem Yönetimi', mainDesc:'Sistem durumu ve yönetim araçlarına hızlı erişim',
                 btnUsers:'👥 Kullanıcı Yönetimi', btnSettings:'⚙️ Sistem Ayarları', btnReports:'📈 Raporlar',
                 btnLoadQuestions:'📚 Soru Yükleme', btnReload:'🔄 Hızlı Yenile', btnHome:'🏠 Ana Sayfa',
+                btnStudentProgress:'🎓 Öğrenci Gelişimi',
                 errorTitle:'⚠️ Sistem Hataları', sidebarTitle1:'📚 Soru Bankaları', categoryText:'kategori',
                 noBanksText:'📭 Henüz soru bankası yüklenmemiş', sidebarTitle2:'⚡ Hızlı İşlemler',
                 btnLoadQuestions2:'📚 Soru Yükleme', btnReload2:'🔄 Hızlı Yenile', btnBackup:'💾 Yedekle',
@@ -703,6 +707,7 @@ $errorCount = count($errors);
                 mainTitle:'🎛️ Systemverwaltung', mainDesc:'Schneller Zugang zu Systemstatus und Verwaltungstools',
                 btnUsers:'👥 Benutzerverwaltung', btnSettings:'⚙️ Systemeinstellungen', btnReports:'📈 Berichte',
                 btnLoadQuestions:'📚 Fragen laden', btnReload:'🔄 Schnell aktualisieren', btnHome:'🏠 Startseite',
+                btnStudentProgress:'🎓 Schülerfortschritt',
                 errorTitle:'⚠️ Systemfehler', sidebarTitle1:'📚 Fragendatenbanken', categoryText:'Kategorien',
                 noBanksText:'📭 Noch keine Fragendatenbank geladen', sidebarTitle2:'⚡ Schnelle Aktionen',
                 btnLoadQuestions2:'📚 Fragen laden', btnReload2:'🔄 Schnell aktualisieren', btnBackup:'💾 Sichern',
@@ -735,6 +740,7 @@ $errorCount = count($errors);
                 setText('#btnLoadQuestions', d.btnLoadQuestions);
                 setText('#btnReload', d.btnReload);
                 setText('#btnHome', d.btnHome);
+                const sp=document.getElementById('btnStudentProgress'); if (sp) setText('#btnStudentProgress', d.btnStudentProgress);
                 setText('#errorTitle', d.errorTitle);
                 setText('#sidebarTitle1', d.sidebarTitle1);
                 setText('#categoryText', d.categoryText);
