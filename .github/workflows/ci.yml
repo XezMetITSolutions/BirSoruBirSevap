@@ -78,49 +78,59 @@ jobs:
       with:
         python-version: '3.9'
     
-    - name: Install ftputil
-      run: pip install ftputil
-    
-    - name: Deploy to FTP with Python
+    - name: Deploy to FTP (only changed files)
       env:
         FTP_HOST: ${{ secrets.FTP_SERVER }}
         FTP_USER: ${{ secrets.FTP_USERNAME }}
         FTP_PASS: ${{ secrets.FTP_PASSWORD }}
       run: |
         python3 << 'EOF'
-        import ftputil
-        import os
-        import sys
+        import os, sys, subprocess, ftplib
         
         host = os.environ.get('FTP_HOST')
         user = os.environ.get('FTP_USER')
         password = os.environ.get('FTP_PASS')
         
+        # Değişen dosyaları bul
         try:
-            with ftputil.FTPHost(host, user, password) as ftp:
-                ftp.use_passive_mode = True
-                print(f"Connected to {host}")
-                
-                # Yüklenecek dosyaları tarama
-                exclude = ['.git', '.github', 'node_modules', '.md', 'composer.lock', 'package.json']
-                
-                def should_upload(path):
-                    return not any(ex in path for ex in exclude)
-                
-                for root, dirs, files in os.walk('.'):
-                    for file in files:
-                        local_path = os.path.join(root, file)
-                        if should_upload(local_path):
-                            remote_path = local_path.replace('\\', '/')
-                            print(f"Uploading: {remote_path}")
-                            try:
-                                ftp.upload(local_path, remote_path)
-                            except Exception as e:
-                                print(f"Skipped {remote_path}: {e}")
-                
-                print("FTP upload completed!")
-        except Exception as e:
-            print(f"FTP Error: {e}")
-            sys.exit(1)
+            res = subprocess.run(['git', 'diff', '--name-only', 'HEAD^..HEAD'], capture_output=True, text=True)
+            changed = [p for p in res.stdout.splitlines() if p]
+        except Exception:
+            changed = []
+        if not changed:
+            changed = ['index.php']
+        
+        EXCLUDES = (
+            '.git/', '.github/', 'node_modules/', 'TCPDF-main/', 'vendor/composer/',
+            '.gitignore', '.md', 'README.md', 'composer.lock', 'package.json'
+        )
+        def excluded(p: str) -> bool:
+            p = p.replace('\\', '/')
+            return any(x in p for x in EXCLUDES)
+        files = [p for p in changed if os.path.isfile(p) and not excluded(p)]
+        print('Files to upload:', files)
+        if not files:
+            sys.exit(0)
+        
+        def ensure_dirs(ftp: ftplib.FTP, remote_path: str):
+            parts = remote_path.strip('/').split('/')[:-1]
+            cur = ''
+            for part in parts:
+                cur = f"{cur}/{part}" if cur else part
+                try:
+                    ftp.mkd(cur)
+                except Exception:
+                    pass
+        
+        with ftplib.FTP(host, user, password, timeout=30) as ftp:
+            ftp.set_pasv(True)
+            print('Connected to', host)
+            for local in files:
+                remote = local.replace('\\', '/')
+                ensure_dirs(ftp, remote)
+                with open(local, 'rb') as f:
+                    print('Uploading', remote)
+                    ftp.storbinary(f'STOR {remote}', f)
+        print('Selective FTP upload completed.')
         EOF
 
