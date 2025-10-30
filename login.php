@@ -284,6 +284,26 @@ if ($_POST) {
                 setText('#createLabel', d.createLabel);
                 setText('#createText', d.createText);
                 const rem = document.getElementById('labelRemember'); if (rem) rem.textContent = (lang==='de'?deRemember:trRemember);
+                // LocalStorage fallback: kullanıcı adını hatırla
+                try {
+                    const storedUser = localStorage.getItem('remember_username');
+                    const userInput = document.getElementById('username');
+                    const rememberCb = document.getElementById('remember');
+                    if (storedUser && userInput) {
+                        if (!userInput.value) userInput.value = storedUser;
+                        if (rememberCb) rememberCb.checked = true;
+                    }
+                    const form = document.querySelector('form');
+                    if (form) {
+                        form.addEventListener('submit', function(){
+                            if (rememberCb && rememberCb.checked && userInput) {
+                                localStorage.setItem('remember_username', userInput.value || '');
+                            } else {
+                                localStorage.removeItem('remember_username');
+                            }
+                        });
+                    }
+                } catch(e) { /* ignore */ }
             });
         })();
     </script>
