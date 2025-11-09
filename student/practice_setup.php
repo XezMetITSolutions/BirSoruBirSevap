@@ -109,17 +109,36 @@ $selectedBank = $_GET['bank'] ?? '';
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #068466 0%, #0a9d7a 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(ellipse at top, #0a9d7a 0%, #068466 50%, #055a4a 100%);
             min-height: 100vh;
             color: #333;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
         }
         
         .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px) saturate(180%);
             padding: 20px 0;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 100;
         }
         
         .header-content {
@@ -192,6 +211,8 @@ $selectedBank = $_GET['bank'] ?? '';
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
+            position: relative;
+            z-index: 1;
         }
         
         .page-header {
@@ -200,11 +221,16 @@ $selectedBank = $_GET['bank'] ?? '';
         }
         
         .page-title {
-            font-size: 3em;
+            font-size: clamp(2rem, 5vw, 3.5rem);
             color: white;
             margin-bottom: 15px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            font-weight: 300;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.9) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .page-subtitle {
@@ -215,11 +241,28 @@ $selectedBank = $_GET['bank'] ?? '';
         
         .setup-card {
             background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-radius: 25px;
+            backdrop-filter: blur(20px) saturate(180%);
+            border-radius: 28px;
             padding: 45px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            box-shadow: 
+                0 20px 60px rgba(0,0,0,0.12),
+                0 8px 25px rgba(0,0,0,0.08),
+                inset 0 1px 0 rgba(255,255,255,0.9);
             margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .setup-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #068466, #0a9d7a, #22c55e);
+            border-radius: 28px 28px 0 0;
         }
         
         .setup-grid {
@@ -274,11 +317,11 @@ $selectedBank = $_GET['bank'] ?? '';
         }
         
         .category-item {
-            padding: 25px;
-            border: 2px solid #e1e8ed;
-            border-radius: 18px;
+            padding: 24px;
+            border: 2px solid #e5e7eb;
+            border-radius: 20px;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             background: white;
             position: relative;
             overflow: hidden;
@@ -291,8 +334,8 @@ $selectedBank = $_GET['bank'] ?? '';
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: left 0.5s;
+            background: linear-gradient(90deg, transparent, rgba(10, 160, 124, 0.1), transparent);
+            transition: left 0.6s ease;
         }
         
         .category-item:hover::before {
@@ -300,18 +343,39 @@ $selectedBank = $_GET['bank'] ?? '';
         }
         
         .category-item:hover {
-            border-color: #068466;
-            background: linear-gradient(135deg, #f0f9f7 0%, #e6f7f2 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(6, 132, 102, 0.2);
+            border-color: #0a9d7a;
+            background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 
+                0 20px 40px rgba(10, 160, 124, 0.15),
+                0 8px 16px rgba(10, 160, 124, 0.1);
         }
         
         .category-item.selected {
-            border-color: #068466;
-            background: linear-gradient(135deg, #068466 0%, #0a9d7a 100%);
+            border-color: #0a9d7a;
+            background: linear-gradient(135deg, #0a9d7a 0%, #068466 50%, #055a4a 100%);
             color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(6, 132, 102, 0.3);
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 
+                0 16px 32px rgba(10, 160, 124, 0.3),
+                0 8px 16px rgba(10, 160, 124, 0.2),
+                inset 0 1px 0 rgba(255,255,255,0.2);
+        }
+        
+        .category-item.selected::after {
+            content: '✓';
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 28px;
+            height: 28px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
         }
         
         .category-item h4 {
@@ -340,28 +404,56 @@ $selectedBank = $_GET['bank'] ?? '';
         }
         
         .subcategory-item {
-            padding: 12px 18px;
-            margin: 8px 0;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 0;
+            background: #f9fafb;
+            border-radius: 12px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid #e5e7eb;
             font-size: 0.95em;
-            color: #2c3e50;
+            color: #374151;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .subcategory-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            background: linear-gradient(135deg, #0a9d7a, #068466);
+            transition: width 0.3s ease;
         }
         
         .subcategory-item:hover {
-            background: rgba(6, 132, 102, 0.1);
-            border-color: #068466;
-            transform: translateX(5px);
+            background: #f0fdfa;
+            border-color: #0a9d7a;
+            transform: translateX(4px) scale(1.02);
+            box-shadow: 0 4px 12px rgba(10, 160, 124, 0.15);
         }
         
         .subcategory-item.selected {
-            background: linear-gradient(135deg, #068466 0%, #0a9d7a 100%);
+            background: linear-gradient(135deg, #0a9d7a 0%, #068466 100%);
             color: white;
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(6, 132, 102, 0.3);
+            border-color: #0a9d7a;
+            transform: translateX(4px) scale(1.02);
+            box-shadow: 
+                0 8px 20px rgba(10, 160, 124, 0.3),
+                0 4px 10px rgba(10, 160, 124, 0.2);
+        }
+        
+        .subcategory-item.selected::after {
+            content: '✓';
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+            font-size: 14px;
         }
         
         .form-group {
@@ -378,24 +470,34 @@ $selectedBank = $_GET['bank'] ?? '';
         
         .form-group select {
             width: 100%;
-            padding: 18px;
-            border: 2px solid #e9ecef;
-            border-radius: 15px;
+            padding: 16px 50px 16px 18px;
+            border: 2px solid #e5e7eb;
+            border-radius: 14px;
             font-size: 1.1em;
             background: white;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             appearance: none;
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23068466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"></polyline></svg>');
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%230a9d7a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"></polyline></svg>');
             background-repeat: no-repeat;
             background-position: right 15px center;
-            background-size: 20px;
-            padding-right: 50px;
+            background-size: 22px;
+            font-weight: 500;
+            color: #1f2937;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        
+        .form-group select:hover {
+            border-color: #0a9d7a;
+            box-shadow: 0 4px 12px rgba(10, 160, 124, 0.1);
         }
         
         .form-group select:focus {
             outline: none;
-            border-color: #068466;
-            box-shadow: 0 0 0 3px rgba(6, 132, 102, 0.1);
+            border-color: #0a9d7a;
+            box-shadow: 
+                0 0 0 4px rgba(10, 160, 124, 0.12),
+                0 4px 16px rgba(10, 160, 124, 0.15);
+            transform: translateY(-1px);
         }
         
         .checkbox-group {
@@ -459,18 +561,22 @@ $selectedBank = $_GET['bank'] ?? '';
         
         .start-button {
             width: 100%;
-            padding: 25px;
-            background: linear-gradient(135deg, #068466 0%, #0a9d7a 100%);
+            padding: 20px 30px;
+            background: linear-gradient(135deg, #0a9d7a 0%, #068466 50%, #055a4a 100%);
             color: white;
             border: none;
-            border-radius: 18px;
-            font-size: 1.4em;
-            font-weight: 600;
+            border-radius: 16px;
+            font-size: 1.3em;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             margin-top: 25px;
             position: relative;
             overflow: hidden;
+            letter-spacing: 0.02em;
+            box-shadow: 
+                0 10px 30px rgba(10, 160, 124, 0.3),
+                0 4px 12px rgba(10, 160, 124, 0.2);
         }
         
         .start-button::before {
@@ -480,8 +586,21 @@ $selectedBank = $_GET['bank'] ?? '';
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .start-button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
         }
         
         .start-button:hover::before {
@@ -489,15 +608,22 @@ $selectedBank = $_GET['bank'] ?? '';
         }
         
         .start-button:hover:not(:disabled) {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(6, 132, 102, 0.4);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 
+                0 20px 50px rgba(10, 160, 124, 0.4),
+                0 10px 25px rgba(10, 160, 124, 0.3);
+        }
+        
+        .start-button:active:not(:disabled) {
+            transform: translateY(-2px) scale(0.98);
         }
         
         .start-button:disabled {
-            background: #6c757d;
+            background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
             cursor: not-allowed;
             transform: none;
-            box-shadow: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            opacity: 0.6;
         }
         
         @media (max-width: 768px) {
@@ -566,18 +692,81 @@ $selectedBank = $_GET['bank'] ?? '';
         .start-button { background:linear-gradient(135deg,var(--primary),var(--primary-dark)); border-radius:14px; padding:16px; font-weight:800; letter-spacing:.2px; box-shadow:0 20px 40px rgba(6,122,95,.35); }
         .start-button:hover:not(:disabled) { transform: translateY(-2px); }
         /* Yapışkan özet ve başlat butonu çubuğu */
-        .footer-bar { display:flex; align-items:center; gap:10px; padding:10px 12px; border-top:1px solid var(--border); margin-top: 14px; }
-        .footer-bar .badge { background:#f8fafc; border:1px solid var(--border); border-radius:999px; padding:8px 12px; font-size:.9rem; color:var(--ink); }
+        .footer-bar { 
+            display:flex; 
+            align-items:center; 
+            gap:12px; 
+            padding:16px 20px; 
+            border-top:2px solid #f3f4f6; 
+            margin-top: 20px;
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+        .footer-bar .badge { 
+            background: white; 
+            border: 2px solid #e5e7eb; 
+            border-radius: 12px; 
+            padding: 10px 16px; 
+            font-size: 0.9rem; 
+            color: #374151;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            transition: all 0.2s ease;
+        }
+        .footer-bar .badge:hover {
+            border-color: #0a9d7a;
+            box-shadow: 0 4px 12px rgba(10, 160, 124, 0.15);
+        }
         .footer-bar .spacer { flex:1; }
         @media (max-width: 1024px){
-            .footer-bar { position: sticky; bottom: 10px; background: rgba(255,255,255,.95); backdrop-filter: blur(10px); border:1px solid var(--border); border-radius: 14px; box-shadow: 0 10px 28px rgba(2,6,23,.10); padding: 10px; }
-            .start-button { width:100%; padding:14px; border-radius:12px; }
+            .footer-bar { 
+                position: sticky; 
+                bottom: 16px; 
+                background: rgba(255,255,255,0.98); 
+                backdrop-filter: blur(20px) saturate(180%); 
+                border: 2px solid rgba(255,255,255,0.3); 
+                border-radius: 18px; 
+                box-shadow: 
+                    0 20px 40px rgba(0,0,0,0.12),
+                    0 8px 20px rgba(0,0,0,0.08); 
+                padding: 14px 16px;
+                margin: 0 16px;
+            }
+            .start-button { 
+                width:100%; 
+                padding:18px; 
+                border-radius:14px; 
+                font-size: 1.2em;
+            }
         }
         /* Büyük ekranlarda kartın maksimum genişliği hoş görünüm için */
         @media (min-width: 1280px){ .container { max-width: 1200px; margin-left:auto; margin-right:auto; } }
         /* Search input on top of category list */
-        #searchCategory { width:100%; padding:14px 16px; border:2px solid #e5e7eb; border-radius:14px; font-size:1rem; outline:none; transition:.2s; }
-        #searchCategory:focus { border-color:var(--primary); box-shadow:0 0 0 3px rgba(10,160,124,.12); }
+        #searchCategory { 
+            width:100%; 
+            padding:16px 20px; 
+            border:2px solid #e5e7eb; 
+            border-radius:16px; 
+            font-size:1rem; 
+            outline:none; 
+            transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+            color: #1f2937;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        #searchCategory:hover {
+            border-color: #0a9d7a;
+            box-shadow: 0 4px 12px rgba(10, 160, 124, 0.1);
+        }
+        #searchCategory:focus { 
+            border-color:#0a9d7a; 
+            box-shadow:
+                0 0 0 4px rgba(10,160,124,.12),
+                0 4px 16px rgba(10, 160, 124, 0.15);
+            transform: translateY(-1px);
+        }
 
         /* Hamburger ve mobil menü */
         .hamburger-btn { display:none; background: rgba(6, 132, 102, 0.12); border:2px solid #068466; color:#068466; padding:10px 14px; border-radius:12px; font-weight:700; cursor:pointer; }
