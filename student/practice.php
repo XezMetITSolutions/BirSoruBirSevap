@@ -432,14 +432,22 @@ $_SESSION['practice_current_question'] = 0;
         /* Alt yapışkan gezinme çubuğu (tablet/telefon) */
         @media (max-width: 1024px) {
             .navigation {
-                position: sticky;
-                bottom: 10px;
-                background: rgba(255,255,255,0.92);
-                backdrop-filter: blur(10px);
-                border: 1px solid #e1e8ed;
-                border-radius: 14px;
-                padding: 10px;
-                box-shadow: 0 10px 28px rgba(0,0,0,.08);
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(255,255,255,0.98);
+                backdrop-filter: blur(20px);
+                border-top: 1px solid #e1e8ed;
+                border-radius: 0;
+                padding: 12px 16px;
+                padding-bottom: calc(12px + env(safe-area-inset-bottom));
+                box-shadow: 0 -4px 20px rgba(0,0,0,.1);
+                z-index: 1000;
+                margin: 0;
+            }
+            .container {
+                padding-bottom: calc(80px + env(safe-area-inset-bottom));
             }
         }
 
@@ -517,7 +525,7 @@ $_SESSION['practice_current_question'] = 0;
         @media (max-width: 768px) {
             html, body { width:100%; max-width:100%; overflow-x:hidden; }
             .header-content { flex-direction: column; gap: 12px; padding: 0 12px; }
-            .container { padding: 16px 12px; }
+            .container { padding: 16px 12px; padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
             .practice-header { padding: 16px; border-radius: 12px; }
             .practice-title { font-size: 1.4em; }
             .practice-info { 
@@ -537,19 +545,34 @@ $_SESSION['practice_current_question'] = 0;
                 font-size: .9em; 
                 font-weight: 600;
             }
-            .question-card { padding: 16px; border-radius: 12px; }
+            .question-card { padding: 16px; border-radius: 12px; margin-bottom: 20px; }
             .question-header { flex-direction: column; gap: 12px; text-align: center; }
             .question-text { font-size: 1.05em; }
-            .options { gap: 10px; }
-            .option { padding: 12px; }
-            .option-letter { width: 28px; height: 28px; }
-            .navigation { flex-direction: column; gap: 10px; }
-            .btn { padding: 14px; border-radius: 12px; width: 100%; }
+            .options { gap: 10px; margin-bottom: 20px; }
+            .option { padding: 14px; min-height: 56px; }
+            .option-letter { width: 32px; height: 32px; font-size: 1em; }
+            .navigation { 
+                flex-direction: row; 
+                gap: 8px; 
+                justify-content: space-between;
+                padding: 12px 16px;
+                padding-bottom: calc(12px + env(safe-area-inset-bottom));
+            }
+            .navigation > div { display: none; }
+            .btn { 
+                padding: 16px 20px; 
+                border-radius: 12px; 
+                flex: 1;
+                font-size: 1em;
+                min-height: 52px;
+                font-weight: 600;
+            }
             .top-bar { position: sticky; top: 6px; gap: 10px; padding: 8px 10px; }
             /* Gereksiz öğeleri gizle */
             .back-btn { display: none; }
             .question-type { display: none; }
             .practice-header { display: none; }
+            .progress-bar { margin-bottom: 20px; }
         }
 
         /* Ultra kompakt düzen: küçük telefonlar (≤420px) için */
@@ -564,11 +587,11 @@ $_SESSION['practice_current_question'] = 0;
             .question-number { padding: 6px 10px; }
             .question-type { padding: 6px 10px; font-size: .8em; }
             .question-text { font-size: 1em; margin-bottom: 16px; }
-            .option { padding: 10px; gap: 10px; }
-            .option-letter { width: 24px; height: 24px; font-size: .9em; }
+            .option { padding: 12px; gap: 10px; min-height: 52px; }
+            .option-letter { width: 28px; height: 28px; font-size: .95em; }
             .short-answer { font-size: 1em; padding: 12px; }
-            .btn { padding: 10px 14px; font-size: .95em; border-radius: 12px; }
-            .navigation { gap: 10px; }
+            .btn { padding: 14px 16px; font-size: .95em; border-radius: 12px; min-height: 48px; }
+            .navigation { gap: 8px; padding: 10px 12px; padding-bottom: calc(10px + env(safe-area-inset-bottom)); }
             .progress-bar { height: 8px; }
             .top-bar { top: 4px; gap: 8px; padding: 6px 8px; }
             .timer { padding: 6px 10px; font-size: .95em; }
@@ -577,14 +600,15 @@ $_SESSION['practice_current_question'] = 0;
         /* iPhone 14 Pro Max ve benzeri büyük telefonlar için (≤430px) */
         @media (max-width: 430px) {
             .header-content { padding: 0 8px; }
-            .container { padding: 12px 8px; }
+            .container { padding: 12px 8px; padding-bottom: calc(85px + env(safe-area-inset-bottom)); }
             .practice-header { padding: 12px; }
             .practice-title { font-size: 1.2em; }
-            .question-card { padding: 10px; }
+            .question-card { padding: 12px; margin-bottom: 16px; }
             .question-text { font-size: .95em; line-height: 1.4; }
-            .option { padding: 8px; }
+            .option { padding: 12px; min-height: 50px; }
             .option-text { font-size: .9em; }
-            .btn { padding: 8px 12px; font-size: .9em; }
+            .btn { padding: 14px 16px; font-size: .9em; min-height: 48px; }
+            .navigation { padding: 10px 12px; padding-bottom: calc(10px + env(safe-area-inset-bottom)); }
             .top-bar { padding: 4px 6px; }
             .timer { padding: 4px 8px; font-size: .9em; }
             .progress-mini { height: 6px; }
@@ -618,7 +642,15 @@ $_SESSION['practice_current_question'] = 0;
             .user-info > div { max-width: 60vw; }
         }
         /* Kopya önleme: metin seçimi ve çağrı menülerini engelle */
-        html, body { -webkit-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+        html, body { 
+            -webkit-user-select: none; 
+            -ms-user-select: none; 
+            user-select: none; 
+            -webkit-touch-callout: none; 
+            padding-left: env(safe-area-inset-left); 
+            padding-right: env(safe-area-inset-right);
+            padding-bottom: env(safe-area-inset-bottom);
+        }
 
         /* Hareket azaltma tercihi olanlar için animasyonları hafiflet */
         @media (prefers-reduced-motion: reduce) {

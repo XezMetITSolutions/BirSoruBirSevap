@@ -463,7 +463,11 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Kullanıcı Yönetimi - SuperAdmin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -473,7 +477,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #068567 0%, #055a4a 100%);
             min-height: 100vh;
             color: #1a1a1a;
             position: relative;
@@ -519,7 +523,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background: linear-gradient(90deg, #068567, #27ae60, #3498db, #f39c12);
         }
 
         .header h1 {
@@ -527,7 +531,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
             margin-bottom: 20px;
             font-size: 3.2rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #068567 0%, #055a4a 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -559,7 +563,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         }
 
         .nav-breadcrumb a {
-            color: #667eea;
+            color: #068567;
             text-decoration: none;
             margin-right: 10px;
         }
@@ -591,7 +595,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #068567, #27ae60);
         }
 
         .card:hover {
@@ -631,14 +635,14 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         .form-group input:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+            border-color: #068567;
+            box-shadow: 0 0 0 4px rgba(6, 133, 103, 0.15);
             background: white;
             transform: translateY(-2px);
         }
 
         .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #068567 0%, #055a4a 100%);
             color: white;
             border: none;
             padding: 15px 30px;
@@ -671,7 +675,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 15px 35px rgba(6, 133, 103, 0.4);
         }
 
         .btn-danger {

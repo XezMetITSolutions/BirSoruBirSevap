@@ -60,8 +60,16 @@ $errorCount = count($errors);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Süper Admin Dashboard - Bir Soru Bir Sevap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #068567;
+            --secondary: #3498db;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -74,6 +82,32 @@ $errorCount = count($errors);
             min-height: 100vh;
             color: #333;
         }
+        /* Dark theme overrides */
+        body.dark { background: radial-gradient(1000px 600px at 10% 0%, #0b1220 0%, #0f172a 50%, #0b1220 100%); color: #e2e8f0; }
+        body.dark .header { background: rgba(15,23,42,.7); color: #e2e8f0; border-bottom: 1px solid rgba(226,232,240,.06); }
+        body.dark .logo h1 { background: linear-gradient(135deg, #22c55e 0%, #0ea5e9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        body.dark .user-info { background: rgba(30,41,59,.4); border: 1px solid #1e293b; }
+        body.dark .user-name { color: #f1f5f9; }
+        body.dark .user-role { color: #94a3b8; }
+        body.dark .welcome-section { background: rgba(15,23,42,.7); border:1px solid #1e293b; }
+        body.dark .welcome-title { -webkit-text-fill-color: initial; color: #e2e8f0; background: none; }
+        body.dark .welcome-subtitle { color: #94a3b8; }
+        body.dark .stat-card { background: rgba(15,23,42,.7); border:1px solid #1e293b; }
+        body.dark .stat-number { -webkit-text-fill-color: initial; color: #e2e8f0; background: none; }
+        body.dark .stat-label { color: #94a3b8; }
+        body.dark .main-content { background: rgba(15,23,42,.7); border:1px solid #1e293b; }
+        body.dark .main-content h2 { color: #e2e8f0; }
+        body.dark .main-content p { color: #94a3b8; }
+        body.dark .widget { background: rgba(15,23,42,.7); border:1px solid #1e293b; }
+        body.dark .widget h3 { color: #e2e8f0; }
+        body.dark .bank-item { background: rgba(2,6,23,.35); border:1px solid #1e293b; color: #cbd5e1; }
+        body.dark .bank-item span { color: #94a3b8 !important; }
+        body.dark .btn { color: #0b1220; border: 1px solid #99f6e4; background: #a7f3d0; box-shadow: 0 12px 24px rgba(16,185,129,.25); }
+        body.dark .btn-secondary { background:#e2e8f0; border-color:#cbd5e1; color:#0b1220; }
+        body.dark .btn-success { background:#93c5fd; border-color:#60a5fa; color:#0b1220; }
+        body.dark .btn-warning { background:#fde68a; border-color:#fbbf24; color:#0b1220; }
+        body.dark .btn-danger { background:#fecaca; border-color:#f87171; color:#0b1220; }
+        body.dark .back-btn { color: #cbd5e1; }
 
         .header {
             background: rgba(255, 255, 255, 0.95);
@@ -92,6 +126,8 @@ $errorCount = count($errors);
             justify-content: space-between;
             align-items: center;
         }
+        .theme-toggle { background: rgba(255,255,255,.8); color:#111827; border: 1px solid rgba(0,0,0,.08); padding: 10px 16px; border-radius: 12px; font-weight: 700; cursor: pointer; }
+        body.dark .theme-toggle { background: rgba(30,41,59,.6); color:#e2e8f0; border:1px solid #1e293b; }
 
         .logo {
             display: flex;
@@ -206,6 +242,19 @@ $errorCount = count($errors);
             margin-bottom: 30px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.1);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(6,133,103,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
         }
 
         .welcome-title {
@@ -488,13 +537,158 @@ $errorCount = count($errors);
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            0% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(180deg); }
+            100% { transform: scale(1) rotate(360deg); }
+        }
+
+        /* Enhanced Stats */
+        .stat-progress {
+            width: 100%;
+            height: 6px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+
+        .stat-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+            transition: width 1s ease;
+            animation: progressLoad 2s ease-in-out;
+        }
+
+        @keyframes progressLoad {
+            from { width: 0; }
+        }
+
+        /* Chart Container */
+        .chart-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+
+        body.dark .chart-wrapper {
+            background: rgba(15,23,42,.7);
+            border: 1px solid #1e293b;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        /* Activity Timeline */
+        .activity-timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .activity-timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary), transparent);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: rgba(6, 133, 103, 0.05);
+            border-radius: 12px;
+            border-left: 3px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            background: rgba(6, 133, 103, 0.1);
+            transform: translateX(5px);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px rgba(6, 133, 103, 0.2);
+        }
+
+        body.dark .timeline-item {
+            background: rgba(30, 41, 59, 0.5);
+            border-left-color: #22c55e;
+        }
+
+        body.dark .timeline-item::before {
+            background: #22c55e;
+            border-color: #0f172a;
+        }
+
+        /* Info Cards */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(6, 133, 103, 0.1), rgba(5, 90, 74, 0.05));
+            border-radius: 15px;
+            border: 1px solid rgba(6, 133, 103, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(6, 133, 103, 0.2);
+        }
+
+        .info-card i {
+            font-size: 2em;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .info-card h4 {
+            font-size: 1.8em;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .info-card p {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        body.dark .info-card {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.05));
+            border-color: rgba(34, 197, 94, 0.2);
+        }
+
+        body.dark .info-card i,
+        body.dark .info-card h4 {
+            color: #22c55e;
         }
     </style>
 </head>
-<body>
+<body class="dark">
     <div class="header">
         <div class="header-content">
             <div class="logo">
@@ -512,6 +706,7 @@ $errorCount = count($errors);
                     <div class="user-name"><?php echo htmlspecialchars($user['name']); ?></div>
                     <div class="user-role" id="userRole">👑 Süper Admin</div>
                 </div>
+                <button id="themeToggle" class="theme-toggle" style="margin-right:.5rem;">🌙 Tema</button>
                 <button id="langToggle" class="logout-btn" style="margin-right: 0.5rem; background: rgba(6, 133, 103, 0.1); color: #2c3e50; border: 1px solid rgba(6, 133, 103, 0.3); padding: 10px 20px; border-radius: 25px; text-decoration: none; transition: all 0.3s ease; font-weight: 600; cursor: pointer;">DE</button>
                 <a href="../logout.php" class="logout-btn" id="btnLogout">🚪 Çıkış</a>
             </div>
@@ -540,21 +735,33 @@ $errorCount = count($errors);
                 <div class="stat-icon">📊</div>
                 <div class="stat-number"><?php echo $totalQuestions; ?></div>
                 <div class="stat-label" id="statLabel1">Toplam Soru</div>
+                <div class="stat-progress">
+                    <div class="stat-progress-bar" style="width: <?php echo min(100, ($totalQuestions / 1000) * 100); ?>%;"></div>
+                </div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">📚</div>
                 <div class="stat-number"><?php echo $totalBanks; ?></div>
                 <div class="stat-label" id="statLabel2">Soru Bankası</div>
+                <div class="stat-progress">
+                    <div class="stat-progress-bar" style="width: <?php echo min(100, ($totalBanks / 20) * 100); ?>%;"></div>
+                </div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">📁</div>
                 <div class="stat-number"><?php echo $totalCategories; ?></div>
                 <div class="stat-label" id="statLabel3">Kategori</div>
+                <div class="stat-progress">
+                    <div class="stat-progress-bar" style="width: <?php echo min(100, ($totalCategories / 50) * 100); ?>%;"></div>
+                </div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">⚠️</div>
                 <div class="stat-number"><?php echo $errorCount; ?></div>
                 <div class="stat-label" id="statLabel4">Hata</div>
+                <div class="stat-progress">
+                    <div class="stat-progress-bar" style="width: <?php echo $errorCount > 0 ? 100 : 0; ?>%; background: linear-gradient(90deg, #e74c3c, #c0392b);"></div>
+                </div>
             </div>
         </div>
 
@@ -565,7 +772,31 @@ $errorCount = count($errors);
                     Sistem durumu ve yönetim araçlarına hızlı erişim
                 </p>
 
-                <div class="quick-actions">
+                <!-- System Info Cards -->
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-server"></i>
+                        <h4><?php echo phpversion(); ?></h4>
+                        <p id="phpVersionText">PHP Versiyonu</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-memory"></i>
+                        <h4><?php echo round(memory_get_usage()/1024/1024, 1); ?> MB</h4>
+                        <p id="memoryText">Bellek Kullanımı</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h4><?php echo date('H:i'); ?></h4>
+                        <p id="timeText">Sistem Saati</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-calendar"></i>
+                        <h4><?php echo date('d.m.Y'); ?></h4>
+                        <p id="dateText">Bugün</p>
+                    </div>
+                </div>
+
+                <div class="quick-actions" style="margin-top: 30px;">
                     <a href="users.php" class="btn" id="btnUsers">
                         👥 Kullanıcı Yönetimi
                     </a>
@@ -698,7 +929,8 @@ $errorCount = count($errors);
                 btnMaintenance:'🔧 Bakım Modu', sidebarTitle3:'📊 Sistem Durumu',
                 phpVersionLabel:'🐘 PHP Versiyonu:', memoryLabel:'💾 Bellek Kullanımı:', lastUpdateLabel:'🕒 Son Güncelleme:',
                 sidebarTitle4:'🎯 Hızlı Erişim', btnUsers2:'👥 Kullanıcılar', btnSettings2:'⚙️ Ayarlar',
-                btnReports2:'📈 Raporlar', btnHome2:'🏠 Ana Sayfa'
+                btnReports2:'📈 Raporlar', btnHome2:'🏠 Ana Sayfa',
+                phpVersionText:'PHP Versiyonu', memoryText:'Bellek Kullanımı', timeText:'Sistem Saati', dateText:'Bugün'
             };
             const de = {
                 pageTitle:'🎯 Super-Admin-Panel', userRole:'👑 Super-Admin', backHomeText:'Zur Startseite', logout:'🚪 Abmelden',
@@ -714,7 +946,8 @@ $errorCount = count($errors);
                 btnMaintenance:'🔧 Wartungsmodus', sidebarTitle3:'📊 Systemstatus',
                 phpVersionLabel:'🐘 PHP-Version:', memoryLabel:'💾 Speichernutzung:', lastUpdateLabel:'🕒 Letzte Aktualisierung:',
                 sidebarTitle4:'🎯 Schnellzugriff', btnUsers2:'👥 Benutzer', btnSettings2:'⚙️ Einstellungen',
-                btnReports2:'📈 Berichte', btnHome2:'🏠 Startseite'
+                btnReports2:'📈 Berichte', btnHome2:'🏠 Startseite',
+                phpVersionText:'PHP-Version', memoryText:'Speichernutzung', timeText:'Systemzeit', dateText:'Heute'
             };
             
             function setText(sel, text){ const el=document.querySelector(sel); if(el) el.innerText=text; }
@@ -759,6 +992,10 @@ $errorCount = count($errors);
                 setText('#btnSettings2', d.btnSettings2);
                 setText('#btnReports2', d.btnReports2);
                 setText('#btnHome2', d.btnHome2);
+                setText('#phpVersionText', d.phpVersionText);
+                setText('#memoryText', d.memoryText);
+                setText('#timeText', d.timeText);
+                setText('#dateText', d.dateText);
                 
                 // Welcome title'da isim değişimi
                 const welcomeTitle = document.getElementById('welcomeTitle');
@@ -783,6 +1020,20 @@ $errorCount = count($errors);
                         apply(next); 
                     }); 
                 }
+                // Tema
+                try {
+                    const saved = localStorage.getItem('admin_theme')||'dark';
+                    if (saved==='dark') document.body.classList.add('dark'); else document.body.classList.remove('dark');
+                    const tt = document.getElementById('themeToggle');
+                    if (tt) {
+                        tt.textContent = document.body.classList.contains('dark') ? '🌞 Tema' : '🌙 Tema';
+                        tt.addEventListener('click', function(){
+                            const isDark = document.body.classList.toggle('dark');
+                            localStorage.setItem('admin_theme', isDark ? 'dark' : 'light');
+                            tt.textContent = isDark ? '🌞 Tema' : '🌙 Tema';
+                        });
+                    }
+                } catch(e) {}
             });
         })();
     </script>
