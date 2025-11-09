@@ -109,16 +109,37 @@ $_SESSION['practice_current_question'] = 0;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(ellipse at top, #0a9d7a 0%, #068466 50%, #055a4a 100%);
             color: #333;
+            position: relative;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
         }
 
         .header {
-            background: linear-gradient(135deg, #089b76 0%, #067a5f 100%);
-            color: white;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px) saturate(180%);
+            color: #2c3e50;
             padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 100;
         }
 
         .header-content {
@@ -153,11 +174,14 @@ $_SESSION['practice_current_question'] = 0;
         .logo h1 {
             font-size: 1.8em;
             margin-bottom: 5px;
+            color: #1f2937;
+            font-weight: 700;
         }
 
         .logo p {
-            opacity: 0.9;
+            color: #6b7280;
             font-size: 0.9em;
+            font-weight: 500;
         }
 
         .user-info { display: flex; align-items: center; gap: 12px; }
@@ -166,32 +190,40 @@ $_SESSION['practice_current_question'] = 0;
         .user-avatar {
             width: 40px;
             height: 40px;
-            background: rgba(255,255,255,0.2);
+            background: linear-gradient(135deg, #0a9d7a 0%, #068466 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 12px rgba(10, 160, 124, 0.3);
         }
 
         .back-btn {
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: white;
-            padding: 8px 16px;
+            background: rgba(10, 160, 124, 0.1);
+            border: 2px solid #0a9d7a;
+            color: #0a9d7a;
+            padding: 10px 20px;
             border-radius: 20px;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
         }
 
         .back-btn:hover {
-            background: rgba(255,255,255,0.3);
+            background: linear-gradient(135deg, #0a9d7a 0%, #068466 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(10, 160, 124, 0.3);
         }
 
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 30px 20px;
+            position: relative;
+            z-index: 1;
         }
 
         .back-btn {
@@ -210,12 +242,30 @@ $_SESSION['practice_current_question'] = 0;
         }
 
         .practice-header {
-            background: white;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px) saturate(180%);
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 24px;
+            box-shadow: 
+                0 20px 60px rgba(0,0,0,0.12),
+                0 8px 25px rgba(0,0,0,0.08),
+                inset 0 1px 0 rgba(255,255,255,0.9);
             margin-bottom: 30px;
             text-align: center;
+            border: 1px solid rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .practice-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #068466, #0a9d7a, #22c55e);
+            border-radius: 24px 24px 0 0;
         }
 
         .practice-title {
@@ -232,10 +282,18 @@ $_SESSION['practice_current_question'] = 0;
         }
 
         .info-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 4px solid #3498db;
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            padding: 18px;
+            border-radius: 14px;
+            border-left: 4px solid #0a9d7a;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .info-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(10, 160, 124, 0.15);
+            border-left-color: #068466;
         }
 
         .info-label {
@@ -251,22 +309,52 @@ $_SESSION['practice_current_question'] = 0;
         }
 
         .timer {
-            background: #e74c3c;
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
             color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-weight: 700;
             font-size: 1.1em;
             display: inline-block;
             margin: 20px 0;
+            box-shadow: 
+                0 8px 20px rgba(239, 68, 68, 0.3),
+                0 4px 10px rgba(239, 68, 68, 0.2);
+            letter-spacing: 0.02em;
         }
 
         .question-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px) saturate(180%);
             padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 24px;
+            box-shadow: 
+                0 20px 60px rgba(0,0,0,0.12),
+                0 8px 25px rgba(0,0,0,0.08),
+                inset 0 1px 0 rgba(255,255,255,0.9);
             margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .question-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0a9d7a, #068466, #22c55e);
+            border-radius: 24px 24px 0 0;
+        }
+        
+        .question-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 25px 70px rgba(0,0,0,0.15),
+                0 10px 30px rgba(0,0,0,0.1);
         }
 
         .question-header {
@@ -279,11 +367,16 @@ $_SESSION['practice_current_question'] = 0;
         }
 
         .question-number {
-            background: #3498db;
+            background: linear-gradient(135deg, #0a9d7a 0%, #068466 100%);
             color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1.1em;
+            box-shadow: 
+                0 8px 20px rgba(10, 160, 124, 0.3),
+                0 4px 10px rgba(10, 160, 124, 0.2);
+            letter-spacing: 0.02em;
         }
 
         .question-type {
@@ -296,9 +389,11 @@ $_SESSION['practice_current_question'] = 0;
 
         .question-text {
             font-size: 1.3em;
-            line-height: 1.6;
-            color: #2c3e50;
+            line-height: 1.8;
+            color: #1f2937;
             margin-bottom: 30px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
         }
 
         .options {
@@ -308,35 +403,117 @@ $_SESSION['practice_current_question'] = 0;
         }
 
         .option {
-            background: #f8f9fa;
-            border: 2px solid #e1e8ed;
-            border-radius: 10px;
+            background: #f9fafb;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
             padding: 20px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
             gap: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(10, 160, 124, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .option:hover::before {
+            left: 100%;
         }
 
         .option:hover {
-            border-color: #3498db;
-            background: rgba(52, 152, 219, 0.05);
+            border-color: #0a9d7a;
+            background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 
+                0 12px 30px rgba(10, 160, 124, 0.15),
+                0 6px 15px rgba(10, 160, 124, 0.1);
         }
 
         .option.selected {
-            border-color: #3498db;
-            background: rgba(52, 152, 219, 0.1);
+            border-color: #0a9d7a;
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 
+                0 16px 40px rgba(10, 160, 124, 0.25),
+                0 8px 20px rgba(10, 160, 124, 0.15);
+        }
+        
+        .option.selected::after {
+            content: '✓';
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #0a9d7a, #068466);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(10, 160, 124, 0.3);
         }
 
         .option.correct {
-            border-color: #27ae60;
-            background: rgba(39, 174, 96, 0.1);
+            border-color: #22c55e;
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.2);
+        }
+        
+        .option.correct::after {
+            content: '✓';
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
         }
 
         .option.incorrect {
-            border-color: #e74c3c;
-            background: rgba(231, 76, 60, 0.1);
+            border-color: #ef4444;
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            box-shadow: 0 8px 20px rgba(239, 68, 68, 0.2);
+        }
+        
+        .option.incorrect::after {
+            content: '✗';
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
         }
 
         .option input[type="radio"] {
@@ -358,21 +535,32 @@ $_SESSION['practice_current_question'] = 0;
 
         /* Modern rozet harfleri */
         .option-letter {
-            width: 36px;
-            height: 36px;
-            border-radius: 999px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: #eef2f7;
-            color: #0f172a;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            color: #374151;
             font-weight: 700;
+            font-size: 1.1em;
             flex: 0 0 auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .option.selected .option-letter {
-            background: #3498db;
+            background: linear-gradient(135deg, #0a9d7a 0%, #068466 100%);
             color: #fff;
+            box-shadow: 
+                0 8px 20px rgba(10, 160, 124, 0.3),
+                0 4px 10px rgba(10, 160, 124, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .option:hover .option-letter {
+            transform: scale(1.05);
         }
 
         /* Üst sabit ilerleme ve zaman şeridi */
@@ -380,11 +568,14 @@ $_SESSION['practice_current_question'] = 0;
             position: sticky;
             top: 10px;
             z-index: 5;
-            background: #fff;
-            border: 1px solid #e1e8ed;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 16px;
+            box-shadow: 
+                0 12px 30px rgba(0,0,0,0.1),
+                0 4px 12px rgba(0,0,0,0.06);
+            padding: 12px 18px;
             display: flex;
             align-items: center;
             gap: 14px;
@@ -403,22 +594,55 @@ $_SESSION['practice_current_question'] = 0;
             display: block;
             height: 100%;
             width: 0%;
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-            transition: width 0.3s ease;
+            background: linear-gradient(135deg, #0a9d7a 0%, #068466 50%, #22c55e 100%);
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 999px;
+            box-shadow: 0 2px 8px rgba(10, 160, 124, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-mini > span::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
 
         .short-answer {
             width: 100%;
-            padding: 15px;
-            border: 2px solid #e1e8ed;
-            border-radius: 10px;
+            padding: 16px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 14px;
             font-size: 1.1em;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+            color: #1f2937;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        
+        .short-answer:hover {
+            border-color: #0a9d7a;
+            box-shadow: 0 4px 12px rgba(10, 160, 124, 0.1);
         }
 
         .short-answer:focus {
             outline: none;
-            border-color: #3498db;
+            border-color: #0a9d7a;
+            box-shadow: 
+                0 0 0 4px rgba(10, 160, 124, 0.12),
+                0 4px 16px rgba(10, 160, 124, 0.15);
+            transform: translateY(-1px);
         }
 
         .navigation {
@@ -435,11 +659,13 @@ $_SESSION['practice_current_question'] = 0;
                 position: sticky;
                 bottom: 20px;
                 background: rgba(255,255,255,0.98);
-                backdrop-filter: blur(20px);
-                border: 1px solid #e1e8ed;
-                border-radius: 16px;
-                padding: 12px 16px;
-                box-shadow: 0 8px 24px rgba(0,0,0,.15);
+                backdrop-filter: blur(20px) saturate(180%);
+                border: 1px solid rgba(255,255,255,0.3);
+                border-radius: 20px;
+                padding: 14px 18px;
+                box-shadow: 
+                    0 20px 40px rgba(0,0,0,0.12),
+                    0 8px 20px rgba(0,0,0,0.08);
                 z-index: 100;
                 margin-top: 20px;
                 margin-bottom: 20px;
@@ -450,36 +676,71 @@ $_SESSION['practice_current_question'] = 0;
         }
 
         .btn {
-            background: #3498db;
+            background: linear-gradient(135deg, #0a9d7a 0%, #068466 50%, #055a4a 100%);
             color: white;
             border: none;
-            padding: 14px 22px;
-            border-radius: 14px;
+            padding: 16px 28px;
+            border-radius: 16px;
             cursor: pointer;
             font-size: 1em;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
             display: inline-block;
+            letter-spacing: 0.02em;
+            box-shadow: 
+                0 10px 30px rgba(10, 160, 124, 0.3),
+                0 4px 12px rgba(10, 160, 124, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
         }
 
         .btn:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 
+                0 20px 50px rgba(10, 160, 124, 0.4),
+                0 10px 25px rgba(10, 160, 124, 0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(-2px) scale(0.98);
         }
 
         .btn:disabled {
-            background: #95a5a6;
+            background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
             cursor: not-allowed;
             transform: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            opacity: 0.6;
         }
 
         .btn-secondary {
-            background: #95a5a6;
+            background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+            box-shadow: 
+                0 10px 30px rgba(107, 114, 128, 0.3),
+                0 4px 12px rgba(107, 114, 128, 0.2);
         }
 
         .btn-secondary:hover {
-            background: #7f8c8d;
+            background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+            box-shadow: 
+                0 20px 50px rgba(107, 114, 128, 0.4),
+                0 10px 25px rgba(107, 114, 128, 0.3);
         }
 
         .progress-bar {
@@ -491,33 +752,77 @@ $_SESSION['practice_current_question'] = 0;
         }
 
         .progress-fill {
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            background: linear-gradient(135deg, #0a9d7a 0%, #068466 50%, #22c55e 100%);
             height: 100%;
-            transition: width 0.3s ease;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(10, 160, 124, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
         }
 
         .explanation {
-            background: #d4edda;
-            border: 1px solid #c3e6cb;
-            border-radius: 10px;
-            padding: 20px;
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border: 2px solid #22c55e;
+            border-radius: 16px;
+            padding: 24px;
             margin-top: 20px;
             display: none;
+            box-shadow: 
+                0 8px 20px rgba(34, 197, 94, 0.2),
+                0 4px 10px rgba(34, 197, 94, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .explanation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #22c55e, #16a34a);
         }
 
         .explanation.show {
             display: block;
+            animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .explanation h4 {
-            color: #155724;
-            margin-bottom: 10px;
+            color: #166534;
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-size: 1.2em;
         }
 
         .explanation p {
-            color: #155724;
-            line-height: 1.6;
+            color: #166534;
+            line-height: 1.8;
+            font-weight: 500;
         }
 
         @media (max-width: 768px) {

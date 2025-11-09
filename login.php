@@ -29,6 +29,11 @@ if ($_POST) {
         }
         
         if ($userRole && $auth->login($username, $password, $userRole)) {
+            // Session'ı yenile (timeout'u sıfırla)
+            $_SESSION['last_activity'] = time();
+            $_SESSION['refresh_time'] = time();
+            $_SESSION['login_time'] = time();
+            
             // Beni hatırla
             if ($remember) {
                 setcookie('remember_username', $username, time() + (60 * 60 * 24 * 30), '/'); // 30 gün

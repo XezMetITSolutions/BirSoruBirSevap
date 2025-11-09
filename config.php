@@ -22,7 +22,7 @@ if (!defined('ROOT_DIR')) {
 if (!defined('DEFAULT_TIMER')) define('DEFAULT_TIMER', 30); // Varsayılan soru süresi (saniye)
 if (!defined('NEGATIVE_MARKING')) define('NEGATIVE_MARKING', false); // Yanlış cevap için puan kesme
 if (!defined('MAX_SCAN_DEPTH')) define('MAX_SCAN_DEPTH', 5); // Maksimum klasör tarama derinliği
-if (!defined('SESSION_TIMEOUT')) define('SESSION_TIMEOUT', 3600); // Oturum zaman aşımı (saniye)
+if (!defined('SESSION_TIMEOUT')) define('SESSION_TIMEOUT', 0); // Oturum zaman aşımı (0 = tarayıcı kapanana kadar)
 
 // Uygulama Ayarları
 if (!defined('APP_NAME')) define('APP_NAME', 'Bir Soru Bir Sevap');
@@ -66,21 +66,40 @@ define('LOG_ERRORS', true); // Hataları logla
 // Saat dilimi ayarı (Avusturya)
 date_default_timezone_set('Europe/Vienna');
 
-// Oturum başlat (uzatılmış cookie ömrü ile)
+// Oturum başlat (tarayıcı kapanana kadar - session cookie expire olmaz)
 if (session_status() === PHP_SESSION_NONE) {
-    $lifetime = 60 * 60 * 24 * 7; // 7 gün
+    // Session cookie ayarları - tarayıcı kapanana kadar geçerli
+    $lifetime = 0; // 0 = tarayıcı kapanana kadar (session cookie)
+    
     if (PHP_VERSION_ID >= 70300) {
         session_set_cookie_params([
-            'lifetime' => $lifetime,
+            'lifetime' => $lifetime, // 0 = session cookie (tarayıcı kapanana kadar)
             'path' => '/',
+            'domain' => '', // Tüm alt domainler için
             'secure' => isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on',
             'httponly' => true,
             'samesite' => 'Lax',
         ]);
     } else {
-        session_set_cookie_params($lifetime, '/');
+        session_set_cookie_params($lifetime, '/', '', isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on', true);
     }
+    
+    // Session timeout'u çok uzun yap (30 gün)
+    ini_set('session.gc_maxlifetime', 86400 * 30); // 30 gün
+    ini_set('session.cookie_lifetime', 0); // Session cookie (tarayıcı kapanana kadar)
+    ini_set('session.gc_probability', 1); // Garbage collection olasılığı
+    ini_set('session.gc_divisor', 1000); // Daha az sıklıkla temizlik
+    
     session_start();
+    
+    // Session'ı her sayfa yüklemesinde yenile (timeout'u sıfırla)
+    if (isset($_SESSION['user'])) {
+        $_SESSION['last_activity'] = time();
+        $_SESSION['refresh_time'] = time();
+        // Session dosyasını yeniden yaz (garbage collection'dan koru)
+        session_write_close();
+        session_start();
+    }
 }
 
 // Hata raporlama

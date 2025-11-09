@@ -66,7 +66,15 @@ class Auth {
      * Kullanıcı kontrolü
      */
     public function isLoggedIn() {
-        return isset($_SESSION['user']);
+        if (!isset($_SESSION['user'])) {
+            return false;
+        }
+        
+        // Session'ı her kontrol sırasında yenile (timeout'u sıfırla)
+        $_SESSION['last_activity'] = time();
+        $_SESSION['refresh_time'] = time();
+        
+        return true;
     }
     
     /**
@@ -76,6 +84,10 @@ class Auth {
         if (!isset($_SESSION['user'])) {
             return false;
         }
+        
+        // Session'ı her kontrol sırasında yenile (timeout'u sıfırla)
+        $_SESSION['last_activity'] = time();
+        $_SESSION['refresh_time'] = time();
         
         $userRole = $_SESSION['user']['role'];
         
@@ -91,7 +103,15 @@ class Auth {
      * Kullanıcı bilgileri
      */
     public function getUser() {
-        return $_SESSION['user'] ?? null;
+        if (!isset($_SESSION['user'])) {
+            return null;
+        }
+        
+        // Session'ı her çağrıda yenile (timeout'u sıfırla)
+        $_SESSION['last_activity'] = time();
+        $_SESSION['refresh_time'] = time();
+        
+        return $_SESSION['user'];
     }
     
     /**
