@@ -1888,6 +1888,11 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                         <li><strong>Telefon</strong> - Telefon numarası (isteğe bağlı)</li>
                     </ul>
                     <p><strong>Not:</strong> Kullanıcı adı ve şifre otomatik oluşturulacaktır.</p>
+                    <div class="template-download" style="margin-top: 18px; background: rgba(6, 133, 103, 0.08); border: 1px solid rgba(6, 133, 103, 0.2); border-radius: 12px; padding: 18px;">
+                        <p style="margin: 0 0 12px 0; font-weight: 600; color: #055a4a;">🎯 Hazır Şablon</p>
+                        <a href="template.csv" download class="btn btn-success" style="display: inline-block; padding: 10px 18px; border-radius: 10px; font-weight: 600;">📄 CSV Şablonunu İndir</a>
+                        <small style="display: block; margin-top: 10px; color: #2c3e50;">Dosyayı indirip örnek satırları kendi kullanıcı bilgilerinizle güncelleyebilirsiniz.</small>
+                    </div>
                 </div>
                 
                 <div style="display: flex; gap: 15px; justify-content: flex-end; margin-top: 20px;">
