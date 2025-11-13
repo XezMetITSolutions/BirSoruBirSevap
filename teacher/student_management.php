@@ -83,8 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     if ($auth->hasRole('superadmin') || ($users[$username]['branch'] ?? '') === $teacherBranch) {
                         // Veritabanında güncelle
                         $db = Database::getInstance();
+                        $connection = $db->getConnection();
                         $class_section = $class_section_input !== null ? sanitize_input($class_section_input) : ($users[$username]['class_section'] ?? '');
-                        $stmt = $db->connection->prepare("UPDATE users SET full_name = ?, class_section = ?, updated_at = NOW() WHERE username = ?");
+                        $stmt = $connection->prepare("UPDATE users SET full_name = ?, class_section = ?, updated_at = NOW() WHERE username = ?");
                         if ($stmt->execute([$fullName, $class_section, $username])) {
                             $message = 'Öğrenci bilgileri güncellendi!';
                             $messageType = 'success';

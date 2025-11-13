@@ -6,6 +6,18 @@
 require_once 'config.php';
 require_once 'QuestionLoader.php';
 
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Cache-Control: post-check=0, pre-check=0', false);
+header('Pragma: no-cache');
+header('Expires: 0');
+
+foreach ($_COOKIE as $cookieName => $cookieValue) {
+    if ($cookieName === session_name()) {
+        continue;
+    }
+    setcookie($cookieName, '', time() - 3600, '/');
+}
+
 // Soruları yükle
 $questionLoader = new QuestionLoader();
 $questionLoader->loadQuestions();
@@ -1419,6 +1431,46 @@ $totalCategories = array_sum(array_map('count', $categories));
             document.body.classList.add('loading');
         });
     </script>
+<script>
+    // Her anasayfa yüklemesinde tarayıcı depolarını temizle
+    (function () {
+        const clearClientStorage = async () => {
+            try {
+                if (window.localStorage) {
+                    localStorage.clear();
+                }
+                if (window.sessionStorage) {
+                    sessionStorage.clear();
+                }
+
+                if ('serviceWorker' in navigator) {
+                    const regs = await navigator.serviceWorker.getRegistrations();
+                    for (const reg of regs) {
+                        await reg.unregister();
+                    }
+                }
+
+                if (window.caches && typeof caches.keys === 'function') {
+                    const cacheNames = await caches.keys();
+                    await Promise.all(cacheNames.map((cacheName) => caches.delete(cacheName)));
+                }
+
+                const cookies = document.cookie ? document.cookie.split(';') : [];
+                cookies.forEach((cookie) => {
+                    const eqPos = cookie.indexOf('=');
+                    const name = eqPos > -1 ? cookie.substr(0, eqPos).trim() : cookie.trim();
+                    if (name) {
+                        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+                    }
+                });
+            } catch (error) {
+                console.error('Tarayıcı verileri temizlenirken hata oluştu:', error);
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', clearClientStorage);
+    })();
+</script>
     
     <!-- Service Worker Registration -->
     <script>
