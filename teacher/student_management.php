@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             case 'add_student':
                 $first_name = sanitize_input($_POST['first_name']);
                 $last_name = sanitize_input($_POST['last_name']);
-                $class_section = sanitize_input($_POST['class_section']);
+                $class_section = sanitize_input($_POST['class_section'] ?? '');
                 $password = 'iqra2025#'; // Standart şifre
                 
                 // Tam adı oluştur
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $username = sanitize_input($_POST['username']);
                 $first_name = sanitize_input($_POST['first_name']);
                 $last_name = sanitize_input($_POST['last_name']);
-                $class_section = sanitize_input($_POST['class_section']);
+                $class_section_input = $_POST['class_section'] ?? null;
                 $fullName = $first_name . ' ' . $last_name;
                 
                 $users = $auth->getAllUsers();
@@ -83,6 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     if ($auth->hasRole('superadmin') || ($users[$username]['branch'] ?? '') === $teacherBranch) {
                         // Veritabanında güncelle
                         $db = Database::getInstance();
+                        $class_section = $class_section_input !== null ? sanitize_input($class_section_input) : ($users[$username]['class_section'] ?? '');
                         $stmt = $db->connection->prepare("UPDATE users SET full_name = ?, class_section = ?, updated_at = NOW() WHERE username = ?");
                         if ($stmt->execute([$fullName, $class_section, $username])) {
                             $message = 'Öğrenci bilgileri güncellendi!';
@@ -680,10 +681,6 @@ echo "<!-- DEBUG: Bulunan öğrenci sayısı: " . count($students) . " -->";
                         <label for="last_name" id="labelLastName">Soyad</label>
                         <input type="text" id="last_name" name="last_name" required>
                     </div>
-                    <div class="form-group">
-                            <label for="class_section" id="labelClassSection">Sınıf (Opsiyonel)</label>
-                            <input type="text" id="class_section" name="class_section" placeholder="Örn: 5A, 6B, 7C">
-                    </div>
                     </div>
                     <div class="form-info">
                         <small id="usernameInfo">💡 Kullanıcı adı otomatik oluşturulacak: <span id="username-preview">ad.soyad</span></small>
@@ -726,7 +723,7 @@ echo "<!-- DEBUG: Bulunan öğrenci sayısı: " . count($students) . " -->";
                                     <td><?php echo htmlspecialchars($studentData['created_at']); ?></td>
                                 <td>
                                     <div class="action-buttons">
-                                            <button class="btn btn-warning btn-sm" onclick="openEditModal('<?php echo $username; ?>', '<?php echo htmlspecialchars($studentData['full_name'] ?? $studentData['name'] ?? 'Bilinmiyor'); ?>', '<?php echo htmlspecialchars($studentData['class_section']); ?>')">
+                                            <button class="btn btn-warning btn-sm" onclick="openEditModal('<?php echo $username; ?>', '<?php echo htmlspecialchars($studentData['full_name'] ?? $studentData['name'] ?? 'Bilinmiyor'); ?>')">
                                             ✏️ <span class="btnEditText">Düzenle</span>
                                         </button>
                                             <button class="btn btn-info btn-sm" onclick="openPasswordModal('<?php echo $username; ?>', '<?php echo htmlspecialchars($studentData['full_name'] ?? $studentData['name'] ?? 'Bilinmiyor'); ?>')">
@@ -763,10 +760,6 @@ echo "<!-- DEBUG: Bulunan öğrenci sayısı: " . count($students) . " -->";
                 <div class="form-group">
                     <label for="edit_last_name" id="editLabelLastName">Soyad</label>
                     <input type="text" id="edit_last_name" name="last_name" required>
-                </div>
-                <div class="form-group">
-                    <label for="edit_class_section" id="editLabelClassSection">Sınıf (Opsiyonel)</label>
-                    <input type="text" id="edit_class_section" name="class_section">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" onclick="closeEditModal()" id="btnCancelEdit">İptal</button>
@@ -843,7 +836,7 @@ echo "<!-- DEBUG: Bulunan öğrenci sayısı: " . count($students) . " -->";
             document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
         }
 
-        function openEditModal(username, name, classSection) {
+        function openEditModal(username, name) {
             document.getElementById('edit_username').value = username;
             
             // Ad ve soyadı ayır
@@ -853,7 +846,6 @@ echo "<!-- DEBUG: Bulunan öğrenci sayısı: " . count($students) . " -->";
             
             document.getElementById('edit_first_name').value = firstName;
             document.getElementById('edit_last_name').value = lastName;
-            document.getElementById('edit_class_section').value = classSection;
             document.getElementById('editModal').style.display = 'block';
         }
 
@@ -955,13 +947,13 @@ echo "<!-- DEBUG: Bulunan öğrenci sayısı: " . count($students) . " -->";
                 pageTitle:'Öğrenci Yönetimi', userRole:'Eğitmen', btnLogout:'Çıkış',
                 btnHome:'🏠 Ana Sayfa', breadcrumbCurrent:'👥 Öğrenci Yönetimi',
                 mainTitle:'👥 Öğrenci Yönetimi', btnAddStudent:'➕ Yeni Öğrenci Ekle',
-                formTitle:'📝 Yeni Öğrenci Ekle', labelFirstName:'Ad', labelLastName:'Soyad', labelClassSection:'Sınıf (Opsiyonel)',
+                formTitle:'📝 Yeni Öğrenci Ekle', labelFirstName:'Ad', labelLastName:'Soyad',
                 usernameInfo:'💡 Kullanıcı adı otomatik oluşturulacak:', btnSubmitStudent:'✅ Öğrenci Ekle',
                 tableTitle:'Sınıfınızdaki Öğrenciler', studentCount:'öğrenci',
                 noStudentsTitle:'Henüz öğrenci yok', noStudentsDesc:'Yukarıdaki formu kullanarak ilk öğrencinizi ekleyin',
                 thUsername:'Kullanıcı Adı', thFullName:'Ad Soyad', thClass:'Sınıf', thRegisterDate:'Kayıt Tarihi', thActions:'İşlemler',
                 btnEditText:'Düzenle', btnPasswordText:'Şifre Değiştir', btnDeleteText:'Sil',
-                editModalTitle:'✏️ Öğrenci Düzenle', editLabelFirstName:'Ad', editLabelLastName:'Soyad', editLabelClassSection:'Sınıf (Opsiyonel)',
+                editModalTitle:'✏️ Öğrenci Düzenle', editLabelFirstName:'Ad', editLabelLastName:'Soyad',
                 btnCancelEdit:'İptal', btnUpdateStudent:'💾 Güncelle',
                 passwordModalTitle:'🔐 Şifre Değiştir', passwordUsernameLabel:'Kullanıcı Adı:', passwordNameLabel:'Ad Soyad:',
                 labelNewPassword:'Yeni Şifre', labelConfirmPassword:'Şifre Tekrar',
@@ -975,13 +967,13 @@ echo "<!-- DEBUG: Bulunan öğrenci sayısı: " . count($students) . " -->";
                 pageTitle:'Schülerverwaltung', userRole:'Lehrpersonal', btnLogout:'Abmelden',
                 btnHome:'🏠 Startseite', breadcrumbCurrent:'👥 Schülerverwaltung',
                 mainTitle:'👥 Schülerverwaltung', btnAddStudent:'➕ Neuen Schüler hinzufügen',
-                formTitle:'📝 Neuen Schüler hinzufügen', labelFirstName:'Vorname', labelLastName:'Nachname', labelClassSection:'Klasse (Optional)',
+                formTitle:'📝 Neuen Schüler hinzufügen', labelFirstName:'Vorname', labelLastName:'Nachname',
                 usernameInfo:'💡 Benutzername wird automatisch erstellt:', btnSubmitStudent:'✅ Schüler hinzufügen',
                 tableTitle:'Ihre Schüler', studentCount:'Schüler',
                 noStudentsTitle:'Noch keine Schüler', noStudentsDesc:'Verwenden Sie das Formular oben, um Ihren ersten Schüler hinzuzufügen',
                 thUsername:'Benutzername', thFullName:'Vor- und Nachname', thClass:'Klasse', thRegisterDate:'Registrierungsdatum', thActions:'Aktionen',
                 btnEditText:'Bearbeiten', btnPasswordText:'Passwort ändern', btnDeleteText:'Löschen',
-                editModalTitle:'✏️ Schüler bearbeiten', editLabelFirstName:'Vorname', editLabelLastName:'Nachname', editLabelClassSection:'Klasse (Optional)',
+                editModalTitle:'✏️ Schüler bearbeiten', editLabelFirstName:'Vorname', editLabelLastName:'Nachname',
                 btnCancelEdit:'Abbrechen', btnUpdateStudent:'💾 Aktualisieren',
                 passwordModalTitle:'🔐 Passwort ändern', passwordUsernameLabel:'Benutzername:', passwordNameLabel:'Vor- und Nachname:',
                 labelNewPassword:'Neues Passwort', labelConfirmPassword:'Passwort wiederholen',
@@ -1007,7 +999,6 @@ echo "<!-- DEBUG: Bulunan öğrenci sayısı: " . count($students) . " -->";
                 setText('#formTitle', d.formTitle);
                 setText('#labelFirstName', d.labelFirstName);
                 setText('#labelLastName', d.labelLastName);
-                setText('#labelClassSection', d.labelClassSection);
                 setText('#usernameInfo', d.usernameInfo);
                 setText('#btnSubmitStudent', d.btnSubmitStudent);
                 setText('#tableTitle', d.tableTitle);
@@ -1028,7 +1019,6 @@ echo "<!-- DEBUG: Bulunan öğrenci sayısı: " . count($students) . " -->";
                 setText('#editModalTitle', d.editModalTitle);
                 setText('#editLabelFirstName', d.editLabelFirstName);
                 setText('#editLabelLastName', d.editLabelLastName);
-                setText('#editLabelClassSection', d.editLabelClassSection);
                 setText('#btnCancelEdit', d.btnCancelEdit);
                 setText('#btnUpdateStudent', d.btnUpdateStudent);
                 setText('#passwordModalTitle', d.passwordModalTitle);

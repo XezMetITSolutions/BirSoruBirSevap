@@ -1,6 +1,6 @@
 // Service Worker for Bir Soru Bir Sevap PWA
 
-const CACHE_NAME = 'bir-soru-bir-sevap-v1';
+const CACHE_NAME = 'bir-soru-bir-sevap-v2';
 const urlsToCache = [
     '/',
     '/manifest.json',
@@ -55,6 +55,17 @@ self.addEventListener('fetch', (event) => {
     const isHttp = reqUrl.protocol === 'http:' || reqUrl.protocol === 'https:';
     const isSameOrigin = reqUrl.origin === self.location.origin;
     if (!isHttp) {
+        return;
+    }
+
+    // Dinamik PHP içerikleri ve yönetim panelleri cache'lenmesin (her zaman güncel veri)
+    const isDynamicContent =
+        reqUrl.pathname.endsWith('.php') ||
+        reqUrl.pathname.includes('/admin/') ||
+        reqUrl.pathname.includes('/teacher/') ||
+        reqUrl.pathname.includes('/student/');
+
+    if (isDynamicContent) {
         return;
     }
 
