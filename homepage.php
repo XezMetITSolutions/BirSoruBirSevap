@@ -1419,64 +1419,6 @@ $totalCategories = array_sum(array_map('count', $categories));
             document.body.classList.add('loading');
         });
     </script>
-    <script>
-        // Basit SPA-vari overlay: Dahili linkler yeni sayfa yerine overlay içinde açılır
-        document.addEventListener('DOMContentLoaded', function() {
-            const appOverlay = document.createElement('div');
-            appOverlay.id = 'app-overlay';
-            appOverlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.04);display:none;align-items:center;justify-content:center;z-index:9999;';
-
-            const frameWrap = document.createElement('div');
-            frameWrap.style.cssText = 'width:100vw;height:100vh;background:transparent;border-radius:0;box-shadow:none;overflow:hidden;position:relative;';
-
-            const closeBtn = document.createElement('button');
-            closeBtn.innerText = '✕';
-            closeBtn.setAttribute('aria-label','Kapat');
-            closeBtn.style.cssText = 'position:absolute;top:10px;right:10px;background:#111827;color:#fff;border:none;border-radius:10px;padding:6px 10px;cursor:pointer;z-index:2;opacity:.9;';
-
-            const iframe = document.createElement('iframe');
-            iframe.id = 'app-frame';
-            iframe.style.cssText = 'width:100%;height:100%;border:0;';
-
-            frameWrap.appendChild(closeBtn);
-            frameWrap.appendChild(iframe);
-            appOverlay.appendChild(frameWrap);
-            document.body.appendChild(appOverlay);
-
-            function openOverlay(url) {
-                iframe.src = url;
-                appOverlay.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-                // URL'i anasayfaya zorla taşımayı kaldır
-            }
-
-            function closeOverlay() {
-                iframe.src = 'about:blank';
-                appOverlay.style.display = 'none';
-                document.body.style.overflow = '';
-                // URL'i değiştirmeyi kaldır
-            }
-
-            closeBtn.addEventListener('click', closeOverlay);
-            appOverlay.addEventListener('click', (e) => { if (e.target === appOverlay) closeOverlay(); });
-
-            // Dahili linkleri yakala
-            document.body.addEventListener('click', function(e) {
-                const a = e.target.closest('a');
-                if (!a) return;
-                const href = a.getAttribute('href') || '';
-                const isExternal = /^https?:\/\//i.test(href) || href.startsWith('mailto:') || href.startsWith('tel:');
-                const isAnchor = href.startsWith('#');
-                // Uygulama içi bölümlere (student/teacher/admin) doğrudan geçiş yap
-                const isAppSection = href.startsWith('student/') || href.startsWith('teacher/') || href.startsWith('admin/');
-                if (isExternal || isAnchor || isAppSection) return; // bu linkleri yakalama
-
-                // Dahili sayfaları overlay içinde aç
-                e.preventDefault();
-                openOverlay(href);
-            }, true);
-        });
-    </script>
     
     <!-- Service Worker Registration -->
     <script>
