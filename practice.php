@@ -1139,7 +1139,6 @@ if ($auth->hasRole('teacher')) {
                 <div class="question-card">
                     <div class="question-header">
                         <div class="question-number">Soru ${index + 1}</div>
-                        <div class="question-type">${getQuestionTypeText(question.type)}</div>
                     </div>
                     <div class="question-text">${question.text}</div>
                     <div class="options">
