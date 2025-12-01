@@ -1,0 +1,337 @@
+{
+  "category": "HİTABET",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 30,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Aşağıdakilerden hangisi hitabetin temel unsurlarından biri değildir?",
+      "options": {
+        "A": "Hatip",
+        "B": "Dinleyici",
+        "C": "Konuşma",
+        "D": "Yazılı metin"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 2,
+      "question": "Aşağıdakilerden hangisi hitabetin tanımıdır?",
+      "options": {
+        "A": "Konuşmanın yazıya dökülerek bir sanat eseri hâline getirilmesi",
+        "B": "Topluluk önünde etkili ve düzgün konuşma sanatı",
+        "C": "Belirli bir konu üzerine yapılan akademik çalışmalar",
+        "D": "Kendi kendine yapılan konuşma pratiği"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "question": "Aşağıdaki hitabet türlerinden hangisi dini hitabet örneğidir?",
+      "options": {
+        "A": "Konferans",
+        "B": "Seminer",
+        "C": "Hutbe",
+        "D": "Sunum"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "question": "Aşağıdakilerden hangisi hitabetin önemli olduğu alanlardan biri değildir?",
+      "options": {
+        "A": "Hukuk",
+        "B": "Tıp",
+        "C": "Eğitim",
+        "D": "Siyaset"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "question": "Aşağıdakilerden hangisi iyi bir hatibin özelliklerinden biri değildir?",
+      "options": {
+        "A": "Etkili bir ses tonuna sahip olması",
+        "B": "Anlatacağı konuyu iyi bilmesi",
+        "C": "Dinleyicilerin seviyesine uygun konuşması",
+        "D": "Ezbere uzun süre konuşabilmesi"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 6,
+      "question": "Aşağıdaki seçeneklerden hangisi hatibin konuşma esnasında dikkat etmesi gereken unsurlardan biri değildir?",
+      "options": {
+        "A": "Ses tonunu ayarlamak",
+        "B": "Kılık kıyafetine dikkat etmek",
+        "C": "Dinleyicilerin fikirlerine müdahale etmek",
+        "D": "Jest ve mimiklerini etkili kullanmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "question": "Aşağıdakilerden hangisi hitabetin amacı değildir?",
+      "options": {
+        "A": "Bilgi aktarmak",
+        "B": "Kitleleri etkilemek",
+        "C": "Kişisel menfaat sağlamak",
+        "D": "İnandırıcılık kazandırmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "question": "Aşağıdakilerden hangisi hitabetin başarısını etkileyen faktörlerden biri değildir?",
+      "options": {
+        "A": "Konuşmanın içeriği",
+        "B": "Hatibin jest ve mimikleri",
+        "C": "Dinleyicilerin sabrı",
+        "D": "Konuşma süresi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "question": "Aşağıdakilerden hangisi hitabetin temel öğelerindendir?",
+      "options": {
+        "A": "Dil bilgisi kurallarına uygun yazılmış bir metin",
+        "B": "Konuyu ezberleyerek anlatmak",
+        "C": "Konuşmayı göz teması kurmadan yapmak",
+        "D": "Etkili ve anlamlı bir sunum yapmak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 10,
+      "question": "Bir hatibin en çok dikkat etmesi gereken nokta aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Kendisinin en çok konuşan kişi olması",
+        "B": "Dinleyicilerin konuşmasına izin vermemesi",
+        "C": "Konuyu açık ve anlaşılır bir şekilde aktarması",
+        "D": "Sürekli aynı ses tonuyla konuşması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "question": "Hitabetin önemli olduğu meslek dallarından biri değildir:",
+      "options": {
+        "A": "Öğretmenlik",
+        "B": "Avukatlık",
+        "C": "Çiftçilik",
+        "D": "Sunuculuk"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "question": "Aşağıdaki seçeneklerden hangisi iyi bir hatibin sahip olması gereken özelliklerden biri değildir?",
+      "options": {
+        "A": "Anlatımının akıcı olması",
+        "B": "Sürekli yüksek sesle konuşması",
+        "C": "Jest ve mimiklerini etkili kullanması",
+        "D": "Dinleyicilerin ilgisini çekecek örnekler vermesi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "question": "Aşağıdaki hitabet türlerinden hangisi akademik konuşmalara örnektir?",
+      "options": {
+        "A": "Hutbe",
+        "B": "Panel",
+        "C": "Konferans",
+        "D": "Vaaz"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "question": "Bir hatibin, konuşmasını dinleyicilerin ilgisini çekici hâle getirmesi için yapması gerekenlerden biri değildir?",
+      "options": {
+        "A": "Hikâyeler ve örnekler kullanmak",
+        "B": "Karmaşık ve uzun cümleler kurmak",
+        "C": "Ses tonunu etkili bir şekilde değiştirmek",
+        "D": "Dinleyicilere sorular sormak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "question": "Hitabetin gelişmesine katkıda bulunan önemli bir unsur aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Ses tonunun monoton olması",
+        "B": "Ezbere konuşmak",
+        "C": "Konuşmayı planlamak",
+        "D": "Dinleyicilerle göz teması kurmamak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "question": "Aşağıdaki durumlardan hangisi hitabet kurallarına aykırıdır?",
+      "options": {
+        "A": "Konuşma sırasında göz teması kurmak",
+        "B": "Dinleyicilere uygun örnekler vermek",
+        "C": "Sürekli aynı noktayı vurgulamak",
+        "D": "Konuşmayı planlı ve düzenli yapmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "question": "Aşağıdakilerden hangisi hutbenin şartlarından biri değildir?",
+      "options": {
+        "A": "Hutbeyi vakti içinde okumak",
+        "B": "Cemaatin kültür seviyesine dikkat etmek",
+        "C": "Hutbede en az bir ayet okumak",
+        "D": "Hutbeyi bayram namazından önce okumak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 18,
+      "question": "Aşağıdaki seçeneklerden hangisi iyi bir hatipte bulunması gereken özelliklerden biridir?",
+      "options": {
+        "A": "Konuya hâkim olmak",
+        "B": "Konuşmayı uzatmak",
+        "C": "Sürekli bağırarak konuşmak",
+        "D": "Sadece belirli bir zümreye hitap etmek"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "question": "Aşağıdakilerden hangisi hutbe sırasında yapılması gereken bir davranıştır?",
+      "options": {
+        "A": "Sürekli aynı konuyu tekrar etmek",
+        "B": "Anlatımı basit ve anlaşılır hâle getirmek",
+        "C": "Konuşmayı rastgele yapmak",
+        "D": "Cemaatle göz teması kurmamak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "question": "Hutbenin önemli bir özelliği nedir?",
+      "options": {
+        "A": "Sadece Arapça olarak okunması",
+        "B": "Cumanın farzından sonra okunması",
+        "C": "Cemaatin anlayabileceği bir dilde öğüt verilmesi",
+        "D": "Yalnızca imamın dinleyicilere anlatması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "question": "Aşağıdakilerden hangisi hutbenin planı içinde yer almaz?",
+      "options": {
+        "A": "Allah'a hamd edilmesi",
+        "B": "Cemaate nasihat verilmesi",
+        "C": "İkinci hutbede dua edilmesi",
+        "D": "Hutbenin yazılı olarak dağıtılması"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 22,
+      "question": "Bir hatibin konuşmayı etkili hale getirmesi için aşağıdakilerden hangisini yapması uygun değildir?",
+      "options": {
+        "A": "Ses tonunu konunun anlamına uygun olarak ayarlaması",
+        "B": "Dinleyicilerin seviyesine göre konuşmasını düzenlemesi",
+        "C": "Konuşma süresini gereğinden fazla uzatması",
+        "D": "Dinleyicileri sıkmayacak şekilde konuşmasını planlaması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "question": "Aşağıdakilerden hangisi etkili bir hitabet için gerekli olan unsurlardan biri değildir?",
+      "options": {
+        "A": "Konuşmanın içeriğini önceden planlamak",
+        "B": "Dinleyicilerle göz teması kurmak",
+        "C": "Çok fazla teknik terim kullanmak",
+        "D": "Konuyu ilgi çekici örneklerle desteklemek"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "question": "Aşağıdaki hitabet türlerinden hangisi daha çok bilimsel tartışmalar için kullanılır?",
+      "options": {
+        "A": "Konferans",
+        "B": "Panel",
+        "C": "Sempozyum",
+        "D": "Hutbe"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "question": "Aşağıdakilerden hangisi hitabetin başarısını doğrudan etkileyen bir faktördür?",
+      "options": {
+        "A": "Konuşma süresinin çok uzun olması",
+        "B": "Dinleyicilerin sıkılmaması için argo kelimeler kullanılması",
+        "C": "Konuşma konusunun iyi seçilmesi ve anlatımın düzgün olması",
+        "D": "Konuşmanın tamamen ezberlenmiş olması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "question": "Aşağıdakilerden hangisi iyi bir hatibin sahip olması gereken özelliklerden biri değildir?",
+      "options": {
+        "A": "Açık ve anlaşılır bir dille konuşmak",
+        "B": "Konuşmasını dinleyicilerin ilgisine göre ayarlamak",
+        "C": "Konu hakkında geniş bilgi sahibi olmak",
+        "D": "Sürekli aynı monoton ses tonunu kullanmak"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 27,
+      "question": "Bir hutbenin verimli olabilmesi için dikkat edilmesi gereken en önemli unsurlardan biri nedir?",
+      "options": {
+        "A": "Hutbenin süresinin çok uzun olması",
+        "B": "Cemaatin anlayabileceği bir dilde öğüt verilmesi",
+        "C": "Sadece din âlimlerinin hutbe dinlemesi",
+        "D": "Hutbenin mutlaka yazılı olarak dağıtılması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "question": "Hitabetin diğer iletişim türlerinden farkı aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Sadece yazılı metinlere dayanması",
+        "B": "Konuşmacının jest ve mimiklerini kullanması",
+        "C": "Dinleyicilere söz hakkı verilmemesi",
+        "D": "Konuşmanın tamamen ezbere dayanması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "question": "Aşağıdakilerden hangisi bir hitabetin amacına ulaşmasını engelleyen bir unsurdur?",
+      "options": {
+        "A": "Konuşmanın açık ve anlaşılır olması",
+        "B": "Dinleyicilere örnekler verilerek anlatılması",
+        "C": "Konunun aşırı uzun ve karmaşık olması",
+        "D": "Ses tonunun ve vurgu tekniklerinin kullanılması"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "question": "Aşağıdakilerden hangisi iyi bir hatibin yapmaması gereken davranışlardan biridir?",
+      "options": {
+        "A": "Konuşmayı planlı bir şekilde yapmak",
+        "B": "Ses tonunu ve vurgularını etkili bir şekilde kullanmak",
+        "C": "Konuşma süresini aşırı uzun tutarak dinleyicileri sıkmak",
+        "D": "Konuyu anlaşılır bir dil ile anlatmak"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}

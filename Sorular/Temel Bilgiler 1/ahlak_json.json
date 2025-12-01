@@ -1,0 +1,338 @@
+{
+  "category": "AHLAK",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_count": 30,
+  "questions": [
+    {
+      "id": 1,
+      "question": "İnsanların sahip olduğu huylar ________ olarak adlandırılır. Bu huylar ________ ve ________ olarak ikiye ayrılır. Ancak, kişinin doğuştan gelen mizacı ________ değildir.",
+      "options": {
+        "A": "Ahlâk – iyi – kötü – değiştirilebilir",
+        "B": "Karakter – olumlu – olumsuz – kalıcıdır",
+        "C": "İman – farz – sünnet – insanın iradesine bağlıdır",
+        "D": "Davranış – doğru – yanlış – sonradan kazanılır"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "question": "Ahlâkın amacı, insanlara ________ ve ________ mutluluğunu kazandırmaktır. Ancak sadece dış görünüşte ahlâklı olmak yeterli değildir; kişinin ________ temiz olmalıdır.",
+      "options": {
+        "A": "Dünyevi – manevi – kalbi",
+        "B": "Bireysel – toplumsal – davranışları",
+        "C": "Dünya – âhiret – niyeti",
+        "D": "Felsefi – dini – ibadetleri"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "question": "Kötü huylar zamanla insanda yer eder ve ahlâk haline gelir. ________ huylu olanlar, iyi ahlâk sahibidir. ________ huylu olanlar ise kötü ahlâk sahibidir. Ancak ________ bir kişi, çaba sarf ederek ahlâkını düzeltebilir.",
+      "options": {
+        "A": "Sabırlı – öfkeli – kötümser",
+        "B": "İyi – kötü – niyetli",
+        "C": "Merhametli – bencil – sabırlı",
+        "D": "Cömert – cimri – bilinçli"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "question": "Peygamberimiz (s.a.v.) ________. O'nun ahlâkı ________ olarak övülmüştür.",
+      "options": {
+        "A": "Sadece Müslümanlara örnek olmuştur – Kur'an",
+        "B": "Güzel ahlâkın en güzel örneğidir – Kur'an",
+        "C": "İbadetleriyle tanınır – Hadislerde",
+        "D": "Ticarette dürüsttü – Sahabe sözlerinde"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "question": "Dinimiz insanlara ________ olmayı emretmiştir. İyi ahlâklı olmak, sadece insanlarla ilişkilerde değil, ________ ve ________ ibadetlerde de önemlidir.",
+      "options": {
+        "A": "Sadece dış görünüşüne dikkat eden – sabır – zekât",
+        "B": "İyi ahlâk sahibi – namaz – oruç",
+        "C": "Çekingen – ibadet – sabır",
+        "D": "Cimri – infak – zekât"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "question": "İslâm ________. Ancak kişinin ahlâkı ile ibadetleri arasında ________ bulunmalıdır.",
+      "options": {
+        "A": "Güzel ahlâkı öğütler – samimiyet",
+        "B": "Kötülükleri yasaklar – hiçbir bağlantı",
+        "C": "Sadece ibadet içerir – fark",
+        "D": "Davranışları düzenler – ayrım"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "question": "İbadetler insanı ________. Ancak ibadetlerin sadece şeklen yapılması yeterli değildir; kişinin ________ de temiz olmalıdır.",
+      "options": {
+        "A": "Kötülüklere yaklaştırır – bedeni",
+        "B": "Kötülüklerden uzaklaştırır – kalbi",
+        "C": "Günah işlemeye teşvik eder – duası",
+        "D": "Mutsuz yapar – maddi durumu"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "question": "Peygamberimiz (s.a.v.)'in güzel ahlâkından biri de ________ idi. O, ________ ve ________ ile örnek olmuştur.",
+      "options": {
+        "A": "Hoşgörü – sabır – cömertlik",
+        "B": "Katılık – öfke – adalet",
+        "C": "Sadece ibadet – dış görünüş – az konuşma",
+        "D": "Cimrilik – hoşgörü – adalet"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "question": "En hayırlı insan, ________ olanıdır. Ancak bu özellik, ________ ile desteklenmelidir.",
+      "options": {
+        "A": "Güçlü – sadaka",
+        "B": "Cömert – ilim",
+        "C": "Ahlâken en güzel – ibadet",
+        "D": "Zengin – zekât"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "question": "Her işe ________ ile başlamalıyız. Kişinin yaptığı işin hayırlı olması için ________ önemlidir.",
+      "options": {
+        "A": "Selam – niyet",
+        "B": "Dua – azim",
+        "C": "Besmele – ihlas",
+        "D": "Şükür – nefis terbiyesi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "question": "İnsanların sahip olduğu huylar ahlâk olarak adlandırılır. Ahlâk, iyi ve kötü olmak üzere ikiye ayrılır. Ancak bir insanın doğuştan sahip olduğu huyları zamanla değişebilir. Dinimiz, insanlara iyi ahlâk sahibi olmayı emretmiştir. Buna göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Kişinin doğuştan gelen ahlâkı değişmez.",
+        "B": "Kötü ahlâk sahibi olan biri değişemez.",
+        "C": "Ahlâk sadece kalıtsaldır.",
+        "D": "İnsan, çaba göstererek güzel ahlâklı olabilir."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 12,
+      "question": "Ahlâkın amacı, insanlara hem dünya hem de âhiret mutluluğunu kazandırmaktır. Ancak bu sadece dış görünüşte iyi ahlâklı olmakla değil, kişinin kalbinin temiz olması ile de mümkündür. Buna göre aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Gerçek ahlâk, sadece dış görünüşle sınırlı değildir.",
+        "B": "İyi ahlâklı olmak, insanın dünya ve ahiret mutluluğuna katkı sağlar.",
+        "C": "Kalp temizliği olmadan ahlâkın bir anlamı yoktur.",
+        "D": "İyi ahlâk sadece dünya hayatını güzelleştirir, ahiretle ilgisi yoktur."
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 13,
+      "question": "Ahlâki değerler, bireyin toplum içindeki yerini belirleyen önemli kurallardır. Kişinin güvenilir olması, doğru sözlü olması ve adaletli davranması onun ahlâkının sağlam olduğunu gösterir. Ancak kötü huylar zamanla kişinin karakterini zedeleyebilir. Buna göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Ahlâk, insanın toplum içindeki yerini belirler.",
+        "B": "Güzel ahlâk, kişiyi güvenilir yapar.",
+        "C": "Ahlâk sadece kişinin iç dünyasıyla ilgilidir, toplumla bağlantısı yoktur.",
+        "D": "Kötü huylar insanın karakterine zarar verebilir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "question": "İslam, insanlara merhametli olmayı ve başkalarına yardım etmeyi öğütler. Peygamberimiz (s.a.v.) de hayatı boyunca ihtiyaç sahiplerine yardım etmiş ve insanları adil olmaya teşvik etmiştir. Buna göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Sadece ibadet etmek yeterlidir, insanlara yardım etmek gereksizdir.",
+        "B": "Peygamberimiz sadece Müslümanlara yardım etmiştir.",
+        "C": "Merhametli ve adil olmak güzel ahlâkın gereğidir.",
+        "D": "Başkalarına yardım etmek kişinin maddi durumu ile ilgilidir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "question": "Güzel ahlâk sahibi bir kişi, toplum içinde daima saygı görür ve insanlar tarafından sevilir. Ancak güzel ahlâk, yalnızca dış görünüşle ilgili değildir; kişinin iç dünyasında da dürüst ve adaletli olması gerekir. Buna göre aşağıdakilerden hangisi doğrudur?",
+      "options": {
+        "A": "Güzel ahlâk sadece insanların dış görünüşüyle ilgilidir.",
+        "B": "Dürüst ve adaletli olmak ahlâkın bir gereğidir.",
+        "C": "İnsanların sevmesi için yalnızca dış görünüşe önem verilmelidir.",
+        "D": "Güzel ahlâk, sadece ibadet etmekle kazanılır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "question": "Peygamberimiz (s.a.v.), \"Müslüman, elinden ve dilinden kimsenin zarar görmediği kişidir\" buyurmuştur. Bu hadise göre aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Müslüman, başkalarına zarar vermemelidir.",
+        "B": "Kötü söz söylemek, kötü davranış kadar zararlıdır.",
+        "C": "İnsanlara zarar vermek İslam'ın öğütlediği bir davranıştır.",
+        "D": "Bir Müslüman, insanlara karşı merhametli ve nazik olmalıdır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "question": "Kötü ahlâk sahibi bir insan toplumda güven kaybına uğrar. İnsanlar onun sözüne güvenmez ve zamanla yalnız kalır. Buna göre kötü ahlâkın insan üzerindeki etkisi nedir?",
+      "options": {
+        "A": "İnsanları topluma daha fazla yaklaştırır.",
+        "B": "Kötü ahlâk, insanı yalnızlaştırır.",
+        "C": "İnsanlara kötü davranmak, dost kazandırır.",
+        "D": "Kötü ahlâk sahibi kişiler her zaman toplumda itibar görür."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "question": "Ahlâki değerler, bir toplumun huzur içinde yaşamasını sağlar. Ahlâkın bozulması, toplumda güvenin azalmasına ve huzursuzlukların artmasına neden olur. Buna göre aşağıdakilerden hangisi doğrudur?",
+      "options": {
+        "A": "Ahlâkı bozulmuş bir toplumda huzur ve güven devam eder.",
+        "B": "Güzel ahlâk, toplum düzenini sağlamlaştırır.",
+        "C": "Ahlâk, yalnızca bireysel bir konudur ve toplumu ilgilendirmez.",
+        "D": "Güven duygusunun azalması toplumda hiçbir etki oluşturmaz."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "question": "İnsanların başkalarına zarar vermemesi, yalan söylememesi ve güvenilir olması, toplumda huzurun sağlanması için önemlidir. Kötü ahlâkın yaygın olduğu bir toplumda insanlar birbirine güvenmez ve huzursuzluk artar. Buna göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Güzel ahlâk sadece bireysel bir meseledir, toplumu ilgilendirmez.",
+        "B": "Kötü ahlâkın yaygın olduğu toplumlar huzurlu olur.",
+        "C": "Doğruluk ve güvenilirlik, toplumun huzurunu artırır.",
+        "D": "İnsanlar sadece kendi çıkarlarını düşünmelidir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "question": "İslam'da güzel ahlâkın en önemli özelliklerinden biri sabırdır. Peygamberimiz (s.a.v.) de hayatı boyunca karşılaştığı zorluklara karşı sabırlı olmuş, insanlara iyiliği öğütlemiştir. Buna göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Sabır, İslam'da önemli bir ahlâki değerdir.",
+        "B": "Peygamberimiz, karşılaştığı zorluklara karşı sabırlı olmuştur.",
+        "C": "Güzel ahlâk sahibi olmak için sabırlı olmak gerekmez.",
+        "D": "Sabırlı insanlar toplumda daha çok sevilir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "question": "Ahlâk, sadece bireysel bir konu değil, aynı zamanda toplumsal bir meseledir. İnsanların birbirine karşı dürüst olması, güvenilir olması ve iyi niyetli davranması toplumu güçlendirir. Buna göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Ahlâk, bireysel ve toplumsal bir meseledir.",
+        "B": "Kötü ahlâk, toplumun güvenini artırır.",
+        "C": "İnsanların iyi niyetli olması toplumu güçlendirir.",
+        "D": "Dürüst olmak, insanlara güven kazandırır."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "question": "Peygamberimiz (s.a.v.), \"Müslüman, elinden ve dilinden kimsenin zarar görmediği kişidir\" buyurmuştur. Buna göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "İnsanlara zarar vermemek Müslümanlığın bir gereğidir.",
+        "B": "İyi bir Müslüman olmak için sadece ibadet etmek yeterlidir.",
+        "C": "Peygamberimiz sadece Müslümanlara iyi davranmıştır.",
+        "D": "Başkalarına zarar vermek İslam'ın tavsiye ettiği bir davranıştır."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "question": "Ahlâk, bireyin toplum içindeki yerini belirleyen en önemli değerlerden biridir. Kişinin güvenilir olması, adaletli davranması ve hoşgörülü olması, toplum tarafından saygı görmesini sağlar. Kötü ahlâk ise bireyin çevresiyle sağlıklı ilişkiler kurmasını zorlaştırır. Buna göre aşağıdakilerden hangisi yanlıştır?",
+      "options": {
+        "A": "Güzel ahlâk, bireyin toplum içinde saygı görmesini sağlar.",
+        "B": "Kötü ahlâk, bireyin çevresindeki insanlarla ilişkilerini güçlendirir.",
+        "C": "Doğruluk ve güvenilirlik, ahlâklı bireylerin sahip olduğu özelliklerdendir.",
+        "D": "Adaletli olmak, güzel ahlâkın bir gereğidir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "question": "İslam dini, bireyin hem dünyada hem de ahirette mutlu olması için güzel ahlâklı olmasını emretmiştir. Ahlâk sadece bireysel bir konu değildir, aynı zamanda toplumsal bir düzenin sağlanmasına yardımcı olur. Bu bilgiye göre aşağıdakilerden hangisi doğrudur?",
+      "options": {
+        "A": "Güzel ahlâk, sadece bireyin kendisini ilgilendirir.",
+        "B": "Ahlâk, bireysel bir mesele olup toplum düzenini etkilemez.",
+        "C": "İslam, güzel ahlâkı bireyin ve toplumun mutluluğu için emretmiştir.",
+        "D": "Ahlâk, ibadetlerden tamamen bağımsızdır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "question": "Peygamberimiz (s.a.v.), hayatı boyunca insanlara doğruluğu, güvenilirliği ve merhameti öğütlemiştir. O, güzel ahlâkın en güzel örneği olarak gösterilmiştir. Bu bilgiye göre aşağıdaki ifadelerden hangisi yanlıştır?",
+      "options": {
+        "A": "Peygamberimiz insanlara güzel ahlâkı tavsiye etmiştir.",
+        "B": "Güzel ahlâk, sadece belirli bir zaman diliminde geçerlidir.",
+        "C": "Merhametli ve güvenilir olmak güzel ahlâkın bir gereğidir.",
+        "D": "Peygamberimiz örnek alınması gereken en güzel ahlâk sahibidir."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "question": "İnsanların birbirlerine karşı saygılı ve hoşgörülü olması toplumsal barış için gereklidir. Saygısız ve kaba davranışlar toplum içindeki huzuru bozar ve insan ilişkilerini zedeler. Bu bilgiye göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Saygı ve hoşgörü, toplum içindeki ilişkileri güçlendirir.",
+        "B": "Kaba davranışlar, insanlar arasındaki ilişkileri kuvvetlendirir.",
+        "C": "İnsanların birbirlerine kötü davranması, toplumsal barışı artırır.",
+        "D": "Güzel ahlâk, toplum düzenine zarar verir."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "question": "Güzel ahlâkın temel taşlarından biri de sabırdır. Sabırlı insan, karşılaştığı zorluklara rağmen doğru ve adaletli davranmaktan vazgeçmez. Sabırsızlık ise çoğu zaman insanın yanlış kararlar almasına neden olabilir. Buna göre aşağıdaki ifadelerden hangisi doğrudur?",
+      "options": {
+        "A": "Sabır, insanın yanlış kararlar almasına neden olur.",
+        "B": "Sabırlı insan, doğru kararlar almakta zorlanır.",
+        "C": "Sabır, güzel ahlâkın bir gereğidir.",
+        "D": "Sabırsız insanlar her zaman adaletli olur."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "question": "Aşağıdakilerden hangisi ahlâkın amacı olarak kabul edilebilir?",
+      "options": {
+        "A": "Sadece ibadetleri yerine getirmek",
+        "B": "İnsanlara dünya ve âhiret mutluluğunu kazandırmak",
+        "C": "İnsanları sadece cezalandırmak",
+        "D": "Bireylerin birbirinden bağımsız yaşamasını sağlamak"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "question": "Aşağıdakilerden hangisi İslam dininin ahlâkla ilgili öğretilerinden biri değildir?",
+      "options": {
+        "A": "İyi ahlâklı olmak teşvik edilmiştir.",
+        "B": "Peygamberimiz (s.a.v.) en güzel ahlâk sahibidir.",
+        "C": "Kötü huylu insanlar teşvik edilmiştir.",
+        "D": "İslam güzel ahlâk demektir."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "question": "Aşağıdakilerden hangisi güzel ahlâkın göstergelerinden biri değildir?",
+      "options": {
+        "A": "Temizliğe dikkat etmek",
+        "B": "Yemekten önce ve sonra dua etmek",
+        "C": "İnsanlara kötü davranmak",
+        "D": "Merhamet duygularını geliştirmek"
+      },
+      "correct_answer": "C"
+    }
+  ],
+  "answer_key": "1-A, 2-C, 3-B, 4-B, 5-B, 6-A, 7-B, 8-A, 9-C, 10-C, 11-D, 12-D, 13-C, 14-C, 15-B, 16-C, 17-B, 18-B, 19-C, 20-C, 21-B, 22-A, 23-B, 24-C, 25-B, 26-A, 27-C, 28-B, 29-C, 30-C"
+}

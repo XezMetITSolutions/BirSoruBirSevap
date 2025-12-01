@@ -1,0 +1,30 @@
+# Robots.txt - Bir Soru Bir Sevap
+# XezMet IT-Solutions
+
+User-agent: *
+Disallow: /admin/
+Disallow: /data/
+Disallow: /Sorular/
+Disallow: /teacher/
+Disallow: /student/
+Disallow: /*.json
+Disallow: /*.log
+Disallow: /*.sql
+Disallow: /setup*
+Disallow: /debug*
+Disallow: /test*
+Disallow: /create*
+Disallow: /fix*
+Disallow: /backup*
+
+# Sadece ana sayfa ve genel sayfalar indexlenebilir
+Allow: /
+Allow: /index.php
+Allow: /help.php
+Allow: /contact.php
+Allow: /faq.php
+Allow: /support.php
+Allow: /login.php
+Allow: /logo.png
+
+Sitemap: https://birsorubirsevap.metechnik.at/sitemap.xml

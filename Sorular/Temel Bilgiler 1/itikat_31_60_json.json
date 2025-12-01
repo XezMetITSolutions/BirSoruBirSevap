@@ -1,0 +1,339 @@
+{
+  "category": "İTİKAT",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_range": "31-60",
+  "question_count": 30,
+  "questions": [
+    {
+      "id": 31,
+      "question": "İslam dinine göre Allah'ın gönderdiği emir ve yasaklara inanmak ve bu esaslara uygun bir hayat sürmek ne olarak adlandırılır?",
+      "options": {
+        "A": "Tevhit",
+        "B": "İman",
+        "C": "Tefekkür",
+        "D": "Tezekkür"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "question": "Kelime-i Tevhid aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "\"Eşhedü en lâ ilâhe illallah ve eşhedü enne Muhammeden abduhû ve rasûluhû.\"",
+        "B": "\"Lâ ilâhe illallah Muhammedün rasûlullah.\"",
+        "C": "\"Subhanallahi ve bihamdihi subhanallahil azîm.\"",
+        "D": "\"Allahümme bârik alâ Muhammed ve alâ âli Muhammed.\""
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 33,
+      "question": "İman esaslarının kaç tane olduğu kabul edilir?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "question": "Aşağıdakilerden hangisi Allah'ın sıfatlarından biri değildir?",
+      "options": {
+        "A": "Bâki (Ölümsüz)",
+        "B": "Basîr (Her şeyi görür)",
+        "C": "Mahluk (Yaratılmış)",
+        "D": "Kadîr (Her şeye gücü yeter)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "question": "Allah'ın varlığını ve birliğini ifade eden inanç sistemi ne olarak adlandırılır?",
+      "options": {
+        "A": "Tevhid",
+        "B": "Şirk",
+        "C": "Rızık",
+        "D": "Fıtrat"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "question": "Melekler hangi maddeden yaratılmıştır?",
+      "options": {
+        "A": "Toprak",
+        "B": "Ateş",
+        "C": "Nur",
+        "D": "Su"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "question": "Aşağıdaki meleklerden hangisi insanların sevap ve günahlarını yazmakla görevlidir?",
+      "options": {
+        "A": "Mikâil",
+        "B": "Cebrâil",
+        "C": "Azrâil",
+        "D": "Kirâmen Kâtibîn"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 38,
+      "question": "Kabirde sorgulama yapan melekler kimlerdir?",
+      "options": {
+        "A": "Cebrâil ve Azrâil",
+        "B": "Münker ve Nekir",
+        "C": "Mikâil ve İsrâfil",
+        "D": "Kirâmen Kâtibîn"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "question": "İlahi kitaplar kaç çeşittir?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "question": "Aşağıdakilerden hangisi bir ilahi kitap değildir?",
+      "options": {
+        "A": "Tevrat",
+        "B": "Zebûr",
+        "C": "İncil",
+        "D": "Talmud"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 41,
+      "question": "Kur'an-ı Kerim'in en önemli özelliklerinden biri aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Yalnızca Araplara gönderilmiş olması",
+        "B": "Hiçbir değişikliğe uğramamış olması",
+        "C": "Sadece peygamberlerin okuyabileceği bir kitap olması",
+        "D": "Eski peygamberlerin kitaplarını tamamen geçersiz kılması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "question": "İslam'a göre peygamberler hangi özelliğe sahiptir?",
+      "options": {
+        "A": "Günah işleyebilirler",
+        "B": "Doğru sözlüdürler",
+        "C": "Sadece Araplardan seçilmiştir",
+        "D": "Hepsi aynı zamanda hükümdardır"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "question": "Son peygamber kimdir?",
+      "options": {
+        "A": "Hz. Musa",
+        "B": "Hz. İsa",
+        "C": "Hz. Nuh",
+        "D": "Hz. Muhammed"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 44,
+      "question": "Dünya hayatından sonraki sonsuz hayata ne denir?",
+      "options": {
+        "A": "Berzah",
+        "B": "Kabir Azabı",
+        "C": "Âhiret",
+        "D": "Kıyamet"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 45,
+      "question": "Aşağıdakilerden hangisi büyük peygamberlerden biridir?",
+      "options": {
+        "A": "Hz. Şît",
+        "B": "Hz. İsmail",
+        "C": "Hz. Nûh",
+        "D": "Hz. Hızır"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 46,
+      "question": "\"Allah'ın olmuş ve olacak şeyleri bilmesine\" ne ad verilir?",
+      "options": {
+        "A": "Kaza",
+        "B": "Kader",
+        "C": "Rızık",
+        "D": "Şefaat"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "question": "Allah'ın takdir ettiği şeylerin meydana gelmesine ne ad verilir?",
+      "options": {
+        "A": "Rızık",
+        "B": "Kaza",
+        "C": "Kader",
+        "D": "Tevhid"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "question": "Aşağıdakilerden hangisi insanları inanç yönünden sınıflandıran bir kavram değildir?",
+      "options": {
+        "A": "Mü'min",
+        "B": "Müşrik",
+        "C": "Münâfık",
+        "D": "Râşid"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 49,
+      "question": "Aşağıdaki meleklerden hangisi kıyamet günü Sûr'a üflemekle görevlidir?",
+      "options": {
+        "A": "Mikâil",
+        "B": "İsrâfil",
+        "C": "Azrâil",
+        "D": "Cebrâil"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 50,
+      "question": "Kur'an'da adı geçen peygamber sayısı kaçtır?",
+      "options": {
+        "A": "15",
+        "B": "20",
+        "C": "25",
+        "D": "30"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 51,
+      "question": "Allah'ın sonsuz ilim sahibi olup olmuş ve olacak her şeyi bilmesine ne denir?",
+      "options": {
+        "A": "Tevekkül",
+        "B": "Kader",
+        "C": "Tevhid",
+        "D": "Şefaat"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 52,
+      "question": "Aşağıdaki iman esaslarından hangisi doğrudan kıyamet günü ile ilgilidir?",
+      "options": {
+        "A": "Allah'a iman",
+        "B": "Ahirete iman",
+        "C": "Kadere iman",
+        "D": "Kitaplara iman"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 53,
+      "question": "\"Allah'ın varlıkları yaratıp onları bir düzen içinde yönettiğine\" inanmak ne olarak adlandırılır?",
+      "options": {
+        "A": "Rızık",
+        "B": "Kader",
+        "C": "Hidayet",
+        "D": "Takva"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 54,
+      "question": "Aşağıdakilerden hangisi bir meleğin görevi değildir?",
+      "options": {
+        "A": "Peygamberlere vahiy getirmek",
+        "B": "İnsanları hesaba çekmek",
+        "C": "Doğa olaylarını yönetmek",
+        "D": "İnsanların amellerini kaydetmek"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 55,
+      "question": "Aşağıdaki meleklerden hangisi tabiat olaylarını idare etmekle görevlidir?",
+      "options": {
+        "A": "Cebrâil",
+        "B": "Mikâil",
+        "C": "Azrâil",
+        "D": "İsrafil"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 56,
+      "question": "Aşağıdaki peygamberlerden hangisine ilahi kitap gönderilmemiştir?",
+      "options": {
+        "A": "Hz. Musa",
+        "B": "Hz. Davud",
+        "C": "Hz. İsmail",
+        "D": "Hz. İsa"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 57,
+      "question": "Hz. Peygamber (s.a.v.)'in peygamberler arasındaki konumu nasıl tanımlanır?",
+      "options": {
+        "A": "İlk peygamberdir",
+        "B": "Sadece Araplara gönderilmiştir",
+        "C": "Son peygamberdir",
+        "D": "Yahudilerin de peygamberidir"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 58,
+      "question": "Cennet ve cehenneme gitmeyi belirleyen en temel unsur nedir?",
+      "options": {
+        "A": "İnsanların yaptığı ibadetler",
+        "B": "Kimin peygamber soyundan geldiği",
+        "C": "İman edip etmemek",
+        "D": "Ne kadar hayır işlediği"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 59,
+      "question": "Kıyamet günü dirilişten sonra insanların hesaba çekileceği yer neresidir?",
+      "options": {
+        "A": "Arş",
+        "B": "Mahşer",
+        "C": "Kabir",
+        "D": "Sırat Köprüsü"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 60,
+      "question": "İslam'a göre \"insanların dünyada yaptıklarından sorumlu tutulacakları ve hesaba çekilecekleri günü\" ifade eden kavram hangisidir?",
+      "options": {
+        "A": "Ahiret Günü",
+        "B": "Berzah",
+        "C": "Kıyamet Alametleri",
+        "D": "Kevser"
+      },
+      "correct_answer": "A"
+    }
+  ],
+  "answer_key": "31-B, 32-B, 33-C, 34-C, 35-A, 36-C, 37-D, 38-B, 39-A, 40-D, 41-B, 42-B, 43-D, 44-C, 45-C, 46-B, 47-B, 48-D, 49-B, 50-C, 51-B, 52-B, 53-B, 54-B, 55-B, 56-C, 57-C, 58-C, 59-B, 60-A"
+}

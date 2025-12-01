@@ -1,0 +1,34 @@
+# Basit güvenlik kuralları
+Options -Indexes
+
+# PWA manifest istisnası (manifest.json erişimine izin ver)
+<Files "manifest.json">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Hassas JSON dosyalarını gizle (manifest hariç)
+<Files "*.json">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "*.log">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "config.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "database.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "auth.php">
+    Order Allow,Deny
+    Deny from all
+</Files>

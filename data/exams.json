@@ -1,0 +1,1008 @@
+{
+    "49B70B71": {
+        "id": "49B70B71",
+        "title": "TEEEEES",
+        "description": "",
+        "teacher_id": "emekt.h\u00fc",
+        "teacher_name": "H\u00fcseyin Emektar",
+        "teacher_section": "IQRA Bregenz",
+        "class_section": "IQRA Bregenz",
+        "categories": [
+            "Temel Bilgiler 1|Ahlak"
+        ],
+        "question_type": "random",
+        "questions": [
+            {
+                "id": 15,
+                "type": "mcq",
+                "question": "G\u00fczel ahl\u00e2k sahibi bir ki\u015fi, toplum i\u00e7inde daima sayg\u0131 g\u00f6r\u00fcr ve insanlar taraf\u0131ndan sevilir. Ancak g\u00fczel ahl\u00e2k, yaln\u0131zca d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fle ilgili de\u011fildir; ki\u015finin i\u00e7 d\u00fcnyas\u0131nda da d\u00fcr\u00fcst ve adaletli olmas\u0131 gerekir. Buna g\u00f6re a\u015fa\u011f\u0131dakilerden hangisi do\u011frudur?",
+                "text": "G\u00fczel ahl\u00e2k sahibi bir ki\u015fi, toplum i\u00e7inde daima sayg\u0131 g\u00f6r\u00fcr ve insanlar taraf\u0131ndan sevilir. Ancak g\u00fczel ahl\u00e2k, yaln\u0131zca d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fle ilgili de\u011fildir; ki\u015finin i\u00e7 d\u00fcnyas\u0131nda da d\u00fcr\u00fcst ve adaletli olmas\u0131 gerekir. Buna g\u00f6re a\u015fa\u011f\u0131dakilerden hangisi do\u011frudur?",
+                "options": [
+                    "G\u00fczel ahl\u00e2k sadece insanlar\u0131n d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015f\u00fcyle ilgilidir.",
+                    "D\u00fcr\u00fcst ve adaletli olmak ahl\u00e2k\u0131n bir gere\u011fidir.",
+                    "\u0130nsanlar\u0131n sevmesi i\u00e7in yaln\u0131zca d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fe \u00f6nem verilmelidir.",
+                    "G\u00fczel ahl\u00e2k, sadece ibadet etmekle kazan\u0131l\u0131r."
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 30,
+                "type": "mcq",
+                "question": "A\u015fa\u011f\u0131dakilerden hangisi g\u00fczel ahl\u00e2k\u0131n g\u00f6stergelerinden biri de\u011fildir?",
+                "text": "A\u015fa\u011f\u0131dakilerden hangisi g\u00fczel ahl\u00e2k\u0131n g\u00f6stergelerinden biri de\u011fildir?",
+                "options": [
+                    "Temizli\u011fe dikkat etmek",
+                    "Yemekten \u00f6nce ve sonra dua etmek",
+                    "\u0130nsanlara k\u00f6t\u00fc davranmak",
+                    "Merhamet duygular\u0131n\u0131 geli\u015ftirmek"
+                ],
+                "answer": [
+                    "C"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 12,
+                "type": "mcq",
+                "question": "Ahl\u00e2k\u0131n amac\u0131, insanlara hem d\u00fcnya hem de \u00e2hiret mutlulu\u011funu kazand\u0131rmakt\u0131r. Ancak bu sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fte iyi ahl\u00e2kl\u0131 olmakla de\u011fil, ki\u015finin kalbinin temiz olmas\u0131 ile de m\u00fcmk\u00fcnd\u00fcr. Buna g\u00f6re a\u015fa\u011f\u0131dakilerden hangisi yanl\u0131\u015ft\u0131r?",
+                "text": "Ahl\u00e2k\u0131n amac\u0131, insanlara hem d\u00fcnya hem de \u00e2hiret mutlulu\u011funu kazand\u0131rmakt\u0131r. Ancak bu sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fte iyi ahl\u00e2kl\u0131 olmakla de\u011fil, ki\u015finin kalbinin temiz olmas\u0131 ile de m\u00fcmk\u00fcnd\u00fcr. Buna g\u00f6re a\u015fa\u011f\u0131dakilerden hangisi yanl\u0131\u015ft\u0131r?",
+                "options": [
+                    "Ger\u00e7ek ahl\u00e2k, sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fle s\u0131n\u0131rl\u0131 de\u011fildir.",
+                    "\u0130yi ahl\u00e2kl\u0131 olmak, insan\u0131n d\u00fcnya ve ahiret mutlulu\u011funa katk\u0131 sa\u011flar.",
+                    "Kalp temizli\u011fi olmadan ahl\u00e2k\u0131n bir anlam\u0131 yoktur.",
+                    "\u0130yi ahl\u00e2k sadece d\u00fcnya hayat\u0131n\u0131 g\u00fczelle\u015ftirir, ahiretle ilgisi yoktur."
+                ],
+                "answer": [
+                    "D"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 9,
+                "type": "mcq",
+                "question": "En hay\u0131rl\u0131 insan, ________ olan\u0131d\u0131r. Ancak bu \u00f6zellik, ________ ile desteklenmelidir.",
+                "text": "En hay\u0131rl\u0131 insan, ________ olan\u0131d\u0131r. Ancak bu \u00f6zellik, ________ ile desteklenmelidir.",
+                "options": [
+                    "G\u00fc\u00e7l\u00fc \u2013 sadaka",
+                    "C\u00f6mert \u2013 ilim",
+                    "Ahl\u00e2ken en g\u00fczel \u2013 ibadet",
+                    "Zengin \u2013 zek\u00e2t"
+                ],
+                "answer": [
+                    "C"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 28,
+                "type": "mcq",
+                "question": "A\u015fa\u011f\u0131dakilerden hangisi ahl\u00e2k\u0131n amac\u0131 olarak kabul edilebilir?",
+                "text": "A\u015fa\u011f\u0131dakilerden hangisi ahl\u00e2k\u0131n amac\u0131 olarak kabul edilebilir?",
+                "options": [
+                    "Sadece ibadetleri yerine getirmek",
+                    "\u0130nsanlara d\u00fcnya ve \u00e2hiret mutlulu\u011funu kazand\u0131rmak",
+                    "\u0130nsanlar\u0131 sadece cezaland\u0131rmak",
+                    "Bireylerin birbirinden ba\u011f\u0131ms\u0131z ya\u015famas\u0131n\u0131 sa\u011flamak"
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 3,
+                "type": "mcq",
+                "question": "K\u00f6t\u00fc huylar zamanla insanda yer eder ve ahl\u00e2k haline gelir. ________ huylu olanlar, iyi ahl\u00e2k sahibidir. ________ huylu olanlar ise k\u00f6t\u00fc ahl\u00e2k sahibidir. Ancak ________ bir ki\u015fi, \u00e7aba sarf ederek ahl\u00e2k\u0131n\u0131 d\u00fczeltebilir.",
+                "text": "K\u00f6t\u00fc huylar zamanla insanda yer eder ve ahl\u00e2k haline gelir. ________ huylu olanlar, iyi ahl\u00e2k sahibidir. ________ huylu olanlar ise k\u00f6t\u00fc ahl\u00e2k sahibidir. Ancak ________ bir ki\u015fi, \u00e7aba sarf ederek ahl\u00e2k\u0131n\u0131 d\u00fczeltebilir.",
+                "options": [
+                    "Sab\u0131rl\u0131 \u2013 \u00f6fkeli \u2013 k\u00f6t\u00fcmser",
+                    "\u0130yi \u2013 k\u00f6t\u00fc \u2013 niyetli",
+                    "Merhametli \u2013 bencil \u2013 sab\u0131rl\u0131",
+                    "C\u00f6mert \u2013 cimri \u2013 bilin\u00e7li"
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 14,
+                "type": "mcq",
+                "question": "\u0130slam, insanlara merhametli olmay\u0131 ve ba\u015fkalar\u0131na yard\u0131m etmeyi \u00f6\u011f\u00fctler. Peygamberimiz (s.a.v.) de hayat\u0131 boyunca ihtiya\u00e7 sahiplerine yard\u0131m etmi\u015f ve insanlar\u0131 adil olmaya te\u015fvik etmi\u015ftir. Buna g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi do\u011frudur?",
+                "text": "\u0130slam, insanlara merhametli olmay\u0131 ve ba\u015fkalar\u0131na yard\u0131m etmeyi \u00f6\u011f\u00fctler. Peygamberimiz (s.a.v.) de hayat\u0131 boyunca ihtiya\u00e7 sahiplerine yard\u0131m etmi\u015f ve insanlar\u0131 adil olmaya te\u015fvik etmi\u015ftir. Buna g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi do\u011frudur?",
+                "options": [
+                    "Sadece ibadet etmek yeterlidir, insanlara yard\u0131m etmek gereksizdir.",
+                    "Peygamberimiz sadece M\u00fcsl\u00fcmanlara yard\u0131m etmi\u015ftir.",
+                    "Merhametli ve adil olmak g\u00fczel ahl\u00e2k\u0131n gere\u011fidir.",
+                    "Ba\u015fkalar\u0131na yard\u0131m etmek ki\u015finin maddi durumu ile ilgilidir."
+                ],
+                "answer": [
+                    "C"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 2,
+                "type": "mcq",
+                "question": "Ahl\u00e2k\u0131n amac\u0131, insanlara ________ ve ________ mutlulu\u011funu kazand\u0131rmakt\u0131r. Ancak sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fte ahl\u00e2kl\u0131 olmak yeterli de\u011fildir; ki\u015finin ________ temiz olmal\u0131d\u0131r.",
+                "text": "Ahl\u00e2k\u0131n amac\u0131, insanlara ________ ve ________ mutlulu\u011funu kazand\u0131rmakt\u0131r. Ancak sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fte ahl\u00e2kl\u0131 olmak yeterli de\u011fildir; ki\u015finin ________ temiz olmal\u0131d\u0131r.",
+                "options": [
+                    "D\u00fcnyevi \u2013 manevi \u2013 kalbi",
+                    "Bireysel \u2013 toplumsal \u2013 davran\u0131\u015flar\u0131",
+                    "D\u00fcnya \u2013 \u00e2hiret \u2013 niyeti",
+                    "Felsefi \u2013 dini \u2013 ibadetleri"
+                ],
+                "answer": [
+                    "C"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 17,
+                "type": "mcq",
+                "question": "K\u00f6t\u00fc ahl\u00e2k sahibi bir insan toplumda g\u00fcven kayb\u0131na u\u011frar. \u0130nsanlar onun s\u00f6z\u00fcne g\u00fcvenmez ve zamanla yaln\u0131z kal\u0131r. Buna g\u00f6re k\u00f6t\u00fc ahl\u00e2k\u0131n insan \u00fczerindeki etkisi nedir?",
+                "text": "K\u00f6t\u00fc ahl\u00e2k sahibi bir insan toplumda g\u00fcven kayb\u0131na u\u011frar. \u0130nsanlar onun s\u00f6z\u00fcne g\u00fcvenmez ve zamanla yaln\u0131z kal\u0131r. Buna g\u00f6re k\u00f6t\u00fc ahl\u00e2k\u0131n insan \u00fczerindeki etkisi nedir?",
+                "options": [
+                    "\u0130nsanlar\u0131 topluma daha fazla yakla\u015ft\u0131r\u0131r.",
+                    "K\u00f6t\u00fc ahl\u00e2k, insan\u0131 yaln\u0131zla\u015ft\u0131r\u0131r.",
+                    "\u0130nsanlara k\u00f6t\u00fc davranmak, dost kazand\u0131r\u0131r.",
+                    "K\u00f6t\u00fc ahl\u00e2k sahibi ki\u015filer her zaman toplumda itibar g\u00f6r\u00fcr."
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 4,
+                "type": "mcq",
+                "question": "Peygamberimiz (s.a.v.) ________. O'nun ahl\u00e2k\u0131 ________ olarak \u00f6v\u00fclm\u00fc\u015ft\u00fcr.",
+                "text": "Peygamberimiz (s.a.v.) ________. O'nun ahl\u00e2k\u0131 ________ olarak \u00f6v\u00fclm\u00fc\u015ft\u00fcr.",
+                "options": [
+                    "Sadece M\u00fcsl\u00fcmanlara \u00f6rnek olmu\u015ftur \u2013 Kur'an",
+                    "G\u00fczel ahl\u00e2k\u0131n en g\u00fczel \u00f6rne\u011fidir \u2013 Kur'an",
+                    "\u0130badetleriyle tan\u0131n\u0131r \u2013 Hadislerde",
+                    "Ticarette d\u00fcr\u00fcstt\u00fc \u2013 Sahabe s\u00f6zlerinde"
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            }
+        ],
+        "question_count": 10,
+        "duration": 45,
+        "created_at": "2025-09-12 20:31:07",
+        "status": "active",
+        "participants": [],
+        "schedule_type": "immediate",
+        "scheduled_start": null
+    },
+    "F0142D50": {
+        "id": "F0142D50",
+        "title": "Manuel 2",
+        "description": "",
+        "teacher_id": "emekt.h\u00fc",
+        "teacher_name": "H\u00fcseyin Emektar",
+        "teacher_section": "IQRA Bregenz",
+        "class_section": "IQRA Bregenz",
+        "categories": [
+            "\u00d6zel|\u00d6zel Sorular"
+        ],
+        "question_type": "custom",
+        "questions": [
+            {
+                "id": "custom_68de2fd4a9b0e",
+                "question": "Test ",
+                "type": "mcq",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "correct_answer": "0",
+                "explanation": "",
+                "difficulty": "Orta",
+                "bank": "\u00d6zel",
+                "category": "\u00d6zel Sorular"
+            },
+            {
+                "id": "custom_68de2fd4a9b11",
+                "question": "Test ",
+                "type": "mcq",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "correct_answer": "",
+                "explanation": "",
+                "difficulty": "Orta",
+                "bank": "\u00d6zel",
+                "category": "\u00d6zel Sorular"
+            },
+            {
+                "id": "custom_68de2fd4a9b12",
+                "question": "TEST 1",
+                "type": "mcq",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "correct_answer": "0",
+                "explanation": "",
+                "difficulty": "Orta",
+                "bank": "\u00d6zel",
+                "category": "\u00d6zel Sorular"
+            }
+        ],
+        "question_count": 10,
+        "duration": 30,
+        "created_at": "2025-10-02 09:55:00",
+        "status": "active",
+        "participants": [],
+        "schedule_type": "immediate",
+        "scheduled_start": null
+    },
+    "ED121487": {
+        "id": "ED121487",
+        "title": "Test s\u0131nav\u0131",
+        "description": "",
+        "teacher_id": "burca.met",
+        "teacher_name": "Mete Burcak",
+        "teacher_section": "IQRA Feldkirch",
+        "class_section": "IQRA Feldkirch",
+        "categories": [
+            "Temel Bilgiler 1|Ahlak"
+        ],
+        "question_type": "random",
+        "questions": [
+            {
+                "id": 22,
+                "type": "mcq",
+                "question": "Peygamberimiz (s.a.v.), \"M\u00fcsl\u00fcman, elinden ve dilinden kimsenin zarar g\u00f6rmedi\u011fi ki\u015fidir\" buyurmu\u015ftur. Buna g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi do\u011frudur?",
+                "text": "Peygamberimiz (s.a.v.), \"M\u00fcsl\u00fcman, elinden ve dilinden kimsenin zarar g\u00f6rmedi\u011fi ki\u015fidir\" buyurmu\u015ftur. Buna g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi do\u011frudur?",
+                "options": [
+                    "\u0130nsanlara zarar vermemek M\u00fcsl\u00fcmanl\u0131\u011f\u0131n bir gere\u011fidir.",
+                    "\u0130yi bir M\u00fcsl\u00fcman olmak i\u00e7in sadece ibadet etmek yeterlidir.",
+                    "Peygamberimiz sadece M\u00fcsl\u00fcmanlara iyi davranm\u0131\u015ft\u0131r.",
+                    "Ba\u015fkalar\u0131na zarar vermek \u0130slam'\u0131n tavsiye etti\u011fi bir davran\u0131\u015ft\u0131r."
+                ],
+                "answer": [
+                    "A"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 17,
+                "type": "mcq",
+                "question": "K\u00f6t\u00fc ahl\u00e2k sahibi bir insan toplumda g\u00fcven kayb\u0131na u\u011frar. \u0130nsanlar onun s\u00f6z\u00fcne g\u00fcvenmez ve zamanla yaln\u0131z kal\u0131r. Buna g\u00f6re k\u00f6t\u00fc ahl\u00e2k\u0131n insan \u00fczerindeki etkisi nedir?",
+                "text": "K\u00f6t\u00fc ahl\u00e2k sahibi bir insan toplumda g\u00fcven kayb\u0131na u\u011frar. \u0130nsanlar onun s\u00f6z\u00fcne g\u00fcvenmez ve zamanla yaln\u0131z kal\u0131r. Buna g\u00f6re k\u00f6t\u00fc ahl\u00e2k\u0131n insan \u00fczerindeki etkisi nedir?",
+                "options": [
+                    "\u0130nsanlar\u0131 topluma daha fazla yakla\u015ft\u0131r\u0131r.",
+                    "K\u00f6t\u00fc ahl\u00e2k, insan\u0131 yaln\u0131zla\u015ft\u0131r\u0131r.",
+                    "\u0130nsanlara k\u00f6t\u00fc davranmak, dost kazand\u0131r\u0131r.",
+                    "K\u00f6t\u00fc ahl\u00e2k sahibi ki\u015filer her zaman toplumda itibar g\u00f6r\u00fcr."
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 6,
+                "type": "mcq",
+                "question": "\u0130sl\u00e2m ________. Ancak ki\u015finin ahl\u00e2k\u0131 ile ibadetleri aras\u0131nda ________ bulunmal\u0131d\u0131r.",
+                "text": "\u0130sl\u00e2m ________. Ancak ki\u015finin ahl\u00e2k\u0131 ile ibadetleri aras\u0131nda ________ bulunmal\u0131d\u0131r.",
+                "options": [
+                    "G\u00fczel ahl\u00e2k\u0131 \u00f6\u011f\u00fctler \u2013 samimiyet",
+                    "K\u00f6t\u00fcl\u00fckleri yasaklar \u2013 hi\u00e7bir ba\u011flant\u0131",
+                    "Sadece ibadet i\u00e7erir \u2013 fark",
+                    "Davran\u0131\u015flar\u0131 d\u00fczenler \u2013 ayr\u0131m"
+                ],
+                "answer": [
+                    "A"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 3,
+                "type": "mcq",
+                "question": "K\u00f6t\u00fc huylar zamanla insanda yer eder ve ahl\u00e2k haline gelir. ________ huylu olanlar, iyi ahl\u00e2k sahibidir. ________ huylu olanlar ise k\u00f6t\u00fc ahl\u00e2k sahibidir. Ancak ________ bir ki\u015fi, \u00e7aba sarf ederek ahl\u00e2k\u0131n\u0131 d\u00fczeltebilir.",
+                "text": "K\u00f6t\u00fc huylar zamanla insanda yer eder ve ahl\u00e2k haline gelir. ________ huylu olanlar, iyi ahl\u00e2k sahibidir. ________ huylu olanlar ise k\u00f6t\u00fc ahl\u00e2k sahibidir. Ancak ________ bir ki\u015fi, \u00e7aba sarf ederek ahl\u00e2k\u0131n\u0131 d\u00fczeltebilir.",
+                "options": [
+                    "Sab\u0131rl\u0131 \u2013 \u00f6fkeli \u2013 k\u00f6t\u00fcmser",
+                    "\u0130yi \u2013 k\u00f6t\u00fc \u2013 niyetli",
+                    "Merhametli \u2013 bencil \u2013 sab\u0131rl\u0131",
+                    "C\u00f6mert \u2013 cimri \u2013 bilin\u00e7li"
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 7,
+                "type": "mcq",
+                "question": "\u0130badetler insan\u0131 ________. Ancak ibadetlerin sadece \u015feklen yap\u0131lmas\u0131 yeterli de\u011fildir; ki\u015finin ________ de temiz olmal\u0131d\u0131r.",
+                "text": "\u0130badetler insan\u0131 ________. Ancak ibadetlerin sadece \u015feklen yap\u0131lmas\u0131 yeterli de\u011fildir; ki\u015finin ________ de temiz olmal\u0131d\u0131r.",
+                "options": [
+                    "K\u00f6t\u00fcl\u00fcklere yakla\u015ft\u0131r\u0131r \u2013 bedeni",
+                    "K\u00f6t\u00fcl\u00fcklerden uzakla\u015ft\u0131r\u0131r \u2013 kalbi",
+                    "G\u00fcnah i\u015flemeye te\u015fvik eder \u2013 duas\u0131",
+                    "Mutsuz yapar \u2013 maddi durumu"
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 12,
+                "type": "mcq",
+                "question": "Ahl\u00e2k\u0131n amac\u0131, insanlara hem d\u00fcnya hem de \u00e2hiret mutlulu\u011funu kazand\u0131rmakt\u0131r. Ancak bu sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fte iyi ahl\u00e2kl\u0131 olmakla de\u011fil, ki\u015finin kalbinin temiz olmas\u0131 ile de m\u00fcmk\u00fcnd\u00fcr. Buna g\u00f6re a\u015fa\u011f\u0131dakilerden hangisi yanl\u0131\u015ft\u0131r?",
+                "text": "Ahl\u00e2k\u0131n amac\u0131, insanlara hem d\u00fcnya hem de \u00e2hiret mutlulu\u011funu kazand\u0131rmakt\u0131r. Ancak bu sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fte iyi ahl\u00e2kl\u0131 olmakla de\u011fil, ki\u015finin kalbinin temiz olmas\u0131 ile de m\u00fcmk\u00fcnd\u00fcr. Buna g\u00f6re a\u015fa\u011f\u0131dakilerden hangisi yanl\u0131\u015ft\u0131r?",
+                "options": [
+                    "Ger\u00e7ek ahl\u00e2k, sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fle s\u0131n\u0131rl\u0131 de\u011fildir.",
+                    "\u0130yi ahl\u00e2kl\u0131 olmak, insan\u0131n d\u00fcnya ve ahiret mutlulu\u011funa katk\u0131 sa\u011flar.",
+                    "Kalp temizli\u011fi olmadan ahl\u00e2k\u0131n bir anlam\u0131 yoktur.",
+                    "\u0130yi ahl\u00e2k sadece d\u00fcnya hayat\u0131n\u0131 g\u00fczelle\u015ftirir, ahiretle ilgisi yoktur."
+                ],
+                "answer": [
+                    "D"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 24,
+                "type": "mcq",
+                "question": "\u0130slam dini, bireyin hem d\u00fcnyada hem de ahirette mutlu olmas\u0131 i\u00e7in g\u00fczel ahl\u00e2kl\u0131 olmas\u0131n\u0131 emretmi\u015ftir. Ahl\u00e2k sadece bireysel bir konu de\u011fildir, ayn\u0131 zamanda toplumsal bir d\u00fczenin sa\u011flanmas\u0131na yard\u0131mc\u0131 olur. Bu bilgiye g\u00f6re a\u015fa\u011f\u0131dakilerden hangisi do\u011frudur?",
+                "text": "\u0130slam dini, bireyin hem d\u00fcnyada hem de ahirette mutlu olmas\u0131 i\u00e7in g\u00fczel ahl\u00e2kl\u0131 olmas\u0131n\u0131 emretmi\u015ftir. Ahl\u00e2k sadece bireysel bir konu de\u011fildir, ayn\u0131 zamanda toplumsal bir d\u00fczenin sa\u011flanmas\u0131na yard\u0131mc\u0131 olur. Bu bilgiye g\u00f6re a\u015fa\u011f\u0131dakilerden hangisi do\u011frudur?",
+                "options": [
+                    "G\u00fczel ahl\u00e2k, sadece bireyin kendisini ilgilendirir.",
+                    "Ahl\u00e2k, bireysel bir mesele olup toplum d\u00fczenini etkilemez.",
+                    "\u0130slam, g\u00fczel ahl\u00e2k\u0131 bireyin ve toplumun mutlulu\u011fu i\u00e7in emretmi\u015ftir.",
+                    "Ahl\u00e2k, ibadetlerden tamamen ba\u011f\u0131ms\u0131zd\u0131r."
+                ],
+                "answer": [
+                    "C"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 4,
+                "type": "mcq",
+                "question": "Peygamberimiz (s.a.v.) ________. O'nun ahl\u00e2k\u0131 ________ olarak \u00f6v\u00fclm\u00fc\u015ft\u00fcr.",
+                "text": "Peygamberimiz (s.a.v.) ________. O'nun ahl\u00e2k\u0131 ________ olarak \u00f6v\u00fclm\u00fc\u015ft\u00fcr.",
+                "options": [
+                    "Sadece M\u00fcsl\u00fcmanlara \u00f6rnek olmu\u015ftur \u2013 Kur'an",
+                    "G\u00fczel ahl\u00e2k\u0131n en g\u00fczel \u00f6rne\u011fidir \u2013 Kur'an",
+                    "\u0130badetleriyle tan\u0131n\u0131r \u2013 Hadislerde",
+                    "Ticarette d\u00fcr\u00fcstt\u00fc \u2013 Sahabe s\u00f6zlerinde"
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 21,
+                "type": "mcq",
+                "question": "Ahl\u00e2k, sadece bireysel bir konu de\u011fil, ayn\u0131 zamanda toplumsal bir meseledir. \u0130nsanlar\u0131n birbirine kar\u015f\u0131 d\u00fcr\u00fcst olmas\u0131, g\u00fcvenilir olmas\u0131 ve iyi niyetli davranmas\u0131 toplumu g\u00fc\u00e7lendirir. Buna g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi yanl\u0131\u015ft\u0131r?",
+                "text": "Ahl\u00e2k, sadece bireysel bir konu de\u011fil, ayn\u0131 zamanda toplumsal bir meseledir. \u0130nsanlar\u0131n birbirine kar\u015f\u0131 d\u00fcr\u00fcst olmas\u0131, g\u00fcvenilir olmas\u0131 ve iyi niyetli davranmas\u0131 toplumu g\u00fc\u00e7lendirir. Buna g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi yanl\u0131\u015ft\u0131r?",
+                "options": [
+                    "Ahl\u00e2k, bireysel ve toplumsal bir meseledir.",
+                    "K\u00f6t\u00fc ahl\u00e2k, toplumun g\u00fcvenini art\u0131r\u0131r.",
+                    "\u0130nsanlar\u0131n iyi niyetli olmas\u0131 toplumu g\u00fc\u00e7lendirir.",
+                    "D\u00fcr\u00fcst olmak, insanlara g\u00fcven kazand\u0131r\u0131r."
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 25,
+                "type": "mcq",
+                "question": "Peygamberimiz (s.a.v.), hayat\u0131 boyunca insanlara do\u011frulu\u011fu, g\u00fcvenilirli\u011fi ve merhameti \u00f6\u011f\u00fctlemi\u015ftir. O, g\u00fczel ahl\u00e2k\u0131n en g\u00fczel \u00f6rne\u011fi olarak g\u00f6sterilmi\u015ftir. Bu bilgiye g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi yanl\u0131\u015ft\u0131r?",
+                "text": "Peygamberimiz (s.a.v.), hayat\u0131 boyunca insanlara do\u011frulu\u011fu, g\u00fcvenilirli\u011fi ve merhameti \u00f6\u011f\u00fctlemi\u015ftir. O, g\u00fczel ahl\u00e2k\u0131n en g\u00fczel \u00f6rne\u011fi olarak g\u00f6sterilmi\u015ftir. Bu bilgiye g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi yanl\u0131\u015ft\u0131r?",
+                "options": [
+                    "Peygamberimiz insanlara g\u00fczel ahl\u00e2k\u0131 tavsiye etmi\u015ftir.",
+                    "G\u00fczel ahl\u00e2k, sadece belirli bir zaman diliminde ge\u00e7erlidir.",
+                    "Merhametli ve g\u00fcvenilir olmak g\u00fczel ahl\u00e2k\u0131n bir gere\u011fidir.",
+                    "Peygamberimiz \u00f6rnek al\u0131nmas\u0131 gereken en g\u00fczel ahl\u00e2k sahibidir."
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            }
+        ],
+        "question_count": 10,
+        "duration": 30,
+        "created_at": "2025-10-04 00:33:34",
+        "status": "active",
+        "participants": [],
+        "schedule_type": "immediate",
+        "scheduled_start": null
+    },
+    "9B359B4A": {
+        "id": "9B359B4A",
+        "title": "TB 1",
+        "description": "",
+        "teacher_id": "guere.ekr",
+        "teacher_name": "Ekrem G\u00fcrel",
+        "teacher_section": "IQRA Dornbirn",
+        "class_section": "IQRA Dornbirn",
+        "categories": [
+            "Temel Bilgiler 1|Ahlak"
+        ],
+        "question_type": "random",
+        "questions": [
+            {
+                "id": 15,
+                "type": "mcq",
+                "question": "G\u00fczel ahl\u00e2k sahibi bir ki\u015fi, toplum i\u00e7inde daima sayg\u0131 g\u00f6r\u00fcr ve insanlar taraf\u0131ndan sevilir. Ancak g\u00fczel ahl\u00e2k, yaln\u0131zca d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fle ilgili de\u011fildir; ki\u015finin i\u00e7 d\u00fcnyas\u0131nda da d\u00fcr\u00fcst ve adaletli olmas\u0131 gerekir. Buna g\u00f6re a\u015fa\u011f\u0131dakilerden hangisi do\u011frudur?",
+                "text": "G\u00fczel ahl\u00e2k sahibi bir ki\u015fi, toplum i\u00e7inde daima sayg\u0131 g\u00f6r\u00fcr ve insanlar taraf\u0131ndan sevilir. Ancak g\u00fczel ahl\u00e2k, yaln\u0131zca d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fle ilgili de\u011fildir; ki\u015finin i\u00e7 d\u00fcnyas\u0131nda da d\u00fcr\u00fcst ve adaletli olmas\u0131 gerekir. Buna g\u00f6re a\u015fa\u011f\u0131dakilerden hangisi do\u011frudur?",
+                "options": [
+                    "G\u00fczel ahl\u00e2k sadece insanlar\u0131n d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015f\u00fcyle ilgilidir.",
+                    "D\u00fcr\u00fcst ve adaletli olmak ahl\u00e2k\u0131n bir gere\u011fidir.",
+                    "\u0130nsanlar\u0131n sevmesi i\u00e7in yaln\u0131zca d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fe \u00f6nem verilmelidir.",
+                    "G\u00fczel ahl\u00e2k, sadece ibadet etmekle kazan\u0131l\u0131r."
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 12,
+                "type": "mcq",
+                "question": "Ahl\u00e2k\u0131n amac\u0131, insanlara hem d\u00fcnya hem de \u00e2hiret mutlulu\u011funu kazand\u0131rmakt\u0131r. Ancak bu sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fte iyi ahl\u00e2kl\u0131 olmakla de\u011fil, ki\u015finin kalbinin temiz olmas\u0131 ile de m\u00fcmk\u00fcnd\u00fcr. Buna g\u00f6re a\u015fa\u011f\u0131dakilerden hangisi yanl\u0131\u015ft\u0131r?",
+                "text": "Ahl\u00e2k\u0131n amac\u0131, insanlara hem d\u00fcnya hem de \u00e2hiret mutlulu\u011funu kazand\u0131rmakt\u0131r. Ancak bu sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fte iyi ahl\u00e2kl\u0131 olmakla de\u011fil, ki\u015finin kalbinin temiz olmas\u0131 ile de m\u00fcmk\u00fcnd\u00fcr. Buna g\u00f6re a\u015fa\u011f\u0131dakilerden hangisi yanl\u0131\u015ft\u0131r?",
+                "options": [
+                    "Ger\u00e7ek ahl\u00e2k, sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fle s\u0131n\u0131rl\u0131 de\u011fildir.",
+                    "\u0130yi ahl\u00e2kl\u0131 olmak, insan\u0131n d\u00fcnya ve ahiret mutlulu\u011funa katk\u0131 sa\u011flar.",
+                    "Kalp temizli\u011fi olmadan ahl\u00e2k\u0131n bir anlam\u0131 yoktur.",
+                    "\u0130yi ahl\u00e2k sadece d\u00fcnya hayat\u0131n\u0131 g\u00fczelle\u015ftirir, ahiretle ilgisi yoktur."
+                ],
+                "answer": [
+                    "D"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 6,
+                "type": "mcq",
+                "question": "\u0130sl\u00e2m ________. Ancak ki\u015finin ahl\u00e2k\u0131 ile ibadetleri aras\u0131nda ________ bulunmal\u0131d\u0131r.",
+                "text": "\u0130sl\u00e2m ________. Ancak ki\u015finin ahl\u00e2k\u0131 ile ibadetleri aras\u0131nda ________ bulunmal\u0131d\u0131r.",
+                "options": [
+                    "G\u00fczel ahl\u00e2k\u0131 \u00f6\u011f\u00fctler \u2013 samimiyet",
+                    "K\u00f6t\u00fcl\u00fckleri yasaklar \u2013 hi\u00e7bir ba\u011flant\u0131",
+                    "Sadece ibadet i\u00e7erir \u2013 fark",
+                    "Davran\u0131\u015flar\u0131 d\u00fczenler \u2013 ayr\u0131m"
+                ],
+                "answer": [
+                    "A"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 2,
+                "type": "mcq",
+                "question": "Ahl\u00e2k\u0131n amac\u0131, insanlara ________ ve ________ mutlulu\u011funu kazand\u0131rmakt\u0131r. Ancak sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fte ahl\u00e2kl\u0131 olmak yeterli de\u011fildir; ki\u015finin ________ temiz olmal\u0131d\u0131r.",
+                "text": "Ahl\u00e2k\u0131n amac\u0131, insanlara ________ ve ________ mutlulu\u011funu kazand\u0131rmakt\u0131r. Ancak sadece d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015fte ahl\u00e2kl\u0131 olmak yeterli de\u011fildir; ki\u015finin ________ temiz olmal\u0131d\u0131r.",
+                "options": [
+                    "D\u00fcnyevi \u2013 manevi \u2013 kalbi",
+                    "Bireysel \u2013 toplumsal \u2013 davran\u0131\u015flar\u0131",
+                    "D\u00fcnya \u2013 \u00e2hiret \u2013 niyeti",
+                    "Felsefi \u2013 dini \u2013 ibadetleri"
+                ],
+                "answer": [
+                    "C"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 22,
+                "type": "mcq",
+                "question": "Peygamberimiz (s.a.v.), \"M\u00fcsl\u00fcman, elinden ve dilinden kimsenin zarar g\u00f6rmedi\u011fi ki\u015fidir\" buyurmu\u015ftur. Buna g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi do\u011frudur?",
+                "text": "Peygamberimiz (s.a.v.), \"M\u00fcsl\u00fcman, elinden ve dilinden kimsenin zarar g\u00f6rmedi\u011fi ki\u015fidir\" buyurmu\u015ftur. Buna g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi do\u011frudur?",
+                "options": [
+                    "\u0130nsanlara zarar vermemek M\u00fcsl\u00fcmanl\u0131\u011f\u0131n bir gere\u011fidir.",
+                    "\u0130yi bir M\u00fcsl\u00fcman olmak i\u00e7in sadece ibadet etmek yeterlidir.",
+                    "Peygamberimiz sadece M\u00fcsl\u00fcmanlara iyi davranm\u0131\u015ft\u0131r.",
+                    "Ba\u015fkalar\u0131na zarar vermek \u0130slam'\u0131n tavsiye etti\u011fi bir davran\u0131\u015ft\u0131r."
+                ],
+                "answer": [
+                    "A"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 26,
+                "type": "mcq",
+                "question": "\u0130nsanlar\u0131n birbirlerine kar\u015f\u0131 sayg\u0131l\u0131 ve ho\u015fg\u00f6r\u00fcl\u00fc olmas\u0131 toplumsal bar\u0131\u015f i\u00e7in gereklidir. Sayg\u0131s\u0131z ve kaba davran\u0131\u015flar toplum i\u00e7indeki huzuru bozar ve insan ili\u015fkilerini zedeler. Bu bilgiye g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi do\u011frudur?",
+                "text": "\u0130nsanlar\u0131n birbirlerine kar\u015f\u0131 sayg\u0131l\u0131 ve ho\u015fg\u00f6r\u00fcl\u00fc olmas\u0131 toplumsal bar\u0131\u015f i\u00e7in gereklidir. Sayg\u0131s\u0131z ve kaba davran\u0131\u015flar toplum i\u00e7indeki huzuru bozar ve insan ili\u015fkilerini zedeler. Bu bilgiye g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi do\u011frudur?",
+                "options": [
+                    "Sayg\u0131 ve ho\u015fg\u00f6r\u00fc, toplum i\u00e7indeki ili\u015fkileri g\u00fc\u00e7lendirir.",
+                    "Kaba davran\u0131\u015flar, insanlar aras\u0131ndaki ili\u015fkileri kuvvetlendirir.",
+                    "\u0130nsanlar\u0131n birbirlerine k\u00f6t\u00fc davranmas\u0131, toplumsal bar\u0131\u015f\u0131 art\u0131r\u0131r.",
+                    "G\u00fczel ahl\u00e2k, toplum d\u00fczenine zarar verir."
+                ],
+                "answer": [
+                    "A"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 7,
+                "type": "mcq",
+                "question": "\u0130badetler insan\u0131 ________. Ancak ibadetlerin sadece \u015feklen yap\u0131lmas\u0131 yeterli de\u011fildir; ki\u015finin ________ de temiz olmal\u0131d\u0131r.",
+                "text": "\u0130badetler insan\u0131 ________. Ancak ibadetlerin sadece \u015feklen yap\u0131lmas\u0131 yeterli de\u011fildir; ki\u015finin ________ de temiz olmal\u0131d\u0131r.",
+                "options": [
+                    "K\u00f6t\u00fcl\u00fcklere yakla\u015ft\u0131r\u0131r \u2013 bedeni",
+                    "K\u00f6t\u00fcl\u00fcklerden uzakla\u015ft\u0131r\u0131r \u2013 kalbi",
+                    "G\u00fcnah i\u015flemeye te\u015fvik eder \u2013 duas\u0131",
+                    "Mutsuz yapar \u2013 maddi durumu"
+                ],
+                "answer": [
+                    "B"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 8,
+                "type": "mcq",
+                "question": "Peygamberimiz (s.a.v.)'in g\u00fczel ahl\u00e2k\u0131ndan biri de ________ idi. O, ________ ve ________ ile \u00f6rnek olmu\u015ftur.",
+                "text": "Peygamberimiz (s.a.v.)'in g\u00fczel ahl\u00e2k\u0131ndan biri de ________ idi. O, ________ ve ________ ile \u00f6rnek olmu\u015ftur.",
+                "options": [
+                    "Ho\u015fg\u00f6r\u00fc \u2013 sab\u0131r \u2013 c\u00f6mertlik",
+                    "Kat\u0131l\u0131k \u2013 \u00f6fke \u2013 adalet",
+                    "Sadece ibadet \u2013 d\u0131\u015f g\u00f6r\u00fcn\u00fc\u015f \u2013 az konu\u015fma",
+                    "Cimrilik \u2013 ho\u015fg\u00f6r\u00fc \u2013 adalet"
+                ],
+                "answer": [
+                    "A"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 27,
+                "type": "mcq",
+                "question": "G\u00fczel ahl\u00e2k\u0131n temel ta\u015flar\u0131ndan biri de sab\u0131rd\u0131r. Sab\u0131rl\u0131 insan, kar\u015f\u0131la\u015ft\u0131\u011f\u0131 zorluklara ra\u011fmen do\u011fru ve adaletli davranmaktan vazge\u00e7mez. Sab\u0131rs\u0131zl\u0131k ise \u00e7o\u011fu zaman insan\u0131n yanl\u0131\u015f kararlar almas\u0131na neden olabilir. Buna g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi do\u011frudur?",
+                "text": "G\u00fczel ahl\u00e2k\u0131n temel ta\u015flar\u0131ndan biri de sab\u0131rd\u0131r. Sab\u0131rl\u0131 insan, kar\u015f\u0131la\u015ft\u0131\u011f\u0131 zorluklara ra\u011fmen do\u011fru ve adaletli davranmaktan vazge\u00e7mez. Sab\u0131rs\u0131zl\u0131k ise \u00e7o\u011fu zaman insan\u0131n yanl\u0131\u015f kararlar almas\u0131na neden olabilir. Buna g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi do\u011frudur?",
+                "options": [
+                    "Sab\u0131r, insan\u0131n yanl\u0131\u015f kararlar almas\u0131na neden olur.",
+                    "Sab\u0131rl\u0131 insan, do\u011fru kararlar almakta zorlan\u0131r.",
+                    "Sab\u0131r, g\u00fczel ahl\u00e2k\u0131n bir gere\u011fidir.",
+                    "Sab\u0131rs\u0131z insanlar her zaman adaletli olur."
+                ],
+                "answer": [
+                    "C"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            },
+            {
+                "id": 19,
+                "type": "mcq",
+                "question": "\u0130nsanlar\u0131n ba\u015fkalar\u0131na zarar vermemesi, yalan s\u00f6ylememesi ve g\u00fcvenilir olmas\u0131, toplumda huzurun sa\u011flanmas\u0131 i\u00e7in \u00f6nemlidir. K\u00f6t\u00fc ahl\u00e2k\u0131n yayg\u0131n oldu\u011fu bir toplumda insanlar birbirine g\u00fcvenmez ve huzursuzluk artar. Buna g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi do\u011frudur?",
+                "text": "\u0130nsanlar\u0131n ba\u015fkalar\u0131na zarar vermemesi, yalan s\u00f6ylememesi ve g\u00fcvenilir olmas\u0131, toplumda huzurun sa\u011flanmas\u0131 i\u00e7in \u00f6nemlidir. K\u00f6t\u00fc ahl\u00e2k\u0131n yayg\u0131n oldu\u011fu bir toplumda insanlar birbirine g\u00fcvenmez ve huzursuzluk artar. Buna g\u00f6re a\u015fa\u011f\u0131daki ifadelerden hangisi do\u011frudur?",
+                "options": [
+                    "G\u00fczel ahl\u00e2k sadece bireysel bir meseledir, toplumu ilgilendirmez.",
+                    "K\u00f6t\u00fc ahl\u00e2k\u0131n yayg\u0131n oldu\u011fu toplumlar huzurlu olur.",
+                    "Do\u011fruluk ve g\u00fcvenilirlik, toplumun huzurunu art\u0131r\u0131r.",
+                    "\u0130nsanlar sadece kendi \u00e7\u0131karlar\u0131n\u0131 d\u00fc\u015f\u00fcnmelidir."
+                ],
+                "answer": [
+                    "C"
+                ],
+                "explanation": "",
+                "topic": "",
+                "tags": [],
+                "difficulty": 1,
+                "points": 1,
+                "timeLimit": null,
+                "media": {
+                    "image": "",
+                    "audio": "",
+                    "video": ""
+                },
+                "bank": "Temel Bilgiler 1",
+                "category": "Ahlak",
+                "source": "Temel Bilgiler 1\/ahlak_json.json"
+            }
+        ],
+        "question_count": 10,
+        "duration": 30,
+        "created_at": "2025-10-05 13:58:46",
+        "status": "active",
+        "participants": [],
+        "schedule_type": "immediate",
+        "scheduled_start": null
+    }
+}

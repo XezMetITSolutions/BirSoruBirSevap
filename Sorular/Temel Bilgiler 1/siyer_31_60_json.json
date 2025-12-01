@@ -1,0 +1,339 @@
+{
+  "category": "SİYER",
+  "title": "IGMG EĞİTİM BAŞKANLIĞI - Temel Bilgiler Soru Bankası",
+  "question_range": "31-60",
+  "question_count": 30,
+  "questions": [
+    {
+      "id": 31,
+      "question": "Peygamber Efendimiz (s.a.v.), Medine'ye hicret ettiğinde Müslümanlar arasında kardeşlik bağlarını güçlendirmek için hangi uygulamayı başlatmıştır?",
+      "options": {
+        "A": "Akabe Biatları",
+        "B": "Ensar ile Muhacir kardeşliği",
+        "C": "Medine Sözleşmesi",
+        "D": "Bedir Savaşı"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "question": "Birinci Akabe Biatı sırasında Medine'den gelen 12 kişi, hangi konularda Peygamberimiz'e (s.a.v.) biat etmiştir?",
+      "options": {
+        "A": "Oruç tutma, zekât verme ve namaz kılma",
+        "B": "Allah'a ortak koşmama, zina yapmama ve hırsızlık yapmama",
+        "C": "Cihat etme, hicret etme ve ganimetleri paylaşma",
+        "D": "Mekke'nin fethini gerçekleştirme"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 33,
+      "question": "Medine'ye gönderilen ilk İslam öğretmeni olan ve birçok kişinin Müslüman olmasına vesile olan sahabi kimdir?",
+      "options": {
+        "A": "Hz. Ali",
+        "B": "Hz. Ömer",
+        "C": "Mus'ab bin Umeyr",
+        "D": "Abdullah bin Mes'ud"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "question": "Peygamber Efendimiz (s.a.v.), hicret yolculuğu sırasında Hz. Ebû Bekir ile birlikte hangi mağarada üç gün gizlenmiştir?",
+      "options": {
+        "A": "Sevr Mağarası",
+        "B": "Hira Mağarası",
+        "C": "Nur Mağarası",
+        "D": "Uhud Mağarası"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "question": "Hicret sırasında Peygamberimiz (s.a.v.) ve Hz. Ebû Bekir'i takip eden müşriklerin izlerini kaybettiren olay aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Örümceğin mağaranın ağzına ağ örmesi",
+        "B": "Hz. Ali'nin Peygamberimiz'in yerine yatması",
+        "C": "Bir devenin izlerini kapatması",
+        "D": "Hz. Ömer'in müşriklerle pazarlık yapması"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "question": "Peygamber Efendimiz (s.a.v.), Medine'ye varmadan önce 10 gün boyunca hangi köyde kaldı ve burada bir mescit inşa etti?",
+      "options": {
+        "A": "Kuba",
+        "B": "Yesrib",
+        "C": "Hayber",
+        "D": "Taif"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 37,
+      "question": "Hicret sırasında ilk Cuma namazı nerede kılınmıştır?",
+      "options": {
+        "A": "Mescid-i Nebevî'de",
+        "B": "Kuba Mescidi'nde",
+        "C": "Ranûna Vadisi'nde",
+        "D": "Sevr Mağarası'nda"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "question": "Peygamber Efendimiz (s.a.v.), Medine'ye geldiğinde kimin evinde 7 ay misafir kalmıştır?",
+      "options": {
+        "A": "Hz. Osman",
+        "B": "Ebû Eyyûb el-Ensârî",
+        "C": "Sa'd bin Muaz",
+        "D": "Hz. Abbas"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "question": "Medine'ye hicretten sonra Müslümanlar ile Yahudiler arasında birlikteliği sağlamak amacıyla hangi belge hazırlanmıştır?",
+      "options": {
+        "A": "Hudeybiye Antlaşması",
+        "B": "Medine Sözleşmesi",
+        "C": "Akabe Biatı",
+        "D": "Bedir Antlaşması"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "question": "Hicretin ardından inşa edilen ve İslam toplumunun merkezi haline gelen mescidin adı nedir?",
+      "options": {
+        "A": "Mescid-i Aksa",
+        "B": "Mescid-i Kuba",
+        "C": "Mescid-i Haram",
+        "D": "Mescid-i Nebevî"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 41,
+      "question": "Medine'de Yahudi kabileleriyle yapılan anlaşmalara rağmen Müslümanlara ihanet eden ve şehirden sürgün edilen ilk Yahudi kabilesi hangisidir?",
+      "options": {
+        "A": "Kureyzaoğulları",
+        "B": "Kaynukaoğulları",
+        "C": "Nadir oğulları",
+        "D": "Hayberliler"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "question": "Peygamber Efendimiz'in (s.a.v.) hicreti, hangi İslamî takvimin başlangıcı kabul edilmiştir?",
+      "options": {
+        "A": "Miladi Takvim",
+        "B": "Hicri Takvim",
+        "C": "Rumi Takvim",
+        "D": "Celali Takvim"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "question": "Peygamberimiz (s.a.v.) hicret ettikten sonra Medine'de hangi ekonomik düzenlemeyi yaparak Müslümanları ekonomik olarak güçlendirmiştir?",
+      "options": {
+        "A": "Zekât toplanmasını başlatmak",
+        "B": "Medine Sözleşmesi'ni imzalamak",
+        "C": "Medine'de bir pazar kurmak",
+        "D": "Yahudilerle ticaret ortaklığı yapmak"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "question": "Hz. Ömer'in İslam devletinde en önemli uygulamalarından biri olup, hicretin başlangıcını esas alan takvim aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Miladi Takvim",
+        "B": "Hicri Takvim",
+        "C": "Rumi Takvim",
+        "D": "Celali Takvim"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "question": "Peygamberimiz (s.a.v.)'in vefatından sonra halifeliğe seçilen ilk kişi kimdir?",
+      "options": {
+        "A": "Hz. Ömer",
+        "B": "Hz. Osman",
+        "C": "Hz. Ali",
+        "D": "Hz. Ebû Bekir"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 46,
+      "question": "İslam tarihinde Müslümanların gerçekleştirdiği ilk savaş aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Uhud Savaşı",
+        "B": "Bedir Savaşı",
+        "C": "Hendek Savaşı",
+        "D": "Tebük Seferi"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "question": "Hicret sırasında Mekke'den Medine'ye göç eden Müslümanlara ne ad verilir?",
+      "options": {
+        "A": "Ensar",
+        "B": "Muhacir",
+        "C": "Sahabe",
+        "D": "Tabiin"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "question": "Medine'de bulunan ve hicretten sonra Müslümanları koruyup kollayan yerlilere ne ad verilir?",
+      "options": {
+        "A": "Ensar",
+        "B": "Muhacir",
+        "C": "Münafık",
+        "D": "Müşrik"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 49,
+      "question": "Peygamber Efendimiz'in (s.a.v.) hicret ettiği dönemde Medine halkı genellikle hangi iki büyük Arap kabilesinden oluşmaktaydı?",
+      "options": {
+        "A": "Kureyş ve Kaynukaoğulları",
+        "B": "Evs ve Hazrec",
+        "C": "Nadir oğulları ve Kaynukaoğulları",
+        "D": "Mekkeliler ve Hayberliler"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 50,
+      "question": "Peygamber Efendimiz (s.a.v.), hangi savaştan sonra müşriklerle \"Hudeybiye Antlaşması\"nı yapmıştır?",
+      "options": {
+        "A": "Bedir Savaşı",
+        "B": "Uhud Savaşı",
+        "C": "Hendek Savaşı",
+        "D": "Tebük Seferi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 51,
+      "question": "İslam tarihinde Yahudilerin Müslümanlarla olan ilişkilerinde ihanet ettikleri ve sürgün edildikleri önemli savaş aşağıdakilerden hangisidir?",
+      "options": {
+        "A": "Hayber Seferi",
+        "B": "Bedir Savaşı",
+        "C": "Hendek Savaşı",
+        "D": "Tebük Seferi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 52,
+      "question": "Hicretin ardından Müslümanların Mekke'ye girip Kâbe'yi ziyaret etmelerine izin veren ve barış ortamı sağlayan antlaşma hangisidir?",
+      "options": {
+        "A": "Hudeybiye Antlaşması",
+        "B": "Mekke'nin Fethi",
+        "C": "Bedir Zaferi",
+        "D": "Medine Sözleşmesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 53,
+      "question": "Peygamberimiz (s.a.v.), veda haccını gerçekleştirdiğinde Müslümanlara hangi önemli hutbeyi okumuştur?",
+      "options": {
+        "A": "Veda Hutbesi",
+        "B": "Hudeybiye Hutbesi",
+        "C": "Tebük Hutbesi",
+        "D": "Bedir Hutbesi"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 54,
+      "question": "Peygamber Efendimiz (s.a.v.), hicretten sonra Medine'deki toplum düzenini sağlamak amacıyla aşağıdakilerden hangisini yapmıştır?",
+      "options": {
+        "A": "Yahudilerle sürekli savaş başlatmıştır.",
+        "B": "Tüm müşrikleri Medine'den sürmüştür.",
+        "C": "Medine Sözleşmesi'ni hazırlamıştır.",
+        "D": "Medine'ye dışarıdan göçleri yasaklamıştır."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 55,
+      "question": "Hicretle birlikte İslam devletinin temelleri atılırken, aşağıdakilerden hangisi İslam toplumu içinde birliği sağlamak için yapılan ilk çalışmalardan biri değildir?",
+      "options": {
+        "A": "Medine Sözleşmesi'nin yapılması",
+        "B": "Ensar ve Muhacir kardeşliği kurulması",
+        "C": "Bedir Savaşı'nın yapılması",
+        "D": "Mescid-i Nebevî'nin inşa edilmesi"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 56,
+      "question": "Peygamberimiz (s.a.v.), hicretin ardından İslam devletinin ilk idari ve sosyal düzenlemelerini yaparken hangi şehirde bulunuyordu?",
+      "options": {
+        "A": "Mekke",
+        "B": "Taif",
+        "C": "Medine",
+        "D": "Kudüs"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 57,
+      "question": "Peygamber Efendimiz (s.a.v.), Medine'de ilk defa hangi ibadeti topluca kıldırmıştır?",
+      "options": {
+        "A": "Sabah namazı",
+        "B": "Cuma namazı",
+        "C": "Teravih namazı",
+        "D": "Bayram namazı"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 58,
+      "question": "Hicretin ardından ilk İslam Devleti kurulurken, devletin yönetiminde Hz. Peygamber (s.a.v.)'in danışman olarak en çok faydalandığı sahabilerden biri kimdir?",
+      "options": {
+        "A": "Hz. Ömer",
+        "B": "Hz. Osman",
+        "C": "Hz. Hamza",
+        "D": "Mus'ab bin Umeyr"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 59,
+      "question": "Peygamberimiz (s.a.v.)'in hicretinden sonra Medine'de inşa edilen ilk mescit hangisidir?",
+      "options": {
+        "A": "Mescid-i Aksa",
+        "B": "Mescid-i Haram",
+        "C": "Mescid-i Nebevî",
+        "D": "Kuba Mescidi"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 60,
+      "question": "Medine Sözleşmesi'nin en önemli amacı neydi?",
+      "options": {
+        "A": "Müslümanların ticari haklarını garantiye almak",
+        "B": "Yahudilerin Müslümanlara karşı güçlenmesini sağlamak",
+        "C": "Medine'deki farklı inanç grupları arasında barış ve düzeni sağlamak",
+        "D": "Hicret eden Müslümanları Mekke'ye geri döndürmek"
+      },
+      "correct_answer": "C"
+    }
+  ],
+  "answer_key": "31-B, 32-B, 33-C, 34-A, 35-A, 36-A, 37-C, 38-B, 39-B, 40-D, 41-B, 42-B, 43-C, 44-B, 45-D, 46-B, 47-B, 48-A, 49-B, 50-C, 51-C, 52-A, 53-A, 54-C, 55-C, 56-C, 57-B, 58-A, 59-D, 60-C"
+}
