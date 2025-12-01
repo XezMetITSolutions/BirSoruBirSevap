@@ -264,12 +264,134 @@ $totalCategories = array_sum(array_map('count', $categories));
             background: var(--secondary);
         }
 
-        /* Mobil çekmece menü */
-        #mobileDrawer { display:none; position: fixed; top: 64px; left: 0; right: 0; background: #fff; border-top: 1px solid rgba(226,232,240,.8); box-shadow: var(--shadow-lg); z-index: 1100; padding: 0.75rem 1rem; }
-        #mobileDrawer .drawer-item { display:flex; align-items:center; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid rgba(226,232,240,.6); }
-        #mobileDrawer .drawer-item:last-child { border-bottom: 0; }
-        #langToggleMobile { background: #fff; color: var(--primary); border:2px solid var(--primary); border-radius: .6rem; padding: .5rem .9rem; font-weight: 700; }
-        @media (max-width: 768px){ #mobileDrawer { top: calc(56px + env(safe-area-inset-top)); } }
+        /* Mobil Menu Sidebar */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 1099;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            bottom: 0;
+            width: 300px;
+            background: var(--white);
+            z-index: 1100;
+            box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-menu-sidebar.active {
+            transform: translateX(-300px);
+        }
+
+        .mobile-menu-header {
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .mobile-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .mobile-logo img {
+            height: 2rem;
+            width: auto;
+        }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--gray);
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu-close:hover {
+            color: var(--danger);
+        }
+
+        .mobile-menu-content {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+            margin-bottom: 0.5rem;
+        }
+
+        .mobile-nav-link i {
+            width: 1.5rem;
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .mobile-nav-link:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .mobile-menu-footer {
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .w-full {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .mb-3 {
+            margin-bottom: 0.75rem;
+        }
 
         /* Hero Section */
         .hero {
@@ -917,20 +1039,57 @@ $totalCategories = array_sum(array_map('count', $categories));
             </button>
         </div>
     </nav>
-    <!-- Mobil çekmece menü -->
-    <div id="mobileDrawer" aria-hidden="true" role="dialog" aria-modal="true">
-        <div class="drawer-item">
-            <span id="drawerLangLabel">Dil</span>
-            <button id="langToggleMobile">DE</button>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    
+    <!-- Mobile Menu Sidebar -->
+    <div class="mobile-menu-sidebar" id="mobileMenuSidebar">
+        <div class="mobile-menu-header">
+            <a href="index.php" class="mobile-logo">
+                <img src="logo.png" alt="Logo">
+                <span>Bir Soru Bir Sevap</span>
+            </a>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <div class="drawer-item">
-            <a href="#features">Özellikler</a>
-        </div>
-        <div class="drawer-item">
-            <a href="#stats">İstatistikler</a>
-        </div>
-        <div class="drawer-item">
-            <a href="login.php">Giriş</a>
+        
+        <div class="mobile-menu-content">
+            <ul class="mobile-nav-list">
+                <li>
+                    <a href="#features" class="mobile-nav-link">
+                        <i class="fas fa-star"></i>
+                        <span data-i18n="navFeatures">Özellikler</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#stats" class="mobile-nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span data-i18n="navStats">İstatistikler</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="mobile-nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span data-i18n="navAbout">Hakkımızda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.php" class="mobile-nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span data-i18n="navContact">İletişim</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="mobile-menu-footer">
+                <button id="langToggleMobile" class="btn btn-secondary w-full mb-3">
+                    <i class="fas fa-globe"></i> <span>DE</span>
+                </button>
+                <a href="login.php" class="btn btn-primary w-full">
+                    <i class="fas fa-sign-in-alt"></i> <span data-i18n="heroStartBtn">Başla</span>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -1296,9 +1455,10 @@ $totalCategories = array_sum(array_map('count', $categories));
                     applyLang(next);
                 });
                 // Drawer etiketleri diline göre
-                const dl = document.getElementById('drawerLangLabel');
-                if (dl) dl.textContent = (saved==='de' ? 'Sprache' : 'Dil');
-                const syncDrawerLabels = (lang)=>{ const el=document.getElementById('drawerLangLabel'); if(el) el.textContent = (lang==='de'?'Sprache':'Dil'); const t=document.getElementById('langToggleMobile'); if(t) t.textContent = (lang==='de'?'TR':'DE'); };
+                const syncDrawerLabels = (lang)=>{ 
+                    const t=document.querySelector('#mobileMenuSidebar #langToggleMobile span'); 
+                    if(t) t.textContent = (lang==='de'?'TR':'DE'); 
+                };
                 // applyLang sonuna wrapper
                 const _apply = applyLang;
                 applyLang = function(lang){ _apply(lang); syncDrawerLabels(lang); };
@@ -1388,42 +1548,36 @@ $totalCategories = array_sum(array_map('count', $categories));
         });
 
         // Mobile menu toggle
+        // Mobile menu toggle
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.querySelector('.nav-menu');
-        const mobileDrawer = document.getElementById('mobileDrawer');
-        mobileMenuToggle.addEventListener('click', function() {
-            // Menü değil çekmeceyi aç/kapat
-            const icon = this.querySelector('i');
-            const visible = getComputedStyle(mobileDrawer).display !== 'none';
-            if (!visible) {
-                // Dinamik konum
-                const navbar = document.getElementById('navbar');
-                if (navbar) {
-                    const rect = navbar.getBoundingClientRect();
-                    mobileDrawer.style.top = (rect.bottom + 4) + 'px';
-                }
-            }
-            mobileDrawer.style.display = visible ? 'none' : 'block';
-            mobileDrawer.setAttribute('aria-hidden', visible ? 'true' : 'false');
-            icon.className = visible ? 'fas fa-bars' : 'fas fa-times';
-        });
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMenuSidebar = document.getElementById('mobileMenuSidebar');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
 
-        // Drawer içindeki linke tıklayınca kapat
-        document.querySelectorAll('#mobileDrawer a').forEach(link => {
+        function toggleMenu() {
+            const isActive = mobileMenuSidebar.classList.contains('active');
+            if (isActive) {
+                mobileMenuSidebar.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            } else {
+                mobileMenuSidebar.classList.add('active');
+                mobileMenuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', toggleMenu);
+        if (mobileMenuClose) mobileMenuClose.addEventListener('click', toggleMenu);
+        if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                mobileDrawer.style.display = 'none';
-                mobileDrawer.setAttribute('aria-hidden','true');
-                mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
+                if (mobileMenuSidebar.classList.contains('active')) {
+                    toggleMenu();
+                }
             });
-        });
-
-        // Dışarı tıklayınca çekmeceyi kapat
-        document.addEventListener('click', function(e) {
-            if (mobileDrawer && mobileDrawer.style.display==='block' && !mobileDrawer.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-                mobileDrawer.style.display = 'none';
-                mobileDrawer.setAttribute('aria-hidden','true');
-                mobileMenuToggle.querySelector('i').className = 'fas fa-bars';
-            }
         });
 
         // Loading animation
