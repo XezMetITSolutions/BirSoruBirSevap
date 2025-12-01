@@ -6,9 +6,51 @@
 require_once 'config.php';
 require_once 'QuestionLoader.php';
 
+// Yeni alıştırma başlatma isteği
+if (isset($_GET['bank']) || isset($_GET['category'])) {
+    $questionLoader = new QuestionLoader();
+    $questionLoader->loadQuestions();
+    
+    $filters = [];
+    if (!empty($_GET['bank'])) $filters['bank'] = $_GET['bank'];
+    if (!empty($_GET['category'])) $filters['category'] = $_GET['category'];
+    
+    $questions = $questionLoader->getFilteredQuestions($filters);
+    
+    // Soru sayısı
+    $count = isset($_GET['count']) ? (int)$_GET['count'] : 10;
+    if ($count > 0 && count($questions) > $count) {
+        shuffle($questions);
+        $questions = array_slice($questions, 0, $count);
+    } else {
+        shuffle($questions);
+    }
+    
+    if (empty($questions)) {
+        // Soru bulunamadı
+        header('Location: practice_setup.php?error=no_questions');
+        exit;
+    }
+    
+    // Oturumu başlat
+    $_SESSION['practice_questions'] = $questions;
+    $_SESSION['practice_settings'] = [
+        'timer' => true, // Varsayılan olarak timer açık
+        'count' => count($questions)
+    ];
+    $_SESSION['practice_answers'] = [];
+    $_SESSION['practice_current_index'] = 0;
+    $_SESSION['practice_start_time'] = time();
+    $_SESSION['practice_finished'] = false;
+    
+    // Temiz URL'ye yönlendir
+    header('Location: practice.php');
+    exit;
+}
+
 // Oturum kontrolü
 if (!isset($_SESSION['practice_questions']) || empty($_SESSION['practice_questions'])) {
-    header('Location: index.php');
+    header('Location: practice_setup.php');
     exit;
 }
 
