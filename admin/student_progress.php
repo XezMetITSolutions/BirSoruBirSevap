@@ -960,11 +960,9 @@ if ($selectedUser) {
                         <?php echo htmlspecialchars($selectedStudentInfo['full_name']); ?>
                     </h2>
                     <div style="display: flex; gap: 15px; flex-wrap: wrap; color: #7f8c8d;">
-                        <?php if ($selectedStudentInfo['class_section']): ?>
-                        <span><i class="fas fa-users"></i> <strong>Şube:</strong> <?php echo htmlspecialchars($selectedStudentInfo['class_section']); ?></span>
-                        <?php endif; ?>
+
                         <?php if ($selectedStudentInfo['branch']): ?>
-                        <span><i class="fas fa-school"></i> <strong>Branş:</strong> <?php echo htmlspecialchars($selectedStudentInfo['branch']); ?></span>
+                        <span><i class="fas fa-school"></i> <strong>Şube:</strong> <?php echo htmlspecialchars($selectedStudentInfo['branch']); ?></span>
                         <?php endif; ?>
                         <span><i class="fas fa-id-badge"></i> <strong>Kullanıcı Adı:</strong> <?php echo htmlspecialchars($selectedStudentInfo['username']); ?></span>
                     </div>
@@ -1018,7 +1016,7 @@ if ($selectedUser) {
             <form method="GET" id="filterForm">
                 <div class="filters">
                     <div class="filter-group">
-                        <label><i class="fas fa-school"></i> Branş</label>
+                        <label><i class="fas fa-school"></i> Şube</label>
                         <select name="branch" id="branchSelect" onchange="this.form.submit()">
                             <option value="">Tüm Branşlar</option>
                             <?php foreach ($allBranches as $branch): ?>
@@ -1029,17 +1027,7 @@ if ($selectedUser) {
                         </select>
                     </div>
                     
-                    <div class="filter-group">
-                        <label><i class="fas fa-users"></i> Şube</label>
-                        <select name="class_section" id="sectionSelect" onchange="this.form.submit()">
-                            <option value="">Tüm Şubeler</option>
-                            <?php foreach ($allSections as $section): ?>
-                                <option value="<?php echo htmlspecialchars($section); ?>" <?php echo $section===$selectedSection?'selected':''; ?>>
-                                    <?php echo htmlspecialchars($section); ?>
-                                </option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
+
                     
                     <div class="filter-group">
                         <label><i class="fas fa-user"></i> Öğrenci Seç</label>
