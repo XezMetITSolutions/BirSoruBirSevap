@@ -3,9 +3,9 @@ session_start();
 // Cache kontrol - her zaman güncel görünüm
 header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 header('Pragma: no-cache');
-require_once '../auth.php';
-require_once '../config.php';
-require_once '../QuestionLoader.php';
+require_once 'auth.php';
+require_once 'config.php';
+require_once 'QuestionLoader.php';
 
 $auth = Auth::getInstance();
 
