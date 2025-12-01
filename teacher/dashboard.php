@@ -502,6 +502,20 @@ $completedExams = 0;
                     </div>
                 </a>
 
+                <a href="../practice_setup.php" class="action-card primary">
+                    <div class="action-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="action-title" id="actionTitlePractice">Alıştırma Yap</div>
+                    <div class="action-description" id="actionDescPractice">
+                        Kendinizi test edin ve soru bankasındaki soruları çözün
+                    </div>
+                    <div class="action-btn" id="btnPractice">
+                        <i class="fas fa-arrow-right"></i>
+                        <span id="btnPracticeText">Alıştırma Başlat</span>
+                    </div>
+                </a>
+
                 <a href="exams.php" class="action-card success">
                     <div class="action-icon">
                         <i class="fas fa-clipboard-list"></i>
@@ -605,7 +619,9 @@ $completedExams = 0;
                 quickTitle1:'Öğrenci Yönetimi', quickDesc1:'Öğrencileri görüntüle ve yönet',
                 quickTitle2:'Analitik Raporlar', quickDesc2:'Detaylı analiz ve raporlar',
                 quickTitle3:'Profil Ayarları', quickDesc3:'Hesap bilgilerinizi düzenleyin',
-                quickTitle4:'Şifre Değiştir', quickDesc4:'Güvenlik için şifrenizi güncelleyin'
+                quickTitle3:'Profil Ayarları', quickDesc3:'Hesap bilgilerinizi düzenleyin',
+                quickTitle4:'Şifre Değiştir', quickDesc4:'Güvenlik için şifrenizi güncelleyin',
+                actionTitlePractice:'Alıştırma Yap', actionDescPractice:'Kendinizi test edin ve soru bankasındaki soruları çözün', btnPracticeText:'Alıştırma Başlat'
             };
             const de = {
                 pageTitle:'Lehrpersonal-Panel', userRole:'Lehrpersonal', backHomeText:'Zur Startseite', logout:'Abmelden',
@@ -619,7 +635,9 @@ $completedExams = 0;
                 quickTitle1:'Schülerverwaltung', quickDesc1:'Schüler anzeigen und verwalten',
                 quickTitle2:'Analytische Berichte', quickDesc2:'Detaillierte Analysen und Berichte',
                 quickTitle3:'Profileinstellungen', quickDesc3:'Bearbeiten Sie Ihre Kontoinformationen',
-                quickTitle4:'Passwort ändern', quickDesc4:'Aktualisieren Sie Ihr Passwort für die Sicherheit'
+                quickTitle3:'Profileinstellungen', quickDesc3:'Bearbeiten Sie Ihre Kontoinformationen',
+                quickTitle4:'Passwort ändern', quickDesc4:'Aktualisieren Sie Ihr Passwort für die Sicherheit',
+                actionTitlePractice:'Üben', actionDescPractice:'Testen Sie sich selbst und lösen Sie Fragen aus der Datenbank', btnPracticeText:'Übung starten'
             };
             
             function setText(sel, text){ const el=document.querySelector(sel); if(el) el.innerText=text; }
@@ -655,6 +673,9 @@ $completedExams = 0;
                 setText('#quickDesc3', d.quickDesc3);
                 setText('#quickTitle4', d.quickTitle4);
                 setText('#quickDesc4', d.quickDesc4);
+                setText('#actionTitlePractice', d.actionTitlePractice);
+                setText('#actionDescPractice', d.actionDescPractice);
+                setText('#btnPracticeText', d.btnPracticeText);
                 
                 // Welcome title'da isim değişimi
                 const welcomeTitle = document.getElementById('welcomeTitle');
