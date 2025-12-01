@@ -9,8 +9,8 @@ require_once '../QuestionLoader.php';
 
 $auth = Auth::getInstance();
 
-// Öğrenci kontrolü
-if (!$auth->hasRole('student')) {
+// Erişim kontrolü (öğrenci, öğretmen veya yönetici)
+if (!$auth->hasRole('student') && !$auth->hasRole('teacher') && !$auth->hasRole('superadmin')) {
     header('Location: ../login.php');
     exit;
 }
