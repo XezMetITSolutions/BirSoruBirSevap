@@ -16,57 +16,105 @@ if (!$auth->hasRole('student')) {
 
 $user = $auth->getUser();
 
+require_once '../database.php';
+
+$db = Database::getInstance();
+$conn = $db->getConnection();
+
+// Güncel kullanıcı bilgilerini veritabanından çek
+$stmt = $conn->prepare("SELECT * FROM users WHERE username = :username");
+$stmt->execute([':username' => $user['username']]);
+$dbUser = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if (!$dbUser) {
+    // Kullanıcı bulunamazsa session'dan devam et (fallback)
+    $dbUser = $user;
+}
+
 // Profil güncelleme işlemi
-if ($_POST) {
+if ($_POST && !isset($_POST['change_password'])) {
     $name = $_POST['name'] ?? '';
     $email = $_POST['email'] ?? '';
     $phone = $_POST['phone'] ?? '';
     $class = $_POST['class'] ?? '';
+    
     // Basit validasyon
     if (empty($name)) {
         $error = 'Ad soyad gereklidir.';
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    } elseif (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = 'Geçerli bir e-posta adresi girin.';
     } else {
-        // Profil güncellendi (gerçek uygulamada veritabanına kaydedilir)
-        $_SESSION['user']['name'] = $name;
-        $_SESSION['user']['email'] = $email;
-        $_SESSION['user']['phone'] = $phone;
-        $_SESSION['user']['class'] = $class;
-        
-        $success = 'Profil başarıyla güncellendi.';
+        // Veritabanını güncelle
+        try {
+            $updateSql = "UPDATE users SET full_name = :name, email = :email, phone = :phone, class_section = :class WHERE username = :username";
+            $updateStmt = $conn->prepare($updateSql);
+            $updateStmt->execute([
+                ':name' => $name,
+                ':email' => $email,
+                ':phone' => $phone,
+                ':class' => $class,
+                ':username' => $user['username']
+            ]);
+            
+            // Session'ı güncelle
+            $_SESSION['user']['name'] = $name;
+            $_SESSION['user']['email'] = $email;
+            $_SESSION['user']['phone'] = $phone;
+            $_SESSION['user']['class_section'] = $class;
+            
+            // dbUser'ı güncelle
+            $dbUser['full_name'] = $name;
+            $dbUser['email'] = $email;
+            $dbUser['phone'] = $phone;
+            $dbUser['class_section'] = $class;
+            
+            $success = 'Profil başarıyla güncellendi.';
+        } catch (PDOException $e) {
+            $error = 'Güncelleme hatası: ' . $e->getMessage();
+        }
     }
 }
 
-// Şifre değiştirme işlemi
-if (isset($_POST['change_password'])) {
-    $currentPassword = $_POST['current_password'] ?? '';
-    $newPassword = $_POST['new_password'] ?? '';
-    $confirmPassword = $_POST['confirm_password'] ?? '';
-    
-    if (empty($currentPassword) || empty($newPassword) || empty($confirmPassword)) {
-        $passwordError = 'Tüm alanları doldurun.';
-    } elseif ($newPassword !== $confirmPassword) {
-        $passwordError = 'Yeni şifreler eşleşmiyor.';
-    } elseif (strlen($newPassword) < 6) {
-        $passwordError = 'Şifre en az 6 karakter olmalıdır.';
-    } else {
-        // Şifre değiştirildi (gerçek uygulamada veritabanında güncellenir)
-        $passwordSuccess = 'Şifre başarıyla değiştirildi.';
+// İstatistikleri hesapla
+$totalExams = 0;
+$totalPractice = 0;
+$averageScore = 0;
+
+try {
+    // Alıştırma sayısı ve ortalaması
+    $stmt = $conn->prepare("SELECT COUNT(*) as count, AVG(percentage) as avg_score FROM practice_results WHERE username = :username");
+    $stmt->execute([':username' => $user['username']]);
+    $practiceStats = $stmt->fetch(PDO::FETCH_ASSOC);
+    $totalPractice = $practiceStats['count'] ?? 0;
+    $practiceAvg = $practiceStats['avg_score'] ?? 0;
+
+    // Sınav sayısı ve ortalaması
+    $stmt = $conn->prepare("SELECT COUNT(*) as count, AVG(percentage) as avg_score FROM exam_results WHERE username = :username");
+    $stmt->execute([':username' => $user['username']]);
+    $examStats = $stmt->fetch(PDO::FETCH_ASSOC);
+    $totalExams = $examStats['count'] ?? 0;
+    $examAvg = $examStats['avg_score'] ?? 0;
+
+    // Genel ortalama
+    $totalActivities = $totalPractice + $totalExams;
+    if ($totalActivities > 0) {
+        $averageScore = (($practiceAvg * $totalPractice) + ($examAvg * $totalExams)) / $totalActivities;
     }
+} catch (Exception $e) {
+    // Hata durumunda 0 kalır
 }
 
-// Profil verileri (örnek)
+// Profil verileri
 $profileData = [
-    'name' => $user['name'] ?? 'Mehmet Öğrenci',
-    'email' => $user['email'] ?? 'mehmet@example.com',
-    'phone' => $user['phone'] ?? '0555 123 45 67',
-    'class' => $user['class'] ?? '9-A',
-    'join_date' => date('Y-m-d', strtotime('-3 days')),
-    'last_login' => date('Y-m-d H:i:s'),
-    'total_exams' => 0,
-    'total_practice' => 0,
-    'average_score' => 0
+    'name' => $dbUser['full_name'] ?? $user['name'] ?? '',
+    'email' => $dbUser['email'] ?? '',
+    'phone' => $dbUser['phone'] ?? '',
+    'class' => $dbUser['class_section'] ?? '',
+    'join_date' => $dbUser['created_at'] ?? date('Y-m-d'),
+    'last_login' => $dbUser['last_login'] ?? date('Y-m-d H:i:s'),
+    'total_exams' => $totalExams,
+    'total_practice' => $totalPractice,
+    'average_score' => round($averageScore, 1)
 ];
 ?>
 <!DOCTYPE html>
