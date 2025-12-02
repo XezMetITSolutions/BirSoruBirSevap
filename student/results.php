@@ -521,32 +521,32 @@ function formatDuration($minutes) {
                     <p id="noResultsDesc">Alıştırma yaparak ilk sonucunuzu oluşturun</p>
                 </div>
             <?php else: ?>
-                <table class="results-table">
+                <table class="results-table" id="resultsTable">
                     <thead>
                         <tr>
-                            <th id="thExam">Sınav</th>
-                            <th id="thTeacher">Eğitmenin Adı</th>
-                            <th id="thDate">Tarih</th>
-                            <th id="thScore">Puan</th>
-                            <th id="thCorrect">Doğru/Toplam</th>
-                            <th id="thDuration">Süre</th>
-                            <th id="thStatus">Durum</th>
+                            <th id="thExam" data-sort="exam" style="cursor: pointer;">Sınav <i class="fas fa-sort"></i></th>
+                            <th id="thTeacher" data-sort="teacher" style="cursor: pointer;">Eğitmenin Adı <i class="fas fa-sort"></i></th>
+                            <th id="thDate" data-sort="date" style="cursor: pointer;">Tarih <i class="fas fa-sort"></i></th>
+                            <th id="thScore" data-sort="score" style="cursor: pointer;">Puan <i class="fas fa-sort"></i></th>
+                            <th id="thCorrect" data-sort="correct" style="cursor: pointer;">Doğru/Toplam <i class="fas fa-sort"></i></th>
+                            <th id="thDuration" data-sort="duration" style="cursor: pointer;">Süre <i class="fas fa-sort"></i></th>
+                            <th id="thStatus" data-sort="status" style="cursor: pointer;">Durum <i class="fas fa-sort"></i></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($results as $result): ?>
                             <tr>
-                                <td><strong><?php echo htmlspecialchars($result['exam_title']); ?></strong></td>
-                                <td><?php echo htmlspecialchars($result['teacher']); ?></td>
-                                <td><?php echo formatDate($result['date']); ?></td>
-                                <td>
+                                <td data-value="<?php echo htmlspecialchars($result['exam_title']); ?>"><strong><?php echo htmlspecialchars($result['exam_title']); ?></strong></td>
+                                <td data-value="<?php echo htmlspecialchars($result['teacher']); ?>"><?php echo htmlspecialchars($result['teacher']); ?></td>
+                                <td data-value="<?php echo $result['date']; ?>"><?php echo formatDate($result['date']); ?></td>
+                                <td data-value="<?php echo $result['score']; ?>">
                                     <span class="score-badge <?php echo getScoreClass($result['score']); ?>">
                                     <?php echo $result['score']; ?>%
                                     </span>
                                 </td>
-                                <td><?php echo $result['correct_answers']; ?>/<?php echo $result['total_questions']; ?></td>
-                                <td><?php echo formatDuration($result['duration']); ?></td>
-                                <td>
+                                <td data-value="<?php echo $result['correct_answers']; ?>"><?php echo $result['correct_answers']; ?>/<?php echo $result['total_questions']; ?></td>
+                                <td data-value="<?php echo $result['duration']; ?>"><?php echo formatDuration($result['duration']); ?></td>
+                                <td data-value="<?php echo getScoreText($result['score']); ?>">
                                     <span class="score-badge score-excellent status-cell">
                                         <?php echo getScoreText($result['score']); ?>
                                     </span>
@@ -560,6 +560,73 @@ function formatDuration($minutes) {
     </div>
 
     <script>
+        // Tablo Sıralama Fonksiyonu
+        document.addEventListener('DOMContentLoaded', function() {
+            const table = document.getElementById('resultsTable');
+            if (!table) return;
+
+            const headers = table.querySelectorAll('th[data-sort]');
+            let currentSort = { column: null, direction: 'asc' };
+
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const column = header.getAttribute('data-sort');
+                    const direction = currentSort.column === column && currentSort.direction === 'asc' ? 'desc' : 'asc';
+                    
+                    // İkonları güncelle
+                    headers.forEach(h => {
+                        const icon = h.querySelector('i');
+                        icon.className = 'fas fa-sort';
+                    });
+                    const activeIcon = header.querySelector('i');
+                    activeIcon.className = `fas fa-sort-${direction === 'asc' ? 'up' : 'down'}`;
+
+                    sortTable(column, direction);
+                    currentSort = { column, direction };
+                });
+            });
+
+            function sortTable(column, direction) {
+                const tbody = table.querySelector('tbody');
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+
+                const sortedRows = rows.sort((a, b) => {
+                    let aVal, bVal;
+
+                    // Sütun indexini bul
+                    let colIndex = 0;
+                    switch(column) {
+                        case 'exam': colIndex = 0; break;
+                        case 'teacher': colIndex = 1; break;
+                        case 'date': colIndex = 2; break;
+                        case 'score': colIndex = 3; break;
+                        case 'correct': colIndex = 4; break;
+                        case 'duration': colIndex = 5; break;
+                        case 'status': colIndex = 6; break;
+                    }
+
+                    const aCell = a.cells[colIndex];
+                    const bCell = b.cells[colIndex];
+                    
+                    aVal = aCell.getAttribute('data-value');
+                    bVal = bCell.getAttribute('data-value');
+
+                    // Sayısal değerler için kontrol
+                    if (column === 'score' || column === 'duration' || column === 'correct') {
+                        aVal = parseFloat(aVal);
+                        bVal = parseFloat(bVal);
+                    }
+
+                    if (aVal < bVal) return direction === 'asc' ? -1 : 1;
+                    if (aVal > bVal) return direction === 'asc' ? 1 : -1;
+                    return 0;
+                });
+
+                // Sıralanmış satırları tabloya ekle
+                tbody.innerHTML = '';
+                sortedRows.forEach(row => tbody.appendChild(row));
+            }
+        });
         // Kapsamlı TR/DE dil desteği
         (function(){
             const tr = {

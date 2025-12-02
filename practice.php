@@ -990,11 +990,13 @@ if ($auth->hasRole('teacher')) {
     <div class="header">
         <div class="header-content">
             <div class="logo">
-                <img src="logo.png" alt="Bir Soru Bir Sevap Logo">
-                <div>
-                    <h1>Bir Soru Bir Sevap</h1>
-                    <p id="pageTitle">Alıştırma Modu</p>
-                </div>
+                <a href="<?php echo $dashboardLink; ?>" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 15px;">
+                    <img src="logo.png" alt="Bir Soru Bir Sevap Logo">
+                    <div>
+                        <h1>Bir Soru Bir Sevap</h1>
+                        <p id="pageTitle">Alıştırma Modu</p>
+                    </div>
+                </a>
             </div>
             <div class="user-info">
                 <div class="user-avatar">

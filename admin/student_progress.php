@@ -819,7 +819,9 @@ if ($selectedUser) {
     <div class="header">
         <div class="header-content">
             <div class="header-left">
-                <h1><i class="fas fa-chart-line"></i> Öğrenci Gelişimi</h1>
+                <a href="dashboard.php" style="text-decoration: none; color: inherit;">
+                    <h1><i class="fas fa-chart-line"></i> Öğrenci Gelişimi</h1>
+                </a>
             </div>
             <div class="header-right">
                 <button id="themeToggle" class="header-btn">

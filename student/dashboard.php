@@ -705,11 +705,13 @@ if (file_exists('../data/exams.json')) {
     <div class="header">
         <div class="header-content">
             <div class="logo">
-                <img src="../logo.png" alt="Logo">
-                <div>
-                    <h1>Bir Soru Bir Sevap</h1>
-                    <p>Öğrenci Paneli</p>
-                </div>
+                <a href="dashboard.php" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 1rem;">
+                    <img src="../logo.png" alt="Logo">
+                    <div>
+                        <h1>Bir Soru Bir Sevap</h1>
+                        <p>Öğrenci Paneli</p>
+                    </div>
+                </a>
             </div>
             <div class="user-info">
                 <div class="user-avatar">
