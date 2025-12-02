@@ -111,7 +111,7 @@ $practiceResult = [
     'detailed_results' => $detailedResults
 ];
 
-// Sonuçları dosyaya kaydet
+// Sonuçları dosyaya kaydet (Yedek olarak kalsın)
 $resultsFile = 'data/practice_results.json';
 $allResults = [];
 if (file_exists($resultsFile)) {
@@ -120,6 +120,31 @@ if (file_exists($resultsFile)) {
 
 $allResults[] = $practiceResult;
 file_put_contents($resultsFile, json_encode($allResults, JSON_PRETTY_PRINT));
+
+// Veritabanına kaydet
+require_once 'database.php';
+try {
+    $db = Database::getInstance();
+    $conn = $db->getConnection();
+    
+    $sql = "INSERT INTO practice_results (username, student_name, total_questions, correct_answers, wrong_answers, score, percentage, time_taken, created_at) 
+            VALUES (:username, :student_name, :total, :correct, :wrong, :score, :percentage, :duration, :created_at)";
+            
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([
+        ':username' => $practiceResult['student_id'],
+        ':student_name' => $practiceResult['student_name'],
+        ':total' => $practiceResult['total'],
+        ':correct' => $practiceResult['correct'],
+        ':wrong' => $practiceResult['wrong'],
+        ':score' => $practiceResult['score'],
+        ':percentage' => $practiceResult['score'], // Score ve percentage aynı
+        ':duration' => $practiceResult['duration'],
+        ':created_at' => $practiceResult['completed_at']
+    ]);
+} catch (Exception $e) {
+    error_log("Veritabanı kayıt hatası: " . $e->getMessage());
+}
 
 // Rozet değerlendirme ve kazanım
 $badges = new Badges();

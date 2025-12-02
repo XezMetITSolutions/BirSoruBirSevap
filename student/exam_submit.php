@@ -92,7 +92,7 @@ $examResult = [
     'detailed_results' => $results
 ];
 
-// Sonuçları dosyaya kaydet
+// Sonuçları dosyaya kaydet (Yedek olarak kalsın)
 $resultsFile = '../data/exam_results.json';
 $allResults = [];
 if (file_exists($resultsFile)) {
@@ -106,6 +106,34 @@ if (!isset($allResults[$examCode])) {
 
 $allResults[$examCode][] = $examResult;
 file_put_contents($resultsFile, json_encode($allResults, JSON_PRETTY_PRINT));
+
+// Veritabanına kaydet
+require_once '../database.php';
+try {
+    $db = Database::getInstance();
+    $conn = $db->getConnection();
+    
+    $sql = "INSERT INTO exam_results (exam_id, username, student_name, total_questions, correct_answers, wrong_answers, score, percentage, time_taken, answers, start_time, submit_time) 
+            VALUES (:exam_id, :username, :student_name, :total, :correct, :wrong, :score, :percentage, :duration, :answers, :start_time, :submit_time)";
+            
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([
+        ':exam_id' => $examCode,
+        ':username' => $user['username'],
+        ':student_name' => $user['name'] ?? 'Bilinmeyen',
+        ':total' => $totalQuestions,
+        ':correct' => $correctAnswers,
+        ':wrong' => $totalQuestions - $correctAnswers,
+        ':score' => $score,
+        ':percentage' => $score,
+        ':duration' => $durationSeconds,
+        ':answers' => json_encode($answers),
+        ':start_time' => date('Y-m-d H:i:s', $startTime),
+        ':submit_time' => date('Y-m-d H:i:s', $endTime)
+    ]);
+} catch (Exception $e) {
+    error_log("Sınav veritabanı kayıt hatası: " . $e->getMessage());
+}
 
 // Session'ı temizle
 unset($_SESSION['current_exam']);

@@ -19,91 +19,72 @@ $user = $auth->getUser();
 // Gerçek sonuç verilerini yükle
 $results = [];
 
-// Alıştırma sonuçlarını yükle
-$practiceResultsFile = '../data/practice_results.json';
-if (file_exists($practiceResultsFile)) {
-    $practiceResults = json_decode(file_get_contents($practiceResultsFile), true) ?? [];
+// Veritabanı bağlantısı
+require_once '../database.php';
+$db = Database::getInstance();
+$conn = $db->getConnection();
+
+// Alıştırma sonuçlarını veritabanından çek
+try {
+    $stmt = $conn->prepare("SELECT * FROM practice_results WHERE username = :username ORDER BY created_at DESC");
+    $stmt->execute([':username' => $user['username']]);
+    $practiceResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-    // Bu kullanıcının sonuçlarını filtrele
-    $userResults = array_filter($practiceResults, function($result) use ($user) {
-        $userId = $user['username'] ?? $user['name'] ?? 'unknown';
-        return ($result['student_id'] ?? '') === $userId;
-    });
-    
-    // Sonuçları formatla
-    foreach ($userResults as $result) {
-        $score = $result['score'] ?? 0;
-        $totalQuestions = $result['total_questions'] ?? 0;
-        $correctAnswers = $result['correct_answers'] ?? 0;
-        
-        // Eğer total_questions 0 ise ama score varsa, hesapla
-        if ($totalQuestions == 0 && $score > 0) {
-            // Score'dan total_questions'ı tahmin et (örnek: %20 ise 5 sorudan 1 doğru)
-            $totalQuestions = max(5, round(100 / $score)); // En az 5 soru varsay
-            $correctAnswers = round(($score / 100) * $totalQuestions);
-        }
-        
+    foreach ($practiceResults as $result) {
         $results[] = [
-            'id' => $result['id'] ?? uniqid(),
+            'id' => 'practice_' . $result['id'],
             'exam_title' => $result['category'] ?? 'Alıştırma',
-            'teacher' => 'Eğitmen',
-            'date' => $result['completed_at'] ?? date('Y-m-d'),
-            'score' => $score,
-            'total_questions' => $totalQuestions,
-            'correct_answers' => $correctAnswers,
-            'duration' => round(($result['duration'] ?? 0) / 60), // dakika
+            'teacher' => 'Sistem',
+            'date' => $result['created_at'],
+            'score' => $result['score'],
+            'total_questions' => $result['total_questions'],
+            'correct_answers' => $result['correct_answers'],
+            'duration' => round($result['time_taken'] / 60), // saniye -> dakika
             'status' => 'completed'
         ];
     }
+} catch (PDOException $e) {
+    error_log("Alıştırma sonuçları hatası: " . $e->getMessage());
 }
 
-// Sınav sonuçlarını yükle (gerçek sınavlar)
-$examResultsFile = '../data/exam_results.json';
-$examsDefFile = '../data/exams.json';
-if (file_exists($examResultsFile)) {
-    $examResultsAll = json_decode(file_get_contents($examResultsFile), true) ?? [];
-    $examsDef = file_exists($examsDefFile) ? (json_decode(file_get_contents($examsDefFile), true) ?? []) : [];
-
-    $userId = $user['username'] ?? $user['name'] ?? 'unknown';
-
-    foreach ($examResultsAll as $examCode => $examResultsByCode) {
-        if (!is_array($examResultsByCode)) continue;
-        foreach ($examResultsByCode as $er) {
-            if (($er['student_id'] ?? '') !== $userId) continue;
-
-            $score = intval($er['score'] ?? 0);
-            $correct = intval($er['correct'] ?? 0);
-            $wrong = intval($er['wrong'] ?? 0);
-            $empty = intval($er['empty'] ?? 0);
-            $totalQuestionsCalc = max(0, $correct + $wrong + $empty);
-
-            // Dakika olarak süreyi ayıkla ("12 dakika" gibi)
-            $durationStr = strval($er['duration'] ?? '0');
-            if (preg_match('/(\d+[\.,]?\d*)/u', $durationStr, $m)) {
-                $durationMin = (int) round(floatval(str_replace(',', '.', $m[1])));
-            } else {
-                $durationMin = 0;
-            }
-
-            // Öğretmen adı, exams.json'dan bulunur
-            $teacherName = 'Eğitmen';
-            if (isset($examsDef[$examCode]) && is_array($examsDef[$examCode])) {
-                $teacherName = $examsDef[$examCode]['teacher_name'] ?? $teacherName;
-            }
-
-            $results[] = [
-                'id' => $examCode . '_' . ($er['completed_at'] ?? ''),
-                'exam_title' => $er['exam_title'] ?? ($examsDef[$examCode]['title'] ?? 'Sınav'),
-                'teacher' => $teacherName,
-                'date' => substr($er['completed_at'] ?? date('Y-m-d'), 0, 10),
-                'score' => $score,
-                'total_questions' => $totalQuestionsCalc,
-                'correct_answers' => $correct,
-                'duration' => $durationMin,
-                'status' => 'completed'
-            ];
+// Sınav sonuçlarını veritabanından çek
+try {
+    // Sınav bilgilerini ve öğretmen adını almak için JOIN kullanıyoruz
+    $sql = "SELECT er.*, e.title as exam_title, u.full_name as teacher_name 
+            FROM exam_results er 
+            LEFT JOIN exams e ON er.exam_id = e.exam_id 
+            LEFT JOIN users u ON e.created_by = u.username 
+            WHERE er.username = :username 
+            ORDER BY er.created_at DESC";
+            
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([':username' => $user['username']]);
+    $examResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    foreach ($examResults as $result) {
+        // Süre hesaplama (saniye cinsinden olabilir veya dakika stringi olabilir)
+        $duration = 0;
+        if (is_numeric($result['time_taken'])) {
+            $duration = round($result['time_taken'] / 60);
+        } else {
+            // "12 dakika" gibi string ise
+            $duration = intval($result['time_taken']);
         }
+        
+        $results[] = [
+            'id' => 'exam_' . $result['id'],
+            'exam_title' => $result['exam_title'] ?? 'Sınav',
+            'teacher' => $result['teacher_name'] ?? 'Eğitmen',
+            'date' => $result['created_at'],
+            'score' => $result['score'],
+            'total_questions' => $result['total_questions'],
+            'correct_answers' => $result['correct_answers'],
+            'duration' => $duration,
+            'status' => 'completed'
+        ];
     }
+} catch (PDOException $e) {
+    error_log("Sınav sonuçları hatası: " . $e->getMessage());
 }
 
 // İstatistikler hesapla
