@@ -71,12 +71,37 @@ $questionLoader->loadQuestions();
 $questions = $_SESSION['all_questions'] ?? [];
 $totalQuestions = count($questions);
 
+// Soru Bankası ve Kategori İstatistiklerini Hesapla
+$bankStats = [];
+$categoryStats = [];
+
+foreach ($questions as $q) {
+    $bank = $q['bank'] ?? 'Diğer';
+    $category = $q['category'] ?? 'Genel';
+
+    if (!isset($bankStats[$bank])) {
+        $bankStats[$bank] = 0;
+    }
+    $bankStats[$bank]++;
+
+    if (!isset($categoryStats[$category])) {
+        $categoryStats[$category] = 0;
+    }
+    $categoryStats[$category]++;
+}
+
+// Sıralama
+arsort($bankStats);
+arsort($categoryStats);
+
 $reportData = [
     'total_users' => $totalUsers,
     'active_users' => $activeUsers,
     'total_exams' => $totalExams,
     'total_questions' => $totalQuestions,
-    'institution_stats' => $institutionStats
+    'institution_stats' => $institutionStats,
+    'bank_stats' => $bankStats,
+    'category_stats' => $categoryStats
 ];
 ?>
 <!DOCTYPE html>
@@ -85,6 +110,7 @@ $reportData = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raporlar - Bir Soru Bir Sevap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -208,6 +234,7 @@ $reportData = [
         .stat-icon {
             font-size: 2.5em;
             margin-bottom: 15px;
+            color: #089b76;
         }
 
         .stat-number {
@@ -224,43 +251,49 @@ $reportData = [
 
         .reports-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1fr;
             gap: 30px;
         }
 
-        .report-card {
+        .report-section {
             background: white;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
         }
 
-        .report-card h2 {
+        .report-section h2 {
             color: #2c3e50;
             margin-bottom: 20px;
             font-size: 1.5em;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .institution-table {
+        .data-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
-        .institution-table th,
-        .institution-table td {
+        .data-table th,
+        .data-table td {
             padding: 12px;
             text-align: left;
             border-bottom: 1px solid #e1e8ed;
         }
 
-        .institution-table th {
+        .data-table th {
             background: #f8f9fa;
             font-weight: 600;
             color: #2c3e50;
         }
 
-        .institution-table tr:hover {
+        .data-table tr:hover {
             background: #f8f9fa;
         }
 
@@ -285,41 +318,18 @@ $reportData = [
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .btn-secondary {
-            background: #95a5a6;
-        }
-
         .btn-success {
             background: #27ae60;
         }
 
-        .btn-danger {
-            background: #e74c3c;
-        }
-
         .export-options {
             display: flex;
-            flex-wrap: wrap;
+            justify-content: flex-end;
             gap: 10px;
             margin-top: 20px;
         }
 
-        .chart-container {
-            height: 300px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #7f8c8d;
-            font-size: 1.1em;
-        }
-
         @media (max-width: 768px) {
-            .reports-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .header-content {
                 flex-direction: column;
                 gap: 15px;
@@ -357,37 +367,38 @@ $reportData = [
 
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-icon">👥</div>
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
                 <div class="stat-number"><?php echo $reportData['total_users']; ?></div>
                 <div class="stat-label">Toplam Kullanıcı</div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">✅</div>
+                <div class="stat-icon"><i class="fas fa-user-check"></i></div>
                 <div class="stat-number"><?php echo $reportData['active_users']; ?></div>
                 <div class="stat-label">Aktif Kullanıcı</div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">📝</div>
+                <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
                 <div class="stat-number"><?php echo $reportData['total_exams']; ?></div>
                 <div class="stat-label">Toplam Sınav</div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">❓</div>
+                <div class="stat-icon"><i class="fas fa-question-circle"></i></div>
                 <div class="stat-number"><?php echo $reportData['total_questions']; ?></div>
                 <div class="stat-label">Toplam Soru</div>
             </div>
         </div>
 
         <div class="reports-grid">
-            <div class="report-card">
-                <h2>🏢 Kurum Bazlı İstatistikler</h2>
-                <table class="institution-table">
+            
+            <!-- Şube Raporları -->
+            <div class="report-section">
+                <h2><i class="fas fa-building"></i> Şube Bazlı Raporlar</h2>
+                <table class="data-table">
                     <thead>
                         <tr>
-                            <th>Kurum</th>
-                            <th>Kullanıcı</th>
-                            <th>Sınav</th>
-                            <th>Soru</th>
+                            <th>Şube / Kurum</th>
+                            <th>Kayıtlı Kullanıcı</th>
+                            <th>Durum</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -395,61 +406,82 @@ $reportData = [
                             <tr>
                                 <td><?php echo htmlspecialchars($institution); ?></td>
                                 <td><?php echo $stats['users']; ?></td>
-                                <td><?php echo $stats['exams']; ?></td>
-                                <td><?php echo $stats['questions']; ?></td>
+                                <td>
+                                    <span style="color: #27ae60; font-weight: bold;">Aktif</span>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-
-                <div class="export-options">
-                    <button class="btn btn-success" onclick="exportToCSV()">CSV İndir</button>
-                    <button class="btn btn-secondary" onclick="exportToPDF()">PDF İndir</button>
-                    <button class="btn" onclick="printReport()">Yazdır</button>
-                </div>
             </div>
 
-            <div class="report-card">
-                <h2>📊 Grafik Raporları</h2>
-                <div class="chart-container">
-                    📈 Grafik görünümü<br>
-                    <small>(Geliştirme aşamasında)</small>
-                </div>
-
-                <div style="margin-top: 20px;">
-                    <h3>Hızlı Raporlar</h3>
-                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
-                        <a href="#" class="btn btn-secondary">Günlük Rapor</a>
-                        <a href="#" class="btn btn-secondary">Haftalık Rapor</a>
-                        <a href="#" class="btn btn-secondary">Aylık Rapor</a>
-                        <a href="#" class="btn btn-secondary">Yıllık Rapor</a>
-                    </div>
-                </div>
-
-                <div style="margin-top: 30px;">
-                    <h3>Özel Raporlar</h3>
-                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
-                        <a href="#" class="btn">Kullanıcı Aktivite Raporu</a>
-                        <a href="#" class="btn">Sınav Performans Raporu</a>
-                        <a href="#" class="btn">Soru Analiz Raporu</a>
-                    </div>
-                </div>
+            <!-- Soru Bankası Raporları -->
+            <div class="report-section">
+                <h2><i class="fas fa-book"></i> Soru Bankası Raporları</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Soru Bankası</th>
+                            <th>Soru Sayısı</th>
+                            <th>Oran</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($reportData['bank_stats'] as $bank => $count): ?>
+                            <?php $percentage = $totalQuestions > 0 ? round(($count / $totalQuestions) * 100, 1) : 0; ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($bank); ?></td>
+                                <td><?php echo $count; ?></td>
+                                <td>
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <div style="flex: 1; height: 8px; background: #e0e0e0; border-radius: 4px; overflow: hidden; width: 100px;">
+                                            <div style="height: 100%; background: #3498db; width: <?php echo $percentage; ?>%;"></div>
+                                        </div>
+                                        <span>%<?php echo $percentage; ?></span>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
+
+            <!-- Konu Analizi -->
+            <div class="report-section">
+                <h2><i class="fas fa-tags"></i> Konu Analizi</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Konu / Kategori</th>
+                            <th>Soru Sayısı</th>
+                            <th>Oran</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($reportData['category_stats'] as $category => $count): ?>
+                            <?php $percentage = $totalQuestions > 0 ? round(($count / $totalQuestions) * 100, 1) : 0; ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($category); ?></td>
+                                <td><?php echo $count; ?></td>
+                                <td>
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <div style="flex: 1; height: 8px; background: #e0e0e0; border-radius: 4px; overflow: hidden; width: 100px;">
+                                            <div style="height: 100%; background: #9b59b6; width: <?php echo $percentage; ?>%;"></div>
+                                        </div>
+                                        <span>%<?php echo $percentage; ?></span>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        
+        <div class="export-options">
+            <button class="btn btn-success" onclick="window.print()"><i class="fas fa-print"></i> Raporu Yazdır</button>
         </div>
     </div>
-
-    <script>
-        function exportToCSV() {
-            alert('CSV export özelliği geliştirme aşamasında!');
-        }
-
-        function exportToPDF() {
-            alert('PDF export özelliği geliştirme aşamasında!');
-        }
-
-        function printReport() {
-            window.print();
-        }
-    </script>
 </body>
 </html>
