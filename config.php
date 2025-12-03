@@ -232,7 +232,6 @@ if (file_exists(__DIR__ . '/maintenance.lock')) {
             <div class="container">
                 <h1>🛠️ Bakım Modu</h1>
                 <p>Sistemimizde şu anda bakım çalışması yapılmaktadır.<br>Lütfen daha sonra tekrar ziyaret ediniz.</p>
-                <a href="login.php" class="btn">Yönetici Girişi</a>
             </div>
         </body>
         </html>
