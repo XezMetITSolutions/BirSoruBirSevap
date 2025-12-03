@@ -864,11 +864,8 @@ $errorCount = count($errors);
                         <a href="?action=reload_questions" class="btn btn-warning" id="btnReload2">
                             🔄 Hızlı Yenile
                         </a>
-                        <a href="backup.php" class="btn btn-secondary" id="btnBackup">
-                            💾 Yedekle
-                        </a>
-                        <a href="maintenance.php" class="btn btn-danger" id="btnMaintenance">
-                            🔧 Bakım Modu
+                        <a href="system_management.php" class="btn btn-danger" id="btnSystem">
+                            🎛️ Sistem Yönetimi
                         </a>
                     </div>
                 </div>
@@ -925,8 +922,8 @@ $errorCount = count($errors);
                 btnStudentProgress:'🎓 Öğrenci Gelişimi',
                 errorTitle:'⚠️ Sistem Hataları', sidebarTitle1:'📚 Soru Bankaları', categoryText:'kategori',
                 noBanksText:'📭 Henüz soru bankası yüklenmemiş', sidebarTitle2:'⚡ Hızlı İşlemler',
-                btnLoadQuestions2:'📚 Soru Yükleme', btnReload2:'🔄 Hızlı Yenile', btnBackup:'💾 Yedekle',
-                btnMaintenance:'🔧 Bakım Modu', sidebarTitle3:'📊 Sistem Durumu',
+                btnLoadQuestions2:'📚 Soru Yükleme', btnReload2:'🔄 Hızlı Yenile', btnSystem:'🎛️ Sistem Yönetimi',
+                sidebarTitle3:'📊 Sistem Durumu',
                 phpVersionLabel:'🐘 PHP Versiyonu:', memoryLabel:'💾 Bellek Kullanımı:', lastUpdateLabel:'🕒 Son Güncelleme:',
                 sidebarTitle4:'🎯 Hızlı Erişim', btnUsers2:'👥 Kullanıcılar', btnSettings2:'⚙️ Ayarlar',
                 btnReports2:'📈 Raporlar', btnHome2:'🏠 Ana Sayfa',
@@ -942,8 +939,8 @@ $errorCount = count($errors);
                 btnStudentProgress:'🎓 Schülerfortschritt',
                 errorTitle:'⚠️ Systemfehler', sidebarTitle1:'📚 Fragendatenbanken', categoryText:'Kategorien',
                 noBanksText:'📭 Noch keine Fragendatenbank geladen', sidebarTitle2:'⚡ Schnelle Aktionen',
-                btnLoadQuestions2:'📚 Fragen laden', btnReload2:'🔄 Schnell aktualisieren', btnBackup:'💾 Sichern',
-                btnMaintenance:'🔧 Wartungsmodus', sidebarTitle3:'📊 Systemstatus',
+                btnLoadQuestions2:'📚 Fragen laden', btnReload2:'🔄 Schnell aktualisieren', btnSystem:'🎛️ Systemverwaltung',
+                sidebarTitle3:'📊 Systemstatus',
                 phpVersionLabel:'🐘 PHP-Version:', memoryLabel:'💾 Speichernutzung:', lastUpdateLabel:'🕒 Letzte Aktualisierung:',
                 sidebarTitle4:'🎯 Schnellzugriff', btnUsers2:'👥 Benutzer', btnSettings2:'⚙️ Einstellungen',
                 btnReports2:'📈 Berichte', btnHome2:'🏠 Startseite',
@@ -981,8 +978,7 @@ $errorCount = count($errors);
                 setText('#sidebarTitle2', d.sidebarTitle2);
                 setText('#btnLoadQuestions2', d.btnLoadQuestions2);
                 setText('#btnReload2', d.btnReload2);
-                setText('#btnBackup', d.btnBackup);
-                setText('#btnMaintenance', d.btnMaintenance);
+                setText('#btnSystem', d.btnSystem);
                 setText('#sidebarTitle3', d.sidebarTitle3);
                 setText('#phpVersionLabel', d.phpVersionLabel);
                 setText('#memoryLabel', d.memoryLabel);
