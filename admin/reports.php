@@ -94,6 +94,70 @@ foreach ($questions as $q) {
 arsort($bankStats);
 arsort($categoryStats);
 
+// --- Gelişmiş Raporlar İçin Veri Çekme ---
+
+// 1. Sınav Geçmişi (Şube ve Tarihe Göre)
+$examHistory = [];
+try {
+    $sql = "SELECT 
+                e.exam_id,
+                e.title, 
+                e.created_at, 
+                e.class_section, 
+                e.teacher_institution,
+                (SELECT COUNT(*) FROM exam_results r WHERE r.exam_id = e.exam_id) as participant_count 
+            FROM exams e 
+            ORDER BY e.created_at DESC 
+            LIMIT 50";
+    $stmt = $conn->query($sql);
+    $examHistory = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (Exception $e) {
+    // Tablo yoksa veya hata varsa boş dizi
+}
+
+// 2. Alıştırma Katılım Oranları (Şube Bazlı)
+// Mevcut institutionStats dizisine "active_practice_users" ekleyeceğiz
+try {
+    $sql = "SELECT 
+                COALESCE(NULLIF(u.branch, ''), NULLIF(u.institution, ''), 'Bilinmiyor') as branch_name,
+                COUNT(DISTINCT p.username) as active_count
+            FROM practice_results p
+            JOIN users u ON p.username = u.username
+            WHERE u.role = 'student'
+            GROUP BY branch_name";
+    $stmt = $conn->query($sql);
+    $practiceStats = $stmt->fetchAll(PDO::FETCH_KEY_PAIR); // [branch => count]
+    
+    // institutionStats ile birleştir
+    foreach ($institutionStats as $inst => $stats) {
+        $institutionStats[$inst]['active_practice'] = $practiceStats[$inst] ?? 0;
+        $institutionStats[$inst]['participation_rate'] = $stats['users'] > 0 ? round(($institutionStats[$inst]['active_practice'] / $stats['users']) * 100, 1) : 0;
+    }
+} catch (Exception $e) {
+    // Hata durumunda 0 varsay
+    foreach ($institutionStats as $inst => $stats) {
+        $institutionStats[$inst]['active_practice'] = 0;
+        $institutionStats[$inst]['participation_rate'] = 0;
+    }
+}
+
+// 3. Konu Başarı Analizi (En Güçlü/Zayıf)
+$topicPerformance = [];
+try {
+    $sql = "SELECT 
+                category, 
+                AVG(percentage) as avg_score, 
+                COUNT(*) as total_attempts 
+            FROM practice_results 
+            WHERE category IS NOT NULL AND category != ''
+            GROUP BY category 
+            ORDER BY avg_score DESC";
+    $stmt = $conn->query($sql);
+    $topicPerformance = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (Exception $e) {
+    // Hata durumunda boş
+}
+
 $reportData = [
     'total_users' => $totalUsers,
     'active_users' => $activeUsers,
@@ -101,7 +165,9 @@ $reportData = [
     'total_questions' => $totalQuestions,
     'institution_stats' => $institutionStats,
     'bank_stats' => $bankStats,
-    'category_stats' => $categoryStats
+    'category_stats' => $categoryStats,
+    'exam_history' => $examHistory,
+    'topic_performance' => $topicPerformance
 ];
 ?>
 <!DOCTYPE html>
@@ -328,11 +394,30 @@ $reportData = [
             gap: 10px;
             margin-top: 20px;
         }
+        
+        .progress-bar-container {
+            flex: 1; 
+            height: 8px; 
+            background: #e0e0e0; 
+            border-radius: 4px; 
+            overflow: hidden; 
+            width: 100px;
+        }
+        
+        .progress-bar {
+            height: 100%; 
+            border-radius: 4px;
+        }
 
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
                 gap: 15px;
+            }
+            
+            .data-table {
+                display: block;
+                overflow-x: auto;
             }
         }
     </style>
@@ -390,15 +475,16 @@ $reportData = [
 
         <div class="reports-grid">
             
-            <!-- Şube Raporları -->
+            <!-- 1. Şube ve Katılım Raporları -->
             <div class="report-section">
-                <h2><i class="fas fa-building"></i> Şube Bazlı Raporlar</h2>
+                <h2><i class="fas fa-building"></i> Şube ve Alıştırma Katılım Raporları</h2>
                 <table class="data-table">
                     <thead>
                         <tr>
                             <th>Şube / Kurum</th>
-                            <th>Kayıtlı Kullanıcı</th>
-                            <th>Durum</th>
+                            <th>Kayıtlı Öğrenci</th>
+                            <th>Aktif Pratik Yapan</th>
+                            <th>Katılım Oranı</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -406,8 +492,18 @@ $reportData = [
                             <tr>
                                 <td><?php echo htmlspecialchars($institution); ?></td>
                                 <td><?php echo $stats['users']; ?></td>
+                                <td><?php echo $stats['active_practice'] ?? 0; ?></td>
                                 <td>
-                                    <span style="color: #27ae60; font-weight: bold;">Aktif</span>
+                                    <?php 
+                                    $rate = $stats['participation_rate'] ?? 0;
+                                    $color = $rate > 70 ? '#27ae60' : ($rate > 40 ? '#f39c12' : '#e74c3c');
+                                    ?>
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <div class="progress-bar-container">
+                                            <div class="progress-bar" style="background: <?php echo $color; ?>; width: <?php echo $rate; ?>%;"></div>
+                                        </div>
+                                        <span style="font-weight: bold; color: <?php echo $color; ?>">%<?php echo $rate; ?></span>
+                                    </div>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -415,9 +511,93 @@ $reportData = [
                 </table>
             </div>
 
-            <!-- Soru Bankası Raporları -->
+            <!-- 2. Sınav Geçmişi -->
             <div class="report-section">
-                <h2><i class="fas fa-book"></i> Soru Bankası Raporları</h2>
+                <h2><i class="fas fa-history"></i> Sınav Geçmişi ve Katılım</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Sınav Adı</th>
+                            <th>Tarih</th>
+                            <th>Şube / Sınıf</th>
+                            <th>Katılımcı Sayısı</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (empty($reportData['exam_history'])): ?>
+                            <tr><td colspan="4" style="text-align: center; color: #7f8c8d;">Henüz sınav kaydı bulunmamaktadır.</td></tr>
+                        <?php else: ?>
+                            <?php foreach ($reportData['exam_history'] as $exam): ?>
+                                <tr>
+                                    <td><?php echo htmlspecialchars($exam['title']); ?></td>
+                                    <td><?php echo date('d.m.Y H:i', strtotime($exam['created_at'])); ?></td>
+                                    <td>
+                                        <?php 
+                                        $loc = [];
+                                        if (!empty($exam['teacher_institution'])) $loc[] = $exam['teacher_institution'];
+                                        if (!empty($exam['class_section'])) $loc[] = $exam['class_section'];
+                                        echo htmlspecialchars(implode(' - ', $loc));
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <span style="background: #e8f5e9; color: #2e7d32; padding: 4px 10px; border-radius: 12px; font-weight: bold;">
+                                            <i class="fas fa-user-check"></i> <?php echo $exam['participant_count']; ?>
+                                        </span>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 3. Konu Başarı Analizi -->
+            <div class="report-section">
+                <h2><i class="fas fa-chart-pie"></i> Konu Başarı Analizi (Müfredat Takibi)</h2>
+                <p style="margin-bottom: 15px; color: #666;">Öğrencilerin alıştırmalarda gösterdiği performans analizi.</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Konu / Kategori</th>
+                            <th>Çözülen Soru</th>
+                            <th>Başarı Ortalaması</th>
+                            <th>Durum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (empty($reportData['topic_performance'])): ?>
+                            <tr><td colspan="4" style="text-align: center; color: #7f8c8d;">Henüz konu analizi için yeterli veri yok.</td></tr>
+                        <?php else: ?>
+                            <?php foreach ($reportData['topic_performance'] as $topic): ?>
+                                <?php 
+                                $avg = round($topic['avg_score'], 1);
+                                $color = $avg >= 80 ? '#27ae60' : ($avg >= 50 ? '#f39c12' : '#e74c3c');
+                                $status = $avg >= 80 ? 'Çok İyi' : ($avg >= 50 ? 'Orta' : 'Geliştirilmeli');
+                                ?>
+                                <tr>
+                                    <td><?php echo htmlspecialchars($topic['category']); ?></td>
+                                    <td><?php echo $topic['total_attempts']; ?></td>
+                                    <td>
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <div class="progress-bar-container">
+                                                <div class="progress-bar" style="background: <?php echo $color; ?>; width: <?php echo $avg; ?>%;"></div>
+                                            </div>
+                                            <span style="font-weight: bold; color: <?php echo $color; ?>">%<?php echo $avg; ?></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span style="color: <?php echo $color; ?>; font-weight: bold;"><?php echo $status; ?></span>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Soru Bankası Raporları (Özet) -->
+            <div class="report-section">
+                <h2><i class="fas fa-book"></i> Soru Bankası Dağılımı</h2>
                 <table class="data-table">
                     <thead>
                         <tr>
@@ -434,39 +614,8 @@ $reportData = [
                                 <td><?php echo $count; ?></td>
                                 <td>
                                     <div style="display: flex; align-items: center; gap: 10px;">
-                                        <div style="flex: 1; height: 8px; background: #e0e0e0; border-radius: 4px; overflow: hidden; width: 100px;">
-                                            <div style="height: 100%; background: #3498db; width: <?php echo $percentage; ?>%;"></div>
-                                        </div>
-                                        <span>%<?php echo $percentage; ?></span>
-                                    </div>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Konu Analizi -->
-            <div class="report-section">
-                <h2><i class="fas fa-tags"></i> Konu Analizi</h2>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Konu / Kategori</th>
-                            <th>Soru Sayısı</th>
-                            <th>Oran</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($reportData['category_stats'] as $category => $count): ?>
-                            <?php $percentage = $totalQuestions > 0 ? round(($count / $totalQuestions) * 100, 1) : 0; ?>
-                            <tr>
-                                <td><?php echo htmlspecialchars($category); ?></td>
-                                <td><?php echo $count; ?></td>
-                                <td>
-                                    <div style="display: flex; align-items: center; gap: 10px;">
-                                        <div style="flex: 1; height: 8px; background: #e0e0e0; border-radius: 4px; overflow: hidden; width: 100px;">
-                                            <div style="height: 100%; background: #9b59b6; width: <?php echo $percentage; ?>%;"></div>
+                                        <div class="progress-bar-container">
+                                            <div class="progress-bar" style="background: #3498db; width: <?php echo $percentage; ?>%;"></div>
                                         </div>
                                         <span>%<?php echo $percentage; ?></span>
                                     </div>
