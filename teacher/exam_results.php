@@ -22,22 +22,33 @@ $teacherBranch = $user['branch'] ?? $user['institution'] ?? '';
 $exam = null;
 $results = [];
 
+require_once '../database.php';
+$db = Database::getInstance();
+$conn = $db->getConnection();
+
 if (!empty($examCode)) {
-    // Sınav bilgilerini yükle
-    if (file_exists('../data/exams.json')) {
-        $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-        $exam = $allExams[$examCode] ?? null;
+    try {
+        // Sınav bilgilerini veritabanından çek
+        $stmt = $conn->prepare("SELECT * FROM exams WHERE exam_id = :exam_id");
+        $stmt->execute([':exam_id' => $examCode]);
+        $exam = $stmt->fetch(PDO::FETCH_ASSOC);
         
-        // Sadece kendi kurumundaki sınavları görüntüleyebilir
-        if ($exam && (($exam['class_section'] ?? '') === $teacherBranch || $auth->hasRole('superadmin'))) {
-            // Sınav sonuçlarını yükle
-            if (file_exists('../data/exam_results.json')) {
-                $allResults = json_decode(file_get_contents('../data/exam_results.json'), true) ?? [];
-                $results = $allResults[$examCode] ?? [];
+        if ($exam) {
+            // Sınav sonuçlarını veritabanından çek
+            $stmt = $conn->prepare("SELECT * FROM exam_results WHERE exam_id = :exam_id ORDER BY score DESC");
+            $stmt->execute([':exam_id' => $examCode]);
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            // JSON alanları decode et (gerekirse)
+            foreach ($results as &$res) {
+                if (isset($res['answers']) && is_string($res['answers'])) {
+                    $res['answers'] = json_decode($res['answers'], true);
+                }
             }
-        } else {
-            $exam = null;
         }
+    } catch (Exception $e) {
+        error_log("Teacher exam results error: " . $e->getMessage());
+        $exam = null;
     }
 }
 

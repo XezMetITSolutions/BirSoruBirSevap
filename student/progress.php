@@ -28,75 +28,65 @@ $progressData = [
 $weeklyData = [];
 $subjectData = [];
 
-// Alıştırma sonuçlarını yükle
-$practiceResultsFile = '../data/practice_results.json';
-if (file_exists($practiceResultsFile)) {
-    $practiceResults = json_decode(file_get_contents($practiceResultsFile), true) ?? [];
-    
-    // Bu kullanıcının sonuçlarını filtrele
-    $userResults = array_filter($practiceResults, function($result) use ($user) {
-        $userId = $user['username'] ?? $user['name'] ?? 'unknown';
-        return ($result['student_id'] ?? '') === $userId;
-    });
+// Veritabanı bağlantısı
+require_once '../database.php';
+$db = Database::getInstance();
+$conn = $db->getConnection();
+
+// Alıştırma sonuçlarını veritabanından çek
+try {
+    $stmt = $conn->prepare("SELECT * FROM practice_results WHERE username = :username ORDER BY created_at ASC");
+    $stmt->execute([':username' => $user['username']]);
+    $practiceResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     // Haftalık verileri hesapla (alıştırma)
-    foreach ($userResults as $result) {
-        $week = date('W', strtotime($result['completed_at'] ?? 'now'));
+    foreach ($practiceResults as $result) {
+        $week = date('W', strtotime($result['created_at']));
         if (!isset($weeklyData[$week])) {
             $weeklyData[$week] = ['exams' => 0, 'practice' => 0, 'scores' => []];
         }
         $weeklyData[$week]['practice']++;
         $weeklyData[$week]['scores'][] = $result['score'] ?? 0;
-    }
-    
-    // Konu bazlı verileri hesapla (alıştırma)
-    foreach ($userResults as $result) {
-        // Kategori belirleme: önce kayıt kategorisi, yoksa/düzensizse ayrıntılardan türet
-        $category = $result['category'] ?? '';
-        if (empty($category) || in_array(mb_strtolower($category, 'UTF-8'), ['bilinmeyen', 'unknown', 'genel'])) {
-            $firstDetail = $result['detailed_results'][0] ?? null;
-            if ($firstDetail && isset($firstDetail['question']['category']) && !empty($firstDetail['question']['category'])) {
-                $category = $firstDetail['question']['category'];
-            } else {
-                $category = 'Genel';
-            }
-        }
+        
+        // Konu bazlı verileri hesapla
+        $category = $result['category'] ?? 'Genel';
+        if (empty($category)) $category = 'Genel';
+        
         if (!isset($subjectData[$category])) {
             $subjectData[$category] = ['scores' => [], 'count' => 0];
         }
         $subjectData[$category]['scores'][] = $result['score'] ?? 0;
         $subjectData[$category]['count']++;
     }
+} catch (Exception $e) {
+    error_log("Progress page practice error: " . $e->getMessage());
 }
 
-// Sınav sonuçlarını yükle ve entegre et
-$examResultsFile = '../data/exam_results.json';
-if (file_exists($examResultsFile)) {
-    $examResultsAll = json_decode(file_get_contents($examResultsFile), true) ?? [];
-    $studentId = $user['username'] ?? $user['name'] ?? 'unknown';
+// Sınav sonuçlarını veritabanından çek ve entegre et
+try {
+    $stmt = $conn->prepare("SELECT * FROM exam_results WHERE username = :username ORDER BY created_at ASC");
+    $stmt->execute([':username' => $user['username']]);
+    $examResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // exam_results.json yapısı: exam_code => [ { student_id, score, completed_at, ... } ]
-    foreach ($examResultsAll as $examCode => $entries) {
-        foreach ($entries as $entry) {
-            if (($entry['student_id'] ?? '') !== $studentId) { continue; }
-
-            // Haftalık ekle
-            $week = date('W', strtotime($entry['completed_at'] ?? 'now'));
-            if (!isset($weeklyData[$week])) {
-                $weeklyData[$week] = ['exams' => 0, 'practice' => 0, 'scores' => []];
-            }
-            $weeklyData[$week]['exams']++;
-            $weeklyData[$week]['scores'][] = (int)($entry['score'] ?? 0);
-
-            // Konu/başlık ekle: sınavlar için genel bir başlık kullan
-            $subject = 'Sınavlar';
-            if (!isset($subjectData[$subject])) {
-                $subjectData[$subject] = ['scores' => [], 'count' => 0, 'is_exam' => true];
-            }
-            $subjectData[$subject]['scores'][] = (int)($entry['score'] ?? 0);
-            $subjectData[$subject]['count']++;
+    foreach ($examResults as $entry) {
+        // Haftalık ekle
+        $week = date('W', strtotime($entry['created_at']));
+        if (!isset($weeklyData[$week])) {
+            $weeklyData[$week] = ['exams' => 0, 'practice' => 0, 'scores' => []];
         }
+        $weeklyData[$week]['exams']++;
+        $weeklyData[$week]['scores'][] = (int)($entry['score'] ?? 0);
+
+        // Konu/başlık ekle: sınavlar için genel bir başlık kullan
+        $subject = 'Sınavlar';
+        if (!isset($subjectData[$subject])) {
+            $subjectData[$subject] = ['scores' => [], 'count' => 0, 'is_exam' => true];
+        }
+        $subjectData[$subject]['scores'][] = (int)($entry['score'] ?? 0);
+        $subjectData[$subject]['count']++;
     }
+} catch (Exception $e) {
+    error_log("Progress page exam error: " . $e->getMessage());
 }
 
 // Haftalık verileri formatla (alıştırma + sınav birleştirilmiş)

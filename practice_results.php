@@ -117,8 +117,8 @@ try {
     $db = Database::getInstance();
     $conn = $db->getConnection();
     
-    $sql = "INSERT INTO practice_results (username, student_name, total_questions, correct_answers, wrong_answers, score, percentage, time_taken, created_at) 
-            VALUES (:username, :student_name, :total, :correct, :wrong, :score, :percentage, :duration, :created_at)";
+    $sql = "INSERT INTO practice_results (username, student_name, total_questions, correct_answers, wrong_answers, score, percentage, time_taken, created_at, bank, category, difficulty, answers, detailed_results) 
+            VALUES (:username, :student_name, :total, :correct, :wrong, :score, :percentage, :duration, :created_at, :bank, :category, :difficulty, :answers, :detailed_results)";
             
     $stmt = $conn->prepare($sql);
     $stmt->execute([
@@ -130,7 +130,12 @@ try {
         ':score' => $practiceResult['score'],
         ':percentage' => $practiceResult['score'], // Score ve percentage aynı
         ':duration' => $practiceResult['duration'],
-        ':created_at' => $practiceResult['completed_at']
+        ':created_at' => $practiceResult['completed_at'],
+        ':bank' => $practiceResult['bank'],
+        ':category' => $practiceResult['category'],
+        ':difficulty' => $practiceResult['difficulty'],
+        ':answers' => json_encode($practiceResult['answers'], JSON_UNESCAPED_UNICODE),
+        ':detailed_results' => json_encode($practiceResult['detailed_results'], JSON_UNESCAPED_UNICODE)
     ]);
 } catch (Exception $e) {
     error_log("Veritabanı kayıt hatası: " . $e->getMessage());

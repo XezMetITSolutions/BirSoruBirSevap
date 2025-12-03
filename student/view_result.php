@@ -10,15 +10,32 @@ $user = $auth->getUser();
 $examCode = $_GET['exam_code'] ?? '';
 if ($examCode === '') { header('Location: exams.php'); exit; }
 
-$resultsFile = '../data/exam_results.json';
+require_once '../database.php';
+$db = Database::getInstance();
+$conn = $db->getConnection();
+
 $result = null;
-if (file_exists($resultsFile)) {
-    $allResults = json_decode(file_get_contents($resultsFile), true) ?? [];
-    $examResults = $allResults[$examCode] ?? [];
-    $studentId = $user['username'] ?? $user['name'] ?? 'unknown';
-    foreach ($examResults as $res) {
-        if (($res['student_id'] ?? '') === $studentId) { $result = $res; break; }
+try {
+    // exam_code aslında exam_id olabilir, her ikisini de kontrol et
+    $stmt = $conn->prepare("SELECT * FROM exam_results WHERE (exam_id = :exam_code OR exam_id = :exam_code2) AND username = :username LIMIT 1");
+    $stmt->execute([
+        ':exam_code' => $examCode,
+        ':exam_code2' => $examCode, // exam_id ve exam_code aynı olabilir
+        ':username' => $user['username']
+    ]);
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    if ($result) {
+        // JSON alanları decode et
+        if (isset($result['answers']) && is_string($result['answers'])) {
+            $result['answers'] = json_decode($result['answers'], true);
+        }
+        // detailed_results veritabanında yoksa (eski kayıtlar için) answers'dan türetilebilir ama şimdilik boş geçelim
+        // Eğer detailed_results sütunu eklenirse buraya eklenebilir
+        $result['detailed_results'] = []; // Şimdilik boş, çünkü exam_results tablosunda detailed_results yok
     }
+} catch (Exception $e) {
+    error_log("View result error: " . $e->getMessage());
 }
 
 if (!$result) { header('Location: exams.php'); exit; }

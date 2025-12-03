@@ -37,10 +37,32 @@ $totalQuestions = count($questions);
 $totalBanks = count($banks);
 $totalCategories = array_sum(array_map('count', $categories));
 
+// Veritabanı bağlantısı
+require_once '../database.php';
+$db = Database::getInstance();
+$conn = $db->getConnection();
+
 // Sınav istatistikleri (gerçek veriler)
-$totalExams = 0; // Gerçek uygulamada veritabanından gelecek
+$totalExams = 0;
 $activeExams = 0;
 $completedExams = 0;
+
+try {
+    // Toplam sınav sayısı
+    $stmt = $conn->query("SELECT COUNT(*) FROM exams");
+    $totalExams = $stmt->fetchColumn();
+    
+    // Aktif sınav sayısı
+    $stmt = $conn->query("SELECT COUNT(*) FROM exams WHERE status = 'active'");
+    $activeExams = $stmt->fetchColumn();
+    
+    // Tamamlanan sınav sayısı (süresi dolmuş veya status=completed)
+    $stmt = $conn->query("SELECT COUNT(*) FROM exams WHERE status = 'completed' OR (expires_at IS NOT NULL AND expires_at < NOW())");
+    $completedExams = $stmt->fetchColumn();
+    
+} catch (Exception $e) {
+    error_log("Teacher dashboard stats error: " . $e->getMessage());
+}
 ?>
 <!DOCTYPE html>
 <html lang="tr">

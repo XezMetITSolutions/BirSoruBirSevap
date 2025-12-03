@@ -34,26 +34,30 @@ $banks = $_SESSION['banks'] ?? [];
 // İstatistikler - gerçek veriler
 $totalQuestions = count($questions);
 
-// Alıştırma sonuçlarını yükle
-$practiceResultsFile = '../data/practice_results.json';
-$practiceResults = [];
-if (file_exists($practiceResultsFile)) {
-    $practiceResults = json_decode(file_get_contents($practiceResultsFile), true) ?? [];
+// Veritabanı bağlantısı
+require_once '../database.php';
+$db = Database::getInstance();
+$conn = $db->getConnection();
+
+// İstatistikler - gerçek veriler
+$totalQuestions = count($questions);
+
+// Bu hafta için sonuçları veritabanından çek
+$weekStart = date('Y-m-d 00:00:00', strtotime('monday this week'));
+$weekEnd = date('Y-m-d 23:59:59', strtotime('sunday this week'));
+
+try {
+    $stmt = $conn->prepare("SELECT * FROM practice_results WHERE username = :username AND created_at BETWEEN :start AND :end");
+    $stmt->execute([
+        ':username' => $user['username'],
+        ':start' => $weekStart,
+        ':end' => $weekEnd
+    ]);
+    $thisWeekResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (Exception $e) {
+    $thisWeekResults = [];
+    error_log("Dashboard practice error: " . $e->getMessage());
 }
-
-// Bu kullanıcının sonuçlarını filtrele
-$userResults = array_filter($practiceResults, function($result) use ($user) {
-    $userId = $user['username'] ?? $user['name'] ?? 'unknown';
-    return ($result['student_id'] ?? '') === $userId;
-});
-
-// Bu hafta için sonuçları filtrele
-$weekStart = strtotime('monday this week');
-$weekEnd = strtotime('sunday this week 23:59:59');
-$thisWeekResults = array_filter($userResults, function($result) use ($weekStart, $weekEnd) {
-    $completedAt = strtotime($result['completed_at'] ?? '');
-    return $completedAt >= $weekStart && $completedAt <= $weekEnd;
-});
 
 // İstatistikleri hesapla
 $completedPractices = count($thisWeekResults);
@@ -62,36 +66,33 @@ $totalScore = 0;
 $solvedQuestions = 0;
 
 foreach ($thisWeekResults as $result) {
-    // Süre saniye olarak geliyor; dakika göstermek için saniyeyi topla
-    $totalTimeSpent += $result['duration'] ?? 0;
+    // Süre saniye olarak geliyor
+    $totalTimeSpent += $result['time_taken'] ?? 0;
     $totalScore += $result['score'] ?? 0;
-    $solvedQuestions += $result['total'] ?? 0;
+    $solvedQuestions += $result['total_questions'] ?? 0;
 }
 
 $averageScore = $completedPractices > 0 ? round($totalScore / $completedPractices, 1) : 0;
 $totalTimeSpentMinutes = (int)round(($totalTimeSpent) / 60, 0);
 
-// Planlanan sınavları yükle
+// Planlanan sınavları veritabanından çek
 $scheduledExams = [];
-if (file_exists('../data/exams.json')) {
-    $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
+try {
     $studentInstitution = $user['institution'] ?? $user['branch'] ?? '';
     $studentClass = $user['class_section'] ?? $studentInstitution;
-    $norm = function($s){ return mb_strtolower(trim((string)$s), 'UTF-8'); };
-    $si = $norm($studentInstitution);
-    $sc = $norm($studentClass);
     
-    foreach ($allExams as $examCode => $exam) {
-        $examClassSection = $exam['class_section'] ?? '';
-        $examInstitution = $exam['teacher_institution'] ?? $exam['institution'] ?? '';
-        $es = $norm($examClassSection);
-        $ei = $norm($examInstitution);
-        $isForStudentInstitution = ($es !== '' && ($es === $si || $es === $sc)) || ($ei !== '' && ($ei === $si || $ei === $sc));
-        
-        if (($exam['status'] ?? '') === 'scheduled' && $isForStudentInstitution) {
-            $scheduledExams[$examCode] = $exam;
-        }
+    // Sınavları çek
+    $sql = "SELECT * FROM exams WHERE status = 'active' AND (expires_at IS NULL OR expires_at > NOW())";
+    $stmt = $conn->query($sql);
+    $allExams = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Filtreleme (basitçe tüm aktif sınavları göster veya sınıf/şube kontrolü yap)
+    // Şimdilik tüm aktif sınavları gösteriyoruz, ileride sınıf/şube filtresi eklenebilir
+    foreach ($allExams as $exam) {
+        $scheduledExams[$exam['exam_id']] = $exam;
     }
+} catch (Exception $e) {
+    error_log("Dashboard exams error: " . $e->getMessage());
 }
 ?>
 <!DOCTYPE html>

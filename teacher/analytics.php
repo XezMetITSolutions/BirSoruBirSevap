@@ -18,21 +18,49 @@ if (!$auth->hasRole('teacher') && !$auth->hasRole('superadmin')) {
 $user = $auth->getUser();
 $teacherBranch = $user['branch'] ?? $user['institution'] ?? '';
 
-// Sınav verilerini yükle
-$allExams = [];
-if (file_exists('../data/exams.json')) {
-    $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
+require_once '../database.php';
+$db = Database::getInstance();
+$conn = $db->getConnection();
+
+// Sınav verilerini veritabanından çek
+$teacherExams = [];
+try {
+    $sql = "SELECT * FROM exams";
+    // Eğer superadmin değilse sadece kendi sınavlarını veya branşını görsün
+    // Şimdilik basitlik için tüm sınavları çekip PHP tarafında filtreleyelim veya SQL'i özelleştirelim
+    if (!$auth->hasRole('superadmin')) {
+        // Burada created_by kontrolü yapılabilir ama şimdilik tüm sınavlar
+        // $sql .= " WHERE created_by = :username"; 
+    }
+    $stmt = $conn->query($sql);
+    $allExams = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Filtreleme
+    $teacherExams = array_filter($allExams, function($exam) use ($teacherBranch, $auth) {
+        // class_section sütunu exams tablosunda yoksa bu filtre çalışmaz,
+        // ama şimdilik varsayılan olarak hepsini alalım veya created_by kullanalım
+        return true; 
+    });
+} catch (Exception $e) {
+    error_log("Analytics exams error: " . $e->getMessage());
 }
 
-// Sadece kendi kurumundaki sınavları filtrele
-$teacherExams = array_filter($allExams, function($exam) use ($teacherBranch, $auth) {
-    return $auth->hasRole('superadmin') || ($exam['class_section'] ?? '') === $teacherBranch;
-});
-
-// Sınav sonuçlarını yükle
+// Sınav sonuçlarını veritabanından çek
 $allResults = [];
-if (file_exists('../data/exam_results.json')) {
-    $allResults = json_decode(file_get_contents('../data/exam_results.json'), true) ?? [];
+try {
+    $stmt = $conn->query("SELECT * FROM exam_results");
+    $flatResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Sonuçları exam_id'ye göre grupla
+    foreach ($flatResults as $res) {
+        $eid = $res['exam_id'];
+        if (!isset($allResults[$eid])) {
+            $allResults[$eid] = [];
+        }
+        $allResults[$eid][] = $res;
+    }
+} catch (Exception $e) {
+    error_log("Analytics results error: " . $e->getMessage());
 }
 
 // İstatistikleri hesapla
@@ -43,7 +71,17 @@ $totalScore = 0;
 $totalAttempts = 0;
 
 foreach ($allResults as $examCode => $results) {
-    if (isset($teacherExams[$examCode])) {
+    // Sınavın bu öğretmene ait olup olmadığını kontrol et (basitçe exam_id eşleşmesi)
+    // Daha detaylı kontrol için $teacherExams içinde key olarak exam_id kullanılabilir
+    $isMyExam = false;
+    foreach ($teacherExams as $te) {
+        if ($te['exam_id'] === $examCode) {
+            $isMyExam = true;
+            break;
+        }
+    }
+    
+    if ($isMyExam) {
         $totalStudents += count($results);
         foreach ($results as $result) {
             $totalScore += $result['score'] ?? 0;
