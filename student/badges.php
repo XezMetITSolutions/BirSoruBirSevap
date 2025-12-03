@@ -20,13 +20,10 @@ $user = $auth->getUser();
 $badgesCore = new Badges();
 $badgeDefs = $badgesCore->loadBadges();
 
-// Kullanıcının mevcut rozetleri
-$userBadgesAll = [];
-if (file_exists('../data/user_badges.json')) {
-    $userBadgesAll = json_decode(file_get_contents('../data/user_badges.json'), true) ?? [];
-}
+// Kullanıcının mevcut rozetlerini veritabanından çek
 $userId = $user['username'] ?? $user['name'] ?? 'unknown';
-$myBadges = $userBadgesAll[$userId] ?? [];
+$allUserBadges = $badgesCore->loadUserBadges($userId);
+$myBadges = $allUserBadges[$userId] ?? [];
 
 // Ölçüt etiket ve açıklamaları (TR)
 $metricLabels = [
