@@ -52,7 +52,9 @@ try {
     foreach ($questions as $q) {
         try {
             // Verileri hazırla
-            $uid = $q['id'] ?? uniqid('mig_', true);
+            // ID çakışmasını önlemek için Banka + Kategori + ID kombinasyonunu kullan
+            $rawId = $q['id'] ?? uniqid();
+            $uid = md5($bank . '_' . $category . '_' . $rawId);
             $bank = $q['bank'] ?? 'Genel';
             $category = $q['category'] ?? 'Genel';
             $type = $q['type'] ?? 'mcq';
