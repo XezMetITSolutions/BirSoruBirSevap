@@ -25,12 +25,13 @@ $action = $_POST['action'] ?? '';
 if ($action === 'toggle_maintenance') {
     $maintenanceMode = $_POST['maintenance_mode'] === '1';
     try {
+        $lockFile = '../maintenance.lock';
         if ($maintenanceMode) {
-            file_put_contents('maintenance.lock', date('Y-m-d H:i:s'));
+            file_put_contents($lockFile, date('Y-m-d H:i:s'));
             $success = 'Bakım modu aktif edildi. Site ziyaretçilere kapatıldı.';
         } else {
-            if (file_exists('maintenance.lock')) {
-                unlink('maintenance.lock');
+            if (file_exists($lockFile)) {
+                unlink($lockFile);
             }
             $success = 'Bakım modu kapatıldı. Site tekrar erişilebilir.';
         }
@@ -69,19 +70,31 @@ if ($action === 'create_backup') {
             mkdir($backupDir, 0755, true);
         }
         
-        // Basit yedekleme simülasyonu (Gerçek yedekleme mantığı eklenebilir)
         $dateStr = date('Y-m-d_H-i-s');
         $filename = "backup_{$backupType}_{$dateStr}.json";
+        $data = [];
+
+        // Verileri çek
+        require_once '../database.php';
+        $db = Database::getInstance();
+
+        if ($backupType === 'full' || $backupType === 'users') {
+            $data['users'] = $db->getAllUsers();
+        }
+        if ($backupType === 'full' || $backupType === 'questions') {
+            // Soruları çek (JSON dosyalarından veya DB'den)
+            // Şimdilik DB'den soru bankalarını çekelim
+            $data['questions'] = []; // Implement question backup if needed
+        }
         
-        // Örnek içerik
         $content = [
             'type' => $backupType,
             'date' => date('c'),
             'creator' => $user['name'],
-            'data' => 'Backup data placeholder'
+            'data' => $data
         ];
         
-        file_put_contents($backupDir . '/' . $filename, json_encode($content, JSON_PRETTY_PRINT));
+        file_put_contents($backupDir . '/' . $filename, json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
         
         $success = 'Yedekleme başarıyla oluşturuldu: ' . $filename;
     } catch (Exception $e) {
@@ -99,7 +112,7 @@ if ($action === 'delete_backup') {
 }
 
 // Durumlar
-$maintenanceActive = file_exists('maintenance.lock');
+$maintenanceActive = file_exists('../maintenance.lock');
 $backups = [];
 if (is_dir('backups')) {
     $files = scandir('backups');

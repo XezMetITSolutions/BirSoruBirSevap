@@ -164,4 +164,80 @@ function is_safe_path($path) {
     }
     return true;
 }
+
+// Bakım Modu Kontrolü
+if (file_exists(__DIR__ . '/maintenance.lock')) {
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    
+    $userRole = $_SESSION['user']['role'] ?? '';
+    $scriptName = basename($_SERVER['PHP_SELF']);
+    
+    // Admin değilse ve login sayfası değilse engelle
+    if ($userRole !== 'admin' && $userRole !== 'superadmin' && $scriptName !== 'login.php' && $scriptName !== 'auth.php') {
+        // API isteği ise JSON dön
+        if ((!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') || 
+            (strpos($_SERVER['CONTENT_TYPE'] ?? '', 'application/json') !== false)) {
+            header('HTTP/1.1 503 Service Unavailable');
+            header('Content-Type: application/json');
+            echo json_encode(['error' => 'maintenance', 'message' => 'Sistem bakım modunda.']);
+            exit;
+        }
+        
+        // HTML sayfası göster
+        header('HTTP/1.1 503 Service Unavailable');
+        ?>
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Bakım Modu - Bir Soru Bir Sevap</title>
+            <style>
+                body {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    background: linear-gradient(135deg, #068567 0%, #055a4a 100%);
+                    height: 100vh;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #333;
+                }
+                .container {
+                    background: rgba(255, 255, 255, 0.95);
+                    padding: 40px;
+                    border-radius: 20px;
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+                    text-align: center;
+                    max-width: 500px;
+                    width: 90%;
+                }
+                h1 { color: #068567; margin-bottom: 15px; }
+                p { color: #555; line-height: 1.6; margin-bottom: 25px; }
+                .btn {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background: #3498db;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 25px;
+                    transition: background 0.3s;
+                }
+                .btn:hover { background: #2980b9; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>🛠️ Bakım Modu</h1>
+                <p>Sistemimizde şu anda bakım çalışması yapılmaktadır.<br>Lütfen daha sonra tekrar ziyaret ediniz.</p>
+                <a href="login.php" class="btn">Yönetici Girişi</a>
+            </div>
+        </body>
+        </html>
+        <?php
+        exit;
+    }
+}
 ?>
