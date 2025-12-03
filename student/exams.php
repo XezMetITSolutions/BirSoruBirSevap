@@ -23,37 +23,27 @@ $exams = $examManager->getExamsForStudent($user['username']);
 
 // Planlanan sınavları yükle (ayrı olarak)
 $scheduledExams = [];
-
-// Kurum bazlı aktif sınavları yükle (exams.json üzerinden)
-$studentInstitution = $user['institution'] ?? $user['branch'] ?? '';
-$studentClass = $user['class_section'] ?? $studentInstitution;
-$norm = function($s){ return mb_strtolower(trim((string)$s), 'UTF-8'); };
-$si = $norm($studentInstitution);
-$sc = $norm($studentClass);
 $activeExams = [];
 
-if (file_exists('../data/exams.json')) {
-    $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-    foreach ($allExams as $examCode => $exam) {
-        $examClassSection = $exam['class_section'] ?? '';
-        $examInstitution = $exam['teacher_institution'] ?? $exam['institution'] ?? '';
-
-        $isActive = strtolower((string)($exam['status'] ?? '')) === 'active';
-        $es = $norm($examClassSection);
-        $ei = $norm($examInstitution);
-        $isForStudentInstitution = ($es !== '' && ($es === $si || $es === $sc)) || ($ei !== '' && ($ei === $si || $ei === $sc));
-
-        if ($isActive && $isForStudentInstitution) {
-            // Sınav süresi kontrolü
-            $startTime = strtotime($exam['start_date'] ?? $exam['scheduled_start'] ?? '');
-            $duration = (int)($exam['duration'] ?? 30); // dakika
-            $endTime = $startTime + ($duration * 60); // saniye
-            $currentTime = time();
-            
-            if ($currentTime <= $endTime) {
-                $activeExams[$examCode] = $exam;
-            }
+foreach ($exams as $examCode => $exam) {
+    $isActive = strtolower((string)($exam['status'] ?? '')) === 'active';
+    $isScheduled = strtolower((string)($exam['status'] ?? '')) === 'scheduled';
+    
+    if ($isActive) {
+        // Sınav süresi kontrolü
+        $startTime = strtotime($exam['start_date'] ?? $exam['scheduled_start'] ?? '');
+        $duration = (int)($exam['duration'] ?? 30); // dakika
+        $endTime = $startTime + ($duration * 60); // saniye
+        $currentTime = time();
+        
+        // Eğer start_date null ise (hemen başla), endTime kontrolü yapma veya start_time'ı created_at yap
+        if (empty($exam['start_date']) && empty($exam['scheduled_start'])) {
+             $activeExams[$examCode] = $exam;
+        } elseif ($currentTime <= $endTime) {
+            $activeExams[$examCode] = $exam;
         }
+    } elseif ($isScheduled) {
+        $scheduledExams[$examCode] = $exam;
     }
 }
 
@@ -65,43 +55,6 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
         'codes' => array_keys($activeExams),
     ]);
     exit;
-}
-
-// Kurumdaki aktif sınavları (data/exams.json) filtrele
-$studentInstitution = $user['institution'] ?? $user['branch'] ?? '';
-$studentClass = $user['class_section'] ?? $studentInstitution;
-$norm = function($s){ return mb_strtolower(trim((string)$s), 'UTF-8'); };
-$si = $norm($studentInstitution);
-$sc = $norm($studentClass);
-$activeExams = [];
-
-if (file_exists('../data/exams.json')) {
-    $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-    foreach ($allExams as $examCode => $exam) {
-        $examClassSection = $exam['class_section'] ?? '';
-        $examInstitution = $exam['teacher_institution'] ?? $exam['institution'] ?? '';
-        $isActive = strtolower((string)($exam['status'] ?? '')) === 'active';
-        $es = $norm($examClassSection);
-        $ei = $norm($examInstitution);
-        $isForStudentInstitution = ($es !== '' && ($es === $si || $es === $sc)) ||
-                                   ($ei !== '' && ($ei === $si || $ei === $sc));
-        if ($isActive && $isForStudentInstitution) {
-            // Sınav süresi kontrolü
-            $startTime = strtotime($exam['start_date'] ?? $exam['scheduled_start'] ?? '');
-            $duration = (int)($exam['duration'] ?? 30); // dakika
-            $endTime = $startTime + ($duration * 60); // saniye
-            $currentTime = time();
-            
-            if ($currentTime <= $endTime) {
-                $activeExams[$examCode] = $exam;
-            }
-        }
-        
-        // Planlanan sınavları ayrı olarak yükle
-        if (($exam['status'] ?? '') === 'scheduled' && $isForStudentInstitution) {
-            $scheduledExams[$examCode] = $exam;
-        }
-    }
 }
 
 // AJAX: Aktif sınavlar için hafif durum dönüşü
@@ -655,44 +608,23 @@ function formatDuration($minutes) {
         
 
         <!-- Süresi Dolmuş Sınavlar -->
-        <?php 
         $expiredExams = [];
-        if (file_exists('../data/exams.json')) {
-            $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-            foreach ($allExams as $examCode => $exam) {
-                $examClassSection = $exam['class_section'] ?? '';
-                $examInstitution = $exam['teacher_institution'] ?? $exam['institution'] ?? '';
-                $isActive = strtolower((string)($exam['status'] ?? '')) === 'active';
-                $es = $norm($examClassSection);
-                $ei = $norm($examInstitution);
-                $isForStudentInstitution = ($es !== '' && ($es === $si || $es === $sc)) || ($ei !== '' && ($ei === $si || $ei === $sc));
+        foreach ($exams as $examCode => $exam) {
+            $isActive = strtolower((string)($exam['status'] ?? '')) === 'active';
+            
+            if ($isActive) {
+                $startTime = strtotime($exam['start_date'] ?? $exam['scheduled_start'] ?? '');
+                $duration = (int)($exam['duration'] ?? 30);
+                $endTime = $startTime + ($duration * 60);
+                $currentTime = time();
                 
-                if ($isActive && $isForStudentInstitution) {
-                    $startTime = strtotime($exam['start_date'] ?? $exam['scheduled_start'] ?? '');
-                    $duration = (int)($exam['duration'] ?? 30);
-                    $endTime = $startTime + ($duration * 60);
-                    $currentTime = time();
+                if ($currentTime > $endTime) {
+                    // Öğrenci bu sınavı almış mı kontrol et
+                    $examResults = $examManager->getExamResults($exam['id'], $user['username']);
                     
-                    if ($currentTime > $endTime) {
-                        // Öğrenci bu sınavı almış mı kontrol et
-                        $studentId = $user['username'] ?? $user['name'] ?? 'unknown';
-                        $hasResult = false;
-                        
-                        if (file_exists('../data/exam_results.json')) {
-                            $allResults = json_decode(file_get_contents('../data/exam_results.json'), true) ?? [];
-                            $examResults = $allResults[$examCode] ?? [];
-                            foreach ($examResults as $res) {
-                                if (($res['student_id'] ?? '') === $studentId) {
-                                    $hasResult = true;
-                                    break;
-                                }
-                            }
-                        }
-                        
-                        // Sadece öğrenci sınava girmişse göster
-                        if ($hasResult) {
-                            $expiredExams[$examCode] = $exam;
-                        }
+                    // Sadece öğrenci sınava girmişse göster
+                    if (!empty($examResults)) {
+                        $expiredExams[$examCode] = $exam;
                     }
                 }
             }
@@ -834,16 +766,8 @@ function formatDuration($minutes) {
                                 </div>
                                 <div class="exam-actions">
                                     <?php
-                                    $resultsFile = '../data/exam_results.json';
-                                    $studentId = $user['username'] ?? $user['name'] ?? 'unknown';
-                                    $hasResult = false;
-                                    if (file_exists($resultsFile)) {
-                                        $allResults = json_decode(file_get_contents($resultsFile), true) ?? [];
-                                        $examResults = $allResults[$examCode] ?? [];
-                                        foreach ($examResults as $res) {
-                                            if (($res['student_id'] ?? '') === $studentId) { $hasResult = true; break; }
-                                        }
-                                    }
+                                    $examResults = $examManager->getExamResults($exam['id'], $user['username']);
+                                    $hasResult = !empty($examResults);
                                     ?>
                                     <?php if ($hasResult): ?>
                                         <a href="view_result.php?exam_code=<?php echo htmlspecialchars($examCode); ?>" class="btn btn-secondary" id="btnViewResult2">📊 Sonucu Gör</a>

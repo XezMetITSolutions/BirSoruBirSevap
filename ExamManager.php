@@ -351,16 +351,79 @@ class ExamManager {
      * Öğrenci için sınavları getir
      */
     public function getExamsForStudent($studentUsername) {
-        // Şimdilik boş array döndür, gerçek uygulamada veritabanından gelecek
-        return [];
+        require_once 'database.php';
+        $db = Database::getInstance();
+        $conn = $db->getConnection();
+        
+        // Öğrenci bilgilerini al
+        $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt->execute([$studentUsername]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if (!$user) return [];
+        
+        $studentInstitution = $user['branch'] ?? $user['institution'] ?? '';
+        $studentClass = $user['class_section'] ?? $studentInstitution;
+        
+        // Tüm sınavları getir (aktif, planlanmış ve süresi dolmuş olanları görebilmek için)
+        $stmt = $conn->prepare("SELECT * FROM exams WHERE status != 'inactive'");
+        $stmt->execute();
+        $allExams = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        $filteredExams = [];
+        $norm = function($s){ return mb_strtolower(trim((string)$s), 'UTF-8'); };
+        $si = $norm($studentInstitution);
+        $sc = $norm($studentClass);
+        
+        foreach ($allExams as $exam) {
+            // JSON alanları decode et
+            if (isset($exam['questions']) && is_string($exam['questions'])) {
+                $exam['questions'] = json_decode($exam['questions'], true) ?? [];
+            }
+            if (isset($exam['categories']) && is_string($exam['categories'])) {
+                $exam['categories'] = json_decode($exam['categories'], true) ?? [];
+            }
+            
+            // Kurum kontrolü
+            $examClassSection = $exam['class_section'] ?? '';
+            $examInstitution = $exam['teacher_institution'] ?? '';
+            
+            $es = $norm($examClassSection);
+            $ei = $norm($examInstitution);
+            
+            $isForStudentInstitution = ($es !== '' && ($es === $si || $es === $sc)) ||
+                                       ($ei !== '' && ($ei === $si || $ei === $sc));
+            
+            if ($isForStudentInstitution) {
+                // ID düzeltmesi (exams.json'da key examCode idi, DB'de exam_id kolonu)
+                $exam['id'] = $exam['exam_id']; 
+                $filteredExams[$exam['exam_id']] = $exam;
+            }
+        }
+        
+        return $filteredExams;
     }
 
     /**
      * Sınav sonuçlarını getir
      */
     public function getExamResults($examId, $studentUsername) {
-        // Şimdilik boş array döndür, gerçek uygulamada veritabanından gelecek
-        return [];
+        require_once 'database.php';
+        $db = Database::getInstance();
+        $conn = $db->getConnection();
+        
+        $stmt = $conn->prepare("SELECT * FROM exam_results WHERE exam_id = ? AND username = ? ORDER BY created_at DESC");
+        $stmt->execute([$examId, $studentUsername]);
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        // JSON alanları decode et
+        foreach ($results as &$result) {
+            if (isset($result['answers']) && is_string($result['answers'])) {
+                $result['answers'] = json_decode($result['answers'], true) ?? [];
+            }
+        }
+        
+        return $results;
     }
 }
 ?>

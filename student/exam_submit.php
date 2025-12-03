@@ -92,21 +92,6 @@ $examResult = [
     'detailed_results' => $results
 ];
 
-// Sonuçları dosyaya kaydet (Yedek olarak kalsın)
-$resultsFile = '../data/exam_results.json';
-$allResults = [];
-if (file_exists($resultsFile)) {
-    $allResults = json_decode(file_get_contents($resultsFile), true) ?? [];
-}
-
-// Sınav koduna göre grupla
-if (!isset($allResults[$examCode])) {
-    $allResults[$examCode] = [];
-}
-
-$allResults[$examCode][] = $examResult;
-file_put_contents($resultsFile, json_encode($allResults, JSON_PRETTY_PRINT));
-
 // Veritabanına kaydet
 require_once '../database.php';
 try {

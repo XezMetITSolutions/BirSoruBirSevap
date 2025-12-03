@@ -193,20 +193,50 @@ if ($_POST) {
             'scheduled_start' => $scheduleType === 'scheduled' ? $startDate . ' ' . $startTime : null
         ];
         
-        // Sınavları yükle
-        $exams = [];
-        if (file_exists('../data/exams.json')) {
-            $exams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-        }
-        
-        // Yeni sınavı ekle
-        $exams[$examCode] = $examData;
-        
-        // Dosyaya kaydet
-        if (file_put_contents('../data/exams.json', json_encode($exams, JSON_PRETTY_PRINT))) {
-            $examCreated = true;
-        } else {
-            $errorMessage = 'Sınav oluşturulurken hata oluştu.';
+        // Veritabanına kaydet
+        try {
+            $db = Database::getInstance();
+            $conn = $db->getConnection();
+            
+            $sql = "INSERT INTO exams (
+                        exam_id, created_by, title, description, teacher_name, teacher_institution, 
+                        class_section, duration, question_count, questions, categories, status, 
+                        schedule_type, start_date, end_date, scheduled_start, created_at
+                    ) VALUES (
+                        :exam_id, :created_by, :title, :description, :teacher_name, :teacher_institution,
+                        :class_section, :duration, :question_count, :questions, :categories, :status,
+                        :schedule_type, :start_date, :end_date, :scheduled_start, :created_at
+                    )";
+            
+            $stmt = $conn->prepare($sql);
+            $result = $stmt->execute([
+                ':exam_id' => $examCode,
+                ':created_by' => $user['username'],
+                ':title' => $examTitle,
+                ':description' => $examDescription,
+                ':teacher_name' => $user['name'],
+                ':teacher_institution' => $teacherSection,
+                ':class_section' => $user['institution'] ?? $user['branch'] ?? $teacherSection,
+                ':duration' => $examDuration,
+                ':question_count' => $questionCount,
+                ':questions' => json_encode($selectedQuestions, JSON_UNESCAPED_UNICODE),
+                ':categories' => json_encode($questionType === 'custom' ? ['Özel|Özel Sorular'] : $selectedCategories, JSON_UNESCAPED_UNICODE),
+                ':status' => $scheduleType === 'scheduled' ? 'scheduled' : 'active',
+                ':schedule_type' => $scheduleType,
+                ':start_date' => null, // Opsiyonel, şu an formda yok ama şemada var
+                ':end_date' => null,   // Opsiyonel
+                ':scheduled_start' => $scheduleType === 'scheduled' ? $startDate . ' ' . $startTime : null,
+                ':created_at' => date('Y-m-d H:i:s')
+            ]);
+            
+            if ($result) {
+                $examCreated = true;
+            } else {
+                $errorMessage = 'Sınav veritabanına kaydedilirken hata oluştu.';
+            }
+        } catch (Exception $e) {
+            $errorMessage = 'Veritabanı hatası: ' . $e->getMessage();
+            error_log($errorMessage);
         }
     }
 }

@@ -111,16 +111,6 @@ $practiceResult = [
     'detailed_results' => $detailedResults
 ];
 
-// Sonuçları dosyaya kaydet (Yedek olarak kalsın)
-$resultsFile = 'data/practice_results.json';
-$allResults = [];
-if (file_exists($resultsFile)) {
-    $allResults = json_decode(file_get_contents($resultsFile), true) ?? [];
-}
-
-$allResults[] = $practiceResult;
-file_put_contents($resultsFile, json_encode($allResults, JSON_PRETTY_PRINT));
-
 // Veritabanına kaydet
 require_once 'database.php';
 try {

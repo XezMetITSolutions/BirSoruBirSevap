@@ -164,5 +164,34 @@ INSERT INTO `users` (`username`, `password`, `role`, `full_name`, `branch`, `cla
 
 -- Şifre: "password" (değiştirin!)
 
+-- --------------------------------------------------------
+
+--
+-- Tablo: questions
+-- Soru bankası
+--
+
+CREATE TABLE IF NOT EXISTS `questions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `question_uid` varchar(100) NOT NULL,
+  `bank` varchar(100) DEFAULT 'Genel',
+  `category` varchar(100) DEFAULT 'Genel',
+  `type` enum('mcq','short_answer','true_false') DEFAULT 'mcq',
+  `question_text` text NOT NULL,
+  `options` longtext, -- JSON
+  `answer` longtext, -- JSON
+  `explanation` text,
+  `difficulty` int(11) DEFAULT 1,
+  `points` int(11) DEFAULT 1,
+  `media` longtext, -- JSON
+  `tags` longtext, -- JSON
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `question_uid` (`question_uid`),
+  KEY `idx_bank` (`bank`),
+  KEY `idx_category` (`category`),
+  KEY `idx_difficulty` (`difficulty`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 COMMIT;
 

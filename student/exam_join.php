@@ -24,14 +24,24 @@ if ($_POST && isset($_POST['exam_code'])) {
         $errorMessage = 'Lütfen sınav kodunu girin.';
     } else {
         // Sınavları yükle
-        $exams = [];
-        if (file_exists('../data/exams.json')) {
-            $exams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-        }
+        // Sınavı veritabanından çek
+        require_once '../database.php';
+        $db = Database::getInstance();
+        $conn = $db->getConnection();
         
-        if (isset($exams[$examCode])) {
-            $exam = $exams[$examCode];
-            
+        $stmt = $conn->prepare("SELECT * FROM exams WHERE exam_id = ?");
+        $stmt->execute([$examCode]);
+        $exam = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if ($exam) {
+            // JSON alanları decode et
+            if (isset($exam['questions']) && is_string($exam['questions'])) {
+                $exam['questions'] = json_decode($exam['questions'], true) ?? [];
+            }
+            if (isset($exam['categories']) && is_string($exam['categories'])) {
+                $exam['categories'] = json_decode($exam['categories'], true) ?? [];
+            }
+
             // Sınav aktif mi kontrol et
             if (($exam['status'] ?? '') !== 'active') {
                 $errorMessage = 'Bu sınav artık aktif değil.';
@@ -42,28 +52,23 @@ if ($_POST && isset($_POST['exam_code'])) {
                 $endTime = $startTime + ($duration * 60); // saniye
                 $currentTime = time();
                 
-                if ($currentTime > $endTime) {
+                // start_date null ise (hemen başla) kontrol etme
+                if (!empty($exam['start_date']) && $currentTime > $endTime) {
                     $errorMessage = 'Bu sınavın süresi dolmuş. Sınav ' . date('d.m.Y H:i', $endTime) . ' tarihinde sona ermiş.';
                 } else {
                     // Önceden bu sınavı tamamlamış mı?
-                    $resultsFile = '../data/exam_results.json';
-                    $studentId = $user['username'] ?? $user['name'] ?? 'unknown';
-                    if (file_exists($resultsFile)) {
-                        $allResults = json_decode(file_get_contents($resultsFile), true) ?? [];
-                        $examResults = $allResults[$examCode] ?? [];
-                        foreach ($examResults as $res) {
-                            if (($res['student_id'] ?? '') === $studentId) {
-                                header('Location: view_result.php?exam_code=' . urlencode($examCode));
-                                exit;
-                            }
-                        }
+                    $stmtResult = $conn->prepare("SELECT * FROM exam_results WHERE exam_id = ? AND username = ?");
+                    $stmtResult->execute([$examCode, $user['username']]);
+                    if ($stmtResult->rowCount() > 0) {
+                        header('Location: view_result.php?exam_code=' . urlencode($examCode));
+                        exit;
                     }
                     
                     // Öğrencinin kurumu kontrol et (normalize ederek eşleştir)
                 $studentInstitution = $user['institution'] ?? $user['branch'] ?? 'IQRA Innsbruck';
                 $studentClass = $user['class_section'] ?? $studentInstitution;
                 $examSection = $exam['class_section'] ?? '';
-                $examInstitution = $exam['teacher_institution'] ?? $exam['institution'] ?? '';
+                $examInstitution = $exam['teacher_institution'] ?? '';
 
                 $norm = function($s){ return mb_strtolower(trim((string)$s), 'UTF-8'); };
                 $si = $norm($studentInstitution);
@@ -95,32 +100,14 @@ if ($_POST && isset($_POST['exam_code'])) {
 }
 
 // Öğrencinin kurumundaki aktif sınavları getir
-$studentInstitution = $user['institution'] ?? $user['branch'] ?? 'IQRA Innsbruck';
-$studentClass = $user['class_section'] ?? $studentInstitution;
-$norm = function($s){ return mb_strtolower(trim((string)$s), 'UTF-8'); };
-$si = $norm($studentInstitution);
-$sc = $norm($studentClass);
-$activeExams = [];
+require_once '../ExamManager.php';
+$examManager = new ExamManager();
+$activeExams = $examManager->getExamsForStudent($user['username']);
 
-if (file_exists('../data/exams.json')) {
-    $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-    
-    foreach ($allExams as $examCode => $exam) {
-        $examClassSection = $exam['class_section'] ?? '';
-        $examInstitution = $exam['teacher_institution'] ?? $exam['institution'] ?? '';
-
-        // Sadece aktif sınavları ve öğrencinin kurumundaki sınavları al (normalize ederek)
-        $isActive = strtolower((string)($exam['status'] ?? '')) === 'active';
-        $es = $norm($examClassSection);
-        $ei = $norm($examInstitution);
-        $isForStudentInstitution = ($es !== '' && ($es === $si || $es === $sc)) ||
-                                   ($ei !== '' && ($ei === $si || $ei === $sc));
-        
-        if ($isActive && $isForStudentInstitution) {
-            $activeExams[$examCode] = $exam;
-        }
-    }
-}
+// Sadece aktif olanları filtrele (ExamManager scheduled ve expired da getirebilir)
+$activeExams = array_filter($activeExams, function($exam) {
+    return ($exam['status'] ?? '') === 'active';
+});
 
 // AJAX: Aktif sınavlar için hafif durum döndür (sayfayı yeniden parse etmeyelim)
 if (isset($_GET['ajax']) && $_GET['ajax'] === '1') {
