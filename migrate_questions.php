@@ -21,7 +21,8 @@ try {
     
     // QuestionLoader ile soruları yükle
     $loader = new QuestionLoader();
-    $loader->loadQuestions();
+    // Veritabanından değil, doğrudan dosyalardan yükle (Göç işlemi için)
+    $loader->loadFromFiles();
     $questions = $loader->getQuestions();
     
     echo "<p>Toplam " . count($questions) . " soru bulundu.</p>";
