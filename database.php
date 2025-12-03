@@ -3,6 +3,8 @@
  * Veritabanı Bağlantı Dosyası
  */
 
+require_once 'config.php';
+
 class Database {
     private static $instance = null;
     private $connection;

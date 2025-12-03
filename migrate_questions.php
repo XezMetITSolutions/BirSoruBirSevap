@@ -4,6 +4,7 @@
  * JSON dosyalarındaki soruları veritabanına aktarır.
  */
 
+require_once 'config.php';
 require_once 'database.php';
 require_once 'QuestionLoader.php';
 
