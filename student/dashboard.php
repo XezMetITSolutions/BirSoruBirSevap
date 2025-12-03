@@ -940,12 +940,9 @@ try {
             // Rozetlerim
             require_once '../Badges.php';
             $badgesCore = new Badges();
-            $userBadgesAll = [];
-            if (file_exists('../data/user_badges.json')) {
-                $userBadgesAll = json_decode(file_get_contents('../data/user_badges.json'), true) ?? [];
-            }
             $userId = $user['username'] ?? $user['name'] ?? 'unknown';
-            $myBadges = $userBadgesAll[$userId] ?? [];
+            $allUserBadges = $badgesCore->loadUserBadges($userId);
+            $myBadges = $allUserBadges[$userId] ?? [];
             $badgeDefs = $badgesCore->loadBadges();
             // defs'i key ile eşle
             $defsByKey = [];
