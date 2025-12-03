@@ -5,8 +5,11 @@
 
 require_once '../auth.php';
 require_once '../config.php';
+require_once '../database.php';
 
 $auth = Auth::getInstance();
+$db = Database::getInstance();
+$conn = $db->getConnection();
 
 // Öğretmen kontrolü (superadmin de erişebilir)
 if (!$auth->hasRole('teacher') && !$auth->hasRole('superadmin')) {
@@ -24,24 +27,18 @@ if ($_POST['action'] ?? '' === 'change_status') {
     $newStatus = $_POST['new_status'] ?? '';
     
     if (!empty($examId) && !empty($newStatus)) {
-        // Mevcut sınavları yükle
-        $allExams = [];
-        if (file_exists('../data/exams.json')) {
-            $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-        }
-        
-        if (isset($allExams[$examId])) {
-            $allExams[$examId]['status'] = $newStatus;
-            $allExams[$examId]['updated_at'] = date('Y-m-d H:i:s');
+        try {
+            $sql = "UPDATE exams SET status = :status WHERE exam_id = :id";
+            $stmt = $conn->prepare($sql);
+            $result = $stmt->execute([':status' => $newStatus, ':id' => $examId]);
             
-            // Dosyaya kaydet
-            if (file_put_contents('../data/exams.json', json_encode($allExams, JSON_PRETTY_PRINT))) {
+            if ($result && $stmt->rowCount() > 0) {
                 $success = 'Sınav durumu başarıyla güncellendi.';
             } else {
-                $error = 'Sınav durumu güncellenirken hata oluştu.';
+                $error = 'Sınav durumu güncellenemedi veya değişiklik yapılmadı.';
             }
-        } else {
-            $error = 'Sınav bulunamadı. Lütfen sayfayı yenileyin ve tekrar deneyin.';
+        } catch (Exception $e) {
+            $error = 'Veritabanı hatası: ' . $e->getMessage();
         }
     } else {
         $error = 'Sınav ID veya durum bilgisi eksik.';
@@ -52,19 +49,18 @@ if ($_POST['action'] ?? '' === 'change_status') {
 elseif (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['exam_id'])) {
     $examId = trim($_GET['exam_id']);
     if ($examId !== '') {
-        $allExams = [];
-        if (file_exists('../data/exams.json')) {
-            $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-        }
-        if (isset($allExams[$examId])) {
-            unset($allExams[$examId]);
-            if (file_put_contents('../data/exams.json', json_encode($allExams, JSON_PRETTY_PRINT))) {
+        try {
+            $sql = "DELETE FROM exams WHERE exam_id = :id";
+            $stmt = $conn->prepare($sql);
+            $result = $stmt->execute([':id' => $examId]);
+            
+            if ($result && $stmt->rowCount() > 0) {
                 $success = 'Sınav başarıyla silindi.';
             } else {
-                $error = 'Sınav silinirken hata oluştu.';
+                $error = 'Sınav silinemedi veya bulunamadı.';
             }
-        } else {
-            $error = 'Sınav bulunamadı. Lütfen sayfayı yenileyin ve tekrar deneyin.';
+        } catch (Exception $e) {
+            $error = 'Veritabanı hatası: ' . $e->getMessage();
         }
     } else {
         $error = 'Sınav ID eksik.';
@@ -75,24 +71,18 @@ elseif (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['e
 elseif ($_POST['action'] ?? '' === 'delete_exam') {
     $examId = $_POST['exam_id'] ?? '';
     if (!empty($examId)) {
-        // Mevcut sınavları yükle
-        $allExams = [];
-        if (file_exists('../data/exams.json')) {
-            $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-        }
-        
-        // Sınavı sil
-        if (isset($allExams[$examId])) {
-            unset($allExams[$examId]);
+        try {
+            $sql = "DELETE FROM exams WHERE exam_id = :id";
+            $stmt = $conn->prepare($sql);
+            $result = $stmt->execute([':id' => $examId]);
             
-            // Dosyaya kaydet
-            if (file_put_contents('../data/exams.json', json_encode($allExams, JSON_PRETTY_PRINT))) {
+            if ($result && $stmt->rowCount() > 0) {
                 $success = 'Sınav başarıyla silindi.';
             } else {
-                $error = 'Sınav silinirken hata oluştu.';
+                $error = 'Sınav silinemedi veya bulunamadı.';
             }
-        } else {
-            $error = 'Sınav bulunamadı. Lütfen sayfayı yenileyin ve tekrar deneyin.';
+        } catch (Exception $e) {
+            $error = 'Veritabanı hatası: ' . $e->getMessage();
         }
     } else {
         $error = 'Sınav ID eksik.';
@@ -102,15 +92,22 @@ elseif ($_POST['action'] ?? '' === 'delete_exam') {
 // Gerçek sınavları yükle
 $exams = [];
 
-if (file_exists('../data/exams.json')) {
-    $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-    
-    // Sadece bu öğretmenin kurumundaki sınavları al
+try {
     $user = $auth->getUser();
     $teacherBranch = $user['branch'] ?? $user['institution'] ?? '';
     $teacherClassSection = $user['class_section'] ?? $teacherBranch;
     
-    foreach ($allExams as $examCode => $exam) {
+    // Sınavları ve istatistikleri çek
+    $sql = "SELECT e.*, 
+            (SELECT COUNT(*) FROM exam_results r WHERE r.exam_id = e.exam_id) as participants,
+            (SELECT AVG(score) FROM exam_results r WHERE r.exam_id = e.exam_id) as average_score
+            FROM exams e 
+            ORDER BY e.created_at DESC";
+            
+    $stmt = $conn->query($sql);
+    $allExams = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    foreach ($allExams as $exam) {
         // Sınavın class_section'ını kontrol et
         $examClassSection = $exam['class_section'] ?? '';
         
@@ -121,36 +118,22 @@ if (file_exists('../data/exams.json')) {
                    ($examClassSection === $user['institution']);
         
         if ($canView) {
-            // Sınav sonuçlarını hesapla
-            $participants = 0;
-            $totalScore = 0;
-            $averageScore = 0;
-            
-            if (file_exists('../data/exam_results.json')) {
-                $allResults = json_decode(file_get_contents('../data/exam_results.json'), true) ?? [];
-                $examResults = $allResults[$examCode] ?? [];
-                $participants = count($examResults);
-                
-                if ($participants > 0) {
-                    $totalScore = array_sum(array_column($examResults, 'score'));
-                    $averageScore = round($totalScore / $participants, 1);
-                }
-            }
-            
             $exams[] = [
-                'id' => $examCode,
+                'id' => $exam['exam_id'],
                 'name' => $exam['title'] ?? 'Sınav',
                 'description' => $exam['description'] ?? '',
-                'question_count' => count($exam['questions'] ?? []),
+                'question_count' => $exam['question_count'] ?? 0,
                 'time_limit' => $exam['duration'] ?? 30,
                 'negative_marking' => $exam['negative_marking'] ?? 0,
                 'created_at' => $exam['created_at'] ?? date('Y-m-d'),
                 'status' => $exam['status'] ?? 'draft',
-                'participants' => $participants,
-                'average_score' => $averageScore
+                'participants' => $exam['participants'] ?? 0,
+                'average_score' => round($exam['average_score'] ?? 0, 1)
             ];
         }
     }
+} catch (Exception $e) {
+    $error = "Sınavlar yüklenirken hata oluştu: " . $e->getMessage();
 }
 ?>
 
