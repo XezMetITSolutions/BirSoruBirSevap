@@ -5,8 +5,12 @@
 
 require_once '../auth.php';
 require_once '../config.php';
+require_once '../database.php';
+require_once '../QuestionLoader.php'; // QuestionLoader sınıfını dahil et
 
 $auth = Auth::getInstance();
+$db = Database::getInstance();
+$conn = $db->getConnection();
 
 // Admin kontrolü
 if (!$auth->hasRole('admin')) {
@@ -34,7 +38,6 @@ $institutions = [
 ];
 
 // Gerçek rapor verilerini yükle
-$auth = Auth::getInstance();
 $allUsers = $auth->getAllUsers();
 
 // Kullanıcı istatistikleri
@@ -42,15 +45,24 @@ $totalUsers = count($allUsers);
 $activeUsers = 0;
 $institutionStats = [];
 
-foreach ($allUsers as $user) {
-    if ($user['role'] !== 'superadmin') {
-        $institution = $user['branch'] ?? $user['institution'] ?? 'Bilinmiyor';
+foreach ($allUsers as $u) {
+    if ($u['role'] !== 'superadmin') {
+        $institution = $u['branch'] ?? $u['institution'] ?? 'Bilinmiyor';
         if (!isset($institutionStats[$institution])) {
             $institutionStats[$institution] = ['users' => 0, 'exams' => 0, 'questions' => 0];
         }
         $institutionStats[$institution]['users']++;
         $activeUsers++;
     }
+}
+
+// Sınav sayısını veritabanından hesapla
+try {
+    $sql = "SELECT COUNT(*) FROM exams";
+    $stmt = $conn->query($sql);
+    $totalExams = $stmt->fetchColumn();
+} catch (Exception $e) {
+    $totalExams = 0;
 }
 
 // Soru sayısını hesapla
@@ -62,7 +74,7 @@ $totalQuestions = count($questions);
 $reportData = [
     'total_users' => $totalUsers,
     'active_users' => $activeUsers,
-    'total_exams' => 0, // Gerçek uygulamada veritabanından gelecek
+    'total_exams' => $totalExams,
     'total_questions' => $totalQuestions,
     'institution_stats' => $institutionStats
 ];
