@@ -608,6 +608,7 @@ function formatDuration($minutes) {
         
 
         <!-- Süresi Dolmuş Sınavlar -->
+        <?php
         $expiredExams = [];
         foreach ($exams as $examCode => $exam) {
             $isActive = strtolower((string)($exam['status'] ?? '')) === 'active';
