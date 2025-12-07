@@ -611,17 +611,14 @@ function formatDuration($minutes) {
         $expiredExams = [];
         foreach ($exams as $examCode => $exam) {
             $isActive = strtolower((string)($exam['status'] ?? '')) === 'active';
-            
             if ($isActive) {
                 $startTime = strtotime($exam['start_date'] ?? $exam['scheduled_start'] ?? '');
                 $duration = (int)($exam['duration'] ?? 30);
                 $endTime = $startTime + ($duration * 60);
                 $currentTime = time();
-                
                 if ($currentTime > $endTime) {
                     // Öğrenci bu sınavı almış mı kontrol et
                     $examResults = $examManager->getExamResults($exam['id'], $user['username']);
-                    
                     // Sadece öğrenci sınava girmişse göster
                     if (!empty($examResults)) {
                         $expiredExams[$examCode] = $exam;
