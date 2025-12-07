@@ -614,15 +614,19 @@ function formatDuration($minutes) {
             $isActive = strtolower((string)($exam['status'] ?? '')) === 'active';
             if ($isActive) {
                 $startTime = strtotime($exam['start_date'] ?? $exam['scheduled_start'] ?? '');
-                $duration = (int)($exam['duration'] ?? 30);
-                $endTime = $startTime + ($duration * 60);
-                $currentTime = time();
-                if ($currentTime > $endTime) {
-                    // Öğrenci bu sınavı almış mı kontrol et
-                    $examResults = $examManager->getExamResults($exam['id'], $user['username']);
-                    // Sadece öğrenci sınava girmişse göster
-                    if (!empty($examResults)) {
-                        $expiredExams[$examCode] = $exam;
+                
+                // 1970 hatasını önlemek için geçerli tarih kontrolü
+                if ($startTime && $startTime > 0) {
+                    $duration = (int)($exam['duration'] ?? 30);
+                    $endTime = $startTime + ($duration * 60);
+                    $currentTime = time();
+                    if ($currentTime > $endTime) {
+                        // Öğrenci bu sınavı almış mı kontrol et
+                        $examResults = $examManager->getExamResults($exam['id'], $user['username']);
+                        // Sadece öğrenci sınava girmişse göster
+                        if (!empty($examResults)) {
+                            $expiredExams[$examCode] = $exam;
+                        }
                     }
                 }
             }
