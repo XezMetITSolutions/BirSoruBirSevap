@@ -40,7 +40,8 @@ class Database {
                 ]
             );
         } catch (PDOException $e) {
-            die("Veritabanı bağlantı hatası: " . $e->getMessage());
+            // Die yerine exception fırlat, böylece login.php'de yakalanabilir
+            throw new Exception("Veritabanı bağlantı hatası: " . $e->getMessage());
         }
     }
     

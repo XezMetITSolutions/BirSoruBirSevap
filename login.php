@@ -5,22 +5,22 @@
 
 require_once 'auth.php';
 
-$auth = Auth::getInstance();
-
-// Zaten giriş yapmışsa yönlendir
-if ($auth->isLoggedIn()) {
-    $auth->redirectToRole();
-}
-
 $error = '';
 $rememberedUsername = isset($_COOKIE['remember_username']) ? $_COOKIE['remember_username'] : '';
 
-if ($_POST) {
-    $username = $_POST['username'] ?? '';
-    $password = $_POST['password'] ?? '';
-    $remember = isset($_POST['remember']) && $_POST['remember'] === 'on';
-    // Veritabanından kullanıcıyı kontrol et
-    try {
+try {
+    $auth = Auth::getInstance();
+
+    // Zaten giriş yapmışsa yönlendir
+    if ($auth->isLoggedIn()) {
+        $auth->redirectToRole();
+    }
+
+    if ($_POST) {
+        $username = $_POST['username'] ?? '';
+        $password = $_POST['password'] ?? '';
+        $remember = isset($_POST['remember']) && $_POST['remember'] === 'on';
+        // Veritabanından kullanıcıyı kontrol et
         $users = $auth->getAllUsers();
         $userRole = null;
         
@@ -58,10 +58,11 @@ if ($_POST) {
         } else {
             $error = 'Kullanıcı adı veya şifre hatalı!';
         }
-    } catch (Exception $e) {
-        $error = 'Veritabanı bağlantı hatası! Lütfen veritabanını kurun.';
-        error_log("Login error: " . $e->getMessage());
     }
+} catch (Exception $e) {
+    $error = "Bağlantı Sorunu: " . $e->getMessage();
+    // Log the full error but show a cleaner one if needed
+    error_log("Login/DB Error: " . $e->getMessage());
 }
 ?>
 <!DOCTYPE html>
