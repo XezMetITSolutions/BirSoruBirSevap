@@ -545,5 +545,6 @@ try {
             });
         })();
     </script>
+    <script src="js/cookie-consent.js"></script>
 </body>
 </html>

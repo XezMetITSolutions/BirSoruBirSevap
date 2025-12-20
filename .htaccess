@@ -1,6 +1,12 @@
 # Basit güvenlik kuralları
 Options -Indexes
 
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
 # PWA manifest istisnası (manifest.json erişimine izin ver)
 <Files "manifest.json">
     Order Allow,Deny

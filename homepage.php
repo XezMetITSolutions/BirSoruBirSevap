@@ -1666,5 +1666,6 @@ $totalCategories = array_sum(array_map('count', $categories));
             });
         }
     </script>
+    <script src="js/cookie-consent.js"></script>
 </body>
 </html>
