@@ -24,43 +24,27 @@ if ($_POST['action'] ?? '' === 'save_settings') {
     $success = 'Ayarlar başarıyla kaydedildi.';
 }
 
-// Kurum listesi
-$institutions = [
-    'IQRA Bludenz',
-    'IQRA Bregenz', 
-    'IQRA Dornbirn',
-    'IQRA Feldkirch',
-    'IQRA Hall in Tirol',
-    'IQRA Innsbruck',
-    'IQRA Jenbach',
-    'IQRA Lustenau',
-    'IQRA Radfeld',
-    'IQRA Reutte',
-    'IQRA Vomp',
-    'IQRA Wörgl',
-    'IQRA Zirl'
-];
+// Konfigürasyon dosyasını dahil et
+require_once 'includes/locations.php';
 
-// Kullanıcı sayılarını hesapla
-$userCounts = array_fill_keys($institutions, 0);
-try {
-    $allUsers = $auth->getAllUsers();
+// Yardımcı fonksiyonlar
+function getBranchCount($branchName, $allUsers) {
+    $count = 0;
     foreach ($allUsers as $u) {
-        $inst = $u['institution'] ?? $u['branch'] ?? '';
-        if (isset($userCounts[$inst])) {
-            $userCounts[$inst]++;
-        } else {
-            // Tam eşleşme yoksa, trim veya case-insensitive dene
-            foreach ($institutions as $key) {
-                if (strcasecmp(trim($inst), trim($key)) === 0) {
-                    $userCounts[$key]++;
-                    break;
-                }
-            }
+        $userBranch = $u['institution'] ?? $u['branch'] ?? '';
+        if (strcasecmp(trim($userBranch), trim($branchName)) === 0) {
+            $count++;
         }
     }
+    return $count;
+}
+
+// Kullanıcıları bir kere çek
+$allUsers = [];
+try {
+    $allUsers = $auth->getAllUsers();
 } catch (Exception $e) {
-    // Hata durumunda (sessizce devam et, count 0 kalır)
+    // Hata durumunda boş dizi
 }
 ?>
 <!DOCTYPE html>
@@ -156,11 +140,28 @@ try {
                     <p class="text-muted">Kayıtlı kurumlar ve kullanıcı sayıları</p>
                 </div>
 
-                <div class="list-group" style="max-height: 300px; overflow-y: auto;">
-                    <?php foreach ($institutions as $institution): ?>
-                        <div class="list-group-item">
-                            <span style="font-weight: 500; color: #fff;"><?php echo htmlspecialchars($institution); ?></span>
-                            <span class="badge badge-info"><?php echo $userCounts[$institution] ?? 0; ?> kullanıcı</span>
+                <div class="list-group" style="max-height: 400px; overflow-y: auto;">
+                    <?php foreach ($regionConfig as $region => $branches): ?>
+                        <div class="list-group-item" style="background: rgba(15, 23, 42, 0.6); flex-direction: column; align-items: flex-start;">
+                            <div style="display: flex; justify-content: space-between; width: 100%; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; margin-bottom: 8px;">
+                                <strong style="color: var(--primary-light); font-size: 1.1em;"><?php echo htmlspecialchars($region); ?></strong>
+                                <span class="badge badge-warning"><?php echo count($branches); ?> Şube</span>
+                            </div>
+                            
+                            <?php if (empty($branches)): ?>
+                                <div style="font-size: 0.9em; color: var(--text-muted); padding: 5px;">Bu bölgede şube bulunmamaktadır.</div>
+                            <?php else: ?>
+                                <div style="width: 100%; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+                                    <?php foreach ($branches as $branch): 
+                                        $count = getBranchCount($branch, $allUsers);
+                                    ?>
+                                        <div style="background: rgba(255,255,255,0.05); padding: 8px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
+                                            <span style="font-size: 0.9em;"><?php echo htmlspecialchars($branch); ?></span>
+                                            <span class="badge badge-info" style="font-size: 0.8em;"><?php echo $count; ?></span>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
                 </div>

@@ -52,22 +52,10 @@ if (isset($_GET['success'])) {
     }
 }
 
-// Kurum listesi
-$institutions = [
-    'IQRA Bludenz',
-    'IQRA Bregenz', 
-    'IQRA Dornbirn',
-    'IQRA Feldkirch',
-    'IQRA Hall in Tirol',
-    'IQRA Innsbruck',
-    'IQRA Jenbach',
-    'IQRA Lustenau',
-    'IQRA Radfeld',
-    'IQRA Reutte',
-    'IQRA Vomp',
-    'IQRA Wörgl',
-    'IQRA Zirl'
-];
+// Konfigürasyon dosyasını dahil et
+require_once 'includes/locations.php';
+$institutions = getAllBranches(); // Düz liste gerekirse diye
+
 
 // Kullanıcı ekleme
 if ($_POST['action'] ?? '' === 'add_user') {
@@ -75,6 +63,10 @@ if ($_POST['action'] ?? '' === 'add_user') {
     $lastName = trim($_POST['last_name'] ?? '');
     $role = $_POST['role'] ?? 'student';
     $institution = $_POST['institution'] ?? '';
+    $region = $_POST['region'] ?? '';
+    if (empty($region) && !empty($institution)) {
+        $region = getRegionByBranch($institution) ?? 'Arlberg';
+    }
     $class_section = trim($_POST['class_section'] ?? '');
     $email = trim($_POST['email'] ?? '');
     $phone = trim($_POST['phone'] ?? '');
@@ -108,7 +100,7 @@ if ($_POST['action'] ?? '' === 'add_user') {
         $fullName = $firstName . ' ' . $lastName;
         
         try {
-            if ($auth->saveUser($username, $password, $role, $fullName, $institution, $class_section, $email, $phone)) {
+            if ($auth->saveUser($username, $password, $role, $fullName, $institution, $class_section, $email, $phone, $region)) {
                     // POST-redirect-GET pattern - sayfayı yeniden yönlendir
                 header('Location: users.php?success=user_added&username=' . urlencode($username) . '&password=' . urlencode($password));
                     exit;
@@ -536,12 +528,26 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     <option value="teacher" <?php echo $roleFilter === 'teacher' ? 'selected' : ''; ?>>Eğitmen</option>
                     <option value="superadmin" <?php echo $roleFilter === 'superadmin' ? 'selected' : ''; ?>>SuperAdmin</option>
             </select>
+                <select name="region" class="filter-select" onchange="this.form.submit()">
+                    <option value="">Tüm Bölgeler</option>
+                    <?php foreach ($regionConfig as $region => $branches): ?>
+                        <option value="<?php echo htmlspecialchars($region); ?>" <?php echo ($regionFilter ?? '') === $region ? 'selected' : ''; ?>>
+                            <?php echo htmlspecialchars($region); ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
                 <select name="institution" class="filter-select" onchange="this.form.submit()">
                 <option value="">Tüm Kurumlar</option>
-                <?php foreach ($institutions as $institution): ?>
-                        <option value="<?php echo htmlspecialchars($institution); ?>" <?php echo $institutionFilter === $institution ? 'selected' : ''; ?>>
-                        <?php echo htmlspecialchars($institution); ?>
-                    </option>
+                <?php foreach ($regionConfig as $region => $branches): ?>
+                    <?php if (!empty($branches)): ?>
+                        <optgroup label="<?php echo htmlspecialchars($region); ?>">
+                            <?php foreach ($branches as $branch): ?>
+                                <option value="<?php echo htmlspecialchars($branch); ?>" <?php echo $institutionFilter === $branch ? 'selected' : ''; ?>>
+                                    <?php echo htmlspecialchars($branch); ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </optgroup>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </select>
                 <button type="submit" class="btn" style="padding: 12px 20px;">🔍 Ara</button>
@@ -645,7 +651,13 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                 </td>
                                 <td>
                                         <div style="font-weight: 500; color: #e2e8f0;">
-                                        <?php echo htmlspecialchars($user['institution']); ?>
+                                        <?php 
+                                            $dispRegion = $user['region'] ?? getRegionByBranch($user['institution']) ?? '';
+                                            if ($dispRegion) {
+                                                echo '<span style="color: var(--text-muted); font-size: 0.9em;">' . htmlspecialchars($dispRegion) . ' &rsaquo; </span>';
+                                            }
+                                            echo htmlspecialchars($user['institution']); 
+                                        ?>
                                         </div>
                                     <?php if (!empty($user['class_section'])): ?>
                                         <div style="font-size: 0.8rem; color: #7f8c8d; margin-top: 4px; display: inline-block; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px;">
@@ -767,17 +779,43 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     </select>
                 </div>
                 
-                <div class="form-group">
-                    <label for="add_institution">Kurum *</label>
-                    <select id="add_institution" name="institution" required>
-                        <option value="">Kurum Seçin</option>
-                        <?php foreach ($institutions as $institution): ?>
-                            <option value="<?php echo htmlspecialchars($institution); ?>">
-                                <?php echo htmlspecialchars($institution); ?>
-                            </option>
+            <div class="form-group">
+                    <label for="add_region">Bölge *</label>
+                    <select id="add_region" name="region" required onchange="updateBranchOptions('add')">
+                        <option value="">Bölge Seçin</option>
+                        <?php foreach ($regionConfig as $region => $branches): ?>
+                            <option value="<?php echo htmlspecialchars($region); ?>"><?php echo htmlspecialchars($region); ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
+
+                <div class="form-group">
+                    <label for="add_institution">Kurum (Şube) *</label>
+                    <select id="add_institution" name="institution" required>
+                        <option value="">Önce Bölge Seçin</option>
+                    </select>
+                </div>
+                
+                <script>
+                    const regionData = <?php echo json_encode($regionConfig); ?>;
+                    
+                    function updateBranchOptions(prefix) {
+                        const regionSelect = document.getElementById(prefix + '_region');
+                        const branchSelect = document.getElementById(prefix + '_institution');
+                        const selectedRegion = regionSelect.value;
+                        
+                        branchSelect.innerHTML = '<option value="">Kurum Seçin</option>';
+                        
+                        if (selectedRegion && regionData[selectedRegion]) {
+                            regionData[selectedRegion].forEach(branch => {
+                                const option = document.createElement('option');
+                                option.value = branch;
+                                option.textContent = branch;
+                                branchSelect.appendChild(option);
+                            });
+                        }
+                    }
+                </script>
                 
                 <div class="form-group">
                     <label for="add_class_section">Sınıf</label>
@@ -829,13 +867,19 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 </div>
                 
                 <div class="form-group">
-                    <label for="edit_institution">Kurum *</label>
-                    <select id="edit_institution" name="institution" required>
-                        <?php foreach ($institutions as $institution): ?>
-                            <option value="<?php echo htmlspecialchars($institution); ?>">
-                                <?php echo htmlspecialchars($institution); ?>
-                            </option>
+                    <label for="edit_region">Bölge *</label>
+                    <select id="edit_region" name="region" required onchange="updateBranchOptions('edit')">
+                        <option value="">Bölge Seçin</option>
+                        <?php foreach ($regionConfig as $region => $branches): ?>
+                            <option value="<?php echo htmlspecialchars($region); ?>"><?php echo htmlspecialchars($region); ?></option>
                         <?php endforeach; ?>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit_institution">Kurum (Şube) *</label>
+                    <select id="edit_institution" name="institution" required>
+                        <option value="">Önce Bölge Seçin</option>
                     </select>
                 </div>
                 
@@ -940,7 +984,37 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 document.getElementById('edit_username').value = username;
                 document.getElementById('edit_name').value = user.name || '';
                 document.getElementById('edit_role').value = user.role || '';
-                document.getElementById('edit_institution').value = user.institution || '';
+                
+                // Bölge ve Kurum Ayarlama
+                let region = user.region || '';
+                const institution = user.institution || user.branch || ''; // Branch fallback
+                
+                // Eğer bölge yoksa ama kurum varsa, bölgeyi bulmaya çalış
+                if (!region && institution && typeof regionData !== 'undefined') {
+                    for (const [reg, branches] of Object.entries(regionData)) {
+                        if (branches.includes(institution)) {
+                            region = reg;
+                            break;
+                        }
+                    }
+                }
+                if (!region) region = 'Arlberg'; // Varsayılan
+
+                const regionSelect = document.getElementById('edit_region');
+                if (regionSelect) {
+                    regionSelect.value = region;
+                    // Bölge değişince şubeleri güncelle
+                    updateBranchOptions('edit');
+                    // Şubeyi seç
+                    const instSelect = document.getElementById('edit_institution');
+                    if (instSelect) instSelect.value = institution;
+                } else {
+                    // Fallback for missing region select
+                    document.getElementById('edit_institution').innerHTML = `<option value="${institution}">${institution}</option>`;
+                    document.getElementById('edit_institution').value = institution;
+                }
+
+                document.getElementById('edit_class_section').value = user.class_section || '';
                 document.getElementById('edit_class_section').value = user.class_section || '';
                 document.getElementById('edit_email').value = user.email || '';
                 document.getElementById('edit_phone').value = user.phone || '';

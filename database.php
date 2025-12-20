@@ -207,9 +207,9 @@ class Database {
     /**
      * Kullanıcı ekle/güncelle
      */
-    public function saveUser($username, $password, $role, $name, $institution = '', $class_section = '', $email = '', $phone = '') {
-        $sql = "INSERT INTO users (username, password, role, full_name, branch, class_section, email, phone, user_type, is_admin, is_superadmin, must_change_password, created_at) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    public function saveUser($username, $password, $role, $name, $institution = '', $class_section = '', $email = '', $phone = '', $region = '') {
+        $sql = "INSERT INTO users (username, password, role, full_name, branch, class_section, email, phone, region, user_type, is_admin, is_superadmin, must_change_password, created_at) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
                 ON DUPLICATE KEY UPDATE 
                 password = VALUES(password),
                 role = VALUES(role),
@@ -218,6 +218,7 @@ class Database {
                 class_section = VALUES(class_section),
                 email = VALUES(email),
                 phone = VALUES(phone),
+                region = VALUES(region),
                 user_type = VALUES(user_type),
                 is_admin = VALUES(is_admin),
                 is_superadmin = VALUES(is_superadmin),
@@ -236,6 +237,7 @@ class Database {
             $class_section,
             $email,
             $phone,
+            $region,
             $role,
             $isAdmin,
             $isSuperadmin,
