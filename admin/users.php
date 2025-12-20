@@ -642,8 +642,8 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                         <div class="text-muted" style="font-size: 0.9em; margin-top: 5px;">Toplam <?php echo $totalUsers; ?> kullanıcı yönetiliyor</div>
                     </div>
                     <div style="display: flex; gap: 15px; align-items: center;">
-                        <button class="btn btn-primary" onclick="toggleAddUserModal()">
-                            <i class="fas fa-plus"></i> Yeni Kullanıcı
+                        <button class="modern-btn modern-btn-primary" onclick="toggleAddUserModal()" style="font-size: 1rem;">
+                            <i class="fas fa-user-plus"></i> Yeni Kullanıcı Ekle
                         </button>
                         <div class="table-controls">
                             <select onchange="changeItemsPerPage(this.value)" class="form-select" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: white;">
@@ -739,15 +739,15 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="action-buttons" style="display: flex; gap: 8px;">
-                                        <button class="btn btn-sm" style="background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 6px 10px;" onclick="editUser('<?php echo htmlspecialchars($user['username']); ?>')" title="Düzenle">
-                                            <i class="fas fa-edit"></i>
+                                    <div class="action-buttons" style="display: flex; gap: 10px; justify-content: center;">
+                                        <button class="modern-btn" style="padding: 8px 16px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; font-size: 0.85rem;" onclick="editUser('<?php echo htmlspecialchars($user['username']); ?>')" title="Düzenle">
+                                            <i class="fas fa-edit"></i> Düzenle
                                         </button>
-                                        <form method="POST" style="display: inline;" onsubmit="return confirm('Bu kullanıcıyı silmek istediğinizden emin misiniz?');">
+                                        <form method="POST" style="display: inline; margin: 0;" onsubmit="return confirm('⚠️ Bu kullanıcıyı silmek istediğinizden emin misiniz?');">
                                             <input type="hidden" name="action" value="delete_user">
                                             <input type="hidden" name="username" value="<?php echo htmlspecialchars($user['username']); ?>">
-                                            <button type="submit" class="btn btn-sm" style="background: rgba(239, 68, 68, 0.2); color: #fca5a5; padding: 6px 10px;" title="Sil">
-                                            <i class="fas fa-trash-alt"></i>
+                                            <button type="submit" class="modern-btn" style="padding: 8px 16px; background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); color: white; font-size: 0.85rem;" title="Sil">
+                                            <i class="fas fa-trash-alt"></i> Sil
                                             </button>
                                         </form>
                                     </div>
