@@ -491,116 +491,147 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
             <?php echo $success; ?>
         <?php endif; ?>
 
-        <!-- Premium Stats -->
-        <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-            <div class="glass-card-premium">
-                <i class="fas fa-users glass-card-icon"></i>
-                <div class="glass-card-title">
-                    <i class="fas fa-users" style="color: #3b82f6;"></i> Toplam Kullanıcı
+        <!-- Modern Stats Dashboard -->
+        <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+            <div class="modern-stat-card" style="--card-accent: #3b82f6;">
+                <div class="stat-header">
+                    <div class="stat-icon-box" style="--icon-bg: rgba(59, 130, 246, 0.15); --icon-color: #3b82f6;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Toplam Kullanıcı</h4>
+                    </div>
                 </div>
-                <div class="glass-card-value"><?php echo number_format($totalUsers); ?></div>
-                <div class="progress-mini"><div class="progress-fill" style="width:100%; background: linear-gradient(90deg, #3b82f6, #60a5fa);"></div></div>
+                <div class="stat-value"><?php echo number_format($totalUsers); ?></div>
+                <div class="stat-change">
+                    <i class="fas fa-database"></i>
+                    Sistemde kayıtlı
+                </div>
             </div>
             
-            <div class="glass-card-premium">
-                <i class="fas fa-user-graduate glass-card-icon"></i>
-                <div class="glass-card-title">
-                    <i class="fas fa-user-graduate" style="color: #22c55e;"></i> Öğrenci
+            <div class="modern-stat-card" style="--card-accent: #22c55e;">
+                <div class="stat-header">
+                    <div class="stat-icon-box" style="--icon-bg: rgba(34, 197, 94, 0.15); --icon-color: #22c55e;">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Öğrenciler</h4>
+                    </div>
                 </div>
-                <div class="glass-card-value"><?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'student')); ?></div>
-                <div class="progress-mini"><div class="progress-fill" style="width:<?php echo ($totalUsers > 0 ? (count(array_filter($filteredUsers, fn($u) => $u['role'] === 'student'))/$totalUsers)*100 : 0); ?>%; background: linear-gradient(90deg, #22c55e, #4ade80);"></div></div>
+                <div class="stat-value"><?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'student')); ?></div>
+                <div class="stat-change">
+                    <?php $pct = $totalUsers > 0 ? round((count(array_filter($filteredUsers, fn($u) => $u['role'] === 'student'))/$totalUsers)*100) : 0; ?>
+                    <i class="fas fa-chart-line"></i>
+                    <?php echo $pct; ?>% of total
+                </div>
             </div>
             
-            <div class="glass-card-premium">
-                <i class="fas fa-chalkboard-teacher glass-card-icon"></i>
-                <div class="glass-card-title">
-                    <i class="fas fa-chalkboard-teacher" style="color: #f59e0b;"></i> Eğitmen
+            <div class="modern-stat-card" style="--card-accent: #f59e0b;">
+                <div class="stat-header">
+                    <div class="stat-icon-box" style="--icon-bg: rgba(245, 158, 11, 0.15); --icon-color: #f59e0b;">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Eğitmenler</h4>
+                    </div>
                 </div>
-                <div class="glass-card-value"><?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'teacher')); ?></div>
-                <div class="progress-mini"><div class="progress-fill" style="width:<?php echo ($totalUsers > 0 ? (count(array_filter($filteredUsers, fn($u) => $u['role'] === 'teacher'))/$totalUsers)*100 : 0); ?>%; background: linear-gradient(90deg, #f59e0b, #fbbf24);"></div></div>
+                <div class="stat-value"><?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'teacher')); ?></div>
+                <div class="stat-change">
+                    <?php $tpct = $totalUsers > 0 ? round((count(array_filter($filteredUsers, fn($u) => $u['role'] === 'teacher'))/$totalUsers)*100) : 0; ?>
+                    <i class="fas fa-chart-line"></i>
+                    <?php echo $tpct; ?>% of total
+                </div>
             </div>
             
-            <div class="glass-card-premium">
-                <i class="fas fa-user-shield glass-card-icon"></i>
-                <div class="glass-card-title">
-                    <i class="fas fa-user-shield" style="color: #ef4444;"></i> SuperAdmin
+            <div class="modern-stat-card" style="--card-accent: #ef4444;">
+                <div class="stat-header">
+                    <div class="stat-icon-box" style="--icon-bg: rgba(239, 68, 68, 0.15); --icon-color: #ef4444;">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Yöneticiler</h4>
+                    </div>
                 </div>
-                <div class="glass-card-value"><?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'superadmin')); ?></div>
-                <div class="progress-mini"><div class="progress-fill" style="width:<?php echo ($totalUsers > 0 ? (count(array_filter($filteredUsers, fn($u) => $u['role'] === 'superadmin'))/$totalUsers)*100 : 0); ?>%; background: linear-gradient(90deg, #ef4444, #f87171);"></div></div>
+                <div class="stat-value"><?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'superadmin')); ?></div>
+                <div class="stat-change">
+                    <i class="fas fa-shield-alt"></i>
+                    SuperAdmin
+                </div>
             </div>
         </div>
 
-        <!-- Control Panel -->
-        <div class="control-panel">
-            <form method="GET" style="display: flex; gap: 15px; align-items: center; flex: 1; flex-wrap: wrap;">
-                <div class="search-wrapper">
-                    <input type="text" name="search" class="search-input-modern" placeholder="Kullanıcı adı veya isim ara..." value="<?php echo htmlspecialchars($searchTerm); ?>">
-                    <i class="fas fa-search search-icon"></i>
-                </div>
-                
-                <select name="role" class="filter-select-modern" onchange="this.form.submit()">
-                    <option value="">Tüm Roller</option>
-                    <option value="student" <?php echo $roleFilter === 'student' ? 'selected' : ''; ?>>Öğrenci</option>
-                    <option value="teacher" <?php echo $roleFilter === 'teacher' ? 'selected' : ''; ?>>Eğitmen</option>
-                    <option value="superadmin" <?php echo $roleFilter === 'superadmin' ? 'selected' : ''; ?>>SuperAdmin</option>
-                </select>
-
-                <select name="region" class="filter-select-modern" onchange="this.form.submit()">
-                    <option value="">Tüm Bölgeler</option>
-                    <?php foreach ($regionConfig as $region => $branches): ?>
-                        <option value="<?php echo htmlspecialchars($region); ?>" <?php echo ($regionFilter ?? '') === $region ? 'selected' : ''; ?>>
-                            <?php echo htmlspecialchars($region); ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-
-                <select name="institution" class="filter-select-modern" onchange="this.form.submit()">
-                    <option value="">Tüm Kurumlar</option>
-                    <?php foreach ($regionConfig as $region => $branches): ?>
-                        <?php if (!empty($branches)): ?>
-                            <optgroup label="<?php echo htmlspecialchars($region); ?>">
-                                <?php foreach ($branches as $branch): ?>
-                                    <option value="<?php echo htmlspecialchars($branch); ?>" <?php echo $institutionFilter === $branch ? 'selected' : ''; ?>>
-                                        <?php echo htmlspecialchars($branch); ?>
-                                    </option>
-                                <?php endforeach; ?>
-                            </optgroup>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </select>
-
-                <?php if ($searchTerm || $roleFilter || $institutionFilter): ?>
-                    <a href="users.php" class="clean-btn">
-                        <i class="fas fa-times"></i> Temizle
-                    </a>
-                <?php endif; ?>
-            </form>
-            
-            <div style="display: flex; gap: 10px; align-items: center;">
-                <div class="dropdown">
-                    <button class="btn btn-success" onclick="toggleDropdown('exportDropdown')" style="padding: 12px 20px; font-weight: 500;">
-                        <i class="fas fa-file-export"></i> Export
-                    </button>
-                    <div id="exportDropdown" class="dropdown-content">
-                        <a href="?action=export_csv&type=all">📊 Tüm Kullanıcılar (Excel)</a>
-                        <a href="?action=export_csv&type=students">👨‍🎓 Sadece Öğrenciler (Excel)</a>
-                        <a href="?action=export_csv&type=teachers">👨‍🏫 Sadece Eğitmenler (Excel)</a>
+        <!-- Modern Search & Filter Bar -->
+        <div class="modern-search-bar">
+            <form method="GET">
+                <div class="search-row">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" name="search" placeholder="Kullanıcı adı veya isim ara..." value="<?php echo htmlspecialchars($searchTerm); ?>">
                     </div>
                 </div>
+                
+                <div class="filter-group">
+                    <select name="role" class="modern-select" onchange="this.form.submit()">
+                        <option value="">Tüm Roller</option>
+                        <option value="student" <?php echo $roleFilter === 'student' ? 'selected' : ''; ?>>👨‍🎓 Öğrenci</option>
+                        <option value="teacher" <?php echo $roleFilter === 'teacher' ? 'selected' : ''; ?>>👨‍🏫 Eğitmen</option>
+                        <option value="superadmin" <?php echo $roleFilter === 'superadmin' ? 'selected' : ''; ?>>👑 SuperAdmin</option>
+                    </select>
+
+                    <select name="region" class="modern-select" onchange="this.form.submit()">
+                        <option value="">Tüm Bölgeler</option>
+                        <?php foreach ($regionConfig as $region => $branches): ?>
+                            <option value="<?php echo htmlspecialchars($region); ?>" <?php echo ($regionFilter ?? '') === $region ? 'selected' : ''; ?>>
+                                📍 <?php echo htmlspecialchars($region); ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+
+                    <select name="institution" class="modern-select" onchange="this.form.submit()">
+                        <option value="">Tüm Kurumlar</option>
+                        <?php foreach ($regionConfig as $region => $branches): ?>
+                            <?php if (!empty($branches)): ?>
+                                <optgroup label="<?php echo htmlspecialchars($region); ?>">
+                                    <?php foreach ($branches as $branch): ?>
+                                        <option value="<?php echo htmlspecialchars($branch); ?>" <?php echo $institutionFilter === $branch ? 'selected' : ''; ?>>
+                                            <?php echo htmlspecialchars($branch); ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </optgroup>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </select>
+
+                    <?php if ($searchTerm || $roleFilter || $institutionFilter): ?>
+                        <a href="users.php" class="modern-btn modern-btn-secondary">
+                            <i class="fas fa-times"></i> Temizle
+                        </a>
+                    <?php endif; ?>
                     
-                <button class="btn btn-warning" onclick="toggleImportModal()" style="padding: 12px 20px; font-weight: 500;">
-                    <i class="fas fa-file-import"></i> Import
-                </button>
-                
-                <a href="template.csv" class="btn btn-secondary" style="padding: 12px 20px; font-weight: 500;" download>
-                    <i class="fas fa-download"></i> Şablon
-                </a>
-                
-                <a href="../update_passwords.php" class="btn btn-danger" style="padding: 12px 20px; font-weight: 500; background: rgba(220, 38, 38, 0.2); border-color: rgba(220, 38, 38, 0.3); color: #f87171;" 
-                   onclick="return confirm('Mevcut tüm kullanıcıların şifrelerini iqra2025# olarak güncellemek istediğinizden emin misiniz? (Superadmin hariç)')">
-                    <i class="fas fa-key"></i> Şifre Reset
-                </a>
-            </div>
+                    <div style="flex: 1;"></div>
+                    
+                    <div class="action-buttons">
+                        <div class="dropdown">
+                            <button type="button" class="modern-btn modern-btn-success" onclick="toggleDropdown('exportDropdown')">
+                                <i class="fas fa-file-export"></i> Export
+                            </button>
+                            <div id="exportDropdown" class="dropdown-content">
+                                <a href="?action=export_csv&type=all">📊 Tüm Kullanıcılar</a>
+                                <a href="?action=export_csv&type=students">👨‍🎓 Öğrenciler</a>
+                                <a href="?action=export_csv&type=teachers">👨‍🏫 Eğitmenler</a>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="modern-btn modern-btn-warning" onclick="toggleImportModal()">
+                            <i class="fas fa-file-import"></i> Import
+                        </button>
+                        
+                        <a href="template.csv" class="modern-btn modern-btn-secondary" download>
+                            <i class="fas fa-download"></i> Şablon
+                        </a>
+                    </div>
+                </div>
+            </form>
         </div>
 
         <div class="content-grid">
