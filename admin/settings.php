@@ -40,6 +40,28 @@ $institutions = [
     'IQRA Wörgl',
     'IQRA Zirl'
 ];
+
+// Kullanıcı sayılarını hesapla
+$userCounts = array_fill_keys($institutions, 0);
+try {
+    $allUsers = $auth->getAllUsers();
+    foreach ($allUsers as $u) {
+        $inst = $u['institution'] ?? $u['branch'] ?? '';
+        if (isset($userCounts[$inst])) {
+            $userCounts[$inst]++;
+        } else {
+            // Tam eşleşme yoksa, trim veya case-insensitive dene
+            foreach ($institutions as $key) {
+                if (strcasecmp(trim($inst), trim($key)) === 0) {
+                    $userCounts[$key]++;
+                    break;
+                }
+            }
+        }
+    }
+} catch (Exception $e) {
+    // Hata durumunda (sessizce devam et, count 0 kalır)
+}
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -138,7 +160,7 @@ $institutions = [
                     <?php foreach ($institutions as $institution): ?>
                         <div class="list-group-item">
                             <span style="font-weight: 500; color: #fff;"><?php echo htmlspecialchars($institution); ?></span>
-                            <span class="badge badge-info">0 kullanıcı</span>
+                            <span class="badge badge-info"><?php echo $userCounts[$institution] ?? 0; ?> kullanıcı</span>
                         </div>
                     <?php endforeach; ?>
                 </div>

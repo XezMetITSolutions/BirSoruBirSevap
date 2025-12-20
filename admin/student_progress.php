@@ -59,10 +59,10 @@ if ($selectedBranch) {
     });
 }
 
-// İlk öğrenciyi seç
-if (!$selectedUser && !empty($filteredStudents)) {
-    $selectedUser = reset($filteredStudents)['username'];
-}
+// İlk öğrenciyi seçmeyi kaldırdık - Kullanıcı kendi seçmeli
+// if (!$selectedUser && !empty($filteredStudents)) {
+//    $selectedUser = reset($filteredStudents)['username'];
+// }
 
 // Seçili öğrencinin bilgilerini çek
 $selectedStudentInfo = null;
@@ -304,6 +304,12 @@ if ($selectedUser) {
                 </div>
             </div>
         </div>
+        <?php else: ?>
+        <div class="card fade-in" style="text-align: center; padding: 50px;">
+            <div style="font-size: 4em; color: #e1e8ed; margin-bottom: 20px;"><i class="fas fa-user-graduate"></i></div>
+            <h2 style="color: var(--text-muted);">Öğrenci Gelişimini Görüntüle</h2>
+            <p style="color: #95a5a6; max-width: 500px; margin: 0 auto;">Detaylı istatistikleri ve performans verilerini görmek için lütfen sol taraftaki filtrelerden veya arama kutusundan bir öğrenci seçiniz.</p>
+        </div>
         <?php endif; ?>
 
         <!-- Stats Grid -->
@@ -345,7 +351,7 @@ if ($selectedUser) {
             <!-- Search Box -->
             <div class="search-box">
                 <i class="fas fa-search"></i>
-                <input type="text" id="studentSearch" placeholder="Öğrenci ara..." value="<?php echo htmlspecialchars($selectedUser); ?>">
+                <input type="text" id="studentSearch" placeholder="Öğrenci ara..." value="">
             </div>
 
             <form method="GET" id="filterForm">

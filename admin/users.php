@@ -578,33 +578,35 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     </div>
 
         <div class="content-grid">
-            <div class="users-table-container">
-                <div class="table-header">
+            <div class="glass-panel" style="grid-column: 1 / -1;">
+                <div class="panel-header">
                     <div class="table-title-section">
-                        <h3>📋 Kullanıcı Listesi</h3>
+                        <h3><i class="fas fa-users"></i> Kullanıcı Listesi</h3>
+                        <div class="text-muted" style="font-size: 0.9em; margin-top: 5px;">Toplam <?php echo $totalUsers; ?> kullanıcı yönetiliyor</div>
+                    </div>
+                    <div style="display: flex; gap: 15px; align-items: center;">
                         <button class="btn btn-primary" onclick="toggleAddUserModal()">
-                            ➕ Yeni Kullanıcı Ekle
+                            <i class="fas fa-plus"></i> Yeni Kullanıcı
                         </button>
+                        <div class="table-controls">
+                            <select onchange="changeItemsPerPage(this.value)" class="form-select" style="padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: white;">
+                                <option value="25" <?php echo $itemsPerPage == 25 ? 'selected' : ''; ?>>25 / sayfa</option>
+                                <option value="50" <?php echo $itemsPerPage == 50 ? 'selected' : ''; ?>>50 / sayfa</option>
+                                <option value="100" <?php echo $itemsPerPage == 100 ? 'selected' : ''; ?>>100 / sayfa</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="table-controls">
-                        <select onchange="changeItemsPerPage(this.value)">
-                            <option value="25" <?php echo $itemsPerPage == 25 ? 'selected' : ''; ?>>25 / sayfa</option>
-                            <option value="50" <?php echo $itemsPerPage == 50 ? 'selected' : ''; ?>>50 / sayfa</option>
-                            <option value="100" <?php echo $itemsPerPage == 100 ? 'selected' : ''; ?>>100 / sayfa</option>
-                            <option value="200" <?php echo $itemsPerPage == 200 ? 'selected' : ''; ?>>200 / sayfa</option>
-                            <option value="500" <?php echo $itemsPerPage == 500 ? 'selected' : ''; ?>>500 / sayfa</option>
-                        </select>
-                    </div>
-            </div>
+                </div>
 
                 <?php if (empty($users)): ?>
-                    <div class="empty-state">
-                        <i>👥</i>
-                        <h3>Kullanıcı bulunamadı</h3>
-                        <p>Arama kriterlerinizi değiştirerek tekrar deneyin</p>
+                    <div class="empty-state" style="text-align: center; padding: 50px;">
+                        <div style="font-size: 4em; color: rgba(255,255,255,0.1); margin-bottom: 20px;"><i class="fas fa-users-slash"></i></div>
+                        <h3 style="color: white; margin-bottom: 10px;">Kullanıcı Bulunamadı</h3>
+                        <p style="color: var(--text-muted);">Arama kriterlerinize uygun kullanıcı bulunmamaktadır.</p>
                     </div>
                 <?php else: ?>
-                    <table class="users-table">
+                    <div class="table-responsive" style="overflow-x: auto;">
+                    <table class="table users-table">
                     <thead>
                         <tr>
                             <th>Kullanıcı</th>
@@ -615,17 +617,17 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                             <th>İşlemler</th>
                         </tr>
                     </thead>
-                    <tbody>
+                        <tbody>
                         <?php foreach ($users as $user): ?>
-                                <tr>
+                                <tr style="transition: background 0.2s;">
                                 <td>
                                     <div class="user-info">
-                                        <div class="user-avatar">
+                                        <div class="user-avatar" style="box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                                             <?php echo strtoupper(substr($user['name'] ?? 'U', 0, 1)); ?>
                                         </div>
                                         <div class="user-details">
-                                            <div class="user-name"><?php echo htmlspecialchars($user['name'] ?? 'Bilinmiyor'); ?></div>
-                                            <div class="user-username">@<?php echo htmlspecialchars($user['username']); ?></div>
+                                            <div class="user-name" style="font-weight: 600; color: white;"><?php echo htmlspecialchars($user['name'] ?? 'Bilinmiyor'); ?></div>
+                                            <div class="user-username" style="font-size: 0.85em; color: var(--text-muted);">@<?php echo htmlspecialchars($user['username']); ?></div>
                                         </div>
                                     </div>
                                 </td>
@@ -633,63 +635,65 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                     <span class="role-badge role-<?php echo $user['role']; ?>">
                                         <?php 
                                         $roleIcons = [
-                                            'student' => '👨‍🎓',
-                                            'teacher' => '👨‍🏫', 
-                                            'superadmin' => '👑'
+                                            'student' => '<i class="fas fa-user-graduate"></i>',
+                                            'teacher' => '<i class="fas fa-chalkboard-teacher"></i>', 
+                                            'superadmin' => '<i class="fas fa-crown"></i>'
                                         ];
-                                        echo $roleIcons[$user['role']] . ' ' . ucfirst($user['role']);
+                                        echo ($roleIcons[$user['role']] ?? '') . ' ' . ucfirst($user['role']);
                                         ?>
                                     </span>
                                 </td>
                                 <td>
-                                        <span class="institution-badge">
+                                        <div style="font-weight: 500; color: #e2e8f0;">
                                         <?php echo htmlspecialchars($user['institution']); ?>
-                                        </span>
+                                        </div>
                                     <?php if (!empty($user['class_section'])): ?>
-                                        <div style="font-size: 0.8rem; color: #7f8c8d; margin-top: 4px;">
-                                            📚 <?php echo htmlspecialchars($user['class_section']); ?>
+                                        <div style="font-size: 0.8rem; color: #7f8c8d; margin-top: 4px; display: inline-block; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px;">
+                                            <i class="fas fa-layer-group"></i> <?php echo htmlspecialchars($user['class_section']); ?>
                                         </div>
                                     <?php endif; ?>
                                 </td>
                                 <td>
+                                    <div style="display: flex; flex-direction: column; gap: 4px;">
                                     <?php if (!empty($user['email'])): ?>
-                                        <div style="font-size: 0.9rem; margin-bottom: 2px;">
-                                            📧 <?php echo htmlspecialchars($user['email']); ?>
+                                        <div style="font-size: 0.85rem; color: var(--text-muted);">
+                                            <i class="fas fa-envelope" style="width: 16px;"></i> <?php echo htmlspecialchars($user['email']); ?>
                                         </div>
                                     <?php endif; ?>
                                     <?php if (!empty($user['phone'])): ?>
-                                        <div style="font-size: 0.9rem;">
-                                            📱 <?php echo htmlspecialchars($user['phone']); ?>
+                                        <div style="font-size: 0.85rem; color: var(--text-muted);">
+                                            <i class="fas fa-phone" style="width: 16px;"></i> <?php echo htmlspecialchars($user['phone']); ?>
                                         </div>
                                     <?php endif; ?>
+                                    </div>
                                 </td>
                                 <td>
-                                    <div style="font-size: 0.9rem;">
-                                        📅 <?php echo date('d.m.Y', strtotime($user['created_at'])); ?>
+                                    <div style="font-size: 0.9rem; color: #e2e8f0;">
+                                        <?php echo date('d.m.Y', strtotime($user['created_at'])); ?>
                                     </div>
                                     <div style="font-size: 0.8rem; color: #7f8c8d;">
-                                        🕒 <?php echo date('H:i', strtotime($user['created_at'])); ?>
+                                        <?php echo date('H:i', strtotime($user['created_at'])); ?>
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="action-buttons">
-                                        <button class="btn btn-edit btn-sm" onclick="editUser('<?php echo htmlspecialchars($user['username']); ?>')">
-                                            ✏️ Düzenle
+                                    <div class="action-buttons" style="display: flex; gap: 8px;">
+                                        <button class="btn btn-sm" style="background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 6px 10px;" onclick="editUser('<?php echo htmlspecialchars($user['username']); ?>')" title="Düzenle">
+                                            <i class="fas fa-edit"></i>
                                         </button>
-                                    <form method="POST" style="display: inline;">
-                                        <input type="hidden" name="action" value="delete_user">
-                                        <input type="hidden" name="username" value="<?php echo htmlspecialchars($user['username']); ?>">
-                                            <button type="submit" class="btn btn-danger btn-sm" 
-                                                onclick="return confirm('Bu kullanıcıyı silmek istediğinizden emin misiniz?')">
-                                                🗑️ Sil
-                                        </button>
-                                    </form>
+                                        <form method="POST" style="display: inline;" onsubmit="return confirm('Bu kullanıcıyı silmek istediğinizden emin misiniz?');">
+                                            <input type="hidden" name="action" value="delete_user">
+                                            <input type="hidden" name="username" value="<?php echo htmlspecialchars($user['username']); ?>">
+                                            <button type="submit" class="btn btn-sm" style="background: rgba(239, 68, 68, 0.2); color: #fca5a5; padding: 6px 10px;" title="Sil">
+                                            <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+                </div>
                     
                     <?php if ($totalPages > 1): ?>
                         <div class="pagination">
