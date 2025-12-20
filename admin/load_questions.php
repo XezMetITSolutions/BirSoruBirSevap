@@ -69,383 +69,116 @@ $totalCategories = array_sum(array_map('count', $categories));
 $errorCount = count($errors);
 ?>
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soru Yükleme - Bir Soru Bir Sevap</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-            color: #333;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #089b76 0%, #067a5f 100%);
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo img {
-            height: 50px;
-            width: auto;
-        }
-
-        .logo h1 {
-            font-size: 1.8em;
-            margin-bottom: 5px;
-        }
-
-        .logo p {
-            opacity: 0.9;
-            font-size: 0.9em;
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .user-avatar {
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        .logout-btn {
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .logout-btn:hover {
-            background: rgba(255,255,255,0.3);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-
-        .breadcrumb {
-            margin-bottom: 20px;
-        }
-
-        .breadcrumb a {
-            color: #089b76;
-            text-decoration: none;
-        }
-
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-
-        .alert {
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        .alert-success {
-            background: #d4edda;
-            border: 1px solid #c3e6cb;
-            color: #155724;
-        }
-
-        .alert-warning {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            color: #856404;
-        }
-
-        .alert-error {
-            background: #f8d7da;
-            border: 1px solid #f5c6cb;
-            color: #721c24;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .stat-icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
-
-        .stat-number {
-            font-size: 2em;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            color: #7f8c8d;
-            font-size: 0.9em;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-
-        .main-content {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .widget {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .widget h3 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.2em;
-        }
-
-        .btn {
-            background: linear-gradient(135deg, #068567 0%, #055a4a 100%);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .btn-large {
-            padding: 20px 40px;
-            font-size: 1.2em;
-            width: 100%;
-        }
-
-        .btn-secondary {
-            background: #95a5a6;
-        }
-
-        .error-list {
-            max-height: 200px;
-            overflow-y: auto;
-        }
-
-        .error-item {
-            padding: 10px;
-            background: #f8d7da;
-            border: 1px solid #f5c6cb;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            font-size: 0.9em;
-            color: #721c24;
-        }
-
-        .bank-list {
-            max-height: 200px;
-            overflow-y: auto;
-        }
-
-        .bank-item {
-            padding: 10px;
-            background: #d4edda;
-            border: 1px solid #c3e6cb;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            font-size: 0.9em;
-            color: #155724;
-        }
-
-        @media (max-width: 768px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/admin-style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">
-                <img src="../logo.png" alt="Bir Soru Bir Sevap Logo">
-                <div>
-                    <h1>Bir Soru Bir Sevap</h1>
-                    <p>Soru Yükleme Paneli</p>
-                </div>
-            </div>
-            <div class="user-info">
-                <div class="user-avatar">
-                    <?php echo strtoupper(substr($user['name'], 0, 1)); ?>
-                </div>
-                <div>
-                    <div><?php echo htmlspecialchars($user['name']); ?></div>
-                    <div style="font-size: 0.8em; opacity: 0.8;">Süper Admin</div>
-                </div>
-                <a href="../logout.php" class="logout-btn">Çıkış</a>
-            </div>
-        </div>
+    <div class="bg-decoration">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
     </div>
 
-    <div class="container">
-        <div class="breadcrumb">
-            <a href="dashboard.php">Dashboard</a> > Soru Yükleme
+    <?php include 'sidebar.php'; ?>
+
+    <!-- Main Content -->
+    <div class="main-wrapper">
+        <div class="top-bar">
+            <div class="menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="welcome-text">
+                <h2>Soru Yükleme</h2>
+                <p>Soru bankalarını yönetin ve güncelleyin</p>
+            </div>
         </div>
 
         <?php if (!empty($message)): ?>
-            <div class="alert alert-<?php echo $messageType; ?>">
+            <div class="<?php echo $messageType == 'success' ? 'success-box' : 'alert-box'; ?>">
+                <i class="fas <?php echo $messageType == 'success' ? 'fa-check-circle' : 'fa-exclamation-triangle'; ?>"></i>
                 <?php echo htmlspecialchars($message); ?>
             </div>
         <?php endif; ?>
 
+        <!-- Stats -->
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-icon">📊</div>
-                <div class="stat-number"><?php echo $totalQuestions; ?></div>
+                <i class="fas fa-question-circle stat-icon"></i>
+                <div class="stat-value"><?php echo number_format($totalQuestions); ?></div>
                 <div class="stat-label">Toplam Soru</div>
+                <div class="progress-mini"><div class="progress-fill" style="width:100%; background:#3b82f6;"></div></div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">📚</div>
-                <div class="stat-number"><?php echo $totalBanks; ?></div>
+                <i class="fas fa-database stat-icon"></i>
+                <div class="stat-value"><?php echo $totalBanks; ?></div>
                 <div class="stat-label">Soru Bankası</div>
+                <div class="progress-mini"><div class="progress-fill" style="width:<?php echo min(100, $totalBanks*10); ?>%; background:#8b5cf6;"></div></div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">📁</div>
-                <div class="stat-number"><?php echo $totalCategories; ?></div>
+                <i class="fas fa-folder stat-icon"></i>
+                <div class="stat-value"><?php echo $totalCategories; ?></div>
                 <div class="stat-label">Kategori</div>
+                <div class="progress-mini"><div class="progress-fill" style="width:<?php echo min(100, $totalCategories*5); ?>%; background:#ec4899;"></div></div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">⚠️</div>
-                <div class="stat-number"><?php echo $errorCount; ?></div>
+                <i class="fas fa-bug stat-icon"></i>
+                <div class="stat-value" style="color:<?php echo $errorCount > 0 ? '#fca5a5' : '#86efac'; ?>"><?php echo $errorCount; ?></div>
                 <div class="stat-label">Hata</div>
+                <div class="progress-mini"><div class="progress-fill" style="width:<?php echo $errorCount > 0 ? '100%' : '0%'; ?>; background:#ef4444;"></div></div>
             </div>
         </div>
 
-        <div class="content-grid">
-            <div class="main-content">
-                <h2>🔄 Soru Yükleme İşlemi</h2>
-                <p style="margin-bottom: 25px; color: #7f8c8d;">
-                    Soru bankalarını yeniden yüklemek için aşağıdaki butona tıklayın.
+        <div class="content-row">
+            <div class="glass-panel">
+                <div class="panel-header">
+                    <div class="panel-title"><i class="fas fa-sync"></i> Soru Yükleme İşlemi</div>
+                </div>
+                
+                <p style="margin-bottom: 25px; color: var(--text-muted);">
+                    Soru bankalarını yeniden yüklemek için aşağıdaki butona tıklayın. Bu işlem <strong>Sorular</strong> klasörünü tarayarak veritabanını güncelleyecektir.
                 </p>
 
                 <form method="POST" style="margin-bottom: 30px;">
                     <input type="hidden" name="action" value="load_questions">
-                    <button type="submit" class="btn btn-large">
-                        🔄 Soruları Yeniden Yükle
+                    <button type="submit" class="btn btn-large" style="width:auto; min-width:200px;">
+                        <i class="fas fa-sync-alt"></i> Soruları Yeniden Yükle
                     </button>
                 </form>
 
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
-                    <h3>📋 Yükleme Bilgileri</h3>
-                    <p><strong>Soru Klasörü:</strong> <?php echo htmlspecialchars(defined('ROOT_DIR') ? ROOT_DIR : 'Sorular'); ?></p>
-                    <p><strong>Klasör Durumu:</strong> 
-                        <span style="color: <?php echo is_dir(defined('ROOT_DIR') ? ROOT_DIR : 'Sorular') ? '#27ae60' : '#e74c3c'; ?>">
-                            <?php echo is_dir(defined('ROOT_DIR') ? ROOT_DIR : 'Sorular') ? '✅ Mevcut' : '❌ Bulunamadı'; ?>
-                        </span>
-                    </p>
-                    <p><strong>İzin Verilen Uzantılar:</strong> <?php echo implode(', ', defined('ALLOWED_EXTENSIONS') ? ALLOWED_EXTENSIONS : ['json']); ?></p>
-                    <p><strong>Maksimum Tarama Derinliği:</strong> <?php echo defined('MAX_SCAN_DEPTH') ? MAX_SCAN_DEPTH : 5; ?></p>
-                    
-                    <h4 style="margin-top: 20px; color: #2c3e50;">🔍 Debug Bilgileri</h4>
-                    <div style="background: #fff; padding: 15px; border-radius: 8px; font-family: monospace; font-size: 0.9em; margin-top: 10px;">
-                        <p><strong>Mevcut Çalışma Dizini:</strong> <?php echo getcwd(); ?></p>
-                        <p><strong>Script Dizini:</strong> <?php echo __DIR__; ?></p>
-                        <p><strong>Parent Dizini:</strong> <?php echo dirname(__DIR__); ?></p>
-                        <p><strong>Alternatif Yol 1:</strong> <?php echo __DIR__ . DIRECTORY_SEPARATOR . 'Sorular'; ?> 
-                            <span style="color: <?php echo is_dir(__DIR__ . DIRECTORY_SEPARATOR . 'Sorular') ? '#27ae60' : '#e74c3c'; ?>">
-                                (<?php echo is_dir(__DIR__ . DIRECTORY_SEPARATOR . 'Sorular') ? 'Mevcut' : 'Yok'; ?>)
+                <div style="background: rgba(15,23,42,0.4); padding: 20px; border-radius: 12px; margin-bottom: 20px; border:1px solid rgba(255,255,255,0.05);">
+                    <h3 style="margin-bottom:15px; font-size:1.1rem; color:#fff;">📋 Yükleme Bilgileri</h3>
+                    <div style="display:grid; gap:10px; color:var(--text-muted);">
+                        <div>
+                            <strong>Soru Klasörü:</strong> 
+                            <span style="color:#fff;"><?php echo htmlspecialchars(defined('ROOT_DIR') ? ROOT_DIR : 'Sorular'); ?></span>
+                        </div>
+                        <div>
+                            <strong>Klasör Durumu:</strong> 
+                            <span style="color: <?php echo is_dir(defined('ROOT_DIR') ? ROOT_DIR : 'Sorular') ? '#4ade80' : '#ef4444'; ?>">
+                                <?php echo is_dir(defined('ROOT_DIR') ? ROOT_DIR : 'Sorular') ? '✅ Mevcut' : '❌ Bulunamadı'; ?>
                             </span>
-                        </p>
-                        <p><strong>Alternatif Yol 2:</strong> <?php echo dirname(__DIR__) . DIRECTORY_SEPARATOR . 'Sorular'; ?> 
-                            <span style="color: <?php echo is_dir(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'Sorular') ? '#27ae60' : '#e74c3c'; ?>">
-                                (<?php echo is_dir(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'Sorular') ? 'Mevcut' : 'Yok'; ?>)
-                            </span>
-                        </p>
-                        <p><strong>Alternatif Yol 3:</strong> <?php echo getcwd() . DIRECTORY_SEPARATOR . 'Sorular'; ?> 
-                            <span style="color: <?php echo is_dir(getcwd() . DIRECTORY_SEPARATOR . 'Sorular') ? '#27ae60' : '#e74c3c'; ?>">
-                                (<?php echo is_dir(getcwd() . DIRECTORY_SEPARATOR . 'Sorular') ? 'Mevcut' : 'Yok'; ?>)
-                            </span>
-                        </p>
+                        </div>
+                        <div>
+                            <strong>İzin Verilen Uzantılar:</strong> 
+                            <span style="color:#fff;"><?php echo implode(', ', defined('ALLOWED_EXTENSIONS') ? ALLOWED_EXTENSIONS : ['json']); ?></span>
+                        </div>
                     </div>
                 </div>
 
                 <?php if (!empty($errors)): ?>
-                    <div>
-                        <h3>⚠️ Sistem Hataları</h3>
-                        <div class="error-list">
+                    <div class="alert-box">
+                        <h4 style="margin-bottom:10px; color:#fca5a5;"><i class="fas fa-exclamation-triangle"></i> Sistem Hataları</h4>
+                        <div class="error-list" style="max-height: 200px; overflow-y: auto;">
                             <?php foreach ($errors as $error): ?>
-                                <div class="error-item">
+                                <div style="margin-bottom:8px; padding:8px; background:rgba(239,68,68,0.1); border-radius:6px; font-size:0.9rem;">
                                     <?php echo htmlspecialchars($error); ?>
                                 </div>
                             <?php endforeach; ?>
@@ -453,31 +186,25 @@ $errorCount = count($errors);
                     </div>
                 <?php endif; ?>
             </div>
-
-            <div class="sidebar">
-                <div class="widget">
-                    <h3>📚 Yüklenen Soru Bankaları</h3>
-                    <div class="bank-list">
-                        <?php if (!empty($banks)): ?>
-                            <?php foreach ($banks as $bank): ?>
-                                <div class="bank-item">
-                                    <strong><?php echo htmlspecialchars($bank); ?></strong><br>
+            
+            <div class="glass-panel">
+                <div class="panel-header">
+                    <div class="panel-title"><i class="fas fa-layer-group"></i> Yüklenen Bankalar</div>
+                </div>
+                <div class="bank-list">
+                    <?php if (!empty($banks)): ?>
+                        <?php foreach ($banks as $bank): ?>
+                            <div class="bank-item">
+                                <div class="bank-info">
+                                    <strong><?php echo htmlspecialchars($bank); ?></strong>
                                     <span><?php echo count($categories[$bank] ?? []); ?> kategori</span>
                                 </div>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <p style="color: #7f8c8d; text-align: center;">Henüz soru bankası yüklenmedi</p>
-                        <?php endif; ?>
-                    </div>
-                </div>
-
-                <div class="widget">
-                    <h3>⚡ Hızlı İşlemler</h3>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <a href="dashboard.php" class="btn btn-secondary">Dashboard'a Dön</a>
-                        <a href="settings.php" class="btn btn-secondary">Sistem Ayarları</a>
-                        <a href="../index.php" class="btn btn-secondary">Ana Sayfa</a>
-                    </div>
+                                <div style="width:8px; height:8px; background:#4ade80; border-radius:50%; box-shadow:0 0 10px #4ade80;"></div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <div style="text-align:center; padding:30px; color:var(--text-muted);">Henüz banka yok.</div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
