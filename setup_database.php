@@ -4,6 +4,24 @@
  */
 
 require_once 'database.php';
+require_once 'auth.php';
+
+// Güvenlik kontrolü: Sadece superadmin veya CLI erişimi
+if (php_sapi_name() !== 'cli') {
+    $auth = Auth::getInstance();
+    if (!$auth->isLoggedIn() || !$auth->hasRole('superadmin')) {
+        // Eğer hiç kullanıcı yoksa izin ver (ilk kurulum)
+        try {
+            $db = Database::getInstance();
+            $users = $db->getAllUsers();
+            if (!empty($users)) {
+                die('Erişim engellendi: Sadece Super Admin bu sayfaya erişebilir.');
+            }
+        } catch (Exception $e) {
+            // Veritabanı hatası varsa (yani veritabanı yoksa) devam et
+        }
+    }
+}
 
 $message = '';
 $messageType = '';
