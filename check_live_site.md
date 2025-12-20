@@ -10,7 +10,7 @@ phpMyAdmin'e giriş yapın ve şu adımları izleyin:
 
 ```
 1. https://birsorubirsevap.metechnik.at/phpmyadmin (veya hosting panel)
-2. d0449c07 veritabanını seçin
+2. d0459a94 veritabanını seçin
 3. SQL sekmesine gidin
 4. database_structure.sql dosyasını import edin
 ```
@@ -34,8 +34,8 @@ https://birsorubirsevap.metechnik.at/test_db_connection.php
 ## 🔧 Veritabanı Bilgileri
 ```
 Host: localhost
-Database: d0449c07
-User: d0449c07
+Database: d0459a94
+User: d0459a94
 Password: 01528797Mb##
 ```
 

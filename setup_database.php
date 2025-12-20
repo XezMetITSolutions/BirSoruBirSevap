@@ -220,8 +220,8 @@ try {
         <div class="info-box">
             <h3>📋 Veritabanı Bilgileri</h3>
             <p><strong>Host:</strong> localhost</p>
-            <p><strong>Veritabanı:</strong> d0449c07</p>
-            <p><strong>Kullanıcı:</strong> d0449c07</p>
+            <p><strong>Veritabanı:</strong> d0459a94</p>
+            <p><strong>Kullanıcı:</strong> d0459a94</p>
             <p><strong>Şifre:</strong> 1528797Mb</p>
         </div>
 
