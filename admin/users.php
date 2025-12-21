@@ -501,54 +501,6 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
             <?php echo $success; ?>
         <?php endif; ?>
 
-        <!-- Modern Stats Cards -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 30px;">
-            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(6,133,103,0.15) 0%, rgba(6,133,103,0.05) 100%); border-left: 4px solid var(--primary); transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(6,133,103,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(6,133,103,0.2); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.5rem;">
-                        <i class="fas fa-users"></i>
-                    </div>
-                </div>
-                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
-                    <?php echo $totalUsers; ?>
-                </div>
-                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Toplam Kullanıcı</div>
-            </div>
-            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(59,130,246,0.05) 100%); border-left: 4px solid #3b82f6; transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(59,130,246,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.5rem;">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                </div>
-                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
-                    <?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'student')); ?>
-                </div>
-                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Öğrenci</div>
-            </div>
-            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0.05) 100%); border-left: 4px solid #f59e0b; transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(245,158,11,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(245,158,11,0.2); display: flex; align-items: center; justify-content: center; color: #f59e0b; font-size: 1.5rem;">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                </div>
-                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
-                    <?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'teacher')); ?>
-                </div>
-                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Eğitmen</div>
-            </div>
-            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(239,68,68,0.15) 0%, rgba(239,68,68,0.05) 100%); border-left: 4px solid #ef4444; transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(239,68,68,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(239,68,68,0.2); display: flex; align-items: center; justify-content: center; color: #ef4444; font-size: 1.5rem;">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                </div>
-                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
-                    <?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'superadmin')); ?>
-                </div>
-                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Admin</div>
-            </div>
-        </div>
-
         <!-- Modern Filters -->
         <div class="glass-panel" style="padding: 24px; margin-bottom: 30px; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);">
             <form method="GET" id="filterForm" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
@@ -564,6 +516,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     <option value="">🎭 Tüm Roller</option>
                     <option value="student" <?php echo $roleFilter === 'student' ? 'selected' : ''; ?>>👨‍🎓 Öğrenci</option>
                     <option value="teacher" <?php echo $roleFilter === 'teacher' ? 'selected' : ''; ?>>👨‍🏫 Eğitmen</option>
+                    <option value="region_leader" <?php echo $roleFilter === 'region_leader' ? 'selected' : ''; ?>>🌍 Bölge Lideri</option>
                     <option value="superadmin" <?php echo $roleFilter === 'superadmin' ? 'selected' : ''; ?>>👑 Admin</option>
                 </select>
 
@@ -702,7 +655,8 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                         <?php 
                                         $roleIcons = [
                                             'student' => '<i class="fas fa-user-graduate"></i>',
-                                            'teacher' => '<i class="fas fa-chalkboard-teacher"></i>', 
+                                            'teacher' => '<i class="fas fa-chalkboard-teacher"></i>',
+                                            'region_leader' => '<i class="fas fa-map-marked-alt"></i>',
                                             'superadmin' => '<i class="fas fa-crown"></i>'
                                         ];
                                         echo ($roleIcons[$user['role']] ?? '') . ' ' . ucfirst($user['role']);
@@ -881,6 +835,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                         <option value="">Rol Seçin</option>
                         <option value="student">👨‍🎓 Öğrenci</option>
                         <option value="teacher">👨‍🏫 Eğitmen</option>
+                        <option value="region_leader">🌍 Bölge Eğitim Başkanı</option>
                         <option value="superadmin">👑 SuperAdmin</option>
                     </select>
                 </div>
@@ -968,6 +923,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     <select id="edit_role" name="role" required>
                         <option value="student">👨‍🎓 Öğrenci</option>
                         <option value="teacher">👨‍🏫 Eğitmen</option>
+                        <option value="region_leader">🌍 Bölge Eğitim Başkanı</option>
                         <option value="superadmin">👑 SuperAdmin</option>
                     </select>
                 </div>
@@ -1081,19 +1037,34 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         }
 
         function editUser(username) {
-            // Kullanıcı verilerini al
-            const users = <?php echo json_encode($allUsers); ?>;
-            const user = users[username];
-            
-            if (user) {
+            try {
+                // Kullanıcı verilerini al
+                const users = <?php echo json_encode($allUsers); ?>;
+                const user = users[username];
+                
+                if (!user) {
+                    alert('Kullanıcı bulunamadı!');
+                    return;
+                }
+                
                 // Modal alanlarını doldur
-                document.getElementById('edit_username').value = username;
-                document.getElementById('edit_name').value = user.name || '';
-                document.getElementById('edit_role').value = user.role || '';
+                const editUsernameEl = document.getElementById('edit_username');
+                const editNameEl = document.getElementById('edit_name');
+                const editRoleEl = document.getElementById('edit_role');
+                
+                if (!editUsernameEl || !editNameEl || !editRoleEl) {
+                    console.error('Modal elementleri bulunamadı!');
+                    alert('Modal yüklenirken bir hata oluştu. Sayfayı yenileyin.');
+                    return;
+                }
+                
+                editUsernameEl.value = username;
+                editNameEl.value = user.name || user.full_name || '';
+                editRoleEl.value = user.role || '';
                 
                 // Bölge ve Kurum Ayarlama
                 let region = user.region || '';
-                const institution = user.institution || user.branch || ''; // Branch fallback
+                const institution = user.institution || user.branch || '';
                 
                 // Eğer bölge yoksa ama kurum varsa, bölgeyi bulmaya çalış
                 if (!region && institution && typeof regionData !== 'undefined') {
@@ -1110,42 +1081,71 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 if (regionSelect) {
                     regionSelect.value = region;
                     // Bölge değişince şubeleri güncelle
-                    updateBranchOptions('edit');
+                    if (typeof updateBranchOptions === 'function') {
+                        updateBranchOptions('edit');
+                    }
                     // Şubeyi seç
-                    const instSelect = document.getElementById('edit_institution');
-                    if (instSelect) instSelect.value = institution;
-                } else {
-                    // Fallback for missing region select
-                    document.getElementById('edit_institution').innerHTML = `<option value="${institution}">${institution}</option>`;
-                    document.getElementById('edit_institution').value = institution;
+                    setTimeout(() => {
+                        const instSelect = document.getElementById('edit_institution');
+                        if (instSelect) instSelect.value = institution;
+                    }, 100);
                 }
 
-                document.getElementById('edit_class_section').value = user.class_section || '';
-                document.getElementById('edit_class_section').value = user.class_section || '';
-                document.getElementById('edit_email').value = user.email || '';
-                document.getElementById('edit_phone').value = user.phone || '';
-                document.getElementById('edit_new_password').value = '';
+                const editClassSectionEl = document.getElementById('edit_class_section');
+                const editEmailEl = document.getElementById('edit_email');
+                const editPhoneEl = document.getElementById('edit_phone');
+                const editPasswordEl = document.getElementById('edit_new_password');
+                
+                if (editClassSectionEl) editClassSectionEl.value = user.class_section || '';
+                if (editEmailEl) editEmailEl.value = user.email || '';
+                if (editPhoneEl) editPhoneEl.value = user.phone || '';
+                if (editPasswordEl) editPasswordEl.value = '';
                 
                 // Modal'ı aç
-                document.getElementById('editModal').style.display = 'block';
-            } else {
-                alert('Kullanıcı bulunamadı!');
+                const editModal = document.getElementById('editModal');
+                if (editModal) {
+                    editModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    console.error('Edit modal bulunamadı!');
+                    alert('Modal yüklenirken bir hata oluştu.');
+                }
+            } catch (error) {
+                console.error('editUser hatası:', error);
+                alert('Kullanıcı düzenlenirken bir hata oluştu: ' + error.message);
             }
         }
 
         function closeEditModal() {
-            document.getElementById('editModal').style.display = 'none';
+            const editModal = document.getElementById('editModal');
+            if (editModal) {
+                editModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         }
 
         function toggleAddUserModal() {
-            document.getElementById('addUserModal').style.display = 'block';
+            const addModal = document.getElementById('addUserModal');
+            if (addModal) {
+                addModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            } else {
+                console.error('Add user modal bulunamadı!');
+                alert('Modal yüklenirken bir hata oluştu.');
+            }
         }
 
         function closeAddUserModal() {
-            document.getElementById('addUserModal').style.display = 'none';
-            // Form'u temizle
-            document.getElementById('addUserForm').reset();
-            document.getElementById('add-preview-username').textContent = '...';
+            const addModal = document.getElementById('addUserModal');
+            if (addModal) {
+                addModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                // Form'u temizle
+                const form = document.getElementById('addUserForm');
+                if (form) form.reset();
+                const preview = document.getElementById('add-preview-username');
+                if (preview) preview.textContent = '...';
+            }
         }
 
         function updateAddUsernamePreview() {
@@ -1260,22 +1260,31 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         // Sayfa yüklendiğinde animasyonlar ve modal kontrolü
         document.addEventListener('DOMContentLoaded', function() {
             // Modal'ların başlangıçta kapalı olduğundan emin ol
-            document.getElementById('addUserModal').style.display = 'none';
-            document.getElementById('editModal').style.display = 'none';
-            document.getElementById('importModal').style.display = 'none';
+            const addModal = document.getElementById('addUserModal');
+            const editModal = document.getElementById('editModal');
+            const importModal = document.getElementById('importModal');
             
-            // Stats kartlarına animasyon ekle
-            const statCards = document.querySelectorAll('.glass-panel');
-            statCards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    card.style.transition = 'all 0.5s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, index * 100);
-            });
-
+            if (addModal) addModal.style.display = 'none';
+            if (editModal) editModal.style.display = 'none';
+            if (importModal) importModal.style.display = 'none';
+            
+            // Modal dışına tıklandığında kapat
+            if (addModal) {
+                addModal.addEventListener('click', function(e) {
+                    if (e.target === addModal) {
+                        closeAddUserModal();
+                    }
+                });
+            }
+            
+            if (editModal) {
+                editModal.addEventListener('click', function(e) {
+                    if (e.target === editModal) {
+                        closeEditModal();
+                    }
+                });
+            }
+            
             // Tablo satırlarına hover efekti
             const tableRows = document.querySelectorAll('.users-table tbody tr');
             tableRows.forEach(row => {

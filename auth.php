@@ -183,6 +183,9 @@ class Auth {
             case 'admin':
                 header('Location: admin/dashboard.php');
                 break;
+            case 'region_leader':
+                header('Location: region_leader/dashboard.php');
+                break;
             case 'teacher':
                 header('Location: teacher/dashboard.php');
                 break;

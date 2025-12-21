@@ -570,6 +570,12 @@ body {
     border: 1px solid rgba(239, 68, 68, 0.2);
 }
 
+.role-region_leader {
+    background: rgba(139, 92, 246, 0.1);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
 
 /* Badges */
 .badge {

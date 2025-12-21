@@ -80,8 +80,11 @@ class Database {
             if (!in_array('phone', $columnNames)) {
                 $this->connection->exec("ALTER TABLE users ADD COLUMN phone VARCHAR(20) DEFAULT '' AFTER email");
             }
+            if (!in_array('region', $columnNames)) {
+                $this->connection->exec("ALTER TABLE users ADD COLUMN region VARCHAR(100) DEFAULT '' AFTER phone");
+            }
             if (!in_array('must_change_password', $columnNames)) {
-                $this->connection->exec("ALTER TABLE users ADD COLUMN must_change_password BOOLEAN DEFAULT TRUE AFTER phone");
+                $this->connection->exec("ALTER TABLE users ADD COLUMN must_change_password BOOLEAN DEFAULT TRUE AFTER region");
             }
             if (!in_array('last_login', $columnNames)) {
                 $this->connection->exec("ALTER TABLE users ADD COLUMN last_login TIMESTAMP NULL AFTER created_at");
@@ -93,6 +96,14 @@ class Database {
                 $this->connection->exec("ALTER TABLE users ADD COLUMN updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP AFTER password_changed_at");
             }
             
+            // Role ENUM'una region_leader ekle
+            try {
+                $this->connection->exec("ALTER TABLE users MODIFY COLUMN role ENUM('superadmin', 'admin', 'teacher', 'student', 'region_leader') NOT NULL");
+            } catch (PDOException $e) {
+                // Eğer zaten varsa hata vermez
+                error_log("Role enum güncelleme: " . $e->getMessage());
+            }
+            
             return true;
         } else {
             // Tablo yoksa oluştur
@@ -100,12 +111,13 @@ class Database {
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 username VARCHAR(50) UNIQUE NOT NULL,
                 password VARCHAR(255) NOT NULL,
-                role ENUM('superadmin', 'admin', 'teacher', 'student') NOT NULL,
+                role ENUM('superadmin', 'admin', 'teacher', 'student', 'region_leader') NOT NULL,
                 full_name VARCHAR(200) NOT NULL,
                 branch VARCHAR(100) DEFAULT '',
                 class_section VARCHAR(50) DEFAULT '',
                 email VARCHAR(100) DEFAULT '',
                 phone VARCHAR(20) DEFAULT '',
+                region VARCHAR(100) DEFAULT '',
                 user_type VARCHAR(20) DEFAULT '',
                 is_admin TINYINT(1) DEFAULT 0,
                 is_superadmin TINYINT(1) DEFAULT 0,
