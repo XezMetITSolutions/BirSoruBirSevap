@@ -1,6 +1,6 @@
 <?php
 /**
- * Eğitim Başkanı - Kullanıcı Listesi (Sadece Görüntüleme)
+ * Şube Eğitim Başkanı - Kullanıcı Yönetimi (Ekleme/Düzenleme Yetkili)
  */
 
 require_once '../auth.php';
@@ -27,6 +27,113 @@ if (empty($userBranch)) {
 if ($user && ($user['must_change_password'] ?? false)) {
     header('Location: ../change_password.php');
     exit;
+}
+
+$message = '';
+$messageType = '';
+
+// Kullanıcı adı normalize
+function normalizeUsername($firstName, $lastName) {
+    $map = ['Ü'=>'ue','ü'=>'ue','Ö'=>'oe','ö'=>'oe','Ğ'=>'g','ğ'=>'g','Ş'=>'s','ş'=>'s','Ç'=>'c','ç'=>'c','İ'=>'i','I'=>'i','ı'=>'i'];
+    // Soyadından ilk 5 harf, addan ilk 3 harf
+    $lName = mb_substr($lastName, 0, 5);
+    $fName = mb_substr($firstName, 0, 3);
+    return strtolower(str_replace(array_keys($map), array_values($map), $lName . '.' . $fName));
+}
+
+// POST İşlemleri
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $action = $_POST['action'] ?? '';
+    
+    if ($action === 'add_user') {
+        try {
+            $fname = trim($_POST['first_name'] ?? '');
+            $lname = trim($_POST['last_name'] ?? '');
+            $role = $_POST['role'] ?? 'student';
+            
+            // Sadece student ve teacher ekleyebilir
+            if (!in_array($role, ['student', 'teacher'])) {
+                throw new Exception("Sadece öğrenci ve eğitmen ekleyebilirsiniz.");
+            }
+            
+            if (empty($fname) || empty($lname)) throw new Exception("Ad ve Soyad zorunlu.");
+
+            $baseUsername = normalizeUsername($fname, $lname);
+            $username = $baseUsername;
+            $counter = 1;
+            $existingUsers = $auth->getAllUsers();
+            
+            while (isset($existingUsers[$username])) {
+                $username = $baseUsername . $counter++;
+            }
+            
+            $password = 'iqra2025#';
+            $fullName = $fname . ' ' . $lname;
+            $region = getRegionByBranch($userBranch) ?? 'Arlberg';
+            
+            if ($auth->saveUser($username, $password, $role, $fullName, $userBranch, 
+                $_POST['class_section'] ?? '', $_POST['email'] ?? '', $_POST['phone'] ?? '', $region)) {
+                $message = "✓ Kullanıcı oluşturuldu: <strong>$username</strong> / <strong>$password</strong>";
+                $messageType = 'success';
+            } else {
+                throw new Exception("Kayıt başarısız.");
+            }
+        } catch (Exception $e) {
+            $message = $e->getMessage();
+            $messageType = 'error';
+        }
+    }
+    
+    elseif ($action === 'edit_user') {
+        try {
+            $username = $_POST['username'] ?? '';
+            $fname = trim($_POST['first_name'] ?? '');
+            $lname = trim($_POST['last_name'] ?? '');
+            $role = $_POST['role'] ?? '';
+            $newPassword = $_POST['new_password'] ?? '';
+            
+            // Sadece student ve teacher düzenleyebilir
+            if (!in_array($role, ['student', 'teacher'])) {
+                throw new Exception("Sadece öğrenci ve eğitmen düzenleyebilirsiniz.");
+            }
+            
+            if (empty($username) || empty($fname) || empty($lname)) {
+                throw new Exception("Kullanıcı adı, ad ve soyad zorunlu.");
+            }
+            
+            $fullName = $fname . ' ' . $lname;
+            $password = !empty($newPassword) ? $newPassword : 'iqra2025#';
+            $region = getRegionByBranch($userBranch) ?? 'Arlberg';
+            
+            if ($auth->saveUser($username, $password, $role, $fullName, $userBranch,
+                $_POST['class_section'] ?? '', $_POST['email'] ?? '', $_POST['phone'] ?? '', $region)) {
+                $message = "✓ Kullanıcı güncellendi: <strong>$username</strong>";
+                $messageType = 'success';
+            } else {
+                throw new Exception("Güncelleme başarısız.");
+            }
+        } catch (Exception $e) {
+            $message = $e->getMessage();
+            $messageType = 'error';
+        }
+    }
+    
+    elseif ($action === 'delete_user') {
+        try {
+            $username = $_POST['username'] ?? '';
+            if (empty($username)) throw new Exception("Kullanıcı adı gerekli.");
+            
+            if ($auth->deleteUser($username)) {
+                $message = "✓ Kullanıcı silindi.";
+                $messageType = 'success';
+            } else {
+                throw new Exception("Silme işlemi başarısız.");
+            }
+        } catch (Exception $e) {
+            $message = $e->getMessage();
+            $messageType = 'error';
+        }
+    }
 }
 
 // Sayfalama parametreleri
@@ -67,12 +174,12 @@ try {
     $stmt->execute($params);
     $allUsers = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-    // Filtreleme (institution filter için)
+    // Filtreleme
     $filteredUsers = [];
     foreach ($allUsers as $userData) {
         $institution = $userData['branch'] ?? 'Belirtilmemiş';
         
-        $user = [
+        $userItem = [
             'username' => $userData['username'],
             'role' => $userData['role'],
             'name' => $userData['full_name'] ?? 'Bilinmiyor',
@@ -85,7 +192,7 @@ try {
             'last_login' => $userData['last_login'] ?? 'Hiç giriş yapmamış'
         ];
         
-        $filteredUsers[] = $user;
+        $filteredUsers[] = $userItem;
     }
     
 } catch (Exception $e) {
@@ -127,25 +234,36 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 <i class="fas fa-bars"></i>
             </div>
             <div class="welcome-text">
-                <h2>Kullanıcılar</h2>
-                <p><?php echo htmlspecialchars($userBranch); ?> - Kullanıcı Listesi</p>
+                <h2>Kullanıcı Yönetimi</h2>
+                <p><?php echo htmlspecialchars($userBranch); ?> - Kullanıcıları Yönet</p>
             </div>
         </div>
 
+        <?php if ($message): ?>
+        <div class="alert alert-<?php echo $messageType; ?>" style="margin-bottom: 20px;">
+            <?php echo $message; ?>
+        </div>
+        <?php endif; ?>
+
         <!-- Şube Bilgisi -->
         <div class="glass-panel" style="padding: 20px; margin-bottom: 30px; background: linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(59,130,246,0.05) 100%); border-left: 4px solid #3b82f6;">
-            <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.5rem;">
-                    <i class="fas fa-building"></i>
-                </div>
-                <div style="flex: 1;">
-                    <div style="font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
-                        <?php echo htmlspecialchars($userBranch); ?>
+            <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.5rem;">
+                        <i class="fas fa-building"></i>
                     </div>
-                    <div style="font-size: 0.9rem; color: var(--text-muted);">
-                        <i class="fas fa-users"></i> <?php echo $totalUsers; ?> Kullanıcı
+                    <div style="flex: 1;">
+                        <div style="font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
+                            <?php echo htmlspecialchars($userBranch); ?>
+                        </div>
+                        <div style="font-size: 0.9rem; color: var(--text-muted);">
+                            <i class="fas fa-users"></i> <?php echo $totalUsers; ?> Kullanıcı
+                        </div>
                     </div>
                 </div>
+                <button onclick="openModal('addModal')" class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i> Kullanıcı Ekle
+                </button>
             </div>
         </div>
 
@@ -183,17 +301,6 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     <?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'teacher')); ?>
                 </div>
                 <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Eğitmen</div>
-            </div>
-            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(139,92,246,0.15) 0%, rgba(139,92,246,0.05) 100%); border-left: 4px solid #8b5cf6; transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(139,92,246,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(139,92,246,0.2); display: flex; align-items: center; justify-content: center; color: #8b5cf6; font-size: 1.5rem;">
-                        <i class="fas fa-building"></i>
-                    </div>
-                </div>
-                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
-                    <?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'branch_leader')); ?>
-                </div>
-                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Eğitim Başkanı</div>
             </div>
         </div>
 
@@ -270,28 +377,27 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                             <tr>
                                 <th style="padding: 18px 24px;"><i class="fas fa-user" style="margin-right: 8px; opacity: 0.7;"></i>Kullanıcı</th>
                                 <th style="padding: 18px 24px;"><i class="fas fa-user-tag" style="margin-right: 8px; opacity: 0.7;"></i>Rol</th>
-                                <th style="padding: 18px 24px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px; opacity: 0.7;"></i>Bölge</th>
-                                <th style="padding: 18px 24px;"><i class="fas fa-building" style="margin-right: 8px; opacity: 0.7;"></i>Şube</th>
                                 <th style="padding: 18px 24px;"><i class="fas fa-address-card" style="margin-right: 8px; opacity: 0.7;"></i>İletişim</th>
                                 <th style="padding: 18px 24px;"><i class="fas fa-calendar-alt" style="margin-right: 8px; opacity: 0.7;"></i>Kayıt Tarihi</th>
+                                <th style="padding: 18px 24px;"><i class="fas fa-cog" style="margin-right: 8px; opacity: 0.7;"></i>İşlemler</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($users as $index => $user): ?>
+                            <?php foreach ($users as $index => $userItem): ?>
                                 <tr style="transition: all 0.2s ease; animation: fadeInRow 0.3s ease <?php echo $index * 0.02; ?>s both;">
                                     <td>
                                         <div class="user-info">
                                             <div class="user-avatar" style="box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                                                <?php echo strtoupper(substr($user['name'] ?? 'U', 0, 1)); ?>
+                                                <?php echo strtoupper(substr($userItem['name'] ?? 'U', 0, 1)); ?>
                                             </div>
                                             <div class="user-details">
-                                                <div class="user-name" style="font-weight: 600; color: white;"><?php echo htmlspecialchars($user['name'] ?? 'Bilinmiyor'); ?></div>
-                                                <div class="user-username" style="font-size: 0.85em; color: var(--text-muted);">@<?php echo htmlspecialchars($user['username']); ?></div>
+                                                <div class="user-name" style="font-weight: 600; color: white;"><?php echo htmlspecialchars($userItem['name'] ?? 'Bilinmiyor'); ?></div>
+                                                <div class="user-username" style="font-size: 0.85em; color: var(--text-muted);">@<?php echo htmlspecialchars($userItem['username']); ?></div>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <span class="role-badge role-<?php echo $user['role']; ?>">
+                                        <span class="role-badge role-<?php echo $userItem['role']; ?>">
                                             <?php 
                                             $roleIcons = [
                                                 'student' => '<i class="fas fa-user-graduate"></i>',
@@ -301,50 +407,45 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                                 'student' => 'Öğrenci',
                                                 'teacher' => 'Eğitmen'
                                             ];
-                                            echo ($roleIcons[$user['role']] ?? '') . ' ' . ($roleNames[$user['role']] ?? ucfirst($user['role']));
+                                            echo ($roleIcons[$userItem['role']] ?? '') . ' ' . ($roleNames[$userItem['role']] ?? ucfirst($userItem['role']));
                                             ?>
                                         </span>
                                     </td>
                                     <td>
-                                        <?php if (!empty($user['region'])): ?>
-                                            <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(139,92,246,0.15); color: #a78bfa; padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(139,92,246,0.2); font-weight: 500; font-size: 0.9rem;">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span><?php echo htmlspecialchars($user['region']); ?></span>
-                                            </div>
-                                        <?php else: ?>
-                                            <span style="color: var(--text-muted); font-size: 0.9rem; font-style: italic;">Belirtilmemiş</span>
-                                        <?php endif; ?>
-                                    </td>
-                                    <td>
-                                        <div style="font-weight: 500; color: #e2e8f0;">
-                                            <?php echo htmlspecialchars($user['institution']); ?>
-                                        </div>
-                                        <?php if (!empty($user['class_section'])): ?>
-                                            <div style="font-size: 0.8rem; color: #7f8c8d; margin-top: 4px; display: inline-block; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px;">
-                                                <i class="fas fa-layer-group"></i> <?php echo htmlspecialchars($user['class_section']); ?>
-                                            </div>
-                                        <?php endif; ?>
-                                    </td>
-                                    <td>
                                         <div style="display: flex; flex-direction: column; gap: 4px;">
-                                        <?php if (!empty($user['email'])): ?>
+                                        <?php if (!empty($userItem['email'])): ?>
                                             <div style="font-size: 0.85rem; color: var(--text-muted);">
-                                                <i class="fas fa-envelope" style="width: 16px;"></i> <?php echo htmlspecialchars($user['email']); ?>
+                                                <i class="fas fa-envelope" style="width: 16px;"></i> <?php echo htmlspecialchars($userItem['email']); ?>
                                             </div>
                                         <?php endif; ?>
-                                        <?php if (!empty($user['phone'])): ?>
+                                        <?php if (!empty($userItem['phone'])): ?>
                                             <div style="font-size: 0.85rem; color: var(--text-muted);">
-                                                <i class="fas fa-phone" style="width: 16px;"></i> <?php echo htmlspecialchars($user['phone']); ?>
+                                                <i class="fas fa-phone" style="width: 16px;"></i> <?php echo htmlspecialchars($userItem['phone']); ?>
+                                            </div>
+                                        <?php endif; ?>
+                                        <?php if (!empty($userItem['class_section'])): ?>
+                                            <div style="font-size: 0.8rem; color: #7f8c8d; display: inline-block; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px;">
+                                                <i class="fas fa-layer-group"></i> <?php echo htmlspecialchars($userItem['class_section']); ?>
                                             </div>
                                         <?php endif; ?>
                                         </div>
                                     </td>
                                     <td>
                                         <div style="font-size: 0.9rem; color: #e2e8f0;">
-                                            <?php echo date('d.m.Y', strtotime($user['created_at'])); ?>
+                                            <?php echo date('d.m.Y', strtotime($userItem['created_at'])); ?>
                                         </div>
                                         <div style="font-size: 0.8rem; color: #7f8c8d;">
-                                            <?php echo date('H:i', strtotime($user['created_at'])); ?>
+                                            <?php echo date('H:i', strtotime($userItem['created_at'])); ?>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div style="display: flex; gap: 8px;">
+                                            <button onclick='editUser(<?php echo json_encode($userItem); ?>)' class="btn-icon" style="background: rgba(59,130,246,0.2); color: #3b82f6;" title="Düzenle">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button onclick="deleteUser('<?php echo htmlspecialchars($userItem['username']); ?>', '<?php echo htmlspecialchars($userItem['name']); ?>')" class="btn-icon" style="background: rgba(239,68,68,0.2); color: #ef4444;" title="Sil">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
@@ -364,7 +465,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                     style="padding: 10px 16px; background: <?php echo $currentPage == 1 ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.08)'; ?>; color: <?php echo $currentPage == 1 ? 'var(--text-muted)' : '#fff'; ?>; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: <?php echo $currentPage == 1 ? 'not-allowed' : 'pointer'; ?>; transition: all 0.2s; font-weight: 500;"
                                     <?php if ($currentPage != 1): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
                                 <i class="fas fa-angle-double-left"></i> İlk
-                            </button>
+                           </button>
                             <button onclick="goToPage(<?php echo $currentPage - 1; ?>)" <?php echo $currentPage == 1 ? 'disabled' : ''; ?>
                                     style="padding: 10px 16px; background: <?php echo $currentPage == 1 ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.08)'; ?>; color: <?php echo $currentPage == 1 ? 'var(--text-muted)' : '#fff'; ?>; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: <?php echo $currentPage == 1 ? 'not-allowed' : 'pointer'; ?>; transition: all 0.2s; font-weight: 500;"
                                     <?php if ($currentPage != 1): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
@@ -375,16 +476,6 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                             $startPage = max(1, $currentPage - 2);
                             $endPage = min($totalPages, $currentPage + 2);
                             
-                            if ($startPage > 1): ?>
-                                <button onclick="goToPage(1)" style="padding: 10px 14px; background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: pointer; transition: all 0.2s; font-weight: 500;"
-                                        onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'">
-                                    1
-                                </button>
-                                <?php if ($startPage > 2): ?>
-                                    <span style="color: var(--text-muted); padding: 0 8px;">...</span>
-                                <?php endif; ?>
-                            <?php endif;
-                            
                             for ($i = $startPage; $i <= $endPage; $i++):
                             ?>
                                 <button onclick="goToPage(<?php echo $i; ?>)" 
@@ -392,17 +483,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                         <?php if ($i != $currentPage): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
                                     <?php echo $i; ?>
                                 </button>
-                            <?php endfor; 
-                            
-                            if ($endPage < $totalPages): ?>
-                                <?php if ($endPage < $totalPages - 1): ?>
-                                    <span style="color: var(--text-muted); padding: 0 8px;">...</span>
-                                <?php endif; ?>
-                                <button onclick="goToPage(<?php echo $totalPages; ?>)" style="padding: 10px 14px; background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: pointer; transition: all 0.2s; font-weight: 500;"
-                                        onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'">
-                                    <?php echo $totalPages; ?>
-                                </button>
-                            <?php endif; ?>
+                            <?php endfor; ?>
                             
                             <button onclick="goToPage(<?php echo $currentPage + 1; ?>)" <?php echo $currentPage == $totalPages ? 'disabled' : ''; ?>
                                     style="padding: 10px 16px; background: <?php echo $currentPage == $totalPages ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.08)'; ?>; color: <?php echo $currentPage == $totalPages ? 'var(--text-muted)' : '#fff'; ?>; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: <?php echo $currentPage == $totalPages ? 'not-allowed' : 'pointer'; ?>; transition: all 0.2s; font-weight: 500;"
@@ -421,6 +502,124 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         </div>
     </div>
 
+    <!-- Add User Modal -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Yeni Kullanıcı Ekle</h2>
+                <button onclick="closeModal('addModal')" class="btn-icon">×</button>
+            </div>
+            <form method="POST">
+                <input type="hidden" name="action" value="add_user">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Ad</label>
+                        <input type="text" name="first_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Soyad</label>
+                        <input type="text" name="last_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Rol</label>
+                        <select name="role" required>
+                            <option value="student">Öğrenci</option>
+                            <option value="teacher">Eğitmen</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Sınıf (Opsiyonel)</label>
+                        <input type="text" name="class_section" placeholder="örn: 9A">
+                    </div>
+                    <div class="form-group">
+                        <label>E-posta (Opsiyonel)</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon (Opsiyonel)</label>
+                        <input type="tel" name="phone">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="closeModal('addModal')" class="btn btn-secondary">İptal</button>
+                    <button type="submit" class="btn btn-primary">Kullanıcı Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit User Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Kullanıcıyı Düzenle</h2>
+                <button onclick="closeModal('editModal')" class="btn-icon">×</button>
+            </div>
+            <form method="POST">
+                <input type="hidden" name="action" value="edit_user">
+                <input type="hidden" name="username" id="edit_username">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Ad</label>
+                        <input type="text" name="first_name" id="edit_first_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Soyad</label>
+                        <input type="text" name="last_name" id="edit_last_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Rol</label>
+                        <select name="role" id="edit_role" required>
+                            <option value="student">Öğrenci</option>
+                            <option value="teacher">Eğitmen</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Sınıf (Opsiyonel)</label>
+                        <input type="text" name="class_section" id="edit_class_section">
+                    </div>
+                    <div class="form-group">
+                        <label>E-posta (Opsiyonel)</label>
+                        <input type="email" name="email" id="edit_email">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon (Opsiyonel)</label>
+                        <input type="tel" name="phone" id="edit_phone">
+                    </div>
+                    <div class="form-group">
+                        <label>Yeni Şifre (Opsiyonel - boş bırak değiştirmek istemiyorsan)</label>
+                        <input type="text" name="new_password" id="edit_new_password" placeholder="Yeni şifre">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="closeModal('editModal')" class="btn btn-secondary">İptal</button>
+                    <button type="submit" class="btn btn-primary">Güncelle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Kullanıcıyı Sil</h2>
+                <button onclick="closeModal('deleteModal')" class="btn-icon">×</button>
+            </div>
+            <form method="POST">
+                <input type="hidden" name="action" value="delete_user">
+                <input type="hidden" name="username" id="delete_username">
+                <div class="modal-body">
+                    <p id="delete_message" style="margin-bottom: 20px;"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="closeModal('deleteModal')" class="btn btn-secondary">İptal</button>
+                    <button type="submit" class="btn" style="background: #ef4444;">Sil</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script>
         function goToPage(page) {
             const url = new URL(window.location);
@@ -433,6 +632,44 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
             url.searchParams.set('items_per_page', itemsPerPage);
             url.searchParams.set('page', 1);
             window.location.href = url.toString();
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        function editUser(user) {
+            const nameParts = user.name.split(' ');
+            const firstName = nameParts.shift() || '';
+            const lastName = nameParts.join(' ') || '';
+            
+            document.getElementById('edit_username').value = user.username;
+            document.getElementById('edit_first_name').value = firstName;
+            document.getElementById('edit_last_name').value = lastName;
+            document.getElementById('edit_role').value = user.role;
+            document.getElementById('edit_class_section').value = user.class_section || '';
+            document.getElementById('edit_email').value = user.email || '';
+            document.getElementById('edit_phone').value = user.phone || '';
+            document.getElementById('edit_new_password').value = '';
+            
+            openModal('editModal');
+        }
+
+        function deleteUser(username, name) {
+            document.getElementById('delete_username').value = username;
+            document.getElementById('delete_message').textContent = `"${name}" kullanıcısını silmek istediğinizden emin misiniz?`;
+            openModal('deleteModal');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
         }
 
         // Sayfa yüklendiğinde animasyonlar
@@ -451,5 +688,3 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
     </script>
 </body>
 </html>
-
-
