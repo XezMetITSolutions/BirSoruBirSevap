@@ -129,6 +129,18 @@ try {
     $branchUsers = [];
     error_log("Dashboard error: " . $e->getMessage());
 }
+
+// Final debug - HTML'den hemen önce değerleri kontrol et
+if (isset($_GET['debug'])) {
+    echo "<pre style='background: #f00; color: #fff; padding: 20px; position: fixed; top: 10px; left: 10px; z-index: 9999; border: 2px solid #fff;'>";
+    echo "FINAL VALUES BEFORE HTML:\n";
+    echo "totalUsers: " . ($totalUsers ?? 'UNDEFINED') . "\n";
+    echo "totalStudents: " . ($totalStudents ?? 'UNDEFINED') . "\n";
+    echo "totalTeachers: " . ($totalTeachers ?? 'UNDEFINED') . "\n";
+    echo "totalExams: " . ($totalExams ?? 'UNDEFINED') . "\n";
+    echo "totalPractices: " . ($totalPractices ?? 'UNDEFINED') . "\n";
+    echo "</pre>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="tr">
