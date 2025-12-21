@@ -491,31 +491,51 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
             <?php echo $success; ?>
         <?php endif; ?>
 
-        <!-- Minimal Stats -->
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 30px;">
-            <div class="glass-panel" style="padding: 20px; text-align: center;">
-                <div style="font-size: 2rem; font-weight: 700; color: #068567; margin-bottom: 5px;">
+        <!-- Modern Stats Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 30px;">
+            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(6,133,103,0.15) 0%, rgba(6,133,103,0.05) 100%); border-left: 4px solid var(--primary); transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(6,133,103,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(6,133,103,0.2); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.5rem;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
                     <?php echo $totalUsers; ?>
                 </div>
-                <div style="font-size: 0.85rem; color: var(--text-muted);">Toplam</div>
+                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Toplam Kullanıcı</div>
             </div>
-            <div class="glass-panel" style="padding: 20px; text-align: center;">
-                <div style="font-size: 2rem; font-weight: 700; color: #3b82f6; margin-bottom: 5px;">
+            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(59,130,246,0.05) 100%); border-left: 4px solid #3b82f6; transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(59,130,246,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.5rem;">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
                     <?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'student')); ?>
                 </div>
-                <div style="font-size: 0.85rem; color: var(--text-muted);">Öğrenci</div>
+                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Öğrenci</div>
             </div>
-            <div class="glass-panel" style="padding: 20px; text-align: center;">
-                <div style="font-size: 2rem; font-weight: 700; color: #f59e0b; margin-bottom: 5px;">
+            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0.05) 100%); border-left: 4px solid #f59e0b; transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(245,158,11,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(245,158,11,0.2); display: flex; align-items: center; justify-content: center; color: #f59e0b; font-size: 1.5rem;">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                </div>
+                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
                     <?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'teacher')); ?>
                 </div>
-                <div style="font-size: 0.85rem; color: var(--text-muted);">Eğitmen</div>
+                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Eğitmen</div>
             </div>
-            <div class="glass-panel" style="padding: 20px; text-align: center;">
-                <div style="font-size: 2rem; font-weight: 700; color: #ef4444; margin-bottom: 5px;">
+            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(239,68,68,0.15) 0%, rgba(239,68,68,0.05) 100%); border-left: 4px solid #ef4444; transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(239,68,68,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(239,68,68,0.2); display: flex; align-items: center; justify-content: center; color: #ef4444; font-size: 1.5rem;">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                </div>
+                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
                     <?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'superadmin')); ?>
                 </div>
-                <div style="font-size: 0.85rem; color: var(--text-muted);">Admin</div>
+                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Admin</div>
             </div>
         </div>
 
@@ -803,7 +823,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
     </div>
 
     <!-- Add User Modal -->
-    <div id="addUserModal" class="modal">
+    <div id="addUserModal" class="modal" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title">➕ Yeni Kullanıcı Ekle</h3>
@@ -823,8 +843,12 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     <input type="text" id="add_last_name" name="last_name" required placeholder="Örn: Yılmaz" oninput="updateAddUsernamePreview()">
                 </div>
                 
-                <div id="add-username-preview" style="background: #e8f4fd; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-family: monospace; color: #2c3e50;">
-                    <strong>Oluşturulacak Kullanıcı Adı:</strong> <span id="add-preview-username">...</span>
+                <div id="add-username-preview" style="background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); padding: 14px 16px; border-radius: 12px; margin-bottom: 20px; font-family: 'Courier New', monospace; color: #60a5fa; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-info-circle" style="font-size: 1.2rem;"></i>
+                    <div style="flex: 1;">
+                        <strong style="color: #fff; display: block; margin-bottom: 4px; font-size: 0.9rem;">Oluşturulacak Kullanıcı Adı:</strong>
+                        <span id="add-preview-username" style="color: #60a5fa; font-size: 1rem; font-weight: 600;">...</span>
+                    </div>
                 </div>
                 
                 <div class="form-group">
@@ -899,7 +923,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
     </div>
 
     <!-- Edit User Modal -->
-    <div id="editModal" class="modal">
+    <div id="editModal" class="modal" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title">✏️ Kullanıcı Düzenle</h3>
@@ -973,7 +997,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
     </div>
 
     <!-- Import Modal -->
-    <div id="importModal" class="modal">
+    <div id="importModal" class="modal" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title">📥 CSV Import</h3>
@@ -1209,8 +1233,13 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         }
 
 
-        // Sayfa yüklendiğinde animasyonlar
+        // Sayfa yüklendiğinde animasyonlar ve modal kontrolü
         document.addEventListener('DOMContentLoaded', function() {
+            // Modal'ların başlangıçta kapalı olduğundan emin ol
+            document.getElementById('addUserModal').style.display = 'none';
+            document.getElementById('editModal').style.display = 'none';
+            document.getElementById('importModal').style.display = 'none';
+            
             // Stats kartlarına animasyon ekle
             const statCards = document.querySelectorAll('.glass-panel');
             statCards.forEach((card, index) => {
