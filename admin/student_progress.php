@@ -282,84 +282,123 @@ if ($selectedUser) {
         </div>
         <?php endif; ?>
 
-        <!-- Student Info Card -->
+        <!-- Modern Student Info Card -->
         <?php if ($selectedStudentInfo): ?>
-        <div class="card fade-in" style="background: linear-gradient(135deg, rgba(6, 133, 103, 0.1) 0%, rgba(52, 152, 219, 0.1) 100%);">
-            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-                <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8em; font-weight: 700; box-shadow: 0 4px 15px rgba(6, 133, 103, 0.3);">
+        <div class="glass-panel fade-in" style="padding: 28px; margin-bottom: 30px; background: linear-gradient(135deg, rgba(6,133,103,0.15) 0%, rgba(6,133,103,0.05) 100%); border-left: 4px solid var(--primary);">
+            <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+                <div style="width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: 700; box-shadow: 0 8px 24px rgba(6,133,103,0.4); flex-shrink: 0;">
                     <?php echo strtoupper(substr($selectedStudentInfo['full_name'], 0, 1)); ?>
                 </div>
-                <div style="flex: 1;">
-                    <h2 style="margin: 0 0 5px 0; font-size: 1.5em;">
-                        <i class="fas fa-user-graduate"></i> 
+                <div style="flex: 1; min-width: 200px;">
+                    <h2 style="margin: 0 0 8px 0; font-size: 1.6rem; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-user-graduate" style="color: var(--primary);"></i>
                         <?php echo htmlspecialchars($selectedStudentInfo['full_name']); ?>
                     </h2>
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap; color: #7f8c8d;">
-
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 12px;">
                         <?php if ($selectedStudentInfo['branch']): ?>
-                        <span><i class="fas fa-school"></i> <strong>Şube:</strong> <?php echo htmlspecialchars($selectedStudentInfo['branch']); ?></span>
+                        <div style="display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); padding: 8px 14px; border-radius: 10px;">
+                            <i class="fas fa-building" style="color: var(--primary);"></i>
+                            <span style="color: var(--text-muted); font-size: 0.9rem;"><strong style="color: #fff;">Şube:</strong> <?php echo htmlspecialchars($selectedStudentInfo['branch']); ?></span>
+                        </div>
                         <?php endif; ?>
-                        <span><i class="fas fa-id-badge"></i> <strong>Kullanıcı Adı:</strong> <?php echo htmlspecialchars($selectedStudentInfo['username']); ?></span>
+                        <div style="display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); padding: 8px 14px; border-radius: 10px;">
+                            <i class="fas fa-id-badge" style="color: var(--primary);"></i>
+                            <span style="color: var(--text-muted); font-size: 0.9rem;"><strong style="color: #fff;">Kullanıcı:</strong> <?php echo htmlspecialchars($selectedStudentInfo['username']); ?></span>
+                        </div>
+                        <?php if ($selectedStudentInfo['class_section']): ?>
+                        <div style="display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); padding: 8px 14px; border-radius: 10px;">
+                            <i class="fas fa-layer-group" style="color: var(--primary);"></i>
+                            <span style="color: var(--text-muted); font-size: 0.9rem;"><strong style="color: #fff;">Sınıf:</strong> <?php echo htmlspecialchars($selectedStudentInfo['class_section']); ?></span>
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
         </div>
         <?php else: ?>
-        <div class="card fade-in" style="text-align: center; padding: 50px;">
-            <div style="font-size: 4em; color: #e1e8ed; margin-bottom: 20px;"><i class="fas fa-user-graduate"></i></div>
-            <h2 style="color: var(--text-muted);">Öğrenci Gelişimini Görüntüle</h2>
-            <p style="color: #95a5a6; max-width: 500px; margin: 0 auto;">Detaylı istatistikleri ve performans verilerini görmek için lütfen sol taraftaki filtrelerden veya arama kutusundan bir öğrenci seçiniz.</p>
+        <div class="glass-panel fade-in" style="text-align: center; padding: 60px 30px; margin-bottom: 30px;">
+            <div style="width: 120px; height: 120px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; color: rgba(255,255,255,0.15);">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            <h2 style="color: #fff; margin-bottom: 12px; font-size: 1.5rem; font-weight: 600;">Öğrenci Gelişimini Görüntüle</h2>
+            <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto; font-size: 0.95rem;">Detaylı istatistikleri ve performans verilerini görmek için lütfen aşağıdaki filtrelerden bir öğrenci seçiniz.</p>
         </div>
         <?php endif; ?>
 
-        <!-- Stats Grid -->
-        <div class="stats-grid fade-in">
-            <div class="stat-card">
-                <div class="stat-header">
-                    <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+        <!-- Modern Stats Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 30px;">
+            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(59,130,246,0.05) 100%); border-left: 4px solid #3b82f6; transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(59,130,246,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.5rem;">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
                 </div>
-                <h3><?php echo count($filteredStudents); ?></h3>
-                <p>Toplam Öğrenci</p>
+                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
+                    <?php echo count($filteredStudents); ?>
+                </div>
+                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Toplam Öğrenci</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-header">
-                    <div class="stat-icon"><i class="fas fa-dumbbell"></i></div>
+            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(6,133,103,0.15) 0%, rgba(6,133,103,0.05) 100%); border-left: 4px solid var(--primary); transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(6,133,103,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(6,133,103,0.2); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.5rem;">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
                 </div>
-                <h3><?php echo $pCount; ?></h3>
-                <p>Alıştırma Sayısı</p>
+                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
+                    <?php echo $pCount; ?>
+                </div>
+                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Alıştırma Sayısı</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-header">
-                    <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
+            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(52,152,219,0.15) 0%, rgba(52,152,219,0.05) 100%); border-left: 4px solid #3498db; transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(52,152,219,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(52,152,219,0.2); display: flex; align-items: center; justify-content: center; color: #3498db; font-size: 1.5rem;">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
                 </div>
-                <h3><?php echo $eCount; ?></h3>
-                <p>Sınav Sayısı</p>
+                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
+                    <?php echo $eCount; ?>
+                </div>
+                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Sınav Sayısı</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-header">
-                    <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+            <div class="glass-panel" style="padding: 24px; background: linear-gradient(135deg, rgba(245,158,11,0.15) 0%, rgba(245,158,11,0.05) 100%); border-left: 4px solid #f59e0b; transition: all 0.3s ease; cursor: default;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(245,158,11,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(245,158,11,0.2); display: flex; align-items: center; justify-content: center; color: #f59e0b; font-size: 1.5rem;">
+                        <i class="fas fa-trophy"></i>
+                    </div>
                 </div>
-                <h3><?php echo number_format($overallAvg, 1); ?>%</h3>
-                <p>Genel Ortalama</p>
+                <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
+                    <?php echo number_format($overallAvg, 1); ?>%
+                </div>
+                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Genel Ortalama</div>
             </div>
         </div>
 
-        <!-- Filters Card -->
-        <div class="card fade-in">
-            <h2><i class="fas fa-filter"></i> Filtreler</h2>
+        <!-- Modern Filters -->
+        <div class="glass-panel fade-in" style="padding: 24px; margin-bottom: 30px; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                <div style="width: 40px; height: 40px; border-radius: 12px; background: rgba(6,133,103,0.2); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                    <i class="fas fa-filter"></i>
+                </div>
+                <h2 style="margin: 0; font-size: 1.2rem; font-weight: 700; color: #fff;">Filtreler</h2>
+            </div>
             
             <!-- Search Box -->
-            <div class="search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" id="studentSearch" placeholder="Öğrenci ara..." value="">
+            <div style="position: relative; margin-bottom: 20px;">
+                <i class="fas fa-search" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); z-index: 1;"></i>
+                <input type="text" id="studentSearch" placeholder="Öğrenci ara..." value="" 
+                       style="width: 100%; padding: 12px 16px 12px 44px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: #fff; font-size: 0.95rem; transition: all 0.3s;"
+                       onfocus="this.style.background='rgba(0,0,0,0.4)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 0 0 3px rgba(6,133,103,0.1)'"
+                       onblur="this.style.background='rgba(0,0,0,0.3)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.boxShadow='none'">
             </div>
 
             <form method="GET" id="filterForm">
-                <div class="filters">
-                    <div class="filter-group">
-                        <label><i class="fas fa-school"></i> Şube</label>
-                        <select name="branch" id="branchSelect" onchange="this.form.submit()">
-                            <option value="">Tüm Branşlar</option>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-muted); font-size: 0.9rem;">
+                            <i class="fas fa-building"></i> Şube
+                        </label>
+                        <select name="branch" id="branchSelect" onchange="this.form.submit()" class="modern-select" style="width: 100%;">
+                            <option value="">🏢 Tüm Branşlar</option>
                             <?php foreach ($allBranches as $branch): ?>
                                 <option value="<?php echo htmlspecialchars($branch); ?>" <?php echo $branch===$selectedBranch?'selected':''; ?>>
                                     <?php echo htmlspecialchars($branch); ?>
@@ -368,14 +407,13 @@ if ($selectedUser) {
                         </select>
                     </div>
                     
-
-                    
-                    <div class="filter-group">
-                        <label><i class="fas fa-user"></i> Öğrenci Seç</label>
-                        <select name="user" id="userSelect" onchange="this.form.submit()">
-                            <?php if (empty($filteredStudents)): ?>
-                                <option value="">Öğrenci bulunamadı</option>
-                            <?php else: ?>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-muted); font-size: 0.9rem;">
+                            <i class="fas fa-user-graduate"></i> Öğrenci Seç
+                        </label>
+                        <select name="user" id="userSelect" onchange="this.form.submit()" class="modern-select" style="width: 100%;">
+                            <option value="">👤 Öğrenci Seçin</option>
+                            <?php if (!empty($filteredStudents)): ?>
                                 <?php foreach ($filteredStudents as $student): ?>
                                     <option value="<?php echo htmlspecialchars($student['username']); ?>" 
                                             <?php echo $student['username']===$selectedUser?'selected':''; ?>>
@@ -389,73 +427,114 @@ if ($selectedUser) {
                         </select>
                     </div>
                     
-                    <div class="filter-group">
-                        <label><i class="fas fa-calendar"></i> Başlangıç Tarihi</label>
-                        <input type="date" name="start_date" id="startDate" value="<?php echo htmlspecialchars($startDate); ?>">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-muted); font-size: 0.9rem;">
+                            <i class="fas fa-calendar-alt"></i> Başlangıç Tarihi
+                        </label>
+                        <input type="date" name="start_date" id="startDate" value="<?php echo htmlspecialchars($startDate); ?>" 
+                               class="modern-select" style="width: 100%; padding: 12px 16px;">
                     </div>
                     
-                    <div class="filter-group">
-                        <label><i class="fas fa-calendar-check"></i> Bitiş Tarihi</label>
-                        <input type="date" name="end_date" id="endDate" value="<?php echo htmlspecialchars($endDate); ?>">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-muted); font-size: 0.9rem;">
+                            <i class="fas fa-calendar-check"></i> Bitiş Tarihi
+                        </label>
+                        <input type="date" name="end_date" id="endDate" value="<?php echo htmlspecialchars($endDate); ?>" 
+                               class="modern-select" style="width: 100%; padding: 12px 16px;">
                     </div>
                     
-                    <div class="filter-group">
-                        <label><i class="fas fa-percentage"></i> Min. Başarı Oranı</label>
-                        <input type="number" name="min_score" id="minScore" placeholder="0" min="0" max="100" value="<?php echo htmlspecialchars($minScore); ?>">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-muted); font-size: 0.9rem;">
+                            <i class="fas fa-percentage"></i> Min. Başarı Oranı
+                        </label>
+                        <input type="number" name="min_score" id="minScore" placeholder="0" min="0" max="100" value="<?php echo htmlspecialchars($minScore); ?>" 
+                               class="modern-select" style="width: 100%; padding: 12px 16px;">
                     </div>
                 </div>
                 
-                <div style="display: flex; gap: 10px; margin-top: 15px;">
-                    <button type="submit" class="filter-btn">
+                <div style="display: flex; gap: 12px; margin-top: 20px;">
+                    <button type="submit" class="btn btn-primary" style="padding: 12px 24px;">
                         <i class="fas fa-check"></i> Filtrele
                     </button>
-                    <button type="button" class="filter-btn secondary" onclick="resetFilters()">
+                    <button type="button" class="btn btn-secondary" onclick="resetFilters()" style="padding: 12px 24px;">
                         <i class="fas fa-redo"></i> Sıfırla
                     </button>
                 </div>
             </form>
         </div>
 
-        <!-- Performance Chart -->
-        <div class="card fade-in">
-            <h2><i class="fas fa-chart-area"></i> Performans Grafiği</h2>
-            <div class="chart-container">
+        <!-- Modern Performance Chart -->
+        <div class="glass-panel fade-in" style="padding: 24px; margin-bottom: 30px;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <div style="width: 40px; height: 40px; border-radius: 12px; background: rgba(6,133,103,0.2); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                    <i class="fas fa-chart-area"></i>
+                </div>
+                <h2 style="margin: 0; font-size: 1.2rem; font-weight: 700; color: #fff;">Performans Grafiği</h2>
+            </div>
+            <div class="chart-container" style="height: 350px; position: relative;">
                 <canvas id="performanceChart"></canvas>
             </div>
         </div>
 
-        <!-- Tables Grid -->
-        <div class="grid fade-in">
+        <!-- Modern Tables Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; margin-bottom: 30px;">
             <!-- Practice Table -->
-            <div class="card">
-                <h3><i class="fas fa-dumbbell"></i> Alıştırmalar (<?php echo $pCount; ?>)</h3>
-                <div class="table-container">
-                    <table class="table" id="practiceTable">
-                        <thead>
+            <div class="glass-panel fade-in" style="overflow: hidden;">
+                <div style="padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="width: 40px; height: 40px; border-radius: 12px; background: rgba(6,133,103,0.2); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div>
+                            <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">Alıştırmalar</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted);">Toplam <?php echo $pCount; ?> kayıt</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive" style="overflow-x: auto; max-height: 500px; overflow-y: auto;">
+                    <table class="table users-table" id="practiceTable" style="margin: 0;">
+                        <thead style="position: sticky; top: 0; z-index: 10; background: rgba(15,23,42,0.95); backdrop-filter: blur(20px);">
                             <tr>
-                                <th onclick="sortTable('practiceTable', 0)">Tarih <i class="fas fa-sort"></i></th>
-                                <th onclick="sortTable('practiceTable', 1)">Soru <i class="fas fa-sort"></i></th>
-                                <th onclick="sortTable('practiceTable', 2)">Doğru <i class="fas fa-sort"></i></th>
-                                <th onclick="sortTable('practiceTable', 3)">Yanlış <i class="fas fa-sort"></i></th>
-                                <th onclick="sortTable('practiceTable', 4)">Başarı <i class="fas fa-sort"></i></th>
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', 0)">
+                                    <i class="fas fa-calendar-alt" style="margin-right: 8px; opacity: 0.7;"></i>Tarih <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
+                                </th>
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', 1)">
+                                    <i class="fas fa-question-circle" style="margin-right: 8px; opacity: 0.7;"></i>Soru <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
+                                </th>
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', 2)">
+                                    <i class="fas fa-check-circle" style="margin-right: 8px; opacity: 0.7;"></i>Doğru <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
+                                </th>
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', 3)">
+                                    <i class="fas fa-times-circle" style="margin-right: 8px; opacity: 0.7;"></i>Yanlış <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
+                                </th>
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', 4)">
+                                    <i class="fas fa-percentage" style="margin-right: 8px; opacity: 0.7;"></i>Başarı <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php if (!empty($studentProgress['practice'])): ?>
-                                <?php foreach ($studentProgress['practice'] as $row): 
+                                <?php foreach ($studentProgress['practice'] as $index => $row): 
                                     $percentage = (float)($row['percentage'] ?? 0);
                                     $badgeClass = $percentage >= 80 ? 'badge-success' : ($percentage >= 60 ? 'badge-warning' : 'badge-danger');
                                 ?>
-                                    <tr>
-                                        <td><?php echo htmlspecialchars($row['created_at'] ?? '-'); ?></td>
-                                        <td><?php echo (int)($row['total_questions'] ?? 0); ?></td>
-                                        <td><span class="badge badge-success"><?php echo (int)($row['correct_answers'] ?? 0); ?></span></td>
-                                        <td><span class="badge badge-danger"><?php echo (int)($row['wrong_answers'] ?? 0); ?></span></td>
-                                        <td><span class="badge <?php echo $badgeClass; ?>"><?php echo number_format($percentage, 1); ?>%</span></td>
+                                    <tr style="transition: all 0.2s ease; animation: fadeInRow 0.3s ease <?php echo $index * 0.02; ?>s both;">
+                                        <td style="padding: 16px 24px;"><?php echo date('d.m.Y H:i', strtotime($row['created_at'] ?? '-')); ?></td>
+                                        <td style="padding: 16px 24px; font-weight: 500;"><?php echo (int)($row['total_questions'] ?? 0); ?></td>
+                                        <td style="padding: 16px 24px;"><span class="badge badge-success"><?php echo (int)($row['correct_answers'] ?? 0); ?></span></td>
+                                        <td style="padding: 16px 24px;"><span class="badge badge-danger"><?php echo (int)($row['wrong_answers'] ?? 0); ?></span></td>
+                                        <td style="padding: 16px 24px;"><span class="badge <?php echo $badgeClass; ?>"><?php echo number_format($percentage, 1); ?>%</span></td>
                                     </tr>
                                 <?php endforeach; ?>
                             <?php else: ?>
-                                <tr><td colspan="5" class="empty-state"><i class="fas fa-inbox"></i><br>Kayıt bulunamadı</td></tr>
+                                <tr>
+                                    <td colspan="5" style="text-align: center; padding: 60px 30px;">
+                                        <div style="width: 80px; height: 80px; margin: 0 auto 16px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: rgba(255,255,255,0.2);">
+                                            <i class="fas fa-inbox"></i>
+                                        </div>
+                                        <div style="color: var(--text-muted); font-size: 0.95rem;">Kayıt bulunamadı</div>
+                                    </td>
+                                </tr>
                             <?php endif; ?>
                         </tbody>
                     </table>
@@ -463,35 +542,62 @@ if ($selectedUser) {
             </div>
 
             <!-- Exam Table -->
-            <div class="card">
-                <h3><i class="fas fa-file-alt"></i> Sınavlar (<?php echo $eCount; ?>)</h3>
-                <div class="table-container">
-                    <table class="table" id="examTable">
-                        <thead>
+            <div class="glass-panel fade-in" style="overflow: hidden;">
+                <div style="padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <div style="width: 40px; height: 40px; border-radius: 12px; background: rgba(52,152,219,0.2); display: flex; align-items: center; justify-content: center; color: #3498db;">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div>
+                            <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">Sınavlar</div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted);">Toplam <?php echo $eCount; ?> kayıt</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive" style="overflow-x: auto; max-height: 500px; overflow-y: auto;">
+                    <table class="table users-table" id="examTable" style="margin: 0;">
+                        <thead style="position: sticky; top: 0; z-index: 10; background: rgba(15,23,42,0.95); backdrop-filter: blur(20px);">
                             <tr>
-                                <th onclick="sortTable('examTable', 0)">Tarih <i class="fas fa-sort"></i></th>
-                                <th onclick="sortTable('examTable', 1)">Sınav ID <i class="fas fa-sort"></i></th>
-                                <th onclick="sortTable('examTable', 2)">Toplam <i class="fas fa-sort"></i></th>
-                                <th onclick="sortTable('examTable', 3)">Doğru <i class="fas fa-sort"></i></th>
-                                <th onclick="sortTable('examTable', 4)">Başarı <i class="fas fa-sort"></i></th>
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', 0)">
+                                    <i class="fas fa-calendar-alt" style="margin-right: 8px; opacity: 0.7;"></i>Tarih <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
+                                </th>
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', 1)">
+                                    <i class="fas fa-id-badge" style="margin-right: 8px; opacity: 0.7;"></i>Sınav ID <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
+                                </th>
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', 2)">
+                                    <i class="fas fa-list-ol" style="margin-right: 8px; opacity: 0.7;"></i>Toplam <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
+                                </th>
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', 3)">
+                                    <i class="fas fa-check-circle" style="margin-right: 8px; opacity: 0.7;"></i>Doğru <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
+                                </th>
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', 4)">
+                                    <i class="fas fa-percentage" style="margin-right: 8px; opacity: 0.7;"></i>Başarı <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php if (!empty($studentProgress['exams'])): ?>
-                                <?php foreach ($studentProgress['exams'] as $row): 
+                                <?php foreach ($studentProgress['exams'] as $index => $row): 
                                     $percentage = (float)($row['percentage'] ?? 0);
                                     $badgeClass = $percentage >= 80 ? 'badge-success' : ($percentage >= 60 ? 'badge-warning' : 'badge-danger');
                                 ?>
-                                    <tr>
-                                        <td><?php echo htmlspecialchars($row['created_at'] ?? $row['submit_time'] ?? '-'); ?></td>
-                                        <td><span class="badge badge-info"><?php echo htmlspecialchars($row['exam_id'] ?? '-'); ?></span></td>
-                                        <td><?php echo (int)($row['total_questions'] ?? 0); ?></td>
-                                        <td><span class="badge badge-success"><?php echo (int)($row['correct_answers'] ?? 0); ?></span></td>
-                                        <td><span class="badge <?php echo $badgeClass; ?>"><?php echo number_format($percentage, 1); ?>%</span></td>
+                                    <tr style="transition: all 0.2s ease; animation: fadeInRow 0.3s ease <?php echo $index * 0.02; ?>s both;">
+                                        <td style="padding: 16px 24px;"><?php echo date('d.m.Y H:i', strtotime($row['created_at'] ?? $row['submit_time'] ?? '-')); ?></td>
+                                        <td style="padding: 16px 24px;"><span class="badge badge-info"><?php echo htmlspecialchars($row['exam_id'] ?? '-'); ?></span></td>
+                                        <td style="padding: 16px 24px; font-weight: 500;"><?php echo (int)($row['total_questions'] ?? 0); ?></td>
+                                        <td style="padding: 16px 24px;"><span class="badge badge-success"><?php echo (int)($row['correct_answers'] ?? 0); ?></span></td>
+                                        <td style="padding: 16px 24px;"><span class="badge <?php echo $badgeClass; ?>"><?php echo number_format($percentage, 1); ?>%</span></td>
                                     </tr>
                                 <?php endforeach; ?>
                             <?php else: ?>
-                                <tr><td colspan="5" class="empty-state"><i class="fas fa-inbox"></i><br>Kayıt bulunamadı</td></tr>
+                                <tr>
+                                    <td colspan="5" style="text-align: center; padding: 60px 30px;">
+                                        <div style="width: 80px; height: 80px; margin: 0 auto 16px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: rgba(255,255,255,0.2);">
+                                            <i class="fas fa-inbox"></i>
+                                        </div>
+                                        <div style="color: var(--text-muted); font-size: 0.95rem;">Kayıt bulunamadı</div>
+                                    </td>
+                                </tr>
                             <?php endif; ?>
                         </tbody>
                     </table>
