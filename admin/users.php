@@ -539,8 +539,8 @@ $displayUsers = array_slice($users, $offset, $perPage);
                     <option value="">Tüm Roller</option>
                     <option value="student" <?php if($fRole == 'student') echo 'selected'; ?>>Öğrenci</option>
                     <option value="teacher" <?php if($fRole == 'teacher') echo 'selected'; ?>>Eğitmen</option>
-                    <option value="branch_leader" <?php if($fRole == 'branch_leader') echo 'selected'; ?>>Şube Müdürü</option>
-                    <option value="region_leader" <?php if($fRole == 'region_leader') echo 'selected'; ?>>Bölge Müdürü</option>
+                    <option value="branch_leader" <?php if($fRole == 'branch_leader') echo 'selected'; ?>>Şube Eğitim Başkanı</option>
+                    <option value="region_leader" <?php if($fRole == 'region_leader') echo 'selected'; ?>>Bölge Eğitim Başkanı</option>
                     <option value="superadmin" <?php if($fRole == 'superadmin') echo 'selected'; ?>>Admin</option>
                 </select>
 
@@ -653,8 +653,8 @@ $displayUsers = array_slice($users, $offset, $perPage);
                         <select name="role" required>
                             <option value="student">Öğrenci</option>
                             <option value="teacher">Eğitmen</option>
-                            <option value="branch_leader">Şube Müdürü</option>
-                            <option value="region_leader">Bölge Müdürü</option>
+                            <option value="branch_leader">Şube Eğitim Başkanı</option>
+                            <option value="region_leader">Bölge Eğitim Başkanı</option>
                             <option value="superadmin">Admin</option>
                         </select>
                     </div>
@@ -714,8 +714,8 @@ $displayUsers = array_slice($users, $offset, $perPage);
                         <select name="role" id="edit_role" required>
                             <option value="student">Öğrenci</option>
                             <option value="teacher">Eğitmen</option>
-                            <option value="branch_leader">Şube Müdürü</option>
-                            <option value="region_leader">Bölge Müdürü</option>
+                            <option value="branch_leader">Şube Eğitim Başkanı</option>
+                            <option value="region_leader">Bölge Eğitim Başkanı</option>
                             <option value="superadmin">Admin</option>
                         </select>
                     </div>
