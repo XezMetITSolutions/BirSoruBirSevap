@@ -1159,6 +1159,12 @@ body {
     animation: fadeIn 0.3s ease;
 }
 
+.modal.show {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
 .modal-content {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42, 0.95) 100%);
     backdrop-filter: blur(20px);

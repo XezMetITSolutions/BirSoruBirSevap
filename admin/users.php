@@ -1118,7 +1118,8 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 // Modal'ı aç
                 const editModal = document.getElementById('editModal');
                 if (editModal) {
-                    editModal.style.display = 'block';
+                    editModal.classList.add('show');
+                    editModal.style.display = 'flex';
                     document.body.style.overflow = 'hidden';
                     // Rol değişikliğine göre şube alanını ayarla
                     toggleInstitutionField('edit');
@@ -1135,6 +1136,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         function closeEditModal() {
             const editModal = document.getElementById('editModal');
             if (editModal) {
+                editModal.classList.remove('show');
                 editModal.style.display = 'none';
                 document.body.style.overflow = 'auto';
             }
@@ -1143,7 +1145,8 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         function toggleAddUserModal() {
             const addModal = document.getElementById('addUserModal');
             if (addModal) {
-                addModal.style.display = 'block';
+                addModal.classList.add('show');
+                addModal.style.display = 'flex';
                 document.body.style.overflow = 'hidden';
                 // Rol değişikliğine göre şube alanını ayarla
                 toggleInstitutionField('add');
@@ -1179,6 +1182,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         function closeAddUserModal() {
             const addModal = document.getElementById('addUserModal');
             if (addModal) {
+                addModal.classList.remove('show');
                 addModal.style.display = 'none';
                 document.body.style.overflow = 'auto';
                 // Form'u temizle
@@ -1231,12 +1235,20 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
 
         function toggleImportModal() {
             const modal = document.getElementById('importModal');
-            modal.style.display = 'block';
+            if (modal) {
+                modal.classList.add('show');
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
         }
 
         function closeImportModal() {
             const modal = document.getElementById('importModal');
-            modal.style.display = 'none';
+            if (modal) {
+                modal.classList.remove('show');
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         }
 
         // Dropdown dışına tıklayınca kapat
