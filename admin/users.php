@@ -581,7 +581,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                             </a>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="toggleAddUserModal()" style="padding: 12px 24px; box-shadow: 0 4px 12px rgba(6,133,103,0.3);">
+                    <button type="button" class="btn btn-primary" onclick="event.stopPropagation(); toggleAddUserModal(); return false;" style="padding: 12px 24px; box-shadow: 0 4px 12px rgba(6,133,103,0.3);">
                         <i class="fas fa-user-plus"></i> Yeni Kullanıcı
                     </button>
                 </div>
@@ -628,7 +628,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                 <i class="fas fa-redo"></i> Filtreleri Temizle
                             </a>
                         <?php else: ?>
-                            <button type="button" class="btn btn-primary" onclick="toggleAddUserModal()" style="display: inline-flex; align-items: center; gap: 8px;">
+                            <button type="button" class="btn btn-primary" onclick="event.stopPropagation(); toggleAddUserModal(); return false;" style="display: inline-flex; align-items: center; gap: 8px;">
                                 <i class="fas fa-user-plus"></i> İlk Kullanıcıyı Ekle
                             </button>
                         <?php endif; ?>
@@ -719,7 +719,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                 </td>
                                 <td style="text-align: center;">
                                     <div style="display: flex; gap: 8px; justify-content: center; align-items: center;">
-                                        <button onclick="editUser('<?php echo htmlspecialchars($user['username']); ?>')" title="Düzenle" 
+                                        <button onclick="event.stopPropagation(); editUser('<?php echo htmlspecialchars($user['username']); ?>'); return false;" title="Düzenle" 
                                                 style="background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); padding: 10px 14px; border-radius: 10px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;"
                                                 onmouseover="this.style.background='rgba(59,130,246,0.25)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(59,130,246,0.2)'"
                                                 onmouseout="this.style.background='rgba(59,130,246,0.15)'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
@@ -1051,6 +1051,8 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         }
 
         function editUser(username) {
+            event?.preventDefault();
+            event?.stopPropagation();
             try {
                 // Kullanıcı verilerini al
                 const users = <?php echo json_encode($allUsers); ?>;
@@ -1143,6 +1145,10 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         }
 
         function toggleAddUserModal() {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
             const addModal = document.getElementById('addUserModal');
             if (addModal) {
                 addModal.classList.add('show');
@@ -1154,6 +1160,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 console.error('Add user modal bulunamadı!');
                 alert('Modal yüklenirken bir hata oluştu.');
             }
+            return false;
         }
         
         function toggleInstitutionField(prefix) {

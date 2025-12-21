@@ -1148,7 +1148,7 @@ body {
 .modal {
     display: none;
     position: fixed;
-    z-index: 2000;
+    z-index: 10000 !important;
     left: 0;
     top: 0;
     width: 100%;
@@ -1168,15 +1168,26 @@ body {
 .modal-content {
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42, 0.95) 100%);
     backdrop-filter: blur(20px);
-    margin: 5% auto;
+    margin: auto;
     padding: 0;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     width: 90%;
     max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        max-width: 95%;
+        margin: 10px auto;
+        max-height: 95vh;
+    }
 }
 
 .modal-header {
@@ -1222,6 +1233,20 @@ body {
 
 .modal form {
     padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .modal form {
+        padding: 20px;
+    }
+    
+    .modal-header {
+        padding: 20px !important;
+    }
+    
+    .modal-title {
+        font-size: 1.2rem !important;
+    }
 }
 
 .btn-secondary {
