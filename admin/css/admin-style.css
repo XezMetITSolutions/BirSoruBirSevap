@@ -570,6 +570,12 @@ body {
     border: 1px solid rgba(239, 68, 68, 0.2);
 }
 
+.role-branch_leader {
+    background: linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(59,130,246,0.1) 100%);
+    color: #60a5fa;
+    border: 1px solid rgba(59,130,246,0.3);
+}
+
 .role-region_leader {
     background: rgba(139, 92, 246, 0.1);
     color: #a78bfa;

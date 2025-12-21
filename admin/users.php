@@ -71,8 +71,11 @@ if ($_POST['action'] ?? '' === 'add_user') {
     $email = trim($_POST['email'] ?? '');
     $phone = trim($_POST['phone'] ?? '');
     
-    if (empty($firstName) || empty($lastName) || empty($institution)) {
-        $error = 'Tüm zorunlu alanlar doldurulmalıdır.';
+    // Bölge eğitim başkanı için şube zorunlu değil, diğerleri için zorunlu
+    if (empty($firstName) || empty($lastName)) {
+        $error = 'Ad ve Soyad alanları zorunludur.';
+    } elseif ($role !== 'region_leader' && empty($institution)) {
+        $error = 'Kurum (Şube) alanı zorunludur.';
     } else {
         // Kullanıcı adını otomatik oluştur (Ü/ü -> ue, Ö/ö -> oe)
         $lastNamePart = strlen($lastName) >= 5 ? substr($lastName, 0, 5) : $lastName;
@@ -148,7 +151,8 @@ if ($_POST['action'] ?? '' === 'edit_user') {
     $phone = trim($_POST['phone'] ?? '');
     $new_password = trim($_POST['new_password'] ?? '');
     
-    if (!empty($username) && !empty($name) && !empty($role) && !empty($institution)) {
+    // Bölge eğitim başkanı için şube zorunlu değil, diğerleri için zorunlu
+    if (!empty($username) && !empty($name) && !empty($role) && ($role === 'region_leader' || !empty($institution))) {
         // Mevcut kullanıcıyı al
 $allUsers = $auth->getAllUsers();
         if (isset($allUsers[$username])) {
@@ -157,8 +161,14 @@ $allUsers = $auth->getAllUsers();
             // Şifre değiştirilmişse yeni şifre kullan, yoksa eski şifreyi koru
             $password = !empty($new_password) ? $new_password : $userData['password'];
             
+            // Bölge eğitim başkanı için region'ı al, yoksa institution'dan bul
+            $region = $userData['region'] ?? '';
+            if (empty($region) && !empty($institution)) {
+                $region = getRegionByBranch($institution) ?? '';
+            }
+            
             // Kullanıcıyı güncelle
-            if ($auth->saveUser($username, $password, $role, $name, $institution, $class_section, $email, $phone)) {
+            if ($auth->saveUser($username, $password, $role, $name, $institution, $class_section, $email, $phone, $region)) {
                 header('Location: users.php?success=user_updated');
                 exit;
             } else {
@@ -516,7 +526,8 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     <option value="">🎭 Tüm Roller</option>
                     <option value="student" <?php echo $roleFilter === 'student' ? 'selected' : ''; ?>>👨‍🎓 Öğrenci</option>
                     <option value="teacher" <?php echo $roleFilter === 'teacher' ? 'selected' : ''; ?>>👨‍🏫 Eğitmen</option>
-                    <option value="region_leader" <?php echo $roleFilter === 'region_leader' ? 'selected' : ''; ?>>🌍 Bölge Lideri</option>
+                    <option value="branch_leader" <?php echo $roleFilter === 'branch_leader' ? 'selected' : ''; ?>>🏢 Eğitim Başkanı</option>
+                    <option value="region_leader" <?php echo $roleFilter === 'region_leader' ? 'selected' : ''; ?>>🌍 Bölge Eğitim Başkanı</option>
                     <option value="superadmin" <?php echo $roleFilter === 'superadmin' ? 'selected' : ''; ?>>👑 Admin</option>
                 </select>
 
@@ -656,6 +667,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                         $roleIcons = [
                                             'student' => '<i class="fas fa-user-graduate"></i>',
                                             'teacher' => '<i class="fas fa-chalkboard-teacher"></i>',
+                                            'branch_leader' => '<i class="fas fa-building"></i>',
                                             'region_leader' => '<i class="fas fa-map-marked-alt"></i>',
                                             'superadmin' => '<i class="fas fa-crown"></i>'
                                         ];
@@ -831,10 +843,11 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 
                 <div class="form-group">
                     <label for="add_role">Rol *</label>
-                    <select id="add_role" name="role" required>
+                    <select id="add_role" name="role" required onchange="toggleInstitutionField('add')">
                         <option value="">Rol Seçin</option>
                         <option value="student">👨‍🎓 Öğrenci</option>
                         <option value="teacher">👨‍🏫 Eğitmen</option>
+                        <option value="branch_leader">🏢 Eğitim Başkanı</option>
                         <option value="region_leader">🌍 Bölge Eğitim Başkanı</option>
                         <option value="superadmin">👑 SuperAdmin</option>
                     </select>
@@ -842,7 +855,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 
             <div class="form-group">
                     <label for="add_region">Bölge *</label>
-                    <select id="add_region" name="region" required onchange="updateBranchOptions('add')">
+                    <select id="add_region" name="region" required onchange="updateBranchOptions('add'); toggleInstitutionField('add');">
                         <option value="">Bölge Seçin</option>
                         <?php foreach ($regionConfig as $region => $branches): ?>
                             <option value="<?php echo htmlspecialchars($region); ?>"><?php echo htmlspecialchars($region); ?></option>
@@ -850,9 +863,9 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <label for="add_institution">Kurum (Şube) *</label>
-                    <select id="add_institution" name="institution" required>
+                <div class="form-group" id="add_institution_group">
+                    <label for="add_institution">Kurum (Şube) <span id="add_institution_required">*</span></label>
+                    <select id="add_institution" name="institution">
                         <option value="">Önce Bölge Seçin</option>
                     </select>
                 </div>
@@ -920,9 +933,10 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 
                 <div class="form-group">
                     <label for="edit_role">Rol *</label>
-                    <select id="edit_role" name="role" required>
+                    <select id="edit_role" name="role" required onchange="toggleInstitutionField('edit')">
                         <option value="student">👨‍🎓 Öğrenci</option>
                         <option value="teacher">👨‍🏫 Eğitmen</option>
+                        <option value="branch_leader">🏢 Eğitim Başkanı</option>
                         <option value="region_leader">🌍 Bölge Eğitim Başkanı</option>
                         <option value="superadmin">👑 SuperAdmin</option>
                     </select>
@@ -930,7 +944,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 
                 <div class="form-group">
                     <label for="edit_region">Bölge *</label>
-                    <select id="edit_region" name="region" required onchange="updateBranchOptions('edit')">
+                    <select id="edit_region" name="region" required onchange="updateBranchOptions('edit'); toggleInstitutionField('edit');">
                         <option value="">Bölge Seçin</option>
                         <?php foreach ($regionConfig as $region => $branches): ?>
                             <option value="<?php echo htmlspecialchars($region); ?>"><?php echo htmlspecialchars($region); ?></option>
@@ -938,9 +952,9 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <label for="edit_institution">Kurum (Şube) *</label>
-                    <select id="edit_institution" name="institution" required>
+                <div class="form-group" id="edit_institution_group">
+                    <label for="edit_institution">Kurum (Şube) <span id="edit_institution_required">*</span></label>
+                    <select id="edit_institution" name="institution">
                         <option value="">Önce Bölge Seçin</option>
                     </select>
                 </div>
@@ -1106,6 +1120,8 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 if (editModal) {
                     editModal.style.display = 'block';
                     document.body.style.overflow = 'hidden';
+                    // Rol değişikliğine göre şube alanını ayarla
+                    toggleInstitutionField('edit');
                 } else {
                     console.error('Edit modal bulunamadı!');
                     alert('Modal yüklenirken bir hata oluştu.');
@@ -1129,9 +1145,34 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
             if (addModal) {
                 addModal.style.display = 'block';
                 document.body.style.overflow = 'hidden';
+                // Rol değişikliğine göre şube alanını ayarla
+                toggleInstitutionField('add');
             } else {
                 console.error('Add user modal bulunamadı!');
                 alert('Modal yüklenirken bir hata oluştu.');
+            }
+        }
+        
+        function toggleInstitutionField(prefix) {
+            const roleSelect = document.getElementById(prefix + '_role');
+            const institutionGroup = document.getElementById(prefix + '_institution_group');
+            const institutionSelect = document.getElementById(prefix + '_institution');
+            const requiredSpan = document.getElementById(prefix + '_institution_required');
+            
+            if (!roleSelect || !institutionGroup || !institutionSelect) return;
+            
+            const selectedRole = roleSelect.value;
+            
+            if (selectedRole === 'region_leader') {
+                // Bölge eğitim başkanı için şube alanını gizle
+                institutionGroup.style.display = 'none';
+                institutionSelect.removeAttribute('required');
+                if (requiredSpan) requiredSpan.style.display = 'none';
+            } else {
+                // Diğer roller için şube alanını göster
+                institutionGroup.style.display = 'block';
+                institutionSelect.setAttribute('required', 'required');
+                if (requiredSpan) requiredSpan.style.display = 'inline';
             }
         }
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Bölge Eğitim Başkanı - Sınav Sonuçları
+ * Eğitim Başkanı - Sınav Sonuçları
  */
 
 require_once '../auth.php';
@@ -10,17 +10,17 @@ require_once '../admin/includes/locations.php';
 
 $auth = Auth::getInstance();
 
-// Bölge lideri kontrolü
-if (!$auth->hasRole('region_leader')) {
+// Eğitim başkanı kontrolü
+if (!$auth->hasRole('branch_leader')) {
     header('Location: ../login.php');
     exit;
 }
 
 $user = $auth->getUser();
-$userRegion = $user['region'] ?? '';
+$userBranch = $user['branch'] ?? $user['institution'] ?? '';
 
-if (empty($userRegion)) {
-    die('Hata: Bölge bilgisi bulunamadı. Lütfen sistem yöneticisi ile iletişime geçin.');
+if (empty($userBranch)) {
+    die('Hata: Şube bilgisi bulunamadı. Lütfen sistem yöneticisi ile iletişime geçin.');
 }
 
 // Şifre değiştirme kontrolü
@@ -29,15 +29,11 @@ if ($user && ($user['must_change_password'] ?? false)) {
     exit;
 }
 
-// Bölgeye ait şubeleri al
-$regionBranches = $regionConfig[$userRegion] ?? [];
-
 // Database bağlantısı
 $db = Database::getInstance();
 $conn = $db->getConnection();
 
 $examId = $_GET['exam_id'] ?? '';
-$branchFilter = $_GET['branch'] ?? '';
 
 // Sınav bilgilerini al
 $exam = null;
@@ -45,32 +41,25 @@ $results = [];
 
 if (!empty($examId)) {
     try {
-        $branchPlaceholders = str_repeat('?,', count($regionBranches) - 1) . '?';
-        
-        // Sınav bilgilerini al (bölgesindeki şubelerden)
+        // Sınav bilgilerini al (kendi şubesinden)
         $sql = "SELECT e.*, u.full_name as teacher_name, u.branch as teacher_branch
                 FROM exams e
                 INNER JOIN users u ON e.created_by = u.username
-                WHERE e.exam_id = ? AND u.branch IN ($branchPlaceholders)";
+                WHERE e.exam_id = ? AND u.branch = ?";
         
-        $params = array_merge([$examId], $regionBranches);
+        $params = [$examId, $userBranch];
         $stmt = $conn->prepare($sql);
         $stmt->execute($params);
         $exam = $stmt->fetch(PDO::FETCH_ASSOC);
         
         if ($exam) {
-            // Sınav sonuçlarını al (bölgesindeki öğrencilerden)
+            // Sınav sonuçlarını al (kendi şubesindeki öğrencilerden)
             $sql = "SELECT er.*, u.full_name, u.branch, u.class_section
                     FROM exam_results er
                     INNER JOIN users u ON er.username = u.username
-                    WHERE er.exam_id = ? AND u.branch IN ($branchPlaceholders)";
+                    WHERE er.exam_id = ? AND u.branch = ?";
             
-            $params = array_merge([$examId], $regionBranches);
-            
-            if ($branchFilter) {
-                $sql .= " AND u.branch = ?";
-                $params[] = $branchFilter;
-            }
+            $params = [$examId, $userBranch];
             
             $sql .= " ORDER BY er.score DESC, er.created_at DESC";
             
@@ -181,26 +170,6 @@ $averagePercentage = $totalParticipants > 0 ? round(array_sum(array_column($resu
         </div>
 
         <!-- Filters -->
-        <?php if (count($regionBranches) > 1): ?>
-        <div class="glass-panel" style="padding: 20px; margin-bottom: 30px;">
-            <form method="GET" style="display: flex; gap: 12px; align-items: center;">
-                <input type="hidden" name="exam_id" value="<?php echo htmlspecialchars($examId); ?>">
-                <select name="branch" onchange="this.form.submit()" class="modern-select" style="min-width: 200px;">
-                    <option value="">🏢 Tüm Şubeler</option>
-                    <?php foreach ($regionBranches as $branch): ?>
-                        <option value="<?php echo htmlspecialchars($branch); ?>" <?php echo $branchFilter === $branch ? 'selected' : ''; ?>>
-                            <?php echo htmlspecialchars($branch); ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-                <?php if ($branchFilter): ?>
-                    <a href="results.php?exam_id=<?php echo urlencode($examId); ?>" class="clean-btn" style="padding: 12px 18px;">
-                        <i class="fas fa-times"></i> Temizle
-                    </a>
-                <?php endif; ?>
-            </form>
-        </div>
-        <?php endif; ?>
 
         <!-- Results Table -->
         <div class="glass-panel">

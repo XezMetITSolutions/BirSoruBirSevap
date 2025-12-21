@@ -96,9 +96,9 @@ class Database {
                 $this->connection->exec("ALTER TABLE users ADD COLUMN updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP AFTER password_changed_at");
             }
             
-            // Role ENUM'una region_leader ekle
+            // Role ENUM'una region_leader ve branch_leader ekle
             try {
-                $this->connection->exec("ALTER TABLE users MODIFY COLUMN role ENUM('superadmin', 'admin', 'teacher', 'student', 'region_leader') NOT NULL");
+                $this->connection->exec("ALTER TABLE users MODIFY COLUMN role ENUM('superadmin', 'admin', 'teacher', 'student', 'region_leader', 'branch_leader') NOT NULL");
             } catch (PDOException $e) {
                 // Eğer zaten varsa hata vermez
                 error_log("Role enum güncelleme: " . $e->getMessage());
@@ -111,7 +111,7 @@ class Database {
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 username VARCHAR(50) UNIQUE NOT NULL,
                 password VARCHAR(255) NOT NULL,
-                role ENUM('superadmin', 'admin', 'teacher', 'student', 'region_leader') NOT NULL,
+                role ENUM('superadmin', 'admin', 'teacher', 'student', 'region_leader', 'branch_leader') NOT NULL,
                 full_name VARCHAR(200) NOT NULL,
                 branch VARCHAR(100) DEFAULT '',
                 class_section VARCHAR(50) DEFAULT '',

@@ -1,6 +1,6 @@
 <?php
 /**
- * Bölge Eğitim Başkanı - Kullanıcı Listesi (Sadece Görüntüleme)
+ * Eğitim Başkanı - Kullanıcı Listesi (Sadece Görüntüleme)
  */
 
 require_once '../auth.php';
@@ -10,17 +10,17 @@ require_once '../admin/includes/locations.php';
 
 $auth = Auth::getInstance();
 
-// Bölge lideri kontrolü
-if (!$auth->hasRole('region_leader')) {
+// Eğitim başkanı kontrolü
+if (!$auth->hasRole('branch_leader')) {
     header('Location: ../login.php');
     exit;
 }
 
 $user = $auth->getUser();
-$userRegion = $user['region'] ?? '';
+$userBranch = $user['branch'] ?? $user['institution'] ?? '';
 
-if (empty($userRegion)) {
-    die('Hata: Bölge bilgisi bulunamadı. Lütfen sistem yöneticisi ile iletişime geçin.');
+if (empty($userBranch)) {
+    die('Hata: Şube bilgisi bulunamadı. Lütfen sistem yöneticisi ile iletişime geçin.');
 }
 
 // Şifre değiştirme kontrolü
@@ -29,40 +29,28 @@ if ($user && ($user['must_change_password'] ?? false)) {
     exit;
 }
 
-// Bölgeye ait şubeleri al
-$regionBranches = $regionConfig[$userRegion] ?? [];
-
 // Sayfalama parametreleri
 $itemsPerPage = isset($_GET['items_per_page']) ? max(10, intval($_GET['items_per_page'])) : 50;
 $currentPage = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
 $searchTerm = isset($_GET['search']) ? trim($_GET['search']) : '';
 $roleFilter = isset($_GET['role']) ? $_GET['role'] : '';
-$institutionFilter = isset($_GET['institution']) ? $_GET['institution'] : '';
-$branchFilter = isset($_GET['branch']) ? $_GET['branch'] : '';
 
 // Database bağlantısı
 $db = Database::getInstance();
 $conn = $db->getConnection();
 
-// Kullanıcıları getir ve filtrele (sadece bölgesindeki şubelerden)
+// Kullanıcıları getir ve filtrele (sadece kendi şubesinden)
 try {
-    $branchPlaceholders = str_repeat('?,', count($regionBranches) - 1) . '?';
     $sql = "SELECT username, role, full_name, branch, class_section, email, phone, region, created_at, last_login 
             FROM users 
-            WHERE branch IN ($branchPlaceholders)";
+            WHERE branch = ?";
     
-    $params = $regionBranches;
+    $params = [$userBranch];
     
     // Rol filtresi
     if ($roleFilter) {
         $sql .= " AND role = ?";
         $params[] = $roleFilter;
-    }
-    
-    // Şube filtresi
-    if ($branchFilter) {
-        $sql .= " AND branch = ?";
-        $params[] = $branchFilter;
     }
     
     // Arama filtresi
@@ -73,7 +61,7 @@ try {
         $params[] = $searchParam;
     }
     
-    $sql .= " ORDER BY branch, role, full_name";
+    $sql .= " ORDER BY role, full_name";
     
     $stmt = $conn->prepare($sql);
     $stmt->execute($params);
@@ -89,18 +77,13 @@ try {
             'role' => $userData['role'],
             'name' => $userData['full_name'] ?? 'Bilinmiyor',
             'institution' => $institution,
-            'region' => $userData['region'] ?? $userRegion,
+            'region' => $userData['region'] ?? getRegionByBranch($userBranch) ?? '',
             'class_section' => $userData['class_section'] ?? '',
             'email' => $userData['email'] ?? '',
             'phone' => $userData['phone'] ?? '',
             'created_at' => $userData['created_at'] ?? 'Bilinmiyor',
             'last_login' => $userData['last_login'] ?? 'Hiç giriş yapmamış'
         ];
-        
-        // Kurum filtresi
-        if ($institutionFilter && $user['institution'] !== $institutionFilter) {
-            continue;
-        }
         
         $filteredUsers[] = $user;
     }
@@ -123,7 +106,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kullanıcılar - <?php echo htmlspecialchars($userRegion); ?> Bölgesi</title>
+    <title>Kullanıcılar - <?php echo htmlspecialchars($userBranch); ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -145,22 +128,21 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
             </div>
             <div class="welcome-text">
                 <h2>Kullanıcılar</h2>
-                <p><?php echo htmlspecialchars($userRegion); ?> Bölgesi - Kullanıcı Listesi</p>
+                <p><?php echo htmlspecialchars($userBranch); ?> - Kullanıcı Listesi</p>
             </div>
         </div>
 
-        <!-- Bölge Bilgisi -->
-        <div class="glass-panel" style="padding: 20px; margin-bottom: 30px; background: linear-gradient(135deg, rgba(139,92,246,0.15) 0%, rgba(139,92,246,0.05) 100%); border-left: 4px solid #8b5cf6;">
+        <!-- Şube Bilgisi -->
+        <div class="glass-panel" style="padding: 20px; margin-bottom: 30px; background: linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(59,130,246,0.05) 100%); border-left: 4px solid #3b82f6;">
             <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(139,92,246,0.2); display: flex; align-items: center; justify-content: center; color: #8b5cf6; font-size: 1.5rem;">
-                    <i class="fas fa-map-marked-alt"></i>
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; color: #3b82f6; font-size: 1.5rem;">
+                    <i class="fas fa-building"></i>
                 </div>
                 <div style="flex: 1;">
                     <div style="font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
-                        <?php echo htmlspecialchars($userRegion); ?> Bölgesi
+                        <?php echo htmlspecialchars($userBranch); ?>
                     </div>
                     <div style="font-size: 0.9rem; color: var(--text-muted);">
-                        <i class="fas fa-building"></i> <?php echo count($regionBranches); ?> Şube • 
                         <i class="fas fa-users"></i> <?php echo $totalUsers; ?> Kullanıcı
                     </div>
                 </div>
@@ -209,9 +191,9 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     </div>
                 </div>
                 <div style="font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1;">
-                    <?php echo count($regionBranches); ?>
+                    <?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'branch_leader')); ?>
                 </div>
-                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Şube</div>
+                <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">Eğitim Başkanı</div>
             </div>
         </div>
 
@@ -232,16 +214,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     <option value="teacher" <?php echo $roleFilter === 'teacher' ? 'selected' : ''; ?>>👨‍🏫 Eğitmen</option>
                 </select>
 
-                <select name="branch" onchange="this.form.submit()" class="modern-select" style="min-width: 180px;">
-                    <option value="">🏢 Tüm Şubeler</option>
-                    <?php foreach ($regionBranches as $branch): ?>
-                        <option value="<?php echo htmlspecialchars($branch); ?>" <?php echo $branchFilter === $branch ? 'selected' : ''; ?>>
-                            <?php echo htmlspecialchars($branch); ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-
-                <?php if ($searchTerm || $roleFilter || $branchFilter): ?>
+                <?php if ($searchTerm || $roleFilter): ?>
                     <a href="users.php" class="clean-btn" style="padding: 12px 18px;">
                         <i class="fas fa-times"></i> Temizle
                     </a>
@@ -284,7 +257,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     </div>
                     <h3 style="color: white; margin-bottom: 12px; font-size: 1.5rem; font-weight: 600;">Kullanıcı Bulunamadı</h3>
                     <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Arama kriterlerinize uygun kullanıcı bulunmamaktadır.</p>
-                    <?php if ($searchTerm || $roleFilter || $branchFilter): ?>
+                    <?php if ($searchTerm || $roleFilter): ?>
                         <a href="users.php" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
                             <i class="fas fa-redo"></i> Filtreleri Temizle
                         </a>
@@ -323,6 +296,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                             $roleIcons = [
                                                 'student' => '<i class="fas fa-user-graduate"></i>',
                                                 'teacher' => '<i class="fas fa-chalkboard-teacher"></i>',
+                                                'branch_leader' => '<i class="fas fa-building"></i>',
                                                 'region_leader' => '<i class="fas fa-map-marked-alt"></i>',
                                                 'superadmin' => '<i class="fas fa-crown"></i>'
                                             ];

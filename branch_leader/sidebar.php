@@ -2,8 +2,8 @@
 $currentPage = basename($_SERVER['PHP_SELF']);
 $user = Auth::getInstance()->getUser();
 $initial = $user ? strtoupper(substr($user['name'], 0, 1)) : '?';
-$userName = $user ? htmlspecialchars($user['name']) : 'Bölge Lideri';
-$userRegion = $user['region'] ?? '';
+$userName = $user ? htmlspecialchars($user['name']) : 'Eğitim Başkanı';
+$userBranch = $user['branch'] ?? $user['institution'] ?? '';
 ?>
 <!-- Sidebar -->
 <aside class="sidebar" id="sidebar">
@@ -29,10 +29,6 @@ $userRegion = $user['region'] ?? '';
             <i class="fas fa-chart-bar"></i>
             <span>Sonuçlar</span>
         </a>
-        <a href="student_progress.php" class="nav-item <?php echo $currentPage == 'student_progress.php' ? 'active' : ''; ?>" id="navProgress">
-            <i class="fas fa-chart-line"></i>
-            <span>Öğrenci Gelişimi</span>
-        </a>
         <a href="../index.php" class="nav-item" id="navHome">
             <i class="fas fa-external-link-alt"></i>
             <span>Siteyi Görüntüle</span>
@@ -45,7 +41,7 @@ $userRegion = $user['region'] ?? '';
             <div style="flex:1; overflow:hidden;">
                 <div style="font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"><?php echo $userName; ?></div>
                 <div style="font-size:0.8rem; color:var(--text-muted);">
-                    <i class="fas fa-map-marker-alt"></i> <?php echo htmlspecialchars($userRegion); ?>
+                    <i class="fas fa-building"></i> <?php echo htmlspecialchars($userBranch); ?>
                 </div>
             </div>
         </div>
@@ -54,5 +50,4 @@ $userRegion = $user['region'] ?? '';
         </a>
     </div>
 </aside>
-
 
