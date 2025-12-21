@@ -36,6 +36,11 @@ $conn = $db->getConnection();
 // Bölgeye ait şubeleri al
 $regionBranches = $regionConfig[$userRegion] ?? [];
 
+// Eğer bölgedeki şubeler bulunamazsa hata mesajı göster
+if (empty($regionBranches)) {
+    die("Hata: '{$userRegion}' bölgesi için şube bul namadı. Lütfen locations.php dosyasını kontrol edin.");
+}
+
 // İstatistikler
 try {
     // Bölgedeki toplam kullanıcı sayısı
