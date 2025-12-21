@@ -491,60 +491,48 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
             <?php echo $success; ?>
         <?php endif; ?>
 
-        <!-- Stats (Dashboard Style) -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <i class="fas fa-users stat-icon"></i>
-                <div class="stat-value"><?php echo number_format($totalUsers); ?></div>
-                <div class="stat-label">Toplam Kullanıcı</div>
-                <div class="progress-mini"><div class="progress-fill" style="width:100%; background:#068567;"></div></div>
+        <!-- Minimal Stats -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 30px;">
+            <div class="glass-panel" style="padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; font-weight: 700; color: #068567; margin-bottom: 5px;">
+                    <?php echo $totalUsers; ?>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Toplam</div>
             </div>
-            <div class="stat-card">
-                <i class="fas fa-user-graduate stat-icon"></i>
-                <div class="stat-value"><?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'student')); ?></div>
-                <div class="stat-label">Öğrenciler</div>
-                <div class="progress-mini"><div class="progress-fill" style="width:<?php echo ($totalUsers > 0 ? (count(array_filter($filteredUsers, fn($u) => $u['role'] === 'student'))/$totalUsers)*100 : 0); ?>%; background:#3b82f6;"></div></div>
+            <div class="glass-panel" style="padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; font-weight: 700; color: #3b82f6; margin-bottom: 5px;">
+                    <?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'student')); ?>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Öğrenci</div>
             </div>
-            <div class="stat-card">
-                <i class="fas fa-chalkboard-teacher stat-icon"></i>
-                <div class="stat-value"><?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'teacher')); ?></div>
-                <div class="stat-label">Eğitmenler</div>
-                <div class="progress-mini"><div class="progress-fill" style="width:<?php echo ($totalUsers > 0 ? (count(array_filter($filteredUsers, fn($u) => $u['role'] === 'teacher'))/$totalUsers)*100 : 0); ?>%; background:#f59e0b;"></div></div>
+            <div class="glass-panel" style="padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; font-weight: 700; color: #f59e0b; margin-bottom: 5px;">
+                    <?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'teacher')); ?>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Eğitmen</div>
             </div>
-            <div class="stat-card">
-                <i class="fas fa-user-shield stat-icon"></i>
-                <div class="stat-value"><?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'superadmin')); ?></div>
-                <div class="stat-label">Yöneticiler</div>
-                <div class="progress-mini"><div class="progress-fill" style="width:<?php echo ($totalUsers > 0 ? (count(array_filter($filteredUsers, fn($u) => $u['role'] === 'superadmin'))/$totalUsers)*100 : 0); ?>%; background:#ef4444;"></div></div>
+            <div class="glass-panel" style="padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; font-weight: 700; color: #ef4444; margin-bottom: 5px;">
+                    <?php echo count(array_filter($filteredUsers, fn($u) => $u['role'] === 'superadmin')); ?>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Admin</div>
             </div>
         </div>
 
-        <!-- Search & Filters (Glass Panel) -->
-        <div class="glass-panel">
-            <form method="GET" style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
-                <div style="position: relative; flex: 1; min-width: 250px;">
-                    <i class="fas fa-search" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
-                    <input type="text" name="search" placeholder="Kullanıcı ara..." value="<?php echo htmlspecialchars($searchTerm); ?>" 
-                           style="width: 100%; padding: 12px 12px 12px 40px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff;">
-                </div>
+        <!-- Simple Filters -->
+        <div class="glass-panel" style="padding: 20px; margin-bottom: 30px;">
+            <form method="GET" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                <input type="text" name="search" placeholder="🔍 Ara..." value="<?php echo htmlspecialchars($searchTerm); ?>" 
+                       style="flex: 1; min-width: 200px; padding: 10px 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; font-size: 0.9rem;">
                 
-                <select name="role" onchange="this.form.submit()" style="padding: 12px 16px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff;">
+                <select name="role" onchange="this.form.submit()" style="padding: 10px 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; min-width: 120px;">
                     <option value="">Tüm Roller</option>
                     <option value="student" <?php echo $roleFilter === 'student' ? 'selected' : ''; ?>>Öğrenci</option>
                     <option value="teacher" <?php echo $roleFilter === 'teacher' ? 'selected' : ''; ?>>Eğitmen</option>
                     <option value="superadmin" <?php echo $roleFilter === 'superadmin' ? 'selected' : ''; ?>>Admin</option>
                 </select>
 
-                <select name="region" onchange="this.form.submit()" style="padding: 12px 16px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff;">
-                    <option value="">Tüm Bölgeler</option>
-                    <?php foreach ($regionConfig as $region => $branches): ?>
-                        <option value="<?php echo htmlspecialchars($region); ?>" <?php echo ($regionFilter ?? '') === $region ? 'selected' : ''; ?>>
-                            <?php echo htmlspecialchars($region); ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-
-                <select name="institution" onchange="this.form.submit()" style="padding: 12px 16px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff;">
+                <select name="institution" onchange="this.form.submit()" style="padding: 10px 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; min-width: 150px;">
                     <option value="">Tüm Kurumlar</option>
                     <?php foreach ($regionConfig as $region => $branches): ?>
                         <?php if (!empty($branches)): ?>
@@ -560,47 +548,31 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 </select>
 
                 <?php if ($searchTerm || $roleFilter || $institutionFilter): ?>
-                    <a href="users.php" class="btn btn-secondary" style="padding: 12px 20px;">
-                        <i class="fas fa-times"></i> Temizle
+                    <a href="users.php" style="padding: 10px 16px; background: rgba(239,68,68,0.2); color: #ef4444; border: 1px solid rgba(239,68,68,0.3); border-radius: 8px; text-decoration: none; font-size: 0.9rem;">
+                        ✕ Temizle
                     </a>
                 <?php endif; ?>
                 
-                <div style="margin-left: auto; display: flex; gap: 10px;">
-                    <div class="dropdown">
-                        <button type="button" class="btn btn-success" onclick="toggleDropdown('exportDropdown')" style="padding: 12px 20px;">
-                            <i class="fas fa-file-export"></i> Export
-                        </button>
-                        <div id="exportDropdown" class="dropdown-content">
-                            <a href="?action=export_csv&type=all">Tüm Kullanıcılar</a>
-                            <a href="?action=export_csv&type=students">Öğrenciler</a>
-                            <a href="?action=export_csv&type=teachers">Eğitmenler</a>
-                        </div>
-                    </div>
-                    
-                    <button type="button" class="btn btn-warning" onclick="toggleImportModal()" style="padding: 12px 20px;">
-                        <i class="fas fa-file-import"></i> Import
+                <div style="margin-left: auto; display: flex; gap: 8px;">
+                    <button type="button" class="btn btn-primary" onclick="toggleAddUserModal()" style="padding: 10px 20px;">
+                        ➕ Yeni Kullanıcı
                     </button>
                 </div>
             </form>
         </div>
 
-        <div class="content-grid">
-            <div class="glass-panel" style="grid-column: 1 / -1;">
-                <div class="panel-header">
-                    <div class="panel-title">
-                        <i class="fas fa-users"></i> Kullanıcı Listesi
-                    </div>
-                    <div style="display: flex; gap: 15px; align-items: center;">
-                        <button class="btn btn-primary" onclick="toggleAddUserModal()" style="padding: 12px 24px;">
-                            <i class="fas fa-user-plus"></i> Yeni Kullanıcı Ekle
-                        </button>
-                        <select onchange="changeItemsPerPage(this.value)" class="form-select" style="padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.2); color: white;">
-                            <option value="25" <?php echo $itemsPerPage == 25 ? 'selected' : ''; ?>>25 / sayfa</option>
-                            <option value="50" <?php echo $itemsPerPage == 50 ? 'selected' : ''; ?>>50 / sayfa</option>
-                            <option value="100" <?php echo $itemsPerPage == 100 ? 'selected' : ''; ?>>100 / sayfa</option>
-                        </select>
-                    </div>
+        <!-- Simple Table -->
+        <div class="glass-panel">
+            <div style="padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+                <div style="font-size: 1.1rem; font-weight: 600; color: #fff;">
+                    <i class="fas fa-table"></i> Kullanıcı Listesi
                 </div>
+                <select onchange="changeItemsPerPage(this.value)" style="padding: 8px 12px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: #fff; font-size: 0.85rem;">
+                    <option value="25" <?php echo $itemsPerPage == 25 ? 'selected' : ''; ?>>25</option>
+                    <option value="50" <?php echo $itemsPerPage == 50 ? 'selected' : ''; ?>>50</option>
+                    <option value="100" <?php echo $itemsPerPage == 100 ? 'selected' : ''; ?>>100</option>
+                </select>
+            </div>
 
                 <?php if (empty($users)): ?>
                     <div class="empty-state" style="text-align: center; padding: 50px;">
@@ -686,14 +658,16 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                     </div>
                                 </td>
                                 <td>
-                                    <div style="display: flex; gap: 8px; justify-content: center;">
-                                        <button class="action-btn" onclick="editUser('<?php echo htmlspecialchars($user['username']); ?>')" title="Düzenle" style="background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 8px 12px;">
+                                    <div style="display: flex; gap: 6px; justify-content: center;">
+                                        <button onclick="editUser('<?php echo htmlspecialchars($user['username']); ?>')" title="Düzenle" 
+                                                style="background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
                                             <i class="fas fa-edit"></i>
                                         </button>
-                                        <form method="POST" style="display: inline; margin: 0;" onsubmit="return confirm('⚠️ Bu kullanıcıyı silmek istediğinizden emin misiniz?');">
+                                        <form method="POST" style="display: inline; margin: 0;" onsubmit="return confirm('Bu kullanıcıyı silmek istediğinizden emin misiniz?');">
                                             <input type="hidden" name="action" value="delete_user">
                                             <input type="hidden" name="username" value="<?php echo htmlspecialchars($user['username']); ?>">
-                                            <button type="submit" class="action-btn" title="Sil" style="background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3); padding: 8px 12px;">
+                                            <button type="submit" title="Sil" 
+                                                    style="background: rgba(239,68,68,0.15); color: #fca5a5; border: 1px solid rgba(239,68,68,0.2); padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
                                                 <i class="fas fa-trash-alt"></i>
                                             </button>
                                         </form>
