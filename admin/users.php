@@ -563,7 +563,7 @@ $displayUsers = array_slice($users, $offset, $perPage);
                         <th>Kullanıcı</th>
                         <th>Rol</th>
                         <th>Kurum</th>
-                        <th>İletişim</th>
+                        <th>Bölge</th>
                         <th style="text-align:right;">İşlemler</th>
                     </tr>
                 </thead>
@@ -572,7 +572,7 @@ $displayUsers = array_slice($users, $offset, $perPage);
                         <?php foreach ($displayUsers as $u): ?>
                         <tr>
                             <td>
-                                <div class="user-name"><?php echo htmlspecialchars($u['name'] ?? 'İsimsiz'); ?></div>
+                                <div class="user-name"><?php echo htmlspecialchars($u['full_name'] ?? $u['name'] ?? 'İsimsiz'); ?></div>
                                 <div class="user-username">@<?php echo htmlspecialchars($u['username']); ?></div>
                             </td>
                             <td>
@@ -587,8 +587,8 @@ $displayUsers = array_slice($users, $offset, $perPage);
                                 <span class="role-badge <?php echo $rClass; ?>"><?php echo $rName; ?></span>
                             </td>
                             <td><?php echo htmlspecialchars($u['institution'] ?? $u['branch'] ?? '-'); ?></td>
-                            <td style="font-size:13px;color:#94a3b8;">
-                                <?php echo htmlspecialchars($u['email'] ?? $u['phone'] ?? '-'); ?>
+                            <td style="font-size:13px;">
+                                <?php echo htmlspecialchars($u['region'] ?? '-'); ?>
                             </td>
                             <td style="text-align:right;">
                                 <button onclick='editUser(<?php echo json_encode($u); ?>)' class="btn-icon" title="Düzenle">
