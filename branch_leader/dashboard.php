@@ -47,17 +47,44 @@ $conn = $db->getConnection();
 
 // İstatistikler
 try {
+    // Debug mode için ekstra bilgi
+    $debugMode = isset($_GET['debug']);
+    
     // Şubedeki toplam kullanıcı sayısı
     $sql = "SELECT COUNT(*) as total FROM users WHERE branch = ?";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$userBranch]);
     $totalUsers = $stmt->fetch()['total'] ?? 0;
     
+    if ($debugMode) {
+        echo "<pre style='background: #000; color: #ff0; padding: 20px; position: fixed; bottom: 10px; right: 10px; z-index: 9999; border: 2px solid #ff0; max-height: 400px; overflow: auto;'>";
+        echo "SQL DEBUG:\n";
+        echo "Query: $sql\n";
+        echo "Branch parameter: '" . $userBranch . "' (length: " . strlen($userBranch) . ")\n";
+        echo "Total users result: $totalUsers\n\n";
+    }
+    
     // Şubedeki öğrenci sayısı
     $sql = "SELECT COUNT(*) as total FROM users WHERE branch = ? AND role = 'student'";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$userBranch]);
     $totalStudents = $stmt->fetch()['total'] ?? 0;
+    
+    if ($debugMode) {
+        echo "Student Query: $sql\n";
+        echo "Student result: $totalStudents\n\n";
+        
+        // Gerçek kullanıcıları göster
+        $sql = "SELECT username, full_name, role, branch FROM users WHERE branch = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([$userBranch]);
+        $allBranchUsers = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        echo "Actual users in this branch:\n";
+        foreach ($allBranchUsers as $u) {
+            echo "  - {$u['username']} ({$u['role']}) - Branch: '{$u['branch']}'\n";
+        }
+        echo "</pre>";
+    }
     
     // Şubedeki eğitmen sayısı
     $sql = "SELECT COUNT(*) as total FROM users WHERE branch = ? AND role = 'teacher'";
