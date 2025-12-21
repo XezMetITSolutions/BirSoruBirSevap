@@ -1,1460 +1,1043 @@
 <?php
 /**
  * SuperAdmin - Kullanıcı Yönetimi
+ * Tamamen Yeniden Tasarlanmış Modern Arayüz
  */
 
 require_once '../auth.php';
 require_once '../config.php';
+require_once 'includes/locations.php';
 
 $auth = Auth::getInstance();
 
-// SuperAdmin kontrolü
+// Yetki Kontrolü
 if (!$auth->isLoggedIn() || !$auth->hasRole('admin')) {
     header('Location: ../login.php');
     exit;
 }
 
-$error = '';
-$success = '';
+// === İŞLEM MANTIĞI (PHP LOGIC) ===
 
-// URL parametrelerinden başarı mesajlarını al
-if (isset($_GET['success'])) {
-    switch ($_GET['success']) {
-        case 'user_added':
-            $username = $_GET['username'] ?? '';
-            $password = $_GET['password'] ?? '';
-            $success = '<div style="background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); border: 1px solid #c3e6cb; border-radius: 10px; padding: 20px; margin: 20px 0;">
-                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                    <span style="font-size: 24px; margin-right: 10px;">✅</span>
-                    <h3 style="margin: 0; color: #155724; font-size: 1.3rem;">Kullanıcı Başarıyla Eklendi!</h3>
-                </div>
-                <div style="background: white; padding: 15px; border-radius: 8px; border: 1px solid #b8dacc;">
-                    <div style="margin-bottom: 10px;">
-                        <strong style="color: #155724;">👤 Kullanıcı Adı:</strong>
-                        <code style="background: #f8f9fa; padding: 4px 8px; border-radius: 4px; font-family: monospace; margin-left: 8px;">' . htmlspecialchars($username) . '</code>
-                    </div>
-                    <div>
-                        <strong style="color: #155724;">🔑 Şifre:</strong>
-                        <code style="background: #f8f9fa; padding: 4px 8px; border-radius: 4px; font-family: monospace; margin-left: 8px;">' . htmlspecialchars($password) . '</code>
-                    </div>
-                </div>
-                <div style="margin-top: 15px; padding: 10px; background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 6px; color: #856404; font-size: 0.9rem;">
-                    ⚠️ <strong>Önemli:</strong> Bu bilgileri güvenli bir yerde saklayın. Şifre tekrar gösterilmeyecektir.
-                </div>
-            </div>';
-            break;
-        case 'user_deleted':
-            $success = 'Kullanıcı başarıyla silindi.';
-            break;
-        case 'user_updated':
-            $success = 'Kullanıcı başarıyla güncellendi.';
-            break;
-    }
-}
-
-// Konfigürasyon dosyasını dahil et
-require_once 'includes/locations.php';
-$institutions = getAllBranches(); // Düz liste gerekirse diye
-
-
-// Kullanıcı ekleme
-if ($_POST['action'] ?? '' === 'add_user') {
-    $firstName = trim($_POST['first_name'] ?? '');
-    $lastName = trim($_POST['last_name'] ?? '');
-    $role = $_POST['role'] ?? 'student';
-    $institution = $_POST['institution'] ?? '';
-    $region = $_POST['region'] ?? '';
-    if (empty($region) && !empty($institution)) {
-        $region = getRegionByBranch($institution) ?? 'Arlberg';
-    }
-    $class_section = trim($_POST['class_section'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $phone = trim($_POST['phone'] ?? '');
-    
-    // Bölge eğitim başkanı için şube zorunlu değil, diğerleri için zorunlu
-    if (empty($firstName) || empty($lastName)) {
-        $error = 'Ad ve Soyad alanları zorunludur.';
-    } elseif ($role !== 'region_leader' && empty($institution)) {
-        $error = 'Kurum (Şube) alanı zorunludur.';
-    } else {
-        // Kullanıcı adını otomatik oluştur (Ü/ü -> ue, Ö/ö -> oe)
-        $lastNamePart = strlen($lastName) >= 5 ? substr($lastName, 0, 5) : $lastName;
-        $firstNamePart = substr($firstName, 0, 3);
-        $mapSearch = ['Ü','ü','Ö','ö','Ğ','ğ','Ş','ş','Ç','ç','İ','I','ı'];
-        $mapReplace = ['ue','ue','oe','oe','g','g','s','s','c','c','i','i','i'];
-        $lastNamePart = str_replace($mapSearch, $mapReplace, $lastNamePart);
-        $firstNamePart = str_replace($mapSearch, $mapReplace, $firstNamePart);
-        $baseUsername = strtolower($lastNamePart . '.' . $firstNamePart);
-        
-        // Kullanıcı adı benzersiz olana kadar sayı ekle
-        $username = $baseUsername;
-        $counter = 1;
-        $existingUsers = $auth->getAllUsers();
-        
-        while (isset($existingUsers[$username])) {
-            $username = $baseUsername . $counter;
-            $counter++;
-        }
-        
-        // Standart şifre ata
-        $password = 'iqra2025#';
-        
-        // Tam adı oluştur
-        $fullName = $firstName . ' ' . $lastName;
-        
-        try {
-            if ($auth->saveUser($username, $password, $role, $fullName, $institution, $class_section, $email, $phone, $region)) {
-                    // POST-redirect-GET pattern - sayfayı yeniden yönlendir
-                header('Location: users.php?success=user_added&username=' . urlencode($username) . '&password=' . urlencode($password));
-                    exit;
-                } else {
-                    $error = 'Kullanıcı eklenirken bir hata oluştu.';
-                }
-            } catch (Exception $e) {
-                $error = 'Hata: ' . $e->getMessage();
-            }
-        }
-    }
-
-// Random şifre oluşturma fonksiyonu
+// 1. Yardımcı Fonksiyonlar
 function generateRandomPassword($length = 8) {
-    $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
-    $password = '';
-    for ($i = 0; $i < $length; $i++) {
-        $password .= $characters[rand(0, strlen($characters) - 1)];
-    }
-    return $password;
+    return substr(str_shuffle('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*'), 0, $length);
 }
 
-// Kullanıcı silme
-if ($_POST['action'] ?? '' === 'delete_user') {
-    $username = $_POST['username'] ?? '';
-    if (!empty($username)) {
-        if ($auth->deleteUser($username)) {
-            // POST-redirect-GET pattern - sayfayı yeniden yönlendir
-            header('Location: users.php?success=user_deleted');
-            exit;
-        } else {
-            $error = 'Kullanıcı silinirken bir hata oluştu.';
+function normalizeUsername($firstName, $lastName) {
+    $mapSearch = ['Ü','ü','Ö','ö','Ğ','ğ','Ş','ş','Ç','ç','İ','I','ı'];
+    $mapReplace = ['ue','ue','oe','oe','g','g','s','s','c','c','i','i','i'];
+    
+    $lName = strlen($lastName) >= 5 ? substr($lastName, 0, 5) : $lastName;
+    $fName = substr($firstName, 0, 3);
+    
+    $lName = str_replace($mapSearch, $mapReplace, $lName);
+    $fName = str_replace($mapSearch, $mapReplace, $fName);
+    
+    return strtolower($lName . '.' . $fName);
+}
+
+// 2. Form İşlemleri Handle Et
+$message = '';
+$messageType = ''; // success, error
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $action = $_POST['action'] ?? '';
+    
+    // --- KULLANICI EKLEME ---
+    if ($action === 'add_user') {
+        try {
+            $fname = trim($_POST['first_name'] ?? '');
+            $lname = trim($_POST['last_name'] ?? '');
+            $role = $_POST['role'] ?? 'student';
+            $institution = $_POST['institution'] ?? '';
+            $region = $_POST['region'] ?? '';
+            
+            // Bölge otomatik bulma
+            if (empty($region) && !empty($institution)) {
+                $region = getRegionByBranch($institution) ?? 'Arlberg';
+            }
+            
+            if (empty($fname) || empty($lname)) throw new Exception("Ad ve Soyad zorunludur.");
+            if ($role !== 'region_leader' && empty($institution)) throw new Exception("Kurum seçimi zorunludur.");
+
+            $baseUsername = normalizeUsername($fname, $lname);
+            $username = $baseUsername;
+            $counter = 1;
+            $existingUsers = $auth->getAllUsers();
+            
+            while (isset($existingUsers[$username])) {
+                $username = $baseUsername . $counter++;
+            }
+            
+            $password = 'iqra2025#';
+            $fullName = $fname . ' ' . $lname;
+            
+            $res = $auth->saveUser(
+                $username, 
+                $password, 
+                $role, 
+                $fullName, 
+                $institution, 
+                $_POST['class_section'] ?? '', 
+                $_POST['email'] ?? '', 
+                $_POST['phone'] ?? '', 
+                $region
+            );
+            
+            if ($res) {
+                $message = "Kullanıcı başarıyla oluşturuldu. <br>👤: <b>$username</b> <br>🔑: <b>$password</b>";
+                $messageType = 'success';
+            } else {
+                throw new Exception("Kullanıcı kaydedilemedi.");
+            }
+        } catch (Exception $e) {
+            $message = $e->getMessage();
+            $messageType = 'error';
         }
     }
-}
-
-// Kullanıcı düzenleme
-if ($_POST['action'] ?? '' === 'edit_user') {
-    $username = $_POST['username'] ?? '';
-    $name = trim($_POST['name'] ?? '');
-    $role = $_POST['role'] ?? '';
-    $institution = trim($_POST['institution'] ?? '');
-    $class_section = trim($_POST['class_section'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $phone = trim($_POST['phone'] ?? '');
-    $new_password = trim($_POST['new_password'] ?? '');
     
-    // Bölge eğitim başkanı için şube zorunlu değil, diğerleri için zorunlu
-    if (!empty($username) && !empty($name) && !empty($role) && ($role === 'region_leader' || !empty($institution))) {
-        // Mevcut kullanıcıyı al
-$allUsers = $auth->getAllUsers();
-        if (isset($allUsers[$username])) {
+    // --- KULLANICI DÜZENLEME ---
+    elseif ($action === 'edit_user') {
+        try {
+            $username = $_POST['username'] ?? '';
+            $allUsers = $auth->getAllUsers();
+            
+            if (!isset($allUsers[$username])) throw new Exception("Kullanıcı bulunamadı.");
+            
             $userData = $allUsers[$username];
+            $password = !empty($_POST['new_password']) ? $_POST['new_password'] : $userData['password'];
             
-            // Şifre değiştirilmişse yeni şifre kullan, yoksa eski şifreyi koru
-            $password = !empty($new_password) ? $new_password : $userData['password'];
-            
-            // Bölge eğitim başkanı için region'ı al, yoksa institution'dan bul
-            $region = $userData['region'] ?? '';
+            $institution = $_POST['institution'] ?? '';
+            $region = $_POST['region'] ?? ($userData['region'] ?? '');
             if (empty($region) && !empty($institution)) {
                 $region = getRegionByBranch($institution) ?? '';
             }
+
+            $res = $auth->saveUser(
+                $username,
+                $password,
+                $_POST['role'] ?? $userData['role'],
+                $_POST['name'] ?? $userData['name'],
+                $institution,
+                $_POST['class_section'] ?? '',
+                $_POST['email'] ?? '',
+                $_POST['phone'] ?? '',
+                $region
+            );
             
-            // Kullanıcıyı güncelle
-            if ($auth->saveUser($username, $password, $role, $name, $institution, $class_section, $email, $phone, $region)) {
-                header('Location: users.php?success=user_updated');
-                exit;
+            if ($res) {
+                $message = "Kullanıcı başarıyla güncellendi.";
+                $messageType = 'success';
             } else {
-                $error = 'Kullanıcı güncellenirken bir hata oluştu.';
+                throw new Exception("Güncelleme başarısız.");
             }
+        } catch (Exception $e) {
+            $message = $e->getMessage();
+            $messageType = 'error';
+        }
+    }
+    
+    // --- KULLANICI SİLME ---
+    elseif ($action === 'delete_user') {
+        $u = $_POST['username'] ?? '';
+        if ($auth->deleteUser($u)) {
+            $message = "Kullanıcı silindi.";
+            $messageType = 'success';
         } else {
-            $error = 'Kullanıcı bulunamadı.';
+            $message = "Silme işlemi başarısız.";
+            $messageType = 'error';
         }
-    } else {
-        $error = 'Lütfen tüm zorunlu alanları doldurun.';
     }
 }
 
-// CSV Import
-if ($_POST['action'] ?? '' === 'import_csv') {
-    if (isset($_FILES['csv_file']) && $_FILES['csv_file']['error'] === UPLOAD_ERR_OK) {
-        $csvFile = $_FILES['csv_file']['tmp_name'];
-        $importedCount = 0;
-        $errorCount = 0;
-        $errors = [];
-        
-        if (($handle = fopen($csvFile, "r")) !== FALSE) {
-            $header = fgetcsv($handle, 1000, ","); // İlk satır başlık
-            
-            while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                if (count($data) >= 4) { // En az 4 sütun olmalı
-                    $firstName = trim($data[0]);
-                    $lastName = trim($data[1]);
-                    $role = trim($data[2]);
-                    $institution = trim($data[3]);
-                    $class_section = isset($data[4]) ? trim($data[4]) : '';
-                    $email = isset($data[5]) ? trim($data[5]) : '';
-                    $phone = isset($data[6]) ? trim($data[6]) : '';
-                    
-                    if (!empty($firstName) && !empty($lastName) && !empty($role) && !empty($institution)) {
-                        // Kullanıcı adını otomatik oluştur (Ü/ü -> ue, Ö/ö -> oe)
-                        $lastNamePart = strlen($lastName) >= 5 ? substr($lastName, 0, 5) : $lastName;
-                        $firstNamePart = substr($firstName, 0, 3);
-                        $mapSearch = ['Ü','ü','Ö','ö','Ğ','ğ','Ş','ş','Ç','ç','İ','I','ı'];
-                        $mapReplace = ['ue','ue','oe','oe','g','g','s','s','c','c','i','i','i'];
-                        $lastNamePart = str_replace($mapSearch, $mapReplace, $lastNamePart);
-                        $firstNamePart = str_replace($mapSearch, $mapReplace, $firstNamePart);
-                        $baseUsername = strtolower($lastNamePart . '.' . $firstNamePart);
-                        
-                        // Kullanıcı adı benzersiz olana kadar sayı ekle
-                        $username = $baseUsername;
-                        $counter = 1;
-                        $existingUsers = $auth->getAllUsers();
-                        
-                        while (isset($existingUsers[$username])) {
-                            $username = $baseUsername . $counter;
-                            $counter++;
-                        }
-                        
-                        // Standart şifre ata
-                        $password = 'iqra2025#';
-                        
-                        // Tam adı oluştur
-                        $fullName = $firstName . ' ' . $lastName;
-                        
-                        try {
-                            if ($auth->saveUser($username, $password, $role, $fullName, $institution, $class_section, $email, $phone)) {
-                                $importedCount++;
-                            } else {
-                                $errorCount++;
-                                $errors[] = "Hata: $fullName eklenemedi";
-                            }
-                        } catch (Exception $e) {
-                            $errorCount++;
-                            $errors[] = "Hata: $fullName - " . $e->getMessage();
-                        }
-                    } else {
-                        $errorCount++;
-                        $errors[] = "Eksik veri: " . implode(', ', $data);
-                    }
-                }
-            }
-            fclose($handle);
-        }
-        
-        if ($importedCount > 0) {
-            $success = "CSV import tamamlandı! $importedCount kullanıcı eklendi.";
-            if ($errorCount > 0) {
-                $success .= " $errorCount hata oluştu.";
-            }
-        } else {
-            $error = "Hiç kullanıcı eklenemedi. CSV formatını kontrol edin.";
-        }
-    } else {
-        $error = 'CSV dosyası yüklenirken hata oluştu.';
-    }
-}
+// 3. Verileri Getirme ve Filtreleme
+$search = trim($_GET['search'] ?? '');
+$fRole = $_GET['role'] ?? '';
+$fRegion = $_GET['region'] ?? '';
+$fInst = $_GET['institution'] ?? '';
 
-// Excel Export
-if ($_GET['action'] ?? '' === 'export_csv') {
-    $exportType = $_GET['type'] ?? 'all'; // all, students, teachers
-    
-    $allUsers = $auth->getAllUsers();
-    $exportUsers = [];
-
-foreach ($allUsers as $username => $userData) {
-        if ($exportType === 'students' && $userData['role'] !== 'student') continue;
-        if ($exportType === 'teachers' && $userData['role'] !== 'teacher') continue;
-        
-        $exportUsers[] = [
-            'username' => $username,
-            'name' => $userData['full_name'] ?? $userData['name'] ?? 'Bilinmiyor',
-            'role' => $userData['role'],
-            'institution' => $userData['branch'] ?? $userData['institution'] ?? '',
-            'class_section' => $userData['class_section'] ?? '',
-            'email' => $userData['email'] ?? '',
-            'phone' => $userData['phone'] ?? '',
-            'created_at' => $userData['created_at'] ?? ''
-        ];
-    }
-    
-    // Dosya adı
-    $typeNames = [
-        'all' => 'Tum_Kullanicilar',
-        'students' => 'Ogrenciler',
-        'teachers' => 'Ogretmenler'
-    ];
-    $filename = $typeNames[$exportType] . '_' . date('Y-m-d_H-i-s') . '.xls';
-    
-    // Excel uyumlu HTML tablosu oluştur
-    $html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
-<head>
-    <meta charset="UTF-8">
-    <meta name="ExcelCreated" content="1">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
-        .header { text-align: center; margin-bottom: 30px; background: #f8f9fa; padding: 20px; border-radius: 10px; }
-        .header h1 { color: #2c3e50; margin: 0 0 10px 0; font-size: 24px; }
-        .header p { color: #7f8c8d; margin: 5px 0; font-size: 14px; }
-        .stats { background: #e3f2fd; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
-        .stats h3 { margin: 0 0 15px 0; color: #1976d2; font-size: 16px; }
-        .stats-grid { display: table; width: 100%; }
-        .stats-row { display: table-row; }
-        .stat-item { display: table-cell; text-align: center; padding: 10px; width: 25%; }
-        .stat-number { font-size: 20px; font-weight: bold; color: #1976d2; }
-        .stat-label { color: #666; font-size: 12px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 12px; }
-        th { background: #4a90e2; color: white; padding: 12px 8px; text-align: left; font-weight: bold; border: 1px solid #ddd; }
-        td { padding: 10px 8px; border: 1px solid #ddd; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        tr:hover { background-color: #e8f4fd; }
-        .role-student { color: #27ae60; font-weight: bold; }
-        .role-teacher { color: #f39c12; font-weight: bold; }
-        .role-superadmin { color: #e74c3c; font-weight: bold; }
-        .username { font-weight: bold; color: #2c3e50; }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>📊 BİR SORU BİR SEVAP - KULLANICI LİSTESİ</h1>
-        <p><strong>Export Tarihi:</strong> ' . date('d.m.Y H:i:s') . '</p>
-        <p><strong>Export Türü:</strong> ' . ucfirst($exportType) . '</p>
-    </div>
-    
-    <div class="stats">
-        <h3>📈 İstatistikler</h3>
-        <div class="stats-grid">
-            <div class="stats-row">
-                <div class="stat-item">
-                    <div class="stat-number">' . count($exportUsers) . '</div>
-                    <div class="stat-label">Toplam Kullanıcı</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">' . count(array_filter($exportUsers, fn($u) => $u['role'] === 'student')) . '</div>
-                    <div class="stat-label">Öğrenci</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">' . count(array_filter($exportUsers, fn($u) => $u['role'] === 'teacher')) . '</div>
-                    <div class="stat-label">Öğretmen</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">' . count(array_filter($exportUsers, fn($u) => $u['role'] === 'superadmin')) . '</div>
-                    <div class="stat-label">SuperAdmin</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>Kullanıcı Adı</th>
-                <th>Ad Soyad</th>
-                <th>Rol</th>
-                <th>Kurum</th>
-                <th>Sınıf</th>
-                <th>E-posta</th>
-                <th>Telefon</th>
-                <th>Kayıt Tarihi</th>
-            </tr>
-        </thead>
-        <tbody>';
-    
-    foreach ($exportUsers as $user) {
-        $roleClass = 'role-' . $user['role'];
-        $roleText = '';
-        switch ($user['role']) {
-            case 'student':
-                $roleText = '👨‍🎓 Öğrenci';
-                break;
-            case 'teacher':
-                $roleText = '👨‍🏫 Eğitmen';
-                break;
-            case 'superadmin':
-                $roleText = '👑 SuperAdmin';
-                break;
-        }
-        
-        $html .= '<tr>
-            <td class="username">' . htmlspecialchars($user['username']) . '</td>
-            <td>' . htmlspecialchars($user['name']) . '</td>
-            <td class="' . $roleClass . '">' . $roleText . '</td>
-            <td>' . htmlspecialchars($user['institution']) . '</td>
-            <td>' . htmlspecialchars($user['class_section']) . '</td>
-            <td>' . htmlspecialchars($user['email']) . '</td>
-            <td>' . htmlspecialchars($user['phone']) . '</td>
-            <td>' . htmlspecialchars($user['created_at']) . '</td>
-        </tr>';
-    }
-    
-    $html .= '</tbody>
-    </table>
-</body>
-</html>';
-    
-    // Excel uyumlu dosya olarak gönder
-    header('Content-Type: application/vnd.ms-excel');
-    header('Content-Disposition: attachment; filename="' . $filename . '"');
-    header('Cache-Control: max-age=0');
-    
-    echo $html;
-    exit;
-}
-
-// Sayfalama parametreleri
-$itemsPerPage = isset($_GET['items_per_page']) ? max(10, intval($_GET['items_per_page'])) : 50;
-$currentPage = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
-$searchTerm = isset($_GET['search']) ? trim($_GET['search']) : '';
-$roleFilter = isset($_GET['role']) ? $_GET['role'] : '';
-$institutionFilter = isset($_GET['institution']) ? $_GET['institution'] : '';
-$regionFilter = isset($_GET['region']) ? $_GET['region'] : '';
-
-// Kullanıcıları getir ve filtrele
 $allUsers = $auth->getAllUsers();
-$filteredUsers = [];
+$users = []; // Filtrelenmiş liste
 
-foreach ($allUsers as $username => $userData) {
-    $institution = $userData['branch'] ?? $userData['institution'] ?? 'Belirtilmemiş';
-    $region = $userData['region'] ?? getRegionByBranch($institution) ?? '';
+// İstatistikler için sayaçlar
+$stats = ['total' => 0, 'student' => 0, 'teacher' => 0, 'admin' => 0];
+
+foreach ($allUsers as $uName => $uData) {
+    // İstatistik (filtre öncesi genel toplam)
+    $stats['total']++;
+    if (($uData['role'] ?? '') === 'student') $stats['student']++;
+    if (($uData['role'] ?? '') === 'teacher') $stats['teacher']++;
+    if (in_array($uData['role'] ?? '', ['admin', 'superadmin'])) $stats['admin']++;
     
-    $user = [
-        'username' => $username,
-        'role' => $userData['role'],
-        'name' => $userData['full_name'] ?? $userData['name'] ?? 'Bilinmiyor',
-        'password' => $userData['password'] ?? 'N/A',
-        'institution' => $institution,
-        'region' => $region,
-        'class_section' => $userData['class_section'] ?? '',
-        'email' => $userData['email'] ?? '',
-        'phone' => $userData['phone'] ?? '',
-        'created_at' => $userData['created_at'] ?? 'Bilinmiyor',
-        'last_login' => $userData['last_login'] ?? 'Hiç giriş yapmamış'
-    ];
-    
-    // Arama filtresi
-    if ($searchTerm && !stripos($user['name'], $searchTerm) && !stripos($user['username'], $searchTerm)) {
-        continue;
+    // Filtreleme
+    if ($search) {
+        $term = mb_strtolower($search);
+        if (
+            strpos(mb_strtolower($uName), $term) === false &&
+            strpos(mb_strtolower($uData['name'] ?? ''), $term) === false
+        ) continue;
     }
     
-    // Rol filtresi
-    if ($roleFilter && $user['role'] !== $roleFilter) {
-        continue;
-    }
+    if ($fRole && ($uData['role'] ?? '') !== $fRole) continue;
+    if ($fRegion && ($uData['region'] ?? '') !== $fRegion) continue;
     
-    // Bölge filtresi
-    if ($regionFilter && $user['region'] !== $regionFilter) {
-        continue;
-    }
+    // Kurum filtresi - biraz esnek
+    $uInst = $uData['branch'] ?? $uData['institution'] ?? '';
+    if ($fInst && $uInst !== $fInst) continue;
     
-    // Kurum filtresi
-    if ($institutionFilter && $user['institution'] !== $institutionFilter) {
-        continue;
-    }
-    
-    $filteredUsers[] = $user;
+    $users[$uName] = $uData;
+    $users[$uName]['username'] = $uName; // Array içine ekleyelim kullanım kolaylığı için
 }
 
-// Sayfalama hesaplamaları
-$totalUsers = count($filteredUsers);
-$totalPages = ceil($totalUsers / $itemsPerPage);
-$offset = ($currentPage - 1) * $itemsPerPage;
+// Sayfalama
+$page = max(1, intval($_GET['page'] ?? 1));
+$perPage = 20;
+$totalItems = count($users);
+$totalPages = ceil($totalItems / $perPage);
+$offset = ($page - 1) * $perPage;
+$displayUsers = array_slice($users, $offset, $perPage);
 
-// Mevcut sayfa için kullanıcıları al
-$users = array_slice($filteredUsers, $offset, $itemsPerPage);
-
-// İstatistikler
-$totalStudents = count(array_filter($filteredUsers, fn($u) => $u['role'] === 'student'));
-$totalTeachers = count(array_filter($filteredUsers, fn($u) => $u['role'] === 'teacher'));
-$totalBranchLeaders = count(array_filter($filteredUsers, fn($u) => $u['role'] === 'branch_leader'));
-$totalRegionLeaders = count(array_filter($filteredUsers, fn($u) => $u['role'] === 'region_leader'));
-$totalAdmins = count(array_filter($filteredUsers, fn($u) => $u['role'] === 'superadmin' || $u['role'] === 'admin'));
 ?>
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kullanıcı Yönetimi - SuperAdmin</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Kullanıcı Yönetimi | SoruSevap</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Ana CSS -->
     <link rel="stylesheet" href="css/admin-style.css">
+    
+    <style>
+        /* Bu Sayfaya Özel Gelişmiş Tasarım Override'ları - Inline değil, scoped logic için buradalar */
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+            --accent-color: #068567;
+            --text-main: #ffffff;
+            --text-secondary: #94a3b8;
+        }
 
+        body {
+            font-family: 'Outfit', sans-serif; /* Daha modern bir font */
+        }
+
+        /* Ambient background enhancements */
+        .bg-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(6,133,103,0.15) 0%, rgba(0,0,0,0) 70%);
+            top: -100px;
+            left: -100px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Layout */
+        .page-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* Stats Row */
+        .modern-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .m-stat-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .m-stat-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .m-stat-info h3 {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 0 0 8px 0;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .m-stat-info .value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1;
+        }
+
+        .m-stat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            background: rgba(255,255,255,0.05);
+            color: var(--accent-color);
+        }
+
+        /* Main Content Area */
+        .glass-container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Toolbar/Filter Bar */
+        .toolbar {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .search-box input {
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--glass-border);
+            padding: 12px 12px 12px 40px;
+            border-radius: 12px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--accent-color);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(6,133,103,0.2);
+        }
+
+        .filter-select {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid var(--glass-border);
+            color: white;
+            padding: 12px 36px 12px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+        }
+        
+        .filter-select option { background: #0f172a; }
+
+        /* Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th {
+            text-align: left;
+            padding: 16px 24px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .data-table td {
+            padding: 16px 24px;
+            color: var(--text-main);
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            vertical-align: middle;
+        }
+
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+        .user-cell {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #068567, #0f4c3e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .user-meta h4 { margin: 0; font-size: 15px; font-weight: 500; }
+        .user-meta span { font-size: 12px; color: var(--text-secondary); }
+
+        /* Badges */
+        .badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .bg-role-student { background: rgba(59,130,246,0.15); color: #60a5fa; }
+        .bg-role-teacher { background: rgba(245,158,11,0.15); color: #fbbf24; }
+        .bg-role-admin { background: rgba(239,68,68,0.15); color: #fca5a5; }
+        
+        /* Actions */
+        .action-btn-group {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .icon-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        
+        .icon-btn:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-color: rgba(255,255,255,0.2);
+        }
+        
+        .icon-btn.danger:hover {
+            background: rgba(239,68,68,0.2);
+            color: #fca5a5;
+            border-color: rgba(239,68,68,0.4);
+        }
+
+        /* Improved Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-box {
+            background: #111827;
+            width: 100%;
+            max-width: 550px;
+            border-radius: 24px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            transform: translateY(20px) scale(0.95);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            max-height: 90vh;
+        }
+        
+        .modal-overlay.active .modal-box {
+            transform: translateY(0) scale(1);
+        }
+        
+        .modal-header {
+            padding: 24px;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h2 { margin: 0; font-size: 20px; color: white; }
+        
+        .modal-body {
+            padding: 24px;
+            overflow-y: auto;
+        }
+        
+        .modal-footer {
+            padding: 20px 24px;
+            border-top: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 0 0 24px 24px;
+        }
+
+        /* Form Elements inside Modal */
+        .form-grid {
+            display: grid;
+            gap: 16px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+        
+        .input-group input, 
+        .input-group select {
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--glass-border);
+            padding: 10px 14px;
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .primary-btn {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .primary-btn:hover { transform: scale(1.02); }
+
+        .secondary-btn {
+            background: transparent;
+            border: 1px solid var(--glass-border);
+            color: var(--text-secondary);
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .secondary-btn:hover { background: rgba(255,255,255,0.05); color: white; }
+        
+        /* Alert Message */
+        .alert-float {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            padding: 16px 24px;
+            border-radius: 12px;
+            color: white;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: slideInRight 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .alert-success { background: rgba(16, 185, 129, 0.9); backdrop-filter: blur(10px); }
+        .alert-error { background: rgba(239, 68, 68, 0.9); backdrop-filter: blur(10px); }
+        
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Pagination */
+        .pagination {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .page-link {
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .page-link:hover, .page-link.active {
+            background: var(--accent-color);
+        }
+
+    </style>
 </head>
 <body>
     <div class="bg-decoration">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
     </div>
+    
+    <div class="bg-glow"></div>
 
     <?php include 'sidebar.php'; ?>
 
-    <div class="main-wrapper users-page-container">
-        <div class="top-bar">
-            <div class="menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div class="welcome-text">
-                <h2>Kullanıcı Yönetimi</h2>
-                <p>Sistem kullanıcılarını yönetin ve yeni kullanıcılar ekleyin</p>
-            </div>
+    <div class="main-wrapper">
+        <!-- Bildirim Mesajı -->
+        <?php if (!empty($message)): ?>
+        <div class="alert-float alert-<?php echo $messageType; ?>" id="mainAlert">
+             <i class="fas <?php echo $messageType == 'success' ? 'fa-check-circle' : 'fa-exclamation-triangle'; ?>"></i>
+             <div><?php echo $message; ?></div>
+             <button onclick="document.getElementById('mainAlert').style.display='none'" style="background:none; border:none; color:white; margin-left:10px; cursor:pointer;"><i class="fas fa-times"></i></button>
         </div>
-
-        <?php if ($error): ?>
-            <div class="alert-box" style="margin: 20px 0; animation: slideDown 0.3s ease;">
-                <i class="fas fa-exclamation-circle"></i> <?php echo htmlspecialchars($error); ?>
-            </div>
+        <script>setTimeout(() => document.getElementById('mainAlert').classList.add('hide-anim'), 5000);</script>
         <?php endif; ?>
 
-        <?php if ($success): ?>
-            <div style="margin: 20px 0; animation: slideDown 0.3s ease;">
-                <?php echo $success; ?>
-            </div>
-        <?php endif; ?>
-        
-        <!-- İstatistik Kartları -->
-        <div class="stats-grid-modern">
-            <div class="stat-card-modern">
-                <div class="stat-icon-wrapper" style="background: rgba(6,133,103,0.2); color: var(--primary);">
-                    <i class="fas fa-users"></i>
+        <div class="page-grid">
+            <!-- Header -->
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <h1 style="font-size: 28px; font-weight:700; margin:0; background: linear-gradient(to right, #fff, #cbd5e1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Kullanıcı Yönetimi</h1>
+                    <p style="color:var(--text-secondary); margin:4px 0 0 0;">Toplam <?php echo $stats['total']; ?> kayıtlı kullanıcı</p>
                 </div>
-                <div class="stat-value-modern"><?php echo $totalUsers; ?></div>
-                <div class="stat-label-modern">Toplam Kullanıcı</div>
-            </div>
-            
-            <div class="stat-card-modern">
-                <div class="stat-icon-wrapper" style="background: rgba(59,130,246,0.2); color: #3b82f6;">
-                    <i class="fas fa-user-graduate"></i>
-                </div>
-                <div class="stat-value-modern"><?php echo $totalStudents; ?></div>
-                <div class="stat-label-modern">Öğrenci</div>
-            </div>
-            
-            <div class="stat-card-modern">
-                <div class="stat-icon-wrapper" style="background: rgba(245,158,11,0.2); color: #f59e0b;">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                </div>
-                <div class="stat-value-modern"><?php echo $totalTeachers; ?></div>
-                <div class="stat-label-modern">Eğitmen</div>
-            </div>
-            
-            <div class="stat-card-modern">
-                <div class="stat-icon-wrapper" style="background: rgba(59,130,246,0.2); color: #60a5fa;">
-                    <i class="fas fa-building"></i>
-                </div>
-                <div class="stat-value-modern"><?php echo $totalBranchLeaders; ?></div>
-                <div class="stat-label-modern">Eğitim Başkanı</div>
-            </div>
-            
-            <div class="stat-card-modern">
-                <div class="stat-icon-wrapper" style="background: rgba(139,92,246,0.2); color: #8b5cf6;">
-                    <i class="fas fa-map-marked-alt"></i>
-                </div>
-                <div class="stat-value-modern"><?php echo $totalRegionLeaders; ?></div>
-                <div class="stat-label-modern">Bölge Lideri</div>
-            </div>
-            
-            <div class="stat-card-modern">
-                <div class="stat-icon-wrapper" style="background: rgba(239,68,68,0.2); color: #ef4444;">
-                    <i class="fas fa-crown"></i>
-                </div>
-                <div class="stat-value-modern"><?php echo $totalAdmins; ?></div>
-                <div class="stat-label-modern">Admin</div>
-            </div>
-        </div>
-
-        <!-- Modern Filters -->
-        <div class="filters-section-modern">
-            <form method="GET" id="filterForm" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr auto auto; gap: 12px; align-items: center;">
-                <div style="position: relative; grid-column: 1;">
-                    <i class="fas fa-search" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); z-index: 1;"></i>
-                    <input type="text" name="search" placeholder="Kullanıcı adı veya isim ile ara..." value="<?php echo htmlspecialchars($searchTerm); ?>" 
-                           class="search-input-modern-styled"
-                           onfocus="this.style.background='rgba(0,0,0,0.4)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 0 0 3px rgba(6,133,103,0.1)'"
-                           onblur="this.style.background='rgba(0,0,0,0.3)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.boxShadow='none'">
-                </div>
-                
-                <select name="role" onchange="this.form.submit()" class="modern-select" style="grid-column: 2;">
-                    <option value="">🎭 Tüm Roller</option>
-                    <option value="student" <?php echo $roleFilter === 'student' ? 'selected' : ''; ?>>👨‍🎓 Öğrenci</option>
-                    <option value="teacher" <?php echo $roleFilter === 'teacher' ? 'selected' : ''; ?>>👨‍🏫 Eğitmen</option>
-                    <option value="branch_leader" <?php echo $roleFilter === 'branch_leader' ? 'selected' : ''; ?>>🏢 Eğitim Başkanı</option>
-                    <option value="region_leader" <?php echo $roleFilter === 'region_leader' ? 'selected' : ''; ?>>🌍 Bölge Eğitim Başkanı</option>
-                    <option value="superadmin" <?php echo $roleFilter === 'superadmin' ? 'selected' : ''; ?>>👑 Admin</option>
-                </select>
-
-                <select name="region" onchange="this.form.submit()" class="modern-select" style="grid-column: 3;">
-                    <option value="">🌍 Tüm Bölgeler</option>
-                    <?php foreach ($regionConfig as $region => $branches): ?>
-                        <option value="<?php echo htmlspecialchars($region); ?>" <?php echo $regionFilter === $region ? 'selected' : ''; ?>>
-                            <?php echo htmlspecialchars($region); ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-
-                <select name="institution" onchange="this.form.submit()" class="modern-select" style="grid-column: 4;">
-                    <option value="">🏢 Tüm Kurumlar</option>
-                    <?php foreach ($regionConfig as $region => $branches): ?>
-                        <?php if (!empty($branches)): ?>
-                            <optgroup label="<?php echo htmlspecialchars($region); ?>">
-                                <?php foreach ($branches as $branch): ?>
-                                    <option value="<?php echo htmlspecialchars($branch); ?>" <?php echo $institutionFilter === $branch ? 'selected' : ''; ?>>
-                                        <?php echo htmlspecialchars($branch); ?>
-                                    </option>
-                                <?php endforeach; ?>
-                            </optgroup>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
-                </select>
-
-                <?php if ($searchTerm || $roleFilter || $regionFilter || $institutionFilter): ?>
-                    <a href="users.php" class="clean-btn" style="grid-column: 5; padding: 14px 18px; text-align: center;">
-                        <i class="fas fa-times"></i> Temizle
-                    </a>
-                <?php else: ?>
-                    <div style="grid-column: 5;"></div>
-                <?php endif; ?>
-                
-                <div style="grid-column: 6; display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end;">
-                    <button type="button" class="btn btn-secondary" onclick="event.stopPropagation(); toggleImportModal(); return false;" style="padding: 14px 20px; background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.2); transition: all 0.3s; white-space: nowrap;" onmouseover="this.style.background='rgba(245,158,11,0.25)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(245,158,11,0.15)'; this.style.transform='translateY(0)'">
-                        <i class="fas fa-file-upload"></i> <span style="display: inline-block;">CSV</span>
-                    </button>
-                    <div class="dropdown" style="position: relative;">
-                        <button type="button" class="btn btn-secondary" onclick="event.stopPropagation(); toggleDropdown('exportDropdown'); return false;" style="padding: 14px 20px; background: rgba(34,197,94,0.15); color: #86efac; border: 1px solid rgba(34,197,94,0.2); transition: all 0.3s; white-space: nowrap;" onmouseover="this.style.background='rgba(34,197,94,0.25)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(34,197,94,0.15)'; this.style.transform='translateY(0)'">
-                            <i class="fas fa-file-download"></i> <span style="display: inline-block;">Dışa Aktar</span> <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 5px;"></i>
-                        </button>
-                        <div id="exportDropdown" class="dropdown-content" style="display: none; position: absolute; right: 0; top: 100%; margin-top: 8px; background: rgba(15,23,42,0.95); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 8px; min-width: 220px; z-index: 1000; box-shadow: 0 8px 24px rgba(0,0,0,0.3); animation: fadeIn 0.2s ease;">
-                            <a href="users.php?action=export_csv&type=all" style="display: flex; align-items: center; gap: 10px; padding: 12px 16px; color: #e2e8f0; text-decoration: none; border-radius: 8px; transition: all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateX(4px)'" onmouseout="this.style.background='transparent'; this.style.transform='translateX(0)'">
-                                <i class="fas fa-users" style="width: 20px;"></i> Tüm Kullanıcılar
-                            </a>
-                            <a href="users.php?action=export_csv&type=students" style="display: flex; align-items: center; gap: 10px; padding: 12px 16px; color: #e2e8f0; text-decoration: none; border-radius: 8px; transition: all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateX(4px)'" onmouseout="this.style.background='transparent'; this.style.transform='translateX(0)'">
-                                <i class="fas fa-user-graduate" style="width: 20px;"></i> Öğrenciler
-                            </a>
-                            <a href="users.php?action=export_csv&type=teachers" style="display: flex; align-items: center; gap: 10px; padding: 12px 16px; color: #e2e8f0; text-decoration: none; border-radius: 8px; transition: all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateX(4px)'" onmouseout="this.style.background='transparent'; this.style.transform='translateX(0)'">
-                                <i class="fas fa-chalkboard-teacher" style="width: 20px;"></i> Eğitmenler
-                            </a>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary" onclick="event.stopPropagation(); toggleAddUserModal(); return false;" style="padding: 14px 24px; box-shadow: 0 4px 12px rgba(6,133,103,0.3); white-space: nowrap;">
-                        <i class="fas fa-user-plus"></i> <span style="display: inline-block;">Yeni Kullanıcı</span>
+                <div>
+                     <button onclick="openModal('addModal')" class="primary-btn" style="padding: 12px 24px; font-size:14px; box-shadow: 0 4px 14px rgba(6,133,103,0.4);">
+                        <i class="fas fa-plus" style="margin-right: 8px;"></i> Yeni Kullanıcı
                     </button>
                 </div>
-            </form>
-        </div>
-        
-        <style>
-            @media (max-width: 1200px) {
-                .filters-section-modern form {
-                    grid-template-columns: 1fr;
-                    gap: 12px;
-                }
-                
-                .filters-section-modern form > * {
-                    grid-column: 1 !important;
-                }
-            }
-        </style>
+            </div>
 
-        <!-- Modern Table -->
-        <div class="table-container-modern">
-            <div class="table-header-modern">
-                <div style="display: flex; align-items: center; gap: 16px;">
-                    <div style="width: 48px; height: 48px; border-radius: 14px; background: linear-gradient(135deg, rgba(6,133,103,0.2) 0%, rgba(6,133,103,0.1) 100%); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.5rem;">
-                        <i class="fas fa-users"></i>
+            <!-- Stats -->
+            <div class="modern-stats">
+                <div class="m-stat-card">
+                    <div class="m-stat-info">
+                        <h3>Toplam Kullanıcı</h3>
+                        <div class="value"><?php echo $stats['total']; ?></div>
                     </div>
-                    <div>
-                        <div style="font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
-                            Kullanıcı Listesi
-                        </div>
-                        <div style="font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
-                            <i class="fas fa-info-circle"></i>
-                            <span>Toplam <?php echo $totalUsers; ?> kullanıcı gösteriliyor</span>
-                        </div>
-                    </div>
+                    <div class="m-stat-icon"><i class="fas fa-users"></i></div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-                    <label style="font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px; white-space: nowrap;">
-                        <i class="fas fa-list-ol"></i> Sayfa başına:
-                    </label>
-                    <select onchange="changeItemsPerPage(this.value)" class="modern-select" style="padding: 12px 16px; min-width: 100px;">
-                        <option value="25" <?php echo $itemsPerPage == 25 ? 'selected' : ''; ?>>25</option>
-                        <option value="50" <?php echo $itemsPerPage == 50 ? 'selected' : ''; ?>>50</option>
-                        <option value="100" <?php echo $itemsPerPage == 100 ? 'selected' : ''; ?>>100</option>
-                    </select>
+                <div class="m-stat-card">
+                    <div class="m-stat-info">
+                        <h3>Öğrenciler</h3>
+                        <div class="value"><?php echo $stats['student']; ?></div>
+                    </div>
+                    <div class="m-stat-icon" style="color: #60a5fa;"><i class="fas fa-user-graduate"></i></div>
+                </div>
+                <div class="m-stat-card">
+                    <div class="m-stat-info">
+                        <h3>Eğitmenler</h3>
+                        <div class="value"><?php echo $stats['teacher']; ?></div>
+                    </div>
+                    <div class="m-stat-icon" style="color: #fbbf24;"><i class="fas fa-chalkboard-teacher"></i></div>
+                </div>
+                <div class="m-stat-card">
+                    <div class="m-stat-info">
+                        <h3>Yöneticiler</h3>
+                        <div class="value"><?php echo $stats['admin']; ?></div>
+                    </div>
+                    <div class="m-stat-icon" style="color: #fca5a5;"><i class="fas fa-shield-alt"></i></div>
                 </div>
             </div>
 
-            <div style="padding: 0;">
-                <?php if (empty($users)): ?>
-                    <div class="empty-state" style="text-align: center; padding: 80px 30px;">
-                        <div style="width: 140px; height: 140px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.1);">
-                            <i class="fas fa-users-slash"></i>
-                        </div>
-                        <h3 style="color: white; margin-bottom: 12px; font-size: 1.6rem; font-weight: 700;">Kullanıcı Bulunamadı</h3>
-                        <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Arama kriterlerinize uygun kullanıcı bulunmamaktadır.</p>
-                        <?php if ($searchTerm || $roleFilter || $regionFilter || $institutionFilter): ?>
-                            <a href="users.php" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 1rem; border-radius: 12px;">
-                                <i class="fas fa-redo"></i> Filtreleri Temizle
-                            </a>
-                        <?php else: ?>
-                            <button type="button" class="btn btn-primary" onclick="event.stopPropagation(); toggleAddUserModal(); return false;" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 1rem; border-radius: 12px;">
-                                <i class="fas fa-user-plus"></i> İlk Kullanıcıyı Ekle
-                            </button>
-                        <?php endif; ?>
+            <!-- Table Section -->
+            <div class="glass-container">
+                <!-- Toolbar -->
+                <form method="GET" class="toolbar">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" name="search" placeholder="İsim veya kullanıcı adı ara..." value="<?php echo htmlspecialchars($search); ?>">
                     </div>
-                <?php else: ?>
-                    <div class="table-responsive" style="overflow-x: auto; max-height: calc(100vh - 450px); overflow-y: auto;">
-                    <table class="table users-table" style="margin: 0; width: 100%; border-collapse: collapse;">
-                    <thead style="position: sticky; top: 0; z-index: 10; background: linear-gradient(135deg, rgba(15,23,42,0.98) 0%, rgba(15,23,42,0.95) 100%); backdrop-filter: blur(20px); border-bottom: 2px solid rgba(255,255,255,0.1);">
-                        <tr>
-                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
-                                <i class="fas fa-user" style="margin-right: 8px; opacity: 0.8;"></i>Kullanıcı
-                            </th>
-                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
-                                <i class="fas fa-user-tag" style="margin-right: 8px; opacity: 0.8;"></i>Rol
-                            </th>
-                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
-                                <i class="fas fa-map-marker-alt" style="margin-right: 8px; opacity: 0.8;"></i>Bölge
-                            </th>
-                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
-                                <i class="fas fa-building" style="margin-right: 8px; opacity: 0.8;"></i>Kurum
-                            </th>
-                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
-                                <i class="fas fa-address-card" style="margin-right: 8px; opacity: 0.8;"></i>İletişim
-                            </th>
-                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
-                                <i class="fas fa-calendar-alt" style="margin-right: 8px; opacity: 0.8;"></i>Kayıt Tarihi
-                            </th>
-                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: center; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
-                                <i class="fas fa-cog" style="margin-right: 8px; opacity: 0.8;"></i>İşlemler
-                            </th>
-                        </tr>
-                    </thead>
-                        <tbody>
-                        <?php foreach ($users as $index => $user): ?>
-                                <tr style="transition: all 0.2s ease; animation: fadeInRow 0.3s ease <?php echo $index * 0.02; ?>s both; border-bottom: 1px solid rgba(255,255,255,0.05);" onmouseover="this.style.background='rgba(255,255,255,0.03)'" onmouseout="this.style.background='transparent'">
-                                <td style="padding: 20px 24px;">
-                                    <div class="user-info" style="display: flex; align-items: center; gap: 12px;">
-                                        <div class="user-avatar" style="width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, rgba(6,133,103,0.3) 0%, rgba(6,133,103,0.2) 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 2px solid rgba(255,255,255,0.1);">
-                                            <?php echo strtoupper(substr($user['name'] ?? 'U', 0, 1)); ?>
-                                        </div>
-                                        <div class="user-details" style="flex: 1; min-width: 0;">
-                                            <div class="user-name" style="font-weight: 600; color: white; font-size: 0.95rem; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo htmlspecialchars($user['name'] ?? 'Bilinmiyor'); ?></div>
-                                            <div class="user-username" style="font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">@<?php echo htmlspecialchars($user['username']); ?></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td style="padding: 20px 24px;">
-                                    <span class="role-badge role-<?php echo $user['role']; ?>" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 10px; font-weight: 600; font-size: 0.85rem;">
-                                        <?php 
-                                        $roleIcons = [
-                                            'student' => '<i class="fas fa-user-graduate"></i>',
-                                            'teacher' => '<i class="fas fa-chalkboard-teacher"></i>',
-                                            'branch_leader' => '<i class="fas fa-building"></i>',
-                                            'region_leader' => '<i class="fas fa-map-marked-alt"></i>',
-                                            'superadmin' => '<i class="fas fa-crown"></i>'
-                                        ];
-                                        echo ($roleIcons[$user['role']] ?? '') . ' ' . ucfirst($user['role']);
-                                        ?>
-                                    </span>
-                                </td>
-                                <td style="padding: 20px 24px;">
-                                    <?php if (!empty($user['region'])): ?>
-                                        <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(139,92,246,0.15); color: #a78bfa; padding: 8px 14px; border-radius: 10px; border: 1px solid rgba(139,92,246,0.2); font-weight: 500; font-size: 0.9rem;">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span><?php echo htmlspecialchars($user['region']); ?></span>
-                                        </div>
-                                    <?php else: ?>
-                                        <span style="color: var(--text-muted); font-size: 0.9rem; font-style: italic;">—</span>
-                                    <?php endif; ?>
-                                </td>
-                                <td style="padding: 20px 24px;">
-                                    <div style="font-weight: 500; color: #e2e8f0; font-size: 0.95rem;">
-                                        <?php echo htmlspecialchars($user['institution']); ?>
-                                    </div>
-                                    <?php if (!empty($user['class_section'])): ?>
-                                        <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 6px; display: inline-block; background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
-                                            <i class="fas fa-layer-group" style="margin-right: 4px;"></i><?php echo htmlspecialchars($user['class_section']); ?>
-                                        </div>
-                                    <?php endif; ?>
-                                </td>
-                                <td style="padding: 20px 24px;">
-                                    <div style="display: flex; flex-direction: column; gap: 6px;">
-                                    <?php if (!empty($user['email'])): ?>
-                                        <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
-                                            <i class="fas fa-envelope" style="width: 16px; opacity: 0.7;"></i> 
-                                            <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px;"><?php echo htmlspecialchars($user['email']); ?></span>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if (!empty($user['phone'])): ?>
-                                        <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
-                                            <i class="fas fa-phone" style="width: 16px; opacity: 0.7;"></i> 
-                                            <span><?php echo htmlspecialchars($user['phone']); ?></span>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if (empty($user['email']) && empty($user['phone'])): ?>
-                                        <span style="color: var(--text-muted); font-size: 0.85rem; font-style: italic;">—</span>
-                                    <?php endif; ?>
-                                    </div>
-                                </td>
-                                <td style="padding: 20px 24px;">
-                                    <div style="font-size: 0.9rem; color: #e2e8f0; font-weight: 500; margin-bottom: 4px;">
-                                        <?php echo date('d.m.Y', strtotime($user['created_at'])); ?>
-                                    </div>
-                                    <div style="font-size: 0.8rem; color: #94a3b8;">
-                                        <i class="fas fa-clock" style="margin-right: 4px; opacity: 0.6;"></i><?php echo date('H:i', strtotime($user['created_at'])); ?>
-                                    </div>
-                                </td>
-                                <td style="padding: 20px 24px; text-align: center;">
-                                    <div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
-                                        <button onclick="event.stopPropagation(); editUser('<?php echo htmlspecialchars($user['username']); ?>'); return false;" title="Düzenle" 
-                                                style="background: linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(59,130,246,0.15) 100%); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); padding: 12px 16px; border-radius: 12px; cursor: pointer; font-size: 1rem; transition: all 0.3s; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px;"
-                                                onmouseover="this.style.background='linear-gradient(135deg, rgba(59,130,246,0.3) 0%, rgba(59,130,246,0.2) 100%)'; this.style.transform='translateY(-2px) scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(59,130,246,0.3)'"
-                                                onmouseout="this.style.background='linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(59,130,246,0.15) 100%)'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none'">
-                                            <i class="fas fa-edit"></i>
-                                        </button>
-                                        <form method="POST" style="display: inline; margin: 0;" onsubmit="return confirm('⚠️ Bu kullanıcıyı silmek istediğinizden emin misiniz?\n\nBu işlem geri alınamaz!');">
-                                            <input type="hidden" name="action" value="delete_user">
-                                            <input type="hidden" name="username" value="<?php echo htmlspecialchars($user['username']); ?>">
-                                            <button type="submit" title="Sil" 
-                                                    style="background: linear-gradient(135deg, rgba(239,68,68,0.2) 0%, rgba(239,68,68,0.15) 100%); color: #fca5a5; border: 1px solid rgba(239,68,68,0.3); padding: 12px 16px; border-radius: 12px; cursor: pointer; font-size: 1rem; transition: all 0.3s; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px;"
-                                                    onmouseover="this.style.background='linear-gradient(135deg, rgba(239,68,68,0.3) 0%, rgba(239,68,68,0.2) 100%)'; this.style.transform='translateY(-2px) scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(239,68,68,0.3)'"
-                                                    onmouseout="this.style.background='linear-gradient(135deg, rgba(239,68,68,0.2) 0%, rgba(239,68,68,0.15) 100%)'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none'">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>
-                                        </form>
-                                    </div>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-                </div>
                     
-                    <?php if ($totalPages > 1): ?>
-                        <div class="pagination" style="padding: 24px 30px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.03) 100%);">
-                            <div style="color: var(--text-muted); font-size: 0.95rem; display: flex; align-items: center; gap: 10px; font-weight: 500;">
-                                <i class="fas fa-info-circle" style="opacity: 0.7;"></i>
-                                <span><?php echo $offset + 1; ?>-<?php echo min($offset + $itemsPerPage, $totalUsers); ?> / <?php echo $totalUsers; ?> kullanıcı gösteriliyor</span>
-                            </div>
-                            <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-                                <button onclick="goToPage(1)" <?php echo $currentPage == 1 ? 'disabled' : ''; ?> 
-                                        style="padding: 10px 16px; background: <?php echo $currentPage == 1 ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.08)'; ?>; color: <?php echo $currentPage == 1 ? 'var(--text-muted)' : '#fff'; ?>; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: <?php echo $currentPage == 1 ? 'not-allowed' : 'pointer'; ?>; transition: all 0.2s; font-weight: 500;"
-                                        <?php if ($currentPage != 1): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
-                                    <i class="fas fa-angle-double-left"></i> İlk
-                                </button>
-                                <button onclick="goToPage(<?php echo $currentPage - 1; ?>)" <?php echo $currentPage == 1 ? 'disabled' : ''; ?>
-                                        style="padding: 10px 16px; background: <?php echo $currentPage == 1 ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.08)'; ?>; color: <?php echo $currentPage == 1 ? 'var(--text-muted)' : '#fff'; ?>; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: <?php echo $currentPage == 1 ? 'not-allowed' : 'pointer'; ?>; transition: all 0.2s; font-weight: 500;"
-                                        <?php if ($currentPage != 1): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
-                                    <i class="fas fa-angle-left"></i> Önceki
-                                </button>
-                                
-                                <?php
-                                $startPage = max(1, $currentPage - 2);
-                                $endPage = min($totalPages, $currentPage + 2);
-                                
-                                if ($startPage > 1): ?>
-                                    <button onclick="goToPage(1)" style="padding: 10px 14px; background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: pointer; transition: all 0.2s; font-weight: 500;"
-                                            onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'">
-                                        1
-                                    </button>
-                                    <?php if ($startPage > 2): ?>
-                                        <span style="color: var(--text-muted); padding: 0 8px;">...</span>
-                                    <?php endif; ?>
-                                <?php endif;
-                                
-                                for ($i = $startPage; $i <= $endPage; $i++):
-                                ?>
-                                    <button onclick="goToPage(<?php echo $i; ?>)" 
-                                            style="padding: 10px 14px; background: <?php echo $i == $currentPage ? 'linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)' : 'rgba(255,255,255,0.08)'; ?>; color: #fff; border: 1px solid <?php echo $i == $currentPage ? 'var(--primary)' : 'rgba(255,255,255,0.1)'; ?>; border-radius: 10px; cursor: pointer; transition: all 0.2s; font-weight: <?php echo $i == $currentPage ? '700' : '500'; ?>; box-shadow: <?php echo $i == $currentPage ? '0 4px 12px rgba(6,133,103,0.3)' : 'none'; ?>;"
-                                            <?php if ($i != $currentPage): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
-                                        <?php echo $i; ?>
-                                    </button>
-                                <?php endfor; 
-                                
-                                if ($endPage < $totalPages): ?>
-                                    <?php if ($endPage < $totalPages - 1): ?>
-                                        <span style="color: var(--text-muted); padding: 0 8px;">...</span>
-                                    <?php endif; ?>
-                                    <button onclick="goToPage(<?php echo $totalPages; ?>)" style="padding: 10px 14px; background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: pointer; transition: all 0.2s; font-weight: 500;"
-                                            onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'">
-                                        <?php echo $totalPages; ?>
-                                    </button>
-                                <?php endif; ?>
-                                
-                                <button onclick="goToPage(<?php echo $currentPage + 1; ?>)" <?php echo $currentPage == $totalPages ? 'disabled' : ''; ?>
-                                        style="padding: 10px 16px; background: <?php echo $currentPage == $totalPages ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.08)'; ?>; color: <?php echo $currentPage == $totalPages ? 'var(--text-muted)' : '#fff'; ?>; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: <?php echo $currentPage == $totalPages ? 'not-allowed' : 'pointer'; ?>; transition: all 0.2s; font-weight: 500;"
-                                        <?php if ($currentPage != $totalPages): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
-                                    Sonraki <i class="fas fa-angle-right"></i>
-                                </button>
-                                <button onclick="goToPage(<?php echo $totalPages; ?>)" <?php echo $currentPage == $totalPages ? 'disabled' : ''; ?>
-                                        style="padding: 10px 16px; background: <?php echo $currentPage == $totalPages ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.08)'; ?>; color: <?php echo $currentPage == $totalPages ? 'var(--text-muted)' : '#fff'; ?>; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: <?php echo $currentPage == $totalPages ? 'not-allowed' : 'pointer'; ?>; transition: all 0.2s; font-weight: 500;"
-                                        <?php if ($currentPage != $totalPages): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
-                                    Son <i class="fas fa-angle-double-right"></i>
-                                </button>
-                            </div>
-                        </div>
+                    <select name="role" class="filter-select" onchange="this.form.submit()">
+                        <option value="">Tüm Roller</option>
+                        <option value="student" <?php if($fRole == 'student') echo 'selected'; ?>>Öğrenci</option>
+                        <option value="teacher" <?php if($fRole == 'teacher') echo 'selected'; ?>>Eğitmen</option>
+                        <option value="branch_leader" <?php if($fRole == 'branch_leader') echo 'selected'; ?>>Şube Müdürü</option>
+                        <option value="region_leader" <?php if($fRole == 'region_leader') echo 'selected'; ?>>Bölge Müdürü</option>
+                        <option value="superadmin" <?php if($fRole == 'superadmin') echo 'selected'; ?>>Admin</option>
+                    </select>
+
+                    <select name="region" class="filter-select" onchange="this.form.submit()">
+                        <option value="">Tüm Bölgeler</option>
+                        <?php foreach ($regionConfig as $reg => $branches): ?>
+                            <option value="<?php echo htmlspecialchars($reg); ?>" <?php if($fRegion == $reg) echo 'selected'; ?>><?php echo htmlspecialchars($reg); ?></option>
+                        <?php endforeach; ?>
+                    </select>
+
+                    <?php if(!empty($search) || !empty($fRole) || !empty($fRegion)): ?>
+                        <a href="users.php" class="secondary-btn" style="text-decoration:none;"><i class="fas fa-times"></i> Temizle</a>
                     <?php endif; ?>
+                </form>
+
+                <!-- Data Table -->
+                <div style="overflow-x: auto;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Kullanıcı</th>
+                                <th>Rol & Yetki</th>
+                                <th>Lokasyon</th>
+                                <th>İletişim</th>
+                                <th style="text-align:right;">İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if (count($displayUsers) > 0): ?>
+                                <?php foreach ($displayUsers as $uKey => $u): ?>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="avatar-circle">
+                                                <?php echo strtoupper(substr($u['name'] ?? 'U', 0, 1) . substr(explode(' ', $u['name'] ?? '')[1] ?? '', 0, 1)); ?>
+                                            </div>
+                                            <div class="user-meta">
+                                                <h4><?php echo htmlspecialchars($u['name'] ?? 'İsimsiz'); ?></h4>
+                                                <span>@<?php echo htmlspecialchars($u['username']); ?></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <?php 
+                                            $rClass = 'bg-role-student';
+                                            $rName = 'Öğrenci';
+                                            if($u['role'] == 'teacher') { $rClass = 'bg-role-teacher'; $rName = 'Eğitmen'; }
+                                            if(strpos($u['role'], 'admin') !== false) { $rClass = 'bg-role-admin'; $rName = 'Yönetici'; }
+                                            if(strpos($u['role'], 'leader') !== false) { $rClass = 'bg-role-admin'; $rName = 'Lider'; }
+                                        ?>
+                                        <span class="badge <?php echo $rClass; ?>"><?php echo $rName; ?></span>
+                                    </td>
+                                    <td>
+                                        <div style="color: white; font-size:14px;"><?php echo htmlspecialchars($u['institution'] ?? $u['branch'] ?? '-'); ?></div>
+                                        <small style="color: var(--text-secondary);"><?php echo htmlspecialchars($u['region'] ?? ''); ?></small>
+                                    </td>
+                                    <td>
+                                        <div style="font-size:13px; color:var(--text-secondary);">
+                                            <?php if(!empty($u['email'])): ?><i class="fas fa-envelope" style="width:16px;"></i> <?php echo htmlspecialchars($u['email']); ?><br><?php endif; ?>
+                                            <?php if(!empty($u['phone'])): ?><i class="fas fa-phone" style="width:16px;"></i> <?php echo htmlspecialchars($u['phone']); ?><?php endif; ?>
+                                        </div>
+                                    </td>
+                                    <td style="text-align:right;">
+                                        <div class="action-btn-group" style="justify-content: flex-end;">
+                                            <button onclick='editUser(<?php echo json_encode($u); ?>)' class="icon-btn" title="Düzenle"><i class="fas fa-pen"></i></button>
+                                            
+                                            <form method="POST" onsubmit="return confirm('Silmek istediğine emin misin?');" style="margin:0;">
+                                                <input type="hidden" name="action" value="delete_user">
+                                                <input type="hidden" name="username" value="<?php echo htmlspecialchars($u['username']); ?>">
+                                                <button type="submit" class="icon-btn danger" title="Sil"><i class="fas fa-trash"></i></button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="5" style="text-align:center; padding: 40px; color: var(--text-secondary);">
+                                        <i class="fas fa-search" style="font-size: 32px; margin-bottom: 12px; opacity:0.5;"></i><br>
+                                        Kayıt bulunamadı.
+                                    </td>
+                                </tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <?php if ($totalPages > 1): ?>
+                <div class="pagination">
+                    <span style="color: var(--text-secondary); font-size: 13px;">Sayfa <?php echo $page; ?> / <?php echo $totalPages; ?></span>
+                    <div style="display:flex; gap:8px;">
+                        <?php if ($page > 1): ?>
+                            <a href="?page=<?php echo $page-1; ?>" class="page-link"><i class="fas fa-chevron-left"></i></a>
+                        <?php endif; ?>
+                        <?php for($i=max(1, $page-2); $i<=min($totalPages, $page+2); $i++): ?>
+                            <a href="?page=<?php echo $i; ?>" class="page-link <?php echo $i==$page?'active':''; ?>"><?php echo $i; ?></a>
+                        <?php endfor; ?>
+                        <?php if ($page < $totalPages): ?>
+                            <a href="?page=<?php echo $page+1; ?>" class="page-link"><i class="fas fa-chevron-right"></i></a>
+                        <?php endif; ?>
+                    </div>
+                </div>
                 <?php endif; ?>
             </div>
         </div>
     </div>
 
-    <!-- Add User Modal -->
-    <div id="addUserModal" class="modal" style="display: none;">
-        <div class="modal-content">
+    <!-- MODAL: ADD USER -->
+    <div id="addModal" class="modal-overlay">
+        <div class="modal-box">
             <div class="modal-header">
-                <h3 class="modal-title">➕ Yeni Kullanıcı Ekle</h3>
-                <span class="close" onclick="closeAddUserModal()">&times;</span>
+                <h2>Yeni Kullanıcı Ekle</h2>
+                <button onclick="closeModal('addModal')" class="icon-btn"><i class="fas fa-times"></i></button>
             </div>
-            
-            <form method="POST" id="addUserForm">
+            <form method="POST">
                 <input type="hidden" name="action" value="add_user">
-                
-                <div class="form-group">
-                    <label for="add_first_name">Ad *</label>
-                    <input type="text" id="add_first_name" name="first_name" required placeholder="Örn: Ahmet" oninput="updateAddUsernamePreview()">
-                </div>
-                
-                <div class="form-group">
-                    <label for="add_last_name">Soyad *</label>
-                    <input type="text" id="add_last_name" name="last_name" required placeholder="Örn: Yılmaz" oninput="updateAddUsernamePreview()">
-                </div>
-                
-                <div id="add-username-preview" style="background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); padding: 14px 16px; border-radius: 12px; margin-bottom: 20px; font-family: 'Courier New', monospace; color: #60a5fa; display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-info-circle" style="font-size: 1.2rem;"></i>
-                    <div style="flex: 1;">
-                        <strong style="color: #fff; display: block; margin-bottom: 4px; font-size: 0.9rem;">Oluşturulacak Kullanıcı Adı:</strong>
-                        <span id="add-preview-username" style="color: #60a5fa; font-size: 1rem; font-weight: 600;">...</span>
+                <div class="modal-body form-grid">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Ad</label>
+                            <input type="text" name="first_name" required placeholder="Örn: Ahmet">
+                        </div>
+                        <div class="input-group">
+                            <label>Soyad</label>
+                            <input type="text" name="last_name" required placeholder="Örn: Yılmaz">
+                        </div>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="add_role">Rol *</label>
-                    <select id="add_role" name="role" required onchange="toggleInstitutionField('add')">
-                        <option value="">Rol Seçin</option>
-                        <option value="student">👨‍🎓 Öğrenci</option>
-                        <option value="teacher">👨‍🏫 Eğitmen</option>
-                        <option value="branch_leader">🏢 Eğitim Başkanı</option>
-                        <option value="region_leader">🌍 Bölge Eğitim Başkanı</option>
-                        <option value="superadmin">👑 SuperAdmin</option>
-                    </select>
-                </div>
-                
-            <div class="form-group">
-                    <label for="add_region">Bölge *</label>
-                    <select id="add_region" name="region" required onchange="updateBranchOptions('add'); toggleInstitutionField('add');">
-                        <option value="">Bölge Seçin</option>
-                        <?php foreach ($regionConfig as $region => $branches): ?>
-                            <option value="<?php echo htmlspecialchars($region); ?>"><?php echo htmlspecialchars($region); ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-
-                <div class="form-group" id="add_institution_group">
-                    <label for="add_institution">Kurum (Şube) <span id="add_institution_required">*</span></label>
-                    <select id="add_institution" name="institution">
-                        <option value="">Önce Bölge Seçin</option>
-                    </select>
-                </div>
-                
-                <script>
-                    const regionData = <?php echo json_encode($regionConfig); ?>;
                     
-                    function updateBranchOptions(prefix) {
-                        const regionSelect = document.getElementById(prefix + '_region');
-                        const branchSelect = document.getElementById(prefix + '_institution');
-                        const selectedRegion = regionSelect.value;
-                        
-                        branchSelect.innerHTML = '<option value="">Kurum Seçin</option>';
-                        
-                        if (selectedRegion && regionData[selectedRegion]) {
-                            regionData[selectedRegion].forEach(branch => {
-                                const option = document.createElement('option');
-                                option.value = branch;
-                                option.textContent = branch;
-                                branchSelect.appendChild(option);
-                            });
-                        }
-                    }
-                </script>
-                
-                <div class="form-group">
-                    <label for="add_class_section">Sınıf</label>
-                    <input type="text" id="add_class_section" name="class_section" placeholder="Sınıf bilgisi">
-                </div>
-                
-                <div class="form-group">
-                    <label for="add_email">E-posta</label>
-                    <input type="email" id="add_email" name="email" placeholder="ornek@email.com">
-                </div>
-                
-                <div class="form-group">
-                    <label for="add_phone">Telefon</label>
-                    <input type="tel" id="add_phone" name="phone" placeholder="+43 123 456 7890">
-                </div>
-                
-                <div style="display: flex; gap: 15px; justify-content: flex-end; margin-top: 20px;">
-                    <button type="button" class="btn btn-secondary" onclick="closeAddUserModal()">İptal</button>
-                    <button type="submit" class="btn btn-primary">➕ Kullanıcı Ekle</button>
-                </div>
-            </form>
-        </div>
-    </div>
+                    <div class="input-group">
+                        <label>Rol</label>
+                        <select name="role" required onchange="toggleInstitution(this.value, 'add')">
+                            <option value="student">Öğrenci</option>
+                            <option value="teacher">Eğitmen</option>
+                            <option value="branch_leader">Şube Müdürü</option>
+                            <option value="region_leader">Bölge Müdürü</option>
+                            <option value="superadmin">Admin</option>
+                        </select>
+                    </div>
 
-    <!-- Edit User Modal -->
-    <div id="editModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">✏️ Kullanıcı Düzenle</h3>
-                <span class="close" onclick="closeEditModal()">&times;</span>
-            </div>
-            
-            <form method="POST" id="editForm">
-                <input type="hidden" name="action" value="edit_user">
-                <input type="hidden" name="username" id="edit_username">
-                
-                <div class="form-group">
-                    <label for="edit_name">Ad Soyad *</label>
-                    <input type="text" id="edit_name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="edit_role">Rol *</label>
-                    <select id="edit_role" name="role" required onchange="toggleInstitutionField('edit')">
-                        <option value="student">👨‍🎓 Öğrenci</option>
-                        <option value="teacher">👨‍🏫 Eğitmen</option>
-                        <option value="branch_leader">🏢 Eğitim Başkanı</option>
-                        <option value="region_leader">🌍 Bölge Eğitim Başkanı</option>
-                        <option value="superadmin">👑 SuperAdmin</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="edit_region">Bölge *</label>
-                    <select id="edit_region" name="region" required onchange="updateBranchOptions('edit'); toggleInstitutionField('edit');">
-                        <option value="">Bölge Seçin</option>
-                        <?php foreach ($regionConfig as $region => $branches): ?>
-                            <option value="<?php echo htmlspecialchars($region); ?>"><?php echo htmlspecialchars($region); ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Bölge</label>
+                            <select name="region" id="add_region" onchange="updateBranches('add')">
+                                <option value="">Seçiniz...</option>
+                                <?php foreach ($regionConfig as $reg => $branches): ?>
+                                    <option value="<?php echo htmlspecialchars($reg); ?>"><?php echo htmlspecialchars($reg); ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="input-group" id="grupo_add_inst">
+                            <label>Kurum</label>
+                            <select name="institution" id="add_institution">
+                                <option value="">Önce Bölge Seçin</option>
+                            </select>
+                        </div>
+                    </div>
 
-                <div class="form-group" id="edit_institution_group">
-                    <label for="edit_institution">Kurum (Şube) <span id="edit_institution_required">*</span></label>
-                    <select id="edit_institution" name="institution">
-                        <option value="">Önce Bölge Seçin</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="edit_class_section">Sınıf</label>
-                    <input type="text" id="edit_class_section" name="class_section" placeholder="Sınıf bilgisi">
-                </div>
-                
-                <div class="form-group">
-                    <label for="edit_email">E-posta</label>
-                    <input type="email" id="edit_email" name="email" placeholder="ornek@email.com">
-                </div>
-                
-                <div class="form-group">
-                    <label for="edit_phone">Telefon</label>
-                    <input type="tel" id="edit_phone" name="phone" placeholder="+43 123 456 7890">
-                </div>
-                
-                <div class="form-group">
-                    <label for="edit_new_password">Yeni Şifre</label>
-                    <input type="password" id="edit_new_password" name="new_password" placeholder="Yeni şifre girin (boş bırakırsanız mevcut şifre korunur)">
-                    <small style="color: #7f8c8d; font-size: 0.8rem;">
-                        💡 Mevcut şifre güvenlik nedeniyle gösterilmez. Yeni şifre girmek için bu alanı doldurun.
-                    </small>
-                </div>
-                
-                <div style="display: flex; gap: 15px; justify-content: flex-end; margin-top: 20px;">
-                    <button type="button" class="btn btn-secondary" onclick="closeEditModal()">İptal</button>
-                    <button type="submit" class="btn btn-primary">💾 Güncelle</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Import Modal -->
-    <div id="importModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">📥 CSV Import</h3>
-                <span class="close" onclick="closeImportModal()">&times;</span>
-            </div>
-            
-            <form method="POST" enctype="multipart/form-data">
-                <input type="hidden" name="action" value="import_csv">
-                
-                <div class="file-upload-area" onclick="document.getElementById('csvFile').click()">
-                    <div class="upload-icon">📁</div>
-                    <div class="upload-text">CSV dosyasını seçin veya sürükleyin</div>
-                    <div class="upload-hint">Maksimum dosya boyutu: 10MB</div>
-                    <input type="file" id="csvFile" name="csv_file" class="file-input" accept=".csv" required>
-                </div>
-                
-                <div class="csv-format-info">
-                    <h4>📋 CSV Formatı</h4>
-                    <p>CSV dosyanız aşağıdaki sırayla sütunlara sahip olmalıdır:</p>
-                    <ul>
-                        <li><strong>Ad</strong> - Kullanıcının adı (zorunlu)</li>
-                        <li><strong>Soyad</strong> - Kullanıcının soyadı (zorunlu)</li>
-                        <li><strong>Rol</strong> - student, teacher veya superadmin (zorunlu)</li>
-                        <li><strong>Kurum</strong> - Kurum adı (zorunlu)</li>
-                        <li><strong>Sınıf</strong> - Sınıf bilgisi (isteğe bağlı)</li>
-                        <li><strong>E-posta</strong> - E-posta adresi (isteğe bağlı)</li>
-                        <li><strong>Telefon</strong> - Telefon numarası (isteğe bağlı)</li>
-                    </ul>
-                    <p><strong>Not:</strong> Kullanıcı adı ve şifre otomatik oluşturulacaktır.</p>
-                    <div class="template-download" style="margin-top: 18px; background: rgba(6, 133, 103, 0.08); border: 1px solid rgba(6, 133, 103, 0.2); border-radius: 12px; padding: 18px;">
-                        <p style="margin: 0 0 12px 0; font-weight: 600; color: #055a4a;">🎯 Hazır Şablon</p>
-                        <a href="template.csv" download class="btn btn-success" style="display: inline-block; padding: 10px 18px; border-radius: 10px; font-weight: 600;">📄 CSV Şablonunu İndir</a>
-                        <small style="display: block; margin-top: 10px; color: #2c3e50;">Dosyayı indirip örnek satırları kendi kullanıcı bilgilerinizle güncelleyebilirsiniz.</small>
+                    <div class="input-group">
+                        <label>Sınıf (Opsiyonel)</label>
+                        <input type="text" name="class_section" placeholder="örn. 9A">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" name="email">
+                        </div>
+                        <div class="input-group">
+                            <label>Telefon</label>
+                            <input type="text" name="phone">
+                        </div>
                     </div>
                 </div>
-                
-                <div style="display: flex; gap: 15px; justify-content: flex-end; margin-top: 20px;">
-                    <button type="button" class="btn btn-secondary" onclick="closeImportModal()">İptal</button>
-                    <button type="submit" class="btn btn-warning">📥 Import Et</button>
+                <div class="modal-footer">
+                    <button type="button" onclick="closeModal('addModal')" class="secondary-btn">İptal</button>
+                    <button type="submit" class="primary-btn">Kaydet</button>
                 </div>
             </form>
         </div>
     </div>
 
+    <!-- MODAL: EDIT USER -->
+    <div id="editModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Kullanıcı Düzenle</h2>
+                <button onclick="closeModal('editModal')" class="icon-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <form method="POST">
+                <input type="hidden" name="action" value="edit_user">
+                <input type="hidden" name="username" id="edit_username_field">
+                
+                <div class="modal-body form-grid">
+                    <div class="input-group">
+                        <label>Ad Soyad</label>
+                        <input type="text" name="name" id="edit_name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Rol</label>
+                        <select name="role" id="edit_role" required>
+                            <option value="student">Öğrenci</option>
+                            <option value="teacher">Eğitmen</option>
+                            <option value="branch_leader">Şube Müdürü</option>
+                            <option value="region_leader">Bölge Müdürü</option>
+                            <option value="superadmin">Admin</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Bölge</label>
+                            <select name="region" id="edit_region" onchange="updateBranches('edit')">
+                                <?php foreach ($regionConfig as $reg => $branches): ?>
+                                    <option value="<?php echo htmlspecialchars($reg); ?>"><?php echo htmlspecialchars($reg); ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Kurum</label>
+                            <select name="institution" id="edit_institution">
+                                <!-- JS ile dolacak -->
+                            </select>
+                        </div>
+                    </div>
+
+                     <div class="input-group">
+                        <label>Sınıf</label>
+                        <input type="text" name="class_section" id="edit_class_section">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" name="email" id="edit_email">
+                        </div>
+                        <div class="input-group">
+                            <label>Telefon</label>
+                            <input type="text" name="phone" id="edit_phone">
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Şifre (Değiştirmek için doldurun)</label>
+                        <input type="text" name="new_password" placeholder="Mevcut şifreyi korumak için boş bırakın.">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="closeModal('editModal')" class="secondary-btn">İptal</button>
+                    <button type="submit" class="primary-btn">Değişiklikleri Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        function goToPage(page) {
-            const url = new URL(window.location);
-            url.searchParams.set('page', page);
-            window.location.href = url.toString();
+        const regions = <?php echo json_encode($regionConfig); ?>;
+
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
         }
 
-        function changeItemsPerPage(itemsPerPage) {
-            const url = new URL(window.location);
-            url.searchParams.set('items_per_page', itemsPerPage);
-            url.searchParams.set('page', 1); // Reset to first page
-            window.location.href = url.toString();
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
         }
 
-        function editUser(username) {
-            event?.preventDefault();
-            event?.stopPropagation();
-            try {
-                // Kullanıcı verilerini al
-                const users = <?php echo json_encode($allUsers); ?>;
-                const user = users[username];
-                
-                if (!user) {
-                    alert('Kullanıcı bulunamadı!');
-                    return;
-                }
-                
-                // Modal alanlarını doldur
-                const editUsernameEl = document.getElementById('edit_username');
-                const editNameEl = document.getElementById('edit_name');
-                const editRoleEl = document.getElementById('edit_role');
-                
-                if (!editUsernameEl || !editNameEl || !editRoleEl) {
-                    console.error('Modal elementleri bulunamadı!');
-                    alert('Modal yüklenirken bir hata oluştu. Sayfayı yenileyin.');
-                    return;
-                }
-                
-                editUsernameEl.value = username;
-                editNameEl.value = user.name || user.full_name || '';
-                editRoleEl.value = user.role || '';
-                
-                // Bölge ve Kurum Ayarlama
-                let region = user.region || '';
-                const institution = user.institution || user.branch || '';
-                
-                // Eğer bölge yoksa ama kurum varsa, bölgeyi bulmaya çalış
-                if (!region && institution && typeof regionData !== 'undefined') {
-                    for (const [reg, branches] of Object.entries(regionData)) {
-                        if (branches.includes(institution)) {
-                            region = reg;
-                            break;
-                        }
-                    }
-                }
-                if (!region) region = 'Arlberg'; // Varsayılan
-
-                const regionSelect = document.getElementById('edit_region');
-                if (regionSelect) {
-                    regionSelect.value = region;
-                    // Bölge değişince şubeleri güncelle
-                    if (typeof updateBranchOptions === 'function') {
-                        updateBranchOptions('edit');
-                    }
-                    // Şubeyi seç
-                    setTimeout(() => {
-                        const instSelect = document.getElementById('edit_institution');
-                        if (instSelect) instSelect.value = institution;
-                    }, 100);
-                }
-
-                const editClassSectionEl = document.getElementById('edit_class_section');
-                const editEmailEl = document.getElementById('edit_email');
-                const editPhoneEl = document.getElementById('edit_phone');
-                const editPasswordEl = document.getElementById('edit_new_password');
-                
-                if (editClassSectionEl) editClassSectionEl.value = user.class_section || '';
-                if (editEmailEl) editEmailEl.value = user.email || '';
-                if (editPhoneEl) editPhoneEl.value = user.phone || '';
-                if (editPasswordEl) editPasswordEl.value = '';
-                
-                // Modal'ı aç
-                const editModal = document.getElementById('editModal');
-                if (editModal) {
-                    editModal.classList.add('show');
-                    editModal.style.display = 'flex';
-                    document.body.style.overflow = 'hidden';
-                    // Rol değişikliğine göre şube alanını ayarla
-                    toggleInstitutionField('edit');
-                } else {
-                    console.error('Edit modal bulunamadı!');
-                    alert('Modal yüklenirken bir hata oluştu.');
-                }
-            } catch (error) {
-                console.error('editUser hatası:', error);
-                alert('Kullanıcı düzenlenirken bir hata oluştu: ' + error.message);
-            }
-        }
-
-        function closeEditModal() {
-            const editModal = document.getElementById('editModal');
-            if (editModal) {
-                editModal.classList.remove('show');
-                editModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        function toggleAddUserModal() {
-            if (event) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            const addModal = document.getElementById('addUserModal');
-            if (addModal) {
-                addModal.classList.add('show');
-                addModal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-                // Rol değişikliğine göre şube alanını ayarla
-                toggleInstitutionField('add');
-            } else {
-                console.error('Add user modal bulunamadı!');
-                alert('Modal yüklenirken bir hata oluştu.');
-            }
-            return false;
-        }
-        
-        function toggleInstitutionField(prefix) {
-            const roleSelect = document.getElementById(prefix + '_role');
-            const institutionGroup = document.getElementById(prefix + '_institution_group');
-            const institutionSelect = document.getElementById(prefix + '_institution');
-            const requiredSpan = document.getElementById(prefix + '_institution_required');
+        function updateBranches(prefix) {
+            const regionSelect = document.getElementById(prefix + '_region');
+            const instSelect = document.getElementById(prefix + '_institution');
+            const selectedRegion = regionSelect.value;
             
-            if (!roleSelect || !institutionGroup || !institutionSelect) return;
+            instSelect.innerHTML = '<option value="">Seçiniz...</option>';
             
-            const selectedRole = roleSelect.value;
+            if (selectedRegion && regions[selectedRegion]) {
+                regions[selectedRegion].forEach(branch => {
+                    const opt = document.createElement('option');
+                    opt.value = branch;
+                    opt.textContent = branch;
+                    instSelect.appendChild(opt);
+                });
+            }
+        }
+
+        function toggleInstitution(role, prefix) {
+            // İsteğe bağlı mantık eklenebilir, şimdilik basit bırakıldı.
+        }
+
+        function editUser(user) {
+            document.getElementById('edit_username_field').value = user.username;
+            document.getElementById('edit_name').value = user.name || user.full_name || '';
+            document.getElementById('edit_role').value = user.role;
+            document.getElementById('edit_class_section').value = user.class_section || '';
+            document.getElementById('edit_email').value = user.email || '';
+            document.getElementById('edit_phone').value = user.phone || '';
             
-            if (selectedRole === 'region_leader') {
-                // Bölge eğitim başkanı için şube alanını gizle
-                institutionGroup.style.display = 'none';
-                institutionSelect.removeAttribute('required');
-                if (requiredSpan) requiredSpan.style.display = 'none';
-            } else {
-                // Diğer roller için şube alanını göster
-                institutionGroup.style.display = 'block';
-                institutionSelect.setAttribute('required', 'required');
-                if (requiredSpan) requiredSpan.style.display = 'inline';
-            }
-        }
-
-        function closeAddUserModal() {
-            const addModal = document.getElementById('addUserModal');
-            if (addModal) {
-                addModal.classList.remove('show');
-                addModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-                // Form'u temizle
-                const form = document.getElementById('addUserForm');
-                if (form) form.reset();
-                const preview = document.getElementById('add-preview-username');
-                if (preview) preview.textContent = '...';
-            }
-        }
-
-        function updateAddUsernamePreview() {
-            const firstName = document.getElementById('add_first_name').value.trim();
-            const lastName = document.getElementById('add_last_name').value.trim();
+            // Bölge & Kurum
+            let region = user.region || '';
+            const inst = user.institution || user.branch || '';
             
-            if (firstName && lastName) {
-                const mapPairs = [ ['Ü','ue'], ['ü','ue'], ['Ö','oe'], ['ö','oe'], ['Ğ','g'], ['ğ','g'], ['Ş','s'], ['ş','s'], ['Ç','c'], ['ç','c'], ['İ','i'], ['I','i'], ['ı','i'] ];
-                let lastPart = lastName.length >= 5 ? lastName.substring(0, 5) : lastName;
-                let firstPart = firstName.substring(0, 3);
-                mapPairs.forEach(([ch, repl]) => { lastPart = lastPart.split(ch).join(repl); firstPart = firstPart.split(ch).join(repl); });
-                const username = (lastPart + '.' + firstPart).toLowerCase();
-                document.getElementById('add-preview-username').textContent = username;
-            } else {
-                document.getElementById('add-preview-username').textContent = '...';
+            // Bölge otomatik bulma (veride yoksa)
+            if (!region && inst) {
+                for(let r in regions) {
+                    if (regions[r].includes(inst)) { region = r; break; }
+                }
             }
-        }
-
-        function togglePassword(username) {
-            const passwordSpan = document.getElementById('password-' + username);
-            const hiddenSpan = document.getElementById('password-hidden-' + username);
-            const button = event.target;
+            if(!region) region = 'Arlberg'; // Fallback
             
-            if (passwordSpan.style.display === 'none') {
-                passwordSpan.style.display = 'inline';
-                hiddenSpan.style.display = 'none';
-                button.textContent = '🙈';
-                button.style.background = '#e3f2fd';
-            } else {
-                passwordSpan.style.display = 'none';
-                hiddenSpan.style.display = 'inline';
-                button.textContent = '👁️';
-                button.style.background = 'none';
+            const rSelect = document.getElementById('edit_region');
+            if(rSelect) {
+                rSelect.value = region;
+                updateBranches('edit'); // Şube listesini güncelle
+                
+                // Şubeyi seç (async bekleme olmadan, hemen update sonrası)
+                setTimeout(() => {
+                    const iSelect = document.getElementById('edit_institution');
+                    if(iSelect) iSelect.value = inst;
+                }, 10);
             }
+            
+            openModal('editModal');
         }
 
-
-        function toggleDropdown(dropdownId) {
-            const dropdown = document.getElementById(dropdownId);
-            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-        }
-
-        function toggleImportModal() {
-            const modal = document.getElementById('importModal');
-            if (modal) {
-                modal.classList.add('show');
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeImportModal() {
-            const modal = document.getElementById('importModal');
-            if (modal) {
-                modal.classList.remove('show');
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        // Dropdown dışına tıklayınca kapat
+        // Dışarı tıklayınca modal kapatma
         window.onclick = function(event) {
-            if (!event.target.matches('.btn')) {
-                const dropdowns = document.getElementsByClassName('dropdown-content');
-                for (let i = 0; i < dropdowns.length; i++) {
-                    dropdowns[i].style.display = 'none';
-                }
-            }
-            
-            const importModal = document.getElementById('importModal');
-            const editModal = document.getElementById('editModal');
-            const addUserModal = document.getElementById('addUserModal');
-            if (event.target === importModal) {
-                closeImportModal();
-            }
-            if (event.target === editModal) {
-                closeEditModal();
-            }
-            if (event.target === addUserModal) {
-                closeAddUserModal();
+            if (event.target.classList.contains('modal-overlay')) {
+                event.target.classList.remove('active');
             }
         }
-
-        // Dosya yükleme alanı için drag & drop
-        const fileUploadArea = document.querySelector('.file-upload-area');
-        const fileInput = document.getElementById('csvFile');
-
-        fileUploadArea.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            fileUploadArea.classList.add('dragover');
-        });
-
-        fileUploadArea.addEventListener('dragleave', () => {
-            fileUploadArea.classList.remove('dragover');
-        });
-
-        fileUploadArea.addEventListener('drop', (e) => {
-            e.preventDefault();
-            fileUploadArea.classList.remove('dragover');
-            const files = e.dataTransfer.files;
-            if (files.length > 0) {
-                fileInput.files = files;
-                updateFileDisplay(files[0]);
-            }
-        });
-
-        fileInput.addEventListener('change', (e) => {
-            if (e.target.files.length > 0) {
-                updateFileDisplay(e.target.files[0]);
-            }
-        });
-
-        function updateFileDisplay(file) {
-            const uploadText = fileUploadArea.querySelector('.upload-text');
-            uploadText.textContent = `Seçilen dosya: ${file.name}`;
-            uploadText.style.color = '#27ae60';
-        }
-
-
-        // Sayfa yüklendiğinde animasyonlar ve modal kontrolü
-        document.addEventListener('DOMContentLoaded', function() {
-            // Modal'ların başlangıçta kapalı olduğundan emin ol
-            const addModal = document.getElementById('addUserModal');
-            const editModal = document.getElementById('editModal');
-            const importModal = document.getElementById('importModal');
-            
-            if (addModal) addModal.style.display = 'none';
-            if (editModal) editModal.style.display = 'none';
-            if (importModal) importModal.style.display = 'none';
-            
-            // Modal dışına tıklandığında kapat
-            if (addModal) {
-                addModal.addEventListener('click', function(e) {
-                    if (e.target === addModal) {
-                        closeAddUserModal();
-                    }
-                });
-            }
-            
-            if (editModal) {
-                editModal.addEventListener('click', function(e) {
-                    if (e.target === editModal) {
-                        closeEditModal();
-                    }
-                });
-            }
-            
-            // Tablo satırlarına hover efekti
-            const tableRows = document.querySelectorAll('.users-table tbody tr');
-            tableRows.forEach(row => {
-                row.addEventListener('mouseenter', function() {
-                    this.style.background = 'rgba(255,255,255,0.04)';
-                    this.style.transform = 'scale(1.01)';
-                });
-                row.addEventListener('mouseleave', function() {
-                    this.style.background = 'transparent';
-                    this.style.transform = 'scale(1)';
-                });
-            });
-        });
     </script>
 </body>
 </html>
