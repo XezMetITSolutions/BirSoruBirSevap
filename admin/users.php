@@ -488,137 +488,7 @@ $totalAdmins = count(array_filter($filteredUsers, fn($u) => $u['role'] === 'supe
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/admin-style.css">
-    <style>
-        .users-page-container {
-            padding: 0;
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-        
-        .page-header-section {
-            background: linear-gradient(135deg, rgba(6,133,103,0.15) 0%, rgba(6,133,103,0.05) 100%);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding: 30px 0;
-            margin-bottom: 30px;
-        }
-        
-        .stats-grid-modern {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-            padding: 0 2px;
-        }
-        
-        .stat-card-modern {
-            background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 16px;
-            padding: 24px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .stat-card-modern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-        }
-        
-        .stat-card-modern:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-            border-color: rgba(255,255,255,0.2);
-        }
-        
-        .stat-card-modern .stat-icon-wrapper {
-            width: 56px;
-            height: 56px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-            font-size: 1.8rem;
-        }
-        
-        .stat-card-modern .stat-value-modern {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #fff;
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-        
-        .stat-card-modern .stat-label-modern {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-        
-        .filters-section-modern {
-            background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.03) 100%);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: 24px;
-            margin-bottom: 30px;
-        }
-        
-        .table-container-modern {
-            background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.03) 100%);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            overflow: hidden;
-        }
-        
-        .table-header-modern {
-            padding: 24px 30px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-        
-        @media (max-width: 768px) {
-            .stats-grid-modern {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
-            
-            .stat-card-modern {
-                padding: 18px;
-            }
-            
-            .stat-card-modern .stat-value-modern {
-                font-size: 2rem;
-            }
-            
-            .filters-section-modern {
-                padding: 16px;
-            }
-            
-            .table-header-modern {
-                padding: 16px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .stats-grid-modern {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+
 </head>
 <body>
     <div class="bg-decoration">
@@ -708,7 +578,7 @@ $totalAdmins = count(array_filter($filteredUsers, fn($u) => $u['role'] === 'supe
                 <div style="position: relative; grid-column: 1;">
                     <i class="fas fa-search" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); z-index: 1;"></i>
                     <input type="text" name="search" placeholder="Kullanıcı adı veya isim ile ara..." value="<?php echo htmlspecialchars($searchTerm); ?>" 
-                           style="width: 100%; padding: 14px 16px 14px 44px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: #fff; font-size: 0.95rem; transition: all 0.3s;"
+                           class="search-input-modern-styled"
                            onfocus="this.style.background='rgba(0,0,0,0.4)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 0 0 3px rgba(6,133,103,0.1)'"
                            onblur="this.style.background='rgba(0,0,0,0.3)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.boxShadow='none'">
                 </div>
