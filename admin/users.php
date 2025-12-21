@@ -519,21 +519,26 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
             </div>
         </div>
 
-        <!-- Simple Filters -->
-        <div class="glass-panel" style="padding: 20px; margin-bottom: 30px;">
-            <form method="GET" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-                <input type="text" name="search" placeholder="🔍 Ara..." value="<?php echo htmlspecialchars($searchTerm); ?>" 
-                       style="flex: 1; min-width: 200px; padding: 10px 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; font-size: 0.9rem;">
+        <!-- Modern Filters -->
+        <div class="glass-panel" style="padding: 24px; margin-bottom: 30px; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);">
+            <form method="GET" id="filterForm" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                <div style="position: relative; flex: 1; min-width: 250px;">
+                    <i class="fas fa-search" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); z-index: 1;"></i>
+                    <input type="text" name="search" placeholder="Kullanıcı adı veya isim ile ara..." value="<?php echo htmlspecialchars($searchTerm); ?>" 
+                           style="width: 100%; padding: 12px 16px 12px 44px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: #fff; font-size: 0.95rem; transition: all 0.3s;"
+                           onfocus="this.style.background='rgba(0,0,0,0.4)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 0 0 3px rgba(6,133,103,0.1)'"
+                           onblur="this.style.background='rgba(0,0,0,0.3)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.boxShadow='none'">
+                </div>
                 
-                <select name="role" onchange="this.form.submit()" style="padding: 10px 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; min-width: 120px;">
-                    <option value="">Tüm Roller</option>
-                    <option value="student" <?php echo $roleFilter === 'student' ? 'selected' : ''; ?>>Öğrenci</option>
-                    <option value="teacher" <?php echo $roleFilter === 'teacher' ? 'selected' : ''; ?>>Eğitmen</option>
-                    <option value="superadmin" <?php echo $roleFilter === 'superadmin' ? 'selected' : ''; ?>>Admin</option>
+                <select name="role" onchange="this.form.submit()" class="modern-select" style="min-width: 140px;">
+                    <option value="">🎭 Tüm Roller</option>
+                    <option value="student" <?php echo $roleFilter === 'student' ? 'selected' : ''; ?>>👨‍🎓 Öğrenci</option>
+                    <option value="teacher" <?php echo $roleFilter === 'teacher' ? 'selected' : ''; ?>>👨‍🏫 Eğitmen</option>
+                    <option value="superadmin" <?php echo $roleFilter === 'superadmin' ? 'selected' : ''; ?>>👑 Admin</option>
                 </select>
 
-                <select name="institution" onchange="this.form.submit()" style="padding: 10px 14px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: #fff; min-width: 150px;">
-                    <option value="">Tüm Kurumlar</option>
+                <select name="institution" onchange="this.form.submit()" class="modern-select" style="min-width: 180px;">
+                    <option value="">🏢 Tüm Kurumlar</option>
                     <?php foreach ($regionConfig as $region => $branches): ?>
                         <?php if (!empty($branches)): ?>
                             <optgroup label="<?php echo htmlspecialchars($region); ?>">
@@ -548,54 +553,99 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 </select>
 
                 <?php if ($searchTerm || $roleFilter || $institutionFilter): ?>
-                    <a href="users.php" style="padding: 10px 16px; background: rgba(239,68,68,0.2); color: #ef4444; border: 1px solid rgba(239,68,68,0.3); border-radius: 8px; text-decoration: none; font-size: 0.9rem;">
-                        ✕ Temizle
+                    <a href="users.php" class="clean-btn" style="padding: 12px 18px;">
+                        <i class="fas fa-times"></i> Temizle
                     </a>
                 <?php endif; ?>
                 
-                <div style="margin-left: auto; display: flex; gap: 8px;">
-                    <button type="button" class="btn btn-primary" onclick="toggleAddUserModal()" style="padding: 10px 20px;">
-                        ➕ Yeni Kullanıcı
+                <div style="margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap;">
+                    <button type="button" class="btn btn-secondary" onclick="toggleImportModal()" style="padding: 12px 20px; background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.2); transition: all 0.3s;" onmouseover="this.style.background='rgba(245,158,11,0.25)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(245,158,11,0.15)'; this.style.transform='translateY(0)'">
+                        <i class="fas fa-file-upload"></i> CSV İçe Aktar
+                    </button>
+                    <div class="dropdown" style="position: relative;">
+                        <button type="button" class="btn btn-secondary" onclick="toggleDropdown('exportDropdown')" style="padding: 12px 20px; background: rgba(34,197,94,0.15); color: #86efac; border: 1px solid rgba(34,197,94,0.2); transition: all 0.3s;" onmouseover="this.style.background='rgba(34,197,94,0.25)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(34,197,94,0.15)'; this.style.transform='translateY(0)'">
+                            <i class="fas fa-file-download"></i> Dışa Aktar <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 5px;"></i>
+                        </button>
+                        <div id="exportDropdown" class="dropdown-content" style="display: none; position: absolute; right: 0; top: 100%; margin-top: 8px; background: rgba(15,23,42,0.95); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 8px; min-width: 220px; z-index: 1000; box-shadow: 0 8px 24px rgba(0,0,0,0.3); animation: fadeIn 0.2s ease;">
+                            <a href="users.php?action=export_csv&type=all" style="display: flex; align-items: center; gap: 10px; padding: 12px 16px; color: #e2e8f0; text-decoration: none; border-radius: 8px; transition: all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateX(4px)'" onmouseout="this.style.background='transparent'; this.style.transform='translateX(0)'">
+                                <i class="fas fa-users" style="width: 20px;"></i> Tüm Kullanıcılar
+                            </a>
+                            <a href="users.php?action=export_csv&type=students" style="display: flex; align-items: center; gap: 10px; padding: 12px 16px; color: #e2e8f0; text-decoration: none; border-radius: 8px; transition: all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateX(4px)'" onmouseout="this.style.background='transparent'; this.style.transform='translateX(0)'">
+                                <i class="fas fa-user-graduate" style="width: 20px;"></i> Öğrenciler
+                            </a>
+                            <a href="users.php?action=export_csv&type=teachers" style="display: flex; align-items: center; gap: 10px; padding: 12px 16px; color: #e2e8f0; text-decoration: none; border-radius: 8px; transition: all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateX(4px)'" onmouseout="this.style.background='transparent'; this.style.transform='translateX(0)'">
+                                <i class="fas fa-chalkboard-teacher" style="width: 20px;"></i> Eğitmenler
+                            </a>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="toggleAddUserModal()" style="padding: 12px 24px; box-shadow: 0 4px 12px rgba(6,133,103,0.3);">
+                        <i class="fas fa-user-plus"></i> Yeni Kullanıcı
                     </button>
                 </div>
             </form>
         </div>
 
-        <!-- Simple Table -->
-        <div class="glass-panel">
-            <div style="padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
-                <div style="font-size: 1.1rem; font-weight: 600; color: #fff;">
-                    <i class="fas fa-table"></i> Kullanıcı Listesi
+        <!-- Modern Table -->
+        <div class="glass-panel" style="overflow: hidden;">
+            <div style="padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="width: 40px; height: 40px; border-radius: 12px; background: rgba(6,133,103,0.2); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 2px;">
+                            Kullanıcı Listesi
+                        </div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted);">
+                            Toplam <?php echo $totalUsers; ?> kullanıcı
+                        </div>
+                    </div>
                 </div>
-                <select onchange="changeItemsPerPage(this.value)" style="padding: 8px 12px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: #fff; font-size: 0.85rem;">
-                    <option value="25" <?php echo $itemsPerPage == 25 ? 'selected' : ''; ?>>25</option>
-                    <option value="50" <?php echo $itemsPerPage == 50 ? 'selected' : ''; ?>>50</option>
-                    <option value="100" <?php echo $itemsPerPage == 100 ? 'selected' : ''; ?>>100</option>
-                </select>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <label style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-list-ol"></i> Sayfa başına:
+                    </label>
+                    <select onchange="changeItemsPerPage(this.value)" class="modern-select" style="padding: 10px 16px; min-width: 100px;">
+                        <option value="25" <?php echo $itemsPerPage == 25 ? 'selected' : ''; ?>>25</option>
+                        <option value="50" <?php echo $itemsPerPage == 50 ? 'selected' : ''; ?>>50</option>
+                        <option value="100" <?php echo $itemsPerPage == 100 ? 'selected' : ''; ?>>100</option>
+                    </select>
+                </div>
             </div>
 
                 <?php if (empty($users)): ?>
-                    <div class="empty-state" style="text-align: center; padding: 50px;">
-                        <div style="font-size: 4em; color: rgba(255,255,255,0.1); margin-bottom: 20px;"><i class="fas fa-users-slash"></i></div>
-                        <h3 style="color: white; margin-bottom: 10px;">Kullanıcı Bulunamadı</h3>
-                        <p style="color: var(--text-muted);">Arama kriterlerinize uygun kullanıcı bulunmamaktadır.</p>
+                    <div class="empty-state" style="text-align: center; padding: 60px 30px;">
+                        <div style="width: 120px; height: 120px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; color: rgba(255,255,255,0.15);">
+                            <i class="fas fa-users-slash"></i>
+                        </div>
+                        <h3 style="color: white; margin-bottom: 12px; font-size: 1.5rem; font-weight: 600;">Kullanıcı Bulunamadı</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Arama kriterlerinize uygun kullanıcı bulunmamaktadır.</p>
+                        <?php if ($searchTerm || $roleFilter || $institutionFilter): ?>
+                            <a href="users.php" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                                <i class="fas fa-redo"></i> Filtreleri Temizle
+                            </a>
+                        <?php else: ?>
+                            <button type="button" class="btn btn-primary" onclick="toggleAddUserModal()" style="display: inline-flex; align-items: center; gap: 8px;">
+                                <i class="fas fa-user-plus"></i> İlk Kullanıcıyı Ekle
+                            </button>
+                        <?php endif; ?>
                     </div>
                 <?php else: ?>
-                    <div class="table-responsive" style="overflow-x: auto;">
-                    <table class="table users-table">
-                    <thead>
+                    <div class="table-responsive" style="overflow-x: auto; max-height: 70vh; overflow-y: auto;">
+                    <table class="table users-table" style="margin: 0;">
+                    <thead style="position: sticky; top: 0; z-index: 10; background: rgba(15,23,42,0.95); backdrop-filter: blur(20px);">
                         <tr>
-                            <th>Kullanıcı</th>
-                            <th>Rol</th>
-                            <th>Kurum</th>
-                            <th>İletişim</th>
-                            <th>Kayıt Tarihi</th>
-                            <th>İşlemler</th>
+                            <th style="padding: 18px 24px;"><i class="fas fa-user" style="margin-right: 8px; opacity: 0.7;"></i>Kullanıcı</th>
+                            <th style="padding: 18px 24px;"><i class="fas fa-user-tag" style="margin-right: 8px; opacity: 0.7;"></i>Rol</th>
+                            <th style="padding: 18px 24px;"><i class="fas fa-building" style="margin-right: 8px; opacity: 0.7;"></i>Kurum</th>
+                            <th style="padding: 18px 24px;"><i class="fas fa-address-card" style="margin-right: 8px; opacity: 0.7;"></i>İletişim</th>
+                            <th style="padding: 18px 24px;"><i class="fas fa-calendar-alt" style="margin-right: 8px; opacity: 0.7;"></i>Kayıt Tarihi</th>
+                            <th style="padding: 18px 24px; text-align: center;"><i class="fas fa-cog" style="margin-right: 8px; opacity: 0.7;"></i>İşlemler</th>
                         </tr>
                     </thead>
                         <tbody>
-                        <?php foreach ($users as $user): ?>
-                                <tr style="transition: background 0.2s;">
+                        <?php foreach ($users as $index => $user): ?>
+                                <tr style="transition: all 0.2s ease; animation: fadeInRow 0.3s ease <?php echo $index * 0.02; ?>s both;">
                                 <td>
                                     <div class="user-info">
                                         <div class="user-avatar" style="box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
@@ -657,17 +707,21 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                         <?php echo date('H:i', strtotime($user['created_at'])); ?>
                                     </div>
                                 </td>
-                                <td>
-                                    <div style="display: flex; gap: 6px; justify-content: center;">
+                                <td style="text-align: center;">
+                                    <div style="display: flex; gap: 8px; justify-content: center; align-items: center;">
                                         <button onclick="editUser('<?php echo htmlspecialchars($user['username']); ?>')" title="Düzenle" 
-                                                style="background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
+                                                style="background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); padding: 10px 14px; border-radius: 10px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;"
+                                                onmouseover="this.style.background='rgba(59,130,246,0.25)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(59,130,246,0.2)'"
+                                                onmouseout="this.style.background='rgba(59,130,246,0.15)'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                                             <i class="fas fa-edit"></i>
                                         </button>
-                                        <form method="POST" style="display: inline; margin: 0;" onsubmit="return confirm('Bu kullanıcıyı silmek istediğinizden emin misiniz?');">
+                                        <form method="POST" style="display: inline; margin: 0;" onsubmit="return confirm('⚠️ Bu kullanıcıyı silmek istediğinizden emin misiniz?\n\nBu işlem geri alınamaz!');">
                                             <input type="hidden" name="action" value="delete_user">
                                             <input type="hidden" name="username" value="<?php echo htmlspecialchars($user['username']); ?>">
                                             <button type="submit" title="Sil" 
-                                                    style="background: rgba(239,68,68,0.15); color: #fca5a5; border: 1px solid rgba(239,68,68,0.2); padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
+                                                    style="background: rgba(239,68,68,0.15); color: #fca5a5; border: 1px solid rgba(239,68,68,0.2); padding: 10px 14px; border-radius: 10px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;"
+                                                    onmouseover="this.style.background='rgba(239,68,68,0.25)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(239,68,68,0.2)'"
+                                                    onmouseout="this.style.background='rgba(239,68,68,0.15)'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
                                                 <i class="fas fa-trash-alt"></i>
                                             </button>
                                         </form>
@@ -680,35 +734,67 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 </div>
                     
                     <?php if ($totalPages > 1): ?>
-                        <div class="pagination">
-                            <button onclick="goToPage(1)" <?php echo $currentPage == 1 ? 'disabled' : ''; ?>>
-                                ⏮️ İlk
-                            </button>
-                            <button onclick="goToPage(<?php echo $currentPage - 1; ?>)" <?php echo $currentPage == 1 ? 'disabled' : ''; ?>>
-                                ⏪ Önceki
-                            </button>
-                            
-                            <?php
-                            $startPage = max(1, $currentPage - 2);
-                            $endPage = min($totalPages, $currentPage + 2);
-                            
-                            for ($i = $startPage; $i <= $endPage; $i++):
-                            ?>
-                                <button onclick="goToPage(<?php echo $i; ?>)" class="<?php echo $i == $currentPage ? 'active' : ''; ?>">
-                                    <?php echo $i; ?>
+                        <div class="pagination" style="padding: 24px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; background: rgba(255,255,255,0.02);">
+                            <div style="color: var(--text-muted); font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                                <i class="fas fa-info-circle"></i>
+                                <span><?php echo $offset + 1; ?>-<?php echo min($offset + $itemsPerPage, $totalUsers); ?> / <?php echo $totalUsers; ?> kullanıcı gösteriliyor</span>
+                            </div>
+                            <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+                                <button onclick="goToPage(1)" <?php echo $currentPage == 1 ? 'disabled' : ''; ?> 
+                                        style="padding: 10px 16px; background: <?php echo $currentPage == 1 ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.08)'; ?>; color: <?php echo $currentPage == 1 ? 'var(--text-muted)' : '#fff'; ?>; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: <?php echo $currentPage == 1 ? 'not-allowed' : 'pointer'; ?>; transition: all 0.2s; font-weight: 500;"
+                                        <?php if ($currentPage != 1): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
+                                    <i class="fas fa-angle-double-left"></i> İlk
                                 </button>
-                            <?php endfor; ?>
-                            
-                            <button onclick="goToPage(<?php echo $currentPage + 1; ?>)" <?php echo $currentPage == $totalPages ? 'disabled' : ''; ?>>
-                                Sonraki ⏩
-                            </button>
-                            <button onclick="goToPage(<?php echo $totalPages; ?>)" <?php echo $currentPage == $totalPages ? 'disabled' : ''; ?>>
-                                Son ⏭️
-                            </button>
-                            
-                            <div class="pagination-info">
-                                <?php echo $offset + 1; ?>-<?php echo min($offset + $itemsPerPage, $totalUsers); ?> / <?php echo $totalUsers; ?> kullanıcı
-            </div>
+                                <button onclick="goToPage(<?php echo $currentPage - 1; ?>)" <?php echo $currentPage == 1 ? 'disabled' : ''; ?>
+                                        style="padding: 10px 16px; background: <?php echo $currentPage == 1 ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.08)'; ?>; color: <?php echo $currentPage == 1 ? 'var(--text-muted)' : '#fff'; ?>; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: <?php echo $currentPage == 1 ? 'not-allowed' : 'pointer'; ?>; transition: all 0.2s; font-weight: 500;"
+                                        <?php if ($currentPage != 1): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
+                                    <i class="fas fa-angle-left"></i> Önceki
+                                </button>
+                                
+                                <?php
+                                $startPage = max(1, $currentPage - 2);
+                                $endPage = min($totalPages, $currentPage + 2);
+                                
+                                if ($startPage > 1): ?>
+                                    <button onclick="goToPage(1)" style="padding: 10px 14px; background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: pointer; transition: all 0.2s; font-weight: 500;"
+                                            onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'">
+                                        1
+                                    </button>
+                                    <?php if ($startPage > 2): ?>
+                                        <span style="color: var(--text-muted); padding: 0 8px;">...</span>
+                                    <?php endif; ?>
+                                <?php endif;
+                                
+                                for ($i = $startPage; $i <= $endPage; $i++):
+                                ?>
+                                    <button onclick="goToPage(<?php echo $i; ?>)" 
+                                            style="padding: 10px 14px; background: <?php echo $i == $currentPage ? 'linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)' : 'rgba(255,255,255,0.08)'; ?>; color: #fff; border: 1px solid <?php echo $i == $currentPage ? 'var(--primary)' : 'rgba(255,255,255,0.1)'; ?>; border-radius: 10px; cursor: pointer; transition: all 0.2s; font-weight: <?php echo $i == $currentPage ? '700' : '500'; ?>; box-shadow: <?php echo $i == $currentPage ? '0 4px 12px rgba(6,133,103,0.3)' : 'none'; ?>;"
+                                            <?php if ($i != $currentPage): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
+                                        <?php echo $i; ?>
+                                    </button>
+                                <?php endfor; 
+                                
+                                if ($endPage < $totalPages): ?>
+                                    <?php if ($endPage < $totalPages - 1): ?>
+                                        <span style="color: var(--text-muted); padding: 0 8px;">...</span>
+                                    <?php endif; ?>
+                                    <button onclick="goToPage(<?php echo $totalPages; ?>)" style="padding: 10px 14px; background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: pointer; transition: all 0.2s; font-weight: 500;"
+                                            onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'">
+                                        <?php echo $totalPages; ?>
+                                    </button>
+                                <?php endif; ?>
+                                
+                                <button onclick="goToPage(<?php echo $currentPage + 1; ?>)" <?php echo $currentPage == $totalPages ? 'disabled' : ''; ?>
+                                        style="padding: 10px 16px; background: <?php echo $currentPage == $totalPages ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.08)'; ?>; color: <?php echo $currentPage == $totalPages ? 'var(--text-muted)' : '#fff'; ?>; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: <?php echo $currentPage == $totalPages ? 'not-allowed' : 'pointer'; ?>; transition: all 0.2s; font-weight: 500;"
+                                        <?php if ($currentPage != $totalPages): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
+                                    Sonraki <i class="fas fa-angle-right"></i>
+                                </button>
+                                <button onclick="goToPage(<?php echo $totalPages; ?>)" <?php echo $currentPage == $totalPages ? 'disabled' : ''; ?>
+                                        style="padding: 10px 16px; background: <?php echo $currentPage == $totalPages ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.08)'; ?>; color: <?php echo $currentPage == $totalPages ? 'var(--text-muted)' : '#fff'; ?>; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; cursor: <?php echo $currentPage == $totalPages ? 'not-allowed' : 'pointer'; ?>; transition: all 0.2s; font-weight: 500;"
+                                        <?php if ($currentPage != $totalPages): ?>onmouseover="this.style.background='rgba(255,255,255,0.12)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(0)'"<?php endif; ?>>
+                                    Son <i class="fas fa-angle-double-right"></i>
+                                </button>
+                            </div>
                         </div>
                     <?php endif; ?>
                 <?php endif; ?>
@@ -1123,32 +1209,31 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         }
 
 
-        // Sayfa yüklendiğinde filtreleme ve animasyonlar
+        // Sayfa yüklendiğinde animasyonlar
         document.addEventListener('DOMContentLoaded', function() {
-            filterUsers();
-            
-            // Kartlara animasyon ekle
-            const cards = document.querySelectorAll('.card, .stat-card');
-            cards.forEach((card, index) => {
+            // Stats kartlarına animasyon ekle
+            const statCards = document.querySelectorAll('.glass-panel');
+            statCards.forEach((card, index) => {
                 card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
+                card.style.transform = 'translateY(20px)';
                 setTimeout(() => {
-                    card.style.transition = 'all 0.6s ease';
+                    card.style.transition = 'all 0.5s ease';
                     card.style.opacity = '1';
                     card.style.transform = 'translateY(0)';
                 }, index * 100);
             });
 
-            // Kartlara animasyon ekle
-            const userCards = document.querySelectorAll('.user-card');
-            userCards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                setTimeout(() => {
-                    card.style.transition = 'all 0.6s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, index * 100);
+            // Tablo satırlarına hover efekti
+            const tableRows = document.querySelectorAll('.users-table tbody tr');
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', function() {
+                    this.style.background = 'rgba(255,255,255,0.04)';
+                    this.style.transform = 'scale(1.01)';
+                });
+                row.addEventListener('mouseleave', function() {
+                    this.style.background = 'transparent';
+                    this.style.transform = 'scale(1)';
+                });
             });
         });
     </script>
