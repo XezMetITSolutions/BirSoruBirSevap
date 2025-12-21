@@ -404,18 +404,23 @@ $currentPage = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
 $searchTerm = isset($_GET['search']) ? trim($_GET['search']) : '';
 $roleFilter = isset($_GET['role']) ? $_GET['role'] : '';
 $institutionFilter = isset($_GET['institution']) ? $_GET['institution'] : '';
+$regionFilter = isset($_GET['region']) ? $_GET['region'] : '';
 
 // Kullanıcıları getir ve filtrele
 $allUsers = $auth->getAllUsers();
 $filteredUsers = [];
 
 foreach ($allUsers as $username => $userData) {
+    $institution = $userData['branch'] ?? $userData['institution'] ?? 'Belirtilmemiş';
+    $region = $userData['region'] ?? getRegionByBranch($institution) ?? '';
+    
     $user = [
         'username' => $username,
         'role' => $userData['role'],
         'name' => $userData['full_name'] ?? $userData['name'] ?? 'Bilinmiyor',
         'password' => $userData['password'] ?? 'N/A',
-        'institution' => $userData['branch'] ?? $userData['institution'] ?? 'Belirtilmemiş',
+        'institution' => $institution,
+        'region' => $region,
         'class_section' => $userData['class_section'] ?? '',
         'email' => $userData['email'] ?? '',
         'phone' => $userData['phone'] ?? '',
@@ -430,6 +435,11 @@ foreach ($allUsers as $username => $userData) {
     
     // Rol filtresi
     if ($roleFilter && $user['role'] !== $roleFilter) {
+        continue;
+    }
+    
+    // Bölge filtresi
+    if ($regionFilter && $user['region'] !== $regionFilter) {
         continue;
     }
     
@@ -557,6 +567,15 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     <option value="superadmin" <?php echo $roleFilter === 'superadmin' ? 'selected' : ''; ?>>👑 Admin</option>
                 </select>
 
+                <select name="region" onchange="this.form.submit()" class="modern-select" style="min-width: 160px;">
+                    <option value="">🌍 Tüm Bölgeler</option>
+                    <?php foreach ($regionConfig as $region => $branches): ?>
+                        <option value="<?php echo htmlspecialchars($region); ?>" <?php echo $regionFilter === $region ? 'selected' : ''; ?>>
+                            <?php echo htmlspecialchars($region); ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+
                 <select name="institution" onchange="this.form.submit()" class="modern-select" style="min-width: 180px;">
                     <option value="">🏢 Tüm Kurumlar</option>
                     <?php foreach ($regionConfig as $region => $branches): ?>
@@ -572,7 +591,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     <?php endforeach; ?>
                 </select>
 
-                <?php if ($searchTerm || $roleFilter || $institutionFilter): ?>
+                <?php if ($searchTerm || $roleFilter || $regionFilter || $institutionFilter): ?>
                     <a href="users.php" class="clean-btn" style="padding: 12px 18px;">
                         <i class="fas fa-times"></i> Temizle
                     </a>
@@ -640,7 +659,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                         </div>
                         <h3 style="color: white; margin-bottom: 12px; font-size: 1.5rem; font-weight: 600;">Kullanıcı Bulunamadı</h3>
                         <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Arama kriterlerinize uygun kullanıcı bulunmamaktadır.</p>
-                        <?php if ($searchTerm || $roleFilter || $institutionFilter): ?>
+                        <?php if ($searchTerm || $roleFilter || $regionFilter || $institutionFilter): ?>
                             <a href="users.php" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
                                 <i class="fas fa-redo"></i> Filtreleri Temizle
                             </a>
@@ -657,6 +676,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                         <tr>
                             <th style="padding: 18px 24px;"><i class="fas fa-user" style="margin-right: 8px; opacity: 0.7;"></i>Kullanıcı</th>
                             <th style="padding: 18px 24px;"><i class="fas fa-user-tag" style="margin-right: 8px; opacity: 0.7;"></i>Rol</th>
+                            <th style="padding: 18px 24px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px; opacity: 0.7;"></i>Bölge</th>
                             <th style="padding: 18px 24px;"><i class="fas fa-building" style="margin-right: 8px; opacity: 0.7;"></i>Kurum</th>
                             <th style="padding: 18px 24px;"><i class="fas fa-address-card" style="margin-right: 8px; opacity: 0.7;"></i>İletişim</th>
                             <th style="padding: 18px 24px;"><i class="fas fa-calendar-alt" style="margin-right: 8px; opacity: 0.7;"></i>Kayıt Tarihi</th>
@@ -690,15 +710,19 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                     </span>
                                 </td>
                                 <td>
-                                        <div style="font-weight: 500; color: #e2e8f0;">
-                                        <?php 
-                                            $dispRegion = $user['region'] ?? getRegionByBranch($user['institution']) ?? '';
-                                            if ($dispRegion) {
-                                                echo '<span style="color: var(--text-muted); font-size: 0.9em;">' . htmlspecialchars($dispRegion) . ' &rsaquo; </span>';
-                                            }
-                                            echo htmlspecialchars($user['institution']); 
-                                        ?>
+                                    <?php if (!empty($user['region'])): ?>
+                                        <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(139,92,246,0.15); color: #a78bfa; padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(139,92,246,0.2); font-weight: 500; font-size: 0.9rem;">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span><?php echo htmlspecialchars($user['region']); ?></span>
                                         </div>
+                                    <?php else: ?>
+                                        <span style="color: var(--text-muted); font-size: 0.9rem; font-style: italic;">Belirtilmemiş</span>
+                                    <?php endif; ?>
+                                </td>
+                                <td>
+                                    <div style="font-weight: 500; color: #e2e8f0;">
+                                        <?php echo htmlspecialchars($user['institution']); ?>
+                                    </div>
                                     <?php if (!empty($user['class_section'])): ?>
                                         <div style="font-size: 0.8rem; color: #7f8c8d; margin-top: 4px; display: inline-block; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px;">
                                             <i class="fas fa-layer-group"></i> <?php echo htmlspecialchars($user['class_section']); ?>
