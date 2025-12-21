@@ -39,11 +39,11 @@ $roleFilter = isset($_GET['role']) ? $_GET['role'] : '';
 $db = Database::getInstance();
 $conn = $db->getConnection();
 
-// Kullanıcıları getir ve filtrele (sadece kendi şubesinden)
+// Kullanıcıları getir ve filtrele (sadece kendi şubesinden, leader ve adminleri hariç tut)
 try {
     $sql = "SELECT username, role, full_name, branch, class_section, email, phone, region, created_at, last_login 
             FROM users 
-            WHERE branch = ?";
+            WHERE branch = ? AND role IN ('student', 'teacher')";
     
     $params = [$userBranch];
     
@@ -295,12 +295,13 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                             <?php 
                                             $roleIcons = [
                                                 'student' => '<i class="fas fa-user-graduate"></i>',
-                                                'teacher' => '<i class="fas fa-chalkboard-teacher"></i>',
-                                                'branch_leader' => '<i class="fas fa-building"></i>',
-                                                'region_leader' => '<i class="fas fa-map-marked-alt"></i>',
-                                                'superadmin' => '<i class="fas fa-crown"></i>'
+                                                'teacher' => '<i class="fas fa-chalkboard-teacher"></i>'
                                             ];
-                                            echo ($roleIcons[$user['role']] ?? '') . ' ' . ucfirst($user['role']);
+                                            $roleNames = [
+                                                'student' => 'Öğrenci',
+                                                'teacher' => 'Eğitmen'
+                                            ];
+                                            echo ($roleIcons[$user['role']] ?? '') . ' ' . ($roleNames[$user['role']] ?? ucfirst($user['role']));
                                             ?>
                                         </span>
                                     </td>
