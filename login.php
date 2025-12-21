@@ -449,7 +449,15 @@ try {
             </h3>
             <div class="demo-account">
                 <strong id="createLabel">Hesap Oluşturma:</strong> <br>
-                <span id="createText">Yeni bir hesap oluşturmak için lütfen eğitmeniniz veya sistem yöneticisi ile iletişime geçin.</span>
+                <span id="createText">Arlberg bölgesi öğrencileri için kayıt formu mevcuttur.</span>
+                <div style="margin-top: 12px;">
+                    <a href="register_arlberg.php" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: linear-gradient(135deg, #068567 0%, #047857 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 12px rgba(6,133,103,0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(6,133,103,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(6,133,103,0.3)'">
+                        <i class="fas fa-user-plus"></i> Arlberg Bölgesi - Öğrenci Kayıt
+                    </a>
+                </div>
+                <div style="margin-top: 8px; font-size: 0.85rem; color: var(--text-muted);">
+                    Diğer bölgeler için lütfen eğitmeniniz veya sistem yöneticisi ile iletişime geçin.
+                </div>
             </div>
         </div>
     </div>
