@@ -19,6 +19,18 @@ if (!$auth->hasRole('branch_leader')) {
 $user = $auth->getUser();
 $userBranch = $user['branch'] ?? $user['institution'] ?? '';
 
+// Debug: Kullanıcı bilgisini kontrol et (geliştirme sırasında)
+if (isset($_GET['debug'])) {
+    echo "<pre style='background: #000; color: #0f0; padding: 20px; position: fixed; top: 10px; right: 10px; z-index: 9999; border: 2px solid #0f0;'>";
+    echo "DEBUG INFO:\n";
+    echo "Username: " . ($user['username'] ?? 'N/A') . "\n";
+    echo "Name: " . ($user['name'] ?? 'N/A') . "\n";
+    echo "Branch: " . ($user['branch'] ?? 'N/A') . "\n";
+    echo "Institution: " . ($user['institution'] ?? 'N/A') . "\n";
+    echo "\$userBranch: " . ($userBranch ?: 'EMPTY') . "\n";
+    echo "</pre>";
+}
+
 if (empty($userBranch)) {
     die('Hata: Şube bilgisi bulunamadı. Lütfen sistem yöneticisi ile iletişime geçin.');
 }
