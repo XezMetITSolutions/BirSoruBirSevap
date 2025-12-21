@@ -323,10 +323,19 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                             $roleIcons = [
                                                 'student' => '<i class="fas fa-user-graduate"></i>',
                                                 'teacher' => '<i class="fas fa-chalkboard-teacher"></i>',
+                                                'branch_leader' => '<i class="fas fa-building"></i>',
                                                 'region_leader' => '<i class="fas fa-map-marked-alt"></i>',
                                                 'superadmin' => '<i class="fas fa-crown"></i>'
                                             ];
-                                            echo ($roleIcons[$user['role']] ?? '') . ' ' . ucfirst($user['role']);
+                                            $roleNames = [
+                                                'student' => 'Öğrenci',
+                                                'teacher' => 'Eğitmen',
+                                                'branch_leader' => 'Şube Eğitim Başkanı',
+                                                'region_leader' => 'Bölge Eğitim Başkanı',
+                                                'admin' => 'Admin',
+                                                'superadmin' => 'Admin'
+                                            ];
+                                            echo ($roleIcons[$user['role']] ?? '') . ' ' . ($roleNames[$user['role']] ?? ucfirst($user['role']));
                                             ?>
                                         </span>
                                     </td>
