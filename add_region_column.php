@@ -5,9 +5,6 @@
  */
 
 require_once 'config.php';
-require_once 'database.php';
-
-$db = Database::getInstance();
 
 echo "<!DOCTYPE html>
 <html lang='tr'>
@@ -84,9 +81,22 @@ echo "<!DOCTYPE html>
 echo "<h1>🔧 Veritabanı Güncelleme</h1>";
 
 try {
+    // Direkt MySQLi bağlantısı oluştur
+    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    
+    if ($conn->connect_error) {
+        throw new Exception("Bağlantı hatası: " . $conn->connect_error);
+    }
+    
+    $conn->set_charset("utf8mb4");
+    
+    echo "<div class='info'>
+        ✅ Veritabanı bağlantısı başarılı: <code>" . DB_NAME . "</code>
+    </div>";
+    
     // Önce sütunun var olup olmadığını kontrol et
     $checkQuery = "SHOW COLUMNS FROM users LIKE 'region'";
-    $result = $db->query($checkQuery);
+    $result = $conn->query($checkQuery);
     
     if ($result && $result->num_rows > 0) {
         echo "<div class='info'>
@@ -100,7 +110,7 @@ try {
         // Region sütununu ekle
         $alterQuery = "ALTER TABLE users ADD COLUMN region VARCHAR(100) DEFAULT 'Arlberg' AFTER institution";
         
-        if ($db->query($alterQuery)) {
+        if ($conn->query($alterQuery)) {
             echo "<div class='success'>
                 ✅ <strong>Başarılı!</strong> <code>region</code> sütunu başarıyla eklendi.<br>
                 <small>Varsayılan değer: 'Arlberg'</small>
@@ -108,13 +118,13 @@ try {
             
             // Mevcut NULL değerleri Arlberg olarak güncelle
             $updateQuery = "UPDATE users SET region = 'Arlberg' WHERE region IS NULL OR region = ''";
-            $db->query($updateQuery);
+            $conn->query($updateQuery);
             
             echo "<div class='success'>
                 ✅ Mevcut kullanıcıların bölge bilgileri 'Arlberg' olarak güncellendi.
             </div>";
         } else {
-            throw new Exception("Sütun eklenirken hata: " . $db->error);
+            throw new Exception("Sütun eklenirken hata: " . $conn->error);
         }
     }
     
@@ -123,30 +133,36 @@ try {
         <strong>📊 Mevcut Tablo Yapısı:</strong><br><br>";
     
     $columnsQuery = "SHOW COLUMNS FROM users";
-    $columns = $db->query($columnsQuery);
+    $columns = $conn->query($columnsQuery);
     
-    echo "<table style='width: 100%; border-collapse: collapse; margin-top: 10px;'>
-        <tr style='background: rgba(0,0,0,0.3);'>
-            <th style='padding: 8px; text-align: left; border: 1px solid rgba(255,255,255,0.1);'>Alan</th>
-            <th style='padding: 8px; text-align: left; border: 1px solid rgba(255,255,255,0.1);'>Tip</th>
-            <th style='padding: 8px; text-align: left; border: 1px solid rgba(255,255,255,0.1);'>Varsayılan</th>
-        </tr>";
-    
-    while ($col = $columns->fetch_assoc()) {
-        $highlight = $col['Field'] === 'region' ? "style='background: rgba(16, 185, 129, 0.1);'" : "";
-        echo "<tr {$highlight}>
-            <td style='padding: 8px; border: 1px solid rgba(255,255,255,0.05);'><code>{$col['Field']}</code></td>
-            <td style='padding: 8px; border: 1px solid rgba(255,255,255,0.05);'>{$col['Type']}</td>
-            <td style='padding: 8px; border: 1px solid rgba(255,255,255,0.05);'>{$col['Default']}</td>
-        </tr>";
+    if ($columns) {
+        echo "<table style='width: 100%; border-collapse: collapse; margin-top: 10px;'>
+            <tr style='background: rgba(0,0,0,0.3);'>
+                <th style='padding: 8px; text-align: left; border: 1px solid rgba(255,255,255,0.1);'>Alan</th>
+                <th style='padding: 8px; text-align: left; border: 1px solid rgba(255,255,255,0.1);'>Tip</th>
+                <th style='padding: 8px; text-align: left; border: 1px solid rgba(255,255,255,0.1);'>Varsayılan</th>
+            </tr>";
+        
+        while ($col = $columns->fetch_assoc()) {
+            $highlight = $col['Field'] === 'region' ? "style='background: rgba(16, 185, 129, 0.1);'" : "";
+            echo "<tr {$highlight}>
+                <td style='padding: 8px; border: 1px solid rgba(255,255,255,0.05);'><code>{$col['Field']}</code></td>
+                <td style='padding: 8px; border: 1px solid rgba(255,255,255,0.05);'>{$col['Type']}</td>
+                <td style='padding: 8px; border: 1px solid rgba(255,255,255,0.05);'>" . ($col['Default'] ?? 'NULL') . "</td>
+            </tr>";
+        }
+        
+        echo "</table>";
     }
     
-    echo "</table></div>";
+    echo "</div>";
     
     echo "<div style='margin-top: 30px;'>
         <a href='update_user_regions.php' class='btn'>→ Kullanıcı Bölgelerini Güncelle</a>
         <a href='admin/users.php' class='btn' style='background: #3b82f6; margin-left: 10px;'>→ Kullanıcı Yönetimi</a>
     </div>";
+    
+    $conn->close();
     
 } catch (Exception $e) {
     echo "<div class='error'>
@@ -154,6 +170,11 @@ try {
     </div>";
     
     echo "<p style='margin-top: 20px; color: #94a3b8;'>
+        Muhtemelen sistem JSON dosyası tabanlı kullanıcı yönetimi kullanıyor.<br>
+        Bu durumda veritabanına region sütunu eklemek gerekmeyebilir.
+    </p>";
+    
+    echo "<p style='margin-top: 20px;'>
         <a href='admin/dashboard.php' style='color: #3b82f6;'>← Dashboard'a Dön</a>
     </p>";
 }
