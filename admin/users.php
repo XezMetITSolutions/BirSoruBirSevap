@@ -468,6 +468,13 @@ $offset = ($currentPage - 1) * $itemsPerPage;
 
 // Mevcut sayfa için kullanıcıları al
 $users = array_slice($filteredUsers, $offset, $itemsPerPage);
+
+// İstatistikler
+$totalStudents = count(array_filter($filteredUsers, fn($u) => $u['role'] === 'student'));
+$totalTeachers = count(array_filter($filteredUsers, fn($u) => $u['role'] === 'teacher'));
+$totalBranchLeaders = count(array_filter($filteredUsers, fn($u) => $u['role'] === 'branch_leader'));
+$totalRegionLeaders = count(array_filter($filteredUsers, fn($u) => $u['role'] === 'region_leader'));
+$totalAdmins = count(array_filter($filteredUsers, fn($u) => $u['role'] === 'superadmin' || $u['role'] === 'admin'));
 ?>
 
 <!DOCTYPE html>
@@ -481,6 +488,137 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/admin-style.css">
+    <style>
+        .users-page-container {
+            padding: 0;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .page-header-section {
+            background: linear-gradient(135deg, rgba(6,133,103,0.15) 0%, rgba(6,133,103,0.05) 100%);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 30px 0;
+            margin-bottom: 30px;
+        }
+        
+        .stats-grid-modern {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 0 2px;
+        }
+        
+        .stat-card-modern {
+            background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        
+        .stat-card-modern:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+            border-color: rgba(255,255,255,0.2);
+        }
+        
+        .stat-card-modern .stat-icon-wrapper {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 1.8rem;
+        }
+        
+        .stat-card-modern .stat-value-modern {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        
+        .stat-card-modern .stat-label-modern {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        
+        .filters-section-modern {
+            background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.03) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+        
+        .table-container-modern {
+            background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.03) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .table-header-modern {
+            padding: 24px 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            .stats-grid-modern {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            
+            .stat-card-modern {
+                padding: 18px;
+            }
+            
+            .stat-card-modern .stat-value-modern {
+                font-size: 2rem;
+            }
+            
+            .filters-section-modern {
+                padding: 16px;
+            }
+            
+            .table-header-modern {
+                padding: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid-modern {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="bg-decoration">
@@ -490,7 +628,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
 
     <?php include 'sidebar.php'; ?>
 
-    <div class="main-wrapper">
+    <div class="main-wrapper users-page-container">
         <div class="top-bar">
             <div class="menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">
                 <i class="fas fa-bars"></i>
@@ -502,27 +640,80 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
         </div>
 
         <?php if ($error): ?>
-            <div class="alert-box">
+            <div class="alert-box" style="margin: 20px 0; animation: slideDown 0.3s ease;">
                 <i class="fas fa-exclamation-circle"></i> <?php echo htmlspecialchars($error); ?>
             </div>
         <?php endif; ?>
 
         <?php if ($success): ?>
-            <?php echo $success; ?>
+            <div style="margin: 20px 0; animation: slideDown 0.3s ease;">
+                <?php echo $success; ?>
+            </div>
         <?php endif; ?>
+        
+        <!-- İstatistik Kartları -->
+        <div class="stats-grid-modern">
+            <div class="stat-card-modern">
+                <div class="stat-icon-wrapper" style="background: rgba(6,133,103,0.2); color: var(--primary);">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-value-modern"><?php echo $totalUsers; ?></div>
+                <div class="stat-label-modern">Toplam Kullanıcı</div>
+            </div>
+            
+            <div class="stat-card-modern">
+                <div class="stat-icon-wrapper" style="background: rgba(59,130,246,0.2); color: #3b82f6;">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <div class="stat-value-modern"><?php echo $totalStudents; ?></div>
+                <div class="stat-label-modern">Öğrenci</div>
+            </div>
+            
+            <div class="stat-card-modern">
+                <div class="stat-icon-wrapper" style="background: rgba(245,158,11,0.2); color: #f59e0b;">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="stat-value-modern"><?php echo $totalTeachers; ?></div>
+                <div class="stat-label-modern">Eğitmen</div>
+            </div>
+            
+            <div class="stat-card-modern">
+                <div class="stat-icon-wrapper" style="background: rgba(59,130,246,0.2); color: #60a5fa;">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="stat-value-modern"><?php echo $totalBranchLeaders; ?></div>
+                <div class="stat-label-modern">Eğitim Başkanı</div>
+            </div>
+            
+            <div class="stat-card-modern">
+                <div class="stat-icon-wrapper" style="background: rgba(139,92,246,0.2); color: #8b5cf6;">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <div class="stat-value-modern"><?php echo $totalRegionLeaders; ?></div>
+                <div class="stat-label-modern">Bölge Lideri</div>
+            </div>
+            
+            <div class="stat-card-modern">
+                <div class="stat-icon-wrapper" style="background: rgba(239,68,68,0.2); color: #ef4444;">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="stat-value-modern"><?php echo $totalAdmins; ?></div>
+                <div class="stat-label-modern">Admin</div>
+            </div>
+        </div>
 
         <!-- Modern Filters -->
-        <div class="glass-panel" style="padding: 24px; margin-bottom: 30px; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);">
-            <form method="GET" id="filterForm" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-                <div style="position: relative; flex: 1; min-width: 250px;">
+        <div class="filters-section-modern">
+            <form method="GET" id="filterForm" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr auto auto; gap: 12px; align-items: center;">
+                <div style="position: relative; grid-column: 1;">
                     <i class="fas fa-search" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); z-index: 1;"></i>
                     <input type="text" name="search" placeholder="Kullanıcı adı veya isim ile ara..." value="<?php echo htmlspecialchars($searchTerm); ?>" 
-                           style="width: 100%; padding: 12px 16px 12px 44px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: #fff; font-size: 0.95rem; transition: all 0.3s;"
+                           style="width: 100%; padding: 14px 16px 14px 44px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: #fff; font-size: 0.95rem; transition: all 0.3s;"
                            onfocus="this.style.background='rgba(0,0,0,0.4)'; this.style.borderColor='var(--primary)'; this.style.boxShadow='0 0 0 3px rgba(6,133,103,0.1)'"
                            onblur="this.style.background='rgba(0,0,0,0.3)'; this.style.borderColor='rgba(255,255,255,0.1)'; this.style.boxShadow='none'">
                 </div>
                 
-                <select name="role" onchange="this.form.submit()" class="modern-select" style="min-width: 140px;">
+                <select name="role" onchange="this.form.submit()" class="modern-select" style="grid-column: 2;">
                     <option value="">🎭 Tüm Roller</option>
                     <option value="student" <?php echo $roleFilter === 'student' ? 'selected' : ''; ?>>👨‍🎓 Öğrenci</option>
                     <option value="teacher" <?php echo $roleFilter === 'teacher' ? 'selected' : ''; ?>>👨‍🏫 Eğitmen</option>
@@ -531,7 +722,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     <option value="superadmin" <?php echo $roleFilter === 'superadmin' ? 'selected' : ''; ?>>👑 Admin</option>
                 </select>
 
-                <select name="region" onchange="this.form.submit()" class="modern-select" style="min-width: 160px;">
+                <select name="region" onchange="this.form.submit()" class="modern-select" style="grid-column: 3;">
                     <option value="">🌍 Tüm Bölgeler</option>
                     <?php foreach ($regionConfig as $region => $branches): ?>
                         <option value="<?php echo htmlspecialchars($region); ?>" <?php echo $regionFilter === $region ? 'selected' : ''; ?>>
@@ -540,7 +731,7 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                     <?php endforeach; ?>
                 </select>
 
-                <select name="institution" onchange="this.form.submit()" class="modern-select" style="min-width: 180px;">
+                <select name="institution" onchange="this.form.submit()" class="modern-select" style="grid-column: 4;">
                     <option value="">🏢 Tüm Kurumlar</option>
                     <?php foreach ($regionConfig as $region => $branches): ?>
                         <?php if (!empty($branches)): ?>
@@ -556,18 +747,20 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 </select>
 
                 <?php if ($searchTerm || $roleFilter || $regionFilter || $institutionFilter): ?>
-                    <a href="users.php" class="clean-btn" style="padding: 12px 18px;">
+                    <a href="users.php" class="clean-btn" style="grid-column: 5; padding: 14px 18px; text-align: center;">
                         <i class="fas fa-times"></i> Temizle
                     </a>
+                <?php else: ?>
+                    <div style="grid-column: 5;"></div>
                 <?php endif; ?>
                 
-                <div style="margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap;">
-                    <button type="button" class="btn btn-secondary" onclick="toggleImportModal()" style="padding: 12px 20px; background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.2); transition: all 0.3s;" onmouseover="this.style.background='rgba(245,158,11,0.25)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(245,158,11,0.15)'; this.style.transform='translateY(0)'">
-                        <i class="fas fa-file-upload"></i> CSV İçe Aktar
+                <div style="grid-column: 6; display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end;">
+                    <button type="button" class="btn btn-secondary" onclick="event.stopPropagation(); toggleImportModal(); return false;" style="padding: 14px 20px; background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.2); transition: all 0.3s; white-space: nowrap;" onmouseover="this.style.background='rgba(245,158,11,0.25)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(245,158,11,0.15)'; this.style.transform='translateY(0)'">
+                        <i class="fas fa-file-upload"></i> <span style="display: inline-block;">CSV</span>
                     </button>
                     <div class="dropdown" style="position: relative;">
-                        <button type="button" class="btn btn-secondary" onclick="toggleDropdown('exportDropdown')" style="padding: 12px 20px; background: rgba(34,197,94,0.15); color: #86efac; border: 1px solid rgba(34,197,94,0.2); transition: all 0.3s;" onmouseover="this.style.background='rgba(34,197,94,0.25)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(34,197,94,0.15)'; this.style.transform='translateY(0)'">
-                            <i class="fas fa-file-download"></i> Dışa Aktar <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 5px;"></i>
+                        <button type="button" class="btn btn-secondary" onclick="event.stopPropagation(); toggleDropdown('exportDropdown'); return false;" style="padding: 14px 20px; background: rgba(34,197,94,0.15); color: #86efac; border: 1px solid rgba(34,197,94,0.2); transition: all 0.3s; white-space: nowrap;" onmouseover="this.style.background='rgba(34,197,94,0.25)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(34,197,94,0.15)'; this.style.transform='translateY(0)'">
+                            <i class="fas fa-file-download"></i> <span style="display: inline-block;">Dışa Aktar</span> <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 5px;"></i>
                         </button>
                         <div id="exportDropdown" class="dropdown-content" style="display: none; position: absolute; right: 0; top: 100%; margin-top: 8px; background: rgba(15,23,42,0.95); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 8px; min-width: 220px; z-index: 1000; box-shadow: 0 8px 24px rgba(0,0,0,0.3); animation: fadeIn 0.2s ease;">
                             <a href="users.php?action=export_csv&type=all" style="display: flex; align-items: center; gap: 10px; padding: 12px 16px; color: #e2e8f0; text-decoration: none; border-radius: 8px; transition: all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateX(4px)'" onmouseout="this.style.background='transparent'; this.style.transform='translateX(0)'">
@@ -581,34 +774,48 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                             </a>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="event.stopPropagation(); toggleAddUserModal(); return false;" style="padding: 12px 24px; box-shadow: 0 4px 12px rgba(6,133,103,0.3);">
-                        <i class="fas fa-user-plus"></i> Yeni Kullanıcı
+                    <button type="button" class="btn btn-primary" onclick="event.stopPropagation(); toggleAddUserModal(); return false;" style="padding: 14px 24px; box-shadow: 0 4px 12px rgba(6,133,103,0.3); white-space: nowrap;">
+                        <i class="fas fa-user-plus"></i> <span style="display: inline-block;">Yeni Kullanıcı</span>
                     </button>
                 </div>
             </form>
         </div>
+        
+        <style>
+            @media (max-width: 1200px) {
+                .filters-section-modern form {
+                    grid-template-columns: 1fr;
+                    gap: 12px;
+                }
+                
+                .filters-section-modern form > * {
+                    grid-column: 1 !important;
+                }
+            }
+        </style>
 
         <!-- Modern Table -->
-        <div class="glass-panel" style="overflow: hidden;">
-            <div style="padding: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);">
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 40px; height: 40px; border-radius: 12px; background: rgba(6,133,103,0.2); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+        <div class="table-container-modern">
+            <div class="table-header-modern">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <div style="width: 48px; height: 48px; border-radius: 14px; background: linear-gradient(135deg, rgba(6,133,103,0.2) 0%, rgba(6,133,103,0.1) 100%); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.5rem;">
                         <i class="fas fa-users"></i>
                     </div>
                     <div>
-                        <div style="font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 2px;">
+                        <div style="font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 4px;">
                             Kullanıcı Listesi
                         </div>
-                        <div style="font-size: 0.85rem; color: var(--text-muted);">
-                            Toplam <?php echo $totalUsers; ?> kullanıcı
+                        <div style="font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Toplam <?php echo $totalUsers; ?> kullanıcı gösteriliyor</span>
                         </div>
                     </div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 12px;">
-                    <label style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                    <label style="font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px; white-space: nowrap;">
                         <i class="fas fa-list-ol"></i> Sayfa başına:
                     </label>
-                    <select onchange="changeItemsPerPage(this.value)" class="modern-select" style="padding: 10px 16px; min-width: 100px;">
+                    <select onchange="changeItemsPerPage(this.value)" class="modern-select" style="padding: 12px 16px; min-width: 100px;">
                         <option value="25" <?php echo $itemsPerPage == 25 ? 'selected' : ''; ?>>25</option>
                         <option value="50" <?php echo $itemsPerPage == 50 ? 'selected' : ''; ?>>50</option>
                         <option value="100" <?php echo $itemsPerPage == 100 ? 'selected' : ''; ?>>100</option>
@@ -616,53 +823,68 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 </div>
             </div>
 
+            <div style="padding: 0;">
                 <?php if (empty($users)): ?>
-                    <div class="empty-state" style="text-align: center; padding: 60px 30px;">
-                        <div style="width: 120px; height: 120px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; color: rgba(255,255,255,0.15);">
+                    <div class="empty-state" style="text-align: center; padding: 80px 30px;">
+                        <div style="width: 140px; height: 140px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.1);">
                             <i class="fas fa-users-slash"></i>
                         </div>
-                        <h3 style="color: white; margin-bottom: 12px; font-size: 1.5rem; font-weight: 600;">Kullanıcı Bulunamadı</h3>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Arama kriterlerinize uygun kullanıcı bulunmamaktadır.</p>
+                        <h3 style="color: white; margin-bottom: 12px; font-size: 1.6rem; font-weight: 700;">Kullanıcı Bulunamadı</h3>
+                        <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto;">Arama kriterlerinize uygun kullanıcı bulunmamaktadır.</p>
                         <?php if ($searchTerm || $roleFilter || $regionFilter || $institutionFilter): ?>
-                            <a href="users.php" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                            <a href="users.php" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 1rem; border-radius: 12px;">
                                 <i class="fas fa-redo"></i> Filtreleri Temizle
                             </a>
                         <?php else: ?>
-                            <button type="button" class="btn btn-primary" onclick="event.stopPropagation(); toggleAddUserModal(); return false;" style="display: inline-flex; align-items: center; gap: 8px;">
+                            <button type="button" class="btn btn-primary" onclick="event.stopPropagation(); toggleAddUserModal(); return false;" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 1rem; border-radius: 12px;">
                                 <i class="fas fa-user-plus"></i> İlk Kullanıcıyı Ekle
                             </button>
                         <?php endif; ?>
                     </div>
                 <?php else: ?>
-                    <div class="table-responsive" style="overflow-x: auto; max-height: 70vh; overflow-y: auto;">
-                    <table class="table users-table" style="margin: 0;">
-                    <thead style="position: sticky; top: 0; z-index: 10; background: rgba(15,23,42,0.95); backdrop-filter: blur(20px);">
+                    <div class="table-responsive" style="overflow-x: auto; max-height: calc(100vh - 450px); overflow-y: auto;">
+                    <table class="table users-table" style="margin: 0; width: 100%; border-collapse: collapse;">
+                    <thead style="position: sticky; top: 0; z-index: 10; background: linear-gradient(135deg, rgba(15,23,42,0.98) 0%, rgba(15,23,42,0.95) 100%); backdrop-filter: blur(20px); border-bottom: 2px solid rgba(255,255,255,0.1);">
                         <tr>
-                            <th style="padding: 18px 24px;"><i class="fas fa-user" style="margin-right: 8px; opacity: 0.7;"></i>Kullanıcı</th>
-                            <th style="padding: 18px 24px;"><i class="fas fa-user-tag" style="margin-right: 8px; opacity: 0.7;"></i>Rol</th>
-                            <th style="padding: 18px 24px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px; opacity: 0.7;"></i>Bölge</th>
-                            <th style="padding: 18px 24px;"><i class="fas fa-building" style="margin-right: 8px; opacity: 0.7;"></i>Kurum</th>
-                            <th style="padding: 18px 24px;"><i class="fas fa-address-card" style="margin-right: 8px; opacity: 0.7;"></i>İletişim</th>
-                            <th style="padding: 18px 24px;"><i class="fas fa-calendar-alt" style="margin-right: 8px; opacity: 0.7;"></i>Kayıt Tarihi</th>
-                            <th style="padding: 18px 24px; text-align: center;"><i class="fas fa-cog" style="margin-right: 8px; opacity: 0.7;"></i>İşlemler</th>
+                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                                <i class="fas fa-user" style="margin-right: 8px; opacity: 0.8;"></i>Kullanıcı
+                            </th>
+                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                                <i class="fas fa-user-tag" style="margin-right: 8px; opacity: 0.8;"></i>Rol
+                            </th>
+                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                                <i class="fas fa-map-marker-alt" style="margin-right: 8px; opacity: 0.8;"></i>Bölge
+                            </th>
+                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                                <i class="fas fa-building" style="margin-right: 8px; opacity: 0.8;"></i>Kurum
+                            </th>
+                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                                <i class="fas fa-address-card" style="margin-right: 8px; opacity: 0.8;"></i>İletişim
+                            </th>
+                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                                <i class="fas fa-calendar-alt" style="margin-right: 8px; opacity: 0.8;"></i>Kayıt Tarihi
+                            </th>
+                            <th style="padding: 20px 24px; font-weight: 600; color: #fff; text-align: center; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                                <i class="fas fa-cog" style="margin-right: 8px; opacity: 0.8;"></i>İşlemler
+                            </th>
                         </tr>
                     </thead>
                         <tbody>
                         <?php foreach ($users as $index => $user): ?>
-                                <tr style="transition: all 0.2s ease; animation: fadeInRow 0.3s ease <?php echo $index * 0.02; ?>s both;">
-                                <td>
-                                    <div class="user-info">
-                                        <div class="user-avatar" style="box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                                <tr style="transition: all 0.2s ease; animation: fadeInRow 0.3s ease <?php echo $index * 0.02; ?>s both; border-bottom: 1px solid rgba(255,255,255,0.05);" onmouseover="this.style.background='rgba(255,255,255,0.03)'" onmouseout="this.style.background='transparent'">
+                                <td style="padding: 20px 24px;">
+                                    <div class="user-info" style="display: flex; align-items: center; gap: 12px;">
+                                        <div class="user-avatar" style="width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, rgba(6,133,103,0.3) 0%, rgba(6,133,103,0.2) 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 2px solid rgba(255,255,255,0.1);">
                                             <?php echo strtoupper(substr($user['name'] ?? 'U', 0, 1)); ?>
                                         </div>
-                                        <div class="user-details">
-                                            <div class="user-name" style="font-weight: 600; color: white;"><?php echo htmlspecialchars($user['name'] ?? 'Bilinmiyor'); ?></div>
-                                            <div class="user-username" style="font-size: 0.85em; color: var(--text-muted);">@<?php echo htmlspecialchars($user['username']); ?></div>
+                                        <div class="user-details" style="flex: 1; min-width: 0;">
+                                            <div class="user-name" style="font-weight: 600; color: white; font-size: 0.95rem; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?php echo htmlspecialchars($user['name'] ?? 'Bilinmiyor'); ?></div>
+                                            <div class="user-username" style="font-size: 0.8rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">@<?php echo htmlspecialchars($user['username']); ?></div>
                                         </div>
                                     </div>
                                 </td>
-                                <td>
-                                    <span class="role-badge role-<?php echo $user['role']; ?>">
+                                <td style="padding: 20px 24px;">
+                                    <span class="role-badge role-<?php echo $user['role']; ?>" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 10px; font-weight: 600; font-size: 0.85rem;">
                                         <?php 
                                         $roleIcons = [
                                             'student' => '<i class="fas fa-user-graduate"></i>',
@@ -675,63 +897,68 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                                         ?>
                                     </span>
                                 </td>
-                                <td>
+                                <td style="padding: 20px 24px;">
                                     <?php if (!empty($user['region'])): ?>
-                                        <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(139,92,246,0.15); color: #a78bfa; padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(139,92,246,0.2); font-weight: 500; font-size: 0.9rem;">
+                                        <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(139,92,246,0.15); color: #a78bfa; padding: 8px 14px; border-radius: 10px; border: 1px solid rgba(139,92,246,0.2); font-weight: 500; font-size: 0.9rem;">
                                             <i class="fas fa-map-marker-alt"></i>
                                             <span><?php echo htmlspecialchars($user['region']); ?></span>
                                         </div>
                                     <?php else: ?>
-                                        <span style="color: var(--text-muted); font-size: 0.9rem; font-style: italic;">Belirtilmemiş</span>
+                                        <span style="color: var(--text-muted); font-size: 0.9rem; font-style: italic;">—</span>
                                     <?php endif; ?>
                                 </td>
-                                <td>
-                                    <div style="font-weight: 500; color: #e2e8f0;">
+                                <td style="padding: 20px 24px;">
+                                    <div style="font-weight: 500; color: #e2e8f0; font-size: 0.95rem;">
                                         <?php echo htmlspecialchars($user['institution']); ?>
                                     </div>
                                     <?php if (!empty($user['class_section'])): ?>
-                                        <div style="font-size: 0.8rem; color: #7f8c8d; margin-top: 4px; display: inline-block; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px;">
-                                            <i class="fas fa-layer-group"></i> <?php echo htmlspecialchars($user['class_section']); ?>
+                                        <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 6px; display: inline-block; background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+                                            <i class="fas fa-layer-group" style="margin-right: 4px;"></i><?php echo htmlspecialchars($user['class_section']); ?>
                                         </div>
                                     <?php endif; ?>
                                 </td>
-                                <td>
-                                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                                <td style="padding: 20px 24px;">
+                                    <div style="display: flex; flex-direction: column; gap: 6px;">
                                     <?php if (!empty($user['email'])): ?>
-                                        <div style="font-size: 0.85rem; color: var(--text-muted);">
-                                            <i class="fas fa-envelope" style="width: 16px;"></i> <?php echo htmlspecialchars($user['email']); ?>
+                                        <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+                                            <i class="fas fa-envelope" style="width: 16px; opacity: 0.7;"></i> 
+                                            <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px;"><?php echo htmlspecialchars($user['email']); ?></span>
                                         </div>
                                     <?php endif; ?>
                                     <?php if (!empty($user['phone'])): ?>
-                                        <div style="font-size: 0.85rem; color: var(--text-muted);">
-                                            <i class="fas fa-phone" style="width: 16px;"></i> <?php echo htmlspecialchars($user['phone']); ?>
+                                        <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+                                            <i class="fas fa-phone" style="width: 16px; opacity: 0.7;"></i> 
+                                            <span><?php echo htmlspecialchars($user['phone']); ?></span>
                                         </div>
+                                    <?php endif; ?>
+                                    <?php if (empty($user['email']) && empty($user['phone'])): ?>
+                                        <span style="color: var(--text-muted); font-size: 0.85rem; font-style: italic;">—</span>
                                     <?php endif; ?>
                                     </div>
                                 </td>
-                                <td>
-                                    <div style="font-size: 0.9rem; color: #e2e8f0;">
+                                <td style="padding: 20px 24px;">
+                                    <div style="font-size: 0.9rem; color: #e2e8f0; font-weight: 500; margin-bottom: 4px;">
                                         <?php echo date('d.m.Y', strtotime($user['created_at'])); ?>
                                     </div>
-                                    <div style="font-size: 0.8rem; color: #7f8c8d;">
-                                        <?php echo date('H:i', strtotime($user['created_at'])); ?>
+                                    <div style="font-size: 0.8rem; color: #94a3b8;">
+                                        <i class="fas fa-clock" style="margin-right: 4px; opacity: 0.6;"></i><?php echo date('H:i', strtotime($user['created_at'])); ?>
                                     </div>
                                 </td>
-                                <td style="text-align: center;">
-                                    <div style="display: flex; gap: 8px; justify-content: center; align-items: center;">
+                                <td style="padding: 20px 24px; text-align: center;">
+                                    <div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
                                         <button onclick="event.stopPropagation(); editUser('<?php echo htmlspecialchars($user['username']); ?>'); return false;" title="Düzenle" 
-                                                style="background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); padding: 10px 14px; border-radius: 10px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;"
-                                                onmouseover="this.style.background='rgba(59,130,246,0.25)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(59,130,246,0.2)'"
-                                                onmouseout="this.style.background='rgba(59,130,246,0.15)'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                                style="background: linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(59,130,246,0.15) 100%); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); padding: 12px 16px; border-radius: 12px; cursor: pointer; font-size: 1rem; transition: all 0.3s; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px;"
+                                                onmouseover="this.style.background='linear-gradient(135deg, rgba(59,130,246,0.3) 0%, rgba(59,130,246,0.2) 100%)'; this.style.transform='translateY(-2px) scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(59,130,246,0.3)'"
+                                                onmouseout="this.style.background='linear-gradient(135deg, rgba(59,130,246,0.2) 0%, rgba(59,130,246,0.15) 100%)'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none'">
                                             <i class="fas fa-edit"></i>
                                         </button>
                                         <form method="POST" style="display: inline; margin: 0;" onsubmit="return confirm('⚠️ Bu kullanıcıyı silmek istediğinizden emin misiniz?\n\nBu işlem geri alınamaz!');">
                                             <input type="hidden" name="action" value="delete_user">
                                             <input type="hidden" name="username" value="<?php echo htmlspecialchars($user['username']); ?>">
                                             <button type="submit" title="Sil" 
-                                                    style="background: rgba(239,68,68,0.15); color: #fca5a5; border: 1px solid rgba(239,68,68,0.2); padding: 10px 14px; border-radius: 10px; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;"
-                                                    onmouseover="this.style.background='rgba(239,68,68,0.25)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 8px rgba(239,68,68,0.2)'"
-                                                    onmouseout="this.style.background='rgba(239,68,68,0.15)'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                                    style="background: linear-gradient(135deg, rgba(239,68,68,0.2) 0%, rgba(239,68,68,0.15) 100%); color: #fca5a5; border: 1px solid rgba(239,68,68,0.3); padding: 12px 16px; border-radius: 12px; cursor: pointer; font-size: 1rem; transition: all 0.3s; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px;"
+                                                    onmouseover="this.style.background='linear-gradient(135deg, rgba(239,68,68,0.3) 0%, rgba(239,68,68,0.2) 100%)'; this.style.transform='translateY(-2px) scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(239,68,68,0.3)'"
+                                                    onmouseout="this.style.background='linear-gradient(135deg, rgba(239,68,68,0.2) 0%, rgba(239,68,68,0.15) 100%)'; this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none'">
                                                 <i class="fas fa-trash-alt"></i>
                                             </button>
                                         </form>
@@ -744,9 +971,9 @@ $users = array_slice($filteredUsers, $offset, $itemsPerPage);
                 </div>
                     
                     <?php if ($totalPages > 1): ?>
-                        <div class="pagination" style="padding: 24px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; background: rgba(255,255,255,0.02);">
-                            <div style="color: var(--text-muted); font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
-                                <i class="fas fa-info-circle"></i>
+                        <div class="pagination" style="padding: 24px 30px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.03) 100%);">
+                            <div style="color: var(--text-muted); font-size: 0.95rem; display: flex; align-items: center; gap: 10px; font-weight: 500;">
+                                <i class="fas fa-info-circle" style="opacity: 0.7;"></i>
                                 <span><?php echo $offset + 1; ?>-<?php echo min($offset + $itemsPerPage, $totalUsers); ?> / <?php echo $totalUsers; ?> kullanıcı gösteriliyor</span>
                             </div>
                             <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
