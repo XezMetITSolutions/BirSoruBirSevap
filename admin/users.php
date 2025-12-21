@@ -21,8 +21,9 @@ $messageType = '';
 // Kullanıcı adı normalize
 function normalizeUsername($firstName, $lastName) {
     $map = ['Ü'=>'ue','ü'=>'ue','Ö'=>'oe','ö'=>'oe','Ğ'=>'g','ğ'=>'g','Ş'=>'s','ş'=>'s','Ç'=>'c','ç'=>'c','İ'=>'i','I'=>'i','ı'=>'i'];
-    $lName = strlen($lastName) >= 5 ? substr($lastName, 0, 5) : $lastName;
-    $fName = substr($firstName, 0, 3);
+    // Soyadından ilk 5 harf, addan ilk 3 harf
+    $lName = mb_substr($lastName, 0, 5);
+    $fName = mb_substr($firstName, 0, 3);
     return strtolower(str_replace(array_keys($map), array_values($map), $lName . '.' . $fName));
 }
 
