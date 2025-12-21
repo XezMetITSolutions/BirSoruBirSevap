@@ -577,12 +577,21 @@ $displayUsers = array_slice($users, $offset, $perPage);
                             </td>
                             <td>
                                 <?php 
-                                    $rClass = 'role-student';
-                                    $rName = 'Öğrenci';
-                                    if($u['role'] == 'teacher') { $rClass = 'role-teacher'; $rName = 'Eğitmen'; }
-                                    if(strpos($u['role'], 'admin') !== false || strpos($u['role'], 'leader') !== false) { 
-                                        $rClass = 'role-admin'; $rName = 'Yönetici'; 
-                                    }
+                                    // Rol badge sınıfı ve isim eşleştirmesi
+                                    $roleMap = [
+                                        'student' => ['class' => 'role-student', 'name' => 'Öğrenci'],
+                                        'teacher' => ['class' => 'role-teacher', 'name' => 'Eğitmen'],
+                                        'branch_leader' => ['class' => 'role-admin', 'name' => 'Şube Eğitim Başkanı'],
+                                        'region_leader' => ['class' => 'role-admin', 'name' => 'Bölge Eğitim Başkanı'],
+                                        'admin' => ['class' => 'role-admin', 'name' => 'Admin'],
+                                        'superadmin' => ['class' => 'role-admin', 'name' => 'Admin']
+                                    ];
+                                    
+                                    $currentRole = $u['role'] ?? 'student';
+                                    $roleInfo = $roleMap[$currentRole] ?? ['class' => 'role-student', 'name' => ucfirst($currentRole)];
+                                    
+                                    $rClass = $roleInfo['class'];
+                                    $rName = $roleInfo['name'];
                                 ?>
                                 <span class="role-badge <?php echo $rClass; ?>"><?php echo $rName; ?></span>
                             </td>
