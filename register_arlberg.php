@@ -22,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     $firstName = trim($_POST['first_name'] ?? '');
     $lastName = trim($_POST['last_name'] ?? '');
     $branch = trim($_POST['branch'] ?? '');
-    $classSection = trim($_POST['class_section'] ?? '');
     $email = trim($_POST['email'] ?? '');
     $phone = trim($_POST['phone'] ?? '');
     
@@ -62,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             $region = 'Arlberg';
             
             // Kullanıcıyı kaydet
-            if ($auth->saveUser($username, $password, 'student', $fullName, $branch, $classSection, $email, $phone, $region)) {
+            if ($auth->saveUser($username, $password, 'student', $fullName, $branch, '', $email, $phone, $region)) {
                 $registeredUser = $username;
                 $registeredPassword = $password;
                 $success = 'Kayıt başarıyla tamamlandı!';
@@ -533,15 +532,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
                             </option>
                         <?php endforeach; ?>
                     </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="class_section">
-                        Sınıf (Opsiyonel)
-                    </label>
-                    <input type="text" id="class_section" name="class_section" 
-                           placeholder="Örn: 5-A, 6-B"
-                           value="<?php echo htmlspecialchars($_POST['class_section'] ?? ''); ?>">
                 </div>
 
                 <div class="form-group">
