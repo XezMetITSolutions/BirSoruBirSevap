@@ -127,7 +127,20 @@ try {
     $totalExams = 0;
     $totalPractices = 0;
     $branchUsers = [];
-    error_log("Dashboard error: " . $e->getMessage());
+    
+    $errorMsg = $e->getMessage();
+    error_log("Dashboard error: " . $errorMsg);
+    
+    // Debug modunda hatayı göster
+    if (isset($_GET['debug'])) {
+        echo "<pre style='background: #f00; color: #fff; padding: 20px; position: fixed; top: 200px; left: 10px; z-index: 9999; border: 2px solid #fff; max-width: 500px;'>";
+        echo "❌ CATCH BLOCK ERROR:\n";
+        echo "Error message: " . htmlspecialchars($errorMsg) . "\n";
+        echo "Error line: " . $e->getLine() . "\n";
+        echo "Error file: " . basename($e->getFile()) . "\n";
+        echo "\nStack trace:\n" . $e->getTraceAsString();
+        echo "</pre>";
+    }
 }
 
 // Final debug - HTML'den hemen önce değerleri kontrol et
