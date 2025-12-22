@@ -95,7 +95,7 @@ try {
     // Şubedeki toplam sınav sayısı (exam_results tablosundan)
     $sql = "SELECT COUNT(DISTINCT er.exam_id) as total 
             FROM exam_results er 
-            INNER JOIN users u ON er.username = u.username 
+            INNER JOIN users u ON er.username COLLATE utf8mb4_unicode_ci = u.username COLLATE utf8mb4_unicode_ci
             WHERE u.branch = ?";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$userBranch]);
@@ -104,7 +104,7 @@ try {
     // Şubedeki toplam alıştırma sayısı
     $sql = "SELECT COUNT(*) as total 
             FROM practice_results pr 
-            INNER JOIN users u ON pr.username = u.username 
+            INNER JOIN users u ON pr.username COLLATE utf8mb4_unicode_ci = u.username COLLATE utf8mb4_unicode_ci
             WHERE u.branch = ?";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$userBranch]);
