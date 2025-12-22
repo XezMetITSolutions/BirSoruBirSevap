@@ -29,6 +29,10 @@ $userBranch = $user['branch'] ?? $user['institution'] ?? '';
             <i class="fas fa-chart-bar"></i>
             <span>Sonuçlar</span>
         </a>
+        <a href="student_progress.php" class="nav-item <?php echo $currentPage == 'student_progress.php' ? 'active' : ''; ?>" id="navProgress">
+            <i class="fas fa-user-chart"></i>
+            <span>Öğrenci Gelişimi</span>
+        </a>
         <a href="../index.php" class="nav-item" id="navHome">
             <i class="fas fa-external-link-alt"></i>
             <span>Siteyi Görüntüle</span>
