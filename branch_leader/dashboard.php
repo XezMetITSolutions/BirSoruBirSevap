@@ -110,10 +110,10 @@ try {
     $stmt->execute([$userBranch]);
     $totalPractices = $stmt->fetch()['total'] ?? 0;
     
-    // Şubedeki kullanıcıları al
+    // Şubedeki kullanıcıları al (sadece student ve teacher)
     $sql = "SELECT username, full_name, role, branch, class_section, email, phone, created_at 
             FROM users 
-            WHERE branch = ? 
+            WHERE branch = ? AND role IN ('student', 'teacher')
             ORDER BY role, full_name 
             LIMIT 50";
     $stmt = $conn->prepare($sql);
@@ -302,12 +302,13 @@ if (isset($_GET['debug'])) {
                                             <?php 
                                             $roleIcons = [
                                                 'student' => '<i class="fas fa-user-graduate"></i>',
-                                                'teacher' => '<i class="fas fa-chalkboard-teacher"></i>',
-                                                'branch_leader' => '<i class="fas fa-building"></i>',
-                                                'region_leader' => '<i class="fas fa-map-marked-alt"></i>',
-                                                'superadmin' => '<i class="fas fa-crown"></i>'
+                                                'teacher' => '<i class="fas fa-chalkboard-teacher"></i>'
                                             ];
-                                            echo ($roleIcons[$branchUser['role']] ?? '') . ' ' . ucfirst($branchUser['role']);
+                                            $roleNames = [
+                                                'student' => 'Öğrenci',
+                                                'teacher' => 'Eğitmen'
+                                            ];
+                                            echo ($roleIcons[$branchUser['role']] ?? '') . ' ' . ($roleNames[$branchUser['role']] ?? ucfirst($branchUser['role']));
                                             ?>
                                         </span>
                                     </td>
