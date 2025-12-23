@@ -37,6 +37,15 @@ if (!$exam) {
     exit;
 }
 
+// Eğer questions_data yoksa (eski kayıtlar için), bildiri göster
+$questions = $exam['questions_data'] ?? [];
+$isOldExam = empty($questions);
+
+// Eski sınavlar için bilgi mesajı
+$oldExamMessage = $isOldExam ? 
+    "Bu sınav eski bir kayıt olduğu için detaylı cevap anahtarı mevcut değil. Sadece yeni oluşturulan sınavlar için cevap anahtarı özelliği kullanılabilir." : 
+    "";
+
 $questions = $exam['questions_data'] ?? [];
 ?>
 <!DOCTYPE html>
@@ -317,7 +326,23 @@ $questions = $exam['questions_data'] ?? [];
             <p><strong>Toplam Soru:</strong> <?php echo count($questions); ?></p>
         </div>
 
+        <?php if ($isOldExam): ?>
+            <div style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); color: #78350f; padding: 20px; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3); border: 1px solid rgba(245, 158, 11, 0.3);">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                    <i class="fas fa-exclamation-triangle" style="font-size: 1.5rem;"></i>
+                    <h3 style="margin: 0; font-size: 1.2rem;">Eski Sınav Kaydı</h3>
+                </div>
+                <p style="margin: 0; font-size: 0.95rem; line-height: 1.5;">
+                    <?php echo htmlspecialchars($oldExamMessage); ?>
+                </p>
+                <p style="margin: 10px 0 0; font-size: 0.9rem; opacity: 0.9;">
+                    💡 <strong>İpucu:</strong> Yeni oluşturacağınız sınavlar için cevap anahtarı özelliği otomatik olarak çalışacaktır.
+                </p>
+            </div>
+        <?php endif; ?>
+
         <div class="answers-container">
+            <?php if (!$isOldExam && count($questions) > 0): ?>
             <h2 class="section-title">Hızlı Cevap Anahtarı</h2>
             <div class="answer-grid">
                 <?php foreach ($questions as $index => $question): 
@@ -402,6 +427,12 @@ $questions = $exam['questions_data'] ?? [];
                     </div>
                 <?php endforeach; ?>
             </div>
+            <?php else: ?>
+                <div style="text-align: center; padding: 40px; color: #6b7280;">
+                    <i class="fas fa-inbox" style="font-size: 3rem; margin-bottom: 20px; opacity: 0.5;"></i>
+                    <p style="font-size: 1.1rem; margin: 0;">Cevap anahtarı verisi mevcut değil</p>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </body>
