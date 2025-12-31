@@ -36,12 +36,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             $fullName = $firstName . ' ' . $lastName;
             
             // Kullanıcı adını otomatik oluştur
-            $lastNamePart = strlen($lastName) >= 5 ? substr($lastName, 0, 5) : $lastName;
-            $firstNamePart = substr($firstName, 0, 3);
+            // Önce Türkçe karakterleri dönüştür
             $mapSearch = ['Ü','ü','Ö','ö','Ğ','ğ','Ş','ş','Ç','ç','İ','I','ı'];
             $mapReplace = ['ue','ue','oe','oe','g','g','s','s','c','c','i','i','i'];
-            $lastNamePart = str_replace($mapSearch, $mapReplace, $lastNamePart);
-            $firstNamePart = str_replace($mapSearch, $mapReplace, $firstNamePart);
+            $lastNameConverted = str_replace($mapSearch, $mapReplace, $lastName);
+            $firstNameConverted = str_replace($mapSearch, $mapReplace, $firstName);
+            
+            // Sonra ilk 5 ve 3 harfi al
+            $lastNamePart = strlen($lastNameConverted) >= 5 ? substr($lastNameConverted, 0, 5) : $lastNameConverted;
+            $firstNamePart = substr($firstNameConverted, 0, 3);
             $baseUsername = strtolower($lastNamePart . '.' . $firstNamePart);
             
             // Kullanıcı adı benzersiz olana kadar sayı ekle
@@ -577,13 +580,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
                     ['Ç','c'], ['ç','c'], ['İ','i'], ['I','i'], ['ı','i']
                 ];
                 
-                let lastPart = lastName.length >= 5 ? lastName.substring(0, 5) : lastName;
-                let firstPart = firstName.substring(0, 3);
+                // Önce Türkçe karakterleri dönüştür
+                let lastNameConverted = lastName;
+                let firstNameConverted = firstName;
                 
                 mapPairs.forEach(([ch, repl]) => {
-                    lastPart = lastPart.split(ch).join(repl);
-                    firstPart = firstPart.split(ch).join(repl);
+                    lastNameConverted = lastNameConverted.split(ch).join(repl);
+                    firstNameConverted = firstNameConverted.split(ch).join(repl);
                 });
+                
+                // Sonra ilk 5 ve 3 harfi al
+                let lastPart = lastNameConverted.length >= 5 ? lastNameConverted.substring(0, 5) : lastNameConverted;
+                let firstPart = firstNameConverted.substring(0, 3);
                 
                 const username = (lastPart + '.' + firstPart).toLowerCase();
                 previewSpan.textContent = username;
