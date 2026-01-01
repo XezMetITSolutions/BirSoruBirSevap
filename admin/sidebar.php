@@ -24,6 +24,10 @@ $userName = $user ? htmlspecialchars($user['name']) : 'Admin';
             <i class="fas fa-book"></i>
             <span>Soru Yükleme</span>
         </a>
+        <a href="training_materials.php" class="nav-item <?php echo $currentPage == 'training_materials.php' ? 'active' : ''; ?>" id="navTraining">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Eğitim Materyalleri</span>
+        </a>
             <a href="student_progress.php" class="nav-item <?php echo $currentPage == 'student_progress.php' ? 'active' : ''; ?>" id="navProgress">
             <i class="fas fa-chart-line"></i>
             <span>Öğrenci Gelişimi</span>

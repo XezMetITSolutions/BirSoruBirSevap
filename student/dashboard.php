@@ -773,15 +773,29 @@ try {
                 <a href="results.php" class="action-card warning">
                     <div class="action-icon">
                         <i class="fas fa-chart-line"></i>
-            </div>
+                    </div>
                     <div class="action-title" id="actionResults">Sonuçlarım</div>
                     <div class="action-description" id="actionResultsDesc">
                         Alıştırma ve sınav sonuçlarınızı görüntüleyin
-            </div>
+                    </div>
                     <div class="action-btn" id="btnViewResults">
                         <i class="fas fa-arrow-right"></i>
                         <span id="btnViewResultsText">Sonuçları Gör</span>
-            </div>
+                    </div>
+                </a>
+
+                <a href="../training_panel.php" class="action-card info">
+                    <div class="action-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="action-title" id="actionTraining">Eğitim Paneli</div>
+                    <div class="action-description" id="actionTrainingDesc">
+                        Eğitim materyallerine ve kaynaklara erişin
+                    </div>
+                    <div class="action-btn" id="btnViewTraining">
+                        <i class="fas fa-arrow-right"></i>
+                        <span id="btnViewTrainingText">Materyalleri Gör</span>
+                    </div>
                 </a>
             </div>
 
