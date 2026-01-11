@@ -1267,6 +1267,7 @@ $teacherSection = $user['institution'] ?? $user['branch'] ?? 'Bilinmiyor';
                                 <div style="font-size:.9rem;color:#475569;">Oluşturma: <?php echo htmlspecialchars(date('d.m.Y H:i', strtotime($p['created_at'] ?? 'now'))); ?> • Soru: <?php echo (int)($p['questions'] ?? 0); ?></div>
                             </div>
                             <div style="display:flex;gap:8px;">
+                                <a href="exam_answer_key.php?file=<?php echo urlencode($p['file']); ?>" target="_blank" class="btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">🔑 Cevap Anahtarı</a>
                                 <a href="../<?php echo htmlspecialchars($p['file']); ?>" target="_blank" class="btn">🖨️ Aç / Yazdır</a>
                                 <button type="button" class="btn btn-secondary" onclick="removePrint('<?php echo htmlspecialchars($p['file']); ?>', this)">🗑️ Sil</button>
                             </div>

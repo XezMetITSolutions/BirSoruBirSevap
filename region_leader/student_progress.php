@@ -2,12 +2,31 @@
 require_once '../auth.php';
 require_once '../config.php';
 require_once '../database.php';
+require_once '../admin/includes/locations.php';
 
 $auth = Auth::getInstance();
-if (!$auth->hasRole('superadmin') && !$auth->hasRole('admin')) {
+
+// Bölge lideri kontrolü
+if (!$auth->hasRole('region_leader')) {
     header('Location: ../login.php');
     exit;
 }
+
+$user = $auth->getUser();
+$userRegion = $user['region'] ?? '';
+
+if (empty($userRegion)) {
+    die('Hata: Bölge bilgisi bulunamadı. Lütfen sistem yöneticisi ile iletişime geçin.');
+}
+
+// Şifre değiştirme kontrolü
+if ($user && ($user['must_change_password'] ?? false)) {
+    header('Location: ../change_password.php');
+    exit;
+}
+
+// Bölgeye ait şubeleri al
+$regionBranches = $regionConfig[$userRegion] ?? [];
 
 // Database bağlantısı
 $db = Database::getInstance();
@@ -21,29 +40,34 @@ $startDate = $_GET['start_date'] ?? '';
 $endDate = $_GET['end_date'] ?? '';
 $minScore = $_GET['min_score'] ?? '';
 
-// Tüm öğrencileri çek
+// Tüm öğrencileri çek (sadece bölgesindeki şubelerden)
 try {
+    $branchPlaceholders = str_repeat('?,', count($regionBranches) - 1) . '?';
     $sql = "SELECT DISTINCT u.username, u.full_name, u.class_section, u.branch 
             FROM users u 
-            WHERE u.role = 'student' 
+            WHERE u.role = 'student' AND u.branch IN ($branchPlaceholders)
             ORDER BY u.class_section, u.full_name";
-    $stmt = $conn->query($sql);
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($regionBranches);
     $allStudents = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-    // Şubeleri çek
-    $sql = "SELECT DISTINCT class_section FROM users WHERE role = 'student' AND class_section != '' ORDER BY class_section";
-    $stmt = $conn->query($sql);
+    // Şubeleri çek (sadece bölgesindeki)
+    $sql = "SELECT DISTINCT class_section FROM users WHERE role = 'student' AND class_section != '' AND branch IN ($branchPlaceholders) ORDER BY class_section";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($regionBranches);
     $allSections = $stmt->fetchAll(PDO::FETCH_COLUMN);
     
-    // Branşları çek
-    $sql = "SELECT DISTINCT branch FROM users WHERE role = 'student' AND branch != '' ORDER BY branch";
-    $stmt = $conn->query($sql);
+    // Branşları çek (sadece bölgesindeki)
+    $sql = "SELECT DISTINCT branch FROM users WHERE role = 'student' AND branch != '' AND branch IN ($branchPlaceholders) ORDER BY branch";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($regionBranches);
     $allBranches = $stmt->fetchAll(PDO::FETCH_COLUMN);
     
 } catch (Exception $e) {
     $allStudents = [];
     $allSections = [];
     $allBranches = [];
+    error_log("Student progress query error: " . $e->getMessage());
 }
 
 // Filtrelenmiş öğrenciler
@@ -142,13 +166,13 @@ if ($selectedUser) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Öğrenci Gelişimi - Admin Panel</title>
+    <title>Öğrenci Gelişimi - <?php echo htmlspecialchars($userRegion); ?> Bölgesi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <link rel="stylesheet" href="css/admin-style.css">
+    <link rel="stylesheet" href="../admin/css/admin-style.css">
 </head>
 <body>
     <div class="bg-decoration">
@@ -165,7 +189,7 @@ if ($selectedUser) {
             </div>
             <div class="welcome-text">
                 <h2>Öğrenci Gelişimi</h2>
-                <p>Öğrenci performans ve istatistikleri</p>
+                <p><?php echo htmlspecialchars($userRegion); ?> Bölgesi - Öğrenci performans ve istatistikleri</p>
             </div>
         </div>
         <?php

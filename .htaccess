@@ -1,6 +1,12 @@
 # Basit güvenlik kuralları
 Options -Indexes
 
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
 # PWA manifest istisnası (manifest.json erişimine izin ver)
 <Files "manifest.json">
     Order Allow,Deny
@@ -29,6 +35,26 @@ Options -Indexes
 </Files>
 
 <Files "auth.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "*.sql">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "*.bak">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "*.old">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files ".env*">
     Order Allow,Deny
     Deny from all
 </Files>

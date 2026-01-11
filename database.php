@@ -40,7 +40,8 @@ class Database {
                 ]
             );
         } catch (PDOException $e) {
-            die("Veritabanı bağlantı hatası: " . $e->getMessage());
+            // Die yerine exception fırlat, böylece login.php'de yakalanabilir
+            throw new Exception("Veritabanı bağlantı hatası: " . $e->getMessage());
         }
     }
     
@@ -79,8 +80,11 @@ class Database {
             if (!in_array('phone', $columnNames)) {
                 $this->connection->exec("ALTER TABLE users ADD COLUMN phone VARCHAR(20) DEFAULT '' AFTER email");
             }
+            if (!in_array('region', $columnNames)) {
+                $this->connection->exec("ALTER TABLE users ADD COLUMN region VARCHAR(100) DEFAULT '' AFTER phone");
+            }
             if (!in_array('must_change_password', $columnNames)) {
-                $this->connection->exec("ALTER TABLE users ADD COLUMN must_change_password BOOLEAN DEFAULT TRUE AFTER phone");
+                $this->connection->exec("ALTER TABLE users ADD COLUMN must_change_password BOOLEAN DEFAULT TRUE AFTER region");
             }
             if (!in_array('last_login', $columnNames)) {
                 $this->connection->exec("ALTER TABLE users ADD COLUMN last_login TIMESTAMP NULL AFTER created_at");
@@ -92,6 +96,14 @@ class Database {
                 $this->connection->exec("ALTER TABLE users ADD COLUMN updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP AFTER password_changed_at");
             }
             
+            // Role ENUM'una region_leader ve branch_leader ekle
+            try {
+                $this->connection->exec("ALTER TABLE users MODIFY COLUMN role ENUM('superadmin', 'admin', 'teacher', 'student', 'region_leader', 'branch_leader') NOT NULL");
+            } catch (PDOException $e) {
+                // Eğer zaten varsa hata vermez
+                error_log("Role enum güncelleme: " . $e->getMessage());
+            }
+            
             return true;
         } else {
             // Tablo yoksa oluştur
@@ -99,12 +111,13 @@ class Database {
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 username VARCHAR(50) UNIQUE NOT NULL,
                 password VARCHAR(255) NOT NULL,
-                role ENUM('superadmin', 'admin', 'teacher', 'student') NOT NULL,
+                role ENUM('superadmin', 'admin', 'teacher', 'student', 'region_leader', 'branch_leader') NOT NULL,
                 full_name VARCHAR(200) NOT NULL,
                 branch VARCHAR(100) DEFAULT '',
                 class_section VARCHAR(50) DEFAULT '',
                 email VARCHAR(100) DEFAULT '',
                 phone VARCHAR(20) DEFAULT '',
+                region VARCHAR(100) DEFAULT '',
                 user_type VARCHAR(20) DEFAULT '',
                 is_admin TINYINT(1) DEFAULT 0,
                 is_superadmin TINYINT(1) DEFAULT 0,
@@ -216,9 +229,9 @@ class Database {
     /**
      * Kullanıcı ekle/güncelle
      */
-    public function saveUser($username, $password, $role, $name, $institution = '', $class_section = '', $email = '', $phone = '') {
-        $sql = "INSERT INTO users (username, password, role, full_name, branch, class_section, email, phone, user_type, is_admin, is_superadmin, must_change_password, created_at) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    public function saveUser($username, $password, $role, $name, $institution = '', $class_section = '', $email = '', $phone = '', $region = '') {
+        $sql = "INSERT INTO users (username, password, role, full_name, branch, class_section, email, phone, region, user_type, is_admin, is_superadmin, must_change_password, created_at) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
                 ON DUPLICATE KEY UPDATE 
                 password = VALUES(password),
                 role = VALUES(role),
@@ -227,6 +240,7 @@ class Database {
                 class_section = VALUES(class_section),
                 email = VALUES(email),
                 phone = VALUES(phone),
+                region = VALUES(region),
                 user_type = VALUES(user_type),
                 is_admin = VALUES(is_admin),
                 is_superadmin = VALUES(is_superadmin),
@@ -245,6 +259,7 @@ class Database {
             $class_section,
             $email,
             $phone,
+            $region,
             $role,
             $isAdmin,
             $isSuperadmin,

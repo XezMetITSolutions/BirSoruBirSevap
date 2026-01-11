@@ -40,6 +40,7 @@ class Auth {
                     'username' => $username,
                     'role' => $role,
                     'name' => $user['full_name'] ?? $user['name'] ?? '',
+                    'region' => $user['region'] ?? '', // Add Region
                     'institution' => $user['branch'] ?? $user['institution'] ?? '',
                     'branch' => $user['branch'] ?? $user['institution'] ?? '',
                     'class_section' => $user['class_section'] ?? '',
@@ -131,8 +132,8 @@ class Auth {
     /**
      * Kullanıcı kaydet
      */
-    public function saveUser($username, $password, $role, $name, $institution = '', $class_section = '', $email = '', $phone = '') {
-        return $this->db->saveUser($username, $password, $role, $name, $institution, $class_section, $email, $phone);
+    public function saveUser($username, $password, $role, $name, $institution = '', $class_section = '', $email = '', $phone = '', $region = '') {
+        return $this->db->saveUser($username, $password, $role, $name, $institution, $class_section, $email, $phone, $region);
     }
     
     /**
@@ -188,6 +189,12 @@ class Auth {
                 break;
             case 'admin':
                 header('Location: admin/dashboard.php');
+                break;
+            case 'region_leader':
+                header('Location: region_leader/dashboard.php');
+                break;
+            case 'branch_leader':
+                header('Location: branch_leader/dashboard.php');
                 break;
             case 'teacher':
                 header('Location: teacher/dashboard.php');

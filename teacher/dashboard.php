@@ -558,14 +558,28 @@ try {
                 <a href="exam_results.php" class="action-card warning">
                     <div class="action-icon">
                         <i class="fas fa-chart-bar"></i>
-                </div>
+                    </div>
                     <div class="action-title" id="actionTitle3">Sınav Sonuçları</div>
                     <div class="action-description" id="actionDesc3">
                         Öğrenci sonuçlarını analiz edin ve raporları görüntüleyin
-                            </div>
+                    </div>
                     <div class="action-btn" id="btnViewResults">
                         <i class="fas fa-arrow-right"></i>
                         <span id="btnViewResultsText">Sonuçları Görüntüle</span>
+                    </div>
+                </a>
+
+                <a href="../training_panel.php" class="action-card info">
+                    <div class="action-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="action-title" id="actionTitleTraining">Eğitim Paneli</div>
+                    <div class="action-description" id="actionDescTraining">
+                        Eğitim materyallerine ve kaynaklara erişin
+                    </div>
+                    <div class="action-btn" id="btnViewTraining">
+                        <i class="fas fa-arrow-right"></i>
+                        <span id="btnViewTrainingText">Materyalleri Gör</span>
                     </div>
                 </a>
             </div>

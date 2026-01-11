@@ -6,6 +6,15 @@
 
 require_once 'config.php';
 require_once 'database.php';
+require_once 'auth.php';
+
+// Güvenlik kontrolü
+if (php_sapi_name() !== 'cli') {
+    $auth = Auth::getInstance();
+    if (!$auth->isLoggedIn() || !$auth->hasRole('superadmin')) {
+        die('Erişim engellendi: Sadece Super Admin bu sayfaya erişebilir.');
+    }
+}
 
 // Hata raporlamayı aç
 ini_set('display_errors', 1);

@@ -4,6 +4,24 @@
  */
 
 require_once 'database.php';
+require_once 'auth.php';
+
+// Güvenlik kontrolü: Sadece superadmin veya CLI erişimi
+if (php_sapi_name() !== 'cli') {
+    $auth = Auth::getInstance();
+    if (!$auth->isLoggedIn() || !$auth->hasRole('superadmin')) {
+        // Eğer hiç kullanıcı yoksa izin ver (ilk kurulum)
+        try {
+            $db = Database::getInstance();
+            $users = $db->getAllUsers();
+            if (!empty($users)) {
+                die('Erişim engellendi: Sadece Super Admin bu sayfaya erişebilir.');
+            }
+        } catch (Exception $e) {
+            // Veritabanı hatası varsa (yani veritabanı yoksa) devam et
+        }
+    }
+}
 
 $message = '';
 $messageType = '';
@@ -220,8 +238,8 @@ try {
         <div class="info-box">
             <h3>📋 Veritabanı Bilgileri</h3>
             <p><strong>Host:</strong> localhost</p>
-            <p><strong>Veritabanı:</strong> d0449c07</p>
-            <p><strong>Kullanıcı:</strong> d0449c07</p>
+            <p><strong>Veritabanı:</strong> d0459a94</p>
+            <p><strong>Kullanıcı:</strong> d0459a94</p>
             <p><strong>Şifre:</strong> 1528797Mb</p>
         </div>
 

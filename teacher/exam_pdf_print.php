@@ -243,7 +243,8 @@ $metaAll[] = [
     'teacher' => $user['name'] ?? '',
     'created_at' => date('c'),
     'file' => 'teacher/prints/' . $fileName,
-    'questions' => count($selectedQuestions)
+    'questions' => count($selectedQuestions),
+    'questions_data' => $selectedQuestions  // Cevap anahtarı için soruları kaydet
 ];
 @file_put_contents($metaPath, json_encode($metaAll, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 
