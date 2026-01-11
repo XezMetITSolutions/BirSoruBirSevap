@@ -202,6 +202,16 @@ class Database {
         $stmt->execute([$username]);
         return $stmt->fetch();
     }
+
+    /**
+     * Kullanıcı adı veya e-posta ile kullanıcı getir
+     */
+    public function getUserByUsernameOrEmail($identifier) {
+        $sql = "SELECT * FROM users WHERE username = ? OR email = ?";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute([$identifier, $identifier]);
+        return $stmt->fetch();
+    }
     
     /**
      * Kullanıcı ekle/güncelle

@@ -148,6 +148,13 @@ class Auth {
     public function getAllUsers() {
         return $this->getUsers();
     }
+
+    /**
+     * Kullanıcı adı veya e-posta ile kullanıcı ara
+     */
+    public function getUserByUsernameOrEmail($identifier) {
+        return $this->db->getUserByUsernameOrEmail($identifier);
+    }
     
     /**
      * Şifre değiştir

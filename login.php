@@ -21,14 +21,17 @@ if ($_POST) {
     $remember = isset($_POST['remember']) && $_POST['remember'] === 'on';
     // Veritabanından kullanıcıyı kontrol et
     try {
-        $users = $auth->getAllUsers();
+        // Kullanıcıyı bul
+        $user = $auth->getUserByUsernameOrEmail($username);
         $userRole = null;
+        $realUsername = null;
         
-        if (isset($users[$username]) && isset($users[$username]['role'])) {
-            $userRole = $users[$username]['role'];
+        if ($user) {
+            $userRole = $user['role'];
+            $realUsername = $user['username'];
         }
         
-        if ($userRole && $auth->login($username, $password, $userRole)) {
+        if ($realUsername && $auth->login($realUsername, $password, $userRole)) {
             // Session'ı yenile (timeout'u sıfırla)
             $_SESSION['last_activity'] = time();
             $_SESSION['refresh_time'] = time();
@@ -226,9 +229,9 @@ if ($_POST) {
 
         <form method="POST">
             <div class="form-group">
-                <label for="username" id="labelUser">Kullanıcı Adı:</label>
+                <label for="username" id="labelUser">Kullanıcı Adı veya E-posta:</label>
                 <input type="text" id="username" name="username" required 
-                       placeholder="Kullanıcı adınızı girin" id="phUser" value="<?php echo htmlspecialchars($rememberedUsername); ?>">
+                       placeholder="Kullanıcı adı veya e-posta girin" id="phUser" value="<?php echo htmlspecialchars($rememberedUsername); ?>">
             </div>
 
             <div class="form-group">
@@ -278,8 +281,8 @@ if ($_POST) {
         })();
         // Dil uygulaması (localStorage.lang)
         (function(){
-            const tr = { sub:'Modern Eğitim Platformu', user:'Kullanıcı Adı:', pass:'Şifre:', phUser:'Kullanıcı adınızı girin', phPass:'Şifrenizi girin', login:'Giriş Yap', info:'💡 Bilgi', createLabel:'Hesap Oluşturma:', createText:'Yeni hesap oluşturmak için eğitmeninizle iletişime geçin.' };
-            const de = { sub:'Moderne Lernplattform', user:'Benutzername:', pass:'Passwort:', phUser:'Benutzernamen eingeben', phPass:'Passwort eingeben', login:'Anmelden', info:'💡 Hinweis', createLabel:'Kontoerstellung:', createText:'Für ein neues Konto wenden Sie sich an Ihre Lehrkraft.' };
+            const tr = { sub:'Modern Eğitim Platformu', user:'Kullanıcı Adı veya E-posta:', pass:'Şifre:', phUser:'Kullanıcı adı veya e-posta girin', phPass:'Şifrenizi girin', login:'Giriş Yap', info:'💡 Bilgi', createLabel:'Hesap Oluşturma:', createText:'Yeni hesap oluşturmak için eğitmeninizle iletişime geçin.' };
+            const de = { sub:'Moderne Lernplattform', user:'Benutzername oder E-Mail:', pass:'Passwort:', phUser:'Benutzernamen oder E-Mail eingeben', phPass:'Passwort eingeben', login:'Anmelden', info:'💡 Hinweis', createLabel:'Kontoerstellung:', createText:'Für ein neues Konto wenden Sie sich an Ihre Lehrkraft.' };
             const trRemember = 'Beni hatırla';
             const deRemember = 'Angemeldet bleiben';
             function setText(sel, text){ const el=document.querySelector(sel); if(!el) return; if(el.tagName==='INPUT'){ el.setAttribute('placeholder', text); } else { el.textContent = text; } }
