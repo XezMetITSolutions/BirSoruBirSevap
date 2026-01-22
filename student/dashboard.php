@@ -39,6 +39,13 @@ require_once '../database.php';
 $db = Database::getInstance();
 $conn = $db->getConnection();
 
+// Veritabanı tablolarını güncelle (migration)
+try {
+    $db->updatePracticeResultsTable();
+} catch (Exception $e) {
+    error_log("Migration hatası: " . $e->getMessage());
+}
+
 // İstatistikler - gerçek veriler
 $totalQuestions = count($questions);
 

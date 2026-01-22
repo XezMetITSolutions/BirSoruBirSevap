@@ -163,7 +163,7 @@ if ($selectedUser) {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <link rel="stylesheet" href="../admin/css/admin-style.css">
+    <link rel="stylesheet" href="../admin/css/dark-theme.css">
 </head>
 <body>
     <div class="bg-decoration">
@@ -801,6 +801,7 @@ if ($selectedUser) {
     </script>
 </body>
 </html>
+
 
 
 

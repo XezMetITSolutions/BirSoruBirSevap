@@ -139,6 +139,43 @@ class Database {
     }
     
     /**
+     * Alıştırma sonuçları tablosunu güncelle
+     */
+    public function updatePracticeResultsTable() {
+        // Önce tabloyu kontrol et
+        $checkSql = "SHOW TABLES LIKE 'practice_results'";
+        $result = $this->connection->query($checkSql);
+        
+        if ($result->rowCount() > 0) {
+            // Tablo varsa, sütunları kontrol et
+            $columnsSql = "SHOW COLUMNS FROM practice_results";
+            $columns = $this->connection->query($columnsSql)->fetchAll();
+            $columnNames = array_column($columns, 'Field');
+            
+            // Eksik sütunları ekle
+            if (!in_array('bank', $columnNames)) {
+                $this->connection->exec("ALTER TABLE practice_results ADD COLUMN bank VARCHAR(100) DEFAULT 'Genel' AFTER time_taken");
+            }
+            if (!in_array('category', $columnNames)) {
+                $this->connection->exec("ALTER TABLE practice_results ADD COLUMN category VARCHAR(100) DEFAULT 'Genel' AFTER bank");
+            }
+            if (!in_array('difficulty', $columnNames)) {
+                $this->connection->exec("ALTER TABLE practice_results ADD COLUMN difficulty VARCHAR(50) DEFAULT 'Belirtilmemiş' AFTER category");
+            }
+            if (!in_array('answers', $columnNames)) {
+                $this->connection->exec("ALTER TABLE practice_results ADD COLUMN answers LONGTEXT AFTER difficulty");
+            }
+            if (!in_array('detailed_results', $columnNames)) {
+                $this->connection->exec("ALTER TABLE practice_results ADD COLUMN detailed_results LONGTEXT AFTER answers");
+            }
+            
+            return true;
+        }
+        
+        return false;
+    }
+    
+    /**
      * JSON verilerini veritabanına aktar
      */
     public function migrateFromJSON() {
