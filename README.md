@@ -35,17 +35,19 @@ Modern, kullanıcı dostu bir soru-cevap platformu. Öğrenciler için alıştı
 
 ```
 /
-├── config.php              # Yapılandırma dosyası
-├── QuestionLoader.php      # Soru yükleme sınıfı
-├── ExamManager.php         # Sınav yönetim sınıfı
-├── index.php              # Ana sayfa
-├── practice.php           # Alıştırma sayfası
-├── practice_results.php   # Alıştırma sonuçları
-├── exam.php              # Sınav başlangıç sayfası
-├── exam_take.php         # Sınav çözme sayfası
-├── exam_results.php      # Sınav sonuçları
-├── README.md             # Bu dosya
-└── Sorular/              # Soru dosyaları klasörü
+├── config.php                      # Yapılandırma dosyası
+├── QuestionLoader.php              # Soru yükleme sınıfı
+├── ExamManager.php                 # Sınav yönetim sınıfı
+├── index.php                       # Ana sayfa
+├── practice.php                    # Alıştırma sayfası
+├── practice_results.php            # Alıştırma sonuçları
+├── exam.php                        # Sınav başlangıç sayfası
+├── exam_take.php                   # Sınav çözme sayfası
+├── exam_results.php                # Sınav sonuçları
+├── register_arlberg.php            # Arlberg öğrenci kayıt
+├── register_arlberg_instructor.php # Arlberg eğitmen kayıt
+├── README.md                       # Bu dosya
+└── Sorular/                        # Soru dosyaları klasörü
     ├── Temel Bilgiler 1/
     │   ├── ahlak_json.json
     │   ├── itikat_1_30_json.json
@@ -117,6 +119,23 @@ Soru dosyaları JSON formatında olmalıdır:
 4. Bank/kategori bazında soru sayılarını belirleyin
 5. "Sınav Oluştur" butonuna tıklayın
 6. Oluşturulan linki öğrencilerle paylaşın
+
+### Arlberg Bölgesi Kayıt Sistemi:
+
+#### Öğrenci Kaydı:
+- **Link**: `register_arlberg.php`
+- Öğrenciler ad, soyad ve şube bilgileri ile kayıt olabilir
+- Kullanıcı adı otomatik oluşturulur (format: `soyad.ad`)
+- Standart şifre: `iqra2025#`
+
+#### Eğitmen Kaydı:
+- **Link**: `register_arlberg_instructor.php`
+- Eğitmenler ad, soyad, şube ve e-posta ile kayıt olabilir
+- Kullanıcı adı otomatik oluşturulur (format: `egitmen.soyad.ad`)
+- Standart şifre: `iqra2025#`
+- E-posta adresi zorunludur
+- Kayıt sonrası "teacher" rolü ile sisteme giriş yapabilir
+
 
 ## 🔒 Güvenlik
 
