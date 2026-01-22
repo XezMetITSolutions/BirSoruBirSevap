@@ -261,7 +261,7 @@
             <p>
                 <strong>Kullanıcı Adı Formatı:</strong><br>
                 • Öğrenciler: <code>soyad.ad</code> (örn: yilmaz.ahm)<br>
-                • Eğitmenler: <code>egitmen.soyad.ad</code> (örn: egitmen.yilmaz.ahm)
+                • Eğitmenler: <code>soyad.ad</code> (örn: yilmaz.ahm) - Aynı format, farklı rol
             </p>
             <div class="highlight">
                 <i class="fas fa-key"></i> Standart Şifre: <strong>iqra2025#</strong>

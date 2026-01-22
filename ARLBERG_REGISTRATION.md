@@ -57,8 +57,8 @@ iqra2025#
 
 ### Kullanıcı Adı Formatı
 ```
-Format: egitmen.soyad.ad
-Örnek: egitmen.yilmaz.ahm (Ahmet Yılmaz için)
+Format: soyad.ad (öğrencilerle aynı)
+Örnek: yilmaz.ahm (Ahmet Yılmaz için)
 ```
 
 ### Standart Şifre
@@ -68,7 +68,7 @@ iqra2025#
 
 ### Kayıt Süreci
 1. Eğitmen formu doldurur (Ad, Soyad, Şube, E-posta)
-2. Sistem otomatik kullanıcı adı oluşturur (egitmen. ön eki ile)
+2. Sistem otomatik kullanıcı adı oluşturur (öğrencilerle aynı formatta)
 3. E-posta validasyonu yapılır
 4. Kullanıcı "teacher" rolü ile kaydedilir
 5. Giriş bilgileri ekranda gösterilir
@@ -128,6 +128,7 @@ Sistem Türkçe karakterleri otomatik olarak dönüştürür:
 - "Eğitmen Kaydı - Arlberg" rozeti
 - E-posta zorunlu alanı
 - Uyarı mesajı (sadece eğitmenler için)
+- Kullanıcı adı formatı öğrencilerle aynı (soyad.ad)
 
 ## 📊 Veritabanı Yapısı
 
@@ -166,7 +167,7 @@ Soyad: Şahin
 Şube: IQRA Dornbirn
 E-posta: ayse.sahin@example.com
 
-Oluşturulan Kullanıcı Adı: egitmen.sahin.ays
+Oluşturulan Kullanıcı Adı: sahin.ays
 Şifre: iqra2025#
 Rol: teacher
 ```

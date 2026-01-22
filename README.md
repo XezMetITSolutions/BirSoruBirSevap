@@ -131,7 +131,7 @@ Soru dosyaları JSON formatında olmalıdır:
 #### Eğitmen Kaydı:
 - **Link**: `register_arlberg_instructor.php`
 - Eğitmenler ad, soyad, şube ve e-posta ile kayıt olabilir
-- Kullanıcı adı otomatik oluşturulur (format: `egitmen.soyad.ad`)
+- Kullanıcı adı otomatik oluşturulur (format: `soyad.ad` - öğrencilerle aynı)
 - Standart şifre: `iqra2025#`
 - E-posta adresi zorunludur
 - Kayıt sonrası "teacher" rolü ile sisteme giriş yapabilir

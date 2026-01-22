@@ -46,10 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             $lastNameConverted = str_replace($mapSearch, $mapReplace, $lastName);
             $firstNameConverted = str_replace($mapSearch, $mapReplace, $firstName);
             
-            // Eğitmenler için format: egitmen.soyad.ad (ilk 3 harf)
+            // Eğitmenler için format: soyad.ad (öğrencilerle aynı)
             $lastNamePart = strlen($lastNameConverted) >= 5 ? substr($lastNameConverted, 0, 5) : $lastNameConverted;
             $firstNamePart = substr($firstNameConverted, 0, 3);
-            $baseUsername = 'egitmen.' . strtolower($lastNamePart . '.' . $firstNamePart);
+            $baseUsername = strtolower($lastNamePart . '.' . $firstNamePart);
             
             // Kullanıcı adı benzersiz olana kadar sayı ekle
             $username = $baseUsername;
@@ -521,7 +521,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
                 <i class="fas fa-exclamation-triangle"></i>
                 <div>
                     <strong>Dikkat:</strong> Bu form sadece Arlberg bölgesi eğitmenleri içindir. 
-                    Kullanıcı adınız otomatik olarak "egitmen." ön eki ile oluşturulacaktır.
+                    Kullanıcı adınız öğrencilerle aynı formatta (soyad.ad) oluşturulacaktır.
                 </div>
             </div>
 
@@ -623,11 +623,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
                     firstNameConverted = firstNameConverted.split(ch).join(repl);
                 });
                 
-                // Eğitmen formatı: egitmen.soyad.ad
+                // Eğitmen formatı: soyad.ad (öğrencilerle aynı)
                 let lastPart = lastNameConverted.length >= 5 ? lastNameConverted.substring(0, 5) : lastNameConverted;
                 let firstPart = firstNameConverted.substring(0, 3);
                 
-                const username = 'egitmen.' + (lastPart + '.' + firstPart).toLowerCase();
+                const username = (lastPart + '.' + firstPart).toLowerCase();
                 previewSpan.textContent = username;
                 previewDiv.style.display = 'flex';
             } else {
