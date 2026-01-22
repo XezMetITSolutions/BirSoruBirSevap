@@ -103,47 +103,56 @@ $practiceResult = [
     'detailed_results' => $detailedResults
 ];
 
-// Sonuçları dosyaya kaydet
-$resultsFile = '../data/practice_results.json';
-$allResults = [];
-if (file_exists($resultsFile)) {
-    $allResults = json_decode(file_get_contents($resultsFile), true) ?? [];
+// Sadece yeni POST geldiğinde kaydet (çift kayıt önleme)
+$shouldSave = false;
+if ($input && !isset($_SESSION['practice_saved'])) {
+    $shouldSave = true;
+    $_SESSION['practice_saved'] = true;
 }
 
-$allResults[] = $practiceResult;
-file_put_contents($resultsFile, json_encode($allResults, JSON_PRETTY_PRINT));
+if ($shouldSave) {
+    // Sonuçları dosyaya kaydet
+    $resultsFile = '../data/practice_results.json';
+    $allResults = [];
+    if (file_exists($resultsFile)) {
+        $allResults = json_decode(file_get_contents($resultsFile), true) ?? [];
+    }
 
-// Veritabanına kaydet
-require_once '../database.php';
-try {
-    $db = Database::getInstance();
-    $conn = $db->getConnection();
-    
-    $sql = "INSERT INTO practice_results (username, student_name, total_questions, correct_answers, wrong_answers, score, percentage, time_taken, created_at, bank, category, difficulty, answers, detailed_results) 
-            VALUES (:username, :student_name, :total, :correct, :wrong, :score, :percentage, :duration, :created_at, :bank, :category, :difficulty, :answers, :detailed_results)";
-            
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([
-        ':username' => $practiceResult['student_id'],
-        ':student_name' => $practiceResult['student_name'],
-        ':total' => $practiceResult['total'],
-        ':correct' => $practiceResult['correct'],
-        ':wrong' => $practiceResult['wrong'],
-        ':score' => $practiceResult['score'],
-        ':percentage' => $practiceResult['score'], // Score ve percentage aynı
-        ':duration' => $practiceResult['duration'],
-        ':created_at' => $practiceResult['completed_at'],
-        ':bank' => $practiceResult['bank'],
-        ':category' => $practiceResult['category'],
-        ':difficulty' => $practiceResult['difficulty'],
-        ':answers' => json_encode($practiceResult['answers'], JSON_UNESCAPED_UNICODE),
-        ':detailed_results' => json_encode($practiceResult['detailed_results'], JSON_UNESCAPED_UNICODE)
-    ]);
-} catch (Exception $e) {
-    error_log("Veritabanı kayıt hatası: " . $e->getMessage());
+    $allResults[] = $practiceResult;
+    file_put_contents($resultsFile, json_encode($allResults, JSON_PRETTY_PRINT));
+
+    // Veritabanına kaydet
+    require_once '../database.php';
+    try {
+        $db = Database::getInstance();
+        $conn = $db->getConnection();
+        
+        $sql = "INSERT INTO practice_results (username, student_name, total_questions, correct_answers, wrong_answers, score, percentage, time_taken, created_at, bank, category, difficulty, answers, detailed_results) 
+                VALUES (:username, :student_name, :total, :correct, :wrong, :score, :percentage, :duration, :created_at, :bank, :category, :difficulty, :answers, :detailed_results)";
+                
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([
+            ':username' => $practiceResult['student_id'],
+            ':student_name' => $practiceResult['student_name'],
+            ':total' => $practiceResult['total'],
+            ':correct' => $practiceResult['correct'],
+            ':wrong' => $practiceResult['wrong'],
+            ':score' => $practiceResult['score'],
+            ':percentage' => $practiceResult['score'], // Score ve percentage aynı
+            ':duration' => $practiceResult['duration'],
+            ':created_at' => $practiceResult['completed_at'],
+            ':bank' => $practiceResult['bank'],
+            ':category' => $practiceResult['category'],
+            ':difficulty' => $practiceResult['difficulty'],
+            ':answers' => json_encode($practiceResult['answers'], JSON_UNESCAPED_UNICODE),
+            ':detailed_results' => json_encode($practiceResult['detailed_results'], JSON_UNESCAPED_UNICODE)
+        ]);
+    } catch (Exception $e) {
+        error_log("Veritabanı kayıt hatası: " . $e->getMessage());
+    }
 }
 
-// Rozet değerlendirme ve kazanım
+// Rozet değerlendirme ve kazanım (her zaman çalışsın)
 $badges = new Badges();
 $awardedBadges = $badges->evaluateAndAward($practiceResult['student_id']);
 
