@@ -156,7 +156,7 @@ $displayUsers = array_slice($users, $offset, $perPage);
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/admin-style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -830,3 +830,4 @@ $displayUsers = array_slice($users, $offset, $perPage);
     </script>
 </body>
 </html>
+

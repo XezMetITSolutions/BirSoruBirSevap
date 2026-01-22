@@ -171,7 +171,7 @@ $availableRoles = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eğitim Materyalleri Yönetimi</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/admin-style.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
     <style>
         .form-group { margin-bottom: 1rem; }
         .form-label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
@@ -354,3 +354,4 @@ $availableRoles = [
     </div>
 </body>
 </html>
+

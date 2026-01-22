@@ -298,3 +298,4 @@ foreach ($examResults as $examCode => $results) {
     </div>
 </body>
 </html>
+

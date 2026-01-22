@@ -59,3 +59,4 @@ $userName = $user ? htmlspecialchars($user['name']) : 'Admin';
         </a>
     </div>
 </aside>
+
