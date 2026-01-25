@@ -1097,8 +1097,8 @@ $totalCategories = array_sum(array_map('count', $categories));
     <section class="hero">
         <div class="hero-container">
         <div class="hero-content">
-                <h1 id="heroTitle">Temel Bilgilerle Öğren, Güvenle İlerle</h1>
-                <p id="heroSubtitle">3 seviyeli kapsamlı soru bankası: Temel Bilgiler 1, 2 ve 3. İtikad, İbadet, Siyer, Ahlak, Tefsir, Hadis ve daha fazlası. Eğitim uzmanları tarafından hazırlanmış kaliteli sorular.</p>
+                <h1 id="heroTitle">Temel Bilgiler & İslami İlimler ile Güvenle İlerle</h1>
+                <p id="heroSubtitle">Kapsamlı soru bankaları: Temel Bilgiler (3 seviye) ve İslami İlimler (3 seviye). İtikad, İbadet, Siyer, Ahlak, Tefsir, Hadis, Fıkıh, Akaid ve daha fazlası. Eğitim uzmanları tarafından hazırlanmış kaliteli sorular.</p>
                 <div class="hero-actions">
                     <a href="login.php" class="btn btn-primary" id="heroCtaBtn">
                         <i class="fas fa-rocket"></i>
@@ -1110,18 +1110,18 @@ $totalCategories = array_sum(array_map('count', $categories));
                 <div class="floating-cards">
                 <div class="floating-card">
                     <div class="card-icon">📚</div>
-                    <div class="card-title" id="floatTitle1">Temel Bilgiler 1</div>
-                    <div class="card-text" id="floatText1">İtikad, İbadet, Siyer, Ahlak</div>
+                    <div class="card-title" id="floatTitle1">Temel Bilgiler</div>
+                    <div class="card-text" id="floatText1">3 Seviye: İtikad, İbadet, Siyer, Ahlak</div>
                 </div>
                 <div class="floating-card">
-                    <div class="card-icon">📖</div>
-                    <div class="card-title" id="floatTitle2">Temel Bilgiler 2</div>
-                    <div class="card-text" id="floatText2">IGMG müfredatına uygun</div>
+                    <div class="card-icon">🕌</div>
+                    <div class="card-title" id="floatTitle2">İslami İlimler</div>
+                    <div class="card-text" id="floatText2">3 Seviye: Fıkıh, Akaid, Tefsir, Hadis</div>
                 </div>
                 <div class="floating-card">
-                    <div class="card-icon">📘</div>
-                    <div class="card-title" id="floatTitle3">Temel Bilgiler 3</div>
-                    <div class="card-text" id="floatText3">Tefsir, Hadis, Tasavvuf</div>
+                    <div class="card-icon">🎓</div>
+                    <div class="card-title" id="floatTitle3">IGMG Müfredatı</div>
+                    <div class="card-text" id="floatText3">Eğitim Başkanlığı Onaylı</div>
                     </div>
                 </div>
             </div>
@@ -1181,12 +1181,12 @@ $totalCategories = array_sum(array_map('count', $categories));
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features Section - Temel Bilgiler -->
     <section class="features" id="features">
         <div class="features-container">
             <div class="section-header fade-in">
-                <h2 class="section-title" id="featuresTitle">Temel Bilgiler Müfredatı ile Güçlendirilmiş</h2>
-                <p class="section-subtitle" id="featuresSubtitle">3 seviyeli kapsamlı soru bankası ve modern eğitim özellikleri</p>
+                <h2 class="section-title" id="featuresTitle">Temel Bilgiler Müfredatı</h2>
+                <p class="section-subtitle" id="featuresSubtitle">3 seviyeli kapsamlı soru bankası - Başlangıçtan ileri seviyeye</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card fade-in">
@@ -1204,6 +1204,45 @@ $totalCategories = array_sum(array_map('count', $categories));
                     <div class="feature-title" id="featTitle3">Temel Bilgiler 3</div>
                     <div class="feature-text" id="featText3">İleri seviye konular: Tefsir, Hadis, Tasavvuf, Hitabet, İnsan Hakları ve İslam Tarihi. Uzmanlaşma için ideal içerik.</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section - İslami İlimler -->
+    <section class="features" id="islami-ilimler" style="background: var(--white);">
+        <div class="features-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title" id="islamiTitle">İslami İlimler Müfredatı</h2>
+                <p class="section-subtitle" id="islamiSubtitle">3 seviyeli derinlemesine İslami eğitim programı</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🕌</div>
+                    <div class="feature-title" id="islamiTitle1">İslami İlimler 1</div>
+                    <div class="feature-text" id="islamiText1">Fıkıh, Akaid, Siyer ve Ahlak derslerinden kapsamlı sorular. İslami ilimlere giriş için ideal başlangıç.</div>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📿</div>
+                    <div class="feature-title" id="islamiTitle2">İslami İlimler 2</div>
+                    <div class="feature-text" id="islamiText2">Tefsir, Hadis, Fıkıh Usulü ve Kelam konularında gelişmiş sorular. Orta seviye öğrenciler için derinlemesine içerik.</div>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📜</div>
+                    <div class="feature-title" id="islamiTitle3">İslami İlimler 3</div>
+                    <div class="feature-text" id="islamiText3">İslam Felsefesi, Tasavvuf, Mezhepler Tarihi ve İslam Hukuku. İleri seviye akademik içerik.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Özellikleri -->
+    <section class="features" id="platform-features" style="background: var(--secondary);">
+        <div class="features-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title" id="platformTitle">Platform Özellikleri</h2>
+                <p class="section-subtitle" id="platformSubtitle">Modern eğitim araçları ve güçlü özellikler</p>
+            </div>
+            <div class="features-grid">
                 <div class="feature-card fade-in">
                     <div class="feature-icon">🎯</div>
                     <div class="feature-title" id="featTitle4">Kaliteli Soru Bankası</div>
@@ -1226,8 +1265,8 @@ $totalCategories = array_sum(array_map('count', $categories));
     <!-- CTA Section -->
     <section class="cta">
         <div class="cta-container">
-            <h2 class="fade-in" id="ctaTitle">Temel Bilgiler Müfredatı ile Eğitimi Dönüştürün</h2>
-            <p class="fade-in" id="ctaSubtitle">3 seviyeli kapsamlı soru bankası, kaliteli içerik ve modern eğitim araçları. Öğrenciler ve eğitmenler için mükemmel çözüm!</p>
+            <h2 class="fade-in" id="ctaTitle">Temel Bilgiler & İslami İlimler ile Eğitimi Dönüştürün</h2>
+            <p class="fade-in" id="ctaSubtitle">6 seviyeli kapsamlı müfredat, kaliteli içerik ve modern eğitim araçları. Öğrenciler ve eğitmenler için mükemmel çözüm!</p>
             <a href="login.php" class="btn btn-primary fade-in" id="ctaBtn">
                 <i class="fas fa-star"></i>
                 Hemen Başla
@@ -1277,56 +1316,66 @@ $totalCategories = array_sum(array_map('count', $categories));
         (function(){
             const tr = {
                 heroStartBtn: 'Başla',
-                heroTitle: 'Temel Bilgilerle Öğren, Güvenle İlerle',
-                heroSubtitle: '3 seviyeli kapsamlı soru bankası: Temel Bilgiler 1, 2 ve 3. İtikat, İbadet, Siyer, Ahlak, Tefsir, Hadis ve daha fazlası. Eğitim Başkanlığı tarafından hazırlanmış kaliteli sorular.',
+                heroTitle: 'Temel Bilgiler & İslami İlimler ile Güvenle İlerle',
+                heroSubtitle: 'Kapsamlı soru bankaları: Temel Bilgiler (3 seviye) ve İslami İlimler (3 seviye). İtikad, İbadet, Siyer, Ahlak, Tefsir, Hadis, Fıkıh, Akaid ve daha fazlası. Eğitim uzmanları tarafından hazırlanmış kaliteli sorular.',
                 badgesTitle: 'Rozetler Sistemi',
                 badgesSubtitle: 'Başarılarınızı rozetlerle taçlandırın. Şartları tamamlayın, seviyeleri yükseltin.',
-                featuresTitle: 'Temel Bilgiler Müfredatıyla Desteklenen Akıllı Öğrenme',
-                featuresSubtitle: '3 seviyeli kapsamlı soru bankası ve modern eğitim özellikleri',
+                featuresTitle: 'Temel Bilgiler Müfredatı',
+                featuresSubtitle: '3 seviyeli kapsamlı soru bankası - Başlangıçtan ileri seviyeye',
                 heroCtaBtn: 'Hemen Başla',
-                ctaTitle: 'Temel Bilgiler Müfredatı ile Eğitimi Dönüştürün',
-                ctaSubtitle: '3 seviyeli kapsamlı soru bankası, kaliteli içerik ve modern eğitim araçları. Öğrenciler ve eğitmenler için mükemmel çözüm!',
+                ctaTitle: 'Temel Bilgiler & İslami İlimler ile Eğitimi Dönüştürün',
+                ctaSubtitle: '6 seviyeli kapsamlı müfredat, kaliteli içerik ve modern eğitim araçları. Öğrenciler ve eğitmenler için mükemmel çözüm!',
                 ctaBtn: 'Hemen Başla',
                 navFeatures:'Özellikler', navStats:'İstatistikler', navAbout:'Hakkımızda', navContact:'İletişim',
                 stat1:'Kaliteli Soru', stat2:'Seviye', stat3:'Ders Konusu', stat4:'Müfredat Uyumlu',
                 footFeaturesTitle:'Özellikler', footF1:'Soru Bankası', footF2:'Sınav Oluşturma', footF3:'Analitik Raporlar', footF4:'Mobil Uyumluluk',
                 footSupportTitle:'Destek', footS1:'Yardım Merkezi', footS2:'İletişim', footS3:'SSS', footS4:'Teknik Destek',
-                floatTitle1:'Temel Bilgiler 1', floatText1:'İtikat, İbadet, Siyer, Ahlak, Musiki, Teşkilat',
-                floatTitle2:'Temel Bilgiler 2', floatText2:'İtikat, İbadet, Siyer, Ahlak, Musiki, Teşkilat',
-                floatTitle3:'Temel Bilgiler 3', floatText3:'Tefsir, Hadis, Tasavvuf, Hitabet, İnsan Hakları, İslam Tarihi',
+                floatTitle1:'Temel Bilgiler', floatText1:'3 Seviye: İtikat, İbadet, Siyer, Ahlak',
+                floatTitle2:'İslami İlimler', floatText2:'3 Seviye: Fıkıh, Akaid, Tefsir, Hadis',
+                floatTitle3:'IGMG Müfredatı', floatText3:'Eğitim Başkanlığı Onaylı',
                 featTitle1:'Temel Bilgiler 1', featText1:'İtikat, İbadet, Siyer, Ahlak, Musiki ve Teşkilat derslerinden 500+ kaliteli soru. Temel seviye öğrenciler için mükemmel başlangıç.',
-                featTitle2:'Temel Bilgiler 2', featText2:'İtikat, İbadet, Siyer, Ahlak, Musiki ve Teşkilat konularında sorular. Derinlemesine öğrenme.',
-                featTitle3:'Temel Bilgiler 3', featText3:'Tefsir, Hadis, Tasavvuf, Hitabet, İnsan Hakları ve İslam Tarihi gibi ileri seviye konular. Uzmanlaşma için ideal içerik.',
+                featTitle2:'Temel Bilgiler 2', featText2:'IGMG müfredatına uygun gelişmiş sorular. İtikat, İbadet, Siyer, Ahlak, Musiki ve Teşkilat konularında derinlemesine öğrenme.',
+                featTitle3:'Temel Bilgiler 3', featText3:'İleri seviye konular: Tefsir, Hadis, Tasavvuf, Hitabet, İnsan Hakları ve İslam Tarihi. Uzmanlaşma için ideal içerik.',
                 featTitle4:'Kaliteli Soru Bankası', featText4:'Eğitim Başkanlığı tarafından hazırlanmış, müfredata uygun, çoktan seçmeli sorular. Her seviyeye uygun zorluk dereceleri.',
                 featTitle5:'Detaylı Analitik', featText5:'Öğrenci performansını takip edin. Hangi konularda güçlü, hangilerinde gelişim gerekiyor? Detaylı raporlarla öğrenin.',
                 featTitle6:'Hızlı ve Kolay', featText6:'Anında sınav oluşturun, otomatik değerlendirme yapın. Eğitmenler için zaman tasarrufu, öğrenciler için etkili öğrenme.',
+                islamiTitle:'İslami İlimler Müfredatı', islamiSubtitle:'3 seviyeli derinlemesine İslami eğitim programı',
+                islamiTitle1:'İslami İlimler 1', islamiText1:'Fıkıh, Akaid, Siyer ve Ahlak derslerinden kapsamlı sorular. İslami ilimlere giriş için ideal başlangıç.',
+                islamiTitle2:'İslami İlimler 2', islamiText2:'Tefsir, Hadis, Fıkıh Usulü ve Kelam konularında gelişmiş sorular. Orta seviye öğrenciler için derinlemesine içerik.',
+                islamiTitle3:'İslami İlimler 3', islamiText3:'İslam Felsefesi, Tasavvuf, Mezhepler Tarihi ve İslam Hukuku. İleri seviye akademik içerik.',
+                platformTitle:'Platform Özellikleri', platformSubtitle:'Modern eğitim araçları ve güçlü özellikler',
                 criteriaLabel:'Koşullar:'
             };
             const de = {
                 heroStartBtn: 'Start',
-                heroTitle: 'Lernen mit Grundkenntnissen, sicher voranschreiten',
-                heroSubtitle: 'Umfassende Fragenbank in 3 Stufen: Grundkenntnisse 1, 2 und 3. Glaube, Gebet, Sīra, Moral, Exegese, Hadith und mehr. Vom Bildungspräsidium vorbereitete hochwertige Fragen.',
+                heroTitle: 'Grundkenntnisse & Islamische Wissenschaften - Sicher voranschreiten',
+                heroSubtitle: 'Umfassende Fragenbanken: Grundkenntnisse (3 Stufen) und Islamische Wissenschaften (3 Stufen). Glaube, Gebet, Sīra, Moral, Exegese, Hadith, Fiqh, Aqida und mehr. Von Bildungsexperten vorbereitete hochwertige Fragen.',
                 badgesTitle: 'Abzeichensystem',
                 badgesSubtitle: 'Krönen Sie Ihre Erfolge mit Abzeichen. Erfüllen Sie die Bedingungen, steigen Sie im Level auf.',
-                featuresTitle: 'Gestärkt durch den Lehrplan der Grundkenntnisse',
-                featuresSubtitle: 'Umfassende 3-stufige Fragenbank und moderne Lernfunktionen',
+                featuresTitle: 'Grundkenntnisse Lehrplan',
+                featuresSubtitle: 'Umfassende 3-stufige Fragenbank - Vom Anfänger zum Fortgeschrittenen',
                 heroCtaBtn: 'Jetzt starten',
-                ctaTitle: 'Verwandeln Sie Bildung mit dem Grundkenntnisse-Lehrplan',
-                ctaSubtitle: 'Umfassende 3-stufige Fragenbank, hochwertige Inhalte und moderne Lernwerkzeuge. Perfekt für Schüler und Lehrkräfte!',
+                ctaTitle: 'Verwandeln Sie Bildung mit Grundkenntnissen & Islamischen Wissenschaften',
+                ctaSubtitle: '6-stufiger umfassender Lehrplan, hochwertige Inhalte und moderne Lernwerkzeuge. Perfekt für Schüler und Lehrkräfte!',
                 ctaBtn: 'Jetzt starten',
                 navFeatures:'Funktionen', navStats:'Statistiken', navAbout:'Über uns', navContact:'Kontakt',
                 stat1:'Hochwertige Fragen', stat2:'Stufen', stat3:'Fächer', stat4:'Lehrplankonform',
                 footFeaturesTitle:'Funktionen', footF1:'Fragenbank', footF2:'Prüfung erstellen', footF3:'Analytische Berichte', footF4:'Mobilfreundlich',
                 footSupportTitle:'Support', footS1:'Hilfezentrum', footS2:'Kontakt', footS3:'FAQ', footS4:'Technischer Support',
-                floatTitle1:'Grundkenntnisse 1', floatText1:'Glaube, Gebet, Sīra, Moral, Musik, Organisation',
-                floatTitle2:'Grundkenntnisse 2', floatText2:'Glaube, Gebet, Sīra, Moral, Musik, Organisation',
-                floatTitle3:'Grundkenntnisse 3', floatText3:'Exegese, Hadith, Mystik, Rhetorik, Menschenrechte, Islamische Geschichte',
+                floatTitle1:'Grundkenntnisse', floatText1:'3 Stufen: Glaube, Gebet, Sīra, Moral',
+                floatTitle2:'Islamische Wissenschaften', floatText2:'3 Stufen: Fiqh, Aqida, Exegese, Hadith',
+                floatTitle3:'IGMG Lehrplan', floatText3:'Vom Bildungspräsidium genehmigt',
                 featTitle1:'Grundkenntnisse 1', featText1:'Über 500 hochwertige Fragen aus Glaube, Gebet, Sīra, Moral, Musik und Organisation. Perfekter Einstieg für Anfänger.',
-                featTitle2:'Grundkenntnisse 2', featText2:'Fragen zu Glaube, Gebet, Sīra, Moral, Musik und Organisation. Vertieftes Lernen.',
+                featTitle2:'Grundkenntnisse 2', featText2:'Lehrplankonforme fortgeschrittene Fragen. Vertieftes Lernen in Glaube, Gebet, Sīra, Moral, Musik und Organisation.',
                 featTitle3:'Grundkenntnisse 3', featText3:'Fortgeschrittene Themen: Exegese, Hadith, Mystik, Rhetorik, Menschenrechte und Islamische Geschichte. Ideal zur Spezialisierung.',
                 featTitle4:'Hochwertige Fragenbank', featText4:'Von Experten erstellte, lehrplankonforme Multiple-Choice-Fragen. Schwierigkeitsgrade für jedes Niveau.',
                 featTitle5:'Detaillierte Analytik', featText5:'Verfolgen Sie die Leistung der Schüler. Welche Themen sind stark, wo ist Entwicklung nötig? Lernen Sie es mit Berichten.',
                 featTitle6:'Schnell & Einfach', featText6:'Erstellen Sie sofort Prüfungen und bewerten Sie automatisch. Zeitersparnis für Lehrkräfte, effektives Lernen für Schüler.',
+                islamiTitle:'Islamische Wissenschaften Lehrplan', islamiSubtitle:'3-stufiges tiefgreifendes islamisches Bildungsprogramm',
+                islamiTitle1:'Islamische Wissenschaften 1', islamiText1:'Umfassende Fragen aus Fiqh, Aqida, Sīra und Moral. Idealer Einstieg in die islamischen Wissenschaften.',
+                islamiTitle2:'Islamische Wissenschaften 2', islamiText2:'Fortgeschrittene Fragen zu Exegese, Hadith, Usul al-Fiqh und Kalam. Vertiefter Inhalt für mittlere Stufe.',
+                islamiTitle3:'Islamische Wissenschaften 3', islamiText3:'Islamische Philosophie, Mystik, Geschichte der Rechtsschulen und Islamisches Recht. Akademischer Inhalt für Fortgeschrittene.',
+                platformTitle:'Plattform-Funktionen', platformSubtitle:'Moderne Lernwerkzeuge und leistungsstarke Funktionen',
                 criteriaLabel:'Kriterien:'
             };
             function applyLang(lang){
@@ -1379,6 +1428,18 @@ $totalCategories = array_sum(array_map('count', $categories));
                 set('featText5', dict.featText5);
                 set('featTitle6', dict.featTitle6);
                 set('featText6', dict.featText6);
+                // İslami İlimler çevirileri
+                set('islamiTitle', dict.islamiTitle);
+                set('islamiSubtitle', dict.islamiSubtitle);
+                set('islamiTitle1', dict.islamiTitle1);
+                set('islamiText1', dict.islamiText1);
+                set('islamiTitle2', dict.islamiTitle2);
+                set('islamiText2', dict.islamiText2);
+                set('islamiTitle3', dict.islamiTitle3);
+                set('islamiText3', dict.islamiText3);
+                // Platform özellikleri çevirileri
+                set('platformTitle', dict.platformTitle);
+                set('platformSubtitle', dict.platformSubtitle);
                 // Rozet kartları koşul etiketi
                 document.querySelectorAll('[data-i18n="criteriaLabel"]').forEach(function(el){ el.textContent = dict.criteriaLabel; });
                 // Rozet kartları: eğer data-tr/data-de varsa onları uygula
