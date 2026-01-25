@@ -105,10 +105,17 @@ jobs:
         
         EXCLUDES = (
             '.git/', '.github/', 'node_modules/', 'TCPDF-main/', 'vendor/composer/',
-            '.gitignore', '.md', 'README.md', 'composer.lock', 'package.json'
+            '.gitignore', 'README.md', 'composer.lock', 'package.json',
+            'convert_md_to_json.php'
         )
+        # Sorular klasörü için özel kontrol - .md dosyalarını hariç tut ama .json dosyalarını dahil et
+        def is_question_json(p: str) -> bool:
+            return 'Sorular/' in p and p.endswith('.json')
         def excluded(p: str) -> bool:
             p = p.replace('\\', '/')
+            # Soru JSON dosyalarını asla hariç tutma
+            if is_question_json(p):
+                return False
             return any(x in p for x in EXCLUDES)
         files = [p for p in changed if os.path.isfile(p) and not excluded(p)]
         print('Files to upload:', files)
