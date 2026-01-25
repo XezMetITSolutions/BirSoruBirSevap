@@ -1,0 +1,1370 @@
+# İslam Tarihi II Soruları
+
+**Toplam Soru Sayısı:** 105
+
+---
+
+### Soru 1
+
+İslam tarihinin kapsamı ve mahiyeti ile ilgili olarak aşağıdakilerden hangisi doğrudur?
+
+A) İslam tarihi, yalnızca İslam dininin tebliğ ve yayılış sürecini konu alır.  
+B) İslam tarihi, İslam dinine mensup olanların siyasi ve askerî faaliyetlerini ele alan bir ilimdir.  
+C) İlk Müslüman tarihçiler, eserlerinde “İslam Tarihi” terimini kullanmışlardır.  
+D) İslam tarihi, yalnızca İslam peygamberlerin in mücadelelerini ele alan bir ilimdir.  
+
+**Cevap:** B
+
+---
+
+### Soru 2
+
+İslam tarihinin Hz. Peygamber sonrası dönemleri için "Müslümanların tarihi" ifadesinin daha uygun olmasının temel sebebi aşağıdakilerden hangisidir?
+
+A) Bu dönemde vahyin yönlendirdiği bir süreç söz konusu değildir.  
+B) Bu dönemde İslam dininin yayılışı tamamen durmuştur.  
+C) Hz. Peygamber sonrası yönetimler ilahi vasıflar taşımıştır.  
+D) İslam tarihi yalnızca Kur’an'da anlatılan olaylardan ibarettir.  
+
+**Cevap:** A
+
+---
+
+### Soru 4
+
+Aşağıdakilerden hangisi İslam tarihini “Hak ile Batıl’ın mücadelesi” olarak yorumlayan görüşün temel zayıflığıdır?
+
+A) Bu görüş, İslam tarihini yalnızca tevhid mücadelesi çerçevesinde ele almaktadır.  
+B) Bu görüş, İslam tarihinin sadece savaşlardan ibaret olduğunu iddia etmektedir.  
+C) Bu görüş, tüm tarihî olayları beşerî faktörlerden bağımsız değerlendirmektedir.  
+D) Bu görüş , tarihte tüm Müslümanların her zaman aynı safta olduğunu kabul etmektedir.  
+
+**Cevap:** A
+
+---
+
+### Soru 5
+
+İslam tarihini hukuk ve kelam gibi dinî ilimler çerçevesinde değerlendiren anlayışın en önemli sakıncası nedir?
+
+A) Tarihî olayları dinî hükümler gibi kesin ve bağla yıcı hale getirmesi  
+B) Tarihî olayların yalnızca hadisler çerçevesinde incelenmesi  
+C) Sadece Müslüman tarihçilerin eserlerine odaklanması  
+D) Tarihi tamamen reddetmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 6
+
+İslam tarihinin gelişimi açısından aşağıdakilerden hangisi Batı’daki tarih y azıcılığına önemli bir katkı sağlamıştır?
+
+A) Müslüman tarihçilerin evrensel tarih anlayışını benimsemeleri  
+B) Müslüman tarihçilerin sadece siyer üzerine odaklanmaları  
+C) Batılı tarihçilerin ilk defa Müslüman tarihçilerden etkilenmeleri  
+D) Müslüman tarihçil erin yalnızca kendi coğrafyalarındaki olayları ele almaları  
+
+**Cevap:** A
+
+---
+
+### Soru 7
+
+İslam tarihinde hilafet makamına getirilen ilk kişi kimdir?
+
+A) Hz. Ömer  
+B) Hz. Osman  
+C) Hz. Ali  
+D) Hz. Ebû Bekir  
+
+**Cevap:** D
+
+---
+
+### Soru 8
+
+Emevîler döneminde hilafetin saltanata dönüşmesinin en önemli göstergesi aşağıdakilerden hangisidir?
+
+A) Halifelerin artık ümmet tarafından seçilmemesi  
+B) Halifelerin askerî darbelerle görevden alınması  
+C) Halifelerin İslamî hükümlere göre değil, kendi yorumlarına göre yönetmesi  
+D) Halifelerin d inî yetkilerinin tamamen kaldırılması  
+
+**Cevap:** A
+
+---
+
+### Soru 10
+
+Abbasîler döneminde hilafetin siyasi gücünü kaybetmesinin en önemli sebebi aşağıdakilerden hangisidir?
+
+A) Halifelerin giderek daha çok dinî bir sembol haline gelmesi  
+B) Halifelerin doğrudan o rduyu yönetmeye başlaması  
+C) Halifelerin tamamının Türk kökenli olması  
+D) Halifelerin halk tarafından seçilmeye başlaması  
+
+**Cevap:** A
+
+---
+
+### Soru 11
+
+Aşağıdakilerden hangisi Emevîler ile Hâşimîler arasındaki husumetin başlangıç noktası olarak kabul edilir?
+
+A) Hz. Osman' ın Emevî soyundan olması  
+B) Hz. Peygamber’in Benî Ümeyye’den kimseyi devlet yönetiminde görevlendirmemesi  
+C) Ümeyye b. Abdüşşems ile Hâşim arasındaki Mekke liderliği mücadelesi  
+D) Hz. Ali’nin Hz. Muâviye ile yaptığı Sıffîn Savaşı  
+
+**Cevap:** C
+
+---
+
+### Soru 12
+
+Mekke’nin fe thine kadar Müslümanlara karşı aktif düşmanlık sergileyen Benî Ümeyye mensupları hangi olaydan sonra büyük ölçüde İslam’a girmiştir?
+
+A) Bedir Savaşı  
+B) Hudeybiye Antlaşması  
+C) Uhud Savaşı  
+D) Mekke’nin Fethi  
+
+**Cevap:** D
+
+---
+
+### Soru 13
+
+Hz. Muâviye’nin siyasi yükselişinde  aşağıdakilerden hangisi en önemli rolü oynamıştır?
+
+A) Hz. Osman döneminde Şam valiliğine getirilmesi ve burada güçlü bir yönetim kurması  
+B) Bedir Savaşı’nda Müslümanları mağlup etmesi  
+C) Hz. Ömer’in onu Medine valisi yapması  
+D) Hz. Ali ile ittifak kurarak  Irak’ı ele geçirmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 14
+
+Hz. Muâviye’nin Sıffîn Savaşı’nda zor duruma düştüğünde savaşı durdurmak için başvurduğu strateji aşağıdakilerden hangisidir?
+
+A) Şam halkına ağır vergiler getirmek  
+B) Hz. Hasan ile ittifak yapmak  
+C) Hz. Amr b. Âs’ın "Kur’an’ın hakemliği" teklifini sunması  
+D) Hz. Ali ile gizli bir barış anlaşması yapmak  
+
+**Cevap:** C
+
+---
+
+### Soru 15
+
+Aşağıdakilerden hangisi Hakem Olayı'nın sonuçlarından biri  değildir ?
+
+A) Hz. Muâviye’nin siyasi meşruiyet kazanması  
+B) Hz. Ali taraftarlarının bölünerek Hâricîler grubunu oluşturması  
+C) Hz. Muâviye’nin doğrudan halife ilan edilmesi  
+D) Hz. Ali’nin ordusunun zayıflaması  
+
+**Cevap:** C
+
+---
+
+### Soru 16
+
+Hz. Muâviye, Hz. Hasan’ın hilafeti bırakmasını sağlamak için aşağıdaki hangi stratejiyi kullanmıştır ?
+
+A) Hz. Hasan’ın ordusunu savaş meydanında tamamen yenmek  
+B) Hz. Hasan’a ve çevresine maddi vaatlerde bulunarak destekçilerini kendi tarafına çekmek  
+C) Hz. Hasan’ı Şam’a davet ederek zorla biat ettirmek  
+D) Hz. Hüseyin’i esir alarak onu barışa zorlamak  
+
+**Cevap:** B
+
+---
+
+### Soru 17
+
+Hz. Muâviye’nin hilafete geçtikten sonra iç istikrarı sağlamak için Irak’a tayin ettiği güçlü valiler kimlerdir?
+
+A) Amr b. Âs ve Ziyâd b. Ebîh  
+B) Mugîre b. Şu’be ve Ziyâd b. Ebîh  
+C) Abdullah b. Zübeyr ve Muğîre b. Şu’be  
+D) Ebû Mûsâ el -Eş’arî ve Amr b. Âs  
+
+**Cevap:** B
+
+---
+
+### Soru 18
+
+Hz. Muâviye döneminde gerçekleşen İstanbul kuşatmaları sırasında sahabeden hangisi şehit olmuştur?
+
+A) Abdullah b. Ömer  
+B) Ebû Eyyûb el -Ensârî  
+C) Abdullah b. Zübeyr  
+D) Talha b. Ubeydullah  
+
+**Cevap:** B
+
+---
+
+### Soru 19
+
+Hz. Muâviye’nin Hâricîler ve Hz . Ali taraftarlarına karşı uyguladığı strateji aşağıdakilerden hangisidir?
+
+A) Iraklıları maaş kesme tehdidiyle Hâricîlere karşı savaşmaya zorlamak  
+B) Hâricîlerle müzakere ederek barış anlaşması yapmak  
+C) Hz. Ali taraftarlarını Şam’a sürgün etmek  
+D) Hâricîl eri Ehl -i Beyt ile ittifaka zorlamak  
+
+**Cevap:** A
+
+---
+
+### Soru 20
+
+Hz. Muâviye’nin fetih politikası aşağıdaki üç ana cepheden hangilerini kapsıyordu?
+
+A) Horasan, Bizans ve Kuzey Afrika  
+B) Endülüs, Hindistan ve Anadolu  
+C) Kafkaslar, Yemen ve Doğu Afrika  
+D) Sicilya, Maveraünnehir ve İran  
+
+**Cevap:** A
+
+---
+
+### Soru 21
+
+Aşağıdakilerden hangisi Yezîd’in veliaht tayin edilmesine karşı çıkan isimlerden biri değildir ?
+
+A) Hz. Hüseyin  
+B) Hz. Abdullah b. Zübeyr  
+C) Hz. Abdullah b. Abbâs  
+D) Hz. Amr b. Âs  
+
+**Cevap:** D
+
+---
+
+### Soru 22
+
+Yezîd’in veliaht t ayin edilmesi hangi İslamî yönetim anlayışının terk edilmesine neden olmuştur?
+
+A) İcma  
+B) Şûra  
+C) İçtihat  
+D) Meşveret  
+
+**Cevap:** B
+
+---
+
+### Soru 23
+
+Hz. Muâviye, Yezîd’in veliahtlığı için biat alırken Medine ve Mekke’deki önde gelen isimleri nasıl ikna etmeye çalışmıştır?
+
+A) Onları devlet yönetiminde önemli görevlere atayarak  
+B) Maddi vaatler ve tehditler kullanarak  
+C) Şûra sistemine göre bir seçim yaptırarak  
+D) Onlara askerî baskı uygulayarak  
+
+**Cevap:** B
+
+---
+
+### Soru 24
+
+Aşağıdakilerden hangisi Kerbelâ hadisesinin uzun vadeli sonuçlarından biri  değildir ?
+
+A) Şiiliğin siyasi bir akım olmaktan çıkıp mezhep hâline gelmesi  
+B) Emevîlerin Müslümanlar arasında meşruiyet kaybına uğraması  
+C) Abdullah b. Zübeyr’in Mekke’de halifeliğini ilan etmesi  
+D) Abbasîlerin hemen ardından Emevî yöneti mini devirmesi  
+
+**Cevap:** D
+
+---
+
+### Soru 25
+
+Hz. Hüseyin’in Kûfe’ye gitmesini teşvik eden temel sebep aşağıdakilerden hangisidir?
+
+A) Mekkelilerin baskısıyla Hicaz’dan ayrılmak zorunda kalması  
+B) Kûfelilerin kendisini halife olarak tanıyacaklarına dair mektuplar gönderme si  
+C) Yezîd’in kendisini zorla Şam’a çağırması  
+D) Medine halkının onu yalnız bırakması  
+
+**Cevap:** B
+
+---
+
+### Soru 26
+
+Kerbelâ Savaşı'nın başlamasında etkili olan en önemli gelişme aşağıdakilerden hangisidir?
+
+A) Kûfe valisi Ubeydullah b. Ziyâd’ın Hz. Hüseyin’in suya erişimi ni engellemesi  
+B) Hz. Hüseyin’in Kerbelâ’da kamp kurması  
+C) Abdullah b. Zübeyr’in Yezîd’e karşı ayaklanması  
+D) Medine’de halkın Emevîleri şehirden kovması  
+
+**Cevap:** A
+
+---
+
+### Soru 27
+
+Harre Vakası'nın en önemli sonucu aşağıdakilerden hangisidir?
+
+A) Medine’deki Emevî karşıtlarının tamamen yok edilmesi  
+B) Abdullah b. Zübeyr’in Hicaz’daki otoritesinin güçlenmesi  
+C) Müslümanların Yezîd ve Emevî yönetimine olan nefretinin artması  
+D) Medine halkının Emevîlerle anlaşma yoluna gitmesi  
+
+**Cevap:** C
+
+---
+
+### Soru 28
+
+Harre Vakası sırasında Şam ordusuna komuta eden kişi kimdir?
+
+A) Ubeydullah b. Ziyâd  
+B) Ömer b. Sa’d  
+C) Müslim b. Ukbe  
+D) Husayn b. Numeyr  
+
+**Cevap:** C
+
+---
+
+### Soru 29
+
+Aşağıdakilerden hangisi Mekke kuşatması sırasında meydana gelen önemli bir olaydır?
+
+A) Yezîd’in ölüm haberi üzerine Şam ordusunun s aldırıyı durdurması  
+B) Abdullah b. Zübeyr’in Emevîlere karşı galip gelmesi  
+C) Yezîd’in bizzat Mekke’ye giderek kuşatmayı yönetmesi  
+D) Hz. Hüseyin’in ordusunun Mekke’yi savunması  
+
+**Cevap:** A
+
+---
+
+### Soru 30
+
+Yezîd döneminde meydana gelen olaylardan hangisi Emevî yöneti minin meşruiyetini ciddi şekilde sarsmıştır?
+
+A) İstanbul kuşatmasının başarısız olması  
+B) Abdullah b. Zübeyr’in Medine’de isyan çıkarması  
+C) Kerbelâ Olayı ve Harre Vakası’nın yaşanması  
+D) Yezîd’in Hicaz’ı ziyaret etmeyi reddetmesi  
+
+**Cevap:** C
+
+---
+
+### Soru 31
+
+II. Muâviye ’nin halifelikten çekilme sebebi aşağıdakilerden hangisidir?
+
+A) Sağlık durumunun kötüleşmesi  
+B) Hilafetin babasından miras kaldığını düşünerek hakkaniyetli bulmaması  
+C) Yeterli siyasî ve idarî yetkinliğe sahip olmadığını kabul etmesi  
+D) Abdullah b. Zübeyr’ in siyasi baskıları  
+
+**Cevap:** C
+
+---
+
+### Soru 32
+
+Mervan b. Hakem’in halife olmasından sonra Suriye’de yaşanan en büyük siyasi gelişme aşağıdakilerden hangisidir?
+
+A) Irak’ın tamamen Emevîlerin kontrolüne geçmesi  
+B) Kuzeyli -Güneyli Arap kabileleri arasında bölünmenin yaşan ması  
+C) Abdullah b. Zübeyr’in Emevîlere biat etmesi  
+D) Bizans’ın Emevîlere karşı büyük bir saldırı düzenlemesi  
+
+**Cevap:** B
+
+---
+
+### Soru 33
+
+Aşağıdakilerden hangisi Mervan b. Hakem’in veliaht seçiminde yaptığı değişikliklerden biridir?
+
+A) Veliahtlığı tamamen kaldırması  
+B) Kendi oğullarını veliaht yaparak hanedan yönetimini kesinleştirmesi  
+C) Halifelik için şûra sistemini geri getirmesi  
+D) Abbasîler ile anlaşarak yönetimi onlara devretmesi  
+
+**Cevap:** B
+
+---
+
+### Soru 34
+
+Merc -i Râhıt Savaşı’nın en önemli sonucu aşağıdakilerden hangisidir?
+
+A) Emevîler ile Abbasîler arasında barış sağlanması  
+B) Hicaz bölgesinin tam anlamıyla Emevîlerin kontrolüne geçmesi  
+C) Emevîler içinde Kelbîler ve Kaysîler arasındaki çatışmaların başlaması  
+D) Müslümanların ilk kez Bizans’a karş ı savaş kaybetmesi  
+
+**Cevap:** C
+
+---
+
+### Soru 35
+
+Mervan b. Hakem’in gerçekleştirdiği en önemli askerî fetih aşağıdakilerden hangisidir?
+
+A) Mısır’ın Abdullah b. Zübeyr yanlılarından alınması  
+B) Kuzey Afrika’daki Berberîlerin tamamen itaat altına alınması  
+C) İstanbul’un Mü slümanlar tarafından fethedilmesi  
+D) Endülüs’ün fethedilmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 36
+
+Abdülmelik b. Mervan döneminde gerçekleştirilen en önemli idarî reform aşağıdakilerden hangisidir?
+
+A) Abbasîler ile barış yaparak Emevî -İslam ittifakı kurması  
+B) İlk kez Arapça yazı lı sikkelerin bastırılması ve devlet defterlerinin Arapçaya çevrilmesi  
+C) Hulefâ -i Râşidîn dönemindeki yönetim sistemine dönüş yapılması  
+D) Fetih hareketlerinin tamamen durdurulması  
+
+**Cevap:** B
+
+---
+
+### Soru 38
+
+Emevîler döneminde ilk kez Çin ile siyasi ilişki kuran komutan kimdir?
+
+A) Tarîk b. Ziyâd  
+B) Kuteybe b. Müslim  
+C) Mûsâ b. Nusayr  
+D) Mesleme b. Abdülmelik  
+
+**Cevap:** B
+
+---
+
+### Soru 39
+
+Endülüs’ün fethiyle ilgili olarak aşağıdaki ifadelerden hangisi doğrudur?
+
+A) Mü slüman ordusu ilk önce İspanya Kralı Rodrik ile savaşmış ve onu mağlup etmiştir.  
+B) Emevîler Endülüs’ü fethettikten sonra Avrupa’ya hiçbir sefer düzenlememiştir.  
+C) Târık b. Ziyâd, Gotların başkenti Toledo’yu savaşsız teslim almıştır.  
+D) Müslümanlar Endülü s’ü fethederken Bizans İmparatorluğu’ndan destek almıştır.  
+
+**Cevap:** A
+
+---
+
+### Soru 40
+
+Velid b. Abdülmelik’in halifeliği döneminde İslam dünyasında yaşanan en büyük değişiklik aşağıdakilerden hangisidir?
+
+A) İslam dünyasının siyasi ve askerî olarak en geniş sınırlarına ulaşması  
+B) Şiî mezhebinin resmî devlet mezhebi olarak ilan edilmesi  
+C) Bizans’ın tamamen yenilgiye uğratılarak İstanbul’un fethedilmesi  
+D) Abbasîlerin yönetimi ele geçirmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 41
+
+Ömer b. Abdülaziz döneminde Emevî Devleti’ni önceki hal ifelerden ayıran en belirgin uygulama aşağıdakilerden hangisidir?
+
+A) Anadolu fetihlerine hız vermesi  
+B) Mevâlîler ile Araplar arasındaki eşitsizliği kaldırmaya çalışması  
+C) Bizans’a karşı büyük bir sefer düzenlemesi  
+D) Veliahtlık sistemini kaldırarak şûra sistemine geri dönmesi  
+
+**Cevap:** B
+
+---
+
+### Soru 42
+
+Ömer b. Abdülaziz’in Ehl -i Beyt ile ilişkisini güçlendirmek için gerçekleştirdiği en önemli icraat aşağıdakilerden hangisidir?
+
+A) Hz. Ali’ye hutbelerde dil uzatma geleneğini kaldırması  
+B) Halifeliği Ehl -i Beyt’e devretm esi  
+C) Hz. Hüseyin’in intikamını almak için Kerbelâ’yı tazmin etmesi  
+D) Hz. Hasan’ın soyundan gelenleri veliaht ilan etmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 44
+
+Yezîd b. Abdülmelik döneminde devlet yönetiminde en büyük değişiklik aşağıdakilerden hangisidir?
+
+A) Mevâlîlerin devlette önemli gö revler almasının sağlanması  
+B) Kaysîler ve Yemenîler arasındaki denge politikasının tamamen terk edilmesi  
+C) Ömer b. Abdülaziz döneminde bırakılan fetihlerin yeniden hızlandırılması  
+D) Ehl -i Beyt’e devlet yönetiminde yer verilmesi  
+
+**Cevap:** B
+
+---
+
+### Soru 45
+
+Yezîd b. Ab dülmelik döneminde gerçekleşen en önemli isyan hareketi aşağıdakilerden hangisidir?
+
+A) Ehl -i Beyt yanlılarının Medine’de çıkardığı isyan  
+B) Irak’ta Yemenîler ile Kaysîler arasındaki iç savaş  
+C) Hâricîlerin Doğu Anadolu’da başlattığı bağımsızlık hareketi  
+D) Yezîd b. Mühelleb’in önderlik ettiği ve Araplarla mevâlîlerin birlikte katıldığı isyan  
+
+**Cevap:** D
+
+---
+
+### Soru 46
+
+Hişâm b. Abdülmelik döneminde yönetim anlayışı açısından en belirgin özellik aşağıdakilerden hangisidir?
+
+A) Kaysîler ve Yemenîler arasında deng e politikası güderek devleti yönetmeye çalışması  
+B) Şiîlere geniş haklar tanıyarak onların siyasi etkinlik kazanmasını sağlaması  
+C) Endülüs’te Müslümanlara karşı Bizans ile ittifak kurması  
+D) Abbâsîlerle anlaşarak halifeliği onlara devretmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 47
+
+Hişâm b. Abdülmelik döneminde Mevâlî politikası nedeniyle İslam dünyasında büyük bir tepkiye yol açan olay aşağıdakilerden hangisidir?
+
+A) Mevâlîlerin vergilerinin artırılması ve bazı bölgelerde tekrar cizye alınması  
+B) Mevâlîlere yüksek devlet kademel erinde görev verilmesi  
+C) Gayrimüslimlerin Müslüman olması durumunda bile vergi muafiyeti verilmemesi  
+D) Bizans ile iş birliği yapılarak Müslüman kökenli valilerin görevden alınması  
+
+**Cevap:** A
+
+---
+
+### Soru 49
+
+Abbâsî ihtilalcilerinin Emevî Devleti’ne karşı ilk büyük başarısı aşağıdakilerden hangisidir?
+
+A) Merv şehr ini ele geçirerek doğudaki Emevî otoritesini yok etmeleri  
+B) Şam’ı doğrudan ele geçirerek Emevî yönetimine son vermeleri  
+C) Endülüs’te Emevîlerin otoritesini sona erdirmeleri  
+D) Irak’ta büyük bir Berberî isyanı başlatarak Emevîleri çökertmeleri  
+
+**Cevap:** A
+
+---
+
+### Soru 50
+
+Emevî Devleti’nin resmen sona erdiği savaş ve sonucuyla ilgili aşağıdakilerden hangisi doğrudur?
+
+A) Büyük Zap Savaşı’nda Emevîler ağır bir yenilgiye uğrayarak yıkılmıştır.  
+B) Emevîler, Mekke’de gerçekleşen büyük bir kuşatmada teslim olmuştur.  
+C) Abbâsîl er, Emevîleri Şam’da tamamen kuşatarak onların kaçmasını engellemiştir.  
+D) Emevî Devleti, Endülüs’teki bir ayaklanma sonucu yıkılmıştır.  
+
+**Cevap:** A
+
+---
+
+### Soru 51
+
+Emevî Devleti’nin yıkılışındaki en temel faktörlerden biri olan asabiyet kavramı aşağıdakilerden hangisini ifade eder?
+
+A) Devlet yönetiminde sadece Arapların söz sahibi olması  
+B) Arap kabileleri arasındaki siyasi ve sosyal rekabetin devlet siyasetine yansıması  
+C) Halifelerin kendilerini mutlak yetkili görerek halkın yönetime katılımını  engellemesi  
+D) Emevîler’in İslam dünyasında farklı mezheplerin yayılmasını teşvik etmesi  
+
+**Cevap:** B
+
+---
+
+### Soru 52
+
+Emevî hanedanı içinde yaşanan iç çekişmelerin devlete en büyük zararı aşağıdakilerden hangisi olmuştur?
+
+A) Halifelerin otoritesinin zayıflamasına ve eya letlerin özerkleşmesine neden olması  
+B) Bizans ve Sasani topraklarında yeni fetihler yapılmasını engellemesi  
+C) Devletin mali yapısının güçlenmesine ve hazinenin dolmasına yol açması  
+D) Mevâlîlerin devlette yüksek makamlara gelmesini sağlaması  
+
+**Cevap:** A
+
+---
+
+### Soru 53
+
+Emevîler döneminde Arap olmayan Müslümanlara karşı yapılan en büyük ayrımcılık uygulaması aşağıdakilerden hangisidir?
+
+A) Mevâlîlerin askere alınmasının yasaklanması  
+B) Müslüman olduktan sonra dahi gayrimüslimler gibi cizye ödemek zorunda bırakılmaları  
+C) İslam şehirlerinde yaşamalarının yasaklanması  
+D) Arapça öğrenmelerinin zorunlu kılınması  
+
+**Cevap:** B
+
+---
+
+### Soru 54
+
+Emevîler döneminde özellikle Horasan’da Abbâsî ihtilalinin başlamasının temel nedeni aşağıdakilerden hangisidir?
+
+A) Horasan’daki gayrimüslimlerin zorla İslamlaştırılması  
+B) Devletin Arap olmayan Müslümanları ikinci sınıf olarak görmesi ve ayrımcı vergi politikaları  
+C) Emevî ordularının bölgedeki Türkler ve Çinliler karşısında başarısız olması  
+D) Halifelerin Şii grupları yönetime katma çabaları  
+
+**Cevap:** B
+
+---
+
+### Soru 55
+
+Emevîler döneminde divan teşkilatında yapılan en büyük reform aşağıdakilerden hangisidir?
+
+A) Devletin tüm resmi yazışmalarının Arapçaya çevrilmesi  
+B) Yeni bir divan sistemi kurularak vezirlik makamının oluşturulması  
+C) Tüm mali işlerin halifenin doğruda n kontrolüne verilmesi  
+D) Eyalet yönetimlerinin merkezi hükümetten tamamen bağımsız hale getirilmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 56
+
+Emevîler döneminde kadılık teşkilatının giderek güçlenmesinin en önemli nedeni aşağıdakilerden hangisidir?
+
+A) Devlet yönetiminde adaletin sağ lanmasına yönelik reformların uygulanması  
+B) Halifelerin hukuk sistemini güçlendirmek istemesi  
+C) Mezâlim mahkemelerinin kurulmasıyla devlet yöneticilerinin hesap verebilir hale gelmesi  
+D) Şurta teşkilatının giderek kadıların emrine verilmesi  
+
+**Cevap:** C
+
+---
+
+### Soru 57
+
+Emevî Devleti'nin ekonomisini zayıflatan ve halkın yönetime olan güvenini sarsan en önemli olay aşağıdakilerden hangisidir?
+
+A) Müslüman olan gayrimüslimlerden cizye alınmaya devam edilmesi  
+B) Devlet gelirlerinin tamamen ticarete dayalı hale getirilmesi  
+C) Sadece Arap tüccarlara vergi muafiyeti tanınması  
+D) Mevâlîlere zorunlu askerlik hizmeti getirilmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 58
+
+Emevî döneminde askerî teşkilatlanmada yapılan en önemli değişiklik aşağıdakilerden hangisidir?
+
+A) İlk düzenli ve maaşlı ordu sisteminin (mürtezika) oluşturulması  
+B) Sadece Arap askerlerden oluşan bir birlik kurulması  
+C) Bizans ile ortak askeri eğitim programlarının düzenlenmesi  
+D) Orduya gayrimüslim askerlerin kabul edilmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 59
+
+Emevîler döneminde dinî ilimlerin gelişm esine katkı sağlayan en önemli olay aşağıdakilerden hangisidir?
+
+A) Hadislerin tedvin edilmesinin resmen başlatılması  
+B) İslam hukukunun sadece Şam merkezli olarak geliştirilmesi  
+C) Tüm İslam şehirlerinde medreselerin kurulması  
+D) Mevâlîlerin tamamen dinî e ğitimden uzak tutulması  
+
+**Cevap:** A
+
+---
+
+### Soru 60
+
+Emevîler döneminde İslam sanatında en önemli mimari gelişme aşağıdakilerden hangisidir?
+
+A) Kubbetü’s -Sahre’nin inşa edilerek İslam mimarisinde kubbe kullanımının yaygınlaşması  
+B) Devlet saraylarının tamamen ahşap malze meden yapılmaya başlanması  
+C) Emevî halifelerinin tüm camileri Bizans tarzında inşa ettirmesi  
+D) Camilerde figüratif resimlerin kullanılmasının zorunlu hale getirilmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 61
+
+Abbâsî ihtilalinin başarılı olmasını sağlayan en önemli faktörlerden biri  aşağıdakilerden hangisidir?
+
+A) Horasan bölgesindeki mevâlî desteği ve Emevî yönetimine karşı duyulan hoşnutsuzluk  
+B) Abbâsîlerin güçlü bir donanmaya sahip olması  
+C) Ebu’l -Abbâs’ın doğrudan Emevî hanedanından gelmesi  
+D) Emevîlerin Bizans’a karşı aldığı yen ilgiler sonucu zayıflaması  
+
+**Cevap:** A
+
+---
+
+### Soru 62
+
+Abbâsî hareketinin en önemli propaganda merkezlerinden biri aşağıdakilerden hangisidir?
+
+A) Kûfe  
+B) Dımaşk  
+C) Bağdat  
+D) Basra  
+
+**Cevap:** A
+
+---
+
+### Soru 63
+
+Abbâsîler’in iktidara geçiş sürecinde Horasan bölgesinin kritik bir rol oynamasının en önemli sebebi aşağıdakilerden hangisidir?
+
+A) Bölgenin büyük oranda Araplardan oluşması  
+B) Emevîler tarafından ekonomik olarak güçlü bir şekilde desteklenmesi  
+C) Mevâlî nüfusunun yoğun olması ve Emevî yönetiminden memnun olmaması  
+D) Ebu’l -Abbâs’ın Horasan kökenli bir lider olması  
+
+**Cevap:** C
+
+---
+
+### Soru 64
+
+Talas Savaşı'nın İslam dünyası açısından en önemli sonucu aşağıdakilerden hangisidir?
+
+A) Çin’in Batı Türkistan üzerindeki siyasi emellerinden vazgeçmesi  
+B) Emevîler’in tekrardan iktidarı ele geçirmesi  
+C) Türklerin tamamen Abbâsî ordularına karşı savaş açması  
+D) Bizans’ın İslam dünyasına karşı saldırılarını artırması  
+
+**Cevap:** A
+
+---
+
+### Soru 65
+
+Aşağıdakilerden hangisi Ebu’l -Abbâs Seffâh döneminde gerçekleşen önemli olaylardan biridir?
+
+A) Kâğıt üretiminin İslam dünyasında yayılması  
+B) Abbâsî halifeliğinin resmen ilan edilmesi ve Emevîler’in tamamen ortadan kaldırılması  
+C) Bermekîler’in devlet yönetiminden tasfiye edilmesi  
+D) Bağdat’ın başkent olarak ilan edilmesi  
+
+**Cevap:** B
+
+---
+
+### Soru 66
+
+Abbâsî Devleti'nin kurumsallaşmasını  sağlayan en önemli halife aşağıdakilerden hangisidir?
+
+A) Hârûn Reşîd  
+B) Ebû Ca’fer Mansûr  
+C) Mehdî  
+D) Hâdî  
+
+**Cevap:** B
+
+---
+
+### Soru 68
+
+Hârûn Reşîd d öneminde gerçekleşen en büyük devlet içi krizlerden biri aşağıdakilerden hangisidir?
+
+A) Bermekîler ailesinin devlet yönetiminden tasfiye edilmesi  
+B) Çinliler ile yapılan Talas Savaşı  
+C) Mevâlîlerin tamamen ordudan çıkarılması  
+D) Horasan bölgesinin tamamen Bizans’ın eline geçmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 69
+
+Abbâsî Devleti’nde veliaht tayini sorunlarının temel sebebi aşağıdakilerden hangisidir?
+
+A) Halifelerin genellikle savaşta ölmesi  
+B) Abbâsî ailesinin içinde güçlü hanedan üyeleri arasında sürekli rekabet yaşanması  
+C) Ab bâsîler’in halktan gelen yöneticileri kabul etmesi  
+D) Halifelerin oğulları yerine vezirlerini veliaht tayin etmek istemesi  
+
+**Cevap:** B
+
+---
+
+### Soru 70
+
+Abbâsî halifesi Mehdî’nin yönetimde izlediği en belirgin politika aşağıdakilerden hangisidir?
+
+A) Yönetimi yumuşatıp hal kla barışı sağlamaya çalışmak  
+B) Sert ve otoriter bir yönetim anlayışı benimsemek  
+C) Emevîler’i tekrar iktidara getirmek için çabalamak  
+D) Devleti tamamen askeri bir rejime dönüştürmek  
+
+**Cevap:** A
+
+---
+
+### Soru 71
+
+Hârûn Reşîd’in Bizans’a karşı yürüttüğü seferler sonucund a imzalanan barış antlaşması hangi Bizans imparatorunun döneminde gerçekleşmiştir?
+
+A) Theophilos  
+B) Nikeforos  
+C) İrene  
+D) II. Basil  
+
+**Cevap:** C
+
+---
+
+### Soru 72
+
+Abbâsîler ile Frank kralı Şarlman arasındaki ilişkilerin temel sebebi aşağıdakilerden hangisidir?
+
+A) Endülüs Emevîlerine karşı ortak düşman olmaları  
+B) Abbâsîlerin Bizans ile ittifak yapmak istemesi  
+C) Şarlman’ın İslamiyet’e girmeyi düşünmesi  
+D) Abbâsîlerin Avrupa’daki Hristiyanlarla dinî ittifak kurmak istemesi  
+
+**Cevap:** A
+
+---
+
+### Soru 73
+
+Hârûn Reşîd ve Bizans arasınd aki savaşlar sırasında Bizans’ın İslam dünyasına karşı tehdit oluşturmasının sebebi aşağıdakilerden hangisidir?
+
+A) Bizans’ın Bulgar tehdidine karşı İslam dünyasıyla iş birliği yapmak istemesi  
+B) Bizans’ın vergi ödemeyi durdurması ve Abbâsî sınırlarına sald ırması  
+C) Bizans’ın Abbâsîler ile bir barış anlaşması imzalaması  
+D) Bizans’ın, Abbâsîler’in Akdeniz ticaret yollarını ele geçirmesine izin vermesi  
+
+**Cevap:** B
+
+---
+
+### Soru 74
+
+Me’mûn’un halife olduktan sonra en çok tepki çeken uygulamalarından biri aşağıdakilerden hangis idir?
+
+A) Siyah elbiseyi bırakarak Şii geleneğine uygun yeşil elbise giymesi  
+B) Bermekî ailesini tekrar devlet yönetimine getirmesi  
+C) Abbâsî Devleti’ni tamamen Bizans ile ittifak kurarak yönetmesi  
+D) Horasan bölgesini tamamen bağımsız bir devlet hâline geti rmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 75
+
+Hârûn Reşîd’in oğulları Emîn ve Me’mûn arasındaki mücadelede temel çatışma noktası aşağıdakilerden hangisidir?
+
+A) Abbâsîler’in Bizans’a karşı izleyeceği politikalar  
+B) Arap ve İranlı unsurlar arasındaki siyasi rekabet  
+C) Endülüs Emevîleri ile yapılacak savaşlar  
+D) Bermekîler’in devlet yönetiminde etkili olup olmaması  
+
+**Cevap:** B
+
+---
+
+### Soru 76
+
+Me’mûn’un hilafet döneminde Batı İslam dünyasında karşılaştığı en büyük isyan aşağıdakilerden hangisidir?
+
+A) Hâricîlerin Nusaybin isyanı  
+B) Bâbek önderl iğindeki Hürremî isyanı  
+C) İdrîsîler’in Mağrib’de bağımsızlık ilan etmesi  
+D) İbrahim b. Mehdî’nin Bağdat’ta hilafet ilan etmesi  
+
+**Cevap:** B
+
+---
+
+### Soru 77
+
+Me’mûn döneminde gerçekleştirilen tercüme faaliyetlerinin en büyük merkezi aşağıdakilerden hangisidir?
+
+A) Bağdat’t aki Beytülhikme  
+B) Şam’daki Darü’l -İlim  
+C) Horasan’daki Nişabur Akademisi  
+D) Endülüs Emevîlerinin Kurtuba Kütüphanesi  
+
+**Cevap:** A
+
+---
+
+### Soru 78
+
+Halife Me’mûn’un Bizans’a karşı düzenlediği büyük seferler sırasında en önemli stratejik hedefi aşağıdakilerden hangisiydi?
+
+A) Bizans’ı tamamen ortadan kaldırmak  
+B) Anadolu’daki önemli kaleleri fethederek sınır güvenliğini sağlamak  
+C) Bizans ile barış yaparak ekonomik ilişkileri güçlendirmek  
+D) Batı Avrupa ile diplomatik ittifaklar kurmak  
+
+**Cevap:** B
+
+---
+
+### Soru 79
+
+Me’mûn döneminde büyük tartışmalara yol açan ve Ehl -i sünnet ulemasının sert muhalefetine sebep olan dinî mesele aşağıdakilerden hangisidir?
+
+A) Halku’l -Kur’ân (Kur’an’ın yaratılmış olup olmadığı) meselesi  
+B) Mutezile’nin hilafeti tamamen ele geçirmesi  
+C) Mehdî inancının Ab bâsîler tarafından resmen kabul edilmesi  
+D) Hâricîlerin halifelik iddiası  
+
+**Cevap:** A
+
+---
+
+### Soru 80
+
+Me’mûn’un “Halku’l -Kur’ân” meselesinde zorla kabul ettirmeye çalıştığı görüşe karşı direnen ve işkence gören Ehl -i sünnet âlimi aşağıdakilerden hangisidir?
+
+A) İmam Şafi î  
+B) İmam Mâlik  
+C) Ahmed b. Hanbel  
+D) İmam Ebû Hanife  
+
+**Cevap:** C
+
+---
+
+### Soru 81
+
+Halife Mu’tasım’ın Abbâsî ordusunda Türk askerlerine daha fazla yer vermesinin en önemli sebebi aşağıdakilerden hangisidir?
+
+A) Türklerin askeri disiplini ve savaş yetenekleriyle öne çıkmas ı  
+B) Abbâsî ordusunda Arapların sayıca yetersiz kalması  
+C) Me’mûn’un vasiyeti doğrultusunda hareket etmek istemesi  
+D) Türklerin zaten Abbâsî Devleti’nin bürokratik yönetiminde etkili olması  
+
+**Cevap:** A
+
+---
+
+### Soru 82
+
+Halife Mu’tasım’ın Sâmerrâ şehrini kurmasının en öne mli sebebi aşağıdakilerden hangisidir?
+
+A) Bağdat’taki sosyal huzursuzlukları ve Türk -Arap çatışmalarını önlemek  
+B) Abbâsî Devleti’nin başkentini daha güvenli bir konuma taşımak  
+C) Bizans’a karşı yeni bir stratejik savunma merkezi oluşturmak  
+D) Bağdat’ın ek onomik gücünü zayıflatarak merkezi otoriteyi güçlendirmek  
+
+**Cevap:** A
+
+---
+
+### Soru 83
+
+Aşağıdakilerden hangisi Mu’tasım’ın hilafetinin en önemli meselelerinden biri  değildir ?
+
+A) Bâbek Hürremî isyanını bastırmak  
+B) Bizans’a karşı Amorion Seferi’ni düzenlemek  
+C) Türklerin Abbâsî ordusunda etkinliğini artırmak  
+D) Endülüs Emevîleri ile diplomatik ilişkiler kurmak  
+
+**Cevap:** D
+
+---
+
+### Soru 84
+
+Halife Mu’tasım döneminde Bizans’a düzenlenen Amorion Seferi’nin temel nedeni aşağıdakilerden hangisidir?
+
+A) Bizans İmparatoru Theophilos’un Anadolu’da ki Abbâsî topraklarına saldırması  
+B) Bizans’ın Bâbek isyanını desteklemesi  
+C) Mu’tasım’ın Anadolu’daki Bizans şehirlerini ele geçirmek istemesi  
+D) Bizans’ın Abbâsîler ile ticaret yollarını kesmesi  
+
+**Cevap:** A
+
+---
+
+### Soru 85
+
+Halife Mu’tasım’ın Anadolu’ya düzenlediği sef erler sırasında Abbâsî ordusunda en büyük rolü oynayan Türk komutan aşağıdakilerden hangisidir?
+
+A) Ahmed b. Tûlûn  
+B) Eşnâs  
+C) Boğa el -Kebîr  
+D) Afşin  
+
+**Cevap:** D
+
+---
+
+### Soru 86
+
+Halife Mu’tasım’ın Abbâsî ordusunu Türk askerleriyle güçlendirmesi hangi olayın sonucunda daha da hız kazanmıştır?
+
+A) Bâbek Hürremî isyanının uzun yıllar bastırılamaması  
+B) Me’mûn’un ölümü ve halifelik mücadelesinin başlaması  
+C) Amorion Seferi’nde Bizans’a karşı üstünlük sağlanması  
+D) Zut isyanının çıkması ve Abbâsî ordusunun başarısı z olması  
+
+**Cevap:** A
+
+---
+
+### Soru 87
+
+Halife Mu’tasım döneminde çıkan ve Basra civarında devlet otoritesine zarar veren isyan aşağıdakilerden hangisidir?
+
+A) Hâricî isyanı  
+B) Zut isyanı  
+C) Horasan isyanı  
+D) İdrîsîler isyanı  
+
+**Cevap:** B
+
+---
+
+### Soru 88
+
+Halife Mu’tasım döneminde Abbâsî o rdusunun en büyük iç güvenlik problemlerinden biri olan Zut isyanı hangi yöntemle bastırılmıştır?
+
+A) Halife ordusunun Zut savaşçılarını çember içine alıp yok etmesi  
+B) Zutların yaşadığı bölgenin Bizans topraklarına taşınması  
+C) Abbâsî birliklerinin nehir k anallarını kapatarak Zutların hareket kabiliyetini yok etmesi  
+D) Zut liderlerinin siyasi yollarla ikna edilerek isyanın sonlandırılması  
+
+**Cevap:** C
+
+---
+
+### Soru 89
+
+Halife Mu’tasım döneminde Bizans’a karşı gerçekleştirilen Amorion Seferi’nde Abbâsî ordusunun Bizanslılara  karşı en önemli zaferi aşağıdakilerden hangisidir?
+
+A) Bizans’ın Abbâsî Devleti’ne haraç ödemeye başlaması  
+B) Abbâsî ordusunun İstanbul’u kuşatması  
+C) Mu’tasım’ın Tarsus’u fethetmesi  
+D) Afşin’in Yeşilırmak yakınlarında Theophilos’un ordusunu yenmesi  
+
+**Cevap:** D
+
+---
+
+### Soru 91
+
+Vâsık döneminde ordunun doğu ve batı bölgelerinin yönetimi aşağıdaki Türk komutanlardan hangisine bırakılmıştır?
+
+A) Afşin ve Boğa el -Kebîr  
+B) Bâyık Beg ve Sâlih b. Vasîf  
+C) Vasîf ve Boğa es -Sağîr  
+D) İtâh ve Eşnâs  
+
+**Cevap:** D
+
+---
+
+### Soru 92
+
+Halife Vâsık döneminde Abbâsî Devleti’nin resmi mezhebi olan Mutezile’ye karşı direnen ve isyan hazırlığı içinde olduğu gerekçesiyle öldürüle n kişi kimdir?
+
+A) Ahmed b. Hanbel  
+B) İbn Tayfur  
+C) Ahmed b. Nasr el -Huzâî  
+D) Yahyâ b. Eksem  
+
+**Cevap:** C
+
+---
+
+### Soru 93
+
+Halife Mütevekkil döneminde alınan hangi karar Abbâsî Devleti’nde Mutezile’nin devlet üzerindeki etkisini sonlandırmıştır?
+
+A) Ahmed b. Ebû Duâd’ın görevden alınması ve yerine Sünni görüşlü bir kadının atanması  
+B) Mihne (Halku’l -Kur’ân sorgulamaları) uygulamalarının yasaklanması  
+C) Şii ve Mutezile mezheplerine karşı sert bir baskı politikası izlenmesi  
+D) Ahmed b. Hanbel’in serbest bırakılması ve ona büyük itibar gösterilmesi  
+
+**Cevap:** B
+
+---
+
+### Soru 94
+
+Abbâsî halifesi Mütevekkil’in, Sünniliği güçlendirme amacıyla gerçekleştirdiği uygulamalardan biri aşağıdakilerden hangisidir?
+
+A) Şii vakıflarına el koyması ve Hz. Hüseyin’in türbesini yıktırması  
+B) Türk komut anları tamamen ordudan uzaklaştırması  
+C) Mutezile mezhebini devletin resmi mezhebi ilan etmesi  
+D) Şiilerle iş birliği yaparak Ehl -i Beyt mensuplarını devletin önemli kademelerine ataması  
+
+**Cevap:** A
+
+---
+
+### Soru 95
+
+Halife Mütevekkil’in suikast sonucu öldürülmesinde aşağ ıdaki unsurlardan hangisi etkili olmuştur?
+
+A) Halkın ağır vergiler nedeniyle ayaklanması  
+B) Abbâsî ordusundaki Türk komutanların kendi aralarındaki rekabeti  
+C) Şii isyanlarının Mütevekkil’e karşı kışkırtılması  
+D) Oğlu Muntasır’ın Türk komutanlarla iş birl iği yaparak babasını devirmesi  
+
+**Cevap:** D
+
+---
+
+### Soru 96
+
+Halife Muntasır’ın ölümüne neden olduğu iddia edilen en önemli olay aşağıdakilerden hangisidir?
+
+A) Türk askerlerinin maaşlarının ödenmemesi nedeniyle ayaklanması  
+B) Babası Mütevekkil’i öldürmesinin ardından Türk  askerlerine karşı intikam planları yapması  
+C) Bizans üzerine düzenlenen bir sefere liderlik etmesi ve başarısız olması  
+D) Abbâsîler içinde Şii isyanlarını bastırmak için sert tedbirler alması  
+
+**Cevap:** B
+
+---
+
+### Soru 97
+
+Müstaîn’in hilafet mücadelesi sırasında Sâmerrâ’d an kaçıp Bağdat’a gitmesinin en önemli sebebi aşağıdakilerden hangisidir?
+
+A) Türk komutanların giderek artan nüfuzundan kurtulmak istemesi  
+B) Şii isyanlarına destek vererek onları yönetim kademelerine dahil etmek istemesi  
+C) Horasanlı Tâhirîler ile ittifak  kurarak Türk komutanların gücünü kırmak istemesi  
+D) Mutezile mezhebini devletin resmi görüşü olarak yeniden benimsetmek istemesi  
+
+**Cevap:** A
+
+---
+
+### Soru 99
+
+Halife Mühtedî’nin Türk komutanlarının gücünü zayıflatmak için attığı en önemli adım aşağıdakilerden hangisidir?
+
+A) Mûsâ b. Boğa ve Yâcûr ile ittifak yaparak Sâlih b. Vasîf’i idam ettirmek  
+B) Bağdat’ı tekrar A bbâsî Devleti’nin başkenti ilan etmek  
+C) Bizans ile ittifak kurarak doğrudan Türk komutanlara karşı mücadele etmek  
+D) Zenc isyanını bastırmak için tüm askeri gücünü oraya yönlendirmek  
+
+**Cevap:** A
+
+---
+
+### Soru 100
+
+Halife Mühtedî’nin ölümüne yol açan gelişmeler arasında aşağıdakilerden hangisi en önemli rolü oynamıştır?
+
+A) Abbâsî ordusundaki Arap ve Fars kökenli askerlerin Türk komutanlara karşı birleşmesi  
+B) Bizans’ın Abbâsî topraklarına büyük bir saldırı düzenlemesi  
+C) Şii isyanlarının Bağdat ve çevresinde büy ük bir destek bulması  
+D) Türk askerlerinin maaşlarının ödenmemesi üzerine isyan etmesi  
+
+**Cevap:** D
+
+---
+
+### Soru 101
+
+Halife Mu’temid döneminde Türklerin Abbâsî Devleti’ndeki nüfuzunun azalmasının en temel sebebi aşağıdakilerden hangisidir?
+
+A) Abbâsî halifelerinin Türkler i ordudan tamamen çıkarması  
+B) Bizans’la yapılan savaşlarda Türk birliklerinin ağır kayıplar vermesi  
+C) Sâmerrâ’nın terk edilerek Bağdat’ın tekrar hilafet merkezi olması  
+D) Halife Mu’temid’in Şii politikalarına ağırlık vermesi  
+
+**Cevap:** C
+
+---
+
+### Soru 102
+
+Halife Mu’temi d döneminde Abbâsî Devleti’ni uzun süre meşgul eden ve bölgeyi istikrarsızlaştıran en önemli isyan aşağıdakilerden hangisidir?
+
+A) Karmatî İsyanı  
+B) Şii Büveyhî İsyanı  
+C) Saffârîler İsyanı  
+D) Zencî İsyanı  
+
+**Cevap:** D
+
+---
+
+### Soru 103
+
+Abbâsîler döneminde Karmatîler, Hace rülesved’i çalarak kendi topraklarına götürmüştür. Bu olay hangi halife döneminde gerçekleşmiştir?
+
+A) Müktefî -Billâh  
+B) Muktedir -Billâh  
+C) Mu’temid -Alellâh  
+D) Kâhir -Billâh  
+
+**Cevap:** B
+
+---
+
+### Soru 104
+
+Abbâsî Devleti’nde Emîrü’l -Ümerâlık sisteminin kurulmasının temel ned eni aşağıdakilerden hangisidir?
+
+A) Türk askerlerinin devleti ele geçirmesi  
+B) Şii Büveyhîler’in Abbâsîler üzerinde baskı kurması  
+C) Bizans’ın sürekli olarak Abbâsî topraklarına saldırması  
+D) Abbâsî halifelerinin siyasi otoritesinin zayıflaması  
+
+**Cevap:** D
+
+---
+
+### Soru 105
+
+Şii Büveyhîler, Abbâsî Devleti’ni kontrol altına almalarına rağmen neden Abbâsî halifeliğini tamamen ortadan kaldırmamışlardır?
+
+A) Abbâsî halifelerinin onlarla iş birliği yapması  
+B) Ordularında bulunan Sünni Türk askerlerinin olası tepkisinden çekinmel eri  
+C) Halkın büyük bir kısmının Şii Büveyhîleri desteklemesi  
+D) Abbâsî halifelerinin doğrudan Büveyhî hükümdarlarını ataması  
+
+**Cevap:** B
+
+---
+
+### Soru 106
+
+Halife Râdî döneminde Abbâsî halifelerinin devlet yönetimindeki etkisini büyük ölçüde kaybetmesine neden olan gelişme aşağıdakilerden hangisidir?
+
+A) Hilafet merkezinin Bağdat’tan Sâmerrâ’ya taşınması  
+B) Şii Büveyhîler’in Abbâsî Devleti’ni ele geçirmesi  
+C) Emîrü’l -Ümerâlık sisteminin kurulması  
+D) Türk komutanlar arasında çıkan iç savaşlar  
+
+**Cevap:** C
+
+---
+
+### Soru 107
+
+Halife Muktedir döneminde Abbâsî Devleti için en büyük tehlike aşağıdakilerden hangisidir?
+
+A) Türk komutanların devleti ele geçirme girişimleri  
+B) Şii Büveyhîler’in Abbâsî başkentini işgal etmesi  
+C) Karmatîler’in hac yollarını tehdit etmesi ve Mekke’yi yağ malaması  
+D) Moğolların Abbâsî topraklarını ele geçirmesi  
+
+**Cevap:** C
+
+---
+
+### Soru 108
+
+Büveyhîler döneminde Şii düşüncenin Abbâsî Devleti’nde etkisini artırmasının en önemli göstergesi aşağıdakilerden hangisidir?
+
+A) Halifelerin Şii imamlar tarafından atanması  
+B) Cami duv arlarına sahabelere lanet içeren yazıların yazdırılması  
+C) Sünni mezheplerin resmen yasaklanması  
+D) Halifelik makamının tamamen lağvedilmesi  
+
+**Cevap:** B
+
+---
+
+### Soru 109
+
+Abbâsî Devleti’ndeki Türk komutanların nüfuzunun kırılmasında etkili olan gelişmelerden biri aşağıda kilerden hangisidir?
+
+A) Türk askerlerinin ordudan çıkarılması  
+B) Abbâsî halifelerinin Şii Büveyhîler ile iş birliği yapması  
+C) Sâmerrâ’da çıkan isyanlar ve ordunun büyük kayıplar vermesi  
+D) Halife Muktedir’in, Türk komutanların tüm yetkilerini elinden alma sı  
+
+**Cevap:** C
+
+---
+
+### Soru 110
+
+Şii Büveyhîler döneminde Abbâsî halifelerinin otoritesinin tamamen gölgede kalmasına neden olan gelişme aşağıdakilerden hangisidir?
+
+A) Halifelerin Büveyhî emirleri tarafından azledilip atanması  
+B) Halifelerin siyasi ve dini otoritesinin B üveyhîler tarafından artırılması  
+C) Abbâsî Devleti’nin Moğollar tarafından yıkılması  
+D) Şii Büveyhîlerin, Abbâsî halifelerini tam yetkili olarak tanıması  
+
+**Cevap:** A
+
+---
+
+### Soru 112
+
+Büyük Selçuklu Devleti ile Abbâsî Halifeliği arasındaki ilişkiler göz önüne alındığında, Sultan Alparslan’ın halifenin kızı  Seyyide Hatun’u Bağdat’a geri göndermesi hangi amaca hizmet etmiştir?
+
+A) Abbâsî halifeliği ile dostane ilişkileri sürdürmek ve diplomatik bir jest yapmak  
+B) Halifeye siyasi baskı yaparak Selçuklu hâkimiyetini resmen tanımasını sağlamak  
+C) Halifeye sadakat  göstermek ve onun dini liderliğini kabul ettiğini göstermek  
+D) Abbâsî halifesi Kâim -Biemrillâh’ı siyasi olarak zor durumda bırakmak  
+
+**Cevap:** A
+
+---
+
+### Soru 113
+
+Sultan Melikşah döneminde Abbâsî halifesi tarafından kendisine "Doğunun ve Batının Hükümdarı" unvanı verilmesinin temel sebebi aşağıdakilerden hangisidir?
+
+A) Sultan Melikşah’ın Bizans’a karşı kazandığı zaferler  
+B) Selçuklu Devleti’nin Abbâsî Halifeliği’ni koruma görevini üstlenmesi  
+C) Bağdat’ın Moğollar tarafından tehdit edilmesi  
+D) Selçukluların Abbâsî h alifelerini doğrudan atamaya başlaması  
+
+**Cevap:** B
+
+---
+
+### Soru 116
+
+Abbâsî Halifesi Müsta’sım -Billâh’ın Moğol ordusuna karşı direniş göstermeme sinin en temel nedeni aşağıdakilerden hangisidir?
+
+A) Moğolların barış teklifine güvenmesi ve onların saldırmayacağını düşünmesi  
+B) Halife ordusunun yetersiz olması ve Bağdat’ta ciddi bir savunma gücünün bulunmaması  
+C) Abbâsî ordusunun Bizans ile savaş hali nde olması nedeniyle güçsüz kalması  
+D) Halifenin, Moğollarla savaşın dinî olarak yasak olduğunu ilan etmesi  
+
+**Cevap:** B
+
+---
