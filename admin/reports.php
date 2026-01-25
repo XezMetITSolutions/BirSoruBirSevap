@@ -47,7 +47,7 @@ $institutionStats = [];
 
 foreach ($allUsers as $u) {
     if ($u['role'] !== 'superadmin') {
-        $institution = $u['branch'] ?? $u['institution'] ?? 'Bilinmiyor';
+        $institution = (!empty($u['branch'])) ? $u['branch'] : ((!empty($u['institution'])) ? $u['institution'] : 'Bilinmiyor');
         if (!isset($institutionStats[$institution])) {
             $institutionStats[$institution] = ['users' => 0, 'exams' => 0, 'questions' => 0];
         }

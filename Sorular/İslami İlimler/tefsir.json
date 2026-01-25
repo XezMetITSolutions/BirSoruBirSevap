@@ -1,0 +1,972 @@
+{
+    "category": "Tefsir",
+    "title": "Tefsir Soruları",
+    "questions": [
+        {
+            "id": 1,
+            "question": "Aşağıdakilerden hangisi Arabistan Yarımadası’nın jeopolitik önemini artıran sebeplerden biri değildir ?",
+            "options": {
+                "A": "Batıda Kızıldeniz ile Afrika’ya, doğuda Basra Körfezi ile İran’a komşu olması",
+                "B": "Kuzeyde ve güneyde ticaret yollarının kavşak noktasında bulunması",
+                "C": "Avrupa kıtası ile kara sınırına sahip olması",
+                "D": "Hint Okyanusu’na açılan bir yarımada olması"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 2,
+            "question": "İslam öncesi Arap toplumunda kabile düzeninin en temel özelliği aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Mülkiyetin bireysel olarak tanınması",
+                "B": "Kabile reisinin mutlak otoriteye sahip olması",
+                "C": "Kan bağına dayalı bir örgütlenme modeline sahip olması",
+                "D": "Tüm Arap kabilelerinin merkezi bir yönetim altında birleşmiş olması"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 3,
+            "question": "Aşağıdakilerden hangisi İslam öncesi Mekke şehrinin önemli özelliklerinden biri deği ldir?",
+            "options": {
+                "A": "Ticaretin şehir ekonomisinde önemli bir yer tutması",
+                "B": "Kâbe’nin varlığı nedeniyle dinî bir merkez olması",
+                "C": "Tarıma dayalı ekonomisiyle ön plana çıkması",
+                "D": "Yılda iki defa büyük ticaret kervanlarının düzenlenmesi"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 4,
+            "question": "İslam öncesi Medine’nin  (Yesrib) ekonomik yapısıyla ilgili aşağıdakilerden hangisi doğrudur?",
+            "options": {
+                "A": "Şehir ekonomisi büyük ölçüde ticarete dayanıyordu.",
+                "B": "Yahudi kabileleri şehrin ekonomik hayatında önemli rol oynuyordu.",
+                "C": "Medine’nin gelir kaynaklarının başında deniz ticareti geliyo rdu.",
+                "D": "Tarım ve hayvancılık Medine’de önemini yitirmişti."
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 5,
+            "question": "Hristiyanlık inancında teslis (üçleme) kavramının unsurları aşağıdakilerden hangisinde doğru şekilde verilmiştir?",
+            "options": {
+                "A": "Baba - Oğul - Kutsal Ruh",
+                "B": "Baba - Melek - Oğul",
+                "C": "İsa - Melek  - Tanrı",
+                "D": "Oğul - Ruh - Peygamber"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 6,
+            "question": "Câhiliye dönemi Araplarının putperestliğe yönelme sebeplerinden biri değildir ?",
+            "options": {
+                "A": "Allah’a daha yakın olmak istemeleri",
+                "B": "Putların kendilerine şefaat edebileceğine inanmaları",
+                "C": "Putları Allah’ın kızları olarak kabul etmeleri",
+                "D": "Tevrat’tan ve Zebur’dan etkilenerek monoteizme yönelmeleri"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 7,
+            "question": "Kur’an öncesi Arap toplumunda Yahudilik inancıyla ilgili aşağıdakilerden hangisi yanlıştır ?",
+            "options": {
+                "A": "Yahudiler, Tanrı’nın birliği inancına sıkı sıkıya bağlıydılar.",
+                "B": "Yahudiler, zaman zaman başka ilahlara tapmışlardır.",
+                "C": "Yahudiler, din adamlarını tanrı konumuna yükseltmişlerdir.",
+                "D": "Yahudiler, hiçbir zaman Üzeyir’i (Ezrâ) Allah’ın oğlu olarak görmemişlerdir."
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 8,
+            "question": "İslam inancına göre insanlığın ilk dini aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Tevhit dini",
+                "B": "Putperestlik",
+                "C": "Şamanizm",
+                "D": "Çoktanrıcılık"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 9,
+            "question": "İslam’a göre ilahî kitapların suhuflardan (sahifeler) sonra kitap formunda inzal edilmesi hangi sebebe dayanmaktadır?",
+            "options": {
+                "A": "Peygamberlerin sayısının artmış o lması",
+                "B": "İnsanların bilgiye olan ilgisinin azalması",
+                "C": "Toplumların gelişip ihtiyaçlarının artması",
+                "D": "Önceki suhufların tamamının kaybolmuş olması"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 10,
+            "question": "Yahudilere göre, Tevrat hakkında aşağıdakilerden hangisi doğrudur?",
+            "options": {
+                "A": "Mûsâ (a.s.)’dan sonra ba şka peygamberlere de vahyedilmiştir.",
+                "B": "Hiçbir değişikliğe uğramadan günümüze kadar gelmiştir.",
+                "C": "Tevrat’ın ilk yazılı metinleri İbranice değil Arapçaydı.",
+                "D": "Tevrat yalnızca Levililer kitabından ibarettir."
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 11,
+            "question": "Yapılan bilimsel araştırmalar, Tevra t’ın yazımıyla ilgili olarak hangi sonucu ortaya koymuştur?",
+            "options": {
+                "A": "Tevrat, tek bir kişi tarafından yazılmıştır.",
+                "B": "Tevrat, M.Ö. 13. yüzyılda tamamen tamamlanmıştır.",
+                "C": "Tevrat, çeşitli dönemlerde farklı yazarlar tarafından yazılmıştır.",
+                "D": "Tevrat’ta tarihî ve bi limsel hatalara rastlanmamaktadır."
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 12,
+            "question": "Zebur hakkında aşağıdakilerden hangisi yanlıştır ?",
+            "options": {
+                "A": "Mezmurlar adıyla da bilinir.",
+                "B": "Dâvûd (a.s.)’a vahyedildiği kabul edilir.",
+                "C": "Babil sürgününden sonra kaleme alınmıştır.",
+                "D": "Bugünkü Zebur, orijinal Zebur’un aynısıdır."
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 13,
+            "question": "İslam’a göre Îsâ (a.s.)’a hangi kutsal kitap vahyedilmiştir?",
+            "options": {
+                "A": "İncil",
+                "B": "Zebur",
+                "C": "Tevrat",
+                "D": "Mezmurlar"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 14,
+            "question": "Bugünkü İncillerin asıl orijinal metinlerden kopya edilip edilmediğini belirlemenin zor olmasının sebebi nedir?",
+            "options": {
+                "A": "Îsâ (a.s.) zamanında okuma yazma bilenlerin çok az olması",
+                "B": "Orijinal İncillerin günümüze ulaşmamış olması",
+                "C": "Hristiyan âlimlerin bu konuda araştırma yapmamış olması",
+                "D": "Îsâ (a.s.)’ın öğretilerinin sadece sözlü aktarılmış olması"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 15,
+            "question": "Aşağıdakilerden hangisi Kur’an’ın İnciller hakkındaki görüşünü en doğru şekilde ifade eder?",
+            "options": {
+                "A": "İnciller, Îsâ (a.s.)’ın sözleriyle birebir örtüşmektedir.",
+                "B": "Îsâ (a.s.)’a dört farklı İncil vahyedilmiştir.",
+                "C": "Mevcut İnciller, insan eliyle değiştirilmiş ve tahri f edilmiştir.",
+                "D": "İncillerin tamamı vahyin orijinal metinleridir."
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 16,
+            "question": "Vahyin sözlük anlamı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Bir şeyi gizli ve süratli bir şekilde bildirmek",
+                "B": "Açıktan emir ve yasak bildirmek",
+                "C": "İnsanlara sözlü olarak öğüt vermek",
+                "D": "Allah’ın sadece meleklere gönderdiği mesaj"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 17,
+            "question": "Kur’ân -ı Kerîm’e göre vahyin yalnızca peygamberlere yönelik değil, tüm varlıklara yönelik olduğu aşağıdakilerden hangisiyle desteklenebilir?",
+            "options": {
+                "A": "Allah’ın meleklere görevlerini bildirmesi",
+                "B": "Vahyin yalnızca peygamberlere inzal edilmesi",
+                "C": "Vahyin yalnızca kitaplara yazılması",
+                "D": "İnsanların vahiy yoluyla doğrudan Allah’la konuşabilmesi"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 18,
+            "question": "Vahyin genel boyutu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+            "options": {
+                "A": "Varlıklar açısından fıtrat ge reği uyulması gereken bir zorunluluktur.",
+                "B": "Vahiy doğrudan Allah’tan gelir ve varlıkların hareketlerini belirler.",
+                "C": "Varlıklar vahyi anlamak ve ona göre hareket etmek konusunda serbesttirler.",
+                "D": "Melekler ve diğer yaratılmışlar da bu tür vahiyle yönlendiril ir."
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 19,
+            "question": "Kurumsal (özel) vahiy sürecinde kaç varlık arasında bir iletişim gerçekleşmektedir?",
+            "options": {
+                "A": "İki",
+                "B": "Üç",
+                "C": "Beş",
+                "D": "Dört"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 20,
+            "question": "Vahyin dört temel vasfı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Gerçeklik, gizlilik, öznellik, süratlilik",
+                "B": "Özgürlük, açıklık, bireysellik, evrensellik",
+                "C": "Mantıksallık, gözlemlenebilirlik, deneysel kanıtlanabilirlik, bireysellik",
+                "D": "Farklılık, zorluk, belirsizlik, yalnızlık"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 21,
+            "question": "Kur’an’ın vahiy ile ilgili olarak getirdiği en temel mesaj aşağıdakilerden h angisidir?",
+            "options": {
+                "A": "İnsanlar yalnızca kendi akıllarıyla hakikati bulabilir.",
+                "B": "Peygamberler dışında hiç kimse vahiy almaz.",
+                "C": "İnsanlar vahiyle değil, bilimle doğru yolu bulabilir.",
+                "D": "Allah, insanları rehbersiz bırakmamıştır."
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 22,
+            "question": "Materyalist ve pozitiv ist anlayış vahyi neden kabul etmez ?",
+            "options": {
+                "A": "Deneye ve gözleme dayalı olarak kanıtlanamaz olduğu için",
+                "B": "Vahyin yanlış olduğunu bilimsel olarak kanıtladıkları için",
+                "C": "Vahyin yalnızca belli toplumlar için geldiğini düşündükleri için",
+                "D": "Vahyin yalnızca geçmiş dön emlerde geçerli olduğuna inandıkları için"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 23,
+            "question": "Aşağıdaki hadislerden hangisi vahyin peygamberlere geliş şekilleri hakkında bilgi verir?",
+            "options": {
+                "A": "\"Bazen melek bana insan kılığına girerek gelir ve benimle konuşur.\"",
+                "B": "\"İnsan kendi kaderini kendi yazar.\"",
+                "C": "\"İlim Çin'de bile olsa gidip alınız.\"",
+                "D": "\"Cennete sadece iyi insanlar girer.\""
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 24,
+            "question": "Vahyin gizli oluşunun temel sebebi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Allah’ın vahiy sürecine insanları dahil etmek istememesi",
+                "B": "İnsanların, vahyi doğrudan görebilec ek yapıda olmaması",
+                "C": "Peygamberlerin sadece kendilerine gelen vahyi saklamak istemesi",
+                "D": "Vahyin yalnızca yazılı olarak bildirilmesi"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 25,
+            "question": "Vahyin süratli olmasının sebebi aşağıdakilerden hangisiyle açıklanabilir?",
+            "options": {
+                "A": "Peygamberlerin zayıf hafızalarının desteklenmesi",
+                "B": "İnsanların kısa sürede bilgiyi anlamalarının sağlanması",
+                "C": "İlahi bilginin insana doğrudan ve en etkili şekilde aktarılması",
+                "D": "Vahyin hafızada kalıcı olmasının amaçlanması"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 26,
+            "question": "Kur’an’da belirtilen yaratılışın gayesi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Kâinatın sırlarını çözmek",
+                "B": "Allah’ı tanımak ve O’na ibadet etmek",
+                "C": "İnsanların birbirleriyle yarışması",
+                "D": "İnsanların refah içinde bir hayat sürmesi"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 27,
+            "question": "İnsanın başıboş yaratılmadığını ifade eden ayetlerden biri aş ağıdakilerden hangisidir?",
+            "options": {
+                "A": "\"İnsan kendi yolunu kendi çizer.\"",
+                "B": "\"İnsan başıboş bırakılacağını mı sanır?\"",
+                "C": "\"Dünya sadece bir eğlence yeridir.\"",
+                "D": "\"İnsanlar birbirlerine muhtaçtır.\""
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 28,
+            "question": "İnsanın yaratılış amacına uygun olarak hareket edebilmesi için aşağıdakilerden hangisine ihtiyacı vardır?",
+            "options": {
+                "A": "Maddi zenginlik",
+                "B": "Deneysel öğrenme",
+                "C": "Bilimsel keşifler",
+                "D": "Vahiy ve rehberlik"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 29,
+            "question": "Kur’an’a göre insanın yaratılışındaki üstünlük hangi faktörle ilişkilidir?",
+            "options": {
+                "A": "Bedeninin diğer canlılardan güçlü  olması",
+                "B": "Aklı, iradesi ve sorumluluk bilinciyle hareket edebilmesi",
+                "C": "Maddi varlıklar üzerinde tasarruf hakkına sahip olması",
+                "D": "Fiziksel olarak daha büyük olması"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 30,
+            "question": "Kur’an’a göre, insanların yalnızca kendi akıllarıyla doğru yolu bulamamaları nın nedeni nedir?",
+            "options": {
+                "A": "İnsanların doğuştan günahkâr olması",
+                "B": "İnsanların şüpheye eğilimli olması",
+                "C": "İnsanların nefis, hevâ ve unutkanlık gibi olumsuz yönlere sahip olması",
+                "D": "Peygamberlerin yeterince öğüt vermemesi"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 31,
+            "question": "Kur’an’ın tedricen indirilmesinin sebeplerinden biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Peygamberlerin hayatını detaylandırmak için",
+                "B": "Kur’an’ın bir anda okunması nın yasak olması nedeniyle",
+                "C": "Muhatapların sorularına cevap vermek ve dini hükümlerin hayata geçişini kolaylaştırmak",
+                "D": "Arap toplumunun yazıya önem vermemesi nedeniyle"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 32,
+            "question": "Aşağıdakilerden hangisi Kur’an’ın korunmasıyla ilgili olarak yanlıştır ?",
+            "options": {
+                "A": "Kur’an’ın lafız ve mana olarak korunacağı ilahî bir vaatle güvence altına alınmıştır.",
+                "B": "Vahiy esnasında şeytanın müdahale etmeye çalıştığı ancak bunun engellendiği bildirilmiştir.",
+                "C": "Peygamber’e gelen vahyin yazıya geçirilmesi onun korunmasında etkili olmuştur.",
+                "D": "Kur’an, sadece ezberlenerek günümüze ulaşmış, yazıya geçirilmemiştir."
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 33,
+            "question": "Hz. Peygamber, Kur’an’ı yalnızca ezberlemeyi değil, aynı zamanda yazıya geçirmeyi de teşvik etmiştir. Bu durumun temel sebebi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Ezberleme konusunda güven problemi yaşanması",
+                "B": "Yazının unutmayı ve hataları engelleyen kalıcı bir yöntem olması",
+                "C": "Tüm sahabelerin okuma yazma bilmesi",
+                "D": "Yazının, Arap toplumunda önemli  bir kültürel unsur olması"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 34,
+            "question": "Hz. Ebû Bekir döneminde Kur’an’ın cem edilmesine sebep olan  en önemli olay aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Hz. Peygamber’in vefatıyla vahyin sona ermesi ve metnin korunması gerekliliği",
+                "B": "Hz. Osman’ın farklı kıraatleri ortadan kaldırmak istemesi",
+                "C": "Sahabeler arasında Kur’an’ın doğru okunup okunmadığına dair ihtilafl arın çıkması",
+                "D": "Hz. Ömer’in, mushafın istinsah edilmesi gerektiğine dair ısrarcı olması"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 35,
+            "question": "Hz. Osman döneminde Kur’an’ın çoğaltılmasına neden olan temel faktör aşağıdakilerden hangisidir  ?",
+            "options": {
+                "A": "Müslümanlar arasında kıraat farklılıklarının ortaya çıkması ve ihtilafların artması",
+                "B": "Hz. Osman’ın, mush afı tüm İslam dünyasına yaymak istemesi",
+                "C": "Hz. Ömer’in Kur’an’ın tek bir kitap haline getirilmesini istemesi",
+                "D": "Hz. Ebû Bekir döneminde cem edilen metnin kaybolma tehlikesi"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 36,
+            "question": "Yedi harf (el -Ahrufu’s -Seb‘a) konusundaki en tutarlı görüş aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Yedi harften maksat, yedi farklı Arap kabilesinin lehçeleridir.",
+                "B": "Yedi harf, yedi büyük kıraat imamının farklı okuma şekilleridir.",
+                "C": "Yedi harf, Hz. Osman’ın istinsah ettirdiği mushaflarda belirlenen kıraat türleridir.",
+                "D": "Ye di harf, kelimelerin anlamını değiştirmeden alternatifli okuma tarzıdır."
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 37,
+            "question": "Aşağıdakilerden hangisi mütevatir kıraatlerin özelliklerinden biri değildir ?",
+            "options": {
+                "A": "Hz. Peygamber’e muttasıl (kesintisiz) bir senetle ulaşması",
+                "B": "Arap dili gramerine uygun olması",
+                "C": "Hz. Osman’a nispet edilen mushafların resm -i hattına aykırı olmaması",
+                "D": "Sahabeler tarafından kendi yorumlarına göre oluşturulmuş olması"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 38,
+            "question": "Aşağıdaki kıraat imamlarından hangisi Medine kıraat ekolünün öncüsüdür?",
+            "options": {
+                "A": "Nâfi b. Ebî Nuaym",
+                "B": "Hamza b. Habib",
+                "C": "Abdullah b. Kesîr",
+                "D": "İbn Âmir"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 39,
+            "question": "Kur’an’ın mucizevi yönlerinden biri olan icaz kavramı ne anlama gelir?",
+            "options": {
+                "A": "Kur’an’ın tüm insanları ve cinleri, onun bir benzerini getirmekten âciz bırakması",
+                "B": "Kur’an’ın kelimelerinin Arapça içinde en üstün belagat seviyesinde olması",
+                "C": "Kur’an’ın içerdiği gaybî haberlerin gelecekte aynen gerçekleşmesi",
+                "D": "Kur’an’ın kıraat farkları sebebiyle farklı lehçelerle okunabilmesi"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 40,
+            "question": "Mu‘tezile mezhebine mensup Nazzâm’ın sarfe  görüşüne göre Kur’an’ın mucizeliği aşağıdaki sebeplerden hangisine dayanmaktadır?",
+            "options": {
+                "A": "Kur’an’ın olağanüstü fesahat ve belagat gücüne sahip olması",
+                "B": "Allah’ın insanlara Kur’an’a benzer bir metin oluşturma yeteneğini engellemesi",
+                "C": "Kur’an’ın içerdiği ahlaki prensiplerin eşsizliği",
+                "D": "Kur’an’ın gaybî haberlerinin doğruluğu"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 41,
+            "question": "Aşağıdaki ifadelerden hangisi muhkem  ayetler için d oğru bir tanımdır?",
+            "options": {
+                "A": "Manası açık olup herhangi bir ihtilafa yol açmayan, tek bir anlama delalet eden ayetlerdir.",
+                "B": "Manası kapalı olup birden fazla anlama ihtimali bulunan ayetlerdir.",
+                "C": "İçeriği tam olarak bilinmeyen ve tefsir edilmesi mümkün olmayan ayet lerdir.",
+                "D": "Sadece kıyamete kadar anlaşılamayacak hakikatleri içeren ayetlerdir."
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 42,
+            "question": "Aşağıdakilerden hangisi Kur’an’da neshin çeşitlerinden biri  değildir ?",
+            "options": {
+                "A": "Metni mensûh, hükmü baki olan ayetler",
+                "B": "Metni baki, hükmü mensûh olan ayetler",
+                "C": "Hem metni hem hükmü mensûh olan ayetler",
+                "D": "Hükmü değişmeden kelimeleri farklı hale getirilen ayetler"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 43,
+            "question": "Aşağıdakilerden hangisi, Hz. Muhammed’in (s.a.v.) Kur’an’a göre taşıdığı beşerî özelliklerden biri değildir ?",
+            "options": {
+                "A": "O da diğer insanlar gibi evlenip yuva kurmuştur.",
+                "B": "Normal bir insan gibi zaman zaman üzülmüş ve sevinmiştir.",
+                "C": "Gaybı bilme yetisine doğuştan sahip olup geleceği her zaman önceden haber vermiştir.",
+                "D": "Çarşı ve pazarlarda dolaşarak sosyal hayatın içinde bulunmuştur."
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 44,
+            "question": "Nübüvvetin gerekliliğini reddeden bazı akımların öne sürdüğü temel argüman aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Peyg amberlerin görevi, insanları hem dünya hem de ahiret saadetine ulaştırmaktır.",
+                "B": "İnsan aklı, ilahî rehberlik olmadan Allah’ın emir ve yasaklarını eksiksiz olarak bilemez.",
+                "C": "Allah’ın merhameti gereği insanlara peygamberler göndermesi kaçınılmazdır.",
+                "D": "İns an aklı, nübüvvete ihtiyaç duymayacak kadar yeterlidir; peygamberler gereksizdir."
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 45,
+            "question": "Aşağıdakilerden hangisi, peygamberlerin gösterdiği mucizelerin türlerinden biri değildir ?",
+            "options": {
+                "A": "Teknolojik mucizeler",
+                "B": "Hissî mucizeler",
+                "C": "Akli mucizeler",
+                "D": "Haberî  mucizeler"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 46,
+            "question": "İslam düşüncesine göre insanın sorumluluğunu yerine getirm esine engel olan başlıca faktörler nelerdir?",
+            "options": {
+                "A": "Yalnızca şeytan",
+                "B": "Nefis ve şeytan",
+                "C": "Sadece insanın sosyal çevresi",
+                "D": "Kader inancı ve toplumsal yapı"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 47,
+            "question": "Kur’an'a göre insanın iradesinin Allah’ın iradesiyle olan ilişkisi nasıl açıklanabilir?",
+            "options": {
+                "A": "İnsan, kendi iradesini kullanarak tercih yapar ve Allah’ın külli iradesi buna göre tecelli eder.",
+                "B": "İnsan hiçbir iradeye sahip değildir, tüm fiilleri Allah tarafından belirlenmiştir.",
+                "C": "İnsan, tam bağımsız bir iradeye sahiptir ve Allah’ın iradesiyle hiçbir bağı yoktur.",
+                "D": "İnsan ancak zorunlu ibadetlerde irade sahibidir, diğer konularda ise kader belirleyicidir."
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 48,
+            "question": "Kur’an’a göre ölümle başlayan ve yeniden dirilişe kadar devam eden dönem aşağıdaki kavramlardan hangisiyle ifade edilir?",
+            "options": {
+                "A": "Ahiret",
+                "B": "Kıyamet -i Kübra",
+                "C": "Haşir",
+                "D": "Berzah"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 49,
+            "question": "Kur’an’ın kıyametle ilgili tasvirlerinde \"sur\" kelimesi nasıl bir anlam taşımaktadır?",
+            "options": {
+                "A": "Cennet ve cehennemin yaratıldığı kutsal mekân",
+                "B": "Kabir hayatında yaşanan ruhsal  hâllerin bütününe verilen isim",
+                "C": "Meleklerin insanları haşir meydanında toplayacağı kutsal alan",
+                "D": "Kıyametin kopmasını başlatan ve dirilişi gerçekleştiren ilahi ses"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 50,
+            "question": "Aşağıdakilerden hangisi ahirette şefaatin mümkün olduğunu bildiren ayetleri n içerdiği temel bir prensiptir?",
+            "options": {
+                "A": "Şefaat, sadece peygamberlere mahsustur ve diğer müminler bundan faydalanamaz.",
+                "B": "Şefaat hakkı yalnızca dünyada hiçbir günah işlememiş kimselere verilecektir.",
+                "C": "Şefaat ancak Allah’ın izin vermesiyle gerçekleşebilir.",
+                "D": "Şefaat, sadece kıyamet gününde değil, kabir hayatında da mümkündür."
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 51,
+            "question": "Ehl-i sünnet inancına göre cehennem tasviriyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+            "options": {
+                "A": "Cehennem, kıyamet koptuktan sonra yaratılacak ve inkârcılar oraya yerleştirilecektir.",
+                "B": "Cehennem, şu an yaratılmış ve kâfirler için hazır durumdadır.",
+                "C": "Cehennem sadece ruhsal azap içeren bir mekândır, bedensel acılar yaşanmayacaktır.",
+                "D": "Cehennemdeki azap, belli bir süre sonra sona erecek ve herkes cennete girecektir."
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 52,
+            "question": "Kur’an -ı Kerîm’in doğru anlaşılması için başvurulan ilimlerden olmayan  seçenek aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Hadis",
+                "B": "Astronomi",
+                "C": "Tarih",
+                "D": "Siyer"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 53,
+            "question": "Kur’an’ın anlamının başka bir dile eksik bir şekilde aktarılması anlamına gelen kavram aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Meal",
+                "B": "Tercüme",
+                "C": "Tevil",
+                "D": "Tefsir"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 54,
+            "question": "Aşağıdakilerden hangisi, İslam âlimlerinin Kur’an’ı tefsir ederk en göz önünde bulundurduğu bilim dallarından biri değildir ?",
+            "options": {
+                "A": "Kelam",
+                "B": "Fıkıh",
+                "C": "Arapça",
+                "D": "Zooloji"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 55,
+            "question": "Aşağıdakilerden hangisi rivayet tefsirinin zayıf yönlerinden biri  değildir ?",
+            "options": {
+                "A": "İsrailiyatın tefsire girmesi.",
+                "B": "Kur’an’a yeni anlamlar katmak için özgün yorumların teşvik edilmesi.",
+                "C": "Uydurma rivayetlerin Kur’an tefsirine dahil edilmesi.",
+                "D": "Mezhep görüşlerini desteklemek için bazı rivayetlerin tahrif edilmesi."
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 56,
+            "question": "Aşağıdaki tefsir ekollerinden hangisi diğerlerinden farklı  bir yöntem izlemektedir?",
+            "options": {
+                "A": "Fıkhî tefsir",
+                "B": "Kelamî tefsir",
+                "C": "Rivayet tefsiri",
+                "D": "İşârî tefsir"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 57,
+            "question": "Lokmân suresi ile ilgili aşağıdaki ifadelerden hangisi yanlıştır ?",
+            "options": {
+                "A": "Resmî sıralamada 31. sırada, nüzul sırasına göre ise 57. sırada yer almaktadır.",
+                "B": "Surenin tamamının Medine’de nazil olduğuna dair güçlü rivayetler bulunmaktadır.",
+                "C": "Surenin bazı ayetlerinin Medine’de indiğine dair görüşler mevcuttur.",
+                "D": "Surenin ismi, 12 v e 13. ayetlerde geçen Lokmân kelimesinden alınmıştır."
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 58,
+            "question": "Lokmân (a.s.) hakkında aşağıdaki bilgilerden hangisi doğrudur?",
+            "options": {
+                "A": "Kendisine vahiy gelmiş bir peygamberdir.",
+                "B": "Hz. Musa’dan ilim tahsil etmiştir.",
+                "C": "Hayatında bilgelik, adalet ve ahlaki öğü tler önemli bir yer tutmuştur.",
+                "D": "Mezarı kesin olarak Tarsus’ta bulunmaktadır."
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 59,
+            "question": "Kur’an’ın temel nitelikleri arasında yer almayan  kavram aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "İlham",
+                "B": "Hidayet",
+                "C": "Rahmet",
+                "D": "Hikmet"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 60,
+            "question": "İhsan kavramı Kur’an’da hem Allah’a hem de insana nispet edilmektedir. Aşağıdakilerden hangisi ihsanın insana nispet edilen anlamlarından biridir?",
+            "options": {
+                "A": "Yaratma fiilindeki kusursuzluk",
+                "B": "Her şeyi eksiksiz bilme yetisi",
+                "C": "Kullarına karşı sonsuz merhametli olma",
+                "D": "Allah’a k arşı derin saygı, bağlılık ve ihlasla ibadet etme"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 61,
+            "question": "Aşağıdakilerden hangisi Kur’an’da “ayet” kavramının iki ana türünden biri değildir ?",
+            "options": {
+                "A": "Fiilî ayet",
+                "B": "Kavlî ayet",
+                "C": "Teşrîî ayet",
+                "D": "Tasavvufî ayet"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 62,
+            "question": "Aşağıdaki ifadelerden hangisi hur ûf-i mukattaa hakkında öne sürülen görüşlerden biri değildir ?",
+            "options": {
+                "A": "Anlamları sadece Allah tarafından bilinir.",
+                "B": "Kur’an’ın insanları meydan okumaya davet eden bir üslubunun parçasıdır.",
+                "C": "Peygamberimiz bu harflerin anlamını detaylı bir şekilde sahabelerine a çıklamıştır.",
+                "D": "Bu harfler, Kur’an’ın yüceliğini ve eşsizliğini vurgulamak için kullanılmıştır."
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 63,
+            "question": "Kur’an’da geçen “lehvü’l -hadîs” ifadesi aşağıdakilerden hangisini kesin olarak  ifade eder?",
+            "options": {
+                "A": "İnsanları Allah yolundan alıkoyan her türlü batıl konuşma ve anlatı",
+                "B": "Müzik dinlemeyi kesin bir şekilde yasaklayan bir kavram",
+                "C": "Sadece mitolojik hikâyeleri anlatan bir ifade",
+                "D": "Eğlence ve mizahı tamamen reddeden bir terim"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 64,
+            "question": "Lokmân (a.s.)’ın oğluna verdiği öğütlerde aşağıdaki konulard an hangisine değinilmemiştir ?",
+            "options": {
+                "A": "Şirkin en büyük zulüm olduğu",
+                "B": "Kıyametin ne zaman kopacağı",
+                "C": "Anne ve babaya itaatin sınırları",
+                "D": "Namaz kılma ve sabretmenin önemi"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 65,
+            "question": "Lokmân (a.s.)’ın öğütleri dikkate alındığında, aşağıdakilerden hangisi yanlıştır ?",
+            "options": {
+                "A": "Namaz, Allah ile kul arasındaki en sağlam ve kestirme yoldur.",
+                "B": "Kötülüğü önlemek, toplumsal huzurun sağlanması için önemli bir ilkedir.",
+                "C": "Başarı, sabır ve azimle mümkündür.",
+                "D": "İnsanların özgür iradesi, Allah’ın emirlerine uymak zorunda değildir."
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 66,
+            "question": "Lokmân suresinde geçen \"sağlam kulpa tutunmak\" ifadesi aşağıdakilerden hangisiyle en doğru şekilde açıklanabilir?",
+            "options": {
+                "A": "Dünyada iyi bir insan olmak",
+                "B": "Tam bir ihlas ve samimiyetle özünü Allah’a  teslim etmek",
+                "C": "Ataların geleneklerini sürdürmek",
+                "D": "Sosyal hayatta başarılı ve itibarlı olmak"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 67,
+            "question": "Lokmân suresinde müşriklerin çelişkili inançları eleştirilmiştir. Aşağıdakilerden hangisi bu çelişkilerden biri değildir ?",
+            "options": {
+                "A": "Allah’ı yaratıcı ola rak kabul edip putlara tapmaları",
+                "B": "Kıyamete inanmalarına rağmen Allah’tan başka şefaatçiler aramaları",
+                "C": "Ahirete inanmadıkları için dünyevi yaşamı önceliklendirmeleri",
+                "D": "Doğayı Allah’ın yarattığını kabul edip, ona başka ilahlar atfetmeleri"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 68,
+            "question": "Aşağıdaki ifadelerden hangisi muktesid kavramının anlamı açısından yanlıştır ?",
+            "options": {
+                "A": "Samimi bir şekilde iman edip bu inancı koruyan kişi",
+                "B": "Tehlike anında Allah’a sığınıp sonra imanını muhafaza eden kişi",
+                "C": "Amel ve ibadet açısından orta yolu tutan kişi",
+                "D": "Mü nafık ve inkârcılar için kullanılan bir terim"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 69,
+            "question": "Kur’an’da “Beş Bilinmeyen” olarak ifade edilen ve yalnızca Allah’ın bildiği konular arasında aşağıdakilerden hangisi yer  almaz ?",
+            "options": {
+                "A": "Kıyametin ne zaman kopacağı",
+                "B": "Yağmurun ne zaman yağacağı",
+                "C": "İnsanların ne zaman ve nerede öleceği",
+                "D": "İnsanların cinsiyetlerinin tespit edilmesi"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        }
+    ]
+}

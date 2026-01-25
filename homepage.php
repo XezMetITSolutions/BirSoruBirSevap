@@ -499,6 +499,13 @@ $totalCategories = array_sum(array_map('count', $categories));
             z-index: 1;
         }
 
+        .floating-card:nth-child(4) {
+            animation-delay: -3s;
+            margin-top: 2rem;
+            margin-left: 1rem;
+            z-index: 2;
+        }
+
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(2deg); }
@@ -1098,7 +1105,7 @@ $totalCategories = array_sum(array_map('count', $categories));
         <div class="hero-container">
         <div class="hero-content">
                 <h1 id="heroTitle">Temel Bilgilerle Öğren, Güvenle İlerle</h1>
-                <p id="heroSubtitle">3 seviyeli kapsamlı soru bankası: Temel Bilgiler 1, 2 ve 3. İtikad, İbadet, Siyer, Ahlak, Tefsir, Hadis ve daha fazlası. Eğitim uzmanları tarafından hazırlanmış kaliteli sorular.</p>
+                <p id="heroSubtitle">4 seviyeli kapsamlı soru bankası: Temel Bilgiler 1, 2, 3 ve İslami İlimler. İtikad, İbadet, Siyer, Tefsir, Hadis, Fıkıh ve daha fazlası. Eğitim uzmanları tarafından hazırlanmış kaliteli sorular.</p>
                 <div class="hero-actions">
                     <a href="login.php" class="btn btn-primary" id="heroCtaBtn">
                         <i class="fas fa-rocket"></i>
@@ -1122,7 +1129,12 @@ $totalCategories = array_sum(array_map('count', $categories));
                     <div class="card-icon">📘</div>
                     <div class="card-title" id="floatTitle3">Temel Bilgiler 3</div>
                     <div class="card-text" id="floatText3">Tefsir, Hadis, Tasavvuf</div>
-                    </div>
+                </div>
+                <div class="floating-card">
+                    <div class="card-icon">🕌</div>
+                    <div class="card-title" id="floatTitle4">İslami İlimler</div>
+                    <div class="card-text" id="floatText4">Akaid, Fıkıh, Tefsir, Hadis</div>
+                </div>
                 </div>
             </div>
         </div>
@@ -1186,7 +1198,7 @@ $totalCategories = array_sum(array_map('count', $categories));
         <div class="features-container">
             <div class="section-header fade-in">
                 <h2 class="section-title" id="featuresTitle">Temel Bilgiler Müfredatı ile Güçlendirilmiş</h2>
-                <p class="section-subtitle" id="featuresSubtitle">3 seviyeli kapsamlı soru bankası ve modern eğitim özellikleri</p>
+                <p class="section-subtitle" id="featuresSubtitle">4 seviyeli kapsamlı soru bankası ve modern eğitim özellikleri</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card fade-in">
@@ -1203,6 +1215,11 @@ $totalCategories = array_sum(array_map('count', $categories));
                     <div class="feature-icon">📘</div>
                     <div class="feature-title" id="featTitle3">Temel Bilgiler 3</div>
                     <div class="feature-text" id="featText3">İleri seviye konular: Tefsir, Hadis, Tasavvuf, Hitabet, İnsan Hakları ve İslam Tarihi. Uzmanlaşma için ideal içerik.</div>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🕌</div>
+                    <div class="feature-title" id="featTitle7">İslami İlimler</div>
+                    <div class="feature-text" id="featText7">Akaid, Kelam, Hadis, İslam Tarihi, Tefsir, Fıkıh ve Din Bilimleri. İleri seviye akademik içerik.</div>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">🎯</div>
@@ -1227,7 +1244,7 @@ $totalCategories = array_sum(array_map('count', $categories));
     <section class="cta">
         <div class="cta-container">
             <h2 class="fade-in" id="ctaTitle">Temel Bilgiler Müfredatı ile Eğitimi Dönüştürün</h2>
-            <p class="fade-in" id="ctaSubtitle">3 seviyeli kapsamlı soru bankası, kaliteli içerik ve modern eğitim araçları. Öğrenciler ve eğitmenler için mükemmel çözüm!</p>
+            <p class="fade-in" id="ctaSubtitle">4 seviyeli kapsamlı soru bankası, kaliteli içerik ve modern eğitim araçları. Öğrenciler ve eğitmenler için mükemmel çözüm!</p>
             <a href="login.php" class="btn btn-primary fade-in" id="ctaBtn">
                 <i class="fas fa-star"></i>
                 Hemen Başla
@@ -1278,14 +1295,14 @@ $totalCategories = array_sum(array_map('count', $categories));
             const tr = {
                 heroStartBtn: 'Başla',
                 heroTitle: 'Temel Bilgilerle Öğren, Güvenle İlerle',
-                heroSubtitle: '3 seviyeli kapsamlı soru bankası: Temel Bilgiler 1, 2 ve 3. İtikat, İbadet, Siyer, Ahlak, Tefsir, Hadis ve daha fazlası. Eğitim Başkanlığı tarafından hazırlanmış kaliteli sorular.',
+                heroSubtitle: '4 seviyeli kapsamlı soru bankası: Temel Bilgiler 1, 2, 3 ve İslami İlimler. İtikat, İbadet, Siyer, Ahlak, Tefsir, Hadis ve daha fazlası. Eğitim Başkanlığı tarafından hazırlanmış kaliteli sorular.',
                 badgesTitle: 'Rozetler Sistemi',
                 badgesSubtitle: 'Başarılarınızı rozetlerle taçlandırın. Şartları tamamlayın, seviyeleri yükseltin.',
                 featuresTitle: 'Temel Bilgiler Müfredatıyla Desteklenen Akıllı Öğrenme',
-                featuresSubtitle: '3 seviyeli kapsamlı soru bankası ve modern eğitim özellikleri',
+                featuresSubtitle: '4 seviyeli kapsamlı soru bankası ve modern eğitim özellikleri',
                 heroCtaBtn: 'Hemen Başla',
                 ctaTitle: 'Temel Bilgiler Müfredatı ile Eğitimi Dönüştürün',
-                ctaSubtitle: '3 seviyeli kapsamlı soru bankası, kaliteli içerik ve modern eğitim araçları. Öğrenciler ve eğitmenler için mükemmel çözüm!',
+                ctaSubtitle: '4 seviyeli kapsamlı soru bankası, kaliteli içerik ve modern eğitim araçları. Öğrenciler ve eğitmenler için mükemmel çözüm!',
                 ctaBtn: 'Hemen Başla',
                 navFeatures:'Özellikler', navStats:'İstatistikler', navAbout:'Hakkımızda', navContact:'İletişim',
                 stat1:'Kaliteli Soru', stat2:'Seviye', stat3:'Ders Konusu', stat4:'Müfredat Uyumlu',
@@ -1300,19 +1317,21 @@ $totalCategories = array_sum(array_map('count', $categories));
                 featTitle4:'Kaliteli Soru Bankası', featText4:'Eğitim Başkanlığı tarafından hazırlanmış, müfredata uygun, çoktan seçmeli sorular. Her seviyeye uygun zorluk dereceleri.',
                 featTitle5:'Detaylı Analitik', featText5:'Öğrenci performansını takip edin. Hangi konularda güçlü, hangilerinde gelişim gerekiyor? Detaylı raporlarla öğrenin.',
                 featTitle6:'Hızlı ve Kolay', featText6:'Anında sınav oluşturun, otomatik değerlendirme yapın. Eğitmenler için zaman tasarrufu, öğrenciler için etkili öğrenme.',
+                floatTitle4:'İslami İlimler', floatText4:'Akaid, Fıkıh, Tefsir, Hadis',
+                featTitle7:'İslami İlimler', featText7:'Akaid, Kelam, Hadis, İslam Tarihi, Tefsir, Fıkıh ve Din Bilimleri. İleri seviye akademik içerik.',
                 criteriaLabel:'Koşullar:'
             };
             const de = {
                 heroStartBtn: 'Start',
                 heroTitle: 'Lernen mit Grundkenntnissen, sicher voranschreiten',
-                heroSubtitle: 'Umfassende Fragenbank in 3 Stufen: Grundkenntnisse 1, 2 und 3. Glaube, Gebet, Sīra, Moral, Exegese, Hadith und mehr. Vom Bildungspräsidium vorbereitete hochwertige Fragen.',
+                heroSubtitle: 'Umfassende Fragenbank in 4 Stufen: Grundkenntnisse 1, 2, 3 und Islamische Wissenschaften. Glaube, Gebet, Sīra, Moral, Exegese, Hadith und mehr. Vom Bildungspräsidium vorbereitete hochwertige Fragen.',
                 badgesTitle: 'Abzeichensystem',
                 badgesSubtitle: 'Krönen Sie Ihre Erfolge mit Abzeichen. Erfüllen Sie die Bedingungen, steigen Sie im Level auf.',
                 featuresTitle: 'Gestärkt durch den Lehrplan der Grundkenntnisse',
-                featuresSubtitle: 'Umfassende 3-stufige Fragenbank und moderne Lernfunktionen',
+                featuresSubtitle: 'Umfassende 4-stufige Fragenbank und moderne Lernfunktionen',
                 heroCtaBtn: 'Jetzt starten',
                 ctaTitle: 'Verwandeln Sie Bildung mit dem Grundkenntnisse-Lehrplan',
-                ctaSubtitle: 'Umfassende 3-stufige Fragenbank, hochwertige Inhalte und moderne Lernwerkzeuge. Perfekt für Schüler und Lehrkräfte!',
+                ctaSubtitle: 'Umfassende 4-stufige Fragenbank, hochwertige Inhalte und moderne Lernwerkzeuge. Perfekt für Schüler und Lehrkräfte!',
                 ctaBtn: 'Jetzt starten',
                 navFeatures:'Funktionen', navStats:'Statistiken', navAbout:'Über uns', navContact:'Kontakt',
                 stat1:'Hochwertige Fragen', stat2:'Stufen', stat3:'Fächer', stat4:'Lehrplankonform',
@@ -1327,6 +1346,8 @@ $totalCategories = array_sum(array_map('count', $categories));
                 featTitle4:'Hochwertige Fragenbank', featText4:'Von Experten erstellte, lehrplankonforme Multiple-Choice-Fragen. Schwierigkeitsgrade für jedes Niveau.',
                 featTitle5:'Detaillierte Analytik', featText5:'Verfolgen Sie die Leistung der Schüler. Welche Themen sind stark, wo ist Entwicklung nötig? Lernen Sie es mit Berichten.',
                 featTitle6:'Schnell & Einfach', featText6:'Erstellen Sie sofort Prüfungen und bewerten Sie automatisch. Zeitersparnis für Lehrkräfte, effektives Lernen für Schüler.',
+                floatTitle4:'Islamische Wissenschaften', floatText4:'Aqidah, Fiqh, Tafsir, Hadith',
+                featTitle7:'Islamische Wissenschaften', featText7:'Aqidah, Kalam, Hadith, Islamische Geschichte, Tafsir, Fiqh und Religionswissenschaften. Fortgeschrittene akademische Inhalte.',
                 criteriaLabel:'Kriterien:'
             };
             function applyLang(lang){
@@ -1379,6 +1400,10 @@ $totalCategories = array_sum(array_map('count', $categories));
                 set('featText5', dict.featText5);
                 set('featTitle6', dict.featTitle6);
                 set('featText6', dict.featText6);
+                set('floatTitle4', dict.floatTitle4);
+                set('floatText4', dict.floatText4);
+                set('featTitle7', dict.featTitle7);
+                set('featText7', dict.featText7);
                 // Rozet kartları koşul etiketi
                 document.querySelectorAll('[data-i18n="criteriaLabel"]').forEach(function(el){ el.textContent = dict.criteriaLabel; });
                 // Rozet kartları: eğer data-tr/data-de varsa onları uygula

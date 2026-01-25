@@ -1,0 +1,1546 @@
+{
+    "category": "Akaid",
+    "title": "Akaid Soruları",
+    "questions": [
+        {
+            "id": 1,
+            "question": "Wilhelm Schmidt’in ortaya koyduğu ‘İlkel Monoteizm’ teorisine göre, dinin başlangıcı hangi inanca dayanmaktadır?",
+            "options": {
+                "A": "Şamanizme",
+                "B": "Çok tanrılı inançlara",
+                "C": "Tek tanrı inancına",
+                "D": "Doğa tapınmasına"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 2,
+            "question": "İslam’a göre dinin temel niteliği aşağıdakilerden hangis idir?",
+            "options": {
+                "A": "Zamanla değişim ve evrim geçirmesi",
+                "B": "İnsan kültürüyle birlikte gelişmesi",
+                "C": "İnanç ve ibadet açısından değişmez olması",
+                "D": "Tarihsel süreçte farklılık göstermesi"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 3,
+            "question": "Pozitivist sosyal bilimcilere göre dinin kaynağı aşağıdakilerden hangisidir ?",
+            "options": {
+                "A": "İnsanların içsel sezgileri",
+                "B": "Büyü ve korku",
+                "C": "Vahiy yoluyla Allah’tan gelen bir sistem",
+                "D": "Toplumsal gelenekler"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 4,
+            "question": "Dinin anlam çerçevesinde, İslam’a göre dinin gerçek hükmedeni kimdir?",
+            "options": {
+                "A": "Peygamberler",
+                "B": "Alimler",
+                "C": "İnsan aklı",
+                "D": "Allah"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 5,
+            "question": "‘Tevfik’ kavramı aşağıdakilerden hangisini ifade eder?",
+            "options": {
+                "A": "Allah’ın kuluna destek vermesi ve başarılı kılması",
+                "B": "Kişinin kendi başına bırakılması",
+                "C": "Günahlarından dolayı cezalandırılması",
+                "D": "İlahi yasaların değişime uğraması"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 6,
+            "question": "İman ve ibadetin birbirinden ayrılması hangi kavramla ilişkilendirilebilir?",
+            "options": {
+                "A": "Tevhid",
+                "B": "Ateizm ve deizm",
+                "C": "Mürcie",
+                "D": "Kadıyanilik"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 7,
+            "question": "İslam kelimesinin kökü olan ‘selm’ ve ‘silm’ kelimeleri aşağıdakilerden hangisini ifade eder?",
+            "options": {
+                "A": "Teslimiyet ve barış",
+                "B": "Gü nah ve arınma",
+                "C": "Hakikat ve iman",
+                "D": "Bağlılık ve ibadet"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 8,
+            "question": "İslam’a göre, dinin ilerlemesi ve gelişmesi ne anlama gelmektedir?",
+            "options": {
+                "A": "İnanç esaslarının değişmesi",
+                "B": "Peygamberlerin yeni hükümler getirmesi",
+                "C": "Yeni ibadet şekillerinin ortaya çıkması",
+                "D": "Kü ltürel ve sosyal şartlara göre düzenlenmesi"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 9,
+            "question": "Akaid kavramı hangi kökten türemiştir ve ne anlama gelir?",
+            "options": {
+                "A": "\"İtikad\" kökünden gelir ve inanç sistemlerini ifade eder",
+                "B": "\"Akd\" kökünden gelir ve bağlama, düğümleme anlamına gelir",
+                "C": "\"İman\" kökünden gelir ve ibadetleri kapsar",
+                "D": "\"Takva\" kökünden gelir ve günahlardan kaçınmayı ifade eder"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 10,
+            "question": "Müminin sahip olması gereken temel özelliklerden biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Peygamberleri kabul etmese bile Allah’a inanmak",
+                "B": "Dinin yal nızca ibadet boyutuna önem vermek",
+                "C": "İnanç esaslarının tamamına şüphesiz inanmak",
+                "D": "Sadece Kur’an’a inanmak, hadisleri reddetmek"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 11,
+            "question": "“Dinde zorlama yoktur.” ayetinden çıkarılabilecek en doğru anlam aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Herkesin kendi dinini seçme özgürlüğü vardır",
+                "B": "Zorla Müslüman yapılan kişi de Müslümandır",
+                "C": "Din, insanlara zorla öğretilmelidir",
+                "D": "İnsanlar, inanç konusunda baskı altında bırakılmalıdır"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 12,
+            "question": "Kur’an’a göre inkârın (küfrün) temel sebeplerinden biri nedir?",
+            "options": {
+                "A": "İnsanların doğuştan inançsız olması",
+                "B": "Hırs, kibir ve inat gibi duygular",
+                "C": "Toplumun baskıları nedeniyle inanmayı reddetmek",
+                "D": "Bilginin olmaması ve insanın zayıf yaratılması"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 13,
+            "question": "Münafıklık kavramı aşağıdakilerden hangisiyle en iyi tanımlanabilir?",
+            "options": {
+                "A": "İçi ve dışı farklı olup, inanmadığı hâlde inanmış gibi görünmek",
+                "B": "Bir dine inanıp, başka bir dine geçmek",
+                "C": "İslam’ı kabul etmeyip ateizmi benimsemek",
+                "D": "Kendi dini inancını sorgulamak"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 14,
+            "question": "Fâsık bir kişi aşağıdaki hangi davranışı sergileyen kişi dir?",
+            "options": {
+                "A": "İbadetlerini tam olarak yerine getiren kişi",
+                "B": "Allah’ın birliğini kabul etmeyen kişi",
+                "C": "Sadece Allah’a ibadet edip, peygamberleri kabul etmeyen kişi",
+                "D": "Büyük günah işleyip, günah işlemekte ısrar eden kişi"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 15,
+            "question": "Allah’a inanmanın temel ilkesi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Allah’ı görmek ve sonra inanmak",
+                "B": "Onun tüm sıfatlarının bilinmesi ve isimlerinin ezberlenmesi",
+                "C": "Allah’ın varlığı hakkında şüpheye düşmek ve araştırma yapmak",
+                "D": "O’nun var ve bir olduğuna inanmak, ort aklıkları reddetmek"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 16,
+            "question": "Allah’ın isimlerinin ve sıfatlarının sayısız olması ne anlama gelmektedir?",
+            "options": {
+                "A": "Allah’ın isimlerinin ve sıfatlarının insanlar tarafından sınırlandırılamayacağı",
+                "B": "Allah’ın yalnızca Kur’an’da geçen isimlerle tanınması gerekti ği",
+                "C": "99 ismin dışında başka isim ve sıfatın bulunmadığı",
+                "D": "Hadislerde ve Kur’an’da geçen isimlerin değiştirilebileceği"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 17,
+            "question": "“Allah’ın sıfatları insanların isimlerinden farklıdır.” ifadesinin anlamı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "İnsanlar, Allah ’ın sıfatlarına benzer sıfatlar taşımazlar",
+                "B": "İnsanların isimleri onların karakterlerini belirler",
+                "C": "Allah’ın isimleri, yalnızca bir lafızdan ibaret olmayıp anlamı ifade eder",
+                "D": "Allah’ın isimleri sadece Kur’an’da geçen kelimelerden ibarettir"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 18,
+            "question": "Allah’ın subûtî sıfatlarından biri olan ‘Hayat’ neyi ifade eder?",
+            "options": {
+                "A": "Allah’ın zaman ve mekân içerisinde yaşamasını",
+                "B": "Allah’ın canlılara can vermesini",
+                "C": "Allah’ın her an diri ve canlı olmasını",
+                "D": "Allah’ın yaratılmışlarla birlikte var olmasını"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 19,
+            "question": "“Allah’ın ezelî ve ebedî kelamı” ifadesi hangi sıfatına işaret eder?",
+            "options": {
+                "A": "Kudret",
+                "B": "Kelam",
+                "C": "Tekvin",
+                "D": "İrade"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 20,
+            "question": "Allah’ın yaratılmışlara benzemediğini ifade eden sıfatı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Vahdaniyet",
+                "B": "Bekâ",
+                "C": "Muhâlefetün li’l -havâdis",
+                "D": "Kıyam bi -nefsihî"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 21,
+            "question": "Allah’ın kendi kendine var olması anlamına gelen sıfatı hangisidir?",
+            "options": {
+                "A": "Kıyam bi -nefsihî",
+                "B": "Hayat",
+                "C": "İlim",
+                "D": "Tekvin"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 22,
+            "question": "“Allah’ın hiçbir şeye muhtaç olmaması” hangi sıfatıyla doğrudan ilişkilidir?",
+            "options": {
+                "A": "Vahdaniyet",
+                "B": "Kudret",
+                "C": "İrade",
+                "D": "Samed"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 23,
+            "question": "Allah’ın yaratma sıfatı (Tekvin) hangi mezhep tarafından ayrıca bir sıfat olarak ele alınmıştır?",
+            "options": {
+                "A": "Eş’arîlik",
+                "B": "Hanefîlik",
+                "C": "Mâturîdîlik",
+                "D": "Şâfiîlik"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 24,
+            "question": "Allah’ın subûtî sıfatl arıyla ilgili aşağıdaki ifadelerden hangisi  yanlıştır ?",
+            "options": {
+                "A": "Allah’ın ilmi her şeyi kuşatır",
+                "B": "Allah’ın iradesi sınırlıdır",
+                "C": "Allah’ın kudreti tüm mümkün olanlara yeter",
+                "D": "Allah’ın kelam sıfatı ezelîdir"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 25,
+            "question": "Allah’ın işitme ve görme sıfatları ile il gili aşağıdaki ifadelerden hangisi doğrudur?",
+            "options": {
+                "A": "Allah’ın işitmesi ve görmesi insanlar gibi organlarla gerçekleşir",
+                "B": "Allah’ın işitmesi ve görmesi sınırlıdır",
+                "C": "Allah sadece peygamberlerin söylediklerini işitir",
+                "D": "Allah, hem görünen hem de görünmeyen her şeyi işitir ve görür"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 26,
+            "question": "“Allah’ın dilediğini yapabilmesi” hangi sıfatının fonksiyonunu ifade eder?",
+            "options": {
+                "A": "İrade",
+                "B": "Tekvin",
+                "C": "Kudret",
+                "D": "Kelam"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 27,
+            "question": "Aşağıdaki hangi ayet, Allah’ın bir ve yegâne olduğunu açıkça ifade etmektedir?",
+            "options": {
+                "A": "“Allah’ın za tı dışında her şey yok olacaktır.”",
+                "B": "“De ki: Allah birdir, hiçbir eksiği olmayan, hiçbir şeye muhtaç olmayandır.”",
+                "C": "“O, dilediğini yapandır.”",
+                "D": "“O, kullarına karşı merhametlidir.”"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 28,
+            "question": "“O’nun işi, bir şeyi irade ettiğinde ona ‘Ol’ demektir ve o  da hemen oluverir.” ayeti hangi sıfatını ifade eder?",
+            "options": {
+                "A": "Kelam",
+                "B": "Kudret",
+                "C": "Hayat",
+                "D": "Bekâ"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 29,
+            "question": "Allah’ın insanlara hitap etmesi ve vahiy yoluyla emirlerini bildirmesi hangi sıfatıyla ilgilidir?",
+            "options": {
+                "A": "Tekvin",
+                "B": "İrade",
+                "C": "Kudret",
+                "D": "Kelam"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 30,
+            "question": "Kaderin temel tanımı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "İnsanların fiillerini tamamen önceden belirleyen bir sistemdir.",
+                "B": "İnsan iradesini tamamen devre dışı bırakan bir kavramdır.",
+                "C": "Allah’ın sınırsız ilmi ile her şeyi bilmesi ve takdir etmesidir.",
+                "D": "Allah’ ın olayları yalnızca olacakları an bilmesidir."
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 31,
+            "question": "Allah’ın ilminin sınırsız olması ne anlama gelir?",
+            "options": {
+                "A": "Allah için zaman ve mekân farkı yoktur, her şeyi en ince ayrıntısına kadar bilir.",
+                "B": "Allah geleceği bilemez, sadece şimdiki zamanı bilir.",
+                "C": "Allah’ın bilgisi, yalnızca geçmişle sınırlıdır.",
+                "D": "Allah, sadece büyük olayları bilir, küçük detayları bilmez."
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 32,
+            "question": "“Allah göklerde ve yerde olanları bilir.” ayetinin ifade ettiği temel kavram aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Allah’ın iradesi",
+                "B": "Alla h’ın kelamı",
+                "C": "Allah’ın kudreti",
+                "D": "Allah’ın ilmi"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 33,
+            "question": "Allah’ın insanlara müdahale etmemesinin sebebi nedir?",
+            "options": {
+                "A": "İnsanların kendi başlarına doğru yolu bulmalarını istemesi",
+                "B": "İnsan iradesinin tamamen bağımsız olması",
+                "C": "İnsanlara adaletli bir şekil de mühlet tanıması",
+                "D": "Allah’ın insanlara karşı ilgisiz olması"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 34,
+            "question": "Kaderin en önemli fonksiyonu nedir?",
+            "options": {
+                "A": "İnsanları zorla yönlendirmek",
+                "B": "Olayların sebeplerini ve düzenini anlamamızı sağlamak",
+                "C": "İnsanların geçmişte yaptıkları hataları değiştirmele rini sağlamak",
+                "D": "İnsanları tamamen özgür bırakmaktır"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 35,
+            "question": "Kader ve kaza arasındaki temel fark aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Kader, Allah’ın olacak şeyleri bilmesi ve takdir etmesi; kaza ise bu bilgilerin yaratılmasıdır.",
+                "B": "Kader ve kaza tamamen aynı anlama gelir.",
+                "C": "Kader, insanların fiillerini belirlerken, kaza onların sonucudur.",
+                "D": "Kader sadece iyi olaylarla ilgilidir, kaza ise kötü olaylarla ilgilidir."
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 36,
+            "question": "“Kader sırdır, kaza o sırrın açığa çıkmasıdır.” sözü ne anlama gelir?",
+            "options": {
+                "A": "Kaderin bilinemez, kazanın ise bilinir olduğu anlamına gelir.",
+                "B": "Kader ve kaza aynı şeydir.",
+                "C": "İnsanlar hem kaderi hem de kazayı bilebilirler.",
+                "D": "Kader insanların kontrolündedir, kaza ise Allah’ın iradesindedir."
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 37,
+            "question": "İnsanların yaptığı fiillerin ik i türü vardır. Bunlardan ‘ızdırarî fiiller’ hangi durumu ifade eder?",
+            "options": {
+                "A": "Kendi iradesiyle gerçekleştirdiği fiiller",
+                "B": "Doğal olarak gerçekleşen, insanın kontrolü dışındaki fiiller",
+                "C": "İnsanın karar vererek gerçekleştirdiği tüm eylemler",
+                "D": "İrade gerektiren ve insanın sorumlu olduğu fiiller"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 38,
+            "question": "Aşağıdakilerden hangisi insanın sorumluluğunda olan fiillerdendir?",
+            "options": {
+                "A": "Kalbin çalışması",
+                "B": "Kan dolaşımı",
+                "C": "Göz kırpmak",
+                "D": "Konuşmak ve yürümek"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 39,
+            "question": "İnsanın yaptığı ihtiyarî fiillerde üç unsur bulunur. Aşağıdakilerden hangisi bunlardan biri değildir ?",
+            "options": {
+                "A": "İnsanın istemesi (irade)",
+                "B": "İnsanın gücünün yeterli olması (istitaat)",
+                "C": "Allah’ın yaratması",
+                "D": "Başka bir insanın yönlendirmesi"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 40,
+            "question": "“Biz ins ana doğru yolu gösterdik, dilerse şükredenlerden, dilerse nankörlük edenlerden olur.” ayeti hangi ilkeyi ifade eder?",
+            "options": {
+                "A": "İnsanların kendi tercihlerinin sorumluluğunu taşıdığını",
+                "B": "İnsanların tamamen özgür olduğunu",
+                "C": "İnsan iradesinin olmadığını",
+                "D": "İnsanlar ın zorunlu olarak kaderlerini yaşadığını"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 41,
+            "question": "Kaderin gerçekleşmesiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+            "options": {
+                "A": "İnsan kaderini değiştirebilir, kaza ise değiştirilemez.",
+                "B": "İnsan yaptığı her fiili kendi başına gerçekleştirir, Allah fiile ka rışmaz.",
+                "C": "İnsan iradesi ve Allah’ın yaratması birlikte çalışır.",
+                "D": "İnsan hiçbir fiilden sorumlu değildir çünkü hepsi Allah tarafından yaratılmıştır."
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 42,
+            "question": "Allah’ın insanlara peygamberler ve kitaplar göndermesinin temel sebebi nedir?",
+            "options": {
+                "A": "Onları doğ ru yolda yönlendirmek ve desteklemek",
+                "B": "Onların özgürlüğünü sınırlamak",
+                "C": "İnsanların iradesini elinden almak",
+                "D": "İnsanları zorla inandırmak"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 43,
+            "question": "“Dinde zorlama yoktur, çünkü doğru ile yanlış açıklanmıştır.” ayetinin anlamı nedir?",
+            "options": {
+                "A": "İnsanlar diledikleri gibi inançlarını değiştirebilirler.",
+                "B": "Allah insanları iman etmeye zorlamaz, doğru yolu gösterir.",
+                "C": "İnsanlara dini konularda hiçbir emir verilmemiştir.",
+                "D": "İnsanların kaderi zaten belirli olduğu için seçim yapmalarına gerek yoktur."
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 44,
+            "question": "Ahirette insanların alacağı karşılık hangi faktöre bağlıdır?",
+            "options": {
+                "A": "İnsanların doğuştan sahip olduğu kaderlerine",
+                "B": "Allah’ın doğrudan seçtiği kişilere",
+                "C": "İnsanların dünya hayatında yaptığı tercihlere ve amellere",
+                "D": "Sadece insanın niyetine, hiçbir fi iline bağlı değildir"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 45,
+            "question": "Peygamberliğin semavi dinler için temel ayırt edici özelliği nedir?",
+            "options": {
+                "A": "Dinî inançların yalnızca peygamber aracılığıyla insanlara ulaşması",
+                "B": "Peygamberlerin kendi bilgileriyle hareket ederek insanları yönlendirmesi",
+                "C": "İnsanların kendi başlarına peyg amberlik misyonu üstlenebilmeleri",
+                "D": "Her insanın doğrudan Allah’tan vahiy alabilmesi"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 46,
+            "question": "Aşağıdakilerden hangisi, peygamberlerin gönderilme sebeplerinden biri  değildir ?",
+            "options": {
+                "A": "İnsanlara ilahî mesajı ulaştırmak",
+                "B": "Toplumsal düzeni sağlamak için insanlara kendi yasalarını sunmak",
+                "C": "İnsanların yanlış inanç ve alışkanlıklarını düzeltmek",
+                "D": "İnsanların Allah’a doğrudan ulaşmasını engellemek"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 47,
+            "question": "\"Bir dinin sağlamlığı ve sahihliği, onu getiren elçinin güvenilir ve her türlü şaibeden uzak olmasına bağlıdır.\" ifadesi neyi anlatır?",
+            "options": {
+                "A": "Peygamberler insanlardan seçildiği için hata yapabilirler.",
+                "B": "Peygamberlerin güvenilir olması dinin de güvenilir olmasını sağlar.",
+                "C": "Peygamberlerin insani zaafları olabilir, ancak vahiy aldığı sürece bu önemli değildir.",
+                "D": "Dinin esasları peygamberin şa hsiyetinden bağımsızdır."
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 48,
+            "question": "Peygamberliğin gerekliliği ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+            "options": {
+                "A": "İnsanlar kendi başlarına ilahi hakikate ulaşabilir, peygamberlere ihtiyaçları yoktur.",
+                "B": "Peygamberler, insanlara ahiret hakkında bilgi v ermez, sadece dünya düzenini öğretir.",
+                "C": "İnsanlar, iç sıkıntılarını çözmek için yalnızca medyumlara veya kâhinlere başvurmalıdır.",
+                "D": "Peygamberler, insanlara maddi ve manevi olarak rehberlik etmek için gönderilmiştir."
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 49,
+            "question": "İsmet sıfatı peygamberler için neden önemlidir?",
+            "options": {
+                "A": "Peygamberlerin günahsız doğmasını ve yaşam boyu hata yapmamalarını sağlar.",
+                "B": "Peygamberlerin ilahî mesajı eksiksiz ve güvenilir şekilde iletebilmeleri için verilmiştir.",
+                "C": "Peygamberlerin tamamen melek gibi varlıklar ol duğunu gösterir.",
+                "D": "İsmet sıfatı, sadece Hz. Muhammed’e ait olup diğer peygamberlerde bulunmaz."
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 50,
+            "question": "Aşağıdakilerden hangisi peygamberlerin sıfatlarından biri  değildir ?",
+            "options": {
+                "A": "İsmet (korunmuşluk)",
+                "B": "Emanet (güvenilirlik)",
+                "C": "Kudret (her şeye güç yetirm e)",
+                "D": "Sıdk (doğruluk)"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 51,
+            "question": "Sıdk (doğruluk) sıfatı, peygamberlerin hangi özelliğini ifade eder?",
+            "options": {
+                "A": "Doğru sözlü ve güvenilir olmaları",
+                "B": "Tüm insanlardan üstün bir zekâya sahip olmaları",
+                "C": "İnsanüstü varlıklar olmaları",
+                "D": "Sadece ibadetle meşgul olup d ünya işlerinden uzak durmaları"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 52,
+            "question": "Aşağıdakilerden hangisi peygamberlerin “emanet” sıfatını en iyi açıklar?",
+            "options": {
+                "A": "Onların bütün sırları saklamaları ve verdikleri sözleri mutlaka yerine getirmeleri",
+                "B": "İnsanlara istedikleri gibi vahiy aktarmaları ve kendi yorumlarını eklemeleri",
+                "C": "Kendi menfaatleri için vahyi kullanmaları",
+                "D": "Kendilerine verilen vahyi, gerektiğinde değiştirebilmeleri"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 53,
+            "question": "Peygamberlerin \"fetânet\" sıfatı ne anlama gelir?",
+            "options": {
+                "A": "Onların olağanüstü fiziksel güce sahip olmaları",
+                "B": "Her peygamberin insanüstü varlıklar olması",
+                "C": "Peygamberlerin halk arasında herkesin dikkatini çekecek şekilde davranmaları",
+                "D": "Peygamberlerin görevlerini hakkıyla yerine getirecek üstün bir zekâya sahip olmaları"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 54,
+            "question": "Vahyin peygamberlere ulaşma yolları ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+            "options": {
+                "A": "Vahiy, peygamberlerin rü yaları yoluyla onlara iletilmez.",
+                "B": "Vahiy, Cebrail (a.s.) aracılığıyla veya doğrudan Allah tarafından iletilebilir.",
+                "C": "Peygamberler vahyi aldıktan sonra kendi görüşleriyle değiştirebilirler.",
+                "D": "Vahiy, yalnızca peygamberler değil, sıradan insanlar tarafında n da alınabilir."
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 55,
+            "question": "Mucize, peygamberlerin peygamberliklerini ispat etmek için gösterdikleri olağanüstü olaylardır. Aşağıdakilerden hangisi bir mucize  değildir ?",
+            "options": {
+                "A": "Hz. Musa’nın asasının yılana dönüşmesi",
+                "B": "Hz. İsa’nın babasız dünyaya gelmesi",
+                "C": "Hz. Muhammed’in Kur’an’ı insanlara ulaştırması",
+                "D": "Bir kâhinin geleceğe dair tahminlerinin gerçekleşmesi"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 56,
+            "question": "İstidrâc ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+            "options": {
+                "A": "Allah’ın, günahkâr ve inkârcı insanlara imtihan için olağanüstü imkânlar ve rmesidir.",
+                "B": "Peygamberlere verilen mucizelerden biri olarak kabul edilir.",
+                "C": "Sadece velilere ve peygamberlere bahşedilen bir ilahi hediyedir.",
+                "D": "İnanan insanlara yardım etmek için Allah tarafından verilen bir lütuftur."
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 57,
+            "question": "Allah Teâlâ insanın iradesini nasıl yönlendirmektedir?",
+            "options": {
+                "A": "İradesini tamamen ortadan kaldırarak",
+                "B": "İnsanlara zorla emirler vererek",
+                "C": "İlahi telkin ile destekleyerek",
+                "D": "Onları serbest bırakarak hiçbir şekilde müdahale etmeden"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 58,
+            "question": "İlahi telkinin en açık ve bağl ayıcı olan şekli nedir?",
+            "options": {
+                "A": "İnsanların kendi vicdanlarının sesi",
+                "B": "Meleklerin doğrudan insanlara yönlendirme yapması",
+                "C": "Peygamberler aracılığıyla gönderilen vahiy",
+                "D": "Kendi akıl ve mantığı ile doğruyu bulması"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 59,
+            "question": "İlahi kitapların temel amacı nedir?",
+            "options": {
+                "A": "İnsanlara bilimsel keşifler hakkında bilgi vermek",
+                "B": "Sadece geçmiş kavimlerin tarihini anlatmak",
+                "C": "İnsanları doğru yola iletmek ve rehberlik yapmak",
+                "D": "İnsanların hayatlarını daha eğlenceli hâle getirmek"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 60,
+            "question": "Aşağıdakilerden hangisi ilahi kitaplar hakkında doğrudur?",
+            "options": {
+                "A": "Her ilahi kitap öncekinin tamamen yerine geçer ve onu geçersiz kılar.",
+                "B": "İlahi kitaplar birbirini doğrulayıcı ve tamamlayıcı niteliktedir.",
+                "C": "İlahi kitaplar sadece belli bir millete hitap eder.",
+                "D": "İlahi kitaplar zamanla anlam larını yitirir ve etkisiz hâle gelir."
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 61,
+            "question": "Kur’an’ın önceki kutsal kitaplarla ilişkisi nasıl açıklanmıştır?",
+            "options": {
+                "A": "Önceki kitapları tamamen iptal eden bir belge olarak",
+                "B": "Önceki kitapları doğrulayıcı ve onları tamamlayıcı olarak",
+                "C": "Önceki kitaplardan  bağımsız, tamamen yeni bir kitap olarak",
+                "D": "Sadece Arap toplumuna hitap eden bir öğreti olarak"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 62,
+            "question": "Tevrat’ın içeriği hakkında aşağıdakilerden hangisi doğrudur?",
+            "options": {
+                "A": "Tamamen peygamber hikâyelerinden oluşur.",
+                "B": "İlk başta yazılı değil, sözlü bir meti n olarak kalmıştır.",
+                "C": "İçinde sadece İsrailoğullarının tarihi anlatılır.",
+                "D": "Beş bölümden oluşur ve zamanla tahrife uğramıştır."
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 63,
+            "question": "Zebur’un temel özelliği nedir?",
+            "options": {
+                "A": "Yeni bir şeriat ve dinî kurallar getirmiştir.",
+                "B": "Hz. Musa tarafından kaleme alı nmıştır.",
+                "C": "Günümüzde hâlâ eksiksiz şekilde korunmuştur.",
+                "D": "Sadece Hz. Davud’a öğütler içeren edebi bir metindir."
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 64,
+            "question": "Aşağıdakilerden hangisi İncil’in günümüzdeki durumu ile ilgilidir?",
+            "options": {
+                "A": "Tek bir İncil vardır ve hiç değiştirilmemiştir.",
+                "B": "Dört f arklı İncil metni kanonik (geçerli) sayılmıştır.",
+                "C": "İncil yalnızca Latince olarak yazılmıştır.",
+                "D": "Kur’an’da İncil hakkında herhangi bir bilgi verilmemektedir."
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 65,
+            "question": "Kur’an’ın nazil olma süresi kaç yıl sürmüştür?",
+            "options": {
+                "A": "10 yıl",
+                "B": "15 yıl",
+                "C": "20 yıl",
+                "D": "23 yıl"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 66,
+            "question": "Kur’an’ın kitap hâline getirilmesi hangi halife döneminde gerçekleştirilmiştir?",
+            "options": {
+                "A": "Hz. Osman",
+                "B": "Hz. Ali",
+                "C": "Hz. Ebû Bekir",
+                "D": "Hz. Ömer"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 67,
+            "question": "Kur’an’ın yedi veya dokuz nüsha olarak çoğaltılıp farklı beldelere gönderilmesi hangi halife döneminde olmuştur?",
+            "options": {
+                "A": "Hz. Ebû Bekir",
+                "B": "Hz. Ömer",
+                "C": "Hz. Osman",
+                "D": "Hz. Ali"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 68,
+            "question": "Kur’an’ın mucizeliği hangi özelliğinden kaynaklanmaktadır?",
+            "options": {
+                "A": "Zaman içinde içeriğinin değişime uğramaması",
+                "B": "Sadece Arap toplumuna hitap etmesi",
+                "C": "Dünyadaki tüm kitaplardan daha kalın olması",
+                "D": "Sadece bir dilde yazılmış olması"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 69,
+            "question": "Kur’an’ın korunmuş olmasının en büyük delillerinden biri nedir?",
+            "options": {
+                "A": "Farklı dönemlerde birçok kez yeniden yazılması",
+                "B": "Hafızlar tarafından ezberlenerek nesilden  nesile aktarılması",
+                "C": "Sadece Arap toplumuna özgü kalması",
+                "D": "Modern dillerde tercüme edilmemesi"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 70,
+            "question": "Peygamberlere gelen vahyin peygamberlerin konuştuğu dilde gelmesi neyi gösterir?",
+            "options": {
+                "A": "Vahyin, peygamberler tarafından oluşturulmuş olabileceğini",
+                "B": "Vahyin, muhatap kitlenin anlayacağı şekilde geldiğini",
+                "C": "Peygamberlerin, vahyin içeriğine müdahale edebildiğini",
+                "D": "Bütün kutsal kitapların aynı dilde olduğunu"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 71,
+            "question": "Meleklerin yaratılış maddesi nedir?",
+            "options": {
+                "A": "Toprak",
+                "B": "Ateş",
+                "C": "Nur",
+                "D": "Su"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 72,
+            "question": "Melekler neden asla isyan  etmezler ?",
+            "options": {
+                "A": "Özgür iradeleri olmadığı için",
+                "B": "Allah’ın onlara bunu yasakladığı için",
+                "C": "Günah işlememeleri için yaratıldıkları için",
+                "D": "Kendi lerine verilen emirleri eksiksiz yerine getirmekle yükümlü oldukları için"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 73,
+            "question": "Meleklerin kanatlara sahip oldukları hangi ayette belirtilmiştir?",
+            "options": {
+                "A": "Bakara 2:30",
+                "B": "Zümer 39:67",
+                "C": "Fatır 35:1",
+                "D": "Enfal 8:50"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 74,
+            "question": "Melekler ile cinler arasındaki temel fark nedir?",
+            "options": {
+                "A": "Melekler görünmez, cinler görülebilir",
+                "B": "Melekler asla isyan etmez, cinler isyan edebilir",
+                "C": "Melekler ateşten, cinler nurdan yaratılmıştır",
+                "D": "Cinler insanlara iyilik yapar, melekler ise yapmaz"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 75,
+            "question": "Aşağıdakilerden hangisi dört büyük melekten biri  değildir ?",
+            "options": {
+                "A": "Mikail",
+                "B": "Azrail",
+                "C": "İsrafil",
+                "D": "Münker ve Nekir"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 76,
+            "question": "Meleklerin insanların iyilik ve kötülüklerini kaydetmekle görevli olanları kimlerdir?",
+            "options": {
+                "A": "Kiramen Katibin",
+                "B": "Hamele -i Arş",
+                "C": "Münker ve Nekir",
+                "D": "Hazen -i Cennet"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 77,
+            "question": "Meleklerin insanlara desteği hangi şekilde  gerçekleşmez ?",
+            "options": {
+                "A": "İnsanları zorla ibadete yönlendirmek",
+                "B": "Allah’a dua ederek müminler için bağışlanma dilemek",
+                "C": "Şeytanın vesveselerine karşı ilham vererek",
+                "D": "Peygamberleri  vahiy ile bilgilendirmek"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 78,
+            "question": "Cinler ile insanlar arasındaki en temel ortak nokta nedir?",
+            "options": {
+                "A": "İkisi de ateşten yaratılmıştır",
+                "B": "İkisi de mükellef varlıklardır",
+                "C": "İkisi de gaybı bilebilir",
+                "D": "İkisi de ölümsüzdür"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 79,
+            "question": "Cinler ve insanlar arasında geçen kıyamet günü ile ilgili hangi doğru bilgidir?",
+            "options": {
+                "A": "Cinler de insanlar gibi hesap vereceklerdir",
+                "B": "Sadece insanlar hesap verecektir",
+                "C": "Cinler hesap vermeyecek, doğrudan cezalandırılacaktır",
+                "D": "İnsanlar cinlerin şahitliğine başvuracaktı r"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 80,
+            "question": "İblis’in insana düşman olmasının temel sebebi nedir?",
+            "options": {
+                "A": "Melek olduğu hâlde insanlara secde etmeyi reddetmesi",
+                "B": "İnsanlardan intikam almak istemesi",
+                "C": "İnsanlara zarar vermeyi sevmesi",
+                "D": "Allah tarafından lanetlenmesi ve kovulması"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 81,
+            "question": "Aşağıdakilerden hangisi şeytanın insana etkisi açısından doğrudur?",
+            "options": {
+                "A": "İnsanları zorla günaha sürükleyebilir",
+                "B": "İnsanların iradesine tamamen hükmedebilir",
+                "C": "İstediği kişiyi cehenneme gönderebilir",
+                "D": "İnsanlara vesvese vererek onları etkileyebilir"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 82,
+            "question": "Yeniden dirilişte ruh ve beden arasındaki ilişki nasıl olacaktır?",
+            "options": {
+                "A": "Her ruh, daha önce bulunduğu bedene iade edilecektir",
+                "B": "Bütün ruhlar tek bir bedene girecektir",
+                "C": "İnsanlar sadece ruh olarak diriltilecektir",
+                "D": "İnsanlar yeni ve farklı bedenlerde var olacaklardır"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 83,
+            "question": "Ahiret hayatının gerekliliği en temelde hangi kavrama dayanır?",
+            "options": {
+                "A": "İnsanların eğlenceli bir hayat sürmesi",
+                "B": "İlahî adaletin tecelli etmesi",
+                "C": "İnsanların ebedî hayat beklentisi",
+                "D": "Peygamberlerin öğütlerinin gerçekleşm esi"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 84,
+            "question": "\"Ben insanları ve cinleri ancak bana kulluk etsinler diye yarattım.\" ayeti ahiret inancıyla nasıl ilişkilidir?",
+            "options": {
+                "A": "İnsanların yaratılış amacının kulluk olduğunu gösterir",
+                "B": "İnsanların ibadetlerinin zorunlu olmadığını anlatır",
+                "C": "Ahiret inan cı olmadan da kulluğun gerçekleşebileceğini ifade eder",
+                "D": "Sadece cinler için geçerli bir hüküm içerir"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 85,
+            "question": "Ecel kavramı İslam’a göre nasıl tanımlanır?",
+            "options": {
+                "A": "Ölüme sebep olan olayların bütünü",
+                "B": "Kişinin doğumdan itibaren hesaplanan yaşam süresi",
+                "C": "Al lah’ın belirlediği ve değişmeyen ölüm vakti",
+                "D": "İnsanların iradesine bağlı olarak değişebilen süre"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 86,
+            "question": "Mu’tezile ekolü, ecel hakkında neyi savunmaktadır?",
+            "options": {
+                "A": "Ecelin değiştirilemez olduğunu",
+                "B": "Ölümün tamamen insanın tercihiyle gerçekleştiğini",
+                "C": "Her insanın sonsuz yaşaması gerektiğini",
+                "D": "Kişinin öldürülmesiyle ecelinin öne çekilebileceğini"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 87,
+            "question": "\"Kabir ya cennet bahçelerinden bir bahçe ya da cehennem çukurlarından bir çukurdur.\" hadisi neyi ifade eder?",
+            "options": {
+                "A": "Kabir hayatının insanın amellerine göre şekilleneceğini",
+                "B": "Kabir hayatının tamamen metaforik olduğunu",
+                "C": "Ahirette sadece cennet olacağını",
+                "D": "Cehennemin kabirde başlamadığını"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 88,
+            "question": "Berzah âlemi neyi ifade eder?",
+            "options": {
+                "A": "Ölüm ile yeniden diriliş arasındaki dönem",
+                "B": "Dünyada sıkıntı  çekenlerin kurtuluş anı",
+                "C": "Peygamberlerin özel olarak yaşadığı bir mekân",
+                "D": "Sadece inananlar için var olan bir süreç"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 89,
+            "question": "Kabir hayatı ile dünya hayatı arasında nasıl bir süre algısı vardır?",
+            "options": {
+                "A": "Kabirde zaman, dünya hayatına göre daha uzun hissed ilir",
+                "B": "İnsanlar kabir hayatını çok kısa algılayacaklardır",
+                "C": "Kabir hayatında hiç zaman kavramı yoktur",
+                "D": "Kabirde zaman dünya hayatındaki gibi işler"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 90,
+            "question": "Küçük kıyamet alametlerinden biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Dâbbetü’l -Arz’ın çıkması",
+                "B": "Güneşin batıdan doğması",
+                "C": "Zinaya açıkça izin verilmesi",
+                "D": "Yecüc ve Mecüc’ün ortaya çıkması"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 91,
+            "question": "Büyük kıyamet alametleri arasında aşağıdakilerden hangisi yer  almaz ?",
+            "options": {
+                "A": "Deccal’in çıkması",
+                "B": "İsa (a.s.)’ın tekrar yeryüzün e inmesi",
+                "C": "İnsanların yaşlanmaması",
+                "D": "Dünyayı saracak büyük bir duman"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 92,
+            "question": "Kıyametin ne zaman kopacağı ile ilgili aşağıdakilerden hangisi doğrudur?",
+            "options": {
+                "A": "Kıyamet belirli bir dönemde gerçekleşecektir",
+                "B": "Kıyametin vakti hesaplanabilir",
+                "C": "Peygamberle r kıyametin tam zamanını bilmişlerdir",
+                "D": "Kıyametin vakti sadece Allah’ın ilmindedir"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 93,
+            "question": "İsrafil (a.s.)’ın sûra iki kez üflemesi neyi ifade eder?",
+            "options": {
+                "A": "Dünyanın yaratılışı ve sonunu",
+                "B": "Kıyametin başlaması ve yeniden dirilişi",
+                "C": "İnsanların tövbe etmesini ve affedilmesini",
+                "D": "Cennetin ve cehennemin kapılarının açılmasını"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 94,
+            "question": "Amel defterlerinin insanlara verilmesiyle ilgili aşağıdakilerden hangisi  yanlıştır ?",
+            "options": {
+                "A": "Kitabı sağ eline verilenler mutlu olacaktır",
+                "B": "Kitabı sol eline verilenler  üzülecektir",
+                "C": "Kitapta küçük ve büyük her amel kaydedilmiştir",
+                "D": "İnsanlar amel defterlerini okumadan ceza alacaktır"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 95,
+            "question": "Şefaat kavramı neyi ifade eder?",
+            "options": {
+                "A": "Peygamberlerin Allah’ın izniyle bazı müminlere aracılık etmesi",
+                "B": "Günahkârların doğrudan cennete gitmesi",
+                "C": "Kâfirlerin affedilmesini sağlaması",
+                "D": "İnsanların kendi amelleriyle cennete girmesi"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 96,
+            "question": "Sırat köprüsü hangi amaçla geçilir?",
+            "options": {
+                "A": "Müminlerin günahlarını affettirmek için",
+                "B": "Cennete ve cehenneme geçişi belirlemek için",
+                "C": "Peygambe rlerin özel olarak cennete girmesi için",
+                "D": "Sadece cehennemliklerin cezalandırılması için"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 97,
+            "question": "Günlük hayatta inanç kavramı en çok hangi unsurla ilişkilendirilir?",
+            "options": {
+                "A": "Toplumsal adalet",
+                "B": "Güven ve samimiyet",
+                "C": "Maddi kazanç",
+                "D": "Eğitim seviyesi"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 98,
+            "question": "Dinî anlamda inanç hangi iki temel boyuttan oluşur?",
+            "options": {
+                "A": "Bilgi ve ibadet",
+                "B": "Güven ve samimiyet",
+                "C": "Akıl ve duygu",
+                "D": "Sevgi ve korku"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 99,
+            "question": "“Allah’ın dışındaki güvenilecek şeyleri (tağût) inkâr eden ve sadece Allah’a inanan, asla kopmaya cak olan sağlam bir kulpa yapışmış olur.” ayeti inancın hangi boyutunu vurgular?",
+            "options": {
+                "A": "Allah’a güvenmeyi",
+                "B": "Dünyadan el etek çekmeyi",
+                "C": "İnsanlardan tamamen uzaklaşmayı",
+                "D": "İnsanlara kayıtsız şartsız güvenmeyi"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 100,
+            "question": "Allah’a karşı samimiyetin en temel g östergesi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "İnsanlara iyi davranmak",
+                "B": "Dini bir zorunluluk olarak değil, bilinçli bir şekilde yaşamak",
+                "C": "Toplumda saygın bir konumda bulunmak",
+                "D": "Çevresindeki insanları dine zorlamak"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 101,
+            "question": "Allah’ın insanları çeşitli ibadetlerle sınamasının temel sebebi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "İnsanların fiziksel dayanıklılığını artırmak",
+                "B": "İnsanların sosyalleşmesini sağlamak",
+                "C": "İnsanların ibadetlerle ne kadar samimi olduklarını görmek",
+                "D": "İnsanları dünyadan tamamen uza klaştırmak"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 102,
+            "question": "“İnandığı hâlde inancının gereğini yerine getirmeme” durumu aşağıdakilerden hangisiyle açıklanabilir?",
+            "options": {
+                "A": "İnançsızlık",
+                "B": "Teorik ateizm",
+                "C": "İhmal ve boş verme",
+                "D": "İnançsızlığın bir sonucu"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 103,
+            "question": "Kur’an’da iman ve amel arasınd aki ilişki hangi şekilde tasvir edilir?",
+            "options": {
+                "A": "Amel olmadan iman geçersiz sayılır",
+                "B": "İman ve amel birbirinden tamamen bağımsızdır",
+                "C": "İman ve amel bir bütünlük oluşturur",
+                "D": "Amel yalnızca peygamberler için gereklidir"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 104,
+            "question": "Deizm anlayışına göre Tanrı’nı n dünya ile ilişkisi nasıldır?",
+            "options": {
+                "A": "Sürekli müdahalede bulunur",
+                "B": "Peygamberler aracılığıyla insanları yönlendirir",
+                "C": "Melekler vasıtasıyla insanları kontrol eder",
+                "D": "Kâinata müdahale etmez, sadece yaratır"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 105,
+            "question": "Günümüz dünyasında ibadetlerin modern hayatı zorlaştırdığına dair düşünce hangi anlayışın temelini oluşturur?",
+            "options": {
+                "A": "Ateizm",
+                "B": "Deizm",
+                "C": "Tevhit inancı",
+                "D": "İslam mistisizmi"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 106,
+            "question": "Deizmin temel düşüncesi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Tanrı’nın dünya ile ilgilenmeye devam e ttiği",
+                "B": "Tanrı’nın insanlara peygamberler aracılığıyla mesaj gönderdiği",
+                "C": "Tanrı’nın var olmadığını savunduğu",
+                "D": "Tanrı’nın dünyayı yarattığı ama insanlara karışmadığı"
+            },
+            "correct_answer": "D",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 107,
+            "question": "Ateizm hangi temel ilkeye dayanır?",
+            "options": {
+                "A": "Peygamberlerin gerçek olduğu",
+                "B": "Allah’ın sadece belirli insanlara göründüğü",
+                "C": "Tanrı’nın olmadığını kabul etmek",
+                "D": "Tanrı’ya inanmak ama ibadet etmemek"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 108,
+            "question": "Teorik ateizm nasıl bir yaklaşımı temsil eder?",
+            "options": {
+                "A": "Tanrının olmadığını bilimsel yöntemlerle ispatlamaya çalışan düşünce",
+                "B": "Tanrının var olduğunu ama insanlara karışmadığını savunan görüş",
+                "C": "Tüm dinleri kabul eden felsefi anlayış",
+                "D": "Tanrıya inanıp ibadet etmeyenlerin görüşü"
+            },
+            "correct_answer": "A",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 109,
+            "question": "Pratik ateizm, teorik ateizmden nasıl ayrılır?",
+            "options": {
+                "A": "Tanrı’nın varlığı konusunda bilimsel ka nıtlar sunar",
+                "B": "Tanrı’nın varlığını inkâr etmez, ancak dine göre yaşamaz",
+                "C": "Sadece ahlak kurallarını reddeder",
+                "D": "Teorik ateizmi tamamen destekleyen bir anlayıştır"
+            },
+            "correct_answer": "B",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        },
+        {
+            "id": 110,
+            "question": "“İnandığı hâlde inançsız gibi yaşamak” durumu hangi kavramla açıklanabilir?",
+            "options": {
+                "A": "Teorik ateizm",
+                "B": "Deizm",
+                "C": "Pratik ateizm",
+                "D": "Mutlak materyalizm"
+            },
+            "correct_answer": "C",
+            "explanation": "",
+            "difficulty": 1,
+            "points": 1
+        }
+    ]
+}

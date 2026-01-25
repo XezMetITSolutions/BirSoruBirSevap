@@ -392,7 +392,15 @@ class QuestionLoader {
             'islam_tarihi' => 'İslam Tarihi',
             'tasavvuf' => 'Tasavvuf',
             'tefsir' => 'Tefsir',
-            'turkce' => 'Türkçe'
+            'turkce' => 'Türkçe',
+            'akaid' => 'Akaid',
+            'kelam' => 'Kelam',
+            'fikih' => 'Fıkıh',
+            'din_psikolojisi' => 'Din Psikolojisi',
+            'din_sosyolojisi' => 'Din Sosyolojisi',
+            'din_egitimi' => 'Din Eğitimi',
+            'temel_esaslar' => 'Temel Esaslar',
+            'arapca' => 'Arapça'
         ];
         
         // Dosya adını küçük harfe çevir ve eşleştir
@@ -400,6 +408,9 @@ class QuestionLoader {
         
         foreach ($categoryMap as $key => $value) {
             if (strpos($lowerFileName, $key) !== false) {
+                // Özel durumlar için tam eşleşme kontrolü veya daha spesifik kontroller eklenebilir
+                if ($key === 'islam_tarihi' && strpos($lowerFileName, 'islam_tarihi_1') !== false) return 'İslam Tarihi I';
+                if ($key === 'islam_tarihi' && strpos($lowerFileName, 'islam_tarihi_2') !== false) return 'İslam Tarihi II';
                 return $value;
             }
         }
