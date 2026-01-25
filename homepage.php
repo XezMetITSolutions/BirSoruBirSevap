@@ -1116,7 +1116,7 @@ $totalCategories = array_sum(array_map('count', $categories));
                 <div class="floating-card">
                     <div class="card-icon">🕌</div>
                     <div class="card-title" id="floatTitle2">İslami İlimler</div>
-                    <div class="card-text" id="floatText2">3 Seviye: Fıkıh, Akaid, Tefsir, Hadis</div>
+                    <div class="card-text" id="floatText2">3 Seviye: Akaid, Kelam, Tefsir, Fıkıh, Hadis</div>
                 </div>
                 <div class="floating-card">
                     <div class="card-icon">🎓</div>
@@ -1213,23 +1213,23 @@ $totalCategories = array_sum(array_map('count', $categories));
         <div class="features-container">
             <div class="section-header fade-in">
                 <h2 class="section-title" id="islamiTitle">İslami İlimler Müfredatı</h2>
-                <p class="section-subtitle" id="islamiSubtitle">3 seviyeli derinlemesine İslami eğitim programı</p>
+                <p class="section-subtitle" id="islamiSubtitle">3 seviyeli derinlemesine İslami eğitim programı - 12 farklı ders alanı</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card fade-in">
                     <div class="feature-icon">🕌</div>
                     <div class="feature-title" id="islamiTitle1">İslami İlimler 1</div>
-                    <div class="feature-text" id="islamiText1">Fıkıh, Akaid, Siyer ve Ahlak derslerinden kapsamlı sorular. İslami ilimlere giriş için ideal başlangıç.</div>
+                    <div class="feature-text" id="islamiText1">Akaid, Temel Esaslar, Arapça ve Fıkıh derslerinden kapsamlı sorular. İslami ilimlere giriş için ideal başlangıç.</div>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">📿</div>
                     <div class="feature-title" id="islamiTitle2">İslami İlimler 2</div>
-                    <div class="feature-text" id="islamiText2">Tefsir, Hadis, Fıkıh Usulü ve Kelam konularında gelişmiş sorular. Orta seviye öğrenciler için derinlemesine içerik.</div>
+                    <div class="feature-text" id="islamiText2">Kelam, Hadis, Tefsir ve İslam Tarihi I konularında gelişmiş sorular. Orta seviye öğrenciler için derinlemesine içerik.</div>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">📜</div>
                     <div class="feature-title" id="islamiTitle3">İslami İlimler 3</div>
-                    <div class="feature-text" id="islamiText3">İslam Felsefesi, Tasavvuf, Mezhepler Tarihi ve İslam Hukuku. İleri seviye akademik içerik.</div>
+                    <div class="feature-text" id="islamiText3">İslam Tarihi II, Din Psikolojisi, Din Sosyolojisi ve Din Eğitimi. İleri seviye akademik içerik.</div>
                 </div>
             </div>
         </div>
@@ -1331,7 +1331,7 @@ $totalCategories = array_sum(array_map('count', $categories));
                 footFeaturesTitle:'Özellikler', footF1:'Soru Bankası', footF2:'Sınav Oluşturma', footF3:'Analitik Raporlar', footF4:'Mobil Uyumluluk',
                 footSupportTitle:'Destek', footS1:'Yardım Merkezi', footS2:'İletişim', footS3:'SSS', footS4:'Teknik Destek',
                 floatTitle1:'Temel Bilgiler', floatText1:'3 Seviye: İtikat, İbadet, Siyer, Ahlak',
-                floatTitle2:'İslami İlimler', floatText2:'3 Seviye: Fıkıh, Akaid, Tefsir, Hadis',
+                floatTitle2:'İslami İlimler', floatText2:'3 Seviye: Akaid, Kelam, Tefsir, Fıkıh, Hadis',
                 floatTitle3:'IGMG Müfredatı', floatText3:'Eğitim Başkanlığı Onaylı',
                 featTitle1:'Temel Bilgiler 1', featText1:'İtikat, İbadet, Siyer, Ahlak, Musiki ve Teşkilat derslerinden 500+ kaliteli soru. Temel seviye öğrenciler için mükemmel başlangıç.',
                 featTitle2:'Temel Bilgiler 2', featText2:'IGMG müfredatına uygun gelişmiş sorular. İtikat, İbadet, Siyer, Ahlak, Musiki ve Teşkilat konularında derinlemesine öğrenme.',
@@ -1339,10 +1339,10 @@ $totalCategories = array_sum(array_map('count', $categories));
                 featTitle4:'Kaliteli Soru Bankası', featText4:'Eğitim Başkanlığı tarafından hazırlanmış, müfredata uygun, çoktan seçmeli sorular. Her seviyeye uygun zorluk dereceleri.',
                 featTitle5:'Detaylı Analitik', featText5:'Öğrenci performansını takip edin. Hangi konularda güçlü, hangilerinde gelişim gerekiyor? Detaylı raporlarla öğrenin.',
                 featTitle6:'Hızlı ve Kolay', featText6:'Anında sınav oluşturun, otomatik değerlendirme yapın. Eğitmenler için zaman tasarrufu, öğrenciler için etkili öğrenme.',
-                islamiTitle:'İslami İlimler Müfredatı', islamiSubtitle:'3 seviyeli derinlemesine İslami eğitim programı',
-                islamiTitle1:'İslami İlimler 1', islamiText1:'Fıkıh, Akaid, Siyer ve Ahlak derslerinden kapsamlı sorular. İslami ilimlere giriş için ideal başlangıç.',
-                islamiTitle2:'İslami İlimler 2', islamiText2:'Tefsir, Hadis, Fıkıh Usulü ve Kelam konularında gelişmiş sorular. Orta seviye öğrenciler için derinlemesine içerik.',
-                islamiTitle3:'İslami İlimler 3', islamiText3:'İslam Felsefesi, Tasavvuf, Mezhepler Tarihi ve İslam Hukuku. İleri seviye akademik içerik.',
+                islamiTitle:'İslami İlimler Müfredatı', islamiSubtitle:'3 seviyeli derinlemesine İslami eğitim programı - 12 farklı ders alanı',
+                islamiTitle1:'İslami İlimler 1', islamiText1:'Akaid, Temel Esaslar, Arapça ve Fıkıh derslerinden kapsamlı sorular. İslami ilimlere giriş için ideal başlangıç.',
+                islamiTitle2:'İslami İlimler 2', islamiText2:'Kelam, Hadis, Tefsir ve İslam Tarihi I konularında gelişmiş sorular. Orta seviye öğrenciler için derinlemesine içerik.',
+                islamiTitle3:'İslami İlimler 3', islamiText3:'İslam Tarihi II, Din Psikolojisi, Din Sosyolojisi ve Din Eğitimi. İleri seviye akademik içerik.',
                 platformTitle:'Platform Özellikleri', platformSubtitle:'Modern eğitim araçları ve güçlü özellikler',
                 criteriaLabel:'Koşullar:'
             };
@@ -1363,7 +1363,7 @@ $totalCategories = array_sum(array_map('count', $categories));
                 footFeaturesTitle:'Funktionen', footF1:'Fragenbank', footF2:'Prüfung erstellen', footF3:'Analytische Berichte', footF4:'Mobilfreundlich',
                 footSupportTitle:'Support', footS1:'Hilfezentrum', footS2:'Kontakt', footS3:'FAQ', footS4:'Technischer Support',
                 floatTitle1:'Grundkenntnisse', floatText1:'3 Stufen: Glaube, Gebet, Sīra, Moral',
-                floatTitle2:'Islamische Wissenschaften', floatText2:'3 Stufen: Fiqh, Aqida, Exegese, Hadith',
+                floatTitle2:'Islamische Wissenschaften', floatText2:'3 Stufen: Aqida, Kalam, Exegese, Fiqh, Hadith',
                 floatTitle3:'IGMG Lehrplan', floatText3:'Vom Bildungspräsidium genehmigt',
                 featTitle1:'Grundkenntnisse 1', featText1:'Über 500 hochwertige Fragen aus Glaube, Gebet, Sīra, Moral, Musik und Organisation. Perfekter Einstieg für Anfänger.',
                 featTitle2:'Grundkenntnisse 2', featText2:'Lehrplankonforme fortgeschrittene Fragen. Vertieftes Lernen in Glaube, Gebet, Sīra, Moral, Musik und Organisation.',
@@ -1371,10 +1371,10 @@ $totalCategories = array_sum(array_map('count', $categories));
                 featTitle4:'Hochwertige Fragenbank', featText4:'Von Experten erstellte, lehrplankonforme Multiple-Choice-Fragen. Schwierigkeitsgrade für jedes Niveau.',
                 featTitle5:'Detaillierte Analytik', featText5:'Verfolgen Sie die Leistung der Schüler. Welche Themen sind stark, wo ist Entwicklung nötig? Lernen Sie es mit Berichten.',
                 featTitle6:'Schnell & Einfach', featText6:'Erstellen Sie sofort Prüfungen und bewerten Sie automatisch. Zeitersparnis für Lehrkräfte, effektives Lernen für Schüler.',
-                islamiTitle:'Islamische Wissenschaften Lehrplan', islamiSubtitle:'3-stufiges tiefgreifendes islamisches Bildungsprogramm',
-                islamiTitle1:'Islamische Wissenschaften 1', islamiText1:'Umfassende Fragen aus Fiqh, Aqida, Sīra und Moral. Idealer Einstieg in die islamischen Wissenschaften.',
-                islamiTitle2:'Islamische Wissenschaften 2', islamiText2:'Fortgeschrittene Fragen zu Exegese, Hadith, Usul al-Fiqh und Kalam. Vertiefter Inhalt für mittlere Stufe.',
-                islamiTitle3:'Islamische Wissenschaften 3', islamiText3:'Islamische Philosophie, Mystik, Geschichte der Rechtsschulen und Islamisches Recht. Akademischer Inhalt für Fortgeschrittene.',
+                islamiTitle:'Islamische Wissenschaften Lehrplan', islamiSubtitle:'3-stufiges tiefgreifendes islamisches Bildungsprogramm - 12 verschiedene Fachbereiche',
+                islamiTitle1:'Islamische Wissenschaften 1', islamiText1:'Umfassende Fragen aus Aqida, Grundlagen, Arabisch und Fiqh. Idealer Einstieg in die islamischen Wissenschaften.',
+                islamiTitle2:'Islamische Wissenschaften 2', islamiText2:'Fortgeschrittene Fragen zu Kalam, Hadith, Exegese und Islamische Geschichte I. Vertiefter Inhalt für mittlere Stufe.',
+                islamiTitle3:'Islamische Wissenschaften 3', islamiText3:'Islamische Geschichte II, Religionspsychologie, Religionssoziologie und Religionspädagogik. Akademischer Inhalt für Fortgeschrittene.',
                 platformTitle:'Plattform-Funktionen', platformSubtitle:'Moderne Lernwerkzeuge und leistungsstarke Funktionen',
                 criteriaLabel:'Kriterien:'
             };
