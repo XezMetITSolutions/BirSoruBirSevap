@@ -1,0 +1,1217 @@
+{
+    "category": "ARAPCA",
+    "title": "İslami İlimler - Arapça Soruları",
+    "question_count": 110,
+    "questions": [
+        {
+            "id": 1,
+            "question": "الطَّالِبُ مُجْتَهِد. Yukarıdaki cümlenin Türkçe tercümesi hangisidir?",
+            "options": {
+                "A": "Öğrenci çalışkandır.",
+                "B": "Çalışkan öğrenci.",
+                "C": "Öğrenci sınıftadır.",
+                "D": "Öğretmen çalışkandır."
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 2,
+            "question": "بَابُ البَيْتِ مَفْتُوح. Cümlesinde muzâf  hangisidir?",
+            "options": {
+                "A": "بَابُ",
+                "B": "البَيْتِ",
+                "C": "مَفْتُوح",
+                "D": "بَابُ البَيْتِ"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 3,
+            "question": "هَذَا كِتَاب. Cümlesinde işaret ismi hangisidir?",
+            "options": {
+                "A": "كِتَاب",
+                "B": "هَذَا",
+                "C": "ـ",
+                "D": "yoktur"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 4,
+            "question": "البِنْتُ الصَّغِيرَةُ ف ِي الغُرْفَةِ. Yukarıdaki cümlede sıfat  hangisidir?",
+            "options": {
+                "A": "البِنْتُ",
+                "B": "ف ِي",
+                "C": "الصَّغِيرَةُ",
+                "D": "الغُرْفَةِ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 5,
+            "question": "ذَهَبَ الطَّالِبُ إَِلى المَدْرَسَةِ. Cümlesinin Türkçe tercümesi hangisidir?",
+            "options": {
+                "A": "Öğrenci okulda gitti.",
+                "B": "Öğrenci okula gitti.",
+                "C": "Okul öğrenciye gitti.",
+                "D": "Öğrenci okuldan geldi."
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 6,
+            "question": "Aşağıdaki cümlelerden hangisi isim cümlesidir ?",
+            "options": {
+                "A": "ذَهَبَ عَلِيٌّ إَِلى البَيْتِ",
+                "B": "يَكْتُبُ الطَّالِبُ الدَّرْسَ",
+                "C": "الطَّقْسُ جَمِيل",
+                "D": "دَخَلَ الوَلىدُ الغُرْفَةَ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 7,
+            "question": "نِسَاء........ Boşluğa uygun sıfat hangisidir?",
+            "options": {
+                "A": "مُؤْمِنَة",
+                "B": "مُؤْمِنَات",
+                "C": "مُؤْمِن",
+                "D": "مُؤْمِنَانِ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 9,
+            "question": "الطَّائِرُ ف ِيالقَفَص   . Cümlesinin Türkçe tercümesi hangisidir?",
+            "options": {
+                "A": "Kuş kafese girdi.",
+                "B": "Kafes kuştadır.",
+                "C": "Kuş kafestedir.",
+                "D": "Kuş kafesten çıktı."
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 10,
+            "question": "فَاطِمَةُ......  الدَّرْسَ Boşluğa uygun muzâri fiil  hangisidir?",
+            "options": {
+                "A": "كىتَبَتْ",
+                "B": "تَكْتُبُ",
+                "C": "يَكْتُبُ",
+                "D": "كىتَبَ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 11,
+            "question": "تَشَْْبُ فَاطِمَةُ الشَّايَ Fiilin emri hangisidir?",
+            "options": {
+                "A": "اِشَْْب ِي",
+                "B": "اِشَْْبْ",
+                "C": "اِشَْْبَا",
+                "D": "اِشَْْبْنَ"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 12,
+            "question": "مَا الكِتَابُ جَدِيدًا Yukarıdaki cümle aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Olumlu fiil cümlesi",
+                "B": "Olumsuz fiil cümlesi",
+                "C": "Olumsuz isim cümlesi",
+                "D": "Soru cümlesi"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 13,
+            "question": "نَحْنُ طَُّلَّب. Cümlesinde ayrı zamir  hangisidir?",
+            "options": {
+                "A": "طَُّلَّب",
+                "B": "نَحْنُ",
+                "C": "ـ",
+                "D": "yoktur"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 14,
+            "question": "Aşağıdaki kelimelerden hangisi kırık çoğuldur ?",
+            "options": {
+                "A": "مُعَلِّمُونَ",
+                "B": "كُتُب",
+                "C": "مُسْلِمَات",
+                "D": "طَالِبَانِ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 15,
+            "question": "كُتِبَ الدَّرْسُ. Yukarıdaki cümlede fiil hangi türdür?",
+            "options": {
+                "A": "Malum (etken)",
+                "B": "Emir",
+                "C": "Muzâri",
+                "D": "Meçhul (edilgen)"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 16,
+            "question": "الطَّالِبُ ف ِي الصَّف. Cümlesinde kullanılan harf -i cer  hangisidir?",
+            "options": {
+                "A": "الطَّالِبُ",
+                "B": "الصَّف",
+                "C": "ف ِي",
+                "D": "ـ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 18,
+            "question": "القَلىمُ الجَدِيدُ Yukarıdaki ifade hangi yapıdadır?",
+            "options": {
+                "A": "İsim tamlaması",
+                "B": "Fiil cümlesi",
+                "C": "Sıfat tamlaması",
+                "D": "Muzâf –muzâfun ileyh"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 19,
+            "question": "اِجْلِسْ يَا أىحْمَدُ! Yukarıdaki fiil hangi fiil türüdür?",
+            "options": {
+                "A": "Mâzi",
+                "B": "Muzâri",
+                "C": "Emir",
+                "D": "Meçhul"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 20,
+            "question": "تَذْهَبُ فَاطِمَةُ إَِلى المَدْرَسَةِ. Yukarıdaki cümlede fiil hangi zamana aittir?",
+            "options": {
+                "A": "Geçmiş zaman",
+                "B": "Şimdiki  zaman",
+                "C": "Emir",
+                "D": "Olumsuz zaman"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 21,
+            "question": "......  الكِتَابُ Boşluğa uygun haber hangisidir?",
+            "options": {
+                "A": "جَدِيد",
+                "B": "ف ِي",
+                "C": "عَلى",
+                "D": "مِنْ"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 22,
+            "question": "ىيْتُ ...... ف ِي المَسْجِدِ رَأ Boşluğa uygun kelime hangisidir?",
+            "options": {
+                "A": "رَجُل",
+                "B": "رَجُل",
+                "C": "رَجَُّلً",
+                "D": "رَجُلُ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 23,
+            "question": "......   الطَّالِبَاتُ مُجْتَهِدَات Boşluğa uygun işaret ismi hangisidir?",
+            "options": {
+                "A": "هَذَا",
+                "B": "هَذِهِ",
+                "C": "هَؤَُلَءِ",
+                "D": "ذَلِكَ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 25,
+            "question": "المُعَلِّمَانِ ...... ف ِي الصَّف. Boşluğa uygun fiil hangisidir?",
+            "options": {
+                "A": "يَجْلِسُ",
+                "B": "يَجْلِسَانِ",
+                "C": "يَجْلِسُونَ",
+                "D": "تَجْلِسُ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 26,
+            "question": "اُكْتُبْ ...... يَا عَلِيي! Boşluğa uygun kelime hangisidir?",
+            "options": {
+                "A": "الدَّرْسُ",
+                "B": "الدَّرْس",
+                "C": "الدَّرْسَ",
+                "D": "دَرْس"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 27,
+            "question": "الطَّالِبُ  ...... Boşluğa uygun haber hangisidir?",
+            "options": {
+                "A": "ف ِي",
+                "B": "مُجْتَهِد",
+                "C": "طَالِب",
+                "D": "إَِلى"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 28,
+            "question": "شَاهَدْتُ ...... ف ِي السيوقِ. Boşluğa uygun kelime hangisidir?",
+            "options": {
+                "A": "وَلىد",
+                "B": "وَلىد",
+                "C": "وَلىدًا",
+                "D": "وَلىدُ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 29,
+            "question": "……   الطَّالِبُ هُنَاكَ مُجْتَهِد . Boşluğa uygun kelime hangisidir?",
+            "options": {
+                "A": "هَذِهِ",
+                "B": "هَؤَُلَءِ",
+                "C": "ذَلِكَ",
+                "D": "تِلْكَ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 30,
+            "question": "...... الطَّعَامُ سَاخِنًا. Boşluğa uygun olumsuzluk edatı hangisidir?",
+            "options": {
+                "A": "َلَ",
+                "B": "مَا",
+                "C": "لىمْ",
+                "D": "لىنْ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 31,
+            "question": "ىحْمَدُ؟ ىيْنَ ذَهَبَ أ إَِلى أ",
+            "options": {
+                "A": "إَِلى البَيْتِ",
+                "B": "إَِلى الصَّف",
+                "C": "إَِلى المَدْرَسَةِ",
+                "D": "إَِلى السيوقِ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 32,
+            "question": "ىحْمَدُ إَِلى المَدْرَسَةِ؟ مَتََ ذَهَبَ أ",
+            "options": {
+                "A": "لىيَّْلً",
+                "B": "صَبَاحًا",
+                "C": "مَسَاءً",
+                "D": "بَعْدَ الدَّرْس"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 33,
+            "question": "ىيْنَ جَلىسَ أىحْمَدُ؟ أ",
+            "options": {
+                "A": "عَلى الطَّاو لىةِ",
+                "B": "ف ِي البَيْتِ",
+                "C": "عَلى الكُرْسِي",
+                "D": "ف ِي السيوقِ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 34,
+            "question": "مَنْ كىانَ ف ِي الصَّف ؟",
+            "options": {
+                "A": "الطَّالِبُ",
+                "B": "المُعَلِّمُ",
+                "C": "الوَلىدُ",
+                "D": "األَبُ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 35,
+            "question": "ىحْمَدُ دَخَلَ أ   اَِلى ...... Boşluğa metne göre uygun kelime hangisidir?",
+            "options": {
+                "A": "البَيْتِ",
+                "B": "الصَّف",
+                "C": "المَسْجِدِ",
+                "D": "السيوقِ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 36,
+            "question": "ىحْمَدُ عَلى جَلىسَ أ  ...... Boşluğa uygun kelime hangisidir?",
+            "options": {
+                "A": "الطَّاو لىةِ",
+                "B": "األَرْض",
+                "C": "الكُرْسِي",
+                "D": "الشَّ ير"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 38,
+            "question": "ف ِي النَّص»جَلىسَ« مَاذَا كىلِمَةُ:",
+            "options": {
+                "A": "اِسْم",
+                "B": "حَرْف",
+                "C": "فِعْل  مَاض ِي",
+                "D": "فِعْل  مُضَار ع"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 39,
+            "question": "ف ِي النَّص»إَِلى« مَاذَا كىلِمَةُ:",
+            "options": {
+                "A": "اِسْمُ إِشَارَة",
+                "B": "حَرْفُ جَر",
+                "C": "فِعْل",
+                "D": "صِفَة"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 41,
+            "question": "بَابُ الفَصْلِ مَفْتُوح. Cümlesinde muzâf  hangisidir?",
+            "options": {
+                "A": "بَابُ",
+                "B": "الفَصْلِ",
+                "C": "مَفْتُوح",
+                "D": "بَابُ الفَصْلِ"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 42,
+            "question": "……   المُعَلِّمَةُ هُنَاكَ نَشِيطَة . Boşluğa uygun kelime hangisidir?",
+            "options": {
+                "A": "هَذَا",
+                "B": "هَؤَُلَءِ",
+                "C": "تِلْكَ",
+                "D": "ذَلِكَ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 43,
+            "question": "......  الط فْلُ الحَلِيبَ. Boşluğa uygun mâzi fiili  hangisidir?",
+            "options": {
+                "A": "يَشَْْبُ",
+                "B": "شَْ بَ",
+                "C": "اِشَْْبْ",
+                "D": "يَشَْْبْ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 44,
+            "question": "تَكْتُبُ فَاطِمَةُ الدَّرْسَ. Bu cümlede mef‘ûl bih  hangisidir?",
+            "options": {
+                "A": "فَاطِمَةُ",
+                "B": "تَكْتُبُ",
+                "C": "الدَّرْسَ",
+                "D": "ـَ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 45,
+            "question": "القَلىمُ ...... المَكْتَبِ. Boşluğa uygun harf -i cer hangisidir?",
+            "options": {
+                "A": "إَِلى",
+                "B": "عَلى",
+                "C": "ف ِي",
+                "D": "مِنْ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 46,
+            "question": "Aşağıdaki cümlelerden hangisi isim cümlesidir ?",
+            "options": {
+                "A": "ذَهَبَ أىحْمَدُ إَِلى البَيْتِ",
+                "B": "يَقْرَأُ الطَّالِبُ الكِتَابَ",
+                "C": "الطَّقْسُ جَمِيل",
+                "D": "دَخَلَالوَلىدُ الصَّفَّ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 47,
+            "question": "نَحْنُ مُسْلِمُونَ. Cümlesinde bulunan zamir hangisidir?",
+            "options": {
+                "A": "مُسْلِمُونَ",
+                "B": "نَحْنُ",
+                "C": "ـُ",
+                "D": "yoktur"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 48,
+            "question": "Aşağıdakilerden hangisi kırık çoğuldur ?",
+            "options": {
+                "A": "طَالِبُونَ",
+                "B": "طَالِبَات",
+                "C": "كُتُب",
+                "D": "مُعَلِّمَانِ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 49,
+            "question": "اِفْتَحْ البَابَ يَا مُحَمَّدُ! Bu cümlede fiil hangi türdedir?",
+            "options": {
+                "A": "Mâzi",
+                "B": "Muzâri",
+                "C": "Emir",
+                "D": "Meçhul"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 50,
+            "question": "مَا الوَلىدُ نَائِمًا. Yukarıdaki cümle hangi türdür?",
+            "options": {
+                "A": "Olumlu fiil cümlesi",
+                "B": "Olumsuz fiil cümlesi",
+                "C": "Olumlu isim cümlesi",
+                "D": "Olumsuz isim cüm lesi"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 51,
+            "question": "ىنْتَُ َّ ...... ف ِي الصَّف أ. Boşluğa uygun fiil hangisidir?",
+            "options": {
+                "A": "تَجْلِسْنَ",
+                "B": "تَجْلِسُونَ",
+                "C": "يَجْلِسْنَ",
+                "D": "تَجْلِسُ"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 52,
+            "question": "الطَّالِبُ النَّشِيطُ Yukarıdaki ifade hangi yapıdadır?",
+            "options": {
+                "A": "İsim tamlaması",
+                "B": "Fiil cümlesi",
+                "C": "Sıfat tamlaması",
+                "D": "Muzâf –muzâfun ileyh"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 53,
+            "question": "Aşağıdaki fiillerden hangisi muzâri dir?",
+            "options": {
+                "A": "كىتَبَ",
+                "B": "يَكْتُبُ",
+                "C": "اُكْتُبْ",
+                "D": "كُتِبَ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 54,
+            "question": "كُتِبَ الدَّرْسُ. Bu cümlede fiil hangi türdür?",
+            "options": {
+                "A": "Etken",
+                "B": "Emir",
+                "C": "Meçhul",
+                "D": "Muzâri"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 56,
+            "question": "هَذَا كِتَابُ الطَّالِبِ. Cümlesinde muzâfun ileyh  hangisidir?",
+            "options": {
+                "A": "هَذَا",
+                "B": "كِتَابُ",
+                "C": "الطَّالِبِ",
+                "D": "كِتَابُ الطَّالِبِ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 57,
+            "question": "Aşağıdakilerden hangisi harf -i cer dir?",
+            "options": {
+                "A": "ف ِي",
+                "B": "هُوَ",
+                "C": "كِتَاب",
+                "D": "كىتَبَ"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 58,
+            "question": "يَذْهَبُ األَوَْلَدُ إَِلى المَدْرَسَةِ. Cümlesinin Türkçe tercümesi hangisidir?",
+            "options": {
+                "A": "Çocuklar okuldan geliyor.",
+                "B": "Çocuklar okula gidiyor.",
+                "C": "Çocuk okula gitti.",
+                "D": "Okul çocuklara gitti."
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 59,
+            "question": "......   الطَّالِبُ ف ِي الصَّف. Boşluğa uygun kelime hangisidir?",
+            "options": {
+                "A": "كىانَ",
+                "B": "كىتَبَ",
+                "C": "يَكْتُبُ",
+                "D": "اُكْتُبْ"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 60,
+            "question": "Aşağıdaki cümlelerden hangisi kurallı ve anlamlıdır ?",
+            "options": {
+                "A": "ف ِي الصَّف  الطَّالِبُ",
+                "B": "الطَّالِبُ ف ِي الصَّف",
+                "C": "الصَّف  الطَّالِبُ ف ِي",
+                "D": "ف ِي الطَّالِبُ الصَّف"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 61,
+            "question": "Aşağıdaki kelimelerden hangisi İsm-i Âlet tir?",
+            "options": {
+                "A": "كىاتِب",
+                "B": "مِفْتَاح",
+                "C": "مَكْتَب",
+                "D": "مَفْتُوح"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 62,
+            "question": "Aşağıdakilerden hangisi İsm-i Mekân dır?",
+            "options": {
+                "A": "مَجْلِس",
+                "B": "جَالِس",
+                "C": "جَلىسَ",
+                "D": "جُلُوس"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 64,
+            "question": "Aşağıdakilerden hangisi müennes tir?",
+            "options": {
+                "A": "كِتَاب",
+                "B": "قَلىم",
+                "C": "مَدْرَسَة",
+                "D": "بَاب"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 65,
+            "question": "Aşağıdaki kelimelerden hangisi hakiki müzekker dir?",
+            "options": {
+                "A": "شَمْس",
+                "B": "مَرْيَمُ",
+                "C": "رَجُل",
+                "D": "مَدْرَسَة"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 66,
+            "question": "إِنَّ الطَّالِبَ مُجْتَهِد Bu cümlede  إِنَّ ’nin haberi hangisidir?",
+            "options": {
+                "A": "إِنَّ",
+                "B": "الطَّالِبَ",
+                "C": "مُجْتَهِد",
+                "D": "ـ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 67,
+            "question": "Aşağıdakilerden hangi si inne ve benzerlerindendir ?",
+            "options": {
+                "A": "كىانَ",
+                "B": "لىكِنَّ",
+                "C": "لىمْ",
+                "D": "سَوْفَ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 68,
+            "question": "جَاءَ الطَّالِبُ الَّذِي نَجَحَ Cümlesinde ilgi zamiri  hangisidir?",
+            "options": {
+                "A": "جَاءَ",
+                "B": "الطَّالِبُ",
+                "C": "الَّذِي",
+                "D": "نَجَحَ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 69,
+            "question": "Aşağıdaki cümlelerden hangisinde hâl vardır?",
+            "options": {
+                "A": "دَخَلَ الطَّالِبُ الصَّفَّ",
+                "B": "دَخَلَ الطَّالِبُ ضَاحِكًا",
+                "C": "الطَّالِبُ ف ِي الصَّف",
+                "D": "دَخَلَ الصَّفي"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 70,
+            "question": "ضَاحِكًا Kelimesi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "مفعول به",
+                "B": "حال",
+                "C": "صفة",
+                "D": "خي"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 71,
+            "question": "Aşağıdakilerden hangisi **abartma ( صيغة المبالغة**) dır?",
+            "options": {
+                "A": "كىاتِب",
+                "B": "كىتَبَ",
+                "C": "كىتَّاب",
+                "D": "مَكْتَب"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 72,
+            "question": "اَّللَُّ غَفُور Kelimede bulunan abartma kalıbı hangisidir?",
+            "options": {
+                "A": "فَعِيل",
+                "B": "فَاعِل",
+                "C": "مَفْعُول",
+                "D": "مِفْعَال"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 73,
+            "question": "جَاءَالطيَّلَّبُ إَِلَّ خَالِدًا Cümledeki istisna edatı hangisidir?",
+            "options": {
+                "A": "جَاءَ",
+                "B": "الطيَّلَّبُ",
+                "C": "إَِلَّ",
+                "D": "خَالِدًا"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 74,
+            "question": "Aşağıdakilerden hangisi istisna edatıdır ?",
+            "options": {
+                "A": "لِـ",
+                "B": "إَِلى",
+                "C": "إَِلَّ",
+                "D": "ف ِي"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 76,
+            "question": "Aşağıdaki sayılardan hangisi müzekker dir?",
+            "options": {
+                "A": "ثََّلَثَةُ",
+                "B": "ثََّلَثُ",
+                "C": "ثََّلَثًا",
+                "D": "ثََّلَثَتَانِ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 77,
+            "question": "ىجْمَلَ السَّمَاءَ مَا أ! Bu cümle hangi türdendir?",
+            "options": {
+                "A": "Emir",
+                "B": "Haber",
+                "C": "Taaccub",
+                "D": "Soru"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 78,
+            "question": "Aşağıdakilerden hangisi taaccub kalıbıdır ?",
+            "options": {
+                "A": "أىفْعَلَ",
+                "B": "مَا أىفْعَلَ",
+                "C": "فَاعِل",
+                "D": "اِفْعَلْ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 79,
+            "question": "يَكْتُبُ الطَّالِبُ الدَّرْسَ Fiilin zamanı hangisidir?",
+            "options": {
+                "A": "Mazi",
+                "B": "Emir",
+                "C": "Muzari",
+                "D": "Meçhul"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 80,
+            "question": "كىتَبَ الطَّالِبُ الدَّرْسَ Fiilin faili hangisidir?",
+            "options": {
+                "A": "كىتَبَ",
+                "B": "الطَّالِبُ",
+                "C": "الدَّرْسَ",
+                "D": "ـَ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 81,
+            "question": "اُكْتُبْ الدَّرْسَ Fiil hangi türdedir?",
+            "options": {
+                "A": "Mazi",
+                "B": "Muzari",
+                "C": "Emir",
+                "D": "Meçhul"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 82,
+            "question": "Aşağıdakilerden hangisi meçhul  fiildir ?",
+            "options": {
+                "A": "كىتَبَ",
+                "B": "يَكْتُبُ",
+                "C": "كُتِبَ",
+                "D": "اُكْتُبْ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 83,
+            "question": "المَكْتَبُ كىبِير Bu cümle hangi türdür?",
+            "options": {
+                "A": "Fiil cümlesi",
+                "B": "Emir cümlesi",
+                "C": "İsim cümlesi",
+                "D": "Olumsuz cümle"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 84,
+            "question": "Aşağıdakilerden hangisi ilgi zamiri  değil dir?",
+            "options": {
+                "A": "هَذَا",
+                "B": "الَّتَِي",
+                "C": "مَنْ",
+                "D": "مَا"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 85,
+            "question": "المِسْطَرَةُ طَو يلىة Kelimedeki ism -i âlet hangisidir?",
+            "options": {
+                "A": "طَو يلىة",
+                "B": "المِسْطَرَةُ",
+                "C": "ـة",
+                "D": "yoktur"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 86,
+            "question": "دَخَلَ الرَّجُلُ المَسْجِدَ خَاشِعًا Hâl hangisidir?",
+            "options": {
+                "A": "دَخَلَ",
+                "B": "الرَّجُلُ",
+                "C": "المَسْجِدَ",
+                "D": "خَاشِعًا"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 87,
+            "question": "Aşağıdakilerden hangisi İsm-i Mekân  kalıbıdır?",
+            "options": {
+                "A": "مَفْعَل",
+                "B": "فَاعِل",
+                "C": "مَفْعُول",
+                "D": "فِعَال"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 88,
+            "question": "إِنَّ اَّللََّ غَفُور إِنَّ  kelimesi hangi irabı gerektirir?",
+            "options": {
+                "A": "Merfu",
+                "B": "Mansub",
+                "C": "Mecrur",
+                "D": "Meczûm"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 89,
+            "question": "Aşağıdaki kelimelerden hangisi müennes alameti  taşır?",
+            "options": {
+                "A": "قَلىم",
+                "B": "بَاب",
+                "C": "طَالِبَة",
+                "D": "وَلىد"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 90,
+            "question": "Aşağıdaki cümlelerden hangisi doğru bir istisna cümlesidir ?",
+            "options": {
+                "A": "جَاءَ الطيَّلَّبُ إَِلى خَالِد",
+                "B": "جَاءَ الطيَّلَّبُ إَِلَّ خَالِدًا",
+                "C": "جَاءَ الطيَّلَّبُ ف ِي خَالِد",
+                "D": "جَاءَ الطيَّلَّبُ مَعَ خَالِد"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 90,
+            "question": "خَتَمَ اَّللَُّ عَلىٰ قُلُوبــِهِمْ Yukarıdaki cümlenin doğru Türkçe tercümesi hangisidir?",
+            "options": {
+                "A": "Allah kalplerini temizledi",
+                "B": "Allah kalplerini mühürledi",
+                "C": "Allah kalplerini açtı",
+                "D": "Allah kalplerini yumuşattı"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 92,
+            "question": "ف ِي قُلُوبــِهِمْ مَرَض Yukarıdaki cümlenin doğru Türkçe tercümesi hangisidir?",
+            "options": {
+                "A": "Kalplerinde iman vardır",
+                "B": "Kalplerinde korku vardır",
+                "C": "Kalplerinde hastalık vardır",
+                "D": "Kalpleri temizdir"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 93,
+            "question": "ىنفُسَنَا قَاَلَ رَبَّنَا ظىلىمْنَا أ Yukarıdaki cümlenin doğru Türkçe tercümesi h angisidir?",
+            "options": {
+                "A": "O İkisi: “Rabbimiz, bizi affet” dediler",
+                "B": "O İkisi: “Rabbimiz, sana döndük” dediler",
+                "C": "O İkisi: “Rabbimiz, kendimize zulmettik” dediler",
+                "D": "Onlar: “Rabbimiz, bizi koru” dediler"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 94,
+            "question": "وَإِن لَّمْ تَغْفِرْ لىنَاوَتَرْحَمْنَا لىنَكُونَنَّ مِنَ الْخَاشِ ينَ Yukarıdaki cümlenin doğru Türkçe tercümesi hangisidir?",
+            "options": {
+                "A": "Eğer bize rızık vermezsen kaybederiz",
+                "B": "Eğer bizi affetmez ve bize merhamet etmezsen, ziyan edenlerden oluruz",
+                "C": "Eğer bizi korumazsan korkarız",
+                "D": "Eğer b izi sevmezsen üzülürüz"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 95,
+            "question": "إِنَّ رَحْمَتَ اَّللَِّ قَر يب  م نَ الْمُحْسِنِتر َ Yukarıdaki cümlenin doğru Türkçe tercümesi hangisidir?",
+            "options": {
+                "A": "Muhakkak ki, Allah’ın rahmeti günahkârlara yakındır",
+                "B": "Muhakkak ki, Allah’ın rahmeti sabredenlere yakındır",
+                "C": "Muhakkak ki, Allah’ın rahmeti iyilik yapanlara yakındır",
+                "D": "Muhakkak ki, Allah’ın rahmeti herkese uzaktır"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 96,
+            "question": "رَب  اجْعَلْت ِي مُقِيمَ الصََّّلَةِ وَمِن ذُر يَّتَِي Yukarıdaki cümlenin doğru Türkçe tercümesi hangisidir?",
+            "options": {
+                "A": "Rabbim, beni sabredenlerden eyle",
+                "B": "Rabbim, beni namaz kılanlardan eyle ve soyumdan da",
+                "C": "Rabbim, beni bağışla ve soyumu da",
+                "D": "Rabbim, beni zengin eyle"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 97,
+            "question": "فَسَب حْ بِحَمْدِ رَب كَ وَكُن م نَ السَّاجِدِينَ Yukarıdaki cümlenin doğru Türkçe tercümesi hangisi dir?",
+            "options": {
+                "A": "Rabbini an ve sus",
+                "B": "Rabbinin hamdiyle tesbih et ve secde edenlerden ol",
+                "C": "Rabbine dua et ve bekle",
+                "D": "Rabbine hamd et ve yürü"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 98,
+            "question": "ادْعُ إَِلىٰ سَبِيلِ رَب كَ بِالْحِكْمَةِ وَالْمَوْعِظىةِ الْحَسَنَةِ Yukarıdaki cümlenin doğru Türkçe terc ümesi hangisidir?",
+            "options": {
+                "A": "Rabbinin yoluna güzellikle çağır",
+                "B": "Rabbinin yoluna hikmet ve güzel öğütle davet et",
+                "C": "İnsanları hikmetle uyar",
+                "D": "Rabbinin yolundan uzak dur"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 99,
+            "question": "هَلْ جَزَاءُ اْلِْحْسَانِ إَِلَّ اْلِْحْسَانُ Yukarıdaki cümlenin doğru Türkçe te rcümesi hangisidir?",
+            "options": {
+                "A": "İyiliğin cezası iyiliktir",
+                "B": "İyiliğin karşılığı ancak iyilik değil midir?",
+                "C": "İyilik zor bir iştir",
+                "D": "İyiliğin karşılığı kötülük müdür?"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 101,
+            "question": "Ameller ancak niyetlere göredir. Yukarıdaki cümlenin Arapça karşılığı hangisidir?",
+            "options": {
+                "A": "إِنَّمَا األَفْعَالُ بِالْقُصُودِ",
+                "B": "إِنَّمَا األَعْمَالُ بِالن يَّاتِ",
+                "C": "إِنَّمَا األَفْعَالُ مَعَ الن يَّاتِ",
+                "D": "إِنَّمَا األَعْمَالُ لِلن يَّاتِ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 102,
+            "question": "أىفْضَلُ الْمُؤْمِنِتر َأىحْسَنُهُمْ خُلُقًا Yukarıdaki cümlenin doğru Türkçe tercümesi hangisidir?",
+            "options": {
+                "A": "Müminlerin en bilgini ahlâkı güzel olandır",
+                "B": "Müminlerin en faziletlisi, ahlâkı en güzel olanıdır",
+                "C": "Müminlerin en faziletlisi ahlâkı güçlü olandır",
+                "D": "Müminlerin en faziletlisi imanı en güzel olandır"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 105,
+            "question": "مَنْ َلَ يَرْحَمِ النَّاسَ َلَ يَرْحَمُهُ اَّللَُّ Yukarıdaki cümlenin doğru Türkçe tercümesi hangisidir?",
+            "options": {
+                "A": "İnsanlara merhamet edenlere Allah merhamet eder",
+                "B": "Allah insanlara her zaman merhamet eder",
+                "C": "İnsanlara merhamet et meyene Allah da merhamet etmez",
+                "D": "Allah merhametlileri sever"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 106,
+            "question": "يَكْتُبُ الطَّالِبُ الدَّرْسَ Yukarıdaki fiilin emri (müzekker)  hangisidir?",
+            "options": {
+                "A": "اُكْتُبْ",
+                "B": "اُكْتُت ِي",
+                "C": "اُكْتُبُوا",
+                "D": "يَكْتُبْ"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 107,
+            "question": "تَذْهَبُ فَاطِمَةُ إَِلىالمَدْرَسَةِ Bu fiilin emri (müennes)  hangisidir?",
+            "options": {
+                "A": "اِذْهَبْ",
+                "B": "اِذْهَبُوا",
+                "C": "اِذْهَت ِي",
+                "D": "تَذْهَت ِي"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 108,
+            "question": "اِجْلِسْ ف ِي الصَّف! Bu cümle hangi türdendir?",
+            "options": {
+                "A": "Haber",
+                "B": "Soru",
+                "C": "Emir",
+                "D": "Nehiy"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 109,
+            "question": "Aşağıdaki cümlelerden hangisi nehiy dir?",
+            "options": {
+                "A": "اُدْخُلِ الصَّفَّ",
+                "B": "ال تَتَكىلَّمْ ف ِي الصَّف",
+                "C": "يَدْخُلُ الطَّالِبُ الصَّفَّ",
+                "D": "دَخَلَ الطَّالِبُ الصَّفَّ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 110,
+            "question": "ال تَكْتُبْ الدَّرْسَ اآلنَ Bu cümlede nehiy edatı hangisidir?",
+            "options": {
+                "A": "ال",
+                "B": "تَكْتُبْ",
+                "C": "الدَّرْسَ",
+                "D": "اآلنَ"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 111,
+            "question": "ال تَجْلِسُوا هُنَا Fiilin sonundaki  ن neden düşmüştür?",
+            "options": {
+                "A": "Emir olduğu için",
+                "B": "Muzari olduğu için",
+                "C": "Nehiy olduğu için",
+                "D": "Fail değiştiği için"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 112,
+            "question": "Aşağıdakilerden hangisi emir fiilidir ?",
+            "options": {
+                "A": "يَذْهَبُ",
+                "B": "ذَهَبَ",
+                "C": "اِذْهَبْ",
+                "D": "لىمْ يَذْهَبْ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 113,
+            "question": "ال تَلْعَت ِي ف ِي الطَّر يقِ Bu cümlede hitap edilen kişi kimdir?",
+            "options": {
+                "A": "Müzekker tekil",
+                "B": "Müennes tekil",
+                "C": "Müzekker çoğul",
+                "D": "Müennes çoğul"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 114,
+            "question": "اِفْتَحُوا البَابَ Bu emir fiili kime yöneliktir?",
+            "options": {
+                "A": "Müzekker tekil",
+                "B": "Müennes tekil",
+                "C": "Müzekker çoğul",
+                "D": "Müennes çoğul"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 115,
+            "question": "Aşağıdaki eşleştirmelerden hangisi doğrudur ?",
+            "options": {
+                "A": "اُكْتُبْ  →Nehiy",
+                "B": "ال تَكْتُبْ  →Emir",
+                "C": "ال تَجْلِسْ  →Nehiy",
+                "D": "تَكْتُبُ  →Emir"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 116,
+            "question": "هُوَ ...... إَِلى المَدْرَسَةِ. Boşluğa uygun fiil hangisidir?",
+            "options": {
+                "A": "تَذْهَبُ",
+                "B": "يَذْهَبُ",
+                "C": "يَذْهَبُونَ",
+                "D": "تَذْهَبُونَ"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 118,
+            "question": "هُمَا ...... ف ِي الصَّف. Boşluğa uygun fiil hangisidir?",
+            "options": {
+                "A": "يَجْلِسُ",
+                "B": "تَجْلِسُ",
+                "C": "يَجْلِسَانِ",
+                "D": "يَجْلِسُونَ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 119,
+            "question": "هُمْ ...... إَِلى المَسْجِدِ. Boşluğa uygun fiil hangisidir?",
+            "options": {
+                "A": "يَذْهَبُ",
+                "B": "تَذْهَبُ",
+                "C": "يَذْهَبُونَ",
+                "D": "تَذْهَبُونَ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 120,
+            "question": "هُنَّ ...... ف ِي البَيْتِ. Boşluğa uygun fiil hangisidir?",
+            "options": {
+                "A": "يَجْلِسْنَ",
+                "B": "تَجْلِسُ",
+                "C": "تَجْلِسْنَ",
+                "D": "يَجْلِسُ"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 122,
+            "question": "أىنْتَ ...... ف ِيالصَّف   . Boşluğa uygun fiil hangisidir?",
+            "options": {
+                "A": "تَجْلِسُ",
+                "B": "يَجْلِسُ",
+                "C": "تَجْلِسُونَ",
+                "D": "تَجْلِسِتر َ"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 123,
+            "question": "ىنْتِ ...... إَِلى المَدْرَسَةِ أ. Boşluğa uygun fiil hangisidir?",
+            "options": {
+                "A": "تَذْهَبُ",
+                "B": "تَذْهَبِتر َ",
+                "C": "يَذْهَبُ",
+                "D": "تَذْهَبُونَ"
+            },
+            "correct_answer": "B"
+        }
+    ]
+}

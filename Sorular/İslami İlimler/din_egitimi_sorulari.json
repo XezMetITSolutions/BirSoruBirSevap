@@ -1,0 +1,1085 @@
+{
+    "category": "DIN_EGITIMI",
+    "title": "İslami İlimler - Din Eğitimi Soruları",
+    "question_count": 98,
+    "questions": [
+        {
+            "id": 2,
+            "question": "Terbiye kavramının eğitimden farklı yönü aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Terbiye, eğitim gibi hem olumlu hem de olumsuz kazanımları içerir.",
+                "B": "Terbiye yalnızca ahlaki ve etik değerlerin kaz andırılmasına yöneliktir.",
+                "C": "Terbiye, eğitim kavramının tamamını kapsayan bir üst başlıktır.",
+                "D": "Terbiye yalnızca dini eğitim süreçlerinde kullanılır."
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 3,
+            "question": "Aşağıdaki seçeneklerden hangisi formel (kontrollü) eğitimin kapsamına  girmez ?",
+            "options": {
+                "A": "Yükseköğreti m",
+                "B": "Halk eğitimi",
+                "C": "İş hayatındaki tecrübeler",
+                "D": "Hizmet içi eğitim"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 4,
+            "question": "Aşağıdakilerden hangisi bilişsel alanın öğrenme basamaklarının en üst düzeyde olanıdır?",
+            "options": {
+                "A": "Uygulama düzeyi",
+                "B": "Kavrama düzeyi",
+                "C": "Sentez düzeyi",
+                "D": "Değerlendirme düzeyi"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 5,
+            "question": "Bir öğrencinin, içkinin haram olduğu bilgisine sahip olması ancak bu bilgiyi günlük hayatında uygulamaması hangi öğrenme düzeyinde kaldığını gösterir?",
+            "options": {
+                "A": "Anlama düzeyi",
+                "B": "Kavrama düzeyi",
+                "C": "Uygulama düzeyi",
+                "D": "Analiz düzeyi"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 6,
+            "question": "Kontrolsüz (enf ormel) eğitim sürecinin din eğitimi açısından en büyük riski aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "İnsanların bilgi edinmesini tamamen engellemesi",
+                "B": "Bidat, hurafe ve yanlış inanışların yayılmasına sebep olması",
+                "C": "Eğitim sürecini daha verimli hale getirmesi",
+                "D": "İn sanların dini konulara daha fazla ilgi duymasını sağlaması"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 7,
+            "question": "Aşağıdakilerden hangisi yaygın eğitimin bir özelliğidir?",
+            "options": {
+                "A": "Genellikle belirli yaş gruplarına yöneliktir.",
+                "B": "Planlı ve programlı olmak zorunda değildir.",
+                "C": "Akademik başarıyı ölçmek içi n sınavlar içerir.",
+                "D": "Halk eğitim kursları, hizmet içi eğitim ve seminerleri kapsar."
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 8,
+            "question": "Din eğitimi biliminin diğer eğitim bilimlerinden temel farkı nedir?",
+            "options": {
+                "A": "Tamamen pedagojik yaklaşımlar kullanması",
+                "B": "Bilimsel bir disiplin olmaması",
+                "C": "Hem teori k hem de inanç temelli bir çerçevede ilerlemesi",
+                "D": "Sadece çocuklara yönelik eğitim faaliyetlerini içermesi"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 9,
+            "question": "Bir öğretmenin öğrencilerine sadece ders konularını öğretmesi, ancak onların toplumsal değerleri ve etik kuralları benimsemesini önemsememesi hangi eğitim hedefini göz ardı ettiğini gösterir?",
+            "options": {
+                "A": "Özel hedefler",
+                "B": "Genel hedefler",
+                "C": "Uzak hedefler",
+                "D": "Akademik hedefler"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 11,
+            "question": "Aşağıdakilerden hangisi öğretim ilkelerinden biri olan \"Tedricîlik İlkesi\"nin bir gereği değildir ?",
+            "options": {
+                "A": "Öğretimde bilinenden bilinmeyene doğru bir sıra takip edilmesi",
+                "B": "Somuttan soyuta doğru kademeli bir ilerleme sağlanması",
+                "C": "Öğrencinin her konuya doğrudan en zor kısımdan başlaması",
+                "D": "Konuların basitten karmaşığa doğru sıralanması"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 12,
+            "question": "Din öğretiminde \"İtidal İlkesi\"n in temel amacı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Dinî bilgilerin duygusal yoğunlukla öğretilmesini sağlamak",
+                "B": "İnanç ve ibadetlerde aşırılıklardan kaçınıp, dengeli bir eğitim süreci oluşturmak",
+                "C": "Öğrencinin dinî bilgileri ezberleyerek öğrenmesini sağlamak",
+                "D": "Sadece teorik bilgilerin öğretilmesini teşvik etmek"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 13,
+            "question": "Din eğitimi açısından bilginin yararlılığı ile ilgili olarak aşağıdakilerden hangisi söylenemez ?",
+            "options": {
+                "A": "Bir bilgi, bireyin veya toplumun gelişimine katkı sağlamıyorsa faydasızdır.",
+                "B": "Bilginin değeri onun ne amaçla ve nasıl kullanıldığına bağlıdır.",
+                "C": "Peygamberimiz, işe yaramayan bilgiden Allah’a sığınmıştır.",
+                "D": "Tüm bilgiler dini açıdan faydalıdır, herhangi bir bilgiye yönelik eleştiri getirilemez."
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 14,
+            "question": "Aşağıdakilerden hangisi öğretim s ürecinde öğretmenin dikkat etmesi gereken temel hususlardan biri değildir ?",
+            "options": {
+                "A": "Öğrencilere sadece konu anlatımına odaklanmak",
+                "B": "Öğrencilerle etkili bir iletişim kurmak",
+                "C": "Öğrenme motivasyonunu sağlamak",
+                "D": "Konuyu hayatla ilişkilendirmek"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 15,
+            "question": "\"Buluş Yoluyla Öğretim Stratejisi\" aşağıdaki hangi öğretim düzeyinde daha verimli uygulanabilir?",
+            "options": {
+                "A": "Okul öncesi",
+                "B": "İlköğretim birinci kademe",
+                "C": "Ortaöğretim düzeyi",
+                "D": "Üniversite sonrası akademik çalışmalar"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 16,
+            "question": "Aşağıdaki öğretim ilkelerinden hangisi, bilg ilerin birbirinden kopuk öğretilmesini engelleyerek öğrencinin zihninde bütüncül bir anlayış geliştirilmesini amaçlar?",
+            "options": {
+                "A": "Açıklık İlkesi",
+                "B": "Bütünlük İlkesi",
+                "C": "Ekonomiklik İlkesi",
+                "D": "Güncellik İlkesi"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 17,
+            "question": "\"Öğretmen, dersi işlerken öğrencilerin akti f katılımını sağlayarak, duyusal ve fiziksel deneyimlerle öğrenmelerine yardımcı olmalıdır.\" Bu ifade hangi öğretim ilkesi ile doğrudan ilişkilidir?",
+            "options": {
+                "A": "Hayatilik İlkesi",
+                "B": "Etkin Katılım İlkesi",
+                "C": "Açıklık İlkesi",
+                "D": "Güncellik İlkesi"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 18,
+            "question": "Aşağıdakilerden hangisi öğretim sürecinde öğretmenin ölçeceği en önemli hususlardan biridir?",
+            "options": {
+                "A": "Dersin süresi boyunca kullanılan materyallerin maliyeti",
+                "B": "Öğrencinin neyi, ne kadar öğrendiği ve öğrenme sürecindeki eksiklikler",
+                "C": "Öğrencinin sadece ezber yap arak bilgiyi tekrar edebilme kapasitesi",
+                "D": "Öğrencinin öğretmenle olan kişisel ilişkisi"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 19,
+            "question": "Öğretim metotları ve teknikleri ile ilgili olarak aşağıdaki ifadelerden hangisi doğrudur?",
+            "options": {
+                "A": "Her öğretmen tek bir metodu kullanmalı ve ona bağlı kalmalıdır .",
+                "B": "Eğitim bilimciler, öğretimde farklı metotların kombinasyonunun önemli olduğunu vurgular.",
+                "C": "Din eğitimi yalnızca geleneksel metotlarla yürütülmelidir.",
+                "D": "Metotsuz öğretim en verimli öğrenme yöntemidir."
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 20,
+            "question": "Aşağıdakilerden hangisi öğretim sür eçleri kapsamında değerlendirilen temel bileşenlerden biri  değildir ?",
+            "options": {
+                "A": "Program Geliştirme",
+                "B": "Ders İşleme",
+                "C": "Ölçme -Değerlendirme",
+                "D": "Sadece ezber yapmaya dayalı öğretim"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 21,
+            "question": "Jean Piaget’in zihinsel gelişim kuramına göre bir çocuğun Allah’ın sıfa tlarını kavrayabilmesi için hangi evrede olması gereklidir?",
+            "options": {
+                "A": "Duyusal Devinim Evresi",
+                "B": "İşlem Öncesi Dönem",
+                "C": "Somut İşlemler Dönemi",
+                "D": "Soyut İşlemler Dönemi"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 22,
+            "question": "Erikson’un psikososyal gelişim kuramına göre, ergenlik dönemi hangi krizle ilişkilidir?",
+            "options": {
+                "A": "Temel güvene karşı güvensizlik",
+                "B": "Kimlik kazanmaya karşı rol karmaşası",
+                "C": "Özerkliğe karşı utanç ve şüphe",
+                "D": "Çalışkanlığa karşı aşağılık duygusu"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 23,
+            "question": "Piaget’in zihinsel gelişim kuramına göre çocukların soyut kavramları anlamakta zor landığı dönem aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Soyut İşlemler Dönemi",
+                "B": "Somut İşlemler Dönemi",
+                "C": "İşlem Öncesi Dönem",
+                "D": "Duyusal Devinim Dönemi"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 24,
+            "question": "Kohlberg’in ahlaki gelişim kuramına göre, hangi evrede birey evrensel ahlak ilkelerini benimseyerek ot oriteyi sorgulamadan içselleştirir?",
+            "options": {
+                "A": "Ceza ve itaat eğilimi",
+                "B": "Sosyal sözleşme eğilimi",
+                "C": "Evrensel ahlak ilkeleri eğilimi",
+                "D": "Bireysellik ve çıkar ilişkisi"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 25,
+            "question": "Fowler’ın dinî gelişim evrelerine göre “Gerçek İman Evresi” hangi bilişsel gelişim dönemine karşılık gelmektedir?",
+            "options": {
+                "A": "Duyusal Devinim Evresi",
+                "B": "Somut İşlemler Dönemi",
+                "C": "Soyut İşlemler Dönemi",
+                "D": "İşlem Öncesi Dönem"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 26,
+            "question": "Erikson’un psikososyal gelişim kuramına göre, bireyin sosyal çevreye uyum sağlama ve toplumsal kurallara uygun hareket etme eğilimi hangi yaş döneminde en belirgin hale gelir?",
+            "options": {
+                "A": "1,5 -3 yaş",
+                "B": "3-6 yaş",
+                "C": "6-12 yaş",
+                "D": "12 -18 yaş"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 27,
+            "question": "Ahlaki gelişim sürecinde bireyin “toplumsal norm ve kurallara bağlı olarak hareket ettiği” düzey aşağıdakilerden hangisidi r?",
+            "options": {
+                "A": "Gelenek Öncesi Düzey",
+                "B": "Geleneksel Düzey",
+                "C": "Gelenek Ötesi Düzey",
+                "D": "Evrensel Ahlak İlkeleri Düzeyi"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 28,
+            "question": "Erikson’a göre “Yakınlığa Karşı Yalıtılmışlık” dönemi hangi yaş aralığında yaşanır?",
+            "options": {
+                "A": "0-1,5 yaş",
+                "B": "12 -18 yaş",
+                "C": "18 -26 yaş",
+                "D": "40 -65 yaş"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 29,
+            "question": "Piaget’in zihinsel gelişim evrelerine göre, çocukların zihinsel süreçlerini simgelerle ifade etmeye başladığı dönem aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Duyusal Devinim Evresi",
+                "B": "İşlem Öncesi Dönem",
+                "C": "Somut İşlemler Dönemi",
+                "D": "Soyut İşlemler Dönemi"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 30,
+            "question": "Dinî gelişimin ahlaki gelişimle bağlantılı olarak incelenmesini savunan yaklaşıma göre, hangi faktör dinî gelişimi en fazla etkileyen unsurdur?",
+            "options": {
+                "A": "Zihinsel gelişim",
+                "B": "Sosyal gelişim",
+                "C": "Duyusal algılar",
+                "D": "Kültürel etkiler"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 31,
+            "question": "Gelişi m sürecinde bireyin olgun bir kişilik geliştirebilmesi için aşağıdaki unsurlardan hangisi en önemli ön koşuldur?",
+            "options": {
+                "A": "Doğru eğitim programları hazırlanması",
+                "B": "Fiziksel gelişimin tamamlanması",
+                "C": "Bireyin bilişsel yeteneklerinin üst düzeyde olması",
+                "D": "İnanç, değ erler ve davranışlar arasındaki dengenin sağlanması"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 32,
+            "question": "Bireyin çevresinde gözlemlediği olumsuz örneklerden etkilenerek kötü alışkanlıklar geliştirmesi hangi gelişim problemine işaret eder?",
+            "options": {
+                "A": "Sıra dışı çocuk olma",
+                "B": "Olumsuz çevre şartları",
+                "C": "Gel işim etkilerini kontrol güçlüğü",
+                "D": "Ergenlik depresyonları"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 33,
+            "question": "Ergenlik döneminde ortaya çıkan depresif ruh hâllerinin temel sebebi aşağıdakilerden hangisiyle en iyi açıklanabilir?",
+            "options": {
+                "A": "Fiziksel ve hormonal değişimlerin bireyin psikolojisi üzerindeki etkileri",
+                "B": "Bireyin zekâ düzeyine bağlı olarak farklı gelişim süreçlerinden geçmesi",
+                "C": "Aile içi ilişkilerin ve sosyoekonomik durumun doğrudan etkisi",
+                "D": "Bireyin öğrenme kapasitesinin sabit kalması ve gelişmemesi"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 34,
+            "question": "Sosyal ö ğrenme kuramına göre bireyin bir davranışı öğrenmesi için en temel faktör aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Davranışın pekiştirme yoluyla kalıcı hâle getirilmesi",
+                "B": "Bireyin gözlem yaptığı modeli benimsemesi ve onunla özdeşleşmesi",
+                "C": "Edimsel şartlanma yoluyla davranışın ödüllendirilmesi",
+                "D": "Bilişsel gelişim düzeyinin yüksek olması"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 35,
+            "question": "Gelişim kuramına göre bireyin duyusal devinim (duyu -hareket) döneminde öğrenmesi hangi temel mekanizma ile gerçekleşir?",
+            "options": {
+                "A": "Deneme -yanılma yoluyla",
+                "B": "Taklit ve gözlem yolu yla",
+                "C": "Duygusal tepkilerle karşılık verme yoluyla",
+                "D": "Mantıklı muhakeme yaparak öğrenme yoluyla"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 36,
+            "question": "Pavlov’un klasik şartlanma kuramına göre bir davranışın “sönmesi” aşağıdaki durumlardan hangisi ile açıklanabilir?",
+            "options": {
+                "A": "Bireyin uzun süre belirli bir tepki vermekten kaçınması",
+                "B": "Şartlandırılmış uyaranın pekiştirilmeden tekrarlanması",
+                "C": "Bireyin öğrenme kapasitesinin düşmesi",
+                "D": "Öğrenilmiş davranışın bilinçli olarak terk edilmesi"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 37,
+            "question": "Bilişsel öğrenme teorisine göre insan zihni bil giyi nasıl işler ve depolar?",
+            "options": {
+                "A": "Doğrudan uzun süreli belleğe kaydederek",
+                "B": "Kısa süreli bellekte işleyip uzun süreli belleğe aktararak",
+                "C": "Algılama süreci olmaksızın refleksif tepki vererek",
+                "D": "Yalnızca dışarıdan gelen uyaranları tekrar ederek"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 38,
+            "question": "W atson’un davranışçı öğrenme teorisine göre bireyin belli bir uyarana karşı geliştirdiği tepkinin tekrar edilme olasılığını artıran faktör aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Uyarıcının sürekli değiştirilmesi",
+                "B": "Uyarıcının daha önce yaşanan olumsuz olaylarla ili şkilendirilmesi",
+                "C": "Davranışın ödüllendirilmesi ve pekiştirilmesi",
+                "D": "Öğrencinin zihinsel gelişiminin tamamlanması"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 39,
+            "question": "Piaget’nin gelişim kuramına göre çocukların soyut kavramları öğrenmeye başladığı dönem aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Somut işlem ler dönemi",
+                "B": "Duyusal devinim dönemi",
+                "C": "İşlem öncesi dönem",
+                "D": "Soyut işlemler dönemi"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 40,
+            "question": "Bandura’nın sosyal öğrenme kuramına göre bireyin gözlem yoluyla öğrenmeyi etkileyen en önemli faktör aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Modelin ödüllendirilip ödü llendirilmediği",
+                "B": "Modelin fiziksel görünümü ve yaşı",
+                "C": "Öğrenen bireyin zihinsel gelişim düzeyi",
+                "D": "Öğrenme sürecinin tekrarlanmaması"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 41,
+            "question": "Din eğitiminin doğasındaki temel amaç aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "İnsanlara dinî bilgilerin aktarılması",
+                "B": "Bireyin zihinsel kapasitesinin geliştirilmesi",
+                "C": "Dinî bilgiyle birlikte inanç, duygu ve davranışların kazandırılması",
+                "D": "Toplumdaki farklı inançları anlamaya yönelik farkındalık oluşturulması"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 42,
+            "question": "Peygamber Efendimizin, “H er doğan fıtrat üzere doğar. Sonra ebeveyni onu ya Yahudi, ya Mecusi, ya Hristiyan yapar.” hadisi hangi temel gerçeğe işaret etmektedir?",
+            "options": {
+                "A": "Bireyin dinî tercihleri tamamen kendi iradesine bağlıdır.",
+                "B": "Anne -baba, çocuğun dinî yöneliminde en temel belirleyic idir.",
+                "C": "Dinî inanışlar doğuştan belirlenir ve değişmez.",
+                "D": "Toplumun bireyin din eğitimi üzerinde etkisi yoktur."
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 44,
+            "question": "İslam eğitiminde bilginin amele dönüşmesi hangi kavramla ifade edilir?",
+            "options": {
+                "A": "Taklidî iman",
+                "B": "Kalp eğitimi",
+                "C": "Nefis terbiyesi",
+                "D": "Teorik öğrenme"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 45,
+            "question": "Aşağıdakilerden hangisi din eğitiminin temel esaslarından biri  değildir ?",
+            "options": {
+                "A": "Zihnin eğitilmesi",
+                "B": "Kalbin eğitilmesi",
+                "C": "Nefsin eğitilmesi",
+                "D": "Toplumun eğitilmesi"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 46,
+            "question": "Kur’an’ın birçok ayetinde insanların akıllarını kullanarak düşünmeleri teşvik edilmiştir. Bu anlayış aşağıdakilerden hangisiyle en iyi ifade edilir?",
+            "options": {
+                "A": "Zihin eğitimi",
+                "B": "Taklidî iman",
+                "C": "Duygusal öğrenme",
+                "D": "Geleneksel öğretilere bağlılık"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 47,
+            "question": "Kur ’ân-ı Kerîm’de “Vücutta bir et parçası vardır, o sağlam olursa bütün vücut sağlam olur; o bozuk olursa bütün vücut bozuk olur. Dikkat edin, o kalptir.” hadisi hangi din eğitimi unsuruna işaret etmektedir?",
+            "options": {
+                "A": "Zihin eğitimi",
+                "B": "Kalp eğitimi",
+                "C": "Nefis terbiyesi",
+                "D": "Bilişsel öğrenme"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 48,
+            "question": "Nefis eğitimi açısından Kur’an’da vurgulanan temel mesaj aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Nefsi tamamen yok etmek gereklidir.",
+                "B": "Nefsî arzular insanın dünyadaki en büyük gücüdür.",
+                "C": "Nefsî arzular kontrol altına alınmadığınd a insanı kötülüğe sürükler.",
+                "D": "İnsan, akıl ve iradeden bağımsız olarak nefis doğrultusunda hareket eder."
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 49,
+            "question": "Meslekî din eğitiminin doğuş sebeplerinden biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Camilerdeki ibadetlerin düzenli bir şekilde yerine getirilm esini sağlamak",
+                "B": "Halkın kendi dinî ihtiyaçlarını bireysel olarak karşılamasına imkân tanımak",
+                "C": "İnsanların dinî bilgileri kendi kendilerine öğrenmelerini teşvik etmek",
+                "D": "İbadetlerin bireysel olarak yapılmasını zorunlu hâle getirmek"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 50,
+            "question": "Yaygın din  eğitiminin temel farkı nedir?",
+            "options": {
+                "A": "Belli bir yaş grubuna hitap etmesi",
+                "B": "Belli bir kurum bünyesinde sistematik şekilde yürütülmesi",
+                "C": "İhtiyaca bağlı olarak farklı zamanlarda, farklı kitlelere yönelik uygulanması",
+                "D": "Sadece çocuk ve gençlere yönelik eğitimler sunması"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 51,
+            "question": "Ailede din eğitimi neden doğumdan itibaren başlamalıdır?",
+            "options": {
+                "A": "Çocuğun erken yaşta zihinsel ve bilişsel gelişimini desteklemek için",
+                "B": "Dinî eğitim sadece kavramsal bilgiden ibaret olmadığı için",
+                "C": "Okul öncesi dönemde çocuğun zih insel gelişimi tamamen aileye bağlı olduğu için",
+                "D": "Çocuklara öğretilecek en önemli şeyin dinî kurallar olduğu için"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 52,
+            "question": "Okul öncesi dönemde din eğitiminin temel amacı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Çocuğa temel dinî bilgileri ve ibadetleri öğretme k",
+                "B": "Çocuğa dinî bilgileri kavramsal düzeyde ezberletmek",
+                "C": "Çocuğun değerler kazanmasını ve bunlar üzerine tutum ve davranış geliştirmesini sağlamak",
+                "D": "Çocukları belli bir inanç sistemine zorunlu olarak yönlendirmek"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 53,
+            "question": "Ailede din eğitiminin en ö nemli unsurlarından biri olan \"bilinçli kontrol\" kavramı aşağıdakilerden hangisini ifade eder?",
+            "options": {
+                "A": "Çocuğun dini eğitimini tamamen ebeveynin yönlendirmesi",
+                "B": "Çocuğun özgürlük isteği ile ebeveynin koruma içgüdüsü arasında denge kurulması",
+                "C": "Çocuğun kendi kara rlarını almadan önce ebeveynin ona her konuda sınır koyması",
+                "D": "Çocuğun sadece belirli ibadetleri yapmasını sağlayan bir kontrol mekanizması"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 54,
+            "question": "Aşağıdakilerden hangisi çocukta olumlu dinî tutum ve davranış geliştirmek için anne - babanın dikkat etm esi gereken hususlardan biri  değildir ?",
+            "options": {
+                "A": "Çocuğa sık sık nasihat vererek öğütler vermek",
+                "B": "Çocuğun sorularını ve iletilerini karşılıksız bırakmamak",
+                "C": "Çocuğun gözünde olumlu bir model olarak yaşamak",
+                "D": "Çocuğa yönelik tutum ve davranışlarda tutarlılık göste rmek"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 55,
+            "question": "“Model davranışlar gösterme” yaklaşımıyla ilgili aşağıdaki ifadelerden hangisi  yanlıştır ?",
+            "options": {
+                "A": "Çocuklar, dinî ve ahlaki değerleri büyüklerini gözleyerek öğrenir.",
+                "B": "Çocuğa dürüstlüğü öğretmek için ebeveynlerin de dürüst davranması gerekir.",
+                "C": "Çocuklar sadece sözel anlatımlarla dinî değerleri benimseyebilir.",
+                "D": "Çocuklar çevresindeki yetişkinlerin davranışlarını bilinçsizce taklit eder."
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 56,
+            "question": "Yetişkin din eğitiminde pedagojik eğitimden farklı olarak aşağıdakilerden hangisi önceliklidir?",
+            "options": {
+                "A": "Öğretmenin otoritesini sürekli vurgulaması",
+                "B": "Katılımcıların ön kabullerine uymayan bilgileri doğrudan aktarması",
+                "C": "Yetişkinlerin ihtiyaç duydukları bilgileri öğrenmelerine öncelik verilmesi",
+                "D": "Katılımcıların bilgileri olduğu gibi kabul etmes i"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 57,
+            "question": "Aşağıdaki özelliklerden hangisi yetişkin bireyin psikolojik özelliklerinden biri  değildir ?",
+            "options": {
+                "A": "Otoriter ve buyurgan davranışlardan hoşlanmamak",
+                "B": "Benlik saygısının yüksek olması",
+                "C": "Ön kabullerine uymayan bilgileri hemen kabul etmek",
+                "D": "Başarı sızlıktan ve küçük düşmekten korkmak"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 58,
+            "question": "Yetişkin din eğitiminde “öğrenme döngüsü” kapsamında bilinçsiz yetersizlik aşaması hangi durumu ifade eder?",
+            "options": {
+                "A": "Kişinin eksik bilgiye sahip olduğunu kabul edip öğrenmeye yönelmesi",
+                "B": "Kişinin ihtiyacı olan b ilgiyi bilmediğini ve öğrenmesi gerektiğini fark etmemesi",
+                "C": "Kişinin eksikliğinin farkında olup bilgiye ulaşmaya çalışması",
+                "D": "Kişinin yeni öğrendiği bilgileri uygulamaya çalışması"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 59,
+            "question": "Andragojik din eğitiminde başarıyı artırmak için aşağıdaki lerden hangisi  önerilmez ?",
+            "options": {
+                "A": "Konuların yetişkinlerin pratik hayatında nasıl uygulanacağını göstermek",
+                "B": "Yetişkinlerin ön kabullerine ters düşen bilgileri zorla kabul ettirmeye çalışmak",
+                "C": "Anlatılan bilgileri günlük hayatla ilişkilendirerek öğretmek",
+                "D": "Yetişkinlere dostça, içten ve saygılı bir üslupla hitap etmek"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 60,
+            "question": "Hz. Peygamber'in dinî öğretimde kullandığı yöntemlerden biri olan \"merak ve istek uyandırma\" yöntemi aşağıdakilerden hangisiyle örneklendirilebilir?",
+            "options": {
+                "A": "\"Size haber vereyim mi?\" diye rek ashabının dikkatini çekmesi",
+                "B": "Uzun ve soyut dini kavramları doğrudan öğretmesi",
+                "C": "Katı ve zorlayıcı yöntemlerle bilgiyi öğretmesi",
+                "D": "Dini bilgileri herkesin aynı şekilde öğrenmesini zorunlu kılması"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 62,
+            "question": "Aşağıdaki ifadelerden hangisi anlatım metodunun en önemli avantajlarından biridir?",
+            "options": {
+                "A": "Bütün öğrencileri aktif öğrenme sürecine dâhil etmesi",
+                "B": "Konunun kıs a sürede geniş bir kitleye ulaştırılmasını sağlaması",
+                "C": "Öğrencilerin eleştirel düşünme becerilerini geliştirmesi",
+                "D": "Öğretmenin derse hazırlık yapmasına gerek kalmaması"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 63,
+            "question": "Soru -cevap metodunun Kur’an’da sıkça kullanıldığını gösteren en iyi ör nek aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "“Ey iman edenler! Namazı dosdoğru kılınız ve zekât veriniz.”",
+                "B": "“Biz onu (Kur’an’ı) Kadir Gecesi’nde indirdik. Kadir Gecesi nedir, bilir misin?”",
+                "C": "“İnsan için ancak çalıştığının karşılığı vardır.”",
+                "D": "“Allah sizi hesaba ç ekecektir.”"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 64,
+            "question": "Problem çözme metodunun din eğitiminde kullanılmasının en temel avantajı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Öğrencinin bilgiyi sadece öğretmenden almasını sağlamak",
+                "B": "Öğrencilerin bilgiyi sadece ezberleyerek öğrenmesini teşvik etmek",
+                "C": "Dinî bilgileri hayatta karşılaşılan sorunlarla ilişkilendirerek içselleştirmek",
+                "D": "Bilginin yüzeysel olarak kavranmasını sağlamak"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 65,
+            "question": "Gösteri metodunun en etkili olduğu öğretim alanlarından biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Soyut kavram ların detaylı açıklanması",
+                "B": "İbadetler ve ahlaki davranışların öğretilmesi",
+                "C": "Felsefi tartışmaların yapılması",
+                "D": "Teorik dinî kavramların ezberletilmesi"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 66,
+            "question": "Aşağıdakilerden hangisi gözlem metodunun temel amaçlarından biri  değildir ?",
+            "options": {
+                "A": "Öğrencilerin  kendi yaşantılarıyla bilgiyi ilişkilendirmelerini sağlamak",
+                "B": "Dinî bilgileri, doğal ve gerçek hayattan alınan örneklerle pekiştirmek",
+                "C": "Öğrencileri teorik bilgilerden uzak tutmak",
+                "D": "Olayları ve varlıkları yerinde inceleyerek ibret ve hikmet çıkarmalarına yardımcı olmak"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 67,
+            "question": "Rol oynama metodunun din eğitiminde en iyi uygulanabileceği alan aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Soyut dinî kavramların ezberlenmesi",
+                "B": "Dinî şahsiyetlerin örnek alınması ve temsilî canlandırmaların yapılması",
+                "C": "Tarihî olayların bilimsel olarak analiz edilmesi",
+                "D": "Ezberleme yeteneğinin geliştirilmesi"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 68,
+            "question": "Örnek olay inceleme metodunun din eğitimi açısından en büyük faydası nedir?",
+            "options": {
+                "A": "Bilgiyi ezberleyerek öğrenmeye teşvik etmesi",
+                "B": "Gerçek hayatta karşılaşılabilecek durumlar ü zerinden değerler kazandırması",
+                "C": "Öğrencilerin öğretmenden bağımsız düşünmesini engellemesi",
+                "D": "Sadece teorik bilgilerin kullanılmasına imkân tanıması"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 69,
+            "question": "Aşağıdakilerden hangisi din eğitiminde tartışma metodunun en önemli sınırlılıklarından biridir?",
+            "options": {
+                "A": "Öğrencileri düşünmeye teşvik etmemesi",
+                "B": "Her konunun tartışmaya uygun olmaması ve zihin karışıklığı yaratabilmesi",
+                "C": "Öğrencilerin derse olan ilgisini azaltması",
+                "D": "Öğretmenin öğrencileri yönlendirme yeteneğini artırması"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 70,
+            "question": "İslam’da tedricî öğretim metodunun en önemli örneği aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Namazın farz olarak bir anda emredilmesi",
+                "B": "İçki yasağının aşamalı olarak getirilmesi",
+                "C": "Zekâtın belirli bir dönemde zorunlu kılınması",
+                "D": "Peygamberin bütün emirleri aynı anda tebliğ etmesi"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 73,
+            "question": "Panel tekniği ile ilgili olarak aşağıda kilerden hangisi  yanlıştır ?",
+            "options": {
+                "A": "Panelde konuşmacılar, bir konu üzerinde sohbet havasında düşüncelerini ifade eder.",
+                "B": "Panelde konuşmacılar arasında kesin bir sonuca varma zorunluluğu yoktur.",
+                "C": "Panelde her konuşmacı, sırayla belirlenen konuyu ele alır ve yo rumlar.",
+                "D": "Panelde yarışma havası oluşturularak taraflardan biri galip ilan edilir."
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 75,
+            "question": "Din öğretiminde kullanılan öğretim teknikleri açısından proje çalışmasının en önemli avantajı aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Öğrencilere bilgiyi kısa sürede  aktarması",
+                "B": "Öğrencileri tamamen pasif bir öğrenme sürecine yönlendirmesi",
+                "C": "Öğrencilerin kendi araştırmalarını yaparak öğrenme sorumluluğu kazanmalarını sağlaması",
+                "D": "Anlatım metoduna kıyasla daha az bilgi vermesi"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 76,
+            "question": "Aşağıdakilerden hangisi din öğretiminde ölçme -değerlendirme aşamasının temel unsurlarından biri  değildir ?",
+            "options": {
+                "A": "Öğrenci başarısını tespit etmek",
+                "B": "Öğretim sürecinin ne kadar etkili olduğunu belirlemek",
+                "C": "Sadece akademik başarıya odaklanarak değerlendirme yapm ak",
+                "D": "Eksik öğrenmeleri belirleyerek öğretim sürecini geliştirmek"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 78,
+            "question": "Aşağıdakilerden hangisi din öğretiminde kullanılan edebi metinlerin temel fonksiyonlarından biri  değildir ?",
+            "options": {
+                "A": "Öğrenilen bilgilerin akılda kalıcılığını artırmak",
+                "B": "Öğrencilerin dini konulara ilgisini artırmak",
+                "C": "Öğrencilere soyut kavramları so mutlaştırarak anlatmak",
+                "D": "Sadece belirli dini kuralları ezberletmek"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 79,
+            "question": "Teknolojik öğretim materyalleri ile ilgili aşağıdakilerden hangisi  yanlıştır ?",
+            "options": {
+                "A": "Teknolojik araçlar, öğretimi daha etkili ve görsel hale getirebilir.",
+                "B": "Din eğitiminde elektr onik cihazlar sadece oyun amaçlı kullanılmalıdır.",
+                "C": "Bilgisayar ve internet, bilgiye hızlı erişim sağlama açısından önemli materyallerdir.",
+                "D": "Teknolojik araçların bilinçli kullanımı, öğrencilerin öğrenme sürecine olumlu katkı sağlar."
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 81,
+            "question": "Dinî konuların öğretimiyle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+            "options": {
+                "A": "Dinî öğretim süreçle rinde kullanılan her metot her konuda aynı derecede etkili değildir.",
+                "B": "Dinî konuların öğretimi sadece teorik bilgi aktarmaya dayalı olmalıdır.",
+                "C": "Ahlak öğretimi, diğer dinî konulara kıyasla daha az önemli bir yere sahiptir.",
+                "D": "Kur’an öğretimi, iman ve ame l konularının öğretilmesine gerek kalmadan yapılmalıdır."
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 82,
+            "question": "Kur’ân -ı Kerîm’in doğru ve düzgün okunmasının en önemli sebeplerinden biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Harflerin yanlış telaffuzu Kur’an’ın anlamında değişikliklere neden olabilir.",
+                "B": "Kur’an’ı yanlış okumak, sadece Arapça dilbilgisi açısından sorun teşkil eder.",
+                "C": "Kur’an yanlış okunsa da ibadet açısından bir sakınca teşkil etmez.",
+                "D": "Kur’an okumada bireysel çaba yeterli olup herhangi bir öğreticiye ihtiyaç duyulmaz."
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 83,
+            "question": "Aşağıdakilerden hangisi Kur’an’ın öğretimi sırasında dikkat edilmesi gereken hususlardan biri değildir ?",
+            "options": {
+                "A": "Kur’an’ın okunuş kurallarının ve tecvit kaidelerinin öğretilmesi",
+                "B": "Kur’an’ın mana ve mesajının kavratılması",
+                "C": "Kur’an öğrenen öğrencinin anadilinde iyi bir dilbilgisine sahip olması",
+                "D": "Kur’an öğretiminin öğrencinin seviyesine ve kavrayışına uygun şekilde yapılması"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 84,
+            "question": "İman konularının öğretiminde karşılaşılan en önemli zorluk aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Öğrencilere sadece ezberci bir eğitim verilmesi",
+                "B": "Şüphe ve tereddütlerden arınmış sağlam bir kabulün gerçekleştirilmesi",
+                "C": "İman konularının öğretilmesi için öğrencinin mutlaka Arapça bilmesi",
+                "D": "Mantıksal çözümleme yerine yalnızca duygusal anlatımların tercih edilmesi"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 86,
+            "question": "Hz. İbrahim’in kavmine karşı Allah inancını anlatırken takip ettiği yöntem hangi öğretim stratejisine örnek teşkil eder?",
+            "options": {
+                "A": "Soyut kavramları açıklarken somut nesnelerden hareket etmek",
+                "B": "Dini inançları bireylere doğrudan zorla kabul ettirmek",
+                "C": "İnanç sistemlerini sorgulamadan olduğu gibi benimsemek",
+                "D": "İnanç öğretimini sadece ezbere dayalı olarak gerçekleşti rmek"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 87,
+            "question": "Kavramsal çözümleme sürecinde en fazla karşılaşılan problem aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Dinî kavramların, öğrencilere ezber yöntemiyle öğretilmesi",
+                "B": "Öğrencilerin dinî kavramları anlamlandıramaması nedeniyle zihinsel karmaşa yaşaması",
+                "C": "Öğretmenin ders anlatırken çok fazla görsel materyal kullanması",
+                "D": "Kavramların öğretilmesi sırasında öğrencilere sorgulama hakkı verilmesi"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 89,
+            "question": "Aşağıdakilerden hangisi Kur’an ezberleme sürecinde takip edilmesi gereken adımlardan biri değildir ?",
+            "options": {
+                "A": "Ezberlenecek surenin içeriği ve anlamı hakkında bilgi verilmesi",
+                "B": "Öğrencinin ezberi bireysel olarak yapıp hocaya sunması",
+                "C": "Ezberleme sırasında harflerin mahreçlerine ve telaffuza dikkat edilmesi",
+                "D": "Öğrencinin ezberi sürekli farklı yazımlara sahip Mushaflardan yapması"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 90,
+            "question": "Allah’ın sıfatları, kader ve rızık gibi soyut kavramların öğretiminde en etkili yöntem aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Somutlaştırma amacıyla uygun teşbih ve benzetmelerden faydalanmak",
+                "B": "Öğrencilerin herhangi bir açıklama olmaksızın bu kavramları ezberlemelerini sağlamak",
+                "C": "Kendi a nlayışlarına bırakıp öğretici müdahalesini en aza indirmek",
+                "D": "Öğrencilerin yanlış anlamalarına rağmen kavramları olduğu gibi kabul etmelerini sağlamak"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 91,
+            "question": "İslam eğitiminde bilgilerin sadece zihinde yerleşmesi yeterli görülmez, aynı zamanda bu bilgilerin tutum ve davranışa dönüşmesi istenir. Bu durum aşağıdaki kavramlardan hangisiyle ifade edilmektedir?",
+            "options": {
+                "A": "İcmalî iman",
+                "B": "Amelî iman",
+                "C": "İlmiyle amel etmek",
+                "D": "İman -ı tahkikî"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 93,
+            "question": "İbadetlerin öğretiminde 4T yöntemi aşağıdakilerden hangisini  içermez ?",
+            "options": {
+                "A": "Telkin",
+                "B": "Teşvik",
+                "C": "Tefsir",
+                "D": "Takip"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 94,
+            "question": "İbadetlerin öğretimi sürecinde, özellikle çocuklara yönelik eğitimde aşağıdakilerden hangisinin yapılması  önerilmez ?",
+            "options": {
+                "A": "İbadetlerin sürekli hatırlatılarak bir alışkanlık hâline getirilmesi",
+                "B": "Ço cukların ibadetleri isteyerek yapması için teşvik edilmesi",
+                "C": "Çocuklara ibadeti zorla yaptırarak disiplin kazandırılması",
+                "D": "Anne -babanın ve öğretmenin ibadetlerde örnek olması"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 95,
+            "question": "\"Muamelat\" kavramının dinî öğretimdeki anlamı aşağıdakilerden hang isidir?",
+            "options": {
+                "A": "Günlük hayatta bireyin inancına uygun olarak yerine getirdiği davranışlar",
+                "B": "İbadetlerin belirli bir düzen ve zaman içinde yapılması",
+                "C": "Fıkhi hükümlerin teorik olarak öğrenilmesi",
+                "D": "Sadece dinî ritüellerin uygulanması"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 97,
+            "question": "Ahlak eğitimi sürecinde \"modelleme\"nin önemi vurgulanmaktadır. Bu kavramla ilgili aşağ ıdakilerden hangisi  yanlıştır ?",
+            "options": {
+                "A": "Çocuklar küçük yaşlardan itibaren model alma yoluyla ahlaki değerleri kazanır.",
+                "B": "Modelleme sürecinde aile ve öğretmenler çocuğa en yakın modellerdir.",
+                "C": "Modelleme, sadece olumlu davranışları kazandırmada etkili bir yöntem dir.",
+                "D": "Kişi, çevresinde sıkça gördüğü ve özendiği davranışları benimsemeye daha yatkındır."
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 98,
+            "question": "Ahlak eğitimi sürecinde bireyin değerleri kavraması ve benimsemesi için kullanılan \"anlamlandırma\" yöntemi aşağıdaki aşamalardan hangisini  içermez ?",
+            "options": {
+                "A": "Bir davranışın farkına varılması ve anlamlandırma ihtiyacının hissedilmesi",
+                "B": "Davranışın sebep -sonuç ilişkisi içinde sorgulanması",
+                "C": "Davranışın kalıtsal olarak bireye aktarıldığının kabul edilmesi",
+                "D": "Davranışın doğru veya yanlış olduğuna dair geçerlilik s orgulaması yapılması"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 99,
+            "question": "Ahlaki değerlerin öğrenilmesi sürecinde bireyin aldığı kararların farkına varması, kendi değerler sistemini oluşturması ve bağımsız düşünebilmesi için kullanılan eğitim yöntemi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Değerleme ya klaşımı",
+                "B": "Telkin yöntemi",
+                "C": "Ezber yöntemi",
+                "D": "Otoriter eğitim modeli"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 100,
+            "question": "Ahlaki davranışların sürekliliğinin sağlanabilmesi için bireyde gelişmesi gereken \"iç kontrol\" mekanizmasının en önemli işlevi aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Bireyin davran ışlarını dış baskılar olmadan kendi iradesiyle yönetebilmesi",
+                "B": "Bireyin yanlış bir davranış yapmamak için sürekli dış denetime ihtiyaç duyması",
+                "C": "Bireyin toplum baskısından kaçınarak kendi isteklerine göre hareket etmesi",
+                "D": "Bireyin ahlaki değerleri sadece toplumsal normlara uygun olduğu sürece benimsemesi"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 105,
+            "question": "Din öğretimi alanında materyal hazırlığı yaparken dikkat edilmesi gereken hususlardan biri aşağıdakilerden hangisi  değildir ?",
+            "options": {
+                "A": "Materyalin sade, basit ve kolay  anlaşılır olması",
+                "B": "Ders materyalinin konuyla sınırlı olup dikkati başka yönlere çekmemesi",
+                "C": "Materyallerin öğretmenin anlatımını daha etkili kılacak şekilde seçilmesi",
+                "D": "Materyalin öğrencilerin dikkatini çekebilmesi için olabildiğince karmaşık ve detaylı  olması"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 106,
+            "question": "Ders öncesi hazırlık sürecinde öğretmenin yapması gerekenlerden biri  değildir ?",
+            "options": {
+                "A": "Konuyla ilgili ders planı hazırlamak",
+                "B": "Ders için gerekli materyalleri hazırlamak",
+                "C": "Dersin işleyişini zihinsel olarak prova etmek",
+                "D": "Öğrencilerin ders i nasıl anlaması gerektiğini önceden belirleyerek kesin sınırlar koymak"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 107,
+            "question": "Ders planlaması sürecinde öğretmen, yıllık planı oluştururken aşağıdaki hususlardan hangisini dikkate  almaz ?",
+            "options": {
+                "A": "O yıl veya yarıyılda ders yapılmayacak tatil ve sınav günl erini",
+                "B": "Konuların ağırlıklarına göre ders saatlerine dağıtılmasını",
+                "C": "Derslerin işleniş sırasını ve süresini belirlemeyi",
+                "D": "Sadece öğretmenin ilgi alanına giren konuların müfredata eklenmesini"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 110,
+            "question": "Aşağıdakilerden hangisi öğretmenin ders planı hazırlarken dikkat etmesi gereken hususlardan biri  değildir ?",
+            "options": {
+                "A": "Konunun başlığını belirlerken sadece o ders saatinde işlenecek içeriği seçmek",
+                "B": "Öğrencilere dersin hedeflerini ve kazandıracağı bilgileri açıkça belirtmek",
+                "C": "Dersin tüm içeriğini doğrudan ezberletmek yerine etk inlikler ve materyallerle desteklemek",
+                "D": "Ders süresini, öğrencilerin dikkat seviyesine bakılmaksızın rastgele belirlemek"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 113,
+            "question": "Aşağıdakilerden hangisi öğretmenin sınıf içi motivasyon sağlamada kullanabileceği temel adımlardan biri  değildir ?",
+            "options": {
+                "A": "Öğrencilere konunun günlük hayattaki önemini açıklayarak merak uyandırmak",
+                "B": "Dersin öğrenciler için ne gibi kazanımlar sağlayacağını anlatmak",
+                "C": "Öğrencileri öğrenmeye teşvik etmek için cezalandırma yöntemleri kullanmak",
+                "D": "Dikkat çekici sorular sorarak öğrencilerin konuya ilgisini çekmek"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 114,
+            "question": "Öğretmenin ders planına bağlı kalarak ders süresini etkili bir şekilde yönetmesi neden önemlidir?",
+            "options": {
+                "A": "Konunun bütün olarak işlenmesini ve eksiksiz tamamlanmasını sağlamak için",
+                "B": "Öğrencilerin soru sorma sürecini kısıtlayarak zaman kaybını önlemek için",
+                "C": "Öğrencilerin ilgisini çekmek yerine konuyu hızlı bir şekilde bitirmek için",
+                "D": "Ders süresini yalnızca öğretmenin belirlediği sabit bir düzene oturtmak için"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 115,
+            "question": "Çoklu zekâ kuramına göre öğrencilerin farklı öğrenme stillerine sahip olduğu kabul edilir. Buna göre öğretmenin aşağıdakilerden hangisini yapması  beklenmez ?",
+            "options": {
+                "A": "Sayısal zekâya sahip öğrenciler için konuları sebep -sonuç ilişkileriyle açıklamak",
+                "B": "Görsel zekâya sahip öğrenciler için şekil, şema ve görsellerden yararlanmak",
+                "C": "Sözel zek âya sahip öğrenciler için tekrarlara dayalı anlatım kullanmak",
+                "D": "Tüm zekâ türlerine hitap etmek için yalnızca tek bir yöntem kullanmak"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 116,
+            "question": "Aşağıdakilerden hangisi etkili iletişim açısından öğretmenin dikkat etmesi gereken unsurlardan biri  değild ir?",
+            "options": {
+                "A": "Öğrencilere yönelik samimi ve saygılı bir tutum sergilemek",
+                "B": "Öğrencilerin bireysel farklılıklarını dikkate alarak iletişim kurmak",
+                "C": "Sadece akademik bilgiyi aktarıp öğrencilerle duygusal bağ kurmaktan kaçınmak",
+                "D": "Konuşma sırasında göz teması kurara k öğrencileri sürece dahil etmek"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 118,
+            "question": "Öğretmenin sınıfta ko ntrol ve değerlendirme yaparken dikkate alması gereken en önemli unsurlardan biri nedir?",
+            "options": {
+                "A": "Öğrencilerin yalnızca sınavlardan aldığı puanları başarı ölçütü olarak belirlemek",
+                "B": "Öğrencilerin gelişim düzeylerini gözlemleyerek öğrenme sürecini değerlendirmek",
+                "C": "Tüm öğrencilerin aynı öğrenme hızına sahip olduğunu varsaymak",
+                "D": "Değerlendirme sürecinde öğrenci geribildirimlerine önem vermemek"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 119,
+            "question": "Öğretmenin sınıfta öz yönetim sağlaması neden önemlidir?",
+            "options": {
+                "A": "Kendi duygu ve düşüncelerini kontrol ederek öğr encilere rol model olmak için",
+                "B": "Dersleri öğrencilere göre değil, kendi tarzına uygun şekilde işlemek için",
+                "C": "Sınıfta otoriteyi sağlamak adına öğrencilere mesafeli ve soğuk davranmak için",
+                "D": "Kendi öğretim tarzını asla değiştirmeden sürekli aynı yöntemleri kullanmak için"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 120,
+            "question": "Başarı ile ilgili temel prensiplerden biri aşağıdakilerden hangisidir?",
+            "options": {
+                "A": "Başarı sadece doğuştan yetenekli insanlara sunulmuş bir ayrıcalıktır",
+                "B": "Küçük başarılar olmadan büyük başarılara ulaşılamaz",
+                "C": "Başarı her zaman maddi ka zanç ile ölçülmelidir",
+                "D": "Başarı için tek önemli faktör öğretmenin bilgi düzeyidir"
+            },
+            "correct_answer": "B"
+        }
+    ]
+}
