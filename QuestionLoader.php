@@ -27,9 +27,16 @@ class QuestionLoader {
      */
     public function loadQuestions() {
         // Önce veritabanını kontrol et
+        // GitHub dağıtımı için dosya öncelikli yükleme
+        $this->loadFromFiles();
+        return;
+
+        // Önce veritabanını kontrol et (Devre dışı bırakıldı - Dosya sistemi esas alınacak)
+        /*
         if ($this->loadFromDatabase()) {
             return;
         }
+        */
 
         // Veritabanı boşsa veya hata varsa dosyadan yükle
         $this->loadFromFiles();
