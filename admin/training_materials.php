@@ -178,9 +178,9 @@ $availableRoles = [
         .form-control { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.5rem; }
         .btn-primary { background: #068567; color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 0.5rem; cursor: pointer; }
         .btn-secondary { background: #64748b; color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 0.5rem; cursor: pointer; text-decoration: none; display: inline-block; }
-        .checkbox-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .checkbox-group { display: flex; gap: 1rem; flex-wrap: wrap; color: var(--text-primary); }
         .checkbox-item { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; }
-        .badge { background: #e2e8f0; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; margin-right: 0.25rem; display: inline-block; margin-bottom: 2px; }
+        .badge { background: var(--bg-light); color: var(--text-secondary); padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; margin-right: 0.25rem; display: inline-block; margin-bottom: 2px; border: 1px solid var(--border-light); }
         
         /* Table Styles */
         .custom-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
@@ -189,7 +189,12 @@ $availableRoles = [
         .custom-table tr:hover { background: #f1f5f9; }
         .action-icon-btn { padding: 0.5rem; border-radius: 0.375rem; color: #64748b; transition: all 0.2s; margin-right: 0.5rem; display: inline-block; }
         .action-icon-btn:hover { background: #e2e8f0; color: #0f172a; }
-        .action-icon-btn.delete:hover { background: #fee2e2; color: #ef4444; }
+        .action-icon-btn.delete:hover { background: var(--danger-light); color: var(--danger); }
+        
+        .main-wrapper h2 { color: var(--text-primary); }
+        .form-control::placeholder { color: var(--text-light); }
+        textarea.form-control { color: var(--text-primary); }
+        .checkbox-item { color: var(--text-primary); }
     </style>
 </head>
 <body>
@@ -204,13 +209,13 @@ $availableRoles = [
         </div>
 
         <?php if (!empty($message)): ?>
-            <div class="success-box" style="background:#dcfce7; color:#166534; padding:1rem; border-radius:0.5rem; margin-bottom:1rem;">
+            <div class="success-box">
                 <i class="fas fa-check-circle"></i> <?php echo htmlspecialchars($message); ?>
             </div>
         <?php endif; ?>
 
         <?php if (!empty($error)): ?>
-            <div class="error-box" style="background:#fee2e2; color:#991b1b; padding:1rem; border-radius:0.5rem; margin-bottom:1rem;">
+            <div class="error-box">
                 <i class="fas fa-exclamation-circle"></i> <?php echo htmlspecialchars($error); ?>
             </div>
         <?php endif; ?>
@@ -263,7 +268,7 @@ $availableRoles = [
                         <label class="form-label"><?php echo $editMode ? 'Dosya (Değiştirmek istiyorsanız seçin)' : 'Dosya'; ?></label>
                         <input type="file" name="file" class="form-control" <?php echo $editMode ? '' : 'required'; ?>>
                         <?php if ($editMode): ?>
-                            <small style="color:#666; display:block; margin-top:5px;">Mevcut dosya: <?php echo htmlspecialchars($editItem['file_path']); ?></small>
+                            <small style="color: var(--text-muted); display:block; margin-top:5px;">Mevcut dosya: <?php echo htmlspecialchars($editItem['file_path']); ?></small>
                         <?php endif; ?>
                     </div>
                     
@@ -297,7 +302,7 @@ $availableRoles = [
                         <tbody>
                             <?php if (empty($materials)): ?>
                                 <tr>
-                                    <td colspan="5" style="text-align:center; padding:2rem; color:#666;">Henüz materyal bulunmuyor.</td>
+                                    <td colspan="5" style="text-align:center; padding:2rem; color: var(--text-muted);">Henüz materyal bulunmuyor.</td>
                                 </tr>
                             <?php else: ?>
                                 <?php foreach ($materials as $item): ?>
@@ -354,4 +359,3 @@ $availableRoles = [
     </div>
 </body>
 </html>
-

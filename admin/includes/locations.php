@@ -17,7 +17,9 @@ $regionConfig = [
         'IQRA Lustenau',
         'IQRA Radfeld',
         'IQRA Reutte',
+        'IQRA Tirol',
         'IQRA Vomp',
+        'IQRA Vorarlberg',
         'IQRA Wörgl',
         'IQRA Zirl'
     ],
