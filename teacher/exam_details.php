@@ -22,10 +22,14 @@ $success = '';
 // AJAX isteği kontrolü
 if (isset($_GET['ajax']) && $_GET['ajax'] == '1') {
     // Sadece katılımcı sayısını döndür
-    if (!empty($examId) && file_exists('../data/exam_results.json')) {
-        $allResults = json_decode(file_get_contents('../data/exam_results.json'), true) ?? [];
-        $results = $allResults[$examId] ?? [];
-        $participants = count($results);
+    if (!empty($examId)) {
+        require_once '../database.php';
+        $db = Database::getInstance();
+        $conn = $db->getConnection();
+        
+        $stmt = $conn->prepare("SELECT COUNT(*) FROM exam_results WHERE exam_id = :id");
+        $stmt->execute([':id' => $examId]);
+        $participants = $stmt->fetchColumn();
         
         header('Content-Type: application/json');
         echo json_encode([
@@ -50,12 +54,24 @@ if (isset($_GET['updated']) && $_GET['updated'] == '1') {
 
 // Sınav bilgilerini yükle
 if (!empty($examId)) {
-    if (file_exists('../data/exams.json')) {
-        $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-        
-        if (isset($allExams[$examId])) {
-            $exam = $allExams[$examId];
-            
+    require_once '../database.php';
+    $db = Database::getInstance();
+    $conn = $db->getConnection();
+
+    try {
+        $stmt = $conn->prepare("SELECT * FROM exams WHERE exam_id = :exam_id");
+        $stmt->execute([':exam_id' => $examId]);
+        $exam = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($exam) {
+            // JSON alanları decode et
+            if (isset($exam['questions']) && is_string($exam['questions'])) {
+                $exam['questions'] = json_decode($exam['questions'], true) ?? [];
+            }
+            if (isset($exam['categories']) && is_string($exam['categories'])) {
+                $exam['categories'] = json_decode($exam['categories'], true) ?? [];
+            }
+
             // Kurum kontrolü
             $user = $auth->getUser();
             $teacherBranch = $user['branch'] ?? $user['institution'] ?? '';
@@ -74,49 +90,43 @@ if (!empty($examId)) {
         } else {
             $error = 'Sınav bulunamadı.';
         }
-    } else {
-        $error = 'Sınav verileri bulunamadı.';
+    } catch (Exception $e) {
+        $error = 'Veritabanı hatası: ' . $e->getMessage();
     }
 } else {
     $error = 'Geçersiz sınav ID.';
 }
 
 // Sınav durumu değiştirme
-if ($_POST['action'] ?? '' === 'change_status' && $exam) {
+if (($_POST['action'] ?? '') === 'change_status' && $exam) {
     $newStatus = $_POST['new_status'] ?? '';
-    
     if (!empty($newStatus)) {
-        $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-        
-        if (isset($allExams[$examId])) {
-            $allExams[$examId]['status'] = $newStatus;
-            $allExams[$examId]['updated_at'] = date('Y-m-d H:i:s');
-            
-            if (file_put_contents('../data/exams.json', json_encode($allExams, JSON_PRETTY_PRINT))) {
-                $success = 'Sınav durumu başarıyla güncellendi.';
-                // Sayfayı yenile
+        try {
+            $stmt = $conn->prepare("UPDATE exams SET status = :status, updated_at = NOW() WHERE exam_id = :id");
+            if ($stmt->execute([':status' => $newStatus, ':id' => $examId])) {
                 header('Location: exam_details.php?id=' . $examId . '&updated=1');
                 exit;
             } else {
                 $error = 'Sınav durumu güncellenirken hata oluştu.';
             }
+        } catch (Exception $e) {
+            $error = 'Veritabanı hatası: ' . $e->getMessage();
         }
     }
 }
 
 // Sınav silme
-if ($_POST['action'] ?? '' === 'delete_exam' && $exam) {
-    $allExams = json_decode(file_get_contents('../data/exams.json'), true) ?? [];
-    
-    if (isset($allExams[$examId])) {
-        unset($allExams[$examId]);
-        
-        if (file_put_contents('../data/exams.json', json_encode($allExams, JSON_PRETTY_PRINT))) {
+if (($_POST['action'] ?? '') === 'delete_exam' && $exam) {
+    try {
+        $stmt = $conn->prepare("DELETE FROM exams WHERE exam_id = :id");
+        if ($stmt->execute([':id' => $examId])) {
             header('Location: exams.php?deleted=1');
             exit;
         } else {
             $error = 'Sınav silinirken hata oluştu.';
         }
+    } catch (Exception $e) {
+        $error = 'Veritabanı hatası: ' . $e->getMessage();
     }
 }
 
@@ -165,14 +175,19 @@ $examResults = [];
 $participants = 0;
 $averageScore = 0;
 
-if ($exam && file_exists('../data/exam_results.json')) {
-    $allResults = json_decode(file_get_contents('../data/exam_results.json'), true) ?? [];
-    $examResults = $allResults[$examId] ?? [];
-    $participants = count($examResults);
-    
-    if ($participants > 0) {
-        $totalScore = array_sum(array_column($examResults, 'score'));
-        $averageScore = round($totalScore / $participants, 1);
+if ($exam) {
+    try {
+        $stmt = $conn->prepare("SELECT score FROM exam_results WHERE exam_id = :exam_id");
+        $stmt->execute([':exam_id' => $examId]);
+        $examResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $participants = count($examResults);
+        
+        if ($participants > 0) {
+            $totalScore = array_sum(array_column($examResults, 'score'));
+            $averageScore = round($totalScore / $participants, 1);
+        }
+    } catch (Exception $e) {
+        // Hata durumunda varsayılan 0 kalır
     }
 }
 ?>
