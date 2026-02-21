@@ -21,15 +21,8 @@ $startDate = $_GET['start_date'] ?? '';
 $endDate = $_GET['end_date'] ?? '';
 $minScore = $_GET['min_score'] ?? '';
 
-// Tüm öğrencileri çek
+// Branş ve Bölüm listelerini çek
 try {
-    $sql = "SELECT DISTINCT u.username, u.full_name, u.class_section, u.branch 
-            FROM users u 
-            WHERE u.role = 'student' 
-            ORDER BY u.class_section, u.full_name";
-    $stmt = $conn->query($sql);
-    $allStudents = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
     // Şubeleri çek
     $sql = "SELECT DISTINCT class_section FROM users WHERE role = 'student' AND class_section != '' ORDER BY class_section";
     $stmt = $conn->query($sql);
@@ -39,24 +32,33 @@ try {
     $sql = "SELECT DISTINCT branch FROM users WHERE role = 'student' AND branch != '' ORDER BY branch";
     $stmt = $conn->query($sql);
     $allBranches = $stmt->fetchAll(PDO::FETCH_COLUMN);
+
+    // Filtrelenmiş tüm öğrencileri çek
+    $sql = "SELECT DISTINCT username, full_name, class_section, branch 
+            FROM users 
+            WHERE role = 'student'";
     
+    $params = [];
+    if ($selectedSection) {
+        $sql .= " AND class_section = :section";
+        $params[':section'] = $selectedSection;
+    }
+    if ($selectedBranch) {
+        $sql .= " AND branch = :branch";
+        $params[':branch'] = $selectedBranch;
+    }
+    $sql .= " ORDER BY class_section, full_name";
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($params);
+    $filteredStudents = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $allStudents = $filteredStudents; // Fallback for other uses
+
 } catch (Exception $e) {
     $allStudents = [];
+    $filteredStudents = [];
     $allSections = [];
     $allBranches = [];
-}
-
-// Filtrelenmiş öğrenciler
-$filteredStudents = $allStudents;
-if ($selectedSection) {
-    $filteredStudents = array_filter($filteredStudents, function($s) use ($selectedSection) {
-        return $s['class_section'] === $selectedSection;
-    });
-}
-if ($selectedBranch) {
-    $filteredStudents = array_filter($filteredStudents, function($s) use ($selectedBranch) {
-        return $s['branch'] === $selectedBranch;
-    });
 }
 
 // İlk öğrenciyi seçmeyi kaldırdık - Kullanıcı kendi seçmeli
@@ -89,51 +91,79 @@ $studentProgress = [
 
 $debugInfo = [];
 
-if ($selectedUser) {
-    try {
-        // Alıştırma sonuçları - Veritabanından
-        $sql = "SELECT * FROM practice_results WHERE username = :username";
-        if ($startDate) $sql .= " AND DATE(created_at) >= :start_date";
-        if ($endDate) $sql .= " AND DATE(created_at) <= :end_date";
-        if ($minScore) $sql .= " AND percentage >= :min_score";
-        $sql .= " ORDER BY created_at DESC";
+try {
+    // Alıştırma sonuçları
+    $sqlP = "SELECT pr.*, u.full_name as student_full_name FROM practice_results pr 
+             JOIN users u ON pr.username = u.username 
+             WHERE 1=1";
+    
+    $sqlE = "SELECT er.*, u.full_name as student_full_name FROM exam_results er 
+             JOIN users u ON er.username = u.username 
+             WHERE 1=1";
+             
+    $params = [];
+    
+    if ($selectedUser) {
+        $sqlP .= " AND pr.username = :username";
+        $sqlE .= " AND er.username = :username";
+        $params[':username'] = $selectedUser;
+    } else {
+        $sqlP .= " AND u.role = 'student'";
+        $sqlE .= " AND u.role = 'student'";
         
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':username', $selectedUser);
-        if ($startDate) $stmt->bindParam(':start_date', $startDate);
-        if ($endDate) $stmt->bindParam(':end_date', $endDate);
-        if ($minScore) $stmt->bindParam(':min_score', $minScore);
-        $stmt->execute();
-        $studentProgress['practice'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $debugInfo['db_practice_count'] = count($studentProgress['practice']);
-        
-        // Sınav sonuçları - Veritabanından
-        $sql = "SELECT * FROM exam_results WHERE username = :username";
-        if ($startDate) $sql .= " AND DATE(created_at) >= :start_date";
-        if ($endDate) $sql .= " AND DATE(created_at) <= :end_date";
-        if ($minScore) $sql .= " AND percentage >= :min_score";
-        $sql .= " ORDER BY created_at DESC";
-        
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':username', $selectedUser);
-        if ($startDate) $stmt->bindParam(':start_date', $startDate);
-        if ($endDate) $stmt->bindParam(':end_date', $endDate);
-        if ($minScore) $stmt->bindParam(':min_score', $minScore);
-        $stmt->execute();
-        $studentProgress['exams'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $debugInfo['db_exam_count'] = count($studentProgress['exams']);
-        
-        // JSON fallback kaldırıldı - Sadece veritabanı
-        if (empty($studentProgress['practice']) && empty($studentProgress['exams'])) {
-            $debugInfo['source'] = 'Database (Empty)';
-        } else {
-            $debugInfo['source'] = 'Database';
+        if ($selectedSection) {
+            $sqlP .= " AND u.class_section = :section";
+            $sqlE .= " AND u.class_section = :section";
+            $params[':section'] = $selectedSection;
         }
-        
-    } catch (Exception $e) {
-        $debugInfo['error'] = $e->getMessage();
-        // Hata durumunda boş array
+        if ($selectedBranch) {
+            $sqlP .= " AND u.branch = :branch";
+            $sqlE .= " AND u.branch = :branch";
+            $params[':branch'] = $selectedBranch;
+        }
     }
+    
+    if ($startDate) {
+        $sqlP .= " AND DATE(pr.created_at) >= :start_date";
+        $sqlE .= " AND DATE(er.created_at) >= :start_date";
+        $params[':start_date'] = $startDate;
+    }
+    if ($endDate) {
+        $sqlP .= " AND DATE(pr.created_at) <= :end_date";
+        $sqlE .= " AND DATE(er.created_at) <= :end_date";
+        $params[':end_date'] = $endDate;
+    }
+    if ($minScore) {
+        $sqlP .= " AND pr.percentage >= :min_score";
+        $sqlE .= " AND er.percentage >= :min_score";
+        $params[':min_score'] = $minScore;
+    }
+    
+    $sqlP .= " ORDER BY pr.created_at DESC";
+    $sqlE .= " ORDER BY er.created_at DESC";
+    
+    // Agregasyon görünümünde performansı korumak için limit
+    if (!$selectedUser) {
+        $sqlP .= " LIMIT 500";
+        $sqlE .= " LIMIT 500";
+    }
+    
+    // Practice fetching
+    $stmt = $conn->prepare($sqlP);
+    $stmt->execute($params);
+    $studentProgress['practice'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $debugInfo['db_practice_count'] = count($studentProgress['practice']);
+    
+    // Exam fetching
+    $stmt = $conn->prepare($sqlE);
+    $stmt->execute($params);
+    $studentProgress['exams'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $debugInfo['db_exam_count'] = count($studentProgress['exams']);
+    
+    $debugInfo['source'] = $selectedUser ? 'Database Individual' : 'Database Aggregate';
+    
+} catch (Exception $e) {
+    $debugInfo['error'] = $e->getMessage();
 }
 
 ?>
@@ -316,12 +346,12 @@ if ($selectedUser) {
             </div>
         </div>
         <?php else: ?>
-        <div class="glass-panel fade-in" style="text-align: center; padding: 60px 30px; margin-bottom: 30px;">
-            <div style="width: 120px; height: 120px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); display: flex; align-items: center; justify-content: center; font-size: 3.5rem; color: rgba(255,255,255,0.15);">
-                <i class="fas fa-user-graduate"></i>
+        <div class="glass-panel fade-in" style="text-align: center; padding: 40px 30px; margin-bottom: 30px; background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(59,130,246,0.05) 100%);">
+            <div style="width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 50%; background: rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #3b82f6;">
+                <i class="fas fa-chart-line"></i>
             </div>
-            <h2 style="color: #fff; margin-bottom: 12px; font-size: 1.5rem; font-weight: 600;">Öğrenci Gelişimini Görüntüle</h2>
-            <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto; font-size: 0.95rem;">Detaylı istatistikleri ve performans verilerini görmek için lütfen aşağıdaki filtrelerden bir öğrenci seçiniz.</p>
+            <h2 style="color: #fff; margin-bottom: 10px; font-size: 1.4rem; font-weight: 600;">Genel Performans Özeti</h2>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 0.95rem;">Şu anda sistemdeki tüm öğrencilerin (veya seçili filtrelerin) toplam performans verilerini görüntülüyorsunuz. Belirli bir öğrenciyi incelemek için aşağıdaki listeden seçim yapabilirsiniz.</p>
         </div>
         <?php endif; ?>
 
@@ -469,7 +499,7 @@ if ($selectedUser) {
                 <div style="width: 40px; height: 40px; border-radius: 12px; background: rgba(6,133,103,0.2); display: flex; align-items: center; justify-content: center; color: var(--primary);">
                     <i class="fas fa-chart-area"></i>
                 </div>
-                <h2 style="margin: 0; font-size: 1.2rem; font-weight: 700; color: #fff;">Performans Grafiği</h2>
+                <h2 style="margin: 0; font-size: 1.2rem; font-weight: 700; color: #fff;"><?php echo $selectedUser ? 'Performans Grafiği' : 'Genel Performans Trendi (Son 10)'; ?></h2>
             </div>
             <div class="chart-container" style="height: 350px; position: relative;">
                 <canvas id="performanceChart"></canvas>
@@ -486,8 +516,8 @@ if ($selectedUser) {
                             <i class="fas fa-dumbbell"></i>
                         </div>
                         <div>
-                            <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">Alıştırmalar</div>
-                            <div style="font-size: 0.85rem; color: var(--text-muted);">Toplam <?php echo $pCount; ?> kayıt</div>
+                            <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">Alıştırmalar <?php echo !$selectedUser ? '(Son 500)' : ''; ?></div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted);"><?php echo $selectedUser ? 'Öğrenciye ait' : 'Sistem genelinde'; ?> <?php echo $pCount; ?> kayıt</div>
                         </div>
                     </div>
                 </div>
@@ -495,19 +525,24 @@ if ($selectedUser) {
                     <table class="table users-table" id="practiceTable" style="margin: 0;">
                         <thead style="position: sticky; top: 0; z-index: 10; background: rgba(15,23,42,0.95); backdrop-filter: blur(20px);">
                             <tr>
+                                <?php if (!$selectedUser): ?>
                                 <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', 0)">
+                                    <i class="fas fa-user" style="margin-right: 8px; opacity: 0.7;"></i>Öğrenci <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
+                                </th>
+                                <?php endif; ?>
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', <?php echo $selectedUser ? 0 : 1; ?>)">
                                     <i class="fas fa-calendar-alt" style="margin-right: 8px; opacity: 0.7;"></i>Tarih <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
                                 </th>
-                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', 1)">
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', <?php echo $selectedUser ? 1 : 2; ?>)">
                                     <i class="fas fa-question-circle" style="margin-right: 8px; opacity: 0.7;"></i>Soru <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
                                 </th>
-                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', 2)">
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', <?php echo $selectedUser ? 2 : 3; ?>)">
                                     <i class="fas fa-check-circle" style="margin-right: 8px; opacity: 0.7;"></i>Doğru <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
                                 </th>
-                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', 3)">
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', <?php echo $selectedUser ? 3 : 4; ?>)">
                                     <i class="fas fa-times-circle" style="margin-right: 8px; opacity: 0.7;"></i>Yanlış <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
                                 </th>
-                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', 4)">
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('practiceTable', <?php echo $selectedUser ? 4 : 5; ?>)">
                                     <i class="fas fa-percentage" style="margin-right: 8px; opacity: 0.7;"></i>Başarı <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
                                 </th>
                             </tr>
@@ -519,6 +554,9 @@ if ($selectedUser) {
                                     $badgeClass = $percentage >= 80 ? 'badge-success' : ($percentage >= 60 ? 'badge-warning' : 'badge-danger');
                                 ?>
                                     <tr style="transition: all 0.2s ease; animation: fadeInRow 0.3s ease <?php echo $index * 0.02; ?>s both;">
+                                        <?php if (!$selectedUser): ?>
+                                        <td style="padding: 16px 24px; font-weight: 500; color: var(--primary);"><?php echo htmlspecialchars($row['student_full_name'] ?? '-'); ?></td>
+                                        <?php endif; ?>
                                         <td style="padding: 16px 24px;"><?php echo date('d.m.Y H:i', strtotime($row['created_at'] ?? '-')); ?></td>
                                         <td style="padding: 16px 24px; font-weight: 500;"><?php echo (int)($row['total_questions'] ?? 0); ?></td>
                                         <td style="padding: 16px 24px;"><span class="badge badge-success"><?php echo (int)($row['correct_answers'] ?? 0); ?></span></td>
@@ -549,8 +587,8 @@ if ($selectedUser) {
                             <i class="fas fa-file-alt"></i>
                         </div>
                         <div>
-                            <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">Sınavlar</div>
-                            <div style="font-size: 0.85rem; color: var(--text-muted);">Toplam <?php echo $eCount; ?> kayıt</div>
+                            <div style="font-size: 1.1rem; font-weight: 700; color: #fff;">Sınavlar <?php echo !$selectedUser ? '(Son 500)' : ''; ?></div>
+                            <div style="font-size: 0.85rem; color: var(--text-muted);"><?php echo $selectedUser ? 'Öğrenciye ait' : 'Sistem genelinde'; ?> <?php echo $eCount; ?> kayıt</div>
                         </div>
                     </div>
                 </div>
@@ -558,19 +596,24 @@ if ($selectedUser) {
                     <table class="table users-table" id="examTable" style="margin: 0;">
                         <thead style="position: sticky; top: 0; z-index: 10; background: rgba(15,23,42,0.95); backdrop-filter: blur(20px);">
                             <tr>
+                                <?php if (!$selectedUser): ?>
                                 <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', 0)">
+                                    <i class="fas fa-user" style="margin-right: 8px; opacity: 0.7;"></i>Öğrenci <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
+                                </th>
+                                <?php endif; ?>
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', <?php echo $selectedUser ? 0 : 1; ?>)">
                                     <i class="fas fa-calendar-alt" style="margin-right: 8px; opacity: 0.7;"></i>Tarih <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
                                 </th>
-                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', 1)">
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', <?php echo $selectedUser ? 1 : 2; ?>)">
                                     <i class="fas fa-id-badge" style="margin-right: 8px; opacity: 0.7;"></i>Sınav ID <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
                                 </th>
-                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', 2)">
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', <?php echo $selectedUser ? 2 : 3; ?>)">
                                     <i class="fas fa-list-ol" style="margin-right: 8px; opacity: 0.7;"></i>Toplam <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
                                 </th>
-                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', 3)">
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', <?php echo $selectedUser ? 3 : 4; ?>)">
                                     <i class="fas fa-check-circle" style="margin-right: 8px; opacity: 0.7;"></i>Doğru <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
                                 </th>
-                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', 4)">
+                                <th style="padding: 18px 24px; cursor: pointer;" onclick="sortTable('examTable', <?php echo $selectedUser ? 4 : 5; ?>)">
                                     <i class="fas fa-percentage" style="margin-right: 8px; opacity: 0.7;"></i>Başarı <i class="fas fa-sort" style="margin-left: 4px; opacity: 0.5;"></i>
                                 </th>
                             </tr>
@@ -582,6 +625,9 @@ if ($selectedUser) {
                                     $badgeClass = $percentage >= 80 ? 'badge-success' : ($percentage >= 60 ? 'badge-warning' : 'badge-danger');
                                 ?>
                                     <tr style="transition: all 0.2s ease; animation: fadeInRow 0.3s ease <?php echo $index * 0.02; ?>s both;">
+                                        <?php if (!$selectedUser): ?>
+                                        <td style="padding: 16px 24px; font-weight: 500; color: var(--primary);"><?php echo htmlspecialchars($row['student_full_name'] ?? '-'); ?></td>
+                                        <?php endif; ?>
                                         <td style="padding: 16px 24px;"><?php echo date('d.m.Y H:i', strtotime($row['created_at'] ?? $row['submit_time'] ?? '-')); ?></td>
                                         <td style="padding: 16px 24px;"><span class="badge badge-info"><?php echo htmlspecialchars($row['exam_id'] ?? '-'); ?></span></td>
                                         <td style="padding: 16px 24px; font-weight: 500;"><?php echo (int)($row['total_questions'] ?? 0); ?></td>
