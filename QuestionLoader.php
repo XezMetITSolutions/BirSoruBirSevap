@@ -548,9 +548,10 @@ class QuestionLoader {
      * Banka erişim kontrolü
      */
     public function isBankAccessible($bank, $userInstitution, $userRole) {
-        if ($userRole === 'superadmin') return true;
+        // Admin ve superadmin her bankaya erişebilir
+        if ($userRole === 'superadmin' || $userRole === 'admin') return true;
         
-        // Boşsa veya set edilmemişse engelleme
+        // Kısıtlı banka listesinde yoksa herkese açık
         if (!isset($this->restrictedBanks[$bank])) return true;
         
         return in_array($userInstitution, $this->restrictedBanks[$bank]);
