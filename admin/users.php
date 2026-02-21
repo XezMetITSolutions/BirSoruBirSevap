@@ -125,8 +125,11 @@ $users = [];
 foreach ($allUsers as $uName => $uData) {
     if ($search) {
         $term = mb_strtolower($search);
-        if (strpos(mb_strtolower($uName), $term) === false &&
-            strpos(mb_strtolower($uData['name'] ?? ''), $term) === false) continue;
+        $uFullName = mb_strtolower($uData['full_name'] ?? $uData['name'] ?? '');
+        $uUsername = mb_strtolower($uName);
+        
+        if (strpos($uUsername, $term) === false &&
+            strpos($uFullName, $term) === false) continue;
     }
     
     if ($fRole && ($uData['role'] ?? '') !== $fRole) continue;
@@ -534,7 +537,12 @@ $displayUsers = array_slice($users, $offset, $perPage);
         <div class="content-box">
             <!-- Toolbar -->
             <form method="GET" class="toolbar">
-                <input type="text" name="search" class="search-input" placeholder="Ara..." value="<?php echo htmlspecialchars($search); ?>">
+                <div style="display:flex; gap:5px; flex: 1; min-width: 300px;">
+                    <input type="text" name="search" class="search-input" placeholder="Ara..." value="<?php echo htmlspecialchars($search); ?>" style="flex:1;">
+                    <button type="submit" class="btn-primary" style="padding: 10px 15px;">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
                 
                 <select name="role" class="filter" onchange="this.form.submit()">
                     <option value="">Tüm Roller</option>
