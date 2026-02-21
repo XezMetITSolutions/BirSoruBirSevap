@@ -48,16 +48,36 @@ $activeExams = 0;
 $completedExams = 0;
 
 try {
+    // Şube bazlı filtreleme için WHERE koşulu hazırla
+    $whereClause = "";
+    $params = [];
+    
+    // Sadece superadmin her şeyi görür, diğerleri kendi şubesini
+    if (!$auth->hasRole('superadmin')) {
+        $userBranch = $user['branch'] ?? $user['institution'] ?? '';
+        if (!empty($userBranch)) {
+            $whereClause = " WHERE class_section = :branch OR teacher_institution = :branch";
+            $params[':branch'] = $userBranch;
+        }
+    }
+
     // Toplam sınav sayısı
-    $stmt = $conn->query("SELECT COUNT(*) FROM exams");
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM exams" . $whereClause);
+    $stmt->execute($params);
     $totalExams = $stmt->fetchColumn();
     
     // Aktif sınav sayısı
-    $stmt = $conn->query("SELECT COUNT(*) FROM exams WHERE status = 'active'");
+    $activeWhere = empty($whereClause) ? " WHERE status = 'active'" : $whereClause . " AND status = 'active'";
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM exams" . $activeWhere);
+    $stmt->execute($params);
     $activeExams = $stmt->fetchColumn();
     
-    // Tamamlanan sınav sayısı (süresi dolmuş veya status=completed)
-    $stmt = $conn->query("SELECT COUNT(*) FROM exams WHERE status = 'completed' OR (expires_at IS NOT NULL AND expires_at < NOW())");
+    // Tamamlanan sınav sayısı
+    $completedWhere = empty($whereClause) ? 
+        " WHERE status = 'completed' OR (expires_at IS NOT NULL AND expires_at < NOW())" : 
+        $whereClause . " AND (status = 'completed' OR (expires_at IS NOT NULL AND expires_at < NOW()))";
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM exams" . $completedWhere);
+    $stmt->execute($params);
     $completedExams = $stmt->fetchColumn();
     
 } catch (Exception $e) {
