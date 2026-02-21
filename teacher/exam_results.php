@@ -39,10 +39,48 @@ if (!empty($examCode)) {
             $stmt->execute([':exam_id' => $examCode]);
             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
             
-            // JSON alanları decode et (gerekirse)
+            // Sınav sorularını decode et
+            $examQuestions = [];
+            if (isset($exam['questions']) && is_string($exam['questions'])) {
+                $examQuestions = json_decode($exam['questions'], true) ?? [];
+            }
+            
+            // JSON alanları decode et ve detayları oluştur
             foreach ($results as &$res) {
                 if (isset($res['answers']) && is_string($res['answers'])) {
                     $res['answers'] = json_decode($res['answers'], true);
+                }
+                
+                // Detaylı sonuçları oluştur
+                $res['detailed_results'] = [];
+                if (!empty($examQuestions) && isset($res['answers']) && is_array($res['answers'])) {
+                    foreach ($examQuestions as $qIndex => $question) {
+                        $userAnswer = $res['answers'][$qIndex] ?? null;
+                        
+                        // Doğru cevabı bul ve normalize et
+                        $correctAnswer = $question['answer'] ?? $question['correct_answer'] ?? 0;
+                        if (is_array($correctAnswer)) {
+                            $correctAnswer = $correctAnswer[0] ?? 0;
+                        }
+                        if (is_string($correctAnswer) && preg_match('/^[A-Z]$/i', $correctAnswer)) {
+                            $correctAnswer = ord(strtoupper($correctAnswer)) - ord('A');
+                        }
+                        
+                        // Kullanıcı cevabını normalize et
+                        $normUserAnswer = $userAnswer;
+                        if (is_string($userAnswer) && preg_match('/^[A-Z]$/i', $userAnswer)) {
+                            $normUserAnswer = ord(strtoupper($userAnswer)) - ord('A');
+                        }
+                        
+                        $isCorrect = ($normUserAnswer !== null && (int)$normUserAnswer === (int)$correctAnswer);
+                        
+                        $res['detailed_results'][] = [
+                            'question' => $question['question'] ?? $question['text'] ?? 'Soru metni yok',
+                            'user_answer' => $normUserAnswer,
+                            'correct_answer' => $correctAnswer,
+                            'is_correct' => $isCorrect
+                        ];
+                    }
                 }
             }
         }
@@ -370,14 +408,14 @@ foreach ($results as $result) {
                                 <td><?php echo htmlspecialchars($result['student_name'] ?? 'Bilinmiyor'); ?></td>
                                 <td>
                                     <span class="score-badge <?php echo $scoreClass; ?>">
-                                        <?php echo $score; ?>%
+                                        <?php echo number_format($score, 2); ?>%
                                     </span>
                                 </td>
-                                <td><?php echo $result['correct'] ?? 0; ?></td>
-                                <td><?php echo $result['wrong'] ?? 0; ?></td>
-                                <td><?php echo $result['empty'] ?? 0; ?></td>
-                                <td><?php echo $result['duration'] ?? 'N/A'; ?></td>
-                                <td><?php echo $result['completed_at'] ?? 'N/A'; ?></td>
+                                <td><?php echo $result['correct_answers'] ?? 0; ?></td>
+                                <td><?php echo $result['wrong_answers'] ?? 0; ?></td>
+                                <td><?php echo ($result['total_questions'] ?? 0) - ($result['correct_answers'] ?? 0) - ($result['wrong_answers'] ?? 0); ?></td>
+                                <td><?php echo isset($result['time_taken']) ? format_time($result['time_taken']) : 'N/A'; ?></td>
+                                <td><?php echo $result['submit_time'] ?? $result['created_at'] ?? 'N/A'; ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -447,15 +485,15 @@ foreach ($results as $result) {
                         </div>
                         <div class="score-item">
                             <span class="label">Doğru:</span>
-                            <span class="value">${result.correct || 0}</span>
+                            <span class="value">${result.correct_answers || 0}</span>
                         </div>
                         <div class="score-item">
                             <span class="label">Yanlış:</span>
-                            <span class="value">${result.wrong || 0}</span>
+                            <span class="value">${result.wrong_answers || 0}</span>
                         </div>
                         <div class="score-item">
                             <span class="label">Süre:</span>
-                            <span class="value">${result.duration || 'N/A'}</span>
+                            <span class="value">${result.time_taken ? Math.floor(result.time_taken / 60) + ':' + (result.time_taken % 60).toString().padStart(2, '0') : 'N/A'}</span>
                         </div>
                     </div>
                 </div>
