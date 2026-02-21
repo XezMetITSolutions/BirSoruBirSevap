@@ -794,13 +794,38 @@ if ($exam) {
                     <div class="questions-list">
                         <?php if (!empty($exam['questions'])): ?>
                             <?php foreach ($exam['questions'] as $index => $question): ?>
-                                <div class="question-item">
-                                    <h4>Soru <?php echo $index + 1; ?></h4>
-                                    <p><?php echo htmlspecialchars($question['question'] ?? 'Soru metni yok'); ?></p>
-                                    <small style="color: var(--text-light);">
-                                        <?php echo count($question['options'] ?? []); ?> seçenek
-                                    </small>
-                                </div>
+                                    <div class="question-item">
+                                        <h4>Soru <?php echo $index + 1; ?></h4>
+                                        <p style="font-weight: 500; margin-bottom: 10px;"><?php echo htmlspecialchars($question['question'] ?? 'Soru metni yok'); ?></p>
+                                        
+                                        <?php if (!empty($question['options']) && is_array($question['options'])): ?>
+                                            <div class="options-list" style="margin: 10px 0;">
+                                                <?php foreach ($question['options'] as $optIndex => $option): ?>
+                                                    <?php 
+                                                        $isCorrect = false;
+                                                        if (isset($question['answer'])) {
+                                                            if (is_array($question['answer'])) {
+                                                                $isCorrect = in_array($optIndex, $question['answer']);
+                                                            } else {
+                                                                $isCorrect = ((int)$question['answer'] === (int)$optIndex);
+                                                            }
+                                                        }
+                                                        $letter = chr(65 + $optIndex);
+                                                    ?>
+                                                    <div class="option-item" style="padding: 5px 10px; border-radius: 5px; margin-bottom: 5px; background: <?php echo $isCorrect ? 'rgba(74, 222, 128, 0.2)' : 'transparent'; ?>; border: 1px solid <?php echo $isCorrect ? '#4ade80' : '#eee'; ?>;">
+                                                        <strong><?php echo $letter; ?>)</strong> <?php echo htmlspecialchars($option); ?>
+                                                        <?php if ($isCorrect): ?>
+                                                            <span class="badge badge-success" style="font-size: 0.7rem; background: #28a745; color: white; padding: 2px 6px; border-radius: 10px; margin-left: 5px;">Doğru Cevap</span>
+                                                        <?php endif; ?>
+                                                    </div>
+                                                <?php endforeach; ?>
+                                            </div>
+                                        <?php endif; ?>
+                                        
+                                        <small style="color: var(--text-light);">
+                                            <?php echo count($question['options'] ?? []); ?> seçenek
+                                        </small>
+                                    </div>
                             <?php endforeach; ?>
                         <?php else: ?>
                             <p style="text-align: center; color: var(--text-light); padding: 20px;">
