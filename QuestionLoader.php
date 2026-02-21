@@ -10,6 +10,11 @@ class QuestionLoader {
     private $categories = [];
     private $banks = [];
     private $errors = [];
+    private $restrictedBanks = [
+        'İslami İlimler' => ['IQRA Vorarlberg', 'IQRA Tirol'],
+        'İslamiİlimler' => ['IQRA Vorarlberg', 'IQRA Tirol']
+    ];
+
 
     public function __construct($rootDir = null, $maxDepth = null) {
         // Mutlak yol oluştur
@@ -537,6 +542,18 @@ class QuestionLoader {
         }
 
         return array_values($questions);
+    }
+
+    /**
+     * Banka erişim kontrolü
+     */
+    public function isBankAccessible($bank, $userInstitution, $userRole) {
+        if ($userRole === 'superadmin') return true;
+        
+        // Boşsa veya set edilmemişse engelleme
+        if (!isset($this->restrictedBanks[$bank])) return true;
+        
+        return in_array($userInstitution, $this->restrictedBanks[$bank]);
     }
 }
 ?>

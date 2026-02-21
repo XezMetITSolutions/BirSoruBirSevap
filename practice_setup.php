@@ -23,7 +23,14 @@ $questionLoader->loadQuestions();
 
 $questions = $_SESSION['all_questions'] ?? [];
 $categories = $_SESSION['categories'] ?? [];
-$banks = $_SESSION['banks'] ?? [];
+$allBanks = $_SESSION['banks'] ?? [];
+
+// Banka erişim filtreleme
+$userRole = $user['role'] ?? 'student';
+$userInstitution = $user['institution'] ?? $user['branch'] ?? '';
+$banks = array_filter($allBanks, function($bank) use ($questionLoader, $userInstitution, $userRole) {
+    return $questionLoader->isBankAccessible($bank, $userInstitution, $userRole);
+});
 
 // Kategorileri grupla ve temizle
 $groupedCategories = [];
