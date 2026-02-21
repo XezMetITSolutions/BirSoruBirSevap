@@ -135,17 +135,17 @@ foreach ($results as $result) {
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
             min-height: 100vh;
-            color: #333;
+            color: #2c3e50;
         }
         
         .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: white;
             padding: 20px 0;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(6, 133, 103, 0.1);
         }
         
         .header-content {
@@ -162,25 +162,27 @@ foreach ($results as $result) {
         .logo {
             font-size: 1.8em;
             font-weight: bold;
-            color: #667eea;
+            color: #068567;
         }
         
         .user-info { display: flex; align-items: center; gap: 12px; }
         .user-info > div { max-width: 45vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         
         .back-btn {
-            background: #667eea;
+            background: #068567;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 12px;
             font-weight: 600;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(6, 133, 103, 0.2);
         }
         
         .back-btn:hover {
-            background: #5a6fd8;
+            background: #055a4a;
             transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(6, 133, 103, 0.3);
         }
 
         @media (max-width: 768px) {
@@ -197,14 +199,20 @@ foreach ($results as $result) {
         
         .page-header {
             text-align: center;
-            margin-bottom: 30px;
-            color: white;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid rgba(6, 133, 103, 0.1);
         }
         
         .page-title {
             font-size: 2.5em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #068567;
+            font-weight: 800;
         }
         
         .page-subtitle {
@@ -234,8 +242,9 @@ foreach ($results as $result) {
         
         .stat-card h3 {
             font-size: 2.5em;
-            color: #667eea;
+            color: #068567;
             margin-bottom: 10px;
+            font-weight: 800;
         }
         
         .stat-card p {
@@ -273,7 +282,8 @@ foreach ($results as $result) {
         .results-table th {
             background: #f8f9fa;
             font-weight: 600;
-            color: #333;
+            color: #068567;
+            border-bottom: 2px solid rgba(6, 133, 103, 0.1);
         }
         
         .results-table tr:hover {
@@ -300,12 +310,13 @@ foreach ($results as $result) {
         }
         
         .distribution-bar {
-            background: #667eea;
+            background: #068567;
             color: white;
             padding: 10px;
-            border-radius: 5px;
+            border-radius: 8px;
             text-align: center;
             font-weight: 600;
+            box-shadow: 0 4px 10px rgba(6, 133, 103, 0.1);
         }
         
         .no-results {
@@ -329,7 +340,7 @@ foreach ($results as $result) {
                     <div style="font-weight: 600; color: #333;"><?php echo htmlspecialchars($user['name']); ?></div>
                     <div style="font-size: 0.9em; color: #666;" id="userRole"><?php echo htmlspecialchars($user['role']); ?></div>
                 </div>
-                <button id="langToggle" class="back-btn" style="margin-right: 8px; background: rgba(102,126,234,0.2); border: 1px solid rgba(102,126,234,0.3);">DE</button>
+                <button id="langToggle" class="back-btn" style="margin-right: 8px; background: rgba(6, 133, 103, 0.1); color: #068567; border: 1px solid rgba(6, 133, 103, 0.2);">DE</button>
                 <a href="exams.php" class="back-btn" id="btnBack">← <span id="backText">Sınavlara Dön</span></a>
             </div>
         </div>
@@ -624,7 +635,7 @@ foreach ($results as $result) {
         }
         
         .modal-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #068567;
             color: white;
             padding: 20px 30px;
             border-radius: 15px 15px 0 0;

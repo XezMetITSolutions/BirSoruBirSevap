@@ -207,9 +207,9 @@ if ($exam) {
         }
 
         :root {
-            --primary-color: #089473;
-            --primary-dark: #067a5f;
-            --primary-light: #0aa67a;
+            --primary-color: #068567;
+            --primary-dark: #055a4a;
+            --primary-light: #077a5f;
             --secondary-color: #f8f9fa;
             --accent-color: #ff6b35;
             --text-dark: #2c3e50;
@@ -222,7 +222,7 @@ if ($exam) {
 
         body {
             font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: #f5f7fa;
             min-height: 100vh;
             color: var(--text-dark);
             line-height: 1.6;
@@ -235,25 +235,18 @@ if ($exam) {
         }
 
         .header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            background: var(--primary-color);
             color: white;
             border-radius: 24px;
             padding: 40px;
             margin-bottom: 30px;
-            box-shadow: 0 20px 40px rgba(8, 148, 115, 0.3);
+            box-shadow: 0 10px 30px rgba(8, 148, 115, 0.2);
             position: relative;
             overflow: hidden;
         }
 
         .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: float 6s ease-in-out infinite;
+            display: none;
         }
 
         @keyframes float {
@@ -300,16 +293,14 @@ if ($exam) {
             position: absolute;
             top: 20px;
             right: 20px;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255,255,255,0.2);
             color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 50px;
-            font-size: 1rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 10px 16px;
+            border-radius: 12px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
         }
         
         .lang-toggle:hover {
