@@ -10,6 +10,7 @@ import { QuizSetupScreen } from './src/screens/QuizSetupScreen';
 import { QuizScreen } from './src/screens/QuizScreen';
 import { ResultScreen } from './src/screens/ResultScreen';
 import { LoginScreen } from './src/screens/LoginScreen';
+import { BadgesScreen } from './src/screens/BadgesScreen';
 import { theme } from './src/theme';
 import { authStorage } from './src/api/auth';
 

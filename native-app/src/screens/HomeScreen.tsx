@@ -26,7 +26,14 @@ export const HomeScreen = ({ navigation }) => {
           style={styles.btn}
           onPress={() => navigation.navigate('BankSelection')}
         >
-          <Text style={styles.btnText}>Hemen Başla</Text>
+          <Text style={styles.btnText}>Alıştırmaya Başla</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+          style={styles.secondaryBtn}
+          onPress={() => navigation.navigate('Badges')}
+        >
+          <Text style={styles.secondaryBtnText}>🏆 Başarılarım</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -120,5 +127,22 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '700',
     fontFamily: 'Outfit_700Bold',
+  },
+  secondaryBtn: {
+    backgroundColor: 'transparent',
+    paddingVertical: 18,
+    paddingHorizontal: 40,
+    borderRadius: 20,
+    marginTop: 16,
+    width: '100%',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.2)',
+  },
+  secondaryBtnText: {
+    color: theme.colors.text,
+    fontSize: 18,
+    fontWeight: '600',
+    fontFamily: 'Outfit_600SemiBold',
   },
 });

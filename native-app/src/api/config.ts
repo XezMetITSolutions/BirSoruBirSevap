@@ -22,4 +22,5 @@ export const API_ENDPOINTS = {
   QUESTIONS: `${BASE_URL}api_questions.php`,
   LOGIN: `${BASE_URL}api_login.php`,
   SAVE_PROGRESS: `${BASE_URL}api_save_progress.php`,
+  BADGES: `${BASE_URL}api_badges.php`,
 };
