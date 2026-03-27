@@ -62,7 +62,7 @@ export const DashboardScreen = ({ navigation }: any) => {
           
           <TouchableOpacity 
             style={styles.actionCard}
-            onPress={() => navigation.navigate('Home')}
+            onPress={() => navigation.navigate('BankSelection')}
           >
             <View style={[styles.actionIcon, { backgroundColor: theme.colors.primary + '20' }]}>
               <Ionicons name="grid-outline" color={theme.colors.primary} size={28} />

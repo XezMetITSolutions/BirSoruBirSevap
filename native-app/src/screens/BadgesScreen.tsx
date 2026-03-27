@@ -64,13 +64,13 @@ export const BadgesScreen = ({ navigation }: any) => {
 
     return (
       <View style={styles.badgeCard}>
-                  <View style={[styles.badgeIconContainer, { backgroundColor: isLocked ? theme.colors.border : (badgeColors[currentLevelName] || badgeColors.Bronz) + '20' }]}>
-                    <Ionicons 
-                      name={getBadgeIcon(item.icon) as any} 
-                      size={32} 
-                      color={isLocked ? theme.colors.textMuted : (badgeColors[currentLevelName] || badgeColors.Bronz)} 
-                    />
-                  </View>
+        <View style={[styles.iconContainer, { backgroundColor: isLocked ? theme.colors.border : (badgeColors[currentLevelName] || badgeColors.Bronz) + '20' }]}>
+          <Ionicons 
+            name={getBadgeIcon(item.icon) as any} 
+            size={32} 
+            color={isLocked ? theme.colors.textMuted : (badgeColors[currentLevelName] || badgeColors.Bronz)} 
+          />
+        </View>
         <View style={styles.badgeInfo}>
           <Text style={styles.badgeName}>{item.name}</Text>
           <Text style={styles.badgeLevel}>{currentLevelName} Seviye</Text>
@@ -113,7 +113,7 @@ export const BadgesScreen = ({ navigation }: any) => {
         contentContainerStyle={styles.list}
         ListEmptyComponent={
           <View style={styles.emptyContainer}>
-            <Trophy size={64} color={theme.colors.textMuted} strokeWidth={1} />
+            <Ionicons name="trophy-outline" size={64} color={theme.colors.textMuted} />
             <Text style={styles.emptyText}>Henüz rozetin yok. Alıştırma çözmeye devam et!</Text>
           </View>
         }
