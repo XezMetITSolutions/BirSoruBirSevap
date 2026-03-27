@@ -10,10 +10,7 @@ class QuestionLoader {
     private $categories = [];
     private $banks = [];
     private $errors = [];
-    private $restrictedBanks = [
-        'İslami İlimler' => ['IQRA Vorarlberg', 'IQRA Tirol'],
-        'İslamiİlimler' => ['IQRA Vorarlberg', 'IQRA Tirol']
-    ];
+    private $restrictedBanks = [];
 
 
     public function __construct($rootDir = null, $maxDepth = null) {
@@ -548,13 +545,8 @@ class QuestionLoader {
      * Banka erişim kontrolü
      */
     public function isBankAccessible($bank, $userInstitution, $userRole) {
-        // Admin ve superadmin her bankaya erişebilir
-        if ($userRole === 'superadmin' || $userRole === 'admin') return true;
-        
-        // Kısıtlı banka listesinde yoksa herkese açık
-        if (!isset($this->restrictedBanks[$bank])) return true;
-        
-        return in_array($userInstitution, $this->restrictedBanks[$bank]);
+        // Tüm bankalara herkes tarafından erişilebilir olsun (İslami İlimler dahil)
+        return true;
     }
 }
 ?>
