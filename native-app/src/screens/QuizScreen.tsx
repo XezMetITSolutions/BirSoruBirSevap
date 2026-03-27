@@ -3,12 +3,13 @@ import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator, Alert, Ani
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import { API_ENDPOINTS } from '../api/config';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const QuizScreen = ({ route, navigation }: any) => {
-  const { bankId, category, count, timer: hasTimer } = route.params;
+  const { mode, examId, questions: initialQuestions, bankId, category, count, timer: hasTimer, duration: examDuration } = route.params;
   
-  const [questions, setQuestions] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [questions, setQuestions] = useState(initialQuestions || []);
+  const [loading, setLoading] = useState(!initialQuestions);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [isAnswered, setIsAnswered] = useState(false);
@@ -21,7 +22,12 @@ export const QuizScreen = ({ route, navigation }: any) => {
   const progressAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    fetchQuestions();
+    if (!initialQuestions) {
+      fetchQuestions();
+    } else {
+      // For exams, we already have questions
+      startQuestion();
+    }
     return () => clearInterval(timerRef.current);
   }, []);
 
@@ -111,19 +117,42 @@ export const QuizScreen = ({ route, navigation }: any) => {
     setResults(newResults);
   };
 
-  const nextQuestion = () => {
+  const nextQuestion = async () => {
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(prev => prev + 1);
       startQuestion();
     } else {
       const duration = Math.round((Date.now() - startTime) / 1000);
+      
+      if (mode === 'exam') {
+        try {
+          const userDataStr = await AsyncStorage.getItem('user_data');
+          const userData = JSON.parse(userDataStr || '{}');
+          
+          await fetch(API_ENDPOINTS.EXAM_JOIN, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'submit',
+              exam_code: examId,
+              username: userData.username,
+              score,
+              results
+            })
+          });
+        } catch (e) {
+          console.error('Submit result error:', e);
+        }
+      }
+
       navigation.navigate('Result', { 
         score, 
         total: questions.length, 
         results, 
         duration,
         bank: bankId,
-        category: category
+        category: category,
+        mode
       });
     }
   };
