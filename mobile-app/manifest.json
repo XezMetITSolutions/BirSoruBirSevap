@@ -1,0 +1,21 @@
+{
+  "name": "Bir Soru Bir Sevap Mobile",
+  "short_name": "Bir Soru",
+  "description": "Mobil Alıştırma Uygulaması",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#068567",
+  "icons": [
+    {
+      "src": "../logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

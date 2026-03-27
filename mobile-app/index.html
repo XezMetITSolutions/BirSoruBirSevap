@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#068567">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Bir Soru Bir Sevap App</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="../logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="app-container">
+        <!-- Splash Screen -->
+        <section id="splash" class="view active">
+            <div class="splash-content">
+                <div class="logo-wrapper">
+                    <img src="../logo.png" alt="Logo" class="floating-logo">
+                </div>
+                <h1 class="app-title">Bir Soru Bir Sevap</h1>
+                <p class="app-subtitle">İlim Yolunda Bir Adım...</p>
+                <div class="loader-line"></div>
+            </div>
+        </section>
+
+        <!-- Bank Selection View -->
+        <section id="bank-selection" class="view">
+            <header class="app-header">
+                <h2>Soru Bankası</h2>
+                <p>Başlamak için bir banka seçin</p>
+            </header>
+            <div class="scroll-content">
+                <div class="bank-grid" id="bank-grid">
+                    <!-- Bank cards will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Selection View -->
+        <section id="category-selection" class="view">
+            <header class="app-header">
+                <button class="back-btn" onclick="showView('bank-selection')">←</button>
+                <h2 id="selected-bank-title">Konu Seçimi</h2>
+                <p>Çalışmak istediğiniz konuyu seçin</p>
+            </header>
+            <div class="scroll-content">
+                <div class="category-list" id="category-list">
+                    <!-- Categories will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Setup View -->
+        <section id="quiz-setup" class="view">
+            <header class="app-header">
+                <button class="back-btn" onclick="showView('category-selection')">←</button>
+                <h2 id="selected-category-title">Hazır mısınız?</h2>
+                <p>Alıştırma ayarlarını kontrol edin</p>
+            </header>
+            <div class="setup-content">
+                <div class="glass-card setup-card">
+                    <div class="setup-item">
+                        <label>Soru Sayısı</label>
+                        <select id="question-count">
+                            <option value="5">5 Soru</option>
+                            <option value="10" selected>10 Soru</option>
+                            <option value="20">20 Soru</option>
+                            <option value="30">30 Soru</option>
+                        </select>
+                    </div>
+                    <div class="setup-item">
+                        <label>Zamanlayıcı</label>
+                        <div class="toggle-group">
+                            <span>Sınırsız</span>
+                            <label class="switch">
+                                <input type="checkbox" id="timer-toggle">
+                                <span class="slider"></span>
+                            </label>
+                            <span>Süreli (30s)</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="primary-btn start-quiz-btn" onclick="startQuiz()">Alıştırmaya Başla</button>
+            </div>
+        </section>
+
+        <!-- Quiz View -->
+        <section id="quiz" class="view">
+            <div class="quiz-overlay"></div>
+            <header class="quiz-header">
+                <div class="progress-container">
+                    <div class="progress-bar" id="quiz-progress" style="width: 0%"></div>
+                    <span class="quiz-meta" id="quiz-counter">1 / 10</span>
+                </div>
+                <div class="quiz-timer" id="quiz-timer-display">30</div>
+            </header>
+            <div class="quiz-content">
+                <div class="question-container" id="question-text">
+                    Yükleniyor...
+                </div>
+                <div class="options-grid" id="options-container">
+                    <!-- Options buttons will be here -->
+                </div>
+            </div>
+            <footer class="quiz-footer">
+                <button class="btn-quit" onclick="quitQuiz()">✕</button>
+                <div id="feedback-msg" class="feedback-msg"></div>
+                <button class="btn-next" id="next-btn" disabled onclick="nextQuestion()">Sonraki →</button>
+            </footer>
+        </section>
+
+        <!-- Result View -->
+        <section id="result" class="view">
+            <div class="result-content">
+                <div class="score-circle">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" id="result-score-circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <div class="score-text">
+                        <span id="result-score">0</span>
+                        <small>Puan</small>
+                    </div>
+                </div>
+                <h2 id="result-status">Harika!</h2>
+                <div class="stats-summary">
+                    <div class="stat">
+                        <span id="stat-correct">0</span>
+                        <label>Doğru</label>
+                    </div>
+                    <div class="stat">
+                        <span id="stat-wrong">0</span>
+                        <label>Yanlış</label>
+                    </div>
+                    <div class="stat">
+                        <span id="stat-time">0m</span>
+                        <label>Süre</label>
+                    </div>
+                </div>
+                <div class="result-actions">
+                    <button class="primary-btn" onclick="showView('bank-selection')">Tekrar Dene</button>
+                    <button class="secondary-btn" onclick="shareResult()">Sonucu Paylaş</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="bg-blur-1"></div>
+    <div class="bg-blur-2"></div>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
