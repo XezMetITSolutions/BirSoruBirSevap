@@ -20,4 +20,6 @@ const BASE_URL = PRODUCTION_URL;
 export const API_ENDPOINTS = {
   MOBILE_INFO: `${BASE_URL}api_mobile.php`,
   QUESTIONS: `${BASE_URL}api_questions.php`,
+  LOGIN: `${BASE_URL}api_login.php`,
+  SAVE_PROGRESS: `${BASE_URL}api_save_progress.php`,
 };

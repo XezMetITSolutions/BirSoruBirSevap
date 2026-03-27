@@ -111,7 +111,14 @@ export const QuizScreen = ({ route, navigation }: any) => {
       startQuestion();
     } else {
       const duration = Math.round((Date.now() - startTime) / 1000);
-      navigation.navigate('Result', { score, total: questions.length, results, duration });
+      navigation.navigate('Result', { 
+        score, 
+        total: questions.length, 
+        results, 
+        duration,
+        bank: bankId,
+        category: category
+      });
     }
   };
 

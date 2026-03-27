@@ -9,7 +9,9 @@ import { CategorySelectionScreen } from './src/screens/CategorySelectionScreen';
 import { QuizSetupScreen } from './src/screens/QuizSetupScreen';
 import { QuizScreen } from './src/screens/QuizScreen';
 import { ResultScreen } from './src/screens/ResultScreen';
+import { LoginScreen } from './src/screens/LoginScreen';
 import { theme } from './src/theme';
+import { authStorage } from './src/api/auth';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +30,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator 
+        initialRouteName="Login"
         screenOptions={{
           headerShown: false,
           cardStyle: { backgroundColor: theme.colors.background },
@@ -35,6 +38,7 @@ export default function App() {
           gestureEnabled: true,
         }}
       >
+        <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="BankSelection" component={BankSelectionScreen} />
         <Stack.Screen name="CategorySelection" component={CategorySelectionScreen} />

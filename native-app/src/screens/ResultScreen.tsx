@@ -1,10 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Share, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
+import { authStorage } from '../api/auth';
+import { API_ENDPOINTS } from '../api/config';
 
-export const ResultScreen = ({ route, navigation }) => {
-  const { score, total, results, duration } = route.params;
+export const ResultScreen = ({ route, navigation }: any) => {
+  const { score, total, results, duration, bank, category } = route.params;
+
+  useEffect(() => {
+    saveProgress();
+  }, []);
+
+  const saveProgress = async () => {
+    const user = await authStorage.getUser();
+    if (!user) return; // User is guest, don't save to server
+
+    try {
+      await fetch(API_ENDPOINTS.SAVE_PROGRESS, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: user.username,
+          studentName: user.full_name,
+          totalCount: total,
+          correctCount: results.filter(r => r.isCorrect).length,
+          timeTaken: duration,
+          bank: bank || 'Genel',
+          category: category || 'Genel'
+        }),
+      });
+      console.log('Progress saved to server successfully');
+    } catch (e) {
+      console.error('Failed to save progress to server', e);
+    }
+  };
 
   const onShare = async () => {
     try {
@@ -49,10 +79,16 @@ export const ResultScreen = ({ route, navigation }) => {
         </View>
 
         <View style={styles.actions}>
-          <TouchableOpacity style={styles.primaryBtn} onPress={() => navigation.navigate('Home')}>
+          <TouchableOpacity 
+            style={styles.primaryBtn} 
+            onPress={() => navigation.navigate('Home')}
+          >
             <Text style={styles.primaryBtnText}>Tekrar Dene</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.secondaryBtn} onPress={onShare}>
+          <TouchableOpacity 
+            style={styles.secondaryBtn} 
+            onPress={onShare}
+          >
             <Text style={styles.secondaryBtnText}>Sonucu Paylaş</Text>
           </TouchableOpacity>
         </View>
