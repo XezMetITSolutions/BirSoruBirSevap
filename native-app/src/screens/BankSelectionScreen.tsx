@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, SafeAreaView, ActivityIndicator } from 'react-native';
 import { theme } from '../theme';
+import { API_ENDPOINTS } from '../api/config';
 
-// Değiştirilmesi gereken API URL'i
-const API_URL = 'http://localhost:8000/api_mobile.php'; // Yerel ağ testlerinde IP adresi kullanılmalıdır
-
-export const BankSelectionScreen = ({ navigation }) => {
+export const BankSelectionScreen = ({ navigation }: any) => {
   const [banks, setBanks] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -15,7 +13,7 @@ export const BankSelectionScreen = ({ navigation }) => {
 
   const fetchBanks = async () => {
     try {
-      const response = await fetch(API_URL);
+      const response = await fetch(API_ENDPOINTS.MOBILE_INFO);
       const data = await response.json();
       setBanks(data.banks);
       setLoading(false);

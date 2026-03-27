@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, SafeAreaView, ActivityIndicator } from 'react-native';
 import { theme } from '../theme';
+import { API_ENDPOINTS } from '../api/config';
 
-const API_URL = 'http://localhost:8000/api_mobile.php';
-
-export const CategorySelectionScreen = ({ route, navigation }) => {
+export const CategorySelectionScreen = ({ route, navigation }: any) => {
   const { bankId, bankTitle } = route.params;
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);

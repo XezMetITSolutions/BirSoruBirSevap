@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, ActivityIndicator, Alert, Animated, Dimensions } from 'react-native';
 import { theme } from '../theme';
+import { API_ENDPOINTS } from '../api/config';
 
-const { width } = Dimensions.get('window');
-const API_URL = 'http://localhost:8000/api_questions.php';
-
-export const QuizScreen = ({ route, navigation }) => {
+export const QuizScreen = ({ route, navigation }: any) => {
   const { bankId, category, count, timer: hasTimer } = route.params;
   
   const [questions, setQuestions] = useState([]);
@@ -28,7 +26,7 @@ export const QuizScreen = ({ route, navigation }) => {
 
   const fetchQuestions = async () => {
     try {
-      const response = await fetch(`${API_URL}?bank=${encodeURIComponent(bankId)}&category=${encodeURIComponent(category)}&count=${count}`);
+      const response = await fetch(`${API_ENDPOINTS.QUESTIONS}?bank=${encodeURIComponent(bankId)}&category=${encodeURIComponent(category)}&count=${count}`);
       const data = await response.json();
       
       // Shuffle and prepare questions

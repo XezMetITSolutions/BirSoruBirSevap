@@ -14,7 +14,7 @@ export const HomeScreen = ({ navigation }) => {
       <View style={styles.content}>
         <View style={styles.logoWrapper}>
           <Image 
-            source={require('../../assets/icon.png')} // Usando o icone padrão do expo inicialmente
+            source={require('../../assets/logo.png')}
             style={styles.logo}
           />
         </View>
