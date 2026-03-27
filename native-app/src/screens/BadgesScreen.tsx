@@ -4,18 +4,18 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import { API_ENDPOINTS } from '../api/config';
 import { authStorage } from '../api/auth';
-import { LucideIcon, Trophy, Award, Star, Zap, Target, BookOpen, Clock } from 'lucide-react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 const getBadgeIcon = (iconName: string) => {
   switch (iconName) {
-    case 'trophy': return Trophy;
-    case 'award': return Award;
-    case 'star': return Star;
-    case 'zap': return Zap;
-    case 'target': return Target;
-    case 'book': return BookOpen;
-    case 'clock': return Clock;
-    default: return Trophy;
+    case 'trophy': return 'trophy-outline';
+    case 'award': return 'ribbon-outline';
+    case 'star': return 'star-outline';
+    case 'zap': return 'flash-outline';
+    case 'target': return 'md-target';
+    case 'book': return 'book-outline';
+    case 'clock': return 'time-outline';
+    default: return 'trophy-outline';
   }
 };
 
@@ -50,15 +50,27 @@ export const BadgesScreen = ({ navigation }: any) => {
   };
 
   const renderBadge = ({ item }: any) => {
-    const IconComponent = getBadgeIcon(item.icon);
     const levels = ['Bronz', 'Gümüş', 'Altın', 'Platin'];
     const currentLevelName = levels[item.level - 1] || levels[0];
 
+    // Define badgeColors and isLocked based on existing logic or reasonable defaults
+    const badgeColors: { [key: string]: string } = {
+      Bronz: '#CD7F32',
+      Gümüş: '#C0C0C0',
+      Altın: '#FFD700',
+      Platin: '#E5E4E2',
+    };
+    const isLocked = item.level === 0; // Assuming level 0 means locked
+
     return (
       <View style={styles.badgeCard}>
-        <View style={[styles.iconContainer, { backgroundColor: item.level === 3 ? '#FFD70020' : '#FFFFFF10' }]}>
-          <IconComponent size={32} color={item.level === 3 ? '#FFD700' : theme.colors.primary} />
-        </View>
+                  <View style={[styles.badgeIconContainer, { backgroundColor: isLocked ? theme.colors.border : (badgeColors[currentLevelName] || badgeColors.Bronz) + '20' }]}>
+                    <Ionicons 
+                      name={getBadgeIcon(item.icon) as any} 
+                      size={32} 
+                      color={isLocked ? theme.colors.textMuted : (badgeColors[currentLevelName] || badgeColors.Bronz)} 
+                    />
+                  </View>
         <View style={styles.badgeInfo}>
           <Text style={styles.badgeName}>{item.name}</Text>
           <Text style={styles.badgeLevel}>{currentLevelName} Seviye</Text>

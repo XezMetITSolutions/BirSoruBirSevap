@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Animated, Dimensi
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import { authStorage } from '../api/auth';
-import { Trophy, BookOpen, Star, LogOut, ChevronRight, LayoutGrid, ClipboardList } from 'lucide-react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 const { width } = Dimensions.get('window');
 
@@ -46,7 +46,7 @@ export const DashboardScreen = ({ navigation }: any) => {
             <Text style={styles.userName}>{user?.full_name || 'Öğrenci'}</Text>
           </View>
           <TouchableOpacity style={styles.logoutBtn} onPress={handleLogout}>
-            <LogOut color={theme.colors.error} size={20} />
+            <Ionicons name="log-out-outline" color={theme.colors.error} size={22} />
           </TouchableOpacity>
         </View>
 
@@ -65,13 +65,13 @@ export const DashboardScreen = ({ navigation }: any) => {
             onPress={() => navigation.navigate('Home')}
           >
             <View style={[styles.actionIcon, { backgroundColor: theme.colors.primary + '20' }]}>
-              <LayoutGrid color={theme.colors.primary} size={28} />
+              <Ionicons name="grid-outline" color={theme.colors.primary} size={28} />
             </View>
             <View style={styles.actionInfo}>
               <Text style={styles.actionTitle}>Alıştırma Yap</Text>
               <Text style={styles.actionDesc}>Banka ve kategorilere göre soru çöz.</Text>
             </View>
-            <ChevronRight color={theme.colors.textMuted} size={20} />
+            <Ionicons name="chevron-forward" color={theme.colors.textMuted} size={20} />
           </TouchableOpacity>
 
           <TouchableOpacity 
@@ -79,13 +79,13 @@ export const DashboardScreen = ({ navigation }: any) => {
             onPress={() => alert('Yakup hocam, sınav sistemi yakında aktif olacak!')}
           >
             <View style={[styles.actionIcon, { backgroundColor: theme.colors.secondary + '20' }]}>
-              <ClipboardList color={theme.colors.secondary} size={28} />
+              <Ionicons name="list-outline" color={theme.colors.secondary} size={28} />
             </View>
             <View style={styles.actionInfo}>
               <Text style={styles.actionTitle}>Sınava Gir</Text>
               <Text style={styles.actionDesc}>Öğretmenin atadığı sınavlara katıl.</Text>
             </View>
-            <ChevronRight color={theme.colors.textMuted} size={20} />
+            <Ionicons name="chevron-forward" color={theme.colors.textMuted} size={20} />
           </TouchableOpacity>
 
           <TouchableOpacity 
@@ -93,13 +93,13 @@ export const DashboardScreen = ({ navigation }: any) => {
             onPress={() => navigation.navigate('Badges')}
           >
             <View style={[styles.actionIcon, { backgroundColor: '#FFD70020' }]}>
-              <Trophy color="#FFD700" size={28} />
+              <Ionicons name="trophy-outline" color="#FFD700" size={28} />
             </View>
             <View style={styles.actionInfo}>
               <Text style={styles.actionTitle}>Rozetlerim</Text>
               <Text style={styles.actionDesc}>Kazandığın tüm başarıları incele.</Text>
             </View>
-            <ChevronRight color={theme.colors.textMuted} size={20} />
+            <Ionicons name="chevron-forward" color={theme.colors.textMuted} size={20} />
           </TouchableOpacity>
 
         </Animated.View>
