@@ -240,4 +240,8 @@ const styles = StyleSheet.create({
   nextBtn: { flex: 1, height: 64, borderRadius: 20, backgroundColor: theme.colors.primary, alignItems: 'center', justifyContent: 'center' },
   disabledNext: { opacity: 0.3 },
   nextText: { color: 'white', fontSize: 18, fontWeight: '700', fontFamily: 'Outfit_700Bold' },
+  centered: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 },
+  msg: { color: theme.colors.text, marginBottom: 20, textAlign: 'center', fontSize: 16, fontFamily: 'Outfit_400Regular' },
+  loginBtn: { backgroundColor: theme.colors.primary, paddingHorizontal: 30, paddingVertical: 15, borderRadius: 15 },
+  loginText: { color: 'white', fontWeight: 'bold', fontFamily: 'Outfit_700Bold' },
 });

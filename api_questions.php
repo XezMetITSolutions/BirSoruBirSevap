@@ -26,11 +26,21 @@ $selected = array_slice($questions, 0, (int)$count);
 
 // Mobile formatına normalize et (main.js'deki formata uyum sağla)
 $mobileQuestions = array_map(function($q) {
+    $rawAnswer = $q['answer'][0] ?? 'A';
+    $correctIndex = 0;
+    
+    if (is_numeric($rawAnswer)) {
+        $correctIndex = (int)$rawAnswer;
+    } else {
+        $map = ['A' => 0, 'B' => 1, 'C' => 2, 'D' => 3, 'E' => 4];
+        $correctIndex = $map[strtoupper($rawAnswer)] ?? 0;
+    }
+
     return [
         'id' => $q['id'],
         'text' => $q['question'],
         'options' => $q['options'],
-        'correct' => $q['answer'][0] ?? 0 // Genelde ilk cevap (A) bekleniyor (A=0)
+        'correct' => $correctIndex
     ];
 }, $selected);
 
