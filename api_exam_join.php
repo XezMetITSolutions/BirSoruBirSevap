@@ -63,13 +63,17 @@ $action = $input['action'] ?? 'join';
 if ($action === 'submit') {
     $score = $input['score'] ?? 0;
     $results = $input['results'] ?? [];
+    $totalQuestions = count($results);
+    $duration = $input['duration'] ?? 0;
     
     // Sınav sonucunu kaydet
-    $stmt = $conn->prepare("INSERT INTO exam_results (exam_id, username, score, completion_time, results) VALUES (?, ?, ?, NOW(), ?)");
+    $stmt = $conn->prepare("INSERT INTO exam_results (exam_id, username, score, total_questions, duration, detailed_results) VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->execute([
         $examCode,
         $username,
         $score,
+        $totalQuestions,
+        $duration,
         json_encode($results)
     ]);
     

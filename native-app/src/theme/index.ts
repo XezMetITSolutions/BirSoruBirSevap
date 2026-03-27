@@ -10,6 +10,7 @@ export const theme = {
     textMuted: '#94a3b8',
     success: '#10b981',
     error: '#ef4444',
+    info: '#3b82f6',
     border: 'rgba(255, 255, 255, 0.15)',
   },
   spacing: {

@@ -119,6 +119,20 @@ export const DashboardScreen = ({ navigation }: any) => {
             <Ionicons name="chevron-forward" color={theme.colors.textMuted} size={20} />
           </TouchableOpacity>
 
+          <TouchableOpacity 
+            style={styles.actionCard}
+            onPress={() => navigation.navigate('Results')}
+          >
+            <View style={[styles.actionIcon, { backgroundColor: theme.colors.info + '20' }]}>
+              <Ionicons name="clipboard-outline" color={theme.colors.info} size={28} />
+            </View>
+            <View style={styles.actionInfo}>
+              <Text style={styles.actionTitle}>Sonuçlarım</Text>
+              <Text style={styles.actionDesc}>Geçmiş sınav ve alıştırma sonuçların.</Text>
+            </View>
+            <Ionicons name="chevron-forward" color={theme.colors.textMuted} size={20} />
+          </TouchableOpacity>
+
         </Animated.View>
       </ScrollView>
     </SafeAreaView>

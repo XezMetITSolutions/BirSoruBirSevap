@@ -31,7 +31,7 @@ export default function ExamsScreen({ navigation }: any) {
       if (!userDataStr) return;
       const userData = JSON.parse(userDataStr);
       
-      const response = await fetch(`${API_ENDPOINTS.BASE_URL}/api_student_exams.php?username=${userData.username}`);
+      const response = await fetch(`${BASE_URL}api_student_exams.php?username=${userData.username}`);
       const data = await response.json();
       
       if (data.success) {
@@ -51,7 +51,7 @@ export default function ExamsScreen({ navigation }: any) {
       const userDataStr = await AsyncStorage.getItem('user_data');
       const userData = JSON.parse(userDataStr || '{}');
       
-      const response = await fetch(`${API_ENDPOINTS.BASE_URL}/api_exam_join.php`, {
+      const response = await fetch(`${BASE_URL}api_exam_join.php`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

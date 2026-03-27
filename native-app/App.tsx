@@ -12,6 +12,7 @@ import { ResultScreen } from './src/screens/ResultScreen';
 import { LoginScreen } from './src/screens/LoginScreen';
 import { DashboardScreen } from './src/screens/DashboardScreen';
 import { BadgesScreen } from './src/screens/BadgesScreen';
+import { ResultsScreen } from './src/screens/ResultsScreen';
 import ExamsScreen from './src/screens/ExamsScreen';
 import { theme } from './src/theme';
 import { authStorage } from './src/api/auth';
@@ -51,6 +52,7 @@ export default function App() {
         <Stack.Screen name="Result" component={ResultScreen} />
         <Stack.Screen name="Badges" component={BadgesScreen} />
         <Stack.Screen name="Exams" component={ExamsScreen} />
+        <Stack.Screen name="Results" component={ResultsScreen} />
       </Stack.Navigator>
       <StatusBar style="light" />
     </NavigationContainer>
