@@ -14,7 +14,7 @@ require_once 'database.php';
 $db = Database::getInstance();
 $conn = $db->getConnection();
 
-$input = json_decode(file_get_contents('php_input'), true);
+$input = json_decode(file_get_contents('php://input'), true);
 
 $username = $input['username'] ?? '';
 $bank = $input['bank'] ?? 'Genel';

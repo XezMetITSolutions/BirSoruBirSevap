@@ -12,7 +12,7 @@ require_once 'config.php';
 require_once 'database.php';
 require_once 'auth.php';
 
-$input = json_decode(file_get_contents('php_input'), true);
+$input = json_decode(file_get_contents('php://input'), true);
 $username = $input['username'] ?? '';
 $password = $input['password'] ?? '';
 
