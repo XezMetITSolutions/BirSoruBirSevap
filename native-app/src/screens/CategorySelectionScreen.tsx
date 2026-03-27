@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, SafeAreaView, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import { API_ENDPOINTS } from '../api/config';
 
@@ -14,7 +15,7 @@ export const CategorySelectionScreen = ({ route, navigation }: any) => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch(API_URL);
+      const response = await fetch(API_ENDPOINTS.MOBILE_INFO);
       const data = await response.json();
       setCategories(data.categories[bankId] || []);
       setLoading(false);

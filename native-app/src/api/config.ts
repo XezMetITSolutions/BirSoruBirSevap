@@ -1,22 +1,21 @@
 // Global API Configuration for the Mobile App
 
 /**
- * PRODUCTION (All-Inkl veya Canlı Sunucu)
- * Eğer uygulamanız All-Inkl üzerindeyse BASE_URL kısmına alan adınızı yazın.
- * Örn: 'https://www.birsorubirsevap.com/'
+ * PRODUCTION (Live Server)
+ * Bir Soru Bir Sevap Canlı Sunucu Adresi
  */
-const PRODUCTION_URL = 'https://your-domain.com/'; // <-- Burayı kendi alan adınızla değiştirin
+const PRODUCTION_URL = 'https://birsorubirsevap.at/'; 
 
 /**
  * DEVELOPMENT (Yerel Bilgisayar)
- * Bilgisayarınızın IP adresini yazın (Örn: 192.168.1.50)
+ * Bilgisayarınızın IP adresini buraya yazabilirsiniz (Örn: 192.168.1.50)
  */
 const DEV_IP = 'localhost'; 
 const DEVELOPMENT_URL = `http://${DEV_IP}/`;
 
 
-// Aktif olan URL'i seçin (Production'a geçerken PRODUCTION_URL kullanın)
-const BASE_URL = DEVELOPMENT_URL; 
+// Aktif olan URL (Şu an CANLI sunucu seçili)
+const BASE_URL = PRODUCTION_URL; 
 
 export const API_ENDPOINTS = {
   MOBILE_INFO: `${BASE_URL}api_mobile.php`,

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, Switch } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Switch } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 
 export const QuizSetupScreen = ({ route, navigation }) => {

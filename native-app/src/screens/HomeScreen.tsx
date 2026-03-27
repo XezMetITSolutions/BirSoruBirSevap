@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, Dimensions } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 
 const { width } = Dimensions.get('window');
