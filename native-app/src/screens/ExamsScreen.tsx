@@ -12,7 +12,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../theme';
-import { API_ENDPOINTS } from '../config';
+import { API_ENDPOINTS, BASE_URL } from '../api/config';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function ExamsScreen({ navigation }: any) {

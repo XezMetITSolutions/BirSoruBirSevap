@@ -15,7 +15,7 @@ const DEVELOPMENT_URL = `http://${DEV_IP}/`;
 
 
 // Aktif olan URL (Şu an CANLI sunucu seçili)
-const BASE_URL = PRODUCTION_URL; 
+export const BASE_URL = PRODUCTION_URL; 
 
 export const API_ENDPOINTS = {
   MOBILE_INFO: `${BASE_URL}api_mobile.php`,
@@ -23,4 +23,6 @@ export const API_ENDPOINTS = {
   LOGIN: `${BASE_URL}api_login.php`,
   SAVE_PROGRESS: `${BASE_URL}api_save_progress.php`,
   BADGES: `${BASE_URL}api_badges.php`,
+  STUDENT_EXAMS: `${BASE_URL}api_student_exams.php`,
+  EXAM_JOIN: `${BASE_URL}api_exam_join.php`,
 };
