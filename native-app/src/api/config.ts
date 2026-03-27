@@ -23,6 +23,7 @@ export const API_ENDPOINTS = {
   LOGIN: `${BASE_URL}api_login.php`,
   SAVE_PROGRESS: `${BASE_URL}api_save_progress.php`,
   BADGES: `${BASE_URL}api_badges.php`,
+  STUDENT_STATS: `${BASE_URL}api_student_stats.php`,
   STUDENT_EXAMS: `${BASE_URL}api_student_exams.php`,
   EXAM_JOIN: `${BASE_URL}api_exam_join.php`,
 };

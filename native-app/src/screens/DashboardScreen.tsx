@@ -3,16 +3,18 @@ import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Animated, Dimensi
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { theme } from '../theme';
 import { authStorage } from '../api/auth';
+import { API_ENDPOINTS } from '../api/config';
 import { Ionicons } from '@expo/vector-icons';
 
 const { width } = Dimensions.get('window');
 
 export const DashboardScreen = ({ navigation }: any) => {
   const [user, setUser] = useState<any>(null);
+  const [stats, setStats] = useState({ score: 0, badges: 0, practiceCount: 0 });
   const fadeAnim = useState(new Animated.Value(0))[0];
 
   useEffect(() => {
-    loadUser();
+    loadData();
     Animated.timing(fadeAnim, {
       toValue: 1,
       duration: 800,
@@ -20,9 +22,24 @@ export const DashboardScreen = ({ navigation }: any) => {
     }).start();
   }, []);
 
-  const loadUser = async () => {
-    const data = await authStorage.getUser();
-    setUser(data);
+  const loadData = async () => {
+    const userData = await authStorage.getUser();
+    setUser(userData);
+    if (userData?.username) {
+      fetchStats(userData.username);
+    }
+  };
+
+  const fetchStats = async (username: string) => {
+    try {
+      const response = await fetch(`${API_ENDPOINTS.STUDENT_STATS}?username=${username}`);
+      const data = await response.json();
+      if (data.success) {
+        setStats(data.stats);
+      }
+    } catch (error) {
+      console.error('Fetch stats error:', error);
+    }
   };
 
   const handleLogout = async () => {
@@ -53,8 +70,8 @@ export const DashboardScreen = ({ navigation }: any) => {
         <Animated.View style={{ opacity: fadeAnim }}>
           {/* Quick Stats */}
           <View style={styles.statsRow}>
-            <StatBox title="Puan" value="2,450" color={theme.colors.primary} />
-            <StatBox title="Rozet" value="12" color={theme.colors.secondary} />
+            <StatBox title="Puan" value={stats.score.toLocaleString()} color={theme.colors.primary} />
+            <StatBox title="Rozet" value={stats.badges} color={theme.colors.secondary} />
           </View>
 
           {/* Main Actions */}
