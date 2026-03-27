@@ -76,7 +76,7 @@ export const DashboardScreen = ({ navigation }: any) => {
 
           <TouchableOpacity 
             style={styles.actionCard}
-            onPress={() => alert('Yakup hocam, sınav sistemi yakında aktif olacak!')}
+            onPress={() => navigation.navigate('Exams')}
           >
             <View style={[styles.actionIcon, { backgroundColor: theme.colors.secondary + '20' }]}>
               <Ionicons name="list-outline" color={theme.colors.secondary} size={28} />
