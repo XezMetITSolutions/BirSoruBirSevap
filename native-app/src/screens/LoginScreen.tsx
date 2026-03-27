@@ -30,7 +30,7 @@ export const LoginScreen = ({ navigation }: any) => {
 
       if (data.success) {
         await authStorage.saveUser(data.user);
-        navigation.replace('Home');
+        navigation.replace('Dashboard');
       } else {
         Alert.alert('Giriş Başarısız', data.message || 'Hatalı kullanıcı adı veya şifre.');
       }

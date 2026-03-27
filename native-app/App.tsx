@@ -10,6 +10,7 @@ import { QuizSetupScreen } from './src/screens/QuizSetupScreen';
 import { QuizScreen } from './src/screens/QuizScreen';
 import { ResultScreen } from './src/screens/ResultScreen';
 import { LoginScreen } from './src/screens/LoginScreen';
+import { DashboardScreen } from './src/screens/DashboardScreen';
 import { BadgesScreen } from './src/screens/BadgesScreen';
 import { theme } from './src/theme';
 import { authStorage } from './src/api/auth';
@@ -40,12 +41,14 @@ export default function App() {
         }}
       >
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Dashboard" component={DashboardScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="BankSelection" component={BankSelectionScreen} />
         <Stack.Screen name="CategorySelection" component={CategorySelectionScreen} />
         <Stack.Screen name="QuizSetup" component={QuizSetupScreen} />
         <Stack.Screen name="Quiz" component={QuizScreen} />
         <Stack.Screen name="Result" component={ResultScreen} />
+        <Stack.Screen name="Badges" component={BadgesScreen} />
       </Stack.Navigator>
       <StatusBar style="light" />
     </NavigationContainer>
