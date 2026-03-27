@@ -11,13 +11,20 @@ try {
         earned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         INDEX(username)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
-    echo "user_badges tablosu hazır.<br>";
+    echo "user_badges tablosu kontrol edildi.<br>";
     
     // level sütunu var mı kontrol et
     $result = $conn->query("SHOW COLUMNS FROM user_badges LIKE 'level'");
     if ($result->rowCount() == 0) {
-        $conn->exec("ALTER TABLE user_badges ADD COLUMN level INT DEFAULT 1 AFTER badge_name");
+        $conn->exec("ALTER TABLE user_badges ADD COLUMN level INT DEFAULT 1");
         echo "level sütunu eklendi.<br>";
+    }
+    
+    // badge_name sütunu var mı kontrol et (eskiden kalma tablolarda eksik olabilir)
+    $result = $conn->query("SHOW COLUMNS FROM user_badges LIKE 'badge_name'");
+    if ($result->rowCount() == 0) {
+        $conn->exec("ALTER TABLE user_badges ADD COLUMN badge_name VARCHAR(100) NOT NULL AFTER username");
+        echo "badge_name sütunu eklendi.<br>";
     }
 } catch (Exception $e) {
     echo "Tablo güncelleme hatası: " . $e->getMessage() . "<br>";
