@@ -96,11 +96,17 @@ export const QuizScreen = ({ route, navigation }: any) => {
       setScore(prev => prev + 10);
     }
     
+    const selectedOptionData = optionIndex === -1 ? null : question.shuffledOptions[optionIndex];
+    if (optionIndex !== -1 && !selectedOptionData) {
+      console.warn('Selected option data is missing');
+      return;
+    }
+
     const newResults = [...results, { 
       question: question.text, 
       isCorrect, 
-      userAnswer: optionIndex === -1 ? 'Süre Doldu' : question.shuffledOptions[optionIndex].text,
-      correctAnswer: question.shuffledOptions[question.newCorrectIndex].text
+      userAnswer: optionIndex === -1 ? 'Süre Doldu' : (selectedOptionData?.text || 'Bilinmiyor'),
+      correctAnswer: question.shuffledOptions[question.newCorrectIndex]?.text || 'Bilinmiyor'
     }];
     setResults(newResults);
   };
@@ -124,7 +130,21 @@ export const QuizScreen = ({ route, navigation }: any) => {
 
   if (loading) return <View style={styles.loading}><ActivityIndicator size="large" color={theme.colors.primary} /></View>;
 
+  if (!questions || questions.length === 0) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.centered}>
+          <Text style={styles.msg}>Bu kategoride henüz soru bulunmuyor.</Text>
+          <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.goBack()}>
+            <Text style={styles.loginText}>Geri Dön</Text>
+          </TouchableOpacity>
+        </View>
+      </SafeAreaView>
+    );
+  }
+
   const currentQuestion = questions[currentIndex];
+  if (!currentQuestion) return null; // Safety guard
 
   return (
     <SafeAreaView style={styles.container}>
@@ -145,7 +165,7 @@ export const QuizScreen = ({ route, navigation }: any) => {
 
       <View style={styles.content}>
         <View style={styles.questionCard}>
-          <Text style={styles.questionText}>{currentQuestion.text}</Text>
+          <Text style={styles.questionText}>{currentQuestion.text || 'Soru yüklenemedi'}</Text>
         </View>
 
         <View style={styles.optionsGrid}>
