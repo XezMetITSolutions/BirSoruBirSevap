@@ -1125,8 +1125,8 @@ $totalCategories = array_sum(array_map('count', $categories));
     <section class="hero">
         <div class="hero-container">
         <div class="hero-content">
-                <h1 id="heroTitle">Temel Bilgilerle Öğren, Güvenle İlerle</h1>
-                <p id="heroSubtitle">4 seviyeli kapsamlı soru bankası: Temel Bilgiler 1, 2, 3 ve İslami İlimler. İtikad, İbadet, Siyer, Tefsir, Hadis, Fıkıh ve daha fazlası. Eğitim uzmanları tarafından hazırlanmış kaliteli sorular.</p>
+                <h1 id="heroTitle">Geleceğin İlim Yolcuları Burada Yetişiyor</h1>
+                <p id="heroSubtitle">Modern, etkileşimli ve müfredat odaklı eğitim platformumuzla İslami ilimleri keşfedin. Öğrenciler için keyifli bir öğrenme deneyimi, eğitmenler için profesyonel yönetim araçları bir arada.</p>
                 <div class="hero-actions">
                     <a href="login.php" class="btn btn-primary" id="heroCtaBtn">
                         <i class="fas fa-rocket"></i>
@@ -1210,6 +1210,62 @@ $totalCategories = array_sum(array_map('count', $categories));
                     </div>
                 </div>
                 <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us" id="about" style="padding: 6rem 0; background: var(--white); position: relative;">
+        <div class="features-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Hakkımızda</h2>
+                <p class="section-subtitle">Geleneksel eğitimi modern teknolojiyle buluşturuyoruz.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 2rem;">
+                <div class="fade-in">
+                    <div style="background: var(--white); padding: 2.5rem; border-radius: 2rem; box-shadow: var(--shadow-xl); border: 1px solid var(--gray-light);">
+                        <h3 style="color: var(--primary); font-size: 1.75rem; font-weight: 800; margin-bottom: 1.5rem;">Biz Kimiz?</h3>
+                        <p style="color: var(--gray); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                            <strong>Bir Soru Bir Sevap</strong>, geleneksel İslami eğitimi dijital dünyanın hızı ve etkileşimiyle birleştiren yeni nesil bir öğrenme ekosistemidir. Temel Bilgiler 1-2-3 ve İslami İlimler müfredatına uygun olarak hazırlanan binlerce kaliteli sorumuzla, her yaştan öğrenciye hitap ediyoruz.
+                        </p>
+                        <p style="color: var(--gray); font-size: 1.1rem; line-height: 1.8;">
+                            Dini bilgileri modern pedagojik metotlarla harmanlayarak; anlaşılır, erişilebilir ve kalıcı bir öğrenme platformu sunmak için çalışıyoruz.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                            <div style="background: var(--primary-light); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 4px;">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-weight: 700; color: var(--dark); margin-bottom: 0.25rem;">Müfredat Uyumu</h4>
+                                <p style="color: var(--gray);">IGMG ve Eğitim Başkanlığı müfredatına %100 tam uyum.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                            <div style="background: var(--primary-light); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 4px;">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-weight: 700; color: var(--dark); margin-bottom: 0.25rem;">Etkileşimli Öğrenme</h4>
+                                <p style="color: var(--gray);">Anlık geri bildirimler ve detaylı soru açıklamalarıyla kalıcı öğrenme.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                            <div style="background: var(--primary-light); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 4px;">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-weight: 700; color: var(--dark); margin-bottom: 0.25rem;">Gelişmiş Takip</h4>
+                                <p style="color: var(--gray);">Eğitmenler için saniyeler içinde sınav oluşturma ve öğrenci gelişimi analitiği.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1315,8 +1371,8 @@ $totalCategories = array_sum(array_map('count', $categories));
         (function(){
             const tr = {
                 heroStartBtn: 'Başla',
-                heroTitle: 'Temel Bilgilerle Öğren, Güvenle İlerle',
-                heroSubtitle: '4 seviyeli kapsamlı soru bankası: Temel Bilgiler 1, 2, 3 ve İslami İlimler. İtikat, İbadet, Siyer, Ahlak, Tefsir, Hadis ve daha fazlası. Eğitim Başkanlığı tarafından hazırlanmış kaliteli sorular.',
+                heroTitle: 'Geleceğin İlim Yolcuları Burada Yetişiyor',
+                heroSubtitle: 'Modern, etkileşimli ve müfredat odaklı eğitim platformumuzla İslami ilimleri keşfedin. Öğrenciler için keyifli bir öğrenme deneyimi, eğitmenler için profesyonel yönetim araçları bir arada.',
                 badgesTitle: 'Rozetler Sistemi',
                 badgesSubtitle: 'Başarılarınızı rozetlerle taçlandırın. Şartları tamamlayın, seviyeleri yükseltin.',
                 featuresTitle: 'Temel Bilgiler Müfredatıyla Desteklenen Akıllı Öğrenme',
@@ -1344,8 +1400,8 @@ $totalCategories = array_sum(array_map('count', $categories));
             };
             const de = {
                 heroStartBtn: 'Start',
-                heroTitle: 'Lernen mit Grundkenntnissen, sicher voranschreiten',
-                heroSubtitle: 'Umfassende Fragenbank in 4 Stufen: Grundkenntnisse 1, 2, 3 und Islamische Wissenschaften. Glaube, Gebet, Sīra, Moral, Exegese, Hadith und mehr. Vom Bildungspräsidium vorbereitete hochwertige Fragen.',
+                heroTitle: 'Hier wachsen die Reisenden des Wissens von morgen',
+                heroSubtitle: 'Entdecken Sie islamische Wissenschaften mit unserer modernen, interaktiven und lehrplanorientierten Bildungsplattform. Eine angenehme Lernerfahrung für Schüler und professionelle Management-Tools für Lehrkräfte in einem.',
                 badgesTitle: 'Abzeichensystem',
                 badgesSubtitle: 'Krönen Sie Ihre Erfolge mit Abzeichen. Erfüllen Sie die Bedingungen, steigen Sie im Level auf.',
                 featuresTitle: 'Gestärkt durch den Lehrplan der Grundkenntnisse',
