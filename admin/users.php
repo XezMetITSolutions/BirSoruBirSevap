@@ -159,15 +159,15 @@ $displayUsers = array_slice($users, $offset, $perPage);
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="css/admin-style.css">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Inter', sans-serif;
-            background: #0f172a;
-            color: #e2e8f0;
+            background: var(--bg-body);
+            color: var(--text-primary);
             min-height: 100vh;
         }
 
@@ -188,7 +188,7 @@ $displayUsers = array_slice($users, $offset, $perPage);
         .page-title {
             font-size: 28px;
             font-weight: 700;
-            color: white;
+            color: var(--text-primary);
         }
 
         .page-subtitle {
@@ -219,11 +219,11 @@ $displayUsers = array_slice($users, $offset, $perPage);
 
         /* Container */
         .content-box {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
             border-radius: 16px;
             overflow: hidden;
+            box-shadow: var(--shadow-sm);
         }
 
         /* Toolbar */
