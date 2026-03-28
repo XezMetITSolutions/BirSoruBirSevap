@@ -42,11 +42,8 @@ if (!defined('DEEPL_API_URL')) {
 }
 
 // Güvenlik Ayarları
-if (!defined('ALLOWED_EXTENSIONS')) {
-    define('ALLOWED_EXTENSIONS', ['json']); // İzin verilen dosya uzantıları
-}
 if (!defined('BLOCKED_PATTERNS')) {
-    define('BLOCKED_PATTERNS', ['..', '.git', '.env', 'config', 'setup', 'debug', 'test', 'create', 'fix', 'backup']); // Engellenen klasör/ dosya isimleri
+    define('BLOCKED_PATTERNS', ['..', '.git', '.env', 'node_modules', 'vendor']); // Sadece gerçekten engellenmesi gereken klasör isimleri
 }
 
 // Güvenlik sabitleri

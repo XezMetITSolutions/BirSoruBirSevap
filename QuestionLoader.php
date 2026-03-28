@@ -28,19 +28,6 @@ class QuestionLoader {
      * Soruları yükle (Veritabanından, yoksa dosyadan)
      */
     public function loadQuestions() {
-        // Önce veritabanını kontrol et
-        // GitHub dağıtımı için dosya öncelikli yükleme
-        $this->loadFromFiles();
-        return;
-
-        // Önce veritabanını kontrol et (Devre dışı bırakıldı - Dosya sistemi esas alınacak)
-        /*
-        if ($this->loadFromDatabase()) {
-            return;
-        }
-        */
-
-        // Veritabanı boşsa veya hata varsa dosyadan yükle
         $this->loadFromFiles();
     }
 
@@ -212,11 +199,12 @@ class QuestionLoader {
                 continue;
             }
             
-            // Engellenen desenleri kontrol et
+            // Engellenen desenleri kontrol et (Klasör veya dosya ismi tam eşleşiyorsa veya dizin olarak varsa)
             $skip = false;
             $blockedPatterns = defined('BLOCKED_PATTERNS') ? BLOCKED_PATTERNS : ['..', '.git', '.env', 'config'];
+            $fileName = basename($fullPath);
             foreach ($blockedPatterns as $pattern) {
-                if (strpos($fullPath, $pattern) !== false) {
+                if ($file === $pattern || $fileName === $pattern) {
                     $skip = true;
                     break;
                 }
@@ -254,11 +242,11 @@ class QuestionLoader {
                 return;
             }
 
-            // Dosya yolu bilgilerini çıkar
-            $relativePath = str_replace($this->rootDir . DIRECTORY_SEPARATOR, '', $filePath);
-            $pathParts = explode(DIRECTORY_SEPARATOR, $relativePath);
+            // Dosya yolu bilgilerini çıkar (OS-agnostic)
+            $relativePath = str_replace([$this->rootDir . DIRECTORY_SEPARATOR, $this->rootDir . '/', $this->rootDir . '\\'], '', $filePath);
+            $pathParts = preg_split('/[\\\\\/]/', $relativePath, -1, PREG_SPLIT_NO_EMPTY);
             
-            $bank = $pathParts[0] ?? 'Bilinmeyen';
+            $bank = trim($pathParts[0] ?? 'Bilinmeyen');
             $fileName = $pathParts[1] ?? 'Genel';
             
             // Dosya adından kategori çıkar
