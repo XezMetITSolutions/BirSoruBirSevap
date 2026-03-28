@@ -24,84 +24,8 @@ class QuestionLoader {
         $this->maxDepth = $maxDepth ?? (defined('MAX_SCAN_DEPTH') ? MAX_SCAN_DEPTH : 5);
     }
 
-    /**
-     * Soruları yükle (Veritabanından, yoksa dosyadan)
-     */
     public function loadQuestions() {
         $this->loadFromFiles();
-    }
-
-    /**
-     * Veritabanından soruları yükle
-     */
-    private function loadFromDatabase() {
-        require_once 'database.php';
-        try {
-            $db = Database::getInstance();
-            $conn = $db->getConnection();
-            
-            // Tablo var mı kontrol et
-            $stmt = $conn->query("SHOW TABLES LIKE 'questions'");
-            if ($stmt->rowCount() == 0) {
-                return false;
-            }
-            
-            $stmt = $conn->query("SELECT * FROM questions ORDER BY bank, category, id");
-            $dbQuestions = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            
-            if (empty($dbQuestions)) {
-                return false;
-            }
-            
-            foreach ($dbQuestions as $q) {
-                // JSON alanları decode et
-                $options = json_decode($q['options'], true) ?? [];
-                $answer = json_decode($q['answer'], true) ?? [];
-                $media = json_decode($q['media'], true) ?? [];
-                $tags = json_decode($q['tags'], true) ?? [];
-                
-                $processedQ = [
-                    'id' => $q['question_uid'],
-                    'type' => $q['type'],
-                    'question' => $q['question_text'],
-                    'text' => $q['question_text'],
-                    'options' => $options,
-                    'answer' => $answer,
-                    'explanation' => $q['explanation'],
-                    'difficulty' => (int)$q['difficulty'],
-                    'points' => (int)$q['points'],
-                    'media' => $media,
-                    'tags' => $tags,
-                    'bank' => $q['bank'],
-                    'category' => $q['category'],
-                    'source' => 'database'
-                ];
-                
-                $this->questions[] = $processedQ;
-                
-                // Banka ve kategori listelerini güncelle
-                if (!in_array($q['bank'], $this->banks)) {
-                    $this->banks[] = $q['bank'];
-                }
-                if (!isset($this->categories[$q['bank']])) {
-                    $this->categories[$q['bank']] = [];
-                }
-                if (!in_array($q['category'], $this->categories[$q['bank']])) {
-                    $this->categories[$q['bank']][] = $q['category'];
-                }
-            }
-            
-            // Session'a kaydet
-            $_SESSION['all_questions'] = $this->questions;
-            $_SESSION['categories'] = $this->categories;
-            $_SESSION['banks'] = $this->banks;
-            
-            return true;
-            
-        } catch (Exception $e) {
-            $this->errors[] = "Veritabanı yükleme hatası: " . $e->getMessage();
-            return false;
-        }
     }
 
     /**
@@ -249,7 +173,8 @@ class QuestionLoader {
             $bank = trim($pathParts[0] ?? 'Bilinmeyen');
             $fileName = $pathParts[1] ?? 'Genel';
             
-            // Dosya adından kategori çıkar
+            // Bank ve kategori adlarını güzelleştir
+            $bank = $this->beautifyBankName($bank);
             $category = $this->extractCategoryFromFileName($fileName);
             
             // Bank ve kategori listelerini güncelle
@@ -414,6 +339,24 @@ class QuestionLoader {
         
         // Eşleşme bulunamazsa dosya adını döndür
         return ucfirst($fileName);
+    }
+
+    /**
+     * Banka ismini arayüz için güzelleştir
+     */
+    private function beautifyBankName($bank) {
+        $map = [
+            'Islami_Ilimler' => 'İslami İlimler',
+            'IslamiIlimler' => 'İslami İlimler',
+            'Temel Bilgiler 1' => 'Temel Bilgiler 1',
+            'Temel Bilgiler 2' => 'Temel Bilgiler 2',
+            'Temel Bilgiler 3' => 'Temel Bilgiler 3',
+        ];
+        
+        // Eğer haritada varsa onu döndür, yoksa alt çizgileri boşlukla değiştirip döndür
+        if (isset($map[$bank])) return $map[$bank];
+        
+        return str_replace(['_', '-'], ' ', $bank);
     }
 
     /**
