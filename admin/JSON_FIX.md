@@ -171,7 +171,7 @@ JSON Sınav: 1
 
 1. **Debug modunu açın**:
    ```
-   https://birsorubirsevap.metechnik.at/admin/student_progress.php?user=burca.met1&debug
+   https://birsorubirsevap.at/admin/student_progress.php?user=burca.met1&debug
    ```
 
 2. **Kontrol edin**:

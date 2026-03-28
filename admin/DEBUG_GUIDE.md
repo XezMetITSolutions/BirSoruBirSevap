@@ -9,13 +9,13 @@ Eğer bir öğrencinin sınav veya alıştırma sonuçları görünmüyorsa, bu 
 URL'nin sonuna `&debug` ekleyin:
 
 ```
-https://birsorubirsevap.metechnik.at/admin/student_progress.php?user=emekt.muh&debug
+https://birsorubirsevap.at/admin/student_progress.php?user=emekt.muh&debug
 ```
 
 Veya mevcut parametrelerle:
 
 ```
-https://birsorubirsevap.metechnik.at/admin/student_progress.php?branch=IQRA+Feldkirch&class_section=&user=emekt.muh&debug
+https://birsorubirsevap.at/admin/student_progress.php?branch=IQRA+Feldkirch&class_section=&user=emekt.muh&debug
 ```
 
 ## 📊 Debug Bilgileri Ne Gösterir?

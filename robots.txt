@@ -27,4 +27,4 @@ Allow: /support.php
 Allow: /login.php
 Allow: /logo.png
 
-Sitemap: https://birsorubirsevap.metechnik.at/sitemap.xml
+Sitemap: https://birsorubirsevap.at/sitemap.xml

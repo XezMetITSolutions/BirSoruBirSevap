@@ -1,7 +1,7 @@
 # Canlı Site Durumu
 
 ## ✅ Site Çalışıyor
-URL: https://birsorubirsevap.metechnik.at/
+URL: https://birsorubirsevap.at/
 
 ### Yapılması Gerekenler:
 
@@ -9,7 +9,7 @@ URL: https://birsorubirsevap.metechnik.at/
 phpMyAdmin'e giriş yapın ve şu adımları izleyin:
 
 ```
-1. https://birsorubirsevap.metechnik.at/phpmyadmin (veya hosting panel)
+1. https://birsorubirsevap.at/phpmyadmin (veya hosting panel)
 2. d0459a94 veritabanını seçin
 3. SQL sekmesine gidin
 4. database_structure.sql dosyasını import edin
@@ -18,7 +18,7 @@ phpMyAdmin'e giriş yapın ve şu adımları izleyin:
 #### 2. Bağlantı Testi
 Tarayıcıda test edin:
 ```
-https://birsorubirsevap.metechnik.at/test_db_connection.php
+https://birsorubirsevap.at/test_db_connection.php
 ```
 
 ### Beklenen Sonuç:

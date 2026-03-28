@@ -157,7 +157,7 @@ Sayfa tüm cihazlarda düzgün çalışır:
 
 ### Sayfaya Erişim
 ```
-https://birsorubirsevap.metechnik.at/admin/users.php
+https://birsorubirsevap.at/admin/users.php
 ```
 
 ### Özellikler

@@ -58,7 +58,7 @@
 
 ### URL
 ```
-https://birsorubirsevap.metechnik.at/admin/student_progress.php?branch=IQRA+Feldkirch&user=burca.met1
+https://birsorubirsevap.at/admin/student_progress.php?branch=IQRA+Feldkirch&user=burca.met1
 ```
 
 ## 📊 Beklenen Sonuçlar
@@ -100,7 +100,7 @@ https://birsorubirsevap.metechnik.at/admin/student_progress.php?branch=IQRA+Feld
 
 ### Debug Modu Açık
 ```
-https://birsorubirsevap.metechnik.at/admin/student_progress.php?user=burca.met1&debug
+https://birsorubirsevap.at/admin/student_progress.php?user=burca.met1&debug
 ```
 
 ### Beklenen Çıktı

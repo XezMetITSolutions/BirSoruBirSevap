@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "native-app",
-    "slug": "native-app",
+    "name": "BirSoruBirSevap",
+    "slug": "birsorubirsevap",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,6 +15,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.birsorubirsevap.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -25,6 +26,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "20c0ed7a-fc12-47d6-8933-c2e4b30b9de0"
+      }
     }
   }
 }

@@ -7,7 +7,7 @@
 Tarayıcınızda şu URL'yi açın:
 
 ```
-https://birsorubirsevap.metechnik.at/admin/test_json_structure.php
+https://birsorubirsevap.at/admin/test_json_structure.php
 ```
 
 Bu sayfa size şunları gösterecek:
@@ -22,7 +22,7 @@ Bu sayfa size şunları gösterecek:
 #### A. Debug Modu ile Test
 
 ```
-https://birsorubirsevap.metechnik.at/admin/student_progress.php?user=burca.met1&debug
+https://birsorubirsevap.at/admin/student_progress.php?user=burca.met1&debug
 ```
 
 **Beklenen Sonuç:**
@@ -37,7 +37,7 @@ JSON Sınav: 1
 #### B. Normal Mod ile Test
 
 ```
-https://birsorubirsevap.metechnik.at/admin/student_progress.php?user=burca.met1
+https://birsorubirsevap.at/admin/student_progress.php?user=burca.met1
 ```
 
 **Beklenen Sonuç:**

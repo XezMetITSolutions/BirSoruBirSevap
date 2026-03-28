@@ -36,11 +36,32 @@ $totalCategories = array_sum(array_map('count', $categories));
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bir Soru Bir Sevap - Modern Eğitim Platformu</title>
+    <title>Bir Soru Bir Sevap - Modern İslami Eğitim Platformu</title>
     
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Modern, kullanıcı dostu bir İslami eğitim platformu. Temel Bilgiler 1-3 ve İslami İlimler müfredatına uygun soru bankası, alıştırma modları ve sınav sistemi.">
+    <meta name="keywords" content="islami eğitim, dini bilgiler, soru cevap, sınav sistemi, bir soru bir sevap, temel bilgiler, itikad, ibadet, siyer, tefsir, hadis, fıkıh">
+    <meta name="author" content="XezMet IT-Solutions">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://birsorubirsevap.at/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://birsorubirsevap.at/">
+    <meta property="og:title" content="Bir Soru Bir Sevap - Modern İslami Eğitim Platformu">
+    <meta property="og:description" content="Modern, kullanıcı dostu bir İslami eğitim platformu. Temel Bilgiler 1-3 ve İslami İlimler müfredatına uygun soru bankası.">
+    <meta property="og:image" content="https://birsorubirsevap.at/logo.png">
+    <meta property="og:site_name" content="Bir Soru Bir Sevap">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://birsorubirsevap.at/">
+    <meta property="twitter:title" content="Bir Soru Bir Sevap - Modern İslami Eğitim Platformu">
+    <meta property="twitter:description" content="Modern, kullanıcı dostu bir İslami eğitim platformu. Temel Bilgiler 1-3 ve İslami İlimler müfredatına uygun soru bankası.">
+    <meta property="twitter:image" content="https://birsorubirsevap.at/logo.png">
+
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#068567">
-    <meta name="description" content="Modern, kullanıcı dostu bir soru-cevap platformu. Öğrenciler için alıştırma modu, öğretmenler için sınav oluşturma sistemi.">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="logo.png">
     <meta name="apple-mobile-web-app-capable" content="yes">

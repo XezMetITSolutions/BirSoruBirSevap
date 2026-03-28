@@ -9,6 +9,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teknik Destek - Bir Soru Bir Sevap</title>
+    <meta name="description" content="Bir Soru Bir Sevap platformu için teknik destek talebi oluşturun, sık karşılaşılan sorunları inceleyin ve çözüm yollarını bulun.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://birsorubirsevap.at/support.php">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {

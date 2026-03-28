@@ -8,7 +8,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yardım Merkezi - Bir Soru Bir Sevap</title>
+    <title>Yardım ve Kılavuz - Bir Soru Bir Sevap</title>
+    <meta name="description" content="Bir Soru Bir Sevap platformunun kullanımı hakkında detaylı yardım kılavuzu. Öğrenci ve öğretmen panelleri hakkında bilgiler.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://birsorubirsevap.at/help.php">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
